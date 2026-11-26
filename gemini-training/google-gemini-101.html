@@ -247,12 +247,12 @@
           <li><a href="../claude-training/claude-101.html">Claude 101</a></li>
           <li><a href="../claude-training/claude-projects.html">Claude Projects</a></li>
           <li><a href="../claude-training/claude-code.html">Claude Code</a></li>
+          <li><a href="../claude-training/claude-code-mode.html">Claude Code Mode</a></li>
           <li><a href="../claude-training/claude-desktop.html">Claude Desktop</a></li>
           <li><a href="../claude-training/claude-office.html">Claude Office</a></li>
-          <li><a href="../claude-training/claude-skills.html">Claude Skills</a></li>
           <li><a href="../claude-training/claude-mcp.html">Claude MCP</a></li>
           <li><a href="../claude-training/claude-plugins.html">Claude Plugins</a></li>
-          <li><a href="../claude-training/claude-connectors.html">Claude Connectors</a></li>
+          <li><a href="../claude-training/claude-apps.html">Claude Apps</a></li>
           <li><a href="../claude-training/claude-orchestration.html">Claude Orchestration</a></li>
           <li><a href="../claude-training/claude-design.html">Claude Design</a></li>
           <li><a href="../claude-training/claude-science.html">Claude for Science</a></li>
@@ -304,6 +304,7 @@
     </ul>
   </nav>
   <!-- END:HEADER -->
+  <a aria-label="Back to top" class="back-top" href="#top" id="backTop" title="Back to top">↑</a>
 
 <main class="container single-column-article" id="main">
 <header class="hero content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);text-align:left;display:flex;flex-direction:column;gap:1.25rem;padding:2rem 2.25rem;margin-top:110px;margin-bottom:2rem;">
@@ -322,7 +323,10 @@
 <a class="toc-link gold-link" href="#developer-ecosystem">4. Navigating the Gemini Developer Ecosystem</a>
 <a class="toc-link gold-link" href="#mental-model-checklist">5. A Practical Checklist for Starting Your First Gemini Project</a>
 <a class="toc-link gold-link" href="#common-architecture-mistakes">6. Common Architectural Mistakes When Adopting Gemini</a>
-<a class="toc-link gold-link" href="#references">7. References</a>
+<a class="toc-link gold-link" href="#interactions-api-and-grounding">7. Stateful Interactions API, Grounding, and Live Streaming</a>
+<a class="toc-link gold-link" href="#api-surfaces-comparison">8. Comparing Gemini API Surfaces and Caching Modes</a>
+<a class="toc-link gold-link" href="#gemini-101-faq">9. Practical Questions When Starting With Gemini</a>
+<a class="toc-link gold-link" href="#references">10. References</a>
 </div>
 </article>
 
@@ -434,14 +438,98 @@ escalation_model: gemini-4-argon</code></pre>
 <p>The second mistake is treating every prompt as a single-model problem. Build a lightweight routing layer early so simple classification and extraction run on fast tiers like Gemini Hydrogen, everyday coding and synthesis run on Gemini Neon, and deep architectural reasoning runs on Gemini Argon or Gemini Carbon. Finally, always log input token counts, latency, and schema-validation pass rates from day one so you have real telemetry guiding every optimization decision.</p>
 </article>
 
+<article class="content-card" id="interactions-api-and-grounding" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2>Stateful Interactions API, Grounding, and Live Streaming</h2>
+<p>Beyond single-turn prompt calls, modern production applications on the unified <code>google-genai</code> SDK standardize around the <strong>Interactions API</strong>. Rather than manually rebuilding and resending ever-growing message arrays from your application server on every turn, the Interactions API manages server-side conversation state and links turns via <code>previous_interaction_id</code>. It also exposes observable execution steps for tool calls and reasoning traces, supports optional privacy opt-out via <code>store=False</code>, and routes both standard models and long-running asynchronous background agents such as Deep Research through one consistent interface.</p>
+<p>Caching behavior differs sharply across API surfaces, and understanding those rules prevents surprise latency or token spend:</p>
+<ul style="padding-left:1.5rem;color:var(--text-secondary);line-height:1.8;margin-bottom:1.25rem;"><li><strong>Implicit Context Caching (Default):</strong> Enabled automatically across modern Gemini models without manual cache objects. Repeated prompt prefixes, shared system rules, and multi-turn conversation histories receive automatic prefix cache hits - and implicit caching is the sole caching strategy used by the Interactions API.</li><li><strong>Explicit Context Caching:</strong> Available on the classic <code>generateContent</code> surface when teams need deterministic Time-to-Live (TTL) cache handles for static reference corpora such as compliance manuals or product catalogs.</li><li><strong>Live API Context Compression:</strong> Real-time bidirectional audio and video sessions do not use prefix caching; instead, long sessions rely on sliding-window compression (<code>ContextWindowCompressionConfig</code>) to trim older turns while preserving recent conversational memory.</li><li><strong>Grounding With Google Search and Enterprise Data:</strong> Connecting inference to live Google Search or governed Vertex AI data stores anchors answers in current facts and returns structured citation metadata for downstream auditing, as detailed in the <a class="gold-link" href="#references">Google Gemini Interactions and Grounding documentation</a>.</li></ul>
+<div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid var(--cyan);border-radius:10px;margin:1.5rem 0;overflow:hidden;">
+<div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.55rem 1rem;background:rgba(255,255,255,0.04);border-bottom:1px solid rgba(255,255,255,0.08);">
+<span style="font-family:var(--font-mono);font-size:0.8rem;color:var(--cyan);">interactions_stateful_flow.py</span>
+<button class="copy-btn" onclick="copyCode(this)" style="text-decoration:none !important;" type="button">Copy</button>
+</div>
+<pre style="white-space:pre-wrap;word-break:break-word;overflow-x:hidden;padding:1rem;margin:0;color:#e2e8f0;font-size:0.88rem;"><code>from google import genai
+
+client = genai.Client()
+
+# Turn 1: Server stores conversation state and returns an interaction ID
+turn_one = client.interactions.create(
+    model="gemini-4-hydrogen",
+    system_instruction="You are a cloud architecture reviewer. Be concise and cite assumptions.",
+    input="Summarize three failure risks in a single-region relational database.",
+)
+print(turn_one.output_text)
+
+# Turn 2: Chain server-side state without re-uploading the full chat array
+turn_two = client.interactions.create(
+    model="gemini-4-neon",
+    previous_interaction_id=turn_one.id,
+    input="Now propose a multi-region failover plan that addresses risk #2.",
+)
+print(turn_two.output_text)</code></pre>
+</div>
+</article>
+<article class="content-card" id="api-surfaces-comparison" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2>Comparing Gemini API Surfaces and Caching Modes</h2>
+<p>Select the Gemini API surface that matches your application's latency, state persistence, and media requirements rather than forcing every workload through one request pattern:</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.9rem;color:#e2e8f0;">
+<thead>
+<tr style="border-bottom:2px solid rgba(251,191,36,0.45);text-align:left;color:var(--gold);">
+<th style="padding:0.75rem;">Dimension</th>
+<th style="padding:0.75rem;">Classic generateContent API</th>
+<th style="padding:0.75rem;">Stateful Interactions API</th>
+<th style="padding:0.75rem;">Real-Time Live API</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">State Management</td>
+<td style="padding:0.75rem;">Client-managed message arrays sent per request</td>
+<td style="padding:0.75rem;">Server-managed state chained via <code>previous_interaction_id</code></td>
+<td style="padding:0.75rem;">Stateful persistent bidirectional WebSocket session</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Context Caching</td>
+<td style="padding:0.75rem;">Supports both automatic implicit and explicit TTL caches</td>
+<td style="padding:0.75rem;">Automatic implicit prefix caching only</td>
+<td style="padding:0.75rem;">No prefix caching; uses sliding-window compression</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Async &amp; Agent Routing</td>
+<td style="padding:0.75rem;">Synchronous request/response or token streaming</td>
+<td style="padding:0.75rem;">Native <code>background=True</code> jobs, step events, and managed agents</td>
+<td style="padding:0.75rem;">Low-latency streaming audio, video frames, and live tool calls</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Best Production Workload</td>
+<td style="padding:0.75rem;">Stateless batch pipelines and fixed-TTL static corpus queries</td>
+<td style="padding:0.75rem;">Multi-turn assistants, tool loops, and Deep Research pipelines</td>
+<td style="padding:0.75rem;">Voice agents, live screen co-pilots, and real-time translation</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+<article class="content-card" id="gemini-101-faq" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2>Practical Questions When Starting With Gemini</h2>
+<p><strong>Should new applications start with the Interactions API or classic generateContent?</strong> Start with the Interactions API for multi-turn chat, agentic tool calling, and background research tasks because it simplifies state tracking and exposes structured execution steps. Use classic <code>generateContent</code> when you specifically need explicit TTL cache handles over static reference corpora or simple stateless batch jobs.</p>
+<p><strong>Do we need to rewrite code when moving from the Gemini Developer API to Vertex AI?</strong> No. Both surfaces share the unified <code>google-genai</code> SDK. Promoting a prototype from an API key to enterprise Vertex AI with IAM governance and regional residency requires updating only the client initialization configuration rather than rewriting prompt or tool logic.</p>
+<p><strong>When does Gemini's long context replace a vector database?</strong> When your active knowledge base fits comfortably within a few hundred thousand tokens - such as a single software repository, a quarterly audit packet, or a product manual - loading full documents with implicit or explicit caching delivers higher cross-reference accuracy with far less infrastructure. Add hybrid vector retrieval once your corpus scales into tens of millions of tokens.</p>
+<p><strong>Remembering interaction-scoped settings:</strong> In the Interactions API, parameters like <code>system_instruction</code>, <code>tools</code>, and generation settings are scoped to each interaction call. Pass them consistently on every turn alongside <code>previous_interaction_id</code> so behavior never drifts mid-conversation.</p>
+</article>
+
 <article class="content-card" id="references" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <h2>References</h2>
 <p>Official documentation, research papers, and developer guides referenced in this article:</p>
 <ul style="display:flex;flex-direction:column;gap:0.65rem;padding-left:1.25rem;margin-top:1rem;">
 <li><a class="gold-link" href="https://deepmind.google/models/gemini/" rel="noopener noreferrer" target="_blank">Google DeepMind - Gemini Models</a> - Official architectural overview of native multimodality and Gemini capabilities.</li>
 <li><a class="gold-link" href="https://ai.google.dev/gemini-api/docs/quickstart" rel="noopener noreferrer" target="_blank">Google Gemini API Quickstart</a> - Step-by-step developer guide for the google-genai SDK and Files API.</li>
+<li><a class="gold-link" href="https://ai.google.dev/gemini-api/docs/interactions" rel="noopener noreferrer" target="_blank">Google Gemini Interactions API Documentation</a> - Official reference for server-side state, observable steps, and background execution.</li>
+<li><a class="gold-link" href="https://ai.google.dev/gemini-api/docs/live" rel="noopener noreferrer" target="_blank">Google Gemini Live API Documentation</a> - Technical architecture for bidirectional audio, video, and real-time tool streaming.</li>
+<li><a class="gold-link" href="https://ai.google.dev/gemini-api/docs/google-search" rel="noopener noreferrer" target="_blank">Grounding With Google Search Documentation</a> - Guide to live web grounding, search metadata, and source verification.</li>
 <li><a class="gold-link" href="https://cloud.google.com/vertex-ai/generative-ai/docs/learn/overview" rel="noopener noreferrer" target="_blank">Vertex AI Generative AI Documentation</a> - Enterprise deployment, IAM security, and context caching on Google Cloud.</li>
-<li><a class="gold-link" href="https://ai.google.dev/gemini-api/docs/caching" rel="noopener noreferrer" target="_blank">Google Gemini Context Caching Guide</a> - Technical guide to caching large documents and codebases for low-latency queries.</li>
+<li><a class="gold-link" href="https://ai.google.dev/gemini-api/docs/caching" rel="noopener noreferrer" target="_blank">Google Gemini Context Caching Guide</a> - Technical guide to implicit and explicit caching for large documents and codebases.</li>
 </ul>
 </article>
 

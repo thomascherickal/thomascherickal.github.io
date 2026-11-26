@@ -247,12 +247,12 @@
           <li><a href="../claude-training/claude-101.html">Claude 101</a></li>
           <li><a href="../claude-training/claude-projects.html">Claude Projects</a></li>
           <li><a href="../claude-training/claude-code.html">Claude Code</a></li>
+          <li><a href="../claude-training/claude-code-mode.html">Claude Code Mode</a></li>
           <li><a href="../claude-training/claude-desktop.html">Claude Desktop</a></li>
           <li><a href="../claude-training/claude-office.html">Claude Office</a></li>
-          <li><a href="../claude-training/claude-skills.html">Claude Skills</a></li>
           <li><a href="../claude-training/claude-mcp.html">Claude MCP</a></li>
           <li><a href="../claude-training/claude-plugins.html">Claude Plugins</a></li>
-          <li><a href="../claude-training/claude-connectors.html">Claude Connectors</a></li>
+          <li><a href="../claude-training/claude-apps.html">Claude Apps</a></li>
           <li><a href="../claude-training/claude-orchestration.html">Claude Orchestration</a></li>
           <li><a href="../claude-training/claude-design.html">Claude Design</a></li>
           <li><a href="../claude-training/claude-science.html">Claude for Science</a></li>
@@ -304,6 +304,7 @@
     </ul>
   </nav>
   <!-- END:HEADER -->
+  <a aria-label="Back to top" class="back-top" href="#top" id="backTop" title="Back to top">↑</a>
 
 <main class="container single-column-article" id="main">
 <header class="hero content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);text-align:left;display:flex;flex-direction:column;gap:1.25rem;padding:2rem 2.25rem;margin-top:110px;margin-bottom:2rem;">
@@ -323,7 +324,10 @@
 <a class="toc-link gold-link" href="#enterprise-takeaways">5. Practical Takeaways for Enterprise AI Leaders</a>
 <a class="toc-link gold-link" href="#evaluating-frontier-claims">6. How Technical Leaders Should Evaluate Frontier AI Progress</a>
 <a class="toc-link gold-link" href="#adoption-roadmap">7. Translating DeepMind Research into Everyday Engineering Systems</a>
-<a class="toc-link gold-link" href="#references">8. References</a>
+<a class="toc-link gold-link" href="#next-wave-science-and-safety">8. AlphaGenome, AlphaEvolve, Genie World Models, Robotics, and Frontier Safety</a>
+<a class="toc-link gold-link" href="#deepmind-programs-matrix">9. Google DeepMind Research Pillars and Enterprise Translation Matrix</a>
+<a class="toc-link gold-link" href="#deepmind-faq">10. Practical Questions on DeepMind Research and Frontier Governance</a>
+<a class="toc-link gold-link" href="#references">11. References</a>
 </div>
 </article>
 
@@ -442,14 +446,120 @@ def solve_and_verify(problem: str) -&gt; str:
 <p>Engineering teams get the strongest results when they treat frontier models as components inside a verified software system rather than standalone chat boxes. Define clear input schemas, connect models to real internal data sources, run automated test suites on every output, and keep human reviewers in charge of final approvals. Following <a class="gold-link" href="#references">Google DeepMind model documentation</a> helps teams adopt new capabilities smoothly as research advances.</p>
 </article>
 
+<article class="content-card" id="next-wave-science-and-safety" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2>AlphaGenome, AlphaEvolve, Genie World Models, Robotics, and Frontier Safety</h2>
+<p>Google DeepMind's recent research portfolio connects four transformative pillars - unifying biology, evolutionary software optimization, physical world simulation, and structured safety governance - directly to the engineering principles enterprises use in production.</p>
+<ul style="padding-left:1.5rem;color:var(--text-secondary);line-height:1.8;margin-bottom:1.25rem;">
+<li><strong>AlphaGenome and the AlphaGenome Atlas:</strong> Extending structural biology beyond proteins into DNA regulation, <a class="gold-link" href="#references">Google DeepMind's scientific programs</a> introduced <strong>AlphaGenome</strong> to predict how long genomic sequences and single-letter mutations alter gene expression across human cell types. Paired with the AlphaGenome Atlas and Variant Impact scoring, researchers can prioritize rare-disease and immune-pathway hypotheses far faster than wet-lab trial and error alone.</li>
+<li><strong>AlphaEvolve (Evolutionary Algorithm Discovery):</strong> Combining Gemini code generation with automated scoring harnesses and evolutionary search, <strong>AlphaEvolve</strong> discovers novel mathematical algorithms and optimizes production infrastructure - from Google Borg data-center scheduling and chip circuit layouts to mixed-precision GPU kernels running on exascale supercomputers.</li>
+<li><strong>Genie World Models and Gemini Robotics With MuJoCo:</strong> On the simulation frontier, <a class="gold-link" href="#references">Genie world models</a> generate controllable, photorealistic interactive environments with synchronized audio from text or images, providing rich virtual testbeds for agents. For physical manipulation, <strong>Gemini Robotics</strong> fuses visual-action foundation intelligence with high-precision <a class="gold-link" href="#references">MuJoCo physics simulation</a> so robotic arms and humanoids generalize dexterous, whole-body tasks across real hardware.</li>
+<li><strong>Frontier Safety Framework (FSF):</strong> Alongside capability breakthroughs, DeepMind's <a class="gold-link" href="#references">Frontier Safety Framework</a> defines measurable <strong>Critical Capability Levels (CCLs)</strong> across autonomy, biosecurity, cybersecurity, and machine-learning R&amp;D - mandating pre-deployment red-teaming, security hardening, and deployment mitigations before new frontier capabilities ship.</li>
+</ul>
+<p>Software teams can adopt the exact AlphaEvolve pattern - evolutionary candidate generation paired with a deterministic benchmark evaluator and safety gate - for performance-critical algorithms inside their own repositories:</p>
+<div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid var(--cyan);border-radius:10px;margin:1.5rem 0;overflow:hidden;">
+<div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.55rem 1rem;background:rgba(255,255,255,0.04);border-bottom:1px solid rgba(255,255,255,0.08);">
+<span style="font-family:var(--font-mono);font-size:0.8rem;color:var(--cyan);">evolutionary_eval_harness.py</span>
+<button class="copy-btn" onclick="copyCode(this)" style="text-decoration:none !important;" type="button">Copy</button>
+</div>
+<pre style="white-space:pre-wrap;word-break:break-word;overflow-x:hidden;padding:1rem;margin:0;color:#e2e8f0;font-size:0.88rem;"><code>from google import genai
+from google.genai import types
+
+client = genai.Client()
+
+def evolve_candidate(best_code: str, best_score: float, metric_note: str) -&gt; str:
+    """AlphaEvolve-inspired loop: mutate only against a deterministic evaluator."""
+    prompt = (
+        f"Current best score: {best_score:.4f} ({metric_note}).\n"
+        "Propose one clean algorithmic optimization that preserves all edge-case "
+        "invariants and returns pure Python code only:\n\n" + best_code
+    )
+    resp = client.models.generate_content(
+        model="gemini-4-argon",
+        contents=prompt,
+        config=types.GenerateContentConfig(temperature=0.3),
+    )
+    return resp.text
+
+# In production: run candidate inside a sandboxed container, verify unit tests,
+# measure latency/accuracy, and promote ONLY if score beats best_score.</code></pre>
+</div>
+</article>
+
+<article class="content-card" id="deepmind-programs-matrix" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2>Google DeepMind Research Pillars and Enterprise Translation Matrix</h2>
+<p>Every major DeepMind research program pairs neural generation with a concrete grounding or verification mechanism that engineering leaders can mirror in production AI systems:</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.9rem;color:#e2e8f0;">
+<thead>
+<tr style="border-bottom:2px solid rgba(251,191,36,0.45);text-align:left;color:var(--gold);">
+<th style="padding:0.75rem;">DeepMind Program</th>
+<th style="padding:0.75rem;">Core Scientific / Technical Breakthrough</th>
+<th style="padding:0.75rem;">Verification / Grounding Layer</th>
+<th style="padding:0.75rem;">Enterprise Engineering Pattern</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">AlphaFold &amp; AlphaGenome</td>
+<td style="padding:0.75rem;">Atomic protein structures and DNA regulatory variant modeling</td>
+<td style="padding:0.75rem;">Physical geometry constraints &amp; biological assay benchmarks</td>
+<td style="padding:0.75rem;">Domain-constrained prediction with calibrated confidence scores</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">AlphaEvolve</td>
+<td style="padding:0.75rem;">Evolutionary algorithm, scheduler, and GPU kernel discovery</td>
+<td style="padding:0.75rem;">Automated deterministic benchmark &amp; correctness evaluators</td>
+<td style="padding:0.75rem;">Sandboxed generate-test-benchmark optimization loops in CI</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Genie World Models</td>
+<td style="padding:0.75rem;">Action-controllable interactive 3D-consistent simulations</td>
+<td style="padding:0.75rem;">Temporal spatial consistency &amp; real-time user action state</td>
+<td style="padding:0.75rem;">Synthetic environment testing &amp; interactive digital twins</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Veo, Imagen &amp; Lyria</td>
+<td style="padding:0.75rem;">High-definition video, photorealistic imagery, and music synthesis</td>
+<td style="padding:0.75rem;">SynthID imperceptible provenance watermarking &amp; safety filters</td>
+<td style="padding:0.75rem;">Automated brand-gate creative pipelines with provenance tracking</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Gemini Robotics &amp; MuJoCo</td>
+<td style="padding:0.75rem;">General-purpose visual-action dexterity across robot embodiments</td>
+<td style="padding:0.75rem;">MuJoCo physics simulation, contact limits, &amp; sim-to-real validation</td>
+<td style="padding:0.75rem;">Sim-before-deploy validation for physical and UI automation agents</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Frontier Safety Framework</td>
+<td style="padding:0.75rem;">Proactive Critical Capability Level (CCL) risk evaluation</td>
+<td style="padding:0.75rem;">Pre-release red-teaming across cyber, bio, and autonomy risks</td>
+<td style="padding:0.75rem;">Tiered pre-launch security gates and rollback triggers for AI agents</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+
+<article class="content-card" id="deepmind-faq" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2>Practical Questions on DeepMind Research and Frontier Governance</h2>
+<p><strong>How can a standard software organization apply the lessons of AlphaFold and AlphaEvolve?</strong> Never rely on single-pass unconstrained model generation for high-stakes tasks. Mirror DeepMind's architecture by pairing a creative Gemini reasoning pass with an automated, deterministic verifier - unit test suites, SQL explain plans, schema validators, or latency benchmarks - and accept outputs only when they clear objective gates.</p>
+<p><strong>What role does MuJoCo play alongside Genie and Gemini Robotics?</strong> MuJoCo provides fast, physically calibrated rigid-body and contact dynamics simulation. Teams validate manipulation policies, torque limits, and edge-case perturbations inside MuJoCo before running controllers on physical arms or humanoids, while Genie complements physics engines by generating diverse interactive visual worlds.</p>
+<p><strong>What are Critical Capability Levels (CCLs) in Google DeepMind's Frontier Safety Framework?</strong> CCLs are explicit capability thresholds in high-risk domains such as cybersecurity exploitation, biosecurity, and autonomous self-replication. Before deploying a model approaching any threshold, DeepMind applies targeted security controls and deployment mitigations - a governance blueprint enterprises can adapt into internal pre-production AI release checklists.</p>
+<p><strong>How do DeepMind's scientific breakthroughs flow into the Gemini element lineup?</strong> Advances in test-time search, long-context cross-modal attention, spatial grounding, and formal verification developed across AlphaProof, AlphaEvolve, and robotics feed directly into Gemini Argon, Gemini Carbon, Gemini Neon, Gemini Hydrogen, and open-weight Gemma models.</p>
+</article>
+
 <article class="content-card" id="references" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <h2>References</h2>
 <p>Official documentation, research papers, and developer guides referenced in this article:</p>
 <ul style="display:flex;flex-direction:column;gap:0.65rem;padding-left:1.25rem;margin-top:1rem;">
 <li><a class="gold-link" href="https://deepmind.google/research/" rel="noopener noreferrer" target="_blank">Google DeepMind Research</a> - Official index of Google DeepMind papers, breakthroughs, and scientific programs.</li>
+<li><a class="gold-link" href="https://deepmind.google/science/" rel="noopener noreferrer" target="_blank">Google DeepMind Science</a> - Overview of AlphaFold, AlphaGenome, AlphaEvolve, and AI for scientific discovery.</li>
 <li><a class="gold-link" href="https://alphafold.ebi.ac.uk/" rel="noopener noreferrer" target="_blank">AlphaFold Protein Structure Database</a> - Open scientific database of protein structure predictions built with EMBL-EBI.</li>
 <li><a class="gold-link" href="https://deepmind.google/models/gemini/" rel="noopener noreferrer" target="_blank">Google DeepMind - Gemini Models</a> - Technical overview of the Gemini family and multimodal architecture.</li>
-<li><a class="gold-link" href="https://deepmind.google/discover/blog/" rel="noopener noreferrer" target="_blank">Google DeepMind Robotics</a> - Updates on embodied AI, robotics, and frontier reasoning systems.</li>
+<li><a class="gold-link" href="https://deepmind.google/models/genie/" rel="noopener noreferrer" target="_blank">Google DeepMind - Genie World Models</a> - Generative interactive environments for simulation and embodied AI.</li>
+<li><a class="gold-link" href="https://deepmind.google/safety/" rel="noopener noreferrer" target="_blank">Google DeepMind - Frontier Safety Framework</a> - Governance architecture, Critical Capability Levels, and frontier model evaluations.</li>
+<li><a class="gold-link" href="https://mujoco.org/" rel="noopener noreferrer" target="_blank">MuJoCo Physics Simulator</a> - Open-source multi-joint dynamics engine maintained by Google DeepMind for robotics simulation.</li>
+<li><a class="gold-link" href="https://deepmind.google/discover/blog/" rel="noopener noreferrer" target="_blank">Google DeepMind Robotics &amp; Blog</a> - Updates on Gemini Robotics, AlphaEvolve, and frontier reasoning systems.</li>
 </ul>
 </article>
 

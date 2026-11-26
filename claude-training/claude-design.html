@@ -248,12 +248,12 @@
           <li><a href="../claude-training/claude-101.html">Claude 101</a></li>
           <li><a href="../claude-training/claude-projects.html">Claude Projects</a></li>
           <li><a href="../claude-training/claude-code.html">Claude Code</a></li>
+          <li><a href="../claude-training/claude-code-mode.html">Claude Code Mode</a></li>
           <li><a href="../claude-training/claude-desktop.html">Claude Desktop</a></li>
           <li><a href="../claude-training/claude-office.html">Claude Office</a></li>
-          <li><a href="../claude-training/claude-skills.html">Claude Skills</a></li>
           <li><a href="../claude-training/claude-mcp.html">Claude MCP</a></li>
           <li><a href="../claude-training/claude-plugins.html">Claude Plugins</a></li>
-          <li><a href="../claude-training/claude-connectors.html">Claude Connectors</a></li>
+          <li><a href="../claude-training/claude-apps.html">Claude Apps</a></li>
           <li><a href="../claude-training/claude-orchestration.html">Claude Orchestration</a></li>
           <li><a href="../claude-training/claude-design.html">Claude Design</a></li>
           <li><a href="../claude-training/claude-science.html">Claude for Science</a></li>
@@ -305,8 +305,9 @@
     </ul>
   </nav>
   <!-- END:HEADER -->
+  <a aria-label="Back to top" class="back-top" href="#top" id="backTop" title="Back to top">↑</a>
 
-<main id="main">
+<main class="container single-column-article" id="main">
 <header class="hero content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <div class="hero-badge content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">CLAUDE DESIGN</div>
 <h1>Claude Design: UI/UX Prototyping & Design Systems</h1>
@@ -315,7 +316,7 @@
 <p class="hero-byline">By <strong>Thomas Cherickal</strong> - Generative AI Consultant &amp; The Digital Futurist</p>
 </header>
 
-<article class="article-body" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.25rem;">
+<article class="article-body">
 <div id="table-of-contents" aria-label="Table of contents" class="content-card toc-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <p class="article-p" style="font-size:1.02rem;color:#f1f5f9;">Design bottlenecks slow down product launches more often than backend code does. Founders wait days for a landing page mockup, while engineers rebuild slide decks and UI components from static screenshots. Claude Design bridges that gap by turning plain-English briefs and existing repository styles into interactive, on-brand prototypes that hand off cleanly into production code.</p>
 <div class="rule"></div>
@@ -328,6 +329,9 @@
 <li><a class="gold-link" href="#practical-design-use-cases">High-Impact Use Cases for Founders and Product Teams</a></li>
 <li><a class="gold-link" href="#design-review-and-pitfalls">Design Review Checklist and Common Pitfalls to Avoid</a></li>
 <li><a class="gold-link" href="#collaborating-across-product-and-engineering">Closing the Feedback Loop Between Product, Design, and Engineering</a></li>
+<li><a class="gold-link" href="#figma-mcp-and-bidirectional-sync">Figma MCP Integration, On-Canvas Editing, and Bidirectional Token Sync</a></li>
+<li><a class="gold-link" href="#design-workflow-matrix">Claude Design, Figma MCP, and Canva Architecture Comparison</a></li>
+<li><a class="gold-link" href="#claude-design-faq">Practical Questions on Claude Design and Token-Driven Workflows</a></li>
 <li><a class="gold-link" href="#references">Authoritative References</a></li>
 </ol>
 </div>
@@ -367,7 +371,7 @@
 <li><strong>Interaction and State Pass:</strong> Ask Claude to wire up hover states, empty states, form validation messages, and mobile navigation behavior so reviewers can test real user flows.</li>
 <li><strong>Visual Polish Pass:</strong> Tighten spacing, verify accessible color contrast against <a class="gold-link" href="#references">WCAG accessibility guidelines</a>, and remove decorative clutter that distracts from the main action.</li>
 </ol>
-<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.25rem;margin:1.5rem 0;"><div class="mermaid">
+<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.5rem;margin:1.75rem 0;"><div class="mermaid">
 flowchart TD
     B["Natural-Language Brief"] --> T["Load Brand Tokens
 from GitHub Repo"]
@@ -406,7 +410,7 @@ from GitHub Repo"]
 
 <p class="article-p">Traditional design handoff loses detail because engineers have to translate static pictures back into CSS grids, breakpoints, and React props. Because Claude Design outputs clean semantic HTML and component code grounded in your repository's own tokens, handoff to Claude Code is nearly seamless.</p>
 <p class="article-p">Export the approved prototype alongside a short handoff checklist: target route path, responsive breakpoints, keyboard focus order, and real API data bindings. Claude Code can then integrate the new component into your production app, wire up live state, and run visual and accessibility checks before opening a pull request.</p>
-<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.25rem;margin:1.5rem 0;"><div class="mermaid">
+<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.5rem;margin:1.75rem 0;"><div class="mermaid">
 graph TD
     P["Approved Claude Design Prototype"] --> S["Extract Semantic Components
 & Token References"]
@@ -472,12 +476,93 @@ into Production Repo"]
 </section>
 
 <section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="figma-mcp-and-bidirectional-sync">Figma MCP Integration, On-Canvas Editing, and Bidirectional Token Sync</h2>
+<p class="article-p">Modern design operations with Claude combine Anthropic Labs' visual <strong>Claude Design</strong> workspace with live <strong>Figma MCP</strong> connectivity so design tokens, vector frames, and production components remain synchronized without manual redlining.</p>
+<h3>On-Canvas Visual Controls and Automated Brand Guardrails</h3>
+<p class="article-p">Built on Claude Opus, Claude Design goes beyond static image generation by offering direct on-canvas selection, spacing and typography sliders, and live preview toggles for landing pages, presentation decks, wireframes, and clickable prototypes. When grounded in a connected GitHub repository or uploaded <a class="gold-link" href="#references">W3C Design Tokens Community Group (DTCG)</a> JSON file, Claude enforces your exact surface colors, spacing scale, and button hierarchy automatically on every generation.</p>
+<h3>Bidirectional Figma MCP Workflows</h3>
+<p class="article-p">Connecting Claude Desktop or <a class="gold-link" href="claude-code.html">Claude Code</a> to Figma's official remote <a class="gold-link" href="#references">Model Context Protocol (MCP)</a> server (<code>https://mcp.figma.com/mcp</code>) unlocks a true code-to-canvas and canvas-to-code loop:</p>
+<ul class="article-p" style="list-style-type:disc;padding-left:1.5rem;display:flex;flex-direction:column;gap:0.55rem;">
+<li><strong>Canvas-to-Code Extraction:</strong> Claude inspects selected Figma frames, auto-layout constraints, semantic variable bindings, and component variants directly - generating token-accurate React, Tailwind, or CSS code instead of eyeballing PNG screenshots.</li>
+<li><strong>Code-to-Canvas Scaffolding:</strong> Point Claude Code at an existing production component library to extract canonical DTCG tokens and push synchronized variable collections, component sets, and auto-layout frames back into Figma.</li>
+<li><strong>Programmatic Visual and WCAG Verification:</strong> After generating or updating a layout, Claude captures programmatic screenshots and audits semantic landmarks, keyboard focus order, tap-target sizing, and contrast ratios against <a class="gold-link" href="#references">WCAG accessibility standards</a> before sign-off.</li>
+</ul>
+<div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid #38bdf8;border-radius:10px;margin:1.5rem 0;overflow:hidden;"><div style="background:#0b1220;padding:0.5rem 1rem;border-bottom:1px solid rgba(56,189,248,0.22);display:flex;justify-content:space-between;align-items:center;font-size:0.8rem;color:#94a3b8;"><span style="color:#fbbf24;font-weight:600;">Connecting Figma Remote MCP for Token-Driven Component Sync</span><span>JSON</span></div><pre style="background:#040711;margin:0;padding:1.1rem 1.25rem;overflow-x:auto;color:#e2e8f0;font-size:0.86rem;line-height:1.55;"><code>{
+  &quot;mcpServers&quot;: {
+    &quot;figma&quot;: {
+      &quot;type&quot;: &quot;http&quot;,
+      &quot;url&quot;: &quot;https://mcp.figma.com/mcp&quot;
+    }
+  }
+}</code></pre></div>
+</section>
+
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="design-workflow-matrix">Claude Design, Figma MCP, and Canva Architecture Comparison</h2>
+<p class="article-p">Use the matrix below to assign each stage of your creative and front-end pipeline to the platform with the highest leverage:</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.9rem;color:#e2e8f0;">
+<thead>
+<tr style="border-bottom:2px solid rgba(251,191,36,0.45);text-align:left;color:var(--gold);">
+<th style="padding:0.75rem;">Capability</th>
+<th style="padding:0.75rem;">Claude Design</th>
+<th style="padding:0.75rem;">Figma + Figma MCP</th>
+<th style="padding:0.75rem;">Canva</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Primary Role</td>
+<td style="padding:0.75rem;">Prompt-to-prototype workspace for landing pages, decks, and interactive UI flows</td>
+<td style="padding:0.75rem;">Multiplayer vector design system curation with live MCP variable read/write</td>
+<td style="padding:0.75rem;">Brand marketing collateral, social assets, and print templates</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Design Token Sync</td>
+<td style="padding:0.75rem;">Extracts tokens from GitHub repos and CSS variables automatically</td>
+<td style="padding:0.75rem;">Bidirectional sync between Figma Variables and DTCG JSON via MCP</td>
+<td style="padding:0.75rem;">Brand Kit color palettes, logos, and font presets</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Code Handoff</td>
+<td style="padding:0.75rem;">Direct semantic HTML/React export into Claude Code</td>
+<td style="padding:0.75rem;">Structured frame/layout context read by Claude Code via MCP tools</td>
+<td style="padding:0.75rem;">Visual exports (PNG, SVG, PDF, MP4) rather than app code</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">WCAG Auditing</td>
+<td style="padding:0.75rem;">Automated contrast, semantic HTML, and keyboard-focus checks during iteration</td>
+<td style="padding:0.75rem;">Token-level contrast checks plus code-side a11y test verification</td>
+<td style="padding:0.75rem;">Manual readability and brand-kit contrast review</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Best Team Owner</td>
+<td style="padding:0.75rem;">Founders, product managers, and full-stack engineers</td>
+<td style="padding:0.75rem;">Product designers and design-system engineers</td>
+<td style="padding:0.75rem;">Marketing, growth, and communications teams</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="claude-design-faq">Practical Questions on Claude Design and Token-Driven Workflows</h2>
+<p class="article-p"><strong>How do we enforce WCAG accessibility automatically during component generation?</strong> Include explicit contrast minimums (4.5:1 for normal text and 3:1 for large UI controls), semantic landmarks, and focus-visible rules inside your repository's design-token documentation, then require <a class="gold-link" href="claude-code.html">Claude Code</a> to run automated axe-core or Playwright accessibility tests before opening any pull request.</p>
+<p class="article-p"><strong>How do teams prevent drift between Figma variables and production CSS?</strong> Treat a single W3C DTCG token JSON file in Git as the canonical source of truth, compile CSS custom properties from it during CI, and use the Figma MCP server to audit or reconcile Figma variable collections against that file at the end of every sprint.</p>
+<p class="article-p"><strong>When should a prototype move from Claude Design into Claude Apps or Claude Code?</strong> Keep rapid visual exploration and stakeholder layout reviews inside Claude Design; move to <a class="gold-link" href="claude-code.html">Claude Code</a> when binding production APIs and automated tests, or package interactive operational views as <a class="gold-link" href="claude-apps.html">Claude Apps</a> when teammates need live authenticated SaaS widgets inside chat.</p>
+</section>
+
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <h2 id="references">Authoritative References</h2>
 <ol class="references-list" style="display:flex;flex-direction:column;gap:0.75rem;padding-left:1.25rem;">
 <li><a class="gold-link" href="https://docs.anthropic.com/en/home" rel="noopener noreferrer" target="_blank">Anthropic Claude Documentation</a> - Official documentation for Claude's interactive prototyping and engineering tools.</li>
 <li><a class="gold-link" href="https://www.w3.org/WAI/standards-guidelines/wcag/" rel="noopener noreferrer" target="_blank">W3C WCAG 2.1 Accessibility Guidelines</a> - Core standards for contrast, keyboard navigation, and semantic UI components.</li>
 <li><a class="gold-link" href="https://www.figma.com/design-systems/" rel="noopener noreferrer" target="_blank">Figma Design Systems Guide</a> - Reference concepts for design tokens, component libraries, and team handoffs.</li>
+<li><a class="gold-link" href="https://modelcontextprotocol.io/" rel="noopener noreferrer" target="_blank">Model Context Protocol (MCP) Specification</a> - Open protocol enabling bidirectional integration between Claude and Figma MCP servers.</li>
+<li><a class="gold-link" href="https://www.designtokens.org/" rel="noopener noreferrer" target="_blank">W3C Design Tokens Community Group (DTCG)</a> - Open JSON standard for cross-platform design tokens shared between design tools and codebases.</li>
 <li><a class="gold-link" href="https://www.canva.com/designschool/" rel="noopener noreferrer" target="_blank">Canva Design School</a> - Practical visual layout and presentation design fundamentals.</li>
+<li><a class="gold-link" href="claude-mcp.html">Claude MCP: Model Context Protocol &amp; Custom Tool Servers</a> - Architecture and security patterns for connecting external design and engineering servers.</li>
 </ol>
 </section>
 </article>

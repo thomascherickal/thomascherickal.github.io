@@ -247,12 +247,12 @@
           <li><a href="../claude-training/claude-101.html">Claude 101</a></li>
           <li><a href="../claude-training/claude-projects.html">Claude Projects</a></li>
           <li><a href="../claude-training/claude-code.html">Claude Code</a></li>
+          <li><a href="../claude-training/claude-code-mode.html">Claude Code Mode</a></li>
           <li><a href="../claude-training/claude-desktop.html">Claude Desktop</a></li>
           <li><a href="../claude-training/claude-office.html">Claude Office</a></li>
-          <li><a href="../claude-training/claude-skills.html">Claude Skills</a></li>
           <li><a href="../claude-training/claude-mcp.html">Claude MCP</a></li>
           <li><a href="../claude-training/claude-plugins.html">Claude Plugins</a></li>
-          <li><a href="../claude-training/claude-connectors.html">Claude Connectors</a></li>
+          <li><a href="../claude-training/claude-apps.html">Claude Apps</a></li>
           <li><a href="../claude-training/claude-orchestration.html">Claude Orchestration</a></li>
           <li><a href="../claude-training/claude-design.html">Claude Design</a></li>
           <li><a href="../claude-training/claude-science.html">Claude for Science</a></li>
@@ -304,6 +304,7 @@
     </ul>
   </nav>
   <!-- END:HEADER -->
+  <a aria-label="Back to top" class="back-top" href="#top" id="backTop" title="Back to top">↑</a>
 
 <main class="container single-column-article" id="main">
 <header class="hero content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);text-align:left;display:flex;flex-direction:column;gap:1.25rem;padding:2rem 2.25rem;margin-top:110px;margin-bottom:2rem;">
@@ -323,7 +324,10 @@
 <a class="toc-link gold-link" href="#failure-modes">5. Avoiding Common Pitfalls With High-Speed Models</a>
 <a class="toc-link gold-link" href="#production-swarm-walkthrough">6. Step-by-Step Walkthrough: Designing a High-Throughput Swarm</a>
 <a class="toc-link gold-link" href="#monitoring-and-scaling">7. Monitoring, Rate Limits, and Scaling Hydrogen in Production</a>
-<a class="toc-link gold-link" href="#references">8. References</a>
+<a class="toc-link gold-link" href="#interactions-api-and-thinking">8. Interactions API, Configurable Thinking Levels, and Unified 1M Context</a>
+<a class="toc-link gold-link" href="#hydrogen-specification-matrix">9. Gemini Hydrogen Thinking Levels and Operational Specification Matrix</a>
+<a class="toc-link gold-link" href="#hydrogen-faq">10. Practical Questions When Deploying Gemini Hydrogen</a>
+<a class="toc-link gold-link" href="#references">11. References</a>
 </div>
 </article>
 
@@ -439,14 +443,125 @@ async def run_swarm(items: list[tuple[str, str]]) -&gt; list[dict]:
 <p>Finally, run weekly spot-checks on a random sample of fifty completed Hydrogen outputs. Even when JSON schemas pass 100 percent of the time, periodic human sampling catches subtle category drift early and keeps your fast worker swarm accurate month after month across changing customer queries and seasonal traffic spikes.</p>
 </article>
 
+<article class="content-card" id="interactions-api-and-thinking" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2>Interactions API, Configurable Thinking Levels, and Unified 1M Context</h2>
+<p>Beyond stateless <code>generate_content</code> loops, production teams deploy Gemini Hydrogen on the modern <a class="gold-link" href="#references">Gemini Interactions API</a> inside the <code>google-genai</code> SDK. The Interactions API manages multi-turn conversation state server-side through <code>previous_interaction_id</code>, isolates internal reasoning traces as structured steps, supports asynchronous <code>background=True</code> execution, and enforces strict JSON payloads via the unified top-level <code>response_format</code> object.</p>
+<ul style="padding-left:1.5rem;color:var(--text-secondary);line-height:1.8;margin-bottom:1.25rem;">
+<li><strong>Four Configurable Thinking Levels:</strong> Gemini Hydrogen defaults to <code>high</code> thinking and supports <code>low</code>, <code>medium</code>, <code>high</code>, and <code>xhigh</code> via <code>generation_config</code>. Teams tune latency and reasoning depth per endpoint rather than swapping models across every microservice. Note that <code>minimal</code> thinking is not supported on the element-named lineup; use <code>low</code> for the lowest-latency path.</li>
+<li><strong>Unified 1,048,576-Token Window and Long Decode:</strong> Input, thinking, and output tokens share one 1M-token context window. Synchronous foreground calls default to a 65,536-token output cap, while asynchronous background runs or client-side continuation can decode up to 1,048,576 tokens across automatic hops as documented in the <a class="gold-link" href="#references">Gemini Long Decode guide</a>.</li>
+<li><strong>Implicit Prefix Caching and Accurate Compaction Telemetry:</strong> Repeated prompt prefixes and multi-hop continuation inputs automatically qualify for implicit caching discounts (up to 95 percent on repeated hop inputs). When monitoring context occupancy for conversation compaction, estimate active window usage from <code>initial_input_tokens</code> plus <code>total_output_tokens</code> and <code>total_thought_tokens</code> rather than multi-hop summed <code>total_input_tokens</code>.</li>
+<li><strong>Parallel Tool Batching and Grounded Execution:</strong> Gemini Hydrogen batches independent read and search tool calls in parallel, recovers cleanly when an external tool returns an error, flags missing context instead of fabricating claims, and inspects targeted frames during agentic video understanding. It also serves as the default execution engine in Gemini Managed Agents such as the Antigravity agent.</li>
+</ul>
+<div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid var(--cyan);border-radius:10px;margin:1.5rem 0;overflow:hidden;">
+<div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.55rem 1rem;background:rgba(255,255,255,0.04);border-bottom:1px solid rgba(255,255,255,0.08);">
+<span style="font-family:var(--font-mono);font-size:0.8rem;color:var(--cyan);">hydrogen_interactions_structured.py</span>
+<button class="copy-btn" onclick="copyCode(this)" style="text-decoration:none !important;" type="button">Copy</button>
+</div>
+<pre style="white-space:pre-wrap;word-break:break-word;overflow-x:hidden;padding:1rem;margin:0;color:#e2e8f0;font-size:0.88rem;"><code>import json
+from google import genai
+
+client = genai.Client()
+
+# Structured JSON output with low thinking for high-throughput triage
+triage_schema = {
+    "type": "object",
+    "properties": {
+        "queue": {"type": "string", "enum": ["billing", "incident", "howto", "security"]},
+        "confidence": {"type": "number"},
+        "needs_escalation": {"type": "boolean"},
+        "missing_context": {"type": "array", "items": {"type": "string"}},
+    },
+    "required": ["queue", "confidence", "needs_escalation", "missing_context"],
+}
+
+interaction = client.interactions.create(
+    model="gemini-4-hydrogen",
+    input="Classify this customer ticket and flag any missing account details before routing.",
+    generation_config={"thinking_level": "low"},
+    response_format={
+        "type": "text",
+        "mime_type": "application/json",
+        "schema": triage_schema,
+    },
+)
+
+result = json.loads(interaction.output_text)
+usage = interaction.usage
+print("Decision:", result)
+print("Cached tokens:", getattr(usage, "total_cached_tokens", 0))
+print("Thought tokens:", getattr(usage, "total_thought_tokens", 0))</code></pre>
+</div>
+<p>For operational governance, enforce explicit per-request <code>max_output_tokens</code> bounds on simple extraction lanes, log <code>total_cached_tokens</code> and <code>total_thought_tokens</code> alongside p95 latency, and restrict write-capable tools behind deterministic schema checks or supervisor review by <a class="gold-link" href="google-gemini-4-neon.html">Gemini Neon</a>.</p>
+</article>
+
+<article class="content-card" id="hydrogen-specification-matrix" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2>Gemini Hydrogen Thinking Levels and Operational Specification Matrix</h2>
+<p>Evaluate your real production dataset across all four thinking levels with a generous <code>max_output_tokens</code> ceiling first, then lock each microservice to the lowest level that consistently satisfies your accuracy bar:</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.9rem;color:#e2e8f0;">
+<thead>
+<tr style="border-bottom:2px solid rgba(251,191,36,0.45);text-align:left;color:var(--gold);">
+<th style="padding:0.75rem;">Thinking Level</th>
+<th style="padding:0.75rem;">Latency &amp; Token Profile</th>
+<th style="padding:0.75rem;">Context &amp; Output Envelope</th>
+<th style="padding:0.75rem;">Best-Fit Hydrogen Workloads</th>
+<th style="padding:0.75rem;">Governance &amp; Routing Tip</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;"><code>low</code></td>
+<td style="padding:0.75rem;">Fewest thought tokens, lowest latency</td>
+<td style="padding:0.75rem;">1M unified window; tight output caps recommended</td>
+<td style="padding:0.75rem;">High-throughput classification, routing, JSON extraction, fast chat, parallel swarm workers</td>
+<td style="padding:0.75rem;">Require <code>needs_escalation</code> boolean in <code>response_format</code> schema</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;"><code>medium</code></td>
+<td style="padding:0.75rem;">Moderate thought budget, responsive streaming</td>
+<td style="padding:0.75rem;">1M unified window; 65,536 synchronous output cap</td>
+<td style="padding:0.75rem;">Interactive coding loops, live UI prototyping, latency-sensitive tool calls, multimodal PDF parsing</td>
+<td style="padding:0.75rem;">Place static system rules first to maximize implicit prefix caching</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;"><code>high</code> (Default)</td>
+<td style="padding:0.75rem;">Balanced reasoning depth and speed</td>
+<td style="padding:0.75rem;">1M unified window; supports <code>background=True</code> long decode</td>
+<td style="padding:0.75rem;">Standalone agentic execution, multi-tool code edits, dense table/chart analysis, video frame inspection</td>
+<td style="padding:0.75rem;">Recommended starting default for Managed Agents and general developer workflows</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;"><code>xhigh</code></td>
+<td style="padding:0.75rem;">Highest token spend and deliberation time</td>
+<td style="padding:0.75rem;">1M unified window; pair with <code>background=True</code> for long runs</td>
+<td style="padding:0.75rem;">Hard concurrency audits, tricky lock-acquisition debugging, complex multi-step failures where <code>high</code> falls short</td>
+<td style="padding:0.75rem;">Avoid on simple JSON extraction where overthinking can exhaust output limits; compare against Gemini Neon</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+
+<article class="content-card" id="hydrogen-faq" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2>Practical Questions When Deploying Gemini Hydrogen</h2>
+<p><strong>Should we keep Gemini Hydrogen at its default <code>high</code> thinking level for every swarm worker?</strong> No. While <code>high</code> is a strong default for standalone coding and multimodal analysis, narrow classification or extraction swarm workers usually achieve identical schema accuracy at <code>low</code> thinking with substantially lower latency and token spend. Benchmark your own dataset across all four levels before fixing production defaults.</p>
+<p><strong>Does Gemini Hydrogen support a <code>minimal</code> thinking setting?</strong> No. The <code>minimal</code> level applies only to legacy Flash-Lite tiers and is not supported on Gemini Hydrogen or Gemini Neon. Use <code>thinking_level: "low"</code> whenever you need the lowest-latency execution path on Gemini Hydrogen.</p>
+<p><strong>How do we prevent premature context compaction during long-decode background runs?</strong> Never trigger compaction from <code>total_input_tokens</code> alone, because multi-hop continuation sums input tokens across every hop. Compute active context occupancy from <code>initial_input_tokens</code> plus <code>total_output_tokens</code> and <code>total_thought_tokens</code> to measure true window pressure accurately.</p>
+<p><strong>When should a team deploy Gemini Hydrogen standalone versus pairing it with Gemini Neon?</strong> Use Gemini Hydrogen standalone for high-volume extraction, fast multimodal inspection, real-time voice or video streaming, and well-scoped coding tasks. Pair Hydrogen workers under a <a class="gold-link" href="google-gemini-4-neon.html">Gemini Neon</a> coordinator whenever workflows require cross-service architectural planning, subtle security patching, or escalation handling on ambiguous edge cases.</p>
+</article>
+
 <article class="content-card" id="references" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <h2>References</h2>
 <p>Official documentation, research papers, and developer guides referenced in this article:</p>
 <ul style="display:flex;flex-direction:column;gap:0.65rem;padding-left:1.25rem;margin-top:1rem;">
-<li><a class="gold-link" href="https://ai.google.dev/gemini-api/docs" rel="noopener noreferrer" target="_blank">Google Gemini API Documentation</a> - Official guides for fast inference, structured outputs, and async SDK usage.</li>
+<li><a class="gold-link" href="https://ai.google.dev/gemini-api/docs" rel="noopener noreferrer" target="_blank">Google Gemini API Documentation</a> - Official guides for fast inference, Interactions API workflows, and async SDK usage.</li>
+<li><a class="gold-link" href="https://ai.google.dev/gemini-api/docs/thinking" rel="noopener noreferrer" target="_blank">Gemini API Thinking Guide</a> - Authoritative documentation for <code>low</code>, <code>medium</code>, <code>high</code>, and <code>xhigh</code> thinking levels on Gemini Hydrogen and Gemini Neon.</li>
+<li><a class="gold-link" href="https://ai.google.dev/gemini-api/docs/structured-output" rel="noopener noreferrer" target="_blank">Gemini API Structured Outputs</a> - Official guide for constraining JSON schemas with <code>response_format</code> across production pipelines.</li>
+<li><a class="gold-link" href="https://ai.google.dev/gemini-api/docs/long-decode" rel="noopener noreferrer" target="_blank">Gemini API Long Decode Guide</a> - Unified 1M-token context budgeting, background continuation hops, implicit caching discounts, and token telemetry.</li>
 <li><a class="gold-link" href="https://ai.google.dev/gemini-api/docs/live" rel="noopener noreferrer" target="_blank">Gemini Live API Guide</a> - Documentation for real-time bidirectional voice and video streaming.</li>
-<li><a class="gold-link" href="https://github.com/googleapis/python-genai" rel="noopener noreferrer" target="_blank">Google GenAI Python SDK</a> - Official Python client supporting async concurrency with client.aio.</li>
+<li><a class="gold-link" href="https://github.com/googleapis/python-genai" rel="noopener noreferrer" target="_blank">Google GenAI Python SDK</a> - Official Python client supporting Interactions API and async concurrency with <code>client.aio</code>.</li>
 <li><a class="gold-link" href="https://github.com/google-gemini/cookbook" rel="noopener noreferrer" target="_blank">Google Gemini Cookbook</a> - Production recipes for batch classification and multi-agent pipelines.</li>
+<li><a class="gold-link" href="google-gemini-4-neon.html">Gemini Neon Engineering Guide</a> - Pairing Gemini Hydrogen worker swarms with a Gemini Neon coordinator.</li>
 </ul>
 </article>
 

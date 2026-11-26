@@ -237,12 +237,12 @@
           <li><a href="../claude-training/claude-101.html">Claude 101</a></li>
           <li><a href="../claude-training/claude-projects.html">Claude Projects</a></li>
           <li><a href="../claude-training/claude-code.html">Claude Code</a></li>
+          <li><a href="../claude-training/claude-code-mode.html">Claude Code Mode</a></li>
           <li><a href="../claude-training/claude-desktop.html">Claude Desktop</a></li>
           <li><a href="../claude-training/claude-office.html">Claude Office</a></li>
-          <li><a href="../claude-training/claude-skills.html">Claude Skills</a></li>
           <li><a href="../claude-training/claude-mcp.html">Claude MCP</a></li>
           <li><a href="../claude-training/claude-plugins.html">Claude Plugins</a></li>
-          <li><a href="../claude-training/claude-connectors.html">Claude Connectors</a></li>
+          <li><a href="../claude-training/claude-apps.html">Claude Apps</a></li>
           <li><a href="../claude-training/claude-orchestration.html">Claude Orchestration</a></li>
           <li><a href="../claude-training/claude-design.html">Claude Design</a></li>
           <li><a href="../claude-training/claude-science.html">Claude for Science</a></li>
@@ -294,7 +294,7 @@
     </ul>
   </nav>
   <!-- END:HEADER -->
-<a aria-label="Back to top" class="back-top" href=\"#top\" id="backTop" title="Back to top">↑</a>
+<a aria-label="Back to top" class="back-top" href="#top" id="backTop" title="Back to top">↑</a>
 <main id="main">
 <div class="doc-container" style="max-width:980px;margin:0 auto;padding:2.75rem 1.25rem 3rem;">
 
@@ -315,7 +315,6 @@
   <section id="table-of-contents" class="content-card" style="background:#000000;border:1.5px solid rgba(251,191,36,0.45);border-radius:14px;padding:1.75rem 2rem;margin-bottom:2rem;">
     <h2 style="color:#fbbf24;margin-bottom:0.9rem;font-size:1.35rem;">Table of Contents</h2>
     <ol style="list-style:none;padding-left:0;margin:0;line-height:1.7;">
-      <li style="margin-bottom:0.45rem;"><a class="gold-link" href="#economics-of-local-inference">1. Why High-Volume Cloud Token Bills Become Unsustainable</a></li><li style="margin-bottom:0.45rem;"><a class="gold-link" href="#quantization-and-vllm-serving">2. Quantization, VRAM Sizing, and High-Throughput vLLM Serving</a></li><li style="margin-bottom:0.45rem;"><a class="gold-link" href="#throughput-benchmarking-and-break-even">3. Throughput Benchmarking and Cloud-to-Local Break-Even Analysis</a></li><li style="margin-bottom:0.45rem;"><a class="gold-link" href="#rollout-and-deliverables">4. Avoiding Local Hardware Traps and What Your Team Ships</a></li><li style="margin-bottom:0.45rem;"><a class="gold-link" href="#migration-and-optimization-playbook">5. Step-by-Step Cloud-to-Local Migration Playbook and Optimization Guide</a></li><li style="margin-bottom:0.45rem;"><a class="gold-link" href="#references">6. References and Further Reading</a></li>
     </ol>
   </section>
 
@@ -396,22 +395,7 @@ graph TD
 
 </section>
 
-  <section id="migration-and-optimization-playbook" class="content-card" style="background:#000000;border:1.5px solid rgba(251,191,36,0.45);border-radius:14px;padding:2rem;margin-bottom:2rem;">
-<h2 style="color:#fbbf24;margin-bottom:1rem;">Step-by-Step Cloud-to-Local Migration Playbook and Optimization Guide</h2>
-
-<p style="color:#e2e8f0;line-height:1.78;margin-bottom:1rem;">Migrating high-volume workloads from expensive cloud APIs to local open-weights models works best as a measured, zero-downtime engineering rollout. In Week One, export a representative sample of 500 to 1,000 real production prompts from your observability logs and group them by task type: structured JSON extraction, ticket classification, document summarization, SQL drafting, code completion, and complex multi-step reasoning. This log audit immediately reveals which high-volume tasks are driving eighty percent of your monthly cloud invoice.</p>
-<p style="color:#e2e8f0;line-height:1.78;margin-bottom:1rem;">In Week Two, spin up candidate quantized models - such as Gemma, Qwen, and DeepSeek in AWQ or FP8 formats - on a benchmark GPU instance running vLLM. Run your exact golden prompt sample through each model and score output quality side-by-side against your current cloud baseline, while measuring Time to First Token and sustained tokens per second at peak concurrency. Enable prefix caching in vLLM so repeated system prompts compute once and reuse KV-cache blocks across requests.</p>
-<p style="color:#e2e8f0;line-height:1.78;margin-bottom:1rem;">In Week Three, deploy your OpenAI-compatible local endpoint behind your central hybrid router and shift traffic gradually - starting at ten percent shadow traffic, then fifty percent, then one hundred percent for every task category that meets your accuracy and latency SLA. Complex edge cases continue routing to cloud APIs automatically so end-user quality never dips.</p>
-<p style="color:#e2e8f0;line-height:1.78;margin-bottom:1rem;">In Week Four, finalize your hardware sizing and break-even model with finance, configure GPU utilization and OOM alerts, and establish a quarterly benchmark check so your team can adopt faster, stronger open-weights releases as they arrive.</p>
-
-
-<h3 style="color:#38bdf8;margin:1.25rem 0 0.75rem;">Common Local LLM Failure Modes and Safeguards</h3>
-<ul style="color:#e2e8f0;line-height:1.75;padding-left:1.35rem;margin-bottom:0.5rem;">
-<li style="margin-bottom:0.55rem;"><strong>VRAM Out-of-Memory Crashes:</strong> Size KV-cache limits and max sequence lengths realistically for peak concurrency rather than single-user laptop tests.</li>
-<li style="margin-bottom:0.55rem;"><strong>Aggressive Quantization Loss:</strong> Always benchmark 4-bit and 8-bit quantized weights against your golden prompt set to confirm JSON formatting and reasoning accuracy hold steady.</li>
-<li style="margin-bottom:0.55rem;"><strong>Routing Complex Tasks Locally:</strong> Keep a clean confidence and complexity router so hard edge cases escalate smoothly to cloud frontier models without hurting user trust.</li>
-</ul>
-</section>
+  
 
   <section id="references" class="content-card" style="background:#000000;border:1.5px solid rgba(251,191,36,0.45);border-radius:14px;padding:2rem;margin-bottom:2rem;">
     <h2 style="color:#fbbf24;margin-bottom:1rem;">References and Further Reading</h2>

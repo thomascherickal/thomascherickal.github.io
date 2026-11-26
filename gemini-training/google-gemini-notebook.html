@@ -247,12 +247,12 @@
           <li><a href="../claude-training/claude-101.html">Claude 101</a></li>
           <li><a href="../claude-training/claude-projects.html">Claude Projects</a></li>
           <li><a href="../claude-training/claude-code.html">Claude Code</a></li>
+          <li><a href="../claude-training/claude-code-mode.html">Claude Code Mode</a></li>
           <li><a href="../claude-training/claude-desktop.html">Claude Desktop</a></li>
           <li><a href="../claude-training/claude-office.html">Claude Office</a></li>
-          <li><a href="../claude-training/claude-skills.html">Claude Skills</a></li>
           <li><a href="../claude-training/claude-mcp.html">Claude MCP</a></li>
           <li><a href="../claude-training/claude-plugins.html">Claude Plugins</a></li>
-          <li><a href="../claude-training/claude-connectors.html">Claude Connectors</a></li>
+          <li><a href="../claude-training/claude-apps.html">Claude Apps</a></li>
           <li><a href="../claude-training/claude-orchestration.html">Claude Orchestration</a></li>
           <li><a href="../claude-training/claude-design.html">Claude Design</a></li>
           <li><a href="../claude-training/claude-science.html">Claude for Science</a></li>
@@ -304,6 +304,7 @@
     </ul>
   </nav>
   <!-- END:HEADER -->
+  <a aria-label="Back to top" class="back-top" href="#top" id="backTop" title="Back to top">↑</a>
 
 <main class="container single-column-article" id="main">
 <header class="hero content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);text-align:left;display:flex;flex-direction:column;gap:1.25rem;padding:2rem 2.25rem;margin-top:110px;margin-bottom:2rem;">
@@ -323,7 +324,10 @@
 <a class="toc-link gold-link" href="#best-practices">5. Practical Habits for Clean, Reliable Notebooks</a>
 <a class="toc-link gold-link" href="#domain-workflows">6. Practical Workflows for Researchers, Analysts, and Students</a>
 <a class="toc-link gold-link" href="#troubleshooting-grounding">7. Troubleshooting Source Grounding and Citation Quality</a>
-<a class="toc-link gold-link" href="#references">8. References</a>
+<a class="toc-link gold-link" href="#multimodal-studio-and-mind-maps">8. Multimodal Studio: Video Overviews, Interactive Mind Maps, and Context Caching</a>
+<a class="toc-link gold-link" href="#notebook-output-matrix">9. Gemini Notebook Studio Outputs and Grounding Matrix</a>
+<a class="toc-link gold-link" href="#notebook-faq">10. Practical Questions on Scaling Gemini Notebook</a>
+<a class="toc-link gold-link" href="#references">11. References</a>
 </div>
 </article>
 
@@ -443,14 +447,131 @@ grounding_mode: strict_sources_only</code></pre>
 <p>Combining disciplined source hygiene with Audio Overviews and inline citation checks makes Gemini Notebook one of the fastest, lowest-risk ways for any team to turn raw documents into reliable shared knowledge.</p>
 </article>
 
+<article class="content-card" id="multimodal-studio-and-mind-maps" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2>Multimodal Studio: Video Overviews, Interactive Mind Maps, and Context Caching</h2>
+<p>NotebookLM and Gemini Notebook have evolved far beyond static text summaries into a full multi-output research studio. Rather than restricting each notebook to a single generated summary, the redesigned <strong>Studio panel</strong> lets analysts generate and retain multiple tailored artifacts from the exact same verified corpus - serving executives, engineers, and learners simultaneously.</p>
+<ul style="padding-left:1.5rem;color:var(--text-secondary);line-height:1.8;margin-bottom:1.25rem;">
+<li><strong>Video Overviews and Cinematic Visual Explainers:</strong> Transform dense PDFs, architectural charts, and slide decks into narrated visual walkthroughs that pull key figures, diagrams, and verbatim quotes directly onto the screen. Advanced tiers also unlock Veo-backed Cinematic Video Overviews for richer visual storytelling.</li>
+<li><strong>Prompt-Steerable Interactive Mind Maps:</strong> Move past static topic clouds by prompting the notebook to organize concepts into specific analytical structures - such as decision-architecture maps, contradiction and tension maps, or literature constellations. Users can click individual branch nodes to inspect underlying citations while listening to an Audio Overview in parallel.</li>
+<li><strong>Interactive and Multilingual Audio Overviews:</strong> Audio Overviews now span over 50 languages with explicit length, audience, and focus steering. In Interactive Mode, listeners can interrupt the AI hosts mid-conversation to ask a targeted follow-up question and receive an immediate spoken answer grounded strictly in the notebook's uploaded sources.</li>
+<li><strong>Expanded Multi-Output Studio Deliverables:</strong> Generate multiple distinct briefing documents, structured data tables, slide decks, infographics, flashcards, and adaptive quizzes inside a single notebook without overwriting earlier outputs.</li>
+<li><strong>Workspace, Education, and Enterprise Governance:</strong> Across Google Workspace, Education, and Enterprise plans, uploaded sources, queries, and generated Studio artifacts remain strictly private within organizational boundaries and are never used to train foundation models, while higher tiers unlock deeper reasoning modes such as Gemini Deep Think and larger source budgets.</li>
+</ul>
+<p>When engineering teams replicate this multi-query notebook experience inside a custom internal application, pairing the Files API with <a class="gold-link" href="#references">Gemini API Context Caching</a> avoids re-processing the same multi-hundred-page corpus on every user question:</p>
+<div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid var(--cyan);border-radius:10px;margin:1.5rem 0;overflow:hidden;">
+<div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.55rem 1rem;background:rgba(255,255,255,0.04);border-bottom:1px solid rgba(255,255,255,0.08);">
+<span style="font-family:var(--font-mono);font-size:0.8rem;color:var(--cyan);">context_cached_notebook.py</span>
+<button class="copy-btn" onclick="copyCode(this)" style="text-decoration:none !important;" type="button">Copy</button>
+</div>
+<pre style="white-space:pre-wrap;word-break:break-word;overflow-x:hidden;padding:1rem;margin:0;color:#e2e8f0;font-size:0.88rem;"><code>from google import genai
+from google.genai import types
+
+client = genai.Client()
+
+# Upload large reference PDFs once via the Files API
+spec_pdf = client.files.upload(file="enterprise_security_spec.pdf")
+audit_pdf = client.files.upload(file="annual_compliance_audit.pdf")
+
+# Cache the closed-world corpus for repeated low-latency Q&amp;A
+corpus_cache = client.caches.create(
+    model="gemini-4-neon",
+    config=types.CreateCachedContentConfig(
+        display_name="security-audit-notebook-v1",
+        system_instruction=(
+            "Answer strictly from the cached documents. Cite filename and "
+            "section heading for every claim. If absent, state 'Not in sources.'"
+        ),
+        contents=[spec_pdf, audit_pdf],
+        ttl="3600s",
+    ),
+)
+
+# Ask multiple grounded questions without re-uploading or re-tokenizing
+response = client.models.generate_content(
+    model="gemini-4-neon",
+    contents="Build a markdown table of all open high-severity audit gaps.",
+    config=types.GenerateContentConfig(
+        cached_content=corpus_cache.name,
+        temperature=0.1,
+    ),
+)
+print(response.text)</code></pre>
+</div>
+</article>
+
+<article class="content-card" id="notebook-output-matrix" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2>Gemini Notebook Studio Outputs and Grounding Matrix</h2>
+<p>Choose the Studio deliverable and grounding workflow that matches your audience, review depth, and source complexity using capabilities detailed in the <a class="gold-link" href="#references">NotebookLM Official Help Center</a>:</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.9rem;color:#e2e8f0;">
+<thead>
+<tr style="border-bottom:2px solid rgba(251,191,36,0.45);text-align:left;color:var(--gold);">
+<th style="padding:0.75rem;">Studio Format / Capability</th>
+<th style="padding:0.75rem;">Best Input Sources</th>
+<th style="padding:0.75rem;">Steering &amp; Customization Controls</th>
+<th style="padding:0.75rem;">Ideal Research or Enterprise Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Citation-Locked Q&amp;A</td>
+<td style="padding:0.75rem;">PDFs, Google Docs, Markdown specs, transcripts</td>
+<td style="padding:0.75rem;">Per-source checkboxes, custom persona &amp; response length</td>
+<td style="padding:0.75rem;">Legal discovery, policy checks, verifiable due diligence</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Interactive Audio Overviews</td>
+<td style="padding:0.75rem;">Long reports, book chapters, interview batches</td>
+<td style="padding:0.75rem;">50+ languages, focus prompts, duration, live host interruption</td>
+<td style="padding:0.75rem;">Executive commute briefings and rapid domain onboarding</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Video &amp; Cinematic Overviews</td>
+<td style="padding:0.75rem;">Slide decks, visual research papers, chart-heavy PDFs</td>
+<td style="padding:0.75rem;">Narrated visual slides or Veo-enhanced visual explainers</td>
+<td style="padding:0.75rem;">Team training explainers, course recaps, stakeholder walkthroughs</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Interactive Mind Maps</td>
+<td style="padding:0.75rem;">Multi-paper literature sets, architecture docs</td>
+<td style="padding:0.75rem;">Prompt-steered hierarchies, tension maps, clickable branch nodes</td>
+<td style="padding:0.75rem;">Visualizing cross-document relationships and hidden contradictions</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Tables, Decks &amp; Study Tools</td>
+<td style="padding:0.75rem;">Financial filings, syllabi, technical runbooks</td>
+<td style="padding:0.75rem;">Data tables, infographics, slide decks, flashcards, quizzes</td>
+<td style="padding:0.75rem;">Metric comparison matrices, exam preparation, slide drafting</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Workspace &amp; Enterprise Plans</td>
+<td style="padding:0.75rem;">Shared Drive folders and internal knowledge hubs</td>
+<td style="padding:0.75rem;">Zero-training privacy, chat-only sharing, analytics, higher quotas</td>
+<td style="padding:0.75rem;">Departmental knowledge bases with strict data-residency rules</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+
+<article class="content-card" id="notebook-faq" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2>Practical Questions on Scaling Gemini Notebook</h2>
+<p><strong>Are documents uploaded to Workspace or Enterprise notebooks used to train Gemini models?</strong> No. Under Google Workspace, Education, and Enterprise data-protection terms, uploaded sources, questions, and generated Studio outputs stay private inside your organization and are never used to train foundation models.</p>
+<p><strong>Can one notebook hold multiple Audio Overviews or Mind Maps for different teams?</strong> Yes. The multi-output Studio panel lets you generate and save separate Audio Overviews, Video Overviews, briefings, or mind maps from the same corpus - for instance, a five-minute executive brief alongside a deep technical architecture review.</p>
+<p><strong>When should we use Gemini Notebook directly versus building a custom Files API + Context Caching app?</strong> Use Gemini Notebook directly for human researchers, analysts, and internal knowledge hubs where built-in citation UI, Audio/Video Overviews, and Mind Maps save weeks of engineering. Build a custom Gemini API pipeline with Context Caching when you need programmatic triggers, CRM/database writes, or strict JSON outputs embedded inside your own product.</p>
+<p><strong>How do Interactive Audio Overviews and Q&amp;A handle conflicting numbers across uploaded sources?</strong> When two uploaded documents disagree, prompt the notebook explicitly to surface discrepancies and list each claim with its clickable inline citation. Removing superseded drafts before generating Audio or Video Overviews prevents outdated metrics from entering the narration.</p>
+</article>
+
 <article class="content-card" id="references" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <h2>References</h2>
 <p>Official documentation, research papers, and developer guides referenced in this article:</p>
 <ul style="display:flex;flex-direction:column;gap:0.65rem;padding-left:1.25rem;margin-top:1rem;">
 <li><a class="gold-link" href="https://notebooklm.google/" rel="noopener noreferrer" target="_blank">Google NotebookLM</a> - Official home for source-grounded notebooks, audio overviews, and study guides.</li>
+<li><a class="gold-link" href="https://support.google.com/notebooklm/" rel="noopener noreferrer" target="_blank">NotebookLM Official Help Center</a> - Documentation on Studio outputs, Mind Maps, Audio/Video Overviews, and sharing controls.</li>
 <li><a class="gold-link" href="https://ai.google.dev/gemini-api/docs/document-processing" rel="noopener noreferrer" target="_blank">Gemini API Files and Document Understanding</a> - Developer guide for uploading PDFs and building citation-locked Q&amp;A.</li>
+<li><a class="gold-link" href="https://ai.google.dev/gemini-api/docs/caching" rel="noopener noreferrer" target="_blank">Gemini API Context Caching</a> - Guide for caching large document corpora to reduce latency and token overhead on repeated queries.</li>
 <li><a class="gold-link" href="https://workspace.google.com/solutions/ai/" rel="noopener noreferrer" target="_blank">Google Workspace AI Solutions</a> - Enterprise workflows connecting Docs, Drive, and Gemini notebooks.</li>
-<li><a class="gold-link" href="https://blog.google/technology/ai/" rel="noopener noreferrer" target="_blank">Google Blog - NotebookLM Updates</a> - Official product announcements for Audio Overviews and research features.</li>
+<li><a class="gold-link" href="https://blog.google/technology/ai/" rel="noopener noreferrer" target="_blank">Google Blog - NotebookLM Updates</a> - Official product announcements for Audio Overviews, Video Overviews, and research features.</li>
 </ul>
 </article>
 

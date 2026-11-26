@@ -337,12 +337,12 @@
           <li><a href="../claude-training/claude-101.html">Claude 101</a></li>
           <li><a href="../claude-training/claude-projects.html">Claude Projects</a></li>
           <li><a href="../claude-training/claude-code.html">Claude Code</a></li>
+          <li><a href="../claude-training/claude-code-mode.html">Claude Code Mode</a></li>
           <li><a href="../claude-training/claude-desktop.html">Claude Desktop</a></li>
           <li><a href="../claude-training/claude-office.html">Claude Office</a></li>
-          <li><a href="../claude-training/claude-skills.html">Claude Skills</a></li>
           <li><a href="../claude-training/claude-mcp.html">Claude MCP</a></li>
           <li><a href="../claude-training/claude-plugins.html">Claude Plugins</a></li>
-          <li><a href="../claude-training/claude-connectors.html">Claude Connectors</a></li>
+          <li><a href="../claude-training/claude-apps.html">Claude Apps</a></li>
           <li><a href="../claude-training/claude-orchestration.html">Claude Orchestration</a></li>
           <li><a href="../claude-training/claude-design.html">Claude Design</a></li>
           <li><a href="../claude-training/claude-science.html">Claude for Science</a></li>
@@ -394,8 +394,9 @@
     </ul>
   </nav>
   <!-- END:HEADER -->
+  <a aria-label="Back to top" class="back-top" href="#top" id="backTop" title="Back to top">↑</a>
 
-<main id="main">
+<main class="container single-column-article" id="main">
 <header class="hero content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <div class="hero-badge content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">CLAUDE PROJECTS</div>
 <h1>Claude Projects: Persistent Context & Knowledge Workspaces</h1>
@@ -404,7 +405,7 @@
 <p class="hero-byline">By <strong>Thomas Cherickal</strong> - Generative AI Consultant &amp; The Digital Futurist</p>
 </header>
 
-<article class="article-body" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.25rem;">
+<article class="article-body">
 <div id="table-of-contents" aria-label="Table of contents" class="content-card toc-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <p class="article-p" style="font-size:1.02rem;color:#f1f5f9;">Starting a fresh chat every morning and re-uploading the same client brief, style guide, and architecture doc is one of the biggest productivity drains in everyday AI use. Claude Projects eliminates that repetition by giving each client, product, or personal initiative its own dedicated workspace with persistent reference files and tailored custom instructions.</p>
 <div class="rule"></div>
@@ -417,6 +418,8 @@
 <li><a class="gold-link" href="#team-knowledge-sharing-workflow">Step-by-Step: Onboarding a Team onto Shared Claude Projects</a></li>
 <li><a class="gold-link" href="#common-project-pitfalls">Common Claude Projects Pitfalls and How to Fix Them</a></li>
 <li><a class="gold-link" href="#maximizing-project-value">Practical Habits That Multiply Claude Projects Value</a></li>
+<li><a class="gold-link" href="#rag-scaling-memory-and-connectors">Automatic RAG Scaling, Project Memory, and Live Connectors</a></li>
+<li><a class="gold-link" href="#uploads-vs-connectors-comparison">Static Project Uploads vs. Automatic RAG vs. Live Connectors</a></li>
 <li><a class="gold-link" href="#projects-faq">Frequently Asked Questions on Claude Projects</a></li>
 <li><a class="gold-link" href="#references">Authoritative References</a></li>
 </ol>
@@ -427,7 +430,7 @@
 
 <p class="article-p">A <a class="gold-link" href="#references">Claude Project</a> is a self-contained workspace with two permanent anchors: a <strong>Project Knowledge</strong> library (PDFs, Markdown specs, CSVs, code files, and meeting summaries) and a set of <strong>Custom Instructions</strong> that define Claude's role, tone, and output rules for every conversation inside that workspace.</p>
 <p class="article-p">Whenever you open a new chat thread inside the project, Claude already knows your background documents, terminology, and formatting preferences. You can jump straight into today's task - whether that is drafting a phase-two client proposal, debugging a module, or continuing a book chapter - without ever dragging and dropping the same reference files again.</p>
-<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.25rem;margin:1.5rem 0;"><div class="mermaid">
+<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.5rem;margin:1.75rem 0;"><div class="mermaid">
 flowchart TD
     P["Claude Project Workspace
 (e.g. Client Acme Modernization)"] --> K["Persistent Knowledge Base
@@ -496,7 +499,7 @@ You are the dedicated technical advisor for the Acme Cloud Migration project.
 <h2 id="maintaining-project-hygiene">Maintaining Project Hygiene Over Months of Work</h2>
 
 <p class="article-p">Treat your Project Knowledge folder like a living wiki, not a junk drawer. Every Friday, spend two minutes removing superseded drafts and appending a short five-line summary of the week's key decisions to your decisions log. Start a fresh chat thread inside the project for each new topic so individual conversations stay fast and focused while your long-term knowledge stays permanently intact.</p>
-<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.25rem;margin:1.5rem 0;"><div class="mermaid">
+<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.5rem;margin:1.75rem 0;"><div class="mermaid">
 graph TD
     W["Complete Weekly Milestone"] --> S["Summarize Decisions in 5 Lines"]
     S --> U["Update 03-decisions-log.md
@@ -547,16 +550,87 @@ for Next Week's Tasks"]
 
 
 <section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="rag-scaling-memory-and-connectors">Automatic RAG Scaling, Project Memory, and Live Connectors</h2>
+<p class="article-p">Claude Projects has evolved far beyond static upload folders into an adaptive retrieval and collaboration architecture engineered for large organizational knowledge bases, as detailed in the <a class="gold-link" href="#references">Anthropic Claude Projects documentation</a>:</p>
+<ul class="article-p" style="list-style-type:disc;padding-left:1.5rem;display:flex;flex-direction:column;gap:0.55rem;">
+<li><strong>Automatic RAG Expansion (Up to 10x Capacity):</strong> Standard project uploads load directly into the prompt context (with individual files capped at roughly 30 MB and free plans capped at 5 projects). On paid plans (Pro, Max, Team, and Enterprise), when your library approaches standard context limits, Claude automatically switches into <strong>Retrieval-Augmented Generation (RAG) mode</strong> - surfacing a RAG indicator badge and using a semantic project knowledge search tool to pull only the relevant chunks per query. Trimming files below the threshold dynamically restores full-context mode.</li>
+<li><strong>Project-Level Memory &amp; Coordinator Workflows:</strong> Projects persist learned conventions and context across separate threads housed under the same initiative. In advanced agentic workspaces, a top-level coordinator thread can decompose a goal and spin out parallel cloud workstreams that all inherit the same project instructions, memory, and repository bindings.</li>
+<li><strong>Live Connectors (GitHub, Google Drive, Slack &amp; MCP):</strong> Rather than relying solely on frozen file snapshots, Team and Enterprise workspaces connect live sources via native connectors, <a class="gold-link" href="claude-plugins.html">Claude Plugins</a>, and <a class="gold-link" href="claude-apps.html">Claude Apps</a>. GitHub connections index active codebases, Slack connectors search approved channels and past decisions, and Google Drive syncs current documents while enforcing each individual user's upstream source permissions.</li>
+<li><strong>Enterprise Permissions &amp; Privacy Boundaries:</strong> Project owners assign granular <code>Can view</code> or <code>Can edit</code> access by teammate or organization, publish verified outputs to a shared team activity feed, and operate under Team and Enterprise guarantees that project data is never used to train foundational models.</li>
+</ul>
+<div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid #38bdf8;border-radius:10px;margin:1.5rem 0;overflow:hidden;"><div style="background:#0b1220;padding:0.5rem 1rem;border-bottom:1px solid rgba(56,189,248,0.22);display:flex;justify-content:space-between;align-items:center;font-size:0.8rem;color:#94a3b8;"><span style="color:#fbbf24;font-weight:600;">Project Knowledge Manifest &amp; Hybrid Connector Policy (00-knowledge-manifest.md)</span><span>Markdown</span></div><pre style="background:#040711;margin:0;padding:1.1rem 1.25rem;overflow-x:auto;color:#e2e8f0;font-size:0.86rem;line-height:1.55;"><code># Knowledge Source Routing &amp; Freshness Policy
+
+## Static Project Uploads (Canonical Baseline - RAG Ready)
+- `01-project-charter.md` - Approved scope, milestones, and SLA targets (Owner: Delivery Lead)
+- `02-architecture-and-glossary.md` - System boundaries and domain terms (Owner: Principal Architect)
+- `03-decisions-log.md` - Immutable ADR log updated every Friday (Owner: Tech Lead)
+
+## Live External Connectors (Real-Time Source of Truth)
+- GitHub Connector: Query live pull requests, open issues, and `main` branch code before suggesting edits.
+- Google Drive Connector: Pull current Q4 budget sheets and client decks; respect source ACL boundaries.
+- Slack Connector: Check `#proj-acme-decisions` for same-day stakeholder approvals not yet logged in ADRs.
+
+## Conflict Resolution Rule
+- When a static upload conflicts with a dated GitHub commit or Slack approval, cite both sources and flag the discrepancy for weekly cleanup.</code></pre></div>
+</section>
+
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="uploads-vs-connectors-comparison">Static Project Uploads vs. Automatic RAG vs. Live Connectors</h2>
+<p class="article-p">Combine static reference files with live external connectors deliberately so your team balances speed, freshness, and access control:</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.9rem;color:#e2e8f0;">
+<thead>
+<tr style="border-bottom:2px solid rgba(251,191,36,0.45);text-align:left;color:var(--gold);">
+<th style="padding:0.75rem;">Dimension</th>
+<th style="padding:0.75rem;">Direct Context Uploads</th>
+<th style="padding:0.75rem;">Automatic RAG Mode (Paid Plans)</th>
+<th style="padding:0.75rem;">Live Connectors (Drive, GitHub, Slack, MCP)</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Data Freshness</td>
+<td style="padding:0.75rem;">Point-in-time snapshot until manually replaced</td>
+<td style="padding:0.75rem;">Point-in-time snapshot indexed into semantic chunks</td>
+<td style="padding:0.75rem;">Queried live at runtime from the upstream platform</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Capacity &amp; Scaling</td>
+<td style="padding:0.75rem;">Full-text loading within standard context budget (up to ~30 MB per file)</td>
+<td style="padding:0.75rem;">Auto-activates near context limits; expands capacity up to 10x</td>
+<td style="padding:0.75rem;">On-demand search and tool retrieval across large external workspaces</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Access Control</td>
+<td style="padding:0.75rem;">Visible to all project members (<code>Can view</code> / <code>Can edit</code>)</td>
+<td style="padding:0.75rem;">Shared project scope; all permitted project members search the index</td>
+<td style="padding:0.75rem;">Enforces individual user ACLs mapped to the source app</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Best Use Case</td>
+<td style="padding:0.75rem;">Charters, style guides, ADR logs, concise SOPs</td>
+<td style="padding:0.75rem;">Large RFP archives, compliance manuals, multi-quarter research corpora</td>
+<td style="padding:0.75rem;">Active code repos, evolving spreadsheets, live engineering chat threads</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <h2 id="projects-faq">Frequently Asked Questions on Claude Projects</h2>
-<p class="article-p"><strong>How many files should I keep inside one Claude Project?</strong> Aim for 5 to 12 crisp, current reference files rather than dozens of raw meeting dumps. Consolidating related notes into clean Markdown summaries keeps answers fast, grounded, and free of contradictions.</p>
-<p class="article-p"><strong>Should I reuse one chat thread or start new chats inside a Project?</strong> Start a fresh chat for every distinct task or deliverable. Because Project Knowledge and Custom Instructions load automatically into every new thread, you get full persistent context with zero conversation clutter.</p>
+<p class="article-p"><strong>How many files should I keep inside one Claude Project?</strong> Aim for 5 to 12 crisp, current reference files when you want full-context reading on every turn. If your engagement requires hundreds of pages of reference material on a paid plan, Claude automatically activates RAG mode to expand capacity up to 10x without breaking response speed.</p>
+<p class="article-p"><strong>Should I reuse one chat thread or start new chats inside a Project?</strong> Start a fresh chat for every distinct task or deliverable. Because Project Knowledge, Custom Instructions, and project memory load automatically into every new thread, you get full persistent context with zero conversation clutter.</p>
+<p class="article-p"><strong>Does Automatic RAG mode stay locked on permanently once triggered?</strong> No. RAG mode is dynamic and reversible: if you archive or remove older reference documents so the project fits comfortably inside the standard context window again, Claude shifts back to direct full-context processing automatically.</p>
+<p class="article-p"><strong>How do external connectors like Google Drive and Slack protect private files inside shared team projects?</strong> External connectors strictly enforce source-system permissions at query time, so Claude never surfaces a Drive document or private Slack channel that the requesting user does not already have permission to view. Shared team containers also restrict automatic workspace sync where cross-user access boundaries could leak.</p>
 </section>
 
 <section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <h2 id="references">Authoritative References</h2>
 <ol class="references-list" style="display:flex;flex-direction:column;gap:0.75rem;padding-left:1.25rem;">
-<li><a class="gold-link" href="https://support.anthropic.com/en/articles/9517075-what-are-projects" rel="noopener noreferrer" target="_blank">Anthropic Claude Projects Guide</a> - Official documentation on creating, sharing, and managing Claude Projects.</li>
+<li><a class="gold-link" href="https://support.anthropic.com/en/articles/9517075-what-are-projects" rel="noopener noreferrer" target="_blank">Anthropic Claude Projects Guide</a> - Official documentation on creating, sharing, automatic RAG mode, and managing Claude Projects.</li>
 <li><a class="gold-link" href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview" rel="noopener noreferrer" target="_blank">Anthropic Prompt Engineering Overview</a> - Best practices for writing clear custom instructions and structured context documents.</li>
+<li><a class="gold-link" href="https://modelcontextprotocol.io/" rel="noopener noreferrer" target="_blank">Model Context Protocol (MCP)</a> - Open standard powering live external connectors, <a class="gold-link" href="claude-plugins.html">Claude Plugins</a>, and <a class="gold-link" href="claude-apps.html">Claude Apps</a> inside workspaces.</li>
 <li><a class="gold-link" href="https://adr.github.io/" rel="noopener noreferrer" target="_blank">Architecture Decision Records (ADR)</a> - Lightweight decision-logging format ideal for maintaining persistent project memory.</li>
 <li><a class="gold-link" href="https://www.markdownguide.org/" rel="noopener noreferrer" target="_blank">Markdown Guide</a> - Clean plain-text formatting for high-signal Project Knowledge documents.</li>
 </ol>

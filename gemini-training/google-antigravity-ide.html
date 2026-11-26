@@ -247,12 +247,12 @@
           <li><a href="../claude-training/claude-101.html">Claude 101</a></li>
           <li><a href="../claude-training/claude-projects.html">Claude Projects</a></li>
           <li><a href="../claude-training/claude-code.html">Claude Code</a></li>
+          <li><a href="../claude-training/claude-code-mode.html">Claude Code Mode</a></li>
           <li><a href="../claude-training/claude-desktop.html">Claude Desktop</a></li>
           <li><a href="../claude-training/claude-office.html">Claude Office</a></li>
-          <li><a href="../claude-training/claude-skills.html">Claude Skills</a></li>
           <li><a href="../claude-training/claude-mcp.html">Claude MCP</a></li>
           <li><a href="../claude-training/claude-plugins.html">Claude Plugins</a></li>
-          <li><a href="../claude-training/claude-connectors.html">Claude Connectors</a></li>
+          <li><a href="../claude-training/claude-apps.html">Claude Apps</a></li>
           <li><a href="../claude-training/claude-orchestration.html">Claude Orchestration</a></li>
           <li><a href="../claude-training/claude-design.html">Claude Design</a></li>
           <li><a href="../claude-training/claude-science.html">Claude for Science</a></li>
@@ -304,6 +304,7 @@
     </ul>
   </nav>
   <!-- END:HEADER -->
+  <a aria-label="Back to top" class="back-top" href="#top" id="backTop" title="Back to top">↑</a>
 
 <main class="container single-column-article" id="main">
 <header class="hero content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);text-align:left;display:flex;flex-direction:column;gap:1.25rem;padding:2rem 2.25rem;margin-top:110px;margin-bottom:2rem;">
@@ -322,7 +323,10 @@
 <a class="toc-link gold-link" href="#verification-gates">4. Implementation Plans and Automated Verification Gates</a>
 <a class="toc-link gold-link" href="#case-studies">5. Real-World Engineering Case Studies and Failure Modes</a>
 <a class="toc-link gold-link" href="#team-governance-and-metrics">6. Measuring Impact and Governing Multi-Agent Teams</a>
-<a class="toc-link gold-link" href="#references">7. References</a>
+<a class="toc-link gold-link" href="#customizations-mcp-and-browser">7. Workspace Rules, Skills, MCP Integrations, and Browser Automation</a>
+<a class="toc-link gold-link" href="#ide-modalities-comparison">8. Comparing Antigravity IDE Modalities and Automation Surfaces</a>
+<a class="toc-link gold-link" href="#antigravity-ide-faq">9. Practical Questions When Deploying Google Antigravity IDE</a>
+<a class="toc-link gold-link" href="#references">10. References</a>
 </div>
 </article>
 
@@ -434,11 +438,90 @@ if __name__ == "__main__":
 <p>Good governance keeps autonomous velocity safe. Require every repository to define its mandatory verification commands inside <code>GEMINI.md</code> so agents always run the exact same test and lint gates as CI. Keep branch protection rules active so no agent can push directly to <code>main</code> without human review. Finally, encourage developers to save recurring multi-step fixes as shared <code>SKILL.md</code> packs so every lesson learned by one engineer automatically upgrades the entire team's IDE workspace.</p>
 </article>
 
+<article class="content-card" id="customizations-mcp-and-browser" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2>Workspace Rules, Skills, MCP Integrations, and Browser Automation</h2>
+<p>Antigravity IDE pairs hands-on editor ergonomics with a structured customization layer so autonomous agents follow your architecture and verify changes end to end. Inside the editor, developers fluidly move across three AI modalities: passive <strong>Antigravity Tab</strong> (Autocomplete, multi-line Supercomplete diffs, Tab to Jump, and Tab to Import), instructive <strong>Inline Command</strong> (<code>Cmd+I</code> on macOS or <code>Ctrl+I</code> on Linux and Windows for localized refactors and docstrings), and collaborative <strong>Sidebar Chat &amp; Agent Mode</strong> with inline code lenses, visual diff overlays, and diagnostic auto-fix directly from compiler or linter errors.</p>
+<p>Beneath those UI surfaces, four composable mechanisms govern how workspace agents behave across a team:</p>
+<ul style="padding-left:1.5rem;color:var(--text-secondary);line-height:1.8;margin-bottom:1.25rem;"><li><strong>Hierarchical Workspace Rules:</strong> Global rules under <code>~/.gemini/</code> combine with repository-scoped rules in <code>GEMINI.md</code>, <code>AGENTS.md</code>, and modular files inside <code>.agents/rules/*.md</code>. Using YAML frontmatter, rules can activate always-on, trigger only on glob-matched file paths, or include shared architecture docs cleanly via <code>@[label](path)</code> references.</li><li><strong>Progressive-Disclosure Skills (<code>SKILL.md</code>):</strong> Multi-step procedures live in <code>.agents/skills/&lt;skill-name&gt;/</code> with a required <code>SKILL.md</code> plus optional <code>scripts/</code>, <code>references/</code>, and <code>assets/</code> folders. Only lightweight frontmatter metadata is indexed upfront, keeping the full playbook out of context until the agent actually triggers that skill.</li><li><strong>Model Context Protocol (MCP) &amp; Sandboxing:</strong> Developers connect external tools - such as GitHub, issue trackers, databases, and Google Workspace services - through MCP servers governed by least-privilege OAuth scopes, data loss prevention policies, and terminal sandboxing (<code>proceed-in-sandbox</code>).</li><li><strong>Native Browser Verification:</strong> After editing frontend code, Antigravity's integrated browser automation launches Chrome against your local or staging server, drives real clicks and form inputs, reads DOM state and console logs, and captures visual verification evidence before finishing a task, as documented in the <a class="gold-link" href="#references">Antigravity browser automation guide</a>.</li></ul>
+<div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid var(--cyan);border-radius:10px;margin:1.5rem 0;overflow:hidden;">
+<div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.55rem 1rem;background:rgba(255,255,255,0.04);border-bottom:1px solid rgba(255,255,255,0.08);">
+<span style="font-family:var(--font-mono);font-size:0.8rem;color:var(--cyan);">.agents/rules/api-handlers.md</span>
+<button class="copy-btn" onclick="copyCode(this)" style="text-decoration:none !important;" type="button">Copy</button>
+</div>
+<pre style="white-space:pre-wrap;word-break:break-word;overflow-x:hidden;padding:1rem;margin:0;color:#e2e8f0;font-size:0.88rem;"><code>---
+description: Enforce schema validation and idempotency on backend API handlers
+globs:
+  - "services/**/handlers/*.py"
+  - "services/**/routes/*.ts"
+---
+
+# Backend Handler Standards
+
+- Validate every request body with Pydantic or Zod before touching persistence.
+- Require an `Idempotency-Key` header on all state-mutating POST endpoints.
+- Reference the shared error contract in @[API Error Spec](docs/api-errors.md).
+- Run `pytest tests/api -q` inside the terminal sandbox before marking work done.</code></pre>
+</div>
+</article>
+<article class="content-card" id="ide-modalities-comparison" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2>Comparing Antigravity IDE Modalities and Automation Surfaces</h2>
+<p>Choose the lightest modality that cleanly solves the task so you preserve both developer flow and model quota:</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.9rem;color:#e2e8f0;">
+<thead>
+<tr style="border-bottom:2px solid rgba(251,191,36,0.45);text-align:left;color:var(--gold);">
+<th style="padding:0.75rem;">Modality / Surface</th>
+<th style="padding:0.75rem;">Interaction Scope</th>
+<th style="padding:0.75rem;">Tool &amp; Verification Access</th>
+<th style="padding:0.75rem;">Best Engineering Workload</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Antigravity Tab (Passive)</td>
+<td style="padding:0.75rem;">Cursor-level edits, imports, and multi-line Supercomplete diffs</td>
+<td style="padding:0.75rem;">Open tabs, nearby symbols, diagnostics, optional clipboard</td>
+<td style="padding:0.75rem;">Flow-state authoring, repetitive edits, fast navigation</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Inline Command (<code>Ctrl+I</code> / <code>Cmd+I</code>)</td>
+<td style="padding:0.75rem;">Highlighted code block or cursor insertion point</td>
+<td style="padding:0.75rem;">In-file context with inline visual diff accept/reject</td>
+<td style="padding:0.75rem;">Targeted refactors, docstrings, localized error fixes</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Sidebar Agent &amp; Planning Mode</td>
+<td style="padding:0.75rem;">Full workspace, multi-file diffs, and reviewable Plan Artifacts</td>
+<td style="padding:0.75rem;">Filesystem, sandboxed terminal, MCP servers, Chrome browser checks</td>
+<td style="padding:0.75rem;">End-to-end features, bug reproduction, UI verification</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;"><code>agy</code> CLI &amp; Python SDK</td>
+<td style="padding:0.75rem;">Headless terminal runs, SSH hosts, and multi-repo pipelines</td>
+<td style="padding:0.75rem;">Shared <code>GEMINI.md</code> rules, <code>SKILL.md</code> packs, CI test gates</td>
+<td style="padding:0.75rem;">Nightly audits, fleet migrations, deterministic CI orchestration</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+<article class="content-card" id="antigravity-ide-faq" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2>Practical Questions When Deploying Google Antigravity IDE</h2>
+<p><strong>When should a team put guidance in <code>GEMINI.md</code> versus a <code>SKILL.md</code> pack?</strong> Put universal repository invariants - such as mandatory test commands, formatting conventions, and security boundaries - into <code>GEMINI.md</code> or glob-scoped <code>.agents/rules/</code> files. Put multi-step, occasional playbooks (such as database migrations or accessibility audits) into <code>.agents/skills/</code> so they load progressively only when needed.</p>
+<p><strong>How does terminal sandboxing keep local developer machines safe?</strong> In sandboxed execution mode, routine build, test, and lint commands run inside a restricted boundary with workspace-scoped filesystem access and no unauthorized outbound network traffic. Commands that genuinely require host network access or elevated actions prompt explicitly for developer review.</p>
+<p><strong>How should we avoid merge conflicts when running multiple parallel agents?</strong> Assign each concurrent writing agent an isolated Git worktree or dedicated feature branch so file edits never collide in the same working copy. Keep read-only research or verification agents on the shared workspace while writers remain branch-isolated.</p>
+<p><strong>Can our team standardize MCP servers and skills across every developer?</strong> Yes. Commit project-scoped rules and skills inside <code>.agents/</code> and distribute cross-repository bundles as versioned Antigravity plugins so new hires inherit the exact same tools, prompts, and verification checks on day one.</p>
+</article>
+
 <article class="content-card" id="references" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <h2>References</h2>
 <p>Official documentation, research papers, and developer guides referenced in this article:</p>
 <ul style="display:flex;flex-direction:column;gap:0.65rem;padding-left:1.25rem;margin-top:1rem;">
 <li><a class="gold-link" href="https://antigravity.google/" rel="noopener noreferrer" target="_blank">Google Antigravity Platform</a> - Official portal for Google Antigravity IDE, Agent Manager, and desktop tools.</li>
+<li><a class="gold-link" href="https://antigravity.google/docs/skills" rel="noopener noreferrer" target="_blank">Google Antigravity Skills &amp; Customizations Docs</a> - Official specification for progressive <code>SKILL.md</code> packs and workspace rules.</li>
+<li><a class="gold-link" href="https://antigravity.google/docs/mcp" rel="noopener noreferrer" target="_blank">Google Antigravity MCP Integration Guide</a> - Configuring local and remote Model Context Protocol servers with least-privilege permissions.</li>
+<li><a class="gold-link" href="https://antigravity.google/docs/ide/browser" rel="noopener noreferrer" target="_blank">Google Antigravity Browser Automation Docs</a> - Closed-loop browser inspection and UI verification inside the IDE.</li>
+<li><a class="gold-link" href="https://github.com/google-antigravity/antigravity-sdk-python" rel="noopener noreferrer" target="_blank">Google Antigravity Python SDK (GitHub)</a> - Official Python SDK for programmatic agent orchestration and custom tools.</li>
 <li><a class="gold-link" href="https://ai.google.dev/gemini-api/docs" rel="noopener noreferrer" target="_blank">Google Gemini API Documentation</a> - Developer documentation for Gemini models, function calling, and SDKs.</li>
 <li><a class="gold-link" href="https://research.google/areas/software-engineering/" rel="noopener noreferrer" target="_blank">Google Research - Software Engineering</a> - Research on automated testing, code synthesis, and developer productivity.</li>
 <li><a class="gold-link" href="https://deepmind.google/models/gemini/" rel="noopener noreferrer" target="_blank">Google DeepMind Gemini Models</a> - Overview of the Gemini model family powering Antigravity workflows.</li>

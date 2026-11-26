@@ -102,14 +102,71 @@ The second mistake is treating every prompt as a single-model problem. Build a l
 
 ---
 
+## Stateful Interactions API, Grounding, and Live Streaming
+
+Beyond single-turn prompt calls, modern production applications on the unified google-genai SDK standardize around the Interactions API. Rather than manually rebuilding and resending ever-growing message arrays from your application server on every turn, the Interactions API manages server-side conversation state and links turns via previous_interaction_id. It also exposes observable execution steps for tool calls and reasoning traces, supports optional privacy opt-out via store=False, and routes both standard models and long-running asynchronous background agents such as Deep Research through one consistent interface.
+
+Caching behavior differs sharply across API surfaces, and understanding those rules prevents surprise latency or token spend:
+
+- Implicit Context Caching (Default): Enabled automatically across modern Gemini models without manual cache objects. Repeated prompt prefixes, shared system rules, and multi-turn conversation histories receive automatic prefix cache hits - and implicit caching is the sole caching strategy used by the Interactions API.
+- Explicit Context Caching: Available on the classic generateContent surface when teams need deterministic Time-to-Live (TTL) cache handles for static reference corpora such as compliance manuals or product catalogs.
+- Live API Context Compression: Real-time bidirectional audio and video sessions do not use prefix caching; instead, long sessions rely on sliding-window compression (ContextWindowCompressionConfig) to trim older turns while preserving recent conversational memory.
+- Grounding With Google Search and Enterprise Data: Connecting inference to live Google Search or governed Vertex AI data stores anchors answers in current facts and returns structured citation metadata for downstream auditing, as detailed in the Google Gemini Interactions and Grounding documentation.
+
+#### `interactions_stateful_flow.py`
+```python
+from google import genai
+
+client = genai.Client()
+
+# Turn 1: Server stores conversation state and returns an interaction ID
+turn_one = client.interactions.create(
+    model="gemini-4-hydrogen",
+    system_instruction="You are a cloud architecture reviewer. Be concise and cite assumptions.",
+    input="Summarize three failure risks in a single-region relational database.",
+)
+print(turn_one.output_text)
+
+# Turn 2: Chain server-side state without re-uploading the full chat array
+turn_two = client.interactions.create(
+    model="gemini-4-neon",
+    previous_interaction_id=turn_one.id,
+    input="Now propose a multi-region failover plan that addresses risk #2.",
+)
+print(turn_two.output_text)
+```
+
+---
+
+## Comparing Gemini API Surfaces and Caching Modes
+
+Select the Gemini API surface that matches your application's latency, state persistence, and media requirements rather than forcing every workload through one request pattern:
+
+---
+
+## Practical Questions When Starting With Gemini
+
+Should new applications start with the Interactions API or classic generateContent? Start with the Interactions API for multi-turn chat, agentic tool calling, and background research tasks because it simplifies state tracking and exposes structured execution steps. Use classic generateContent when you specifically need explicit TTL cache handles over static reference corpora or simple stateless batch jobs.
+
+Do we need to rewrite code when moving from the Gemini Developer API to Vertex AI? No. Both surfaces share the unified google-genai SDK. Promoting a prototype from an API key to enterprise Vertex AI with IAM governance and regional residency requires updating only the client initialization configuration rather than rewriting prompt or tool logic.
+
+When does Gemini's long context replace a vector database? When your active knowledge base fits comfortably within a few hundred thousand tokens - such as a single software repository, a quarterly audit packet, or a product manual - loading full documents with implicit or explicit caching delivers higher cross-reference accuracy with far less infrastructure. Add hybrid vector retrieval once your corpus scales into tens of millions of tokens.
+
+Remembering interaction-scoped settings: In the Interactions API, parameters like system_instruction, tools, and generation settings are scoped to each interaction call. Pass them consistently on every turn alongside previous_interaction_id so behavior never drifts mid-conversation.
+
+---
+
 ## References
 
 Official documentation, research papers, and developer guides referenced in this article:
 
 - Google DeepMind - Gemini Models - Official architectural overview of native multimodality and Gemini capabilities.
 - Google Gemini API Quickstart - Step-by-step developer guide for the google-genai SDK and Files API.
+- Google Gemini Interactions API Documentation - Official reference for server-side state, observable steps, and background execution.
+- Google Gemini Live API Documentation - Technical architecture for bidirectional audio, video, and real-time tool streaming.
+- Grounding With Google Search Documentation - Guide to live web grounding, search metadata, and source verification.
 - Vertex AI Generative AI Documentation - Enterprise deployment, IAM security, and context caching on Google Cloud.
-- Google Gemini Context Caching Guide - Technical guide to caching large documents and codebases for low-latency queries.
+- Google Gemini Context Caching Guide - Technical guide to implicit and explicit caching for large documents and codebases.
 
 ---
 

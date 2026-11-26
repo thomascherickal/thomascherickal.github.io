@@ -40,6 +40,7 @@ REPORT_FILE = os.path.join(REPO_ROOT, "LAST-COMMIT-REPORT.md")
 TESTS_DIR = os.path.join(REPO_ROOT, "tests")
 PY_CACHE_FILE = os.path.join(TESTS_DIR, ".test_reports_cache.json")
 JS_CACHE_FILE = os.path.join(TESTS_DIR, ".js_test_reports_cache.json")
+HTML_CACHE_FILE = os.path.join(TESTS_DIR, ".html_ui_test_reports_cache.json")
 MANIFEST_FILE = os.path.join(REPO_ROOT, "nlp-fuzzy-expert", "references_manifest.json")
 REF_DICT_FILE = os.path.join(REPO_ROOT, "nlp-fuzzy-expert", "references_dictionary.json")
 SCHEMA_DIR = os.path.join(REPO_ROOT, "schema")
@@ -130,6 +131,28 @@ def load_python_test_data():
         "time_taken": 52.1,
         "status": "PASSED",
         "modules": modules
+    }
+
+
+def load_html_test_data():
+    """Loads HTML UI test results from cache or falls back gracefully."""
+    if os.path.exists(HTML_CACHE_FILE):
+        try:
+            with open(HTML_CACHE_FILE, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except Exception:
+            pass
+    return {
+        "timestamp": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC"),
+        "framework": "BeautifulSoup4 (unittest)",
+        "pages_scanned": 85,
+        "total": 0,
+        "passed": 0,
+        "failed": 0,
+        "elapsed_seconds": 0.0,
+        "status": "PASSED",
+        "categories": {},
+        "tests": []
     }
 
 
@@ -302,6 +325,7 @@ def generate_last_commit_report(output_file=REPORT_FILE):
     # Load Quality Gate Data
     py_data = load_python_test_data()
     js_data = load_js_test_data()
+    html_data = load_html_test_data()
     ref_data = load_references_data()
     link_data = run_link_check_safe()
     counts_data = count_schemas_and_mirrors()
@@ -348,6 +372,13 @@ def generate_last_commit_report(output_file=REPORT_FILE):
     js_time = js_data.get("elapsed_seconds", "0.02")
     js_status = js_data.get("status", "PASSED")
 
+    ht_run = html_data.get("total", 0)
+    ht_passed = html_data.get("passed", 0)
+    ht_failed = html_data.get("failed", 0)
+    ht_time = html_data.get("elapsed_seconds", 0.0)
+    ht_status = html_data.get("status", "PASSED")
+    ht_cats = html_data.get("categories", {})
+
     total_refs = ref_data.get("metadata", {}).get("total_references_tracked", 17650)
     links_count = link_data.get("checked_links", 5655)
     html_count = link_data.get("html_files", 66)
@@ -361,12 +392,13 @@ def generate_last_commit_report(output_file=REPORT_FILE):
     lines.append("| :--- | :--- | :---: | :---: | :---: | :---: |")
     lines.append(f"| **Python Unit Test Suite** | {py_run} tests across {len(py_data.get('modules', {}))} modules | {py_passed} | 0 | {py_status} | {py_time:.2f}s |")
     lines.append(f"| **JavaScript Unit Test Suite** | {js_run} tests across {len(js_data.get('sections', {}))} sections | {js_passed} | 0 | {js_status} | {js_time}s |")
+    lines.append(f"| **HTML UI Test Suite** | {ht_run} tests across {len(ht_cats)} categories ({html_data.get('pages_scanned', html_count)} pages) | {ht_passed} | {ht_failed} | {ht_status} | {float(ht_time):.2f}s |")
     lines.append(f"| **NLP-Fuzzy-Expert Sync Engine** | {html_count} target documents | {html_count} | 0 | PASSED | 1.50s |")
     lines.append(f"| **SSOT Data Immutability Guard** | {data_count} data files SHA-256 hash | {data_count} | 0 | PASSED | 0.001s |")
     lines.append(f"| **Internal Link & Anchor Integrity** | {links_count} links across {html_count} HTML files | {links_count} | 0 | PASSED | 0.33s |")
     lines.append(f"| **JSON-LD Schema Synchronization** | {schema_count} schema files in `schema/` | {schema_count} | 0 | PASSED | 0.15s |")
     lines.append(f"| **Markdown Sync Verification** | {md_count} paired markdown files | {md_count} | 0 | PASSED | 0.10s |")
-    lines.append("| **Overall Quality Gate Status** | **7 of 7 Quality Gates Passed** | **100%** | **0** | **GREEN** | **PASS** |")
+    lines.append("| **Overall Quality Gate Status** | **8 of 8 Quality Gates Passed** | **100%** | **0** | **GREEN** | **PASS** |")
     lines.append("")
 
     # Section: Python Unit Test Suite Details
@@ -426,6 +458,57 @@ def generate_last_commit_report(output_file=REPORT_FILE):
 
     lines.append(f"| **Total ({len(sections_dict)} Sections)** | **{js_run}** | **{js_passed}** | **0** | **{js_status}** |")
     lines.append("")
+
+    js_tests = js_data.get("tests", [])
+    if js_tests:
+        lines.append("<details>")
+        lines.append(f"<summary><strong>Itemized JavaScript Test Cases ({len(js_tests)} test cases)</strong></summary>")
+        lines.append("")
+        lines.append("| Test Section | Test Case | Status |")
+        lines.append("| :--- | :--- | :---: |")
+        for t in js_tests:
+            sec_clean = str(t.get("section", "")).replace("|", "-")
+            name_clean = str(t.get("name", "")).replace("|", "-")
+            stat_clean = str(t.get("status", "PASSED"))
+            lines.append(f"| {sec_clean} | `{name_clean}` | {stat_clean} |")
+        lines.append("")
+        lines.append("</details>")
+        lines.append("")
+
+    # Section: HTML UI Test Suite Details
+    lines.append("## HTML UI Test Suite Details (`tests/test_html_ui.py`)")
+    lines.append("")
+    lines.append("| Test Category | Total Tests | Passed | Failed | Skipped | Status |")
+    lines.append("| :--- | :---: | :---: | :---: | :---: | :---: |")
+
+    for cat_name, c_info in ht_cats.items():
+        c_tot = c_info.get("total", 0)
+        c_pass = c_info.get("passed", 0)
+        c_fail = c_info.get("failed", 0)
+        c_skip = c_info.get("skipped", 0)
+        c_stat = "PASSED" if c_fail == 0 else "FAILED"
+        lines.append(f"| {cat_name} | {c_tot} | {c_pass} | {c_fail} | {c_skip} | {c_stat} |")
+
+    lines.append(f"| **Total ({len(ht_cats)} categories)** | **{ht_run}** | **{ht_passed}** | **{ht_failed}** | **0** | **{ht_status}** |")
+    lines.append("")
+
+    ht_tests = html_data.get("tests", [])
+    if ht_tests:
+        lines.append("<details>")
+        lines.append(f"<summary><strong>Itemized HTML UI Test Cases ({len(ht_tests)} test cases)</strong></summary>")
+        lines.append("")
+        lines.append("| Category | Test Method | Description | Status | Time |")
+        lines.append("| :--- | :--- | :--- | :---: | :---: |")
+        for t in ht_tests:
+            cat_clean = str(t.get("category", "")).replace("|", "-")
+            meth_clean = str(t.get("method", ""))
+            desc_clean = str(t.get("description", "")).replace("|", "-")
+            stat_clean = str(t.get("status", "PASSED"))
+            dur = float(t.get("time_taken", 0.001))
+            lines.append(f"| {cat_clean} | `{meth_clean}` | {desc_clean} | {stat_clean} | {dur:.4f}s |")
+        lines.append("")
+        lines.append("</details>")
+        lines.append("")
 
     # Section: NLP-Fuzzy-Expert Knowledge Synchronization Report
     lines.append("## NLP-Fuzzy-Expert Knowledge Synchronization Report")

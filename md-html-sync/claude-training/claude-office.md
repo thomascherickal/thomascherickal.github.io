@@ -17,8 +17,10 @@ Knowledge workers spend half their week inside three file formats: spreadsheets,
 5. Step-by-Step Workflow: From Raw Data to Finished Executive Pack
 6. Maintaining Clean Corporate Templates for Consistent Output
 7. Rolling Out Claude Office Safely Across Business Teams
-8. Quick Answers for Teams Adopting Claude Office
-9. Authoritative References
+8. Claude for Microsoft 365 Add-Ins, Cowork Workflows, and Enterprise Controls
+9. Microsoft 365 Add-Ins, Cowork, and Automated Pipeline Comparison
+10. Quick Answers for Teams Adopting Claude Office
+11. Authoritative References
 
 ---
 

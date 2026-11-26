@@ -17,6 +17,7 @@ Strict Repo Compliance: Zero emojis, zero em-dashes, strictly scoped to REPO_DIR
 
 import argparse
 import hashlib
+import json
 import os
 import re
 import shutil
@@ -25,6 +26,44 @@ import sys
 
 REPO_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(REPO_DIR, "data")
+TESTS_DIR = os.path.join(REPO_DIR, "tests")
+
+PYTHON_CATEGORY_ORDER = [
+    "Data Sync & Unidirectional SSOT",
+    "NLP-Fuzzy-Expert Engine",
+    "Core Documents & Pricing Invariants",
+    "Python Tooling & Build Scripts",
+    "Auto-Healer, Reports & Coverage",
+]
+
+PYTHON_MODULE_CATEGORIES = {
+    "test_unidirectional_sync": "Data Sync & Unidirectional SSOT",
+    "test_continuous_updates": "Data Sync & Unidirectional SSOT",
+    "test_sync_pricing": "Data Sync & Unidirectional SSOT",
+    "test_sync_tiers": "Data Sync & Unidirectional SSOT",
+    "test_sync_pricing_tiers_and_calculators": "Data Sync & Unidirectional SSOT",
+    "test_sync_business_services": "Data Sync & Unidirectional SSOT",
+    "test_sync_personal_services": "Data Sync & Unidirectional SSOT",
+    "test_sync_claude_and_gemini": "Data Sync & Unidirectional SSOT",
+    "test_sync_guarantees": "Data Sync & Unidirectional SSOT",
+    "test_sync_publications_config_faqs": "Data Sync & Unidirectional SSOT",
+    "test_expert_system": "NLP-Fuzzy-Expert Engine",
+    "test_fuzzy_engine": "NLP-Fuzzy-Expert Engine",
+    "test_nlp_engine": "NLP-Fuzzy-Expert Engine",
+    "test_master_orchestrator": "NLP-Fuzzy-Expert Engine",
+    "test_reference_scanner": "NLP-Fuzzy-Expert Engine",
+    "test_report_generator": "NLP-Fuzzy-Expert Engine",
+    "test_watcher": "NLP-Fuzzy-Expert Engine",
+    "test_core_target_documents": "Core Documents & Pricing Invariants",
+    "test_pricing_and_policy_invariants": "Core Documents & Pricing Invariants",
+    "test_check_links": "Core Documents & Pricing Invariants",
+    "test_python_tools": "Python Tooling & Build Scripts",
+    "test_code_test_syncer": "Python Tooling & Build Scripts",
+    "test_auto_healer": "Auto-Healer, Reports & Coverage",
+    "test_coverage_report": "Auto-Healer, Reports & Coverage",
+    "test_last_commit_report": "Auto-Healer, Reports & Coverage",
+    "test_rules_and_pre_push_coverage": "Auto-Healer, Reports & Coverage",
+}
 
 
 def compute_data_hashes():
@@ -76,6 +115,122 @@ def run_all_tests():
     return all_ok, failures, raw
 
 
+def _render_ascii_table(title, headers, rows, right_align_cols=()):
+    """Formats a clean ASCII box table with a bold header and grand-total separator."""
+    if not rows:
+        rows = [("No data available", "0", "0", "0", "N/A")]
+    widths = [max(len(headers[i]), max(len(str(r[i])) for r in rows)) for i in range(len(headers))]
+    sep = "+" + "+".join("-" * (w + 2) for w in widths) + "+"
+
+    def fmt(row):
+        cells = []
+        for i, val in enumerate(row):
+            s = str(val)
+            cells.append(s.rjust(widths[i]) if i in right_align_cols else s.ljust(widths[i]))
+        return "| " + " | ".join(cells) + " |"
+
+    lines = [
+        "",
+        title,
+        sep,
+        fmt(headers),
+        sep,
+    ]
+    for idx, r in enumerate(rows):
+        if len(rows) > 1 and idx == len(rows) - 1 and str(r[0]).upper().startswith("TOTAL"):
+            lines.append(sep)
+        lines.append(fmt(r))
+    lines.append(sep)
+    return "\n".join(lines)
+
+
+def _load_json_safe(path):
+    if not os.path.exists(path):
+        return {}
+    try:
+        with open(path, encoding="utf-8") as f:
+            return json.load(f)
+    except Exception:
+        return {}
+
+
+def print_category_test_summaries():
+    """Prints Category-only tabular summaries for Python, JavaScript, and HTML UI tests."""
+    headers = ("Category", "Total", "Passed", "Failed", "Status")
+    overall_rows = []
+
+    # 1. Python Unit Tests (Category-only, excluding test_html_ui which has its own table)
+    py_cache = _load_json_safe(os.path.join(TESTS_DIR, ".test_reports_cache.json"))
+    py_cats = {cat: {"total": 0, "passed": 0, "failed": 0} for cat in PYTHON_CATEGORY_ORDER}
+    for mod, stats in (py_cache.get("modules") or {}).items():
+        if mod == "test_html_ui":
+            continue
+        cat = PYTHON_MODULE_CATEGORIES.get(mod, "Other Python Tests")
+        if cat not in py_cats:
+            py_cats[cat] = {"total": 0, "passed": 0, "failed": 0}
+        py_cats[cat]["total"] += int(stats.get("total", 0))
+        py_cats[cat]["passed"] += int(stats.get("passed", 0))
+        py_cats[cat]["failed"] += int(stats.get("failed", 0)) + int(stats.get("errors", 0))
+
+    py_rows = []
+    py_tot = py_pass = py_fail = 0
+    for cat, st in py_cats.items():
+        if st["total"] == 0:
+            continue
+        py_tot += st["total"]
+        py_pass += st["passed"]
+        py_fail += st["failed"]
+        py_rows.append((cat, str(st["total"]), str(st["passed"]), str(st["failed"]), "PASS" if st["failed"] == 0 else "FAIL"))
+    py_status = "PASS" if py_fail == 0 and py_tot > 0 else "FAIL"
+    py_rows.append(("TOTAL (Python Unit Tests)", str(py_tot), str(py_pass), str(py_fail), py_status))
+    print(_render_ascii_table("=== PYTHON UNIT TESTS SUMMARY (BY CATEGORY) ===", headers, py_rows, right_align_cols=(1, 2, 3)))
+    overall_rows.append(("Python Unit Tests", str(py_tot), str(py_pass), str(py_fail), py_status))
+
+    # 2. JavaScript Unit Tests (Category-only from runner.js sections)
+    js_cache = _load_json_safe(os.path.join(TESTS_DIR, ".js_test_reports_cache.json"))
+    js_sections = js_cache.get("sections") or {}
+    js_rows = []
+    js_tot = js_pass = js_fail = 0
+    for cat, st in js_sections.items():
+        t = int(st.get("total", 0))
+        p = int(st.get("passed", 0))
+        f = int(st.get("failed", 0))
+        js_tot += t
+        js_pass += p
+        js_fail += f
+        js_rows.append((cat, str(t), str(p), str(f), "PASS" if f == 0 else "FAIL"))
+    js_status = "PASS" if js_fail == 0 and js_tot > 0 else "FAIL"
+    js_rows.append(("TOTAL (JavaScript Unit Tests)", str(js_tot), str(js_pass), str(js_fail), js_status))
+    print(_render_ascii_table("=== JAVASCRIPT UNIT TESTS SUMMARY (BY CATEGORY) ===", headers, js_rows, right_align_cols=(1, 2, 3)))
+    overall_rows.append(("JavaScript Unit Tests", str(js_tot), str(js_pass), str(js_fail), js_status))
+
+    # 3. HTML UI Tests (Category-only from run_html_tests.py categories)
+    ht_cache = _load_json_safe(os.path.join(TESTS_DIR, ".html_ui_test_reports_cache.json"))
+    ht_cats = ht_cache.get("categories") or {}
+    ht_rows = []
+    ht_tot = ht_pass = ht_fail = 0
+    for cat, st in ht_cats.items():
+        t = int(st.get("total", 0))
+        p = int(st.get("passed", 0))
+        f = int(st.get("failed", 0))
+        ht_tot += t
+        ht_pass += p
+        ht_fail += f
+        ht_rows.append((cat, str(t), str(p), str(f), "PASS" if f == 0 else "FAIL"))
+    ht_status = "PASS" if ht_fail == 0 and ht_tot > 0 else "FAIL"
+    ht_rows.append(("TOTAL (HTML UI Tests)", str(ht_tot), str(ht_pass), str(ht_fail), ht_status))
+    print(_render_ascii_table("=== HTML UI TESTS SUMMARY (BY CATEGORY) ===", headers, ht_rows, right_align_cols=(1, 2, 3)))
+    overall_rows.append(("HTML UI Tests", str(ht_tot), str(ht_pass), str(ht_fail), ht_status))
+
+    # 4. Combined Overall Pre-Commit Summary
+    g_tot = py_tot + js_tot + ht_tot
+    g_pass = py_pass + js_pass + ht_pass
+    g_fail = py_fail + js_fail + ht_fail
+    g_status = "PASS" if g_fail == 0 and g_tot > 0 else "FAIL"
+    overall_rows.append(("TOTAL (All Suites)", str(g_tot), str(g_pass), str(g_fail), g_status))
+    print(_render_ascii_table("=== OVERALL PRE-COMMIT TEST SUMMARY ===", ("Suite", "Total", "Passed", "Failed", "Status"), overall_rows, right_align_cols=(1, 2, 3)))
+
+
 def print_summary_table(history):
     headers = ("Pass", "Suite", "Test Error", "Fix Applied", "Status")
     rows = [
@@ -109,6 +264,7 @@ def main():
                 if h["status"] == "HEALING":
                     h["status"] = "FIXED"
             print(f"[pre-commit loop] Pass {pass_num}: ALL TESTS PASSED.", flush=True)
+            print_category_test_summaries()
             print_summary_table(history)
             return 0
 
@@ -145,6 +301,7 @@ def main():
     for h in history:
         if h["status"] == "HEALING":
             h["status"] = "UNRESOLVED"
+    print_category_test_summaries()
     print_summary_table(history)
     print("[pre-commit loop] ERROR: Tests still failing after max passes. Commit aborted.")
     return 1

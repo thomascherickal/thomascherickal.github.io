@@ -101,11 +101,63 @@ Good governance keeps autonomous velocity safe. Require every repository to defi
 
 ---
 
+## Workspace Rules, Skills, MCP Integrations, and Browser Automation
+
+Antigravity IDE pairs hands-on editor ergonomics with a structured customization layer so autonomous agents follow your architecture and verify changes end to end. Inside the editor, developers fluidly move across three AI modalities: passive Antigravity Tab (Autocomplete, multi-line Supercomplete diffs, Tab to Jump, and Tab to Import), instructive Inline Command (Cmd+I on macOS or Ctrl+I on Linux and Windows for localized refactors and docstrings), and collaborative Sidebar Chat & Agent Mode with inline code lenses, visual diff overlays, and diagnostic auto-fix directly from compiler or linter errors.
+
+Beneath those UI surfaces, four composable mechanisms govern how workspace agents behave across a team:
+
+- Hierarchical Workspace Rules: Global rules under ~/.gemini/ combine with repository-scoped rules in GEMINI.md, AGENTS.md, and modular files inside .agents/rules/*.md. Using YAML frontmatter, rules can activate always-on, trigger only on glob-matched file paths, or include shared architecture docs cleanly via @[label](path) references.
+- Progressive-Disclosure Skills (SKILL.md): Multi-step procedures live in .agents/skills/<skill-name>/ with a required SKILL.md plus optional scripts/, references/, and assets/ folders. Only lightweight frontmatter metadata is indexed upfront, keeping the full playbook out of context until the agent actually triggers that skill.
+- Model Context Protocol (MCP) & Sandboxing: Developers connect external tools - such as GitHub, issue trackers, databases, and Google Workspace services - through MCP servers governed by least-privilege OAuth scopes, data loss prevention policies, and terminal sandboxing (proceed-in-sandbox).
+- Native Browser Verification: After editing frontend code, Antigravity's integrated browser automation launches Chrome against your local or staging server, drives real clicks and form inputs, reads DOM state and console logs, and captures visual verification evidence before finishing a task, as documented in the Antigravity browser automation guide.
+
+#### `.agents/rules/api-handlers.md`
+```python
+---
+description: Enforce schema validation and idempotency on backend API handlers
+globs:
+  - "services/**/handlers/*.py"
+  - "services/**/routes/*.ts"
+---
+
+# Backend Handler Standards
+
+- Validate every request body with Pydantic or Zod before touching persistence.
+- Require an `Idempotency-Key` header on all state-mutating POST endpoints.
+- Reference the shared error contract in @[API Error Spec](docs/api-errors.md).
+- Run `pytest tests/api -q` inside the terminal sandbox before marking work done.
+```
+
+---
+
+## Comparing Antigravity IDE Modalities and Automation Surfaces
+
+Choose the lightest modality that cleanly solves the task so you preserve both developer flow and model quota:
+
+---
+
+## Practical Questions When Deploying Google Antigravity IDE
+
+When should a team put guidance in GEMINI.md versus a SKILL.md pack? Put universal repository invariants - such as mandatory test commands, formatting conventions, and security boundaries - into GEMINI.md or glob-scoped .agents/rules/ files. Put multi-step, occasional playbooks (such as database migrations or accessibility audits) into .agents/skills/ so they load progressively only when needed.
+
+How does terminal sandboxing keep local developer machines safe? In sandboxed execution mode, routine build, test, and lint commands run inside a restricted boundary with workspace-scoped filesystem access and no unauthorized outbound network traffic. Commands that genuinely require host network access or elevated actions prompt explicitly for developer review.
+
+How should we avoid merge conflicts when running multiple parallel agents? Assign each concurrent writing agent an isolated Git worktree or dedicated feature branch so file edits never collide in the same working copy. Keep read-only research or verification agents on the shared workspace while writers remain branch-isolated.
+
+Can our team standardize MCP servers and skills across every developer? Yes. Commit project-scoped rules and skills inside .agents/ and distribute cross-repository bundles as versioned Antigravity plugins so new hires inherit the exact same tools, prompts, and verification checks on day one.
+
+---
+
 ## References
 
 Official documentation, research papers, and developer guides referenced in this article:
 
 - Google Antigravity Platform - Official portal for Google Antigravity IDE, Agent Manager, and desktop tools.
+- Google Antigravity Skills & Customizations Docs - Official specification for progressive SKILL.md packs and workspace rules.
+- Google Antigravity MCP Integration Guide - Configuring local and remote Model Context Protocol servers with least-privilege permissions.
+- Google Antigravity Browser Automation Docs - Closed-loop browser inspection and UI verification inside the IDE.
+- Google Antigravity Python SDK (GitHub) - Official Python SDK for programmatic agent orchestration and custom tools.
 - Google Gemini API Documentation - Developer documentation for Gemini models, function calling, and SDKs.
 - Google Research - Software Engineering - Research on automated testing, code synthesis, and developer productivity.
 - Google DeepMind Gemini Models - Overview of the Gemini model family powering Antigravity workflows.

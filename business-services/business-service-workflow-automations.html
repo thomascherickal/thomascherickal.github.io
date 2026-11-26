@@ -221,12 +221,12 @@
           <li><a href="../claude-training/claude-101.html">Claude 101</a></li>
           <li><a href="../claude-training/claude-projects.html">Claude Projects</a></li>
           <li><a href="../claude-training/claude-code.html">Claude Code</a></li>
+          <li><a href="../claude-training/claude-code-mode.html">Claude Code Mode</a></li>
           <li><a href="../claude-training/claude-desktop.html">Claude Desktop</a></li>
           <li><a href="../claude-training/claude-office.html">Claude Office</a></li>
-          <li><a href="../claude-training/claude-skills.html">Claude Skills</a></li>
           <li><a href="../claude-training/claude-mcp.html">Claude MCP</a></li>
           <li><a href="../claude-training/claude-plugins.html">Claude Plugins</a></li>
-          <li><a href="../claude-training/claude-connectors.html">Claude Connectors</a></li>
+          <li><a href="../claude-training/claude-apps.html">Claude Apps</a></li>
           <li><a href="../claude-training/claude-orchestration.html">Claude Orchestration</a></li>
           <li><a href="../claude-training/claude-design.html">Claude Design</a></li>
           <li><a href="../claude-training/claude-science.html">Claude for Science</a></li>
@@ -278,7 +278,7 @@
     </ul>
   </nav>
   <!-- END:HEADER -->
-<a aria-label="Back to top" class="back-top" href=\"#top\" id="backTop" title="Back to top">↑</a>
+<a aria-label="Back to top" class="back-top" href="#top" id="backTop" title="Back to top">↑</a>
 <main id="main">
 <div class="doc-container" style="max-width:980px;margin:0 auto;padding:2.75rem 1.25rem 3rem;">
 
@@ -299,7 +299,6 @@
   <section id="table-of-contents" class="content-card" style="background:#000000;border:1.5px solid rgba(251,191,36,0.45);border-radius:14px;padding:1.75rem 2rem;margin-bottom:2rem;">
     <h2 style="color:#fbbf24;margin-bottom:0.9rem;font-size:1.35rem;">Table of Contents</h2>
     <ol style="list-style:none;padding-left:0;margin:0;line-height:1.7;">
-      <li style="margin-bottom:0.45rem;"><a class="gold-link" href="#why-fragile-automations-break">1. Why Fragile No-Code AI Automations Break in Production</a></li><li style="margin-bottom:0.45rem;"><a class="gold-link" href="#schema-validation-and-idempotency">2. Deterministic JSON Schema Validation and Idempotent Retries</a></li><li style="margin-bottom:0.45rem;"><a class="gold-link" href="#error-handling-and-human-gates">3. Structured Error Handling and Human Approval Gates</a></li><li style="margin-bottom:0.45rem;"><a class="gold-link" href="#rollout-and-deliverables">4. Measuring Operational ROI and What Your Team Ships</a></li><li style="margin-bottom:0.45rem;"><a class="gold-link" href="#production-automation-playbook">5. Step-by-Step Enterprise Workflow Automation Rollout Playbook</a></li><li style="margin-bottom:0.45rem;"><a class="gold-link" href="#references">6. References and Further Reading</a></li>
     </ol>
   </section>
 
@@ -392,22 +391,7 @@ graph TD
 
 </section>
 
-  <section id="production-automation-playbook" class="content-card" style="background:#000000;border:1.5px solid rgba(251,191,36,0.45);border-radius:14px;padding:2rem;margin-bottom:2rem;">
-<h2 style="color:#fbbf24;margin-bottom:1rem;">Step-by-Step Enterprise Workflow Automation Rollout Playbook</h2>
-
-<p style="color:#e2e8f0;line-height:1.78;margin-bottom:1rem;">Shipping reliable AI workflow automations across email, CRM, ERP, ticketing, and Git repositories starts by picking one painful, high-volume bottleneck with clear rules - such as triaging inbound purchase orders, routing enterprise support escalations, or syncing sales call commitments into CRM fields and Jira tickets. In Week One, operations and engineering document the exact trigger event, every required output field, the downstream APIs to update, and which actions require human sign-off.</p>
-<p style="color:#e2e8f0;line-height:1.78;margin-bottom:1rem;">In Week Two, engineers build the event-driven pipeline with three non-negotiable reliability layers: deterministic idempotency keys hashed from the source event ID, strict JSON Schema validation on every AI extraction, and structured error classification that separates transient 429/5xx network retries from permanent 400 data errors. Any malformed payload routes immediately to a dead-letter queue with a one-click replay button instead of vanishing silently.</p>
-<p style="color:#e2e8f0;line-height:1.78;margin-bottom:1rem;">In Week Three, run the pipeline in shadow mode against live production events for five business days. Compare the automation's extracted fields and proposed CRM/ERP writes against what your operations staff actually entered. Fix any edge-case formatting quirks - such as multi-currency invoices, forwarded email chains, or missing account IDs - and add every discovered edge case to your automated regression test suite.</p>
-<p style="color:#e2e8f0;line-height:1.78;margin-bottom:1rem;">In Week Four, turn on live execution with human approval gates for high-impact writes (such as orders above $1,000 or external customer replies) while letting validated low-risk updates complete automatically. Operations leaders track weekly hours saved, auto-completion rates, and zero-duplicate accuracy on a live dashboard, then replicate the exact same hardened template across the rest of the business.</p>
-
-
-<h3 style="color:#38bdf8;margin:1.25rem 0 0.75rem;">Common Workflow Automation Failure Modes and Safeguards</h3>
-<ul style="color:#e2e8f0;line-height:1.75;padding-left:1.35rem;margin-bottom:0.5rem;">
-<li style="margin-bottom:0.55rem;"><strong>Duplicate Writes on Timeout:</strong> Hash every inbound event ID into a stored idempotency key so retries never create duplicate invoices, CRM leads, or support tickets.</li>
-<li style="margin-bottom:0.55rem;"><strong>Silent Schema Drift:</strong> Validate every AI extraction against strict JSON Schema before calling downstream APIs, routing malformed payloads to a monitored dead-letter queue.</li>
-<li style="margin-bottom:0.55rem;"><strong>Unchecked High-Impact Actions:</strong> Gate financial writes and external customer messages behind one-click Slack approval until shadow-mode accuracy is proven over time.</li>
-</ul>
-</section>
+  
 
   <section id="references" class="content-card" style="background:#000000;border:1.5px solid rgba(251,191,36,0.45);border-radius:14px;padding:2rem;margin-bottom:2rem;">
     <h2 style="color:#fbbf24;margin-bottom:1rem;">References and Further Reading</h2>

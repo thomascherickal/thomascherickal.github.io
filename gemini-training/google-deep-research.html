@@ -247,12 +247,12 @@
           <li><a href="../claude-training/claude-101.html">Claude 101</a></li>
           <li><a href="../claude-training/claude-projects.html">Claude Projects</a></li>
           <li><a href="../claude-training/claude-code.html">Claude Code</a></li>
+          <li><a href="../claude-training/claude-code-mode.html">Claude Code Mode</a></li>
           <li><a href="../claude-training/claude-desktop.html">Claude Desktop</a></li>
           <li><a href="../claude-training/claude-office.html">Claude Office</a></li>
-          <li><a href="../claude-training/claude-skills.html">Claude Skills</a></li>
           <li><a href="../claude-training/claude-mcp.html">Claude MCP</a></li>
           <li><a href="../claude-training/claude-plugins.html">Claude Plugins</a></li>
-          <li><a href="../claude-training/claude-connectors.html">Claude Connectors</a></li>
+          <li><a href="../claude-training/claude-apps.html">Claude Apps</a></li>
           <li><a href="../claude-training/claude-orchestration.html">Claude Orchestration</a></li>
           <li><a href="../claude-training/claude-design.html">Claude Design</a></li>
           <li><a href="../claude-training/claude-science.html">Claude for Science</a></li>
@@ -304,6 +304,7 @@
     </ul>
   </nav>
   <!-- END:HEADER -->
+  <a aria-label="Back to top" class="back-top" href="#top" id="backTop" title="Back to top">↑</a>
 
 <main class="container single-column-article" id="main">
 <header class="hero content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);text-align:left;display:flex;flex-direction:column;gap:1.25rem;padding:2rem 2.25rem;margin-top:110px;margin-bottom:2rem;">
@@ -323,7 +324,9 @@
 <a class="toc-link gold-link" href="#exporting-briefs">5. Exporting Structured Executive Briefs That Drive Decisions</a>
 <a class="toc-link gold-link" href="#domain-use-cases">6. High-Value Use Cases Across Strategy, Engineering, and Operations</a>
 <a class="toc-link gold-link" href="#practical-faq">7. Practical Questions and Troubleshooting Tips</a>
-<a class="toc-link gold-link" href="#references">8. References</a>
+<a class="toc-link gold-link" href="#interactions-api-deep-research">8. Interactions API Background Execution, Collaborative Planning, and MCP Grounding</a>
+<a class="toc-link gold-link" href="#deep-research-comparison-matrix">9. Comparing Grounded Search, Deep Research, and Deep Research Max</a>
+<a class="toc-link gold-link" href="#references">10. References</a>
 </div>
 </article>
 
@@ -449,11 +452,145 @@ if response.candidates and response.candidates[0].grounding_metadata:
 <p>Teams new to Deep Research often ask how long a run takes and how to handle broad topics without getting shallow summaries. A focused research brief typically finishes in a few minutes because the agent runs multiple search rounds in parallel. If a report feels too surface-level, the fix is almost always narrowing the initial question: split a giant topic like 'enterprise cloud security' into two targeted runs covering identity controls and data encryption separately. Always keep your private reference files cleanly titled so the final citations distinguish internal notes from public web sources.</p>
 </article>
 
+<article class="content-card" id="interactions-api-deep-research" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2>Interactions API Background Execution, Collaborative Planning, and MCP Grounding</h2>
+<p>Beyond the interactive Gemini web workspace, engineering teams can embed autonomous research directly into internal portals, diligence pipelines, and scheduled analyst workflows using the <a class="gold-link" href="#references">Gemini Interactions API</a>. Because Deep Research runs multi-step search, reading, and synthesis loops that span several minutes, the Interactions API executes the agent asynchronously with <code>background=True</code> rather than holding open a single synchronous HTTP request.</p>
+<p>Developers can choose between two specialized agent profiles documented in the <a class="gold-link" href="#references">Gemini Deep Research Agent guide</a>: <code>deep-research-preview-04-2026</code> for fast, efficient research that streams intermediate progress cleanly to a user interface, and <code>deep-research-max-preview-04-2026</code> for maximum breadth and depth on exhaustive competitive, legal, or scientific synthesis.</p>
+<p>The <code>agent_config</code> dictionary exposes fine-grained orchestration controls for production teams:</p>
+<ul style="display:flex;flex-direction:column;gap:0.55rem;padding-left:1.35rem;margin:0.75rem 0 1.15rem;">
+<li><strong>Collaborative Planning (<code>collaborative_planning: True</code>):</strong> Pauses after drafting the multi-step research plan so a human reviewer or upstream workflow can approve or amend the plan before search execution begins.</li>
+<li><strong>Thinking Summaries (<code>thinking_summaries: "auto"</code>):</strong> Emits concise progress summaries during streaming or polling so applications can show users which sources and hypotheses the agent is evaluating in real time.</li>
+<li><strong>Visualizations (<code>visualization: "auto"</code>):</strong> Enables the agent to generate supporting charts and visual summaries alongside cited narrative tables.</li>
+<li><strong>Blended Enterprise Grounding (<code>file_search</code> and <code>mcp_server</code>):</strong> Combines live Google Search with persistent embeddings in <a class="gold-link" href="#references">Gemini File Search stores</a> and authenticated remote Model Context Protocol (MCP) servers - with optional <code>allowed_tools</code> allowlisting - so the agent cross-references private company records, deployment trackers, or BigQuery datasets against public web findings.</li>
+<li><strong>Stateful Follow-Up Analysis (<code>previous_interaction_id</code>):</strong> Once the background report completes, your application can pass the finished interaction ID to Gemini Argon or Gemini Carbon to drill into specific sections, reformat tables, or extract JSON without re-running the research loop.</li>
+</ul>
+<div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid var(--cyan);border-radius:10px;margin:1.5rem 0;overflow:hidden;">
+<div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.55rem 1rem;background:rgba(255,255,255,0.04);border-bottom:1px solid rgba(255,255,255,0.08);">
+<span style="font-family:var(--font-mono);font-size:0.8rem;color:var(--cyan);">deep_research_interactions.py</span>
+<button class="copy-btn" onclick="copyCode(this)" style="text-decoration:none !important;" type="button">Copy</button>
+</div>
+<pre style="white-space:pre-wrap;word-break:break-word;overflow-x:hidden;padding:1rem;margin:0;color:#e2e8f0;font-size:0.88rem;"><code>import os
+import time
+from google import genai
+
+client = genai.Client()
+
+# Launch autonomous Deep Research asynchronously with web + private File Search + MCP grounding
+job = client.interactions.create(
+    agent="deep-research-preview-04-2026",
+    input=(
+        "Compare our internal Q3 infrastructure roadmap against public cloud GPU pricing "
+        "and open-source inference serving releases from the past 12 months. "
+        "Return an executive recommendation, a cited comparison table, and migration risks."
+    ),
+    agent_config={
+        "type": "deep-research",
+        "thinking_summaries": "auto",
+        "visualization": "auto",
+        "collaborative_planning": False,
+    },
+    tools=[
+        {"type": "google_search"},
+        {
+            "type": "file_search",
+            "file_search_store_names": ["filesearchstores/q3-infra-roadmap"],
+        },
+        {
+            "type": "mcp_server",
+            "name": "Internal Architecture Registry",
+            "url": "https://mcp.internal.example.com/mcp",
+            "headers": {"Authorization": f"Bearer {os.environ['MCP_TOKEN']}"},
+            "allowed_tools": ["list_service_slas", "get_cluster_utilization"],
+        },
+    ],
+    background=True,
+)
+
+print(f"Started background research job: {job.id}")
+
+while True:
+    current = client.interactions.get(id=job.id)
+    if current.status == "completed":
+        print(current.output_text)
+        break
+    if current.status in ("failed", "cancelled"):
+        raise RuntimeError(f"Deep Research stopped with status: {current.status}")
+    time.sleep(10)
+
+# Ask a targeted follow-up against the completed report without restarting search
+followup = client.interactions.create(
+    model="gemini-4-carbon",
+    previous_interaction_id=current.id,
+    input="Distill the top three budget risks from the report into a 5-bullet CFO memo.",
+)
+print(followup.output_text)</code></pre>
+</div>
+</article>
+
+<article class="content-card" id="deep-research-comparison-matrix" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2>Comparing Grounded Search, Deep Research, and Deep Research Max</h2>
+<p>Selecting the right research execution mode prevents both wasted latency on simple factual lookups and shallow answers on strategic investigations. Use the specification matrix below to match each research pattern to your latency budget and evidence bar:</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.9rem;color:#e2e8f0;">
+<thead>
+<tr style="border-bottom:2px solid rgba(251,191,36,0.45);text-align:left;color:var(--gold);">
+<th style="padding:0.75rem;">Dimension</th>
+<th style="padding:0.75rem;">Standard Gemini + Google Search</th>
+<th style="padding:0.75rem;">Deep Research Agent (<code>deep-research-preview-04-2026</code>)</th>
+<th style="padding:0.75rem;">Deep Research Max (<code>deep-research-max-preview-04-2026</code>)</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Execution Loop</td>
+<td style="padding:0.75rem;">Single-pass retrieval and generation</td>
+<td style="padding:0.75rem;">Iterative plan, parallel search, read, refine, and cite</td>
+<td style="padding:0.75rem;">Deepest multi-round synthesis and exhaustive source cross-checking</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Latency &amp; API Mode</td>
+<td style="padding:0.75rem;">Seconds (synchronous foreground call)</td>
+<td style="padding:0.75rem;">Minutes (<code>background=True</code> or streamable progress)</td>
+<td style="padding:0.75rem;">Extended minutes (<code>background=True</code> asynchronous batch job)</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Plan Steerability</td>
+<td style="padding:0.75rem;">Prompt-level instructions only</td>
+<td style="padding:0.75rem;">Interactive plan editing and <code>collaborative_planning</code></td>
+<td style="padding:0.75rem;">Interactive plan editing, <code>collaborative_planning</code>, and strict section steering</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Private Corpus &amp; Tools</td>
+<td style="padding:0.75rem;">Uploaded context, Google Search, URL context</td>
+<td style="padding:0.75rem;">Google Search, Workspace/File Search stores, remote MCP servers, BigQuery</td>
+<td style="padding:0.75rem;">Full blended web, File Search stores, remote MCP servers, and BigQuery synthesis</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Output &amp; Export</td>
+<td style="padding:0.75rem;">Concise grounded answers with URL metadata</td>
+<td style="padding:0.75rem;">Long-form cited reports, optional visualizations, Google Docs / Canvas export</td>
+<td style="padding:0.75rem;">Comprehensive diligence dossiers, structured tables, visualizations, and Docs export</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Best Workload Fit</td>
+<td style="padding:0.75rem;">Quick fact checks, live chat, documentation lookups</td>
+<td style="padding:0.75rem;">Interactive product research, vendor comparisons, streaming analyst UIs</td>
+<td style="padding:0.75rem;">Board memos, regulatory audits, technical due diligence, deep literature reviews</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>When exporting completed reports from the Gemini Workspace UI to Google Docs or Canvas, pair the document archive with a reproducible prompt brief in Git so your team can re-run the identical research query quarterly and track verified deltas over time.</p>
+</article>
+
 <article class="content-card" id="references" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <h2>References</h2>
 <p>Official documentation, research papers, and developer guides referenced in this article:</p>
 <ul style="display:flex;flex-direction:column;gap:0.65rem;padding-left:1.25rem;margin-top:1rem;">
 <li><a class="gold-link" href="https://blog.google/products/gemini/" rel="noopener noreferrer" target="_blank">Google Blog - Gemini Deep Research</a> - Official product announcements and feature guides for Google Deep Research.</li>
+<li><a class="gold-link" href="https://ai.google.dev/gemini-api/docs/deep-research" rel="noopener noreferrer" target="_blank">Gemini Deep Research Agent API Guide</a> - Official documentation for background execution, collaborative planning, visualizations, File Search, and MCP servers.</li>
+<li><a class="gold-link" href="https://ai.google.dev/gemini-api/docs/interactions" rel="noopener noreferrer" target="_blank">Gemini Interactions API Overview</a> - Unified stateful API for long-running background agents and <code>previous_interaction_id</code> follow-ups.</li>
+<li><a class="gold-link" href="https://ai.google.dev/gemini-api/docs/file-search" rel="noopener noreferrer" target="_blank">Gemini API File Search Documentation</a> - Guide to persistent document embedding stores for private corpus grounding.</li>
 <li><a class="gold-link" href="https://ai.google.dev/gemini-api/docs/grounding" rel="noopener noreferrer" target="_blank">Gemini API Grounding with Google Search</a> - Developer documentation for programmatic web grounding and citation metadata.</li>
 <li><a class="gold-link" href="https://workspace.google.com/solutions/ai/" rel="noopener noreferrer" target="_blank">Google Workspace Gemini Resources</a> - Enterprise guides for combining Gemini research with Google Docs and Drive.</li>
 <li><a class="gold-link" href="https://deepmind.google/research/" rel="noopener noreferrer" target="_blank">Google DeepMind Research</a> - Foundational research on long-context synthesis and multi-step reasoning.</li>

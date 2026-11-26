@@ -247,12 +247,12 @@
           <li><a href="../claude-training/claude-101.html">Claude 101</a></li>
           <li><a href="../claude-training/claude-projects.html">Claude Projects</a></li>
           <li><a href="../claude-training/claude-code.html">Claude Code</a></li>
+          <li><a href="../claude-training/claude-code-mode.html">Claude Code Mode</a></li>
           <li><a href="../claude-training/claude-desktop.html">Claude Desktop</a></li>
           <li><a href="../claude-training/claude-office.html">Claude Office</a></li>
-          <li><a href="../claude-training/claude-skills.html">Claude Skills</a></li>
           <li><a href="../claude-training/claude-mcp.html">Claude MCP</a></li>
           <li><a href="../claude-training/claude-plugins.html">Claude Plugins</a></li>
-          <li><a href="../claude-training/claude-connectors.html">Claude Connectors</a></li>
+          <li><a href="../claude-training/claude-apps.html">Claude Apps</a></li>
           <li><a href="../claude-training/claude-orchestration.html">Claude Orchestration</a></li>
           <li><a href="../claude-training/claude-design.html">Claude Design</a></li>
           <li><a href="../claude-training/claude-science.html">Claude for Science</a></li>
@@ -304,6 +304,7 @@
     </ul>
   </nav>
   <!-- END:HEADER -->
+  <a aria-label="Back to top" class="back-top" href="#top" id="backTop" title="Back to top">↑</a>
 
 <main class="container single-column-article" id="main">
 <header class="hero content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);text-align:left;display:flex;flex-direction:column;gap:1.25rem;padding:2rem 2.25rem;margin-top:110px;margin-bottom:2rem;">
@@ -322,7 +323,10 @@
 <a class="toc-link gold-link" href="#multimodal-tools">4. Multimodal Tools Built Into the AI Studio Workbench</a>
 <a class="toc-link gold-link" href="#sdk-export">5. One-Click Export to the Google GenAI Python SDK</a>
 <a class="toc-link gold-link" href="#common-pitfalls">6. Common Prototyping Mistakes and How to Avoid Them</a>
-<a class="toc-link gold-link" href="#references">7. References</a>
+<a class="toc-link gold-link" href="#build-mode-and-live-api">7. Build Mode, Stream Realtime, and Bidirectional Live API Workflows</a>
+<a class="toc-link gold-link" href="#studio-modes-comparison">8. Comparing Google AI Studio Modes and Export Targets</a>
+<a class="toc-link gold-link" href="#ai-studio-faq">9. Practical Questions When Prototyping in Google AI Studio</a>
+<a class="toc-link gold-link" href="#references">10. References</a>
 </div>
 </article>
 
@@ -462,12 +466,106 @@ print(response.text)</code></pre>
 <p>The third mistake is skipping regression checks when switching models. A prompt tuned for a heavy reasoning model may need slightly clearer step-by-step instructions when moved to a faster model like Gemini Hydrogen. Save your best test cases in a simple JSONL file and run an automated check every time you change either the prompt text or the target model name, following the patterns in the <a class="gold-link" href="#references">Gemini API cookbook</a>.</p>
 </article>
 
+<article class="content-card" id="build-mode-and-live-api" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2>Build Mode, Stream Realtime, and Bidirectional Live API Workflows</h2>
+<p>Google AI Studio has evolved well beyond a static prompt box into a multi-mode engineering environment covering full-stack app generation and real-time voice/video streaming. Two surfaces stand out for teams shipping interactive AI products:</p>
+<ul style="padding-left:1.5rem;color:var(--text-secondary);line-height:1.8;margin-bottom:1.25rem;"><li><strong>Build Mode (Full-Stack App Prototyping):</strong> Rather than copying snippets manually into an empty repository, Build Mode uses an integrated build agent to turn natural-language specifications into interactive web or mobile prototypes directly in the browser. Teams can iterate on UI components, wire Gemini API calls, preview behavior live, and connect backend services before exporting the source tree to Git.</li><li><strong>Stream Realtime and the Gemini Live API:</strong> For voice assistants, live tutoring, and screen-sharing co-pilots, the Stream Realtime surface tests persistent bidirectional WebSocket sessions. The Live API ingests raw 16-bit 16kHz PCM audio, up to 1 FPS video or screen frames, and text concurrently while streaming natural 24kHz PCM speech directly from the model without an intermediate text-to-speech hop.</li><li><strong>Interactive Dialogue Controls:</strong> Live sessions support Voice Activity Detection (VAD) for natural barge-in interruptions, affective dialog that adapts tone to the speaker, live transcription and translation, and mid-stream function calling or Google Search grounding.</li><li><strong>Production Transport Security:</strong> Never embed a long-lived <code>GEMINI_API_KEY</code> in browser JavaScript. For client-to-server WebSockets, mint short-lived ephemeral tokens from your backend; for server-to-server architectures, proxy audio and video chunks through a Python or Node.js WebSocket gateway and enable sliding-window context compression (<code>ContextWindowCompressionConfig</code>) on long calls, as outlined in the <a class="gold-link" href="#references">Gemini Live API documentation</a>.</li></ul>
+<div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid var(--cyan);border-radius:10px;margin:1.5rem 0;overflow:hidden;">
+<div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.55rem 1rem;background:rgba(255,255,255,0.04);border-bottom:1px solid rgba(255,255,255,0.08);">
+<span style="font-family:var(--font-mono);font-size:0.8rem;color:var(--cyan);">live_api_session.py</span>
+<button class="copy-btn" onclick="copyCode(this)" style="text-decoration:none !important;" type="button">Copy</button>
+</div>
+<pre style="white-space:pre-wrap;word-break:break-word;overflow-x:hidden;padding:1rem;margin:0;color:#e2e8f0;font-size:0.88rem;"><code>import asyncio
+import os
+from google import genai
+
+client = genai.Client(
+    api_key=os.environ["GEMINI_API_KEY"],
+    http_options={"api_version": "v1beta"},
+)
+
+async def run_live_session() -&gt; None:
+    config = {"response_modalities": ["AUDIO"]}
+    async with client.aio.live.connect(
+        model="gemini-3.8-live",
+        config=config,
+    ) as session:
+        await session.send_realtime_input(
+            text="Give a 15-second status briefing on our deployment checklist."
+        )
+        async for response in session.receive():
+            content = response.server_content
+            if content and content.model_turn:
+                for part in content.model_turn.parts:
+                    if part.text:
+                        print(part.text, end="", flush=True)
+                    elif part.inline_data:
+                        # Stream 24kHz PCM audio bytes to client speaker buffer
+                        audio_chunk = part.inline_data.data
+                        _ = len(audio_chunk)
+
+if __name__ == "__main__":
+    asyncio.run(run_live_session())</code></pre>
+</div>
+</article>
+<article class="content-card" id="studio-modes-comparison" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2>Comparing Google AI Studio Modes and Export Targets</h2>
+<p>Match each AI Studio workspace mode to the right engineering phase and production SDK integration pattern:</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.9rem;color:#e2e8f0;">
+<thead>
+<tr style="border-bottom:2px solid rgba(251,191,36,0.45);text-align:left;color:var(--gold);">
+<th style="padding:0.75rem;">Studio Mode</th>
+<th style="padding:0.75rem;">Primary Modality &amp; Transport</th>
+<th style="padding:0.75rem;">Production SDK Target</th>
+<th style="padding:0.75rem;">Best Engineering Stage</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Prompt &amp; Chat Workbench</td>
+<td style="padding:0.75rem;">Text, PDFs, audio, video, structured JSON, grounding</td>
+<td style="padding:0.75rem;"><code>client.interactions.create</code> or <code>client.models.generate_content</code></td>
+<td style="padding:0.75rem;">System instruction tuning, schema validation, token budgeting</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Stream Realtime</td>
+<td style="padding:0.75rem;">Bidirectional WebSocket (16kHz PCM in, 24kHz PCM out, 1 FPS video)</td>
+<td style="padding:0.75rem;"><code>client.aio.live.connect</code> with ephemeral tokens or proxy</td>
+<td style="padding:0.75rem;">Voice agents, live screen co-pilots, low-latency translation</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Build Mode</td>
+<td style="padding:0.75rem;">Natural-language full-stack web and mobile app generation</td>
+<td style="padding:0.75rem;">Exported TypeScript/React or mobile repo + <code>@google/genai</code></td>
+<td style="padding:0.75rem;">Interactive stakeholder demos and rapid MVP scaffolding</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Media Studio (Image, Video, Music, TTS)</td>
+<td style="padding:0.75rem;">Reference-guided visuals, Veo video, Lyria music, expressive speech</td>
+<td style="padding:0.75rem;">Unified <code>google-genai</code> Python or TypeScript media pipelines</td>
+<td style="padding:0.75rem;">Creative asset pipelines, storyboards, multi-speaker audio</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+<article class="content-card" id="ai-studio-faq" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2>Practical Questions When Prototyping in Google AI Studio</h2>
+<p><strong>How do we transition a prototype from AI Studio to enterprise security on Google Cloud?</strong> Because both AI Studio and Vertex AI use the unified <code>google-genai</code> SDK, your prompt files, Pydantic schemas, and tool definitions stay identical. Switch client initialization to Vertex AI mode with Google Cloud IAM credentials, VPC Service Controls, and regional endpoints when entering staging or production.</p>
+<p><strong>How should browser apps authenticate against the Live API safely?</strong> Never expose your developer API key in frontend code. Issue short-lived ephemeral tokens from a lightweight backend endpoint and pass that token to the browser WebSocket client, or relay streams through your own authenticated backend server.</p>
+<p><strong>When should we use Structured Output JSON schemas versus open Markdown responses?</strong> Enforce a JSON schema whenever downstream software reads fields programmatically (routing tickets, updating a CRM, or rendering typed UI cards). Keep responses in structured Markdown only when a human reads the output directly and flexible prose layout is preferred.</p>
+<p><strong>How do we prevent silent prompt regressions when switching to a faster Gemini tier?</strong> Keep a version-controlled JSONL evaluation set of 20 to 50 messy edge cases in your repository. Run automated schema-validation and accuracy checks in CI every time you update system instructions or test a faster tier like Gemini Hydrogen.</p>
+</article>
+
 <article class="content-card" id="references" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <h2>References</h2>
 <p>Official documentation, research papers, and developer guides referenced in this article:</p>
 <ul style="display:flex;flex-direction:column;gap:0.65rem;padding-left:1.25rem;margin-top:1rem;">
-<li><a class="gold-link" href="https://aistudio.google.com/" rel="noopener noreferrer" target="_blank">Google AI Studio</a> - Official browser workbench for prototyping prompts, schemas, and multimodal Gemini workflows.</li>
+<li><a class="gold-link" href="https://aistudio.google.com/" rel="noopener noreferrer" target="_blank">Google AI Studio</a> - Official browser workbench for prototyping prompts, Build Mode apps, schemas, and multimodal Gemini workflows.</li>
 <li><a class="gold-link" href="https://ai.google.dev/gemini-api/docs" rel="noopener noreferrer" target="_blank">Google Gemini API Documentation</a> - Complete guides for system instructions, structured outputs, safety settings, and grounding.</li>
+<li><a class="gold-link" href="https://ai.google.dev/gemini-api/docs/live" rel="noopener noreferrer" target="_blank">Google Gemini Live API Guide</a> - Reference for bidirectional WebSocket audio/video streaming, VAD, and ephemeral token security.</li>
+<li><a class="gold-link" href="https://ai.google.dev/gemini-api/docs/structured-output" rel="noopener noreferrer" target="_blank">Gemini Structured Outputs Documentation</a> - Authoritative guide to constrained JSON schemas and Pydantic validation.</li>
 <li><a class="gold-link" href="https://github.com/googleapis/python-genai" rel="noopener noreferrer" target="_blank">Google GenAI Python SDK (GitHub)</a> - Official Python client library for calling Gemini models in production.</li>
 <li><a class="gold-link" href="https://github.com/google-gemini/cookbook" rel="noopener noreferrer" target="_blank">Google Gemini Cookbook</a> - Practical notebooks and production examples for multimodal and structured workflows.</li>
 </ul>

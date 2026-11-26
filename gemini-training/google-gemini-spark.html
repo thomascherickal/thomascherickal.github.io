@@ -247,12 +247,12 @@
           <li><a href="../claude-training/claude-101.html">Claude 101</a></li>
           <li><a href="../claude-training/claude-projects.html">Claude Projects</a></li>
           <li><a href="../claude-training/claude-code.html">Claude Code</a></li>
+          <li><a href="../claude-training/claude-code-mode.html">Claude Code Mode</a></li>
           <li><a href="../claude-training/claude-desktop.html">Claude Desktop</a></li>
           <li><a href="../claude-training/claude-office.html">Claude Office</a></li>
-          <li><a href="../claude-training/claude-skills.html">Claude Skills</a></li>
           <li><a href="../claude-training/claude-mcp.html">Claude MCP</a></li>
           <li><a href="../claude-training/claude-plugins.html">Claude Plugins</a></li>
-          <li><a href="../claude-training/claude-connectors.html">Claude Connectors</a></li>
+          <li><a href="../claude-training/claude-apps.html">Claude Apps</a></li>
           <li><a href="../claude-training/claude-orchestration.html">Claude Orchestration</a></li>
           <li><a href="../claude-training/claude-design.html">Claude Design</a></li>
           <li><a href="../claude-training/claude-science.html">Claude for Science</a></li>
@@ -304,6 +304,7 @@
     </ul>
   </nav>
   <!-- END:HEADER -->
+  <a aria-label="Back to top" class="back-top" href="#top" id="backTop" title="Back to top">↑</a>
 
 <main class="container single-column-article" id="main">
 <header class="hero content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);text-align:left;display:flex;flex-direction:column;gap:1.25rem;padding:2rem 2.25rem;margin-top:110px;margin-bottom:2rem;">
@@ -323,7 +324,10 @@
 <a class="toc-link gold-link" href="#guardrails">5. Operational Guardrails for Always-On Agents</a>
 <a class="toc-link gold-link" href="#enterprise-automation-catalog">6. High-Impact Enterprise Use Cases for Always-On Inference</a>
 <a class="toc-link gold-link" href="#rollout-and-observability">7. Observability and Safe Rollout for Background Automations</a>
-<a class="toc-link gold-link" href="#references">8. References</a>
+<a class="toc-link gold-link" href="#workspace-studio-canvas-skills">8. Workspace Studio, Gemini Canvas, and Stackable Skills</a>
+<a class="toc-link gold-link" href="#runtime-architecture-matrix">9. Runtime Architecture Comparison Matrix</a>
+<a class="toc-link gold-link" href="#spark-faq">10. Practical Questions on Always-On Gemini Spark Workflows</a>
+<a class="toc-link gold-link" href="#references">11. References</a>
 </div>
 </article>
 
@@ -439,14 +443,118 @@ def process_event_once(event_text: str) -&gt; str | None:
 <p>Paired with idempotent processing and draft-first guardrails, an always-on lightweight runtime quietly absorbs hours of repetitive coordination work every week while keeping human decision-makers firmly in control.</p>
 </article>
 
+<article class="content-card" id="workspace-studio-canvas-skills" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2>Workspace Studio, Gemini Canvas, and Stackable Skills</h2>
+<p>Google's agentic Workspace architecture connects persistent background execution with interactive creation surfaces. While always-on background task runtimes - including Gemini Spark workflows and <strong>Google Workspace Studio</strong> (evolved from Workspace Flows) - execute multi-step routines asynchronously in the cloud, teams also rely on interactive surfaces to prototype and refine logic before putting it on a schedule.</p>
+<ul style="padding-left:1.5rem;color:var(--text-secondary);line-height:1.8;margin-bottom:1.25rem;">
+<li><strong>Starter-to-Action Topology in Workspace Studio:</strong> Every automated flow begins with a deterministic <strong>Starter</strong> - either a calendar-style time trigger (such as weekdays at 8:00 AM) or a Workspace event (an incoming Gmail message, a newly uploaded Drive file, or a Sheets row update) - followed by Gemini reasoning steps, structured extraction, and downstream actions across Gmail, Docs, Sheets, Calendar, and Chat.</li>
+<li><strong>Gemini Canvas for Live Prototyping:</strong> Side-by-side <strong>Gemini Canvas</strong> turns prompts and raw data into live documents, interactive HTML dashboards, pricing calculators, and runnable code previews. Teams routinely build and validate an executive dashboard or transformation prompt inside Canvas first, then promote that vetted logic into a scheduled background run.</li>
+<li><strong>Stackable Gemini Skills Over Standalone Gems:</strong> Rather than locking reusable instructions inside isolated single-purpose Gems, <strong>Gemini Skills</strong> operate inline across unified threads and Workspace apps. Teams can stack multiple instruction modules simultaneously - for example, combining a corporate compliance review skill with a structured JSON reporting skill inside a single background triage pass.</li>
+<li><strong>Connected Apps, Webhooks, and MCP Extensibility:</strong> Beyond native Google apps, workflows pull context through <code>@mentions</code>, custom Apps Script extensions, webhooks into Jira, Asana, or Salesforce, and open <a class="gold-link" href="#references">Model Context Protocol (MCP)</a> servers for governed internal tool access.</li>
+</ul>
+<p>The workflow definition below illustrates how an operations team pairs a scheduled starter, stacked Skills, an external MCP connector, and a mandatory approval gate inside one auditable specification:</p>
+<div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid var(--cyan);border-radius:10px;margin:1.5rem 0;overflow:hidden;">
+<div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.55rem 1rem;background:rgba(255,255,255,0.04);border-bottom:1px solid rgba(255,255,255,0.08);">
+<span style="font-family:var(--font-mono);font-size:0.8rem;color:var(--cyan);">workspace_studio_spark_flow.json</span>
+<button class="copy-btn" onclick="copyCode(this)" style="text-decoration:none !important;" type="button">Copy</button>
+</div>
+<pre style="white-space:pre-wrap;word-break:break-word;overflow-x:hidden;padding:1rem;margin:0;color:#e2e8f0;font-size:0.88rem;"><code>{
+  "flow_id": "weekly-vendor-risk-digest",
+  "starter": {
+    "type": "schedule",
+    "cron": "0 8 * * 1",
+    "timezone": "UTC"
+  },
+  "stacked_skills": [
+    "procurement-compliance-checklist",
+    "executive-brief-format"
+  ],
+  "connectors": [
+    { "type": "google_drive", "folder_id": "shared-vendor-proposals" },
+    { "type": "mcp_server", "endpoint": "https://internal.example.com/mcp/erp" }
+  ],
+  "inference": {
+    "model": "gemini-4-hydrogen",
+    "response_mime_type": "application/json",
+    "max_daily_runs": 10
+  },
+  "output_policy": {
+    "sheets_append": "Procurement_Tracker",
+    "gmail_mode": "draft_only",
+    "require_human_approval": true
+  }
+}</code></pre>
+</div>
+</article>
+
+<article class="content-card" id="runtime-architecture-matrix" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2>Runtime Architecture Comparison Matrix</h2>
+<p>Match each workflow to the runtime tier that delivers the right balance of interactivity, background autonomy, and infrastructure control across <a class="gold-link" href="#references">Google Workspace AI Solutions</a> and cloud deployments:</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.9rem;color:#e2e8f0;">
+<thead>
+<tr style="border-bottom:2px solid rgba(251,191,36,0.45);text-align:left;color:var(--gold);">
+<th style="padding:0.75rem;">Dimension</th>
+<th style="padding:0.75rem;">Gemini Spark / Workspace Studio</th>
+<th style="padding:0.75rem;">Gemini Canvas + Skills</th>
+<th style="padding:0.75rem;">Self-Hosted Vertex AI / Cloud Run Agent</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Trigger Model</td>
+<td style="padding:0.75rem;">Cron schedules and live Workspace events (Gmail, Drive, Sheets)</td>
+<td style="padding:0.75rem;">Interactive human prompting and inline selection refinement</td>
+<td style="padding:0.75rem;">Pub/Sub queues, Cloud Scheduler, internal webhooks, CI/CD events</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">OAuth &amp; Identity Governance</td>
+<td style="padding:0.75rem;">Managed Workspace admin controls and per-user delegated scopes</td>
+<td style="padding:0.75rem;">Active user session permissions inside Gemini and Workspace apps</td>
+<td style="padding:0.75rem;">Custom IAM service accounts, VPC Service Controls, and secret rotation</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">External Integrations</td>
+<td style="padding:0.75rem;">Native Workspace connectors, webhooks, Apps Script, and MCP tools</td>
+<td style="padding:0.75rem;">Connected Apps via <code>@mentions</code> and stacked reusable Skills</td>
+<td style="padding:0.75rem;">Unrestricted private databases, internal RPCs, and custom binaries</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Operational Overhead</td>
+<td style="padding:0.75rem;">Minimal - zero containers, managed retries, built-in scheduling</td>
+<td style="padding:0.75rem;">Zero infrastructure - browser-based authoring and instant preview</td>
+<td style="padding:0.75rem;">Moderate to high - container builds, scaling, observability, and patching</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Best Enterprise Fit</td>
+<td style="padding:0.75rem;">Morning digests, inbox triage, recurring Docs/Sheets hygiene</td>
+<td style="padding:0.75rem;">Interactive reports, calculators, coding prototypes, collaborative drafting</td>
+<td style="padding:0.75rem;">Regulated core systems, high-volume batch ETL, air-gapped VPC workloads</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+
+<article class="content-card" id="spark-faq" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2>Practical Questions on Always-On Gemini Spark Workflows</h2>
+<p><strong>How do Gemini Spark background tasks differ from Gemini Canvas?</strong> Gemini Canvas is an interactive, side-by-side authoring studio where a human iterates on documents, web prototypes, or dashboards in real time. Gemini Spark and Workspace Studio run asynchronously in the background on a schedule or event starter without requiring an open browser tab.</p>
+<p><strong>How do Gemini Skills change how teams configure repeatable agents?</strong> Unlike older standalone Gems that forced users into separate isolated chats, Gemini Skills attach inline and can be stacked together. Operations teams can maintain one shared brand-tone skill and one compliance-extraction skill, then reuse both across interactive sessions and scheduled automations.</p>
+<p><strong>How do we prevent runaway token spend or duplicate emails from a faulty trigger?</strong> Always combine three controls: an idempotency key (such as a SHA-256 hash of the event ID plus UTC date), a strict daily execution cap on the flow, and draft-only mode on all external Gmail or customer-facing outputs until the schedule proves stable over multiple cycles.</p>
+<p><strong>Can managed Workspace automations integrate with external tools like Jira or Salesforce?</strong> Yes. Workspace Studio flows and background Gemini agents extend beyond Gmail and Drive via outbound webhooks, custom Google Apps Script steps, and governed MCP connectors while keeping structured JSON validation at every handoff, as outlined in the <a class="gold-link" href="#references">Gemini API structured output documentation</a>.</p>
+</article>
+
 <article class="content-card" id="references" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <h2>References</h2>
 <p>Official documentation, research papers, and developer guides referenced in this article:</p>
 <ul style="display:flex;flex-direction:column;gap:0.65rem;padding-left:1.25rem;margin-top:1rem;">
 <li><a class="gold-link" href="https://workspace.google.com/solutions/ai/" rel="noopener noreferrer" target="_blank">Google Workspace AI Solutions</a> - Official overview of Gemini integrations across Gmail, Docs, Sheets, and Drive.</li>
+<li><a class="gold-link" href="https://blog.google/products/workspace/" rel="noopener noreferrer" target="_blank">Google Workspace Blog - Studio and Agentic Workflows</a> - Product announcements covering Workspace Studio, Gemini Canvas, and stackable Skills.</li>
 <li><a class="gold-link" href="https://cloud.google.com/vertex-ai" rel="noopener noreferrer" target="_blank">Google Cloud Vertex AI</a> - Managed enterprise platform for scalable AI inference and agent orchestration.</li>
 <li><a class="gold-link" href="https://ai.google.dev/gemini-api/docs" rel="noopener noreferrer" target="_blank">Google Gemini API Documentation</a> - Developer guides for fast inference, structured outputs, and batching.</li>
+<li><a class="gold-link" href="https://ai.google.dev/gemini-api/docs/structured-output" rel="noopener noreferrer" target="_blank">Gemini API Structured Output Reference</a> - Enforcing deterministic JSON schemas for reliable background automations.</li>
 <li><a class="gold-link" href="https://cloud.google.com/scheduler/docs" rel="noopener noreferrer" target="_blank">Google Cloud Scheduler Documentation</a> - Reference for reliable cron scheduling and retry policies in cloud workflows.</li>
+<li><a class="gold-link" href="https://modelcontextprotocol.io/" rel="noopener noreferrer" target="_blank">Model Context Protocol (MCP)</a> - Open standard for connecting AI agents and Workspace runtimes to external enterprise tools.</li>
 </ul>
 </article>
 

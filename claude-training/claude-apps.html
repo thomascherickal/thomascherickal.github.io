@@ -3,30 +3,74 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Enterprise Connectors & Secure Data Ingestion | Thomas Cherickal</title>
-<meta content="Thomas Cherickal - Generative AI Consultant and The Digital Futurist. Learn how Claude Connectors bridge Google Workspace, Slack, GitHub, and CRM systems into grounded workflows with OAuth scoping and data-residency guardrails." name="description"/>
+<title>Claude Apps: Interactive MCP Apps, Live Workspace UI & Desktop Export | Thomas Cherickal</title>
+<meta content="Thomas Cherickal - Generative AI Consultant and The Digital Futurist. Build and deploy interactive Claude Apps powered by MCP Apps with sandboxed UI components, bidirectional data flow, and standalone desktop workflows." name="description"/>
 <meta content="Thomas Cherickal" name="author"/>
-<link href="https://thedigitalfuturist.com/claude-training/claude-connectors.html" rel="canonical"/>
+<link href="https://thedigitalfuturist.com/claude-training/claude-apps.html" rel="canonical"/>
 <!-- Open Graph -->
 <meta content="article" property="og:type"/>
-<meta content="https://thedigitalfuturist.com/claude-training/claude-connectors.html" property="og:url"/>
+<meta content="https://thedigitalfuturist.com/claude-training/claude-apps.html" property="og:url"/>
 <meta content="Thomas Cherickal | The Digital Futurist" property="og:site_name"/>
-<meta content="Enterprise Connectors &amp; Secure Data Ingestion | Thomas Cherickal" property="og:title"/>
-<meta content="Learn how Claude Connectors bridge Google Workspace, Slack, GitHub, and CRM systems into grounded workflows with OAuth scoping and data-residency guardrails." property="og:description"/>
+<meta content="Claude Apps (MCP Apps) Interactive UI &amp; Workflows | Thomas Cherickal" property="og:title"/>
+<meta content="Build and deploy interactive Claude Apps powered by MCP Apps with sandboxed UI components, bidirectional data flow, and standalone desktop workflows." property="og:description"/>
 <meta content="https://thedigitalfuturist.com/assets/og-card.png" property="og:image"/>
 <meta content="en_US" property="og:locale"/>
 <!-- Twitter Card -->
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="@thomazcherickal" name="twitter:site"/>
-<meta content="Enterprise Connectors &amp; Secure Data Ingestion | Thomas Cherickal" name="twitter:title"/>
-<meta content="Learn how Claude Connectors bridge Google Workspace, Slack, GitHub, and CRM systems into grounded workflows with OAuth scoping and data-residency guardrails." name="twitter:description"/>
-<meta content="https://thedigitalfuturist.com/assets/og-card.png" name="twitter:image"/>
+<meta content="Claude Apps (MCP Apps) Interactive UI &amp; Workflows | Thomas Cherickal" name="twitter:title"/>
+<meta content="Build and deploy interactive Claude Apps powered by MCP Apps with sandboxed UI components, bidirectional data flow, and standalone desktop workflows." name="twitter:description"/>
+<meta content="https://thedigitalfuturist.com/assets/og-card.png" property="og:image"/>
 <!-- Favicons -->
 <link href="../assets/favicon.ico" rel="icon" sizes="any"/>
 <link href="../assets/favicon.svg" rel="icon" type="image/svg+xml"/>
 <link href="../assets/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
 <link href="../site.webmanifest" rel="manifest"/>
 <meta content="#020408" name="theme-color"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["TechArticle", "Article"],
+      "@id": "https://thedigitalfuturist.com/claude-training/claude-apps.html#article",
+      "isPartOf": {
+        "@type": "WebPage",
+        "@id": "https://thedigitalfuturist.com/claude-training/claude-apps.html",
+        "url": "https://thedigitalfuturist.com/claude-training/claude-apps.html",
+        "name": "Claude Apps (MCP Apps) Interactive UI & Workflows | Thomas Cherickal"
+      },
+      "headline": "Claude Apps (MCP Apps) Interactive UI & Workflows",
+      "description": "Thomas Cherickal - Generative AI Consultant and The Digital Futurist. Build and deploy interactive Claude Apps powered by MCP Apps with sandboxed UI components, bidirectional data flow, and standalone desktop workflows.",
+      "image": ["https://thedigitalfuturist.com/assets/og-card.png"],
+      "datePublished": "2026-11-26T00:00:00+05:30",
+      "dateModified": "2026-11-26T00:00:00+05:30",
+      "inLanguage": "en-US",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://thedigitalfuturist.com/claude-training/claude-apps.html"
+      },
+      "author": {
+        "@type": "Person",
+        "@id": "https://thedigitalfuturist.com/#person",
+        "name": "Thomas Cherickal",
+        "jobTitle": "Generative AI Consultant and The Digital Futurist",
+        "url": "https://thedigitalfuturist.com",
+        "description": "Thomas Cherickal - Generative AI Consultant and The Digital Futurist."
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://thedigitalfuturist.com/#organization",
+        "name": "The Digital Futurist",
+        "url": "https://thedigitalfuturist.com",
+        "description": "Thomas Cherickal - Generative AI Consultant and The Digital Futurist."
+      },
+      "articleSection": "Claude Training",
+      "keywords": ["Claude Apps", "MCP Apps", "Model Context Protocol", "Interactive UI", "Sandboxed Iframes"]
+    }
+  ]
+}
+</script>
 <link href="../css/fonts.css" rel="stylesheet"/>
 <link href="../css/styles.css" rel="stylesheet"/>
 <link href="../css/background.css" rel="stylesheet"/>
@@ -36,96 +80,6 @@
 <link href="../css/cta.css" rel="stylesheet"/>
 <link href="../css/article.css" rel="stylesheet"/>
 <link href="../css/claude.css" rel="stylesheet"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": [
-        "TechArticle",
-        "Article"
-      ],
-      "@id": "https://thedigitalfuturist.com/claude-training/claude-connectors.html#article",
-      "isPartOf": {
-        "@type": "WebPage",
-        "@id": "https://thedigitalfuturist.com/claude-training/claude-connectors.html",
-        "url": "https://thedigitalfuturist.com/claude-training/claude-connectors.html",
-        "name": "Enterprise Connectors &amp; Secure Data Ingestion | Thomas Cherickal"
-      },
-      "headline": "Enterprise Connectors & Secure Data Ingestion",
-      "description": "Learn how Claude Connectors bridge Google Workspace, Slack, GitHub, and CRM systems into grounded workflows with OAuth scoping and data-residency guardrails.",
-      "image": [
-        "https://thedigitalfuturist.com/assets/og-card.png"
-      ],
-      "datePublished": "2026-10-22T00:00:00+05:30",
-      "dateModified": "2026-11-21T12:00:00+05:30",
-      "inLanguage": "en-US",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://thedigitalfuturist.com/claude-training/claude-connectors.html"
-      },
-      "author": {
-        "@type": "Person",
-        "@id": "https://thedigitalfuturist.com/#person",
-        "name": "Thomas Cherickal",
-        "jobTitle": "Generative AI Consultant and The Digital Futurist",
-        "url": "https://thedigitalfuturist.com",
-        "description": "Thomas Cherickal - Generative AI Consultant and The Digital Futurist.",
-        "sameAs": [
-          "https://linkedin.com/in/thomascherickal",
-          "https://github.com/thomascherickal",
-          "https://x.com/thomazcherickal"
-        ]
-      },
-      "publisher": {
-        "@type": "Organization",
-        "@id": "https://thedigitalfuturist.com/#organization",
-        "name": "The Digital Futurist",
-        "url": "https://thedigitalfuturist.com",
-        "description": "Thomas Cherickal - Generative AI Consultant and The Digital Futurist.",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://thedigitalfuturist.com/assets/digital-futurist-logo.jpg",
-          "width": 256,
-          "height": 256
-        }
-      },
-      "articleSection": "Business AI Integrations",
-      "keywords": [
-        "Enterprise Connectors",
-        "OAuth Scoping",
-        "Least Privilege",
-        "Data Residency",
-        "Grounded RAG"
-      ]
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://thedigitalfuturist.com/claude-training/claude-connectors.html#breadcrumb",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://thedigitalfuturist.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Writing",
-          "item": "https://thedigitalfuturist.com/writing.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Claude Connectors",
-          "item": "https://thedigitalfuturist.com/claude-training/claude-connectors.html"
-        }
-      ]
-    }
-  ]
-}
-</script>
 <link href="../css/responsive.css" rel="stylesheet"/>
 </head>
 <body id="top">
@@ -247,12 +201,12 @@
           <li><a href="../claude-training/claude-101.html">Claude 101</a></li>
           <li><a href="../claude-training/claude-projects.html">Claude Projects</a></li>
           <li><a href="../claude-training/claude-code.html">Claude Code</a></li>
+          <li><a href="../claude-training/claude-code-mode.html">Claude Code Mode</a></li>
           <li><a href="../claude-training/claude-desktop.html">Claude Desktop</a></li>
           <li><a href="../claude-training/claude-office.html">Claude Office</a></li>
-          <li><a href="../claude-training/claude-skills.html">Claude Skills</a></li>
           <li><a href="../claude-training/claude-mcp.html">Claude MCP</a></li>
           <li><a href="../claude-training/claude-plugins.html">Claude Plugins</a></li>
-          <li><a href="../claude-training/claude-connectors.html">Claude Connectors</a></li>
+          <li><a href="../claude-training/claude-apps.html">Claude Apps</a></li>
           <li><a href="../claude-training/claude-orchestration.html">Claude Orchestration</a></li>
           <li><a href="../claude-training/claude-design.html">Claude Design</a></li>
           <li><a href="../claude-training/claude-science.html">Claude for Science</a></li>
@@ -304,191 +258,308 @@
     </ul>
   </nav>
   <!-- END:HEADER -->
+  <a aria-label="Back to top" class="back-top" href="#top" id="backTop" title="Back to top">↑</a>
 
-<main id="main">
+<main class="container single-column-article" id="main">
 <header class="hero content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
-<div class="hero-badge content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">ENTERPRISE CONNECTORS</div>
-<h1>Enterprise Connectors & Secure Data Ingestion</h1>
-<div class="title-tags" aria-label="Article topics"><span class="title-tag">Enterprise Connectors</span><span class="title-tag">OAuth Scoping</span><span class="title-tag">Least Privilege</span><span class="title-tag">Data Residency</span><span class="title-tag">Grounded RAG</span></div>
-<p class="hero-desc">Learn how Claude Connectors bridge private enterprise repositories, Google Workspace, Slack, GitHub, and CRM systems into grounded conversational workflows. Covers OAuth scoping, read-only versus write permissions, and data-residency guardrails for team deployments.</p>
+<div class="hero-badge content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">CLAUDE APPS</div>
+<h1>Claude Apps: Interactive MCP Apps, Live Workspace UI & Desktop Export</h1>
+<div class="title-tags" aria-label="Article topics"><span class="title-tag">Claude Apps</span><span class="title-tag">MCP Apps</span><span class="title-tag">Interactive UI</span><span class="title-tag">Sandboxed Iframes</span><span class="title-tag">Desktop Apps</span></div>
+<p class="hero-desc">Go beyond plain text and raw JSON tool outputs. Claude Apps - powered by MCP Apps - render rich, interactive dashboards, configuration wizards, diagrams, and authenticated SaaS workspaces directly inside your Claude conversation and Desktop app.</p>
 <p class="hero-byline">By <strong>Thomas Cherickal</strong> - Generative AI Consultant &amp; The Digital Futurist</p>
 </header>
 
-<article class="article-body" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.25rem;">
+<article class="article-body">
 <div id="table-of-contents" aria-label="Table of contents" class="content-card toc-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
-<p class="article-p" style="font-size:1.02rem;color:#f1f5f9;">Most valuable company knowledge does not sit in public web pages - it lives inside Google Docs, Slack threads, GitHub pull requests, and CRM deal notes. Without connectors, employees waste hours downloading files and pasting sensitive snippets into chat windows. Claude Connectors solve this by linking your approved workplace tools directly into Claude under strict identity, permission, and audit controls.</p>
+<p class="article-p" style="font-size:1.02rem;color:#f1f5f9;">Traditional AI tool calls were built for models to read, not humans to operate - returning static walls of raw text or JSON blobs that force users to jump across browser tabs to filter charts, rearrange project timelines, or edit documents. <strong>Claude Apps</strong> - powered by the open <a class="gold-link" href="#references">MCP Apps specification</a> - close that gap by allowing Model Context Protocol servers to render live, bidirectional interactive user interfaces directly inside your conversation thread, split-screen workspace, or standalone desktop window.</p>
 <div class="rule"></div>
 <h2 style="color:var(--gold);font-size:1.45rem;font-weight:700;margin-bottom:1.15rem;border-bottom:1px solid rgba(251,191,36,0.25);padding-bottom:0.5rem;">Table of Contents</h2>
 <ol class="toc-list">
-<li><a class="gold-link" href="#how-enterprise-connectors-work">How Enterprise Connectors Ground Claude in Live Company Data</a></li>
-<li><a class="gold-link" href="#oauth-scoping-and-permissions">OAuth Scoping: Read-Only Versus Write Permissions</a></li>
-<li><a class="gold-link" href="#data-residency-and-governance">Data Residency, Retention, and Governance Guardrails</a></li>
-<li><a class="gold-link" href="#rollout-and-failure-modes">Preventing Connector Failure Modes During Rollout</a></li>
-<li><a class="gold-link" href="#practical-connector-workflows">Practical Cross-Tool Workflows for Business Teams</a></li>
-<li><a class="gold-link" href="#enterprise-rollout-checklist">Connector Monitoring, Rate Limits, and Incident Response</a></li>
-<li><a class="gold-link" href="#troubleshooting-connector-sync">Troubleshooting Sync Latency and Permission Mismatches</a></li>
+<li><a class="gold-link" href="#what-are-claude-apps">What Are Claude Apps (MCP Apps) and Why They Matter</a></li>
+<li><a class="gold-link" href="#host-client-server-architecture">Host-Client-Server Architecture and <code>ui://</code> Resources</a></li>
+<li><a class="gold-link" href="#bidirectional-protocol">Bidirectional JSON-RPC Over <code>postMessage</code> and Display Modes</a></li>
+<li><a class="gold-link" href="#building-mcp-apps">Building an MCP App With <code>@modelcontextprotocol/ext-apps</code></a></li>
+<li><a class="gold-link" href="#security-and-sandboxing">Security Model: Sandboxed Iframes, CSP, and Origin Validation</a></li>
+<li><a class="gold-link" href="#full-app-view-and-desktop">Full App View, Standalone Desktop Apps, and Ecosystem Capabilities</a></li>
+<li><a class="gold-link" href="#apps-vs-artifacts-comparison">Comparing Claude Apps, Claude Artifacts, and Standard MCP Tools</a></li>
+<li><a class="gold-link" href="#claude-apps-faq">Practical Questions When Adopting Claude Apps</a></li>
 <li><a class="gold-link" href="#references">Authoritative References</a></li>
 </ol>
 </div>
 
 <section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
-<h2 id="how-enterprise-connectors-work">How Enterprise Connectors Ground Claude in Live Company Data</h2>
+<h2 id="what-are-claude-apps">What Are Claude Apps (MCP Apps) and Why They Matter</h2>
+<p class="article-p">Prior to MCP Apps, the three core primitives of the <a class="gold-link" href="claude-mcp.html">Model Context Protocol</a> - <code>tools</code>, <code>resources</code>, and <code>prompts</code> - optimized strictly for machine-to-model data exchange. Whenever a user asked Claude to inspect funnel metrics, review a design file, or reorganize a sprint board, the tool returned serialized JSON that Claude summarized into static Markdown. Any real follow-up action required leaving the chat and opening external tabs.</p>
+<p class="article-p"><strong>Claude Apps</strong> implement the official MCP Apps extension, an open cross-client standard adopted across Claude, Claude Desktop, VS Code, Goose, and Postman. Instead of proprietary per-platform UI widgets, a single MCP server can declare interactive HTML, CSS, and JavaScript views that render natively wherever the protocol is supported:</p>
+<ul class="article-p" style="list-style-type:disc;padding-left:1.5rem;display:flex;flex-direction:column;gap:0.55rem;">
+<li><strong>Zero Tab-Switching:</strong> Interactive analytics dashboards from Amplitude or Hex, task timelines in Asana, architecture diagrams in Excalidraw, and design previews in Figma or Canva render directly alongside the prompt that generated them.</li>
+<li><strong>Human-in-the-Loop Visual Control:</strong> Users manipulate filters, drag sprint items, inspect multi-column tables, or complete structured configuration wizards directly in the UI instead of typing verbose prose corrections.</li>
+<li><strong>Context Preservation:</strong> Every click, query, and visual state change stays anchored inside one unified conversation thread rather than fragmenting across separate browser windows.</li>
+<li><strong>Write Once, Render Across Hosts:</strong> Engineering teams build one MCP App server using the standard protocol and deploy it across Claude web, Claude Desktop, and compatible IDE clients without rewriting frontend adapters.</li>
+</ul>
+</section>
 
-<p class="article-p">An enterprise connector is a governed bridge between Claude and a workplace system such as Google Workspace, Slack, GitHub, Jira, or Salesforce. When a team member asks, "What blockers came up in the Q3 launch thread and which GitHub issues are still open?", Claude queries the connected sources using that specific user's signed-in identity, pulls only the records they are allowed to see, and synthesizes a cited answer.</p>
-<p class="article-p">Because connectors respect existing access controls, an intern cannot ask Claude to summarize executive payroll sheets stored in a restricted Drive folder. This identity-aware retrieval model, described in the <a class="gold-link" href="#references">Anthropic Enterprise security documentation</a>, removes the need to duplicate sensitive files into separate shadow databases that quickly go stale.</p>
-<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.25rem;margin:1.5rem 0;"><div class="mermaid">
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="host-client-server-architecture">Host-Client-Server Architecture and <code>ui://</code> Resources</h2>
+<p class="article-p">MCP Apps build directly on the standard MCP Host-Client-Server topology by attaching UI metadata to tool declarations and serving frontend bundles over a dedicated <code>ui://</code> URI scheme:</p>
+<ul class="article-p" style="list-style-type:disc;padding-left:1.5rem;display:flex;flex-direction:column;gap:0.55rem;">
+<li><strong>Tool Metadata Declaration (<code>_meta.ui.resourceUri</code>):</strong> When an MCP server registers a tool, it includes a <code>_meta.ui</code> object referencing a <code>ui://</code> resource URI (for example, <code>ui://analytics/dashboard.html</code>).</li>
+<li><strong>Bundled UI Resource (<code>text/html;profile=mcp-app</code>):</strong> The MCP server serves the interactive frontend asset under the specialized MIME type <code>text/html;profile=mcp-app</code>, typically bundled as a self-contained HTML/JS payload.</li>
+<li><strong>Host Interception &amp; Mounting:</strong> When Claude invokes the tool, the host application (Claude web or Claude Desktop) inspects <code>_meta.ui.resourceUri</code>, fetches the UI resource from the server, and mounts it inside a locked-down sandboxed iframe inline in the chat stream or in an expanded workspace panel.</li>
+<li><strong>Fallback Compatibility:</strong> Because every tool still returns standard MCP text or structured content alongside its UI reference, text-only hosts and automated pipelines continue to function seamlessly even when visual rendering is unavailable.</li>
+</ul>
+<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.5rem;margin:1.75rem 0;"><div class="mermaid">
 flowchart TD
-    U["Authenticated Employee Prompt"] --> I["Identity & OAuth Token Check"]
-    I --> R{"Connector Router"}
-    R --> G["Google Workspace
-(Read-Only Docs & Drive)"]
-    R --> S["Slack Channels
-(Member-Accessible Only)"]
-    R --> H["GitHub Repos
-(Scoped Pull Requests & Issues)"]
-    G --> M["Grounded Synthesis
-with Source Citations"]
-    S --> M
-    H --> M
-    M --> L["Audit Log & User Response"]
+    U["User Prompt in Claude"] --> H["Claude Host Runtime
+(Web / Desktop)"]
+    H -->|"1. tools/call"| S["MCP App Server"]
+    S -->|"2. Result + _meta.ui.resourceUri"| H
+    H -->|"3. Fetch ui:// Resource
+(text/html;profile=mcp-app)"| S
+    H -->|"4. Mount Inside Sandboxed Iframe"| IF["Interactive App UI
+(Inline or Fullscreen)"]
+    IF -->|"5. JSON-RPC postMessage
+(tools/call / ui/message)"| H
+    H -->|"6. Forward Tool Call or Context"| S
 
     classDef gold fill:#000000,stroke:#fbbf24,stroke-width:2px,color:#f8fafc
     classDef cyan fill:#000000,stroke:#38bdf8,stroke-width:2px,color:#f8fafc
     classDef emerald fill:#000000,stroke:#34d399,stroke-width:2px,color:#f8fafc
     classDef purple fill:#000000,stroke:#c084fc,stroke-width:2px,color:#f8fafc
 
-    class U,L gold
-    class I,R purple
-    class G,S,H cyan
-    class M emerald
-</div><p style="color:#94a3b8;font-size:0.86rem;margin-top:0.75rem;text-align:center;">Every connector request enforces the signed-in user's exact permissions before data reaches Claude.</p></div>
+    class U,IF gold
+    class H purple
+    class S cyan
+</div><p style="color:#94a3b8;font-size:0.86rem;margin-top:0.75rem;text-align:center;">End-to-end MCP Apps execution lifecycle connecting the Claude host, MCP server, and sandboxed UI iframe.</p></div>
 </section>
 
 <section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
-<h2 id="oauth-scoping-and-permissions">OAuth Scoping: Read-Only Versus Write Permissions</h2>
-
-<p class="article-p">The single most important security rule for enterprise connectors is least-privilege OAuth scoping, aligned with the <a class="gold-link" href="#references">OAuth 2.0 security framework</a>. Always start every new connector rollout in strict read-only mode. Read-only scopes let teams search documents, summarize customer history, and cross-reference tickets while making accidental deletion or unauthorized posting impossible.</p>
-<p class="article-p">Only introduce write scopes - such as creating a draft email, opening a Jira ticket, or updating a CRM stage - after a workflow is proven and paired with explicit human confirmation. Never grant broad wildcard admin tokens to a shared connector service account; use per-user delegated tokens with short lifetimes and instant revocation.</p>
-<div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid #38bdf8;border-radius:10px;margin:1.5rem 0;overflow:hidden;"><div style="background:#0b1220;padding:0.5rem 1rem;border-bottom:1px solid rgba(56,189,248,0.22);display:flex;justify-content:space-between;align-items:center;font-size:0.8rem;color:#94a3b8;"><span style="color:#fbbf24;font-weight:600;">Least-Privilege Connector Policy Manifest</span><span>YAML</span></div><pre style="background:#040711;margin:0;padding:1.1rem 1.25rem;overflow-x:auto;color:#e2e8f0;font-size:0.86rem;line-height:1.55;"><code>connector_policy:
-  version: &quot;1.0&quot;
-  default_mode: &quot;read_only&quot;
-  connectors:
-    google_drive:
-      scopes:
-        - &quot;https://www.googleapis.com/auth/drive.readonly&quot;
-      blocked_folders:
-        - &quot;HR-Confidential&quot;
-        - &quot;Board-Legal&quot;
-    github:
-      scopes:
-        - &quot;repo:status&quot;
-        - &quot;pull_requests:read&quot;
-      write_actions_require_confirmation: true
-    slack:
-      scopes:
-        - &quot;channels:history&quot;
-        - &quot;search:read&quot;
-      exclude_direct_messages: true</code></pre></div>
-</section>
-
-<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
-<h2 id="data-residency-and-governance">Data Residency, Retention, and Governance Guardrails</h2>
-
-<p class="article-p">Regulated organizations in healthcare, finance, and government must know exactly where their data travels and how long it is stored. Before enabling connectors across departments, verify three governance controls with your security team:</p>
+<h2 id="bidirectional-protocol">Bidirectional JSON-RPC Over <code>postMessage</code> and Display Modes</h2>
+<p class="article-p">Because the rendered UI runs inside an isolated iframe with zero direct DOM access to Claude, all host-to-guest and guest-to-host interactions travel as structured <strong>JSON-RPC 2.0 messages over the browser's <code>postMessage</code> API</strong>. The official <a class="gold-link" href="#references"><code>@modelcontextprotocol/ext-apps</code> SDK</a> abstracts this bridge into clean lifecycle callbacks and async methods.</p>
+<h3>Host-to-Guest Notifications (Claude to App UI)</h3>
 <ul class="article-p" style="list-style-type:disc;padding-left:1.5rem;display:flex;flex-direction:column;gap:0.55rem;">
-<li><strong>Zero Training on Enterprise Data:</strong> Confirm your commercial or enterprise agreement guarantees that retrieved documents and prompts are never used to train foundation models.</li>
-<li><strong>Regional Processing &amp; Retention:</strong> Configure data-retention windows and regional endpoints that match your legal obligations under GDPR, HIPAA, or local privacy statutes.</li>
-<li><strong>Central Audit Logging:</strong> Stream connector access logs into your existing SIEM platform so security analysts can see which systems were queried, when, and by whom.</li>
+<li><code>ui/notifications/tool-input</code> and <code>tool-input-partial</code>: Streams the initial or partial tool arguments into the iframe so the interface can show progressive loading skeletons or pre-populate filters immediately.</li>
+<li><code>ui/notifications/tool-result</code>: Delivers the completed MCP tool execution payload so the frontend renders live charts, records, or status cards without polling.</li>
+<li><code>ui/notifications/host-context-changed</code>: Pushes real-time host environment updates - including dark/light theme changes, user locale, viewport dimensions, and available display modes - so the embedded UI adapts natively to Claude's workspace.</li>
 </ul>
-<p class="article-p">For custom internal APIs that do not have a prebuilt connector, build a thin <a class="gold-link" href="#references">Model Context Protocol (MCP)</a> server behind your corporate VPN. That lets you apply your own data-masking rules - such as stripping credit card numbers or personal tax IDs - before any record is handed to Claude.</p>
-<div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid #38bdf8;border-radius:10px;margin:1.5rem 0;overflow:hidden;"><div style="background:#0b1220;padding:0.5rem 1rem;border-bottom:1px solid rgba(56,189,248,0.22);display:flex;justify-content:space-between;align-items:center;font-size:0.8rem;color:#94a3b8;"><span style="color:#fbbf24;font-weight:600;">PII Redaction Middleware Before Ingestion</span><span>Python</span></div><pre style="background:#040711;margin:0;padding:1.1rem 1.25rem;overflow-x:auto;color:#e2e8f0;font-size:0.86rem;line-height:1.55;"><code>import re
-
-EMAIL_RE = re.compile(r&quot;[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}&quot;)
-PHONE_RE = re.compile(r&quot;\+?\d[\d\s\-()]{8,}\d&quot;)
-
-def sanitize_record(text: str) -&gt; str:
-    cleaned = EMAIL_RE.sub(&quot;[REDACTED_EMAIL]&quot;, text)
-    cleaned = PHONE_RE.sub(&quot;[REDACTED_PHONE]&quot;, cleaned)
-    return cleaned</code></pre></div>
+<h3>Guest-to-Host Requests (App UI to Claude &amp; Server)</h3>
+<ul class="article-p" style="list-style-type:disc;padding-left:1.5rem;display:flex;flex-direction:column;gap:0.55rem;">
+<li><code>tools/call</code> (via <code>app.callServerTool()</code>): Lets the embedded UI invoke secondary MCP server tools directly (such as paginating a table, refreshing live metrics, or saving a record) without wasting an LLM round-trip.</li>
+<li><code>ui/message</code>: Injects a structured user follow-up message back into the active Claude conversation so the model can reason over the user's latest UI selection.</li>
+<li><code>ui/open-link</code>: Requests that the host safely open an external reference URL after applying host-level navigation checks.</li>
+</ul>
+<h3>Layout Presentation Modes (<code>displayMode</code>)</h3>
+<p class="article-p">MCP Apps adapt their footprint dynamically based on task complexity and host capabilities:</p>
+<ul class="article-p" style="list-style-type:disc;padding-left:1.5rem;display:flex;flex-direction:column;gap:0.55rem;">
+<li><strong><code>inline</code>:</strong> The default presentation mode, embedding compact widgets, KPI summaries, or interactive forms directly inside the conversational turn.</li>
+<li><strong><code>fullscreen</code>:</strong> An expanded workspace view taking over the primary canvas for dense interfaces such as SQL explorers, diagram canvases, or multi-panel project boards. Views can inspect <code>app.hostContext?.availableDisplayModes</code> and toggle modes programmatically via <code>app.requestDisplayMode()</code>.</li>
+</ul>
 </section>
 
 <section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
-<h2 id="rollout-and-failure-modes">Preventing Connector Failure Modes During Rollout</h2>
+<h2 id="building-mcp-apps">Building an MCP App With <code>@modelcontextprotocol/ext-apps</code></h2>
+<p class="article-p">Developing a production Claude App requires two clean layers: a server-side registration binding a tool to a <code>ui://</code> HTML bundle, and a lightweight client-side bridge running inside the sandboxed view.</p>
+<div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid #38bdf8;border-radius:10px;margin:1.5rem 0;overflow:hidden;"><div style="background:#0b1220;padding:0.5rem 1rem;border-bottom:1px solid rgba(56,189,248,0.22);display:flex;justify-content:space-between;align-items:center;font-size:0.8rem;color:#94a3b8;"><span style="color:#fbbf24;font-weight:600;">Server-Side Tool &amp; UI Resource Registration</span><span>TypeScript</span></div><pre style="background:#040711;margin:0;padding:1.1rem 1.25rem;overflow-x:auto;color:#e2e8f0;font-size:0.86rem;line-height:1.55;"><code>import fs from &quot;node:fs/promises&quot;;
+import { McpServer } from &quot;@modelcontextprotocol/sdk/server/mcp.js&quot;;
+import {
+  registerAppTool,
+  registerAppResource,
+  RESOURCE_MIME_TYPE,
+} from &quot;@modelcontextprotocol/ext-apps/server&quot;;
+import { z } from &quot;zod&quot;;
 
-<p class="article-p">Even well-secured connectors can disappoint users if the underlying company data is messy. Watch out for three operational pitfalls:</p>
+const server = new McpServer({ name: &quot;pipeline-monitor&quot;, version: &quot;1.0.0&quot; });
+
+registerAppTool(
+  server,
+  &quot;inspect_pipeline_metrics&quot;,
+  {
+    description: &quot;Render an interactive latency and error dashboard for a service.&quot;,
+    inputSchema: { service: z.enum([&quot;checkout&quot;, &quot;search&quot;, &quot;billing&quot;]) },
+    _meta: {
+      ui: {
+        resourceUri: &quot;ui://pipeline/dashboard.html&quot;,
+      },
+    },
+  },
+  async ({ service }) =&gt; {
+    const metrics = await fetchServiceMetrics(service);
+    return {
+      content: [{ type: &quot;text&quot;, text: JSON.stringify(metrics) }],
+    };
+  }
+);
+
+registerAppResource(
+  server,
+  &quot;Pipeline Metrics Dashboard&quot;,
+  &quot;ui://pipeline/dashboard.html&quot;,
+  { description: &quot;Interactive latency and SLA visualizer&quot; },
+  async () =&gt; ({
+    contents: [
+      {
+        uri: &quot;ui://pipeline/dashboard.html&quot;,
+        mimeType: RESOURCE_MIME_TYPE, // &quot;text/html;profile=mcp-app&quot;
+        text: await fs.readFile(&quot;dist/dashboard.html&quot;, &quot;utf-8&quot;),
+      },
+    ],
+  })
+);</code></pre></div>
+
+<div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid #38bdf8;border-radius:10px;margin:1.5rem 0;overflow:hidden;"><div style="background:#0b1220;padding:0.5rem 1rem;border-bottom:1px solid rgba(56,189,248,0.22);display:flex;justify-content:space-between;align-items:center;font-size:0.8rem;color:#94a3b8;"><span style="color:#fbbf24;font-weight:600;">Client-Side Sandboxed View With Bidirectional Tool Calls &amp; Fullscreen Toggle</span><span>TypeScript</span></div><pre style="background:#040711;margin:0;padding:1.1rem 1.25rem;overflow-x:auto;color:#e2e8f0;font-size:0.86rem;line-height:1.55;"><code>import { App } from &quot;@modelcontextprotocol/ext-apps&quot;;
+
+const app = new App({ name: &quot;PipelineDashboard&quot;, version: &quot;1.0.0&quot; });
+
+// Receive initial tool output pushed from the Claude host
+app.ontoolresult = (result) =&gt; {
+  const payload = JSON.parse(result.content[0].text);
+  renderLatencyChart(payload);
+};
+
+// Trigger a direct backend refresh without looping back through the LLM
+async function refreshMetrics(service: string) {
+  const updated = await app.callServerTool({
+    name: &quot;inspect_pipeline_metrics&quot;,
+    arguments: { service },
+  });
+  renderLatencyChart(JSON.parse(updated.content[0].text));
+}
+
+// Expand from inline chat widget to fullscreen workspace when supported
+async function toggleFullscreen() {
+  const current = app.hostContext?.displayMode;
+  const target = current === &quot;inline&quot; ? &quot;fullscreen&quot; : &quot;inline&quot;;
+  if (app.hostContext?.availableDisplayModes?.includes(target)) {
+    await app.requestDisplayMode({ mode: target });
+  }
+}
+
+await app.connect();</code></pre></div>
+</section>
+
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="security-and-sandboxing">Security Model: Sandboxed Iframes, CSP, and Origin Validation</h2>
+<p class="article-p">Rendering HTML and JavaScript served by third-party MCP servers inside an authenticated AI workspace requires defense-in-depth. The MCP Apps security architecture enforces five strict boundaries between the guest UI and the Claude host:</p>
 <ul class="article-p" style="list-style-type:disc;padding-left:1.5rem;display:flex;flex-direction:column;gap:0.55rem;">
-<li><strong>Stale Duplicate Documents:</strong> If Google Drive holds five old versions of a pricing policy, Claude may cite an outdated copy. Archive superseded files and label canonical documents clearly with effective dates.</li>
-<li><strong>Prompt Injection in External Messages:</strong> Incoming customer emails or public GitHub issues can contain hidden instructions trying to hijack Claude. Keep external untrusted text strictly separated from system instructions and disable automatic write actions when processing untrusted inputs, following <a class="gold-link" href="#references">OWASP LLM Top 10</a> guidance.</li>
-<li><strong>Overbroad Search Queries:</strong> Returning 40 long Slack threads in one turn slows responses and blurs details. Limit connector search tools to the top 5-8 most relevant snippets with timestamps and direct links.</li>
+<li><strong>Locked-Down Iframe Sandboxing:</strong> Hosts mount every UI resource inside a strictly sandboxed <code>&lt;iframe&gt;</code> that blocks parent DOM traversal, prevents unauthorized top-level navigation, and isolates session cookies and local storage from the host application.</li>
+<li><strong>Origin &amp; Channel Verification:</strong> The SDK's <code>PostMessageTransport</code> verifies that incoming messages match the exact expected source window (<code>window.parent</code> or <code>iframe.contentWindow</code>), blocking spoofed cross-frame messages.</li>
+<li><strong>Declarative Content Security Policy (<code>_meta.ui.csp</code>):</strong> Servers declare explicit allowlists for any external scripts, fonts, or API origins required by the view so hosts can enforce strict CSP headers and prevent silent data exfiltration.</li>
+<li><strong>Host Capability Delegation:</strong> Instead of asking every mini-app to request broad OAuth credentials for email, calendar, or messaging APIs, an MCP App delegates high-level outcomes back to Claude, which routes them through the user's already-approved <a class="gold-link" href="claude-plugins.html">Claude Plugins</a>.</li>
+<li><strong>Explicit User Consent Gates:</strong> Destructive mutations, external write operations, or state-changing actions initiated inside an embedded UI must still clear the host's explicit approval prompts before executing.</li>
 </ul>
-<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.25rem;margin:1.5rem 0;"><div class="mermaid">
+<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.5rem;margin:1.75rem 0;"><div class="mermaid">
 graph TD
-    A["External Untrusted Content
-(Customer Email / Public Issue)"] --> S["Sanitize & Strip Hidden Directives"]
-    S --> D["Wrap as Untrusted Data Block"]
-    D --> C["Claude Analysis
-(Read-Only Context)"]
-    C --> H{"Write Action Requested?"}
-    H -->|"Yes"| P["Require Explicit Human Approval"]
-    H -->|"No"| O["Return Cited Summary"]
+    UI["Guest App Action
+(Click / Submit / Mutation)"] --> PM["PostMessageTransport
+(Origin & Source Verification)"]
+    PM --> CSP["Host Sandbox & CSP Boundary
+(No Parent DOM / Cookie Access)"]
+    CSP --> POL{"Host Permission &
+Consent Policy"}
+    POL -->|"Read-Only / Approved"| EXE["Execute via MCP Server
+or Delegated Plugin"]
+    POL -->|"State-Changing / Write"| ASK["Prompt User for Explicit Approval"]
+    ASK -->|"Approved"| EXE
+    ASK -->|"Denied"| BLK["Block Action & Return Safe Error"]
 
     classDef gold fill:#000000,stroke:#fbbf24,stroke-width:2px,color:#f8fafc
     classDef cyan fill:#000000,stroke:#38bdf8,stroke-width:2px,color:#f8fafc
-    classDef rose fill:#000000,stroke:#f472b6,stroke-width:2px,color:#f8fafc
     classDef emerald fill:#000000,stroke:#34d399,stroke-width:2px,color:#f8fafc
+    classDef rose fill:#000000,stroke:#f472b6,stroke-width:2px,color:#f8fafc
 
-    class A,P rose
-    class S,D cyan
-    class C,H gold
-    class O emerald
-</div><p style="color:#94a3b8;font-size:0.86rem;margin-top:0.75rem;text-align:center;">Defense-in-depth stops untrusted external text from triggering unauthorized write actions.</p></div>
+    class UI,EXE gold
+    class PM,CSP,POL cyan
+    class ASK emerald
+    class BLK rose
+</div><p style="color:#94a3b8;font-size:0.86rem;margin-top:0.75rem;text-align:center;">Defense-in-depth isolation and consent enforcement between embedded MCP App views and the Claude host.</p></div>
 </section>
 
-
 <section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
-<h2 id="practical-connector-workflows">Practical Cross-Tool Workflows for Business Teams</h2>
-
-<p class="article-p">Once read-only connectors are active across your core tools, everyday cross-functional work becomes dramatically faster. Instead of hunting across four browser tabs before a meeting, team members ask one grounded question and get a unified brief with clickable links back to every source record.</p>
+<h2 id="full-app-view-and-desktop">Full App View, Standalone Desktop Apps, and Ecosystem Capabilities</h2>
+<p class="article-p">Beyond inline charts and forms, Anthropic expanded Claude Apps into a complete workspace and desktop workflow layer combining interactive SaaS connectors, protocol extensions, and 1-click native app packaging:</p>
+<h3>Full App View &amp; Interactive SaaS Workspaces</h3>
+<p class="article-p">Leading enterprise platforms - including <strong>Notion, Canva, Box, Asana, Amplitude, Hex, Excalidraw, Figma, Confluence, and Slack</strong> - support interactive views right beside your Claude conversation. In <strong>Full App View</strong>, your authenticated SaaS workspace opens split-screen or full-canvas next to Claude. Rather than pasting excerpts back and forth, Claude can directly read the active view, compare Box file versions side-by-side, restructure Notion pages, update Asana tasks, or iterate on Canva layouts with your approval.</p>
+<h3>Install as App: Standalone macOS &amp; Windows Desktop Apps</h3>
+<p class="article-p">Interactive trackers, calculators, dashboards, and internal tools built as <a class="gold-link" href="claude-artifacts.html">Claude Artifacts</a> no longer have to remain trapped inside browser chat history. With the <strong>Install as app</strong> capability on macOS and Windows:</p>
 <ul class="article-p" style="list-style-type:disc;padding-left:1.5rem;display:flex;flex-direction:column;gap:0.55rem;">
-<li><strong>Customer Renewal Preparation:</strong> Combine recent Salesforce account notes, open Jira support tickets, and the latest Slack escalation thread into a one-page renewal risk summary before calling the client.</li>
-<li><strong>Engineering Incident Postmortems:</strong> Pull timeline messages from the incident Slack channel alongside linked GitHub pull requests and deployment logs to draft an accurate root-cause report in minutes.</li>
-<li><strong>Product Launch Readiness:</strong> Cross-check the launch checklist in Google Docs against open engineering issues in GitHub to spot unowned tasks before release day.</li>
-<li><strong>Onboarding New Team Members:</strong> Let new hires ask plain-English questions across approved engineering handbooks and architecture decision records while automatically respecting folder permissions.</li>
+<li><strong>Dedicated Window &amp; System Icon:</strong> Package an interactive Claude tool into a standalone desktop window with its own dock or taskbar icon in a single click.</li>
+<li><strong>Granular OS Permissions:</strong> Grant explicit per-app permissions as needed - from desktop notifications and menu-bar or system-tray integration to local file access or script execution.</li>
+<li><strong>Live Artifact Sync:</strong> Each installed desktop app remains linked to its source Claude artifact, automatically pulling updates whenever you refine the workflow in chat.</li>
 </ul>
-<p class="article-p">Notice that every one of these high-value workflows works cleanly in read-only mode. Teams capture most of the productivity gain immediately without exposing write APIs to unnecessary risk.</p>
-
+<h3>Skills Over MCP, Background Tasks, and Elicitation</h3>
+<p class="article-p">Claude Apps pair cleanly with <a class="gold-link" href="claude-plugins.html">Claude Plugins</a> and modern MCP protocol capabilities:</p>
+<ul class="article-p" style="list-style-type:disc;padding-left:1.5rem;display:flex;flex-direction:column;gap:0.55rem;">
+<li><strong>Skills Over MCP:</strong> Connected apps can ship domain playbooks alongside their UI components and tools so Claude follows platform-specific schemas and workflows automatically.</li>
+<li><strong>Asynchronous Background Tasks:</strong> Long-running analytics queries or batch operations execute asynchronously in the background while you continue collaborating in chat.</li>
+<li><strong>Server Elicitation:</strong> When a server needs missing parameters or high-stakes confirmation mid-workflow, it can pause execution and render a focused elicitation prompt before continuing.</li>
+</ul>
 </section>
 
 <section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
-<h2 id="enterprise-rollout-checklist">Connector Monitoring, Rate Limits, and Incident Response</h2>
-<p class="article-p">Once enterprise connectors are live across Google Workspace, Slack, GitHub, and CRM tools, ongoing reliability depends on three operational safeguards: audit logging, rate-limit handling, and instant token revocation. Every connector call should record who triggered the query, which external resource was read or updated, and whether the response succeeded or was blocked by policy.</p>
-<p class="article-p">External SaaS APIs enforce strict rate limits and occasionally return transient errors. Well-engineered connector setups use exponential backoff, cache frequently read metadata such as project lists or channel directories, and fail gracefully with clear messages instead of retrying blindly in a loop.</p>
-<p class="article-p">Security teams should also maintain a single kill switch for every OAuth integration. If an employee changes roles or an external token is suspected of misuse, revoking the scoped token immediately cuts off access without disrupting other departments, following <a class="gold-link" href="#references">Anthropic security standards</a>.</p>
+<h2 id="apps-vs-artifacts-comparison">Comparing Claude Apps, Claude Artifacts, and Standard MCP Tools</h2>
+<p class="article-p">Choose the right building block based on whether your workflow needs live authenticated backend integration, ad-hoc visual generation, or pure headless automation:</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.9rem;color:#e2e8f0;">
+<thead>
+<tr style="border-bottom:2px solid rgba(251,191,36,0.45);text-align:left;color:var(--gold);">
+<th style="padding:0.75rem;">Dimension</th>
+<th style="padding:0.75rem;">Standard MCP Tools</th>
+<th style="padding:0.75rem;">Claude Artifacts</th>
+<th style="padding:0.75rem;">Claude Apps (MCP Apps)</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Primary Output</td>
+<td style="padding:0.75rem;">Plain text or JSON consumed by Claude</td>
+<td style="padding:0.75rem;">Model-generated HTML, React, SVG, or documents</td>
+<td style="padding:0.75rem;">Server-supplied interactive <code>ui://</code> HTML/JS views</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Live Data Flow</td>
+<td style="padding:0.75rem;">Model-triggered request/response only</td>
+<td style="padding:0.75rem;">Self-contained client state (no direct server bridge)</td>
+<td style="padding:0.75rem;">Bidirectional JSON-RPC (<code>callServerTool</code> + host notifications)</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Auth &amp; SaaS Access</td>
+<td style="padding:0.75rem;">Server-managed OAuth / API tokens</td>
+<td style="padding:0.75rem;">Sandboxed without external SaaS sessions</td>
+<td style="padding:0.75rem;">Authenticated SaaS views &amp; host capability delegation</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Best Use Case</td>
+<td style="padding:0.75rem;">Headless pipelines, CLI agents, read-only lookups</td>
+<td style="padding:0.75rem;">Rapid prototypes, calculators, standalone desktop mini-apps</td>
+<td style="padding:0.75rem;">Live dashboards, SaaS workspaces, multi-step visual approvals</td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 
-
 <section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
-<h2 id="troubleshooting-connector-sync">Troubleshooting Sync Latency and Permission Mismatches</h2>
-
-<p class="article-p">When an employee reports that Claude cannot find a document they know exists in Google Drive or GitHub, the cause is almost always one of three predictable issues: expired OAuth tokens, overly narrow repository scopes, or a file sitting inside an excluded confidential folder. Before widening permissions, check the connector health log and test the exact query with a read-only diagnostic prompt.</p>
-<p class="article-p">Establish a simple support runbook for your IT helpdesk so staff know how to re-authenticate expired tokens in under thirty seconds. Keeping connector diagnostics transparent builds trust across both security teams and everyday business users, ensuring enterprise data stays both accessible and tightly governed.</p>
-
+<h2 id="claude-apps-faq">Practical Questions When Adopting Claude Apps</h2>
+<p class="article-p"><strong>Do MCP Apps break older text-only MCP clients?</strong> No. Because UI views are declared inside <code>_meta.ui</code> metadata alongside standard MCP tool outputs, hosts that do not implement the MCP Apps extension simply ignore the metadata and consume the standard text or JSON payload cleanly.</p>
+<p class="article-p"><strong>Can a UI button inside a Claude App call our backend without triggering another LLM turn?</strong> Yes. Using <code>app.callServerTool()</code> from <code>@modelcontextprotocol/ext-apps</code>, your embedded view can paginate data, filter records, or refresh metrics directly through the host-to-MCP-server channel with zero LLM latency or token cost.</p>
+<p class="article-p"><strong>How should teams distribute internal Claude Apps across departments?</strong> Package your MCP App server, tool schemas, and accompanying operating playbooks as a versioned <a class="gold-link" href="claude-plugins.html">Claude Plugin</a> so teammates can install it once while administrators retain centralized OAuth and permission governance.</p>
 </section>
 
 <section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <h2 id="references">Authoritative References</h2>
 <ol class="references-list" style="display:flex;flex-direction:column;gap:0.75rem;padding-left:1.25rem;">
-<li><a class="gold-link" href="https://www.anthropic.com/security" rel="noopener noreferrer" target="_blank">Anthropic Privacy &amp; Enterprise Security</a> - Overview of Anthropic's enterprise data handling, encryption, and compliance posture.</li>
-<li><a class="gold-link" href="https://datatracker.ietf.org/doc/html/rfc6749" rel="noopener noreferrer" target="_blank">OAuth 2.0 Authorization Framework (RFC 6749)</a> - Standard protocol for scoped, delegated user permissions across workplace apps.</li>
-<li><a class="gold-link" href="https://modelcontextprotocol.io/" rel="noopener noreferrer" target="_blank">Model Context Protocol (MCP)</a> - Open protocol for building governed custom enterprise data connectors.</li>
-<li><a class="gold-link" href="https://owasp.org/www-project-top-10-for-large-language-model-applications/" rel="noopener noreferrer" target="_blank">OWASP Top 10 for LLM Applications</a> - Industry security guidance on prompt injection, data leakage, and excessive agency.</li>
+<li><a class="gold-link" href="https://modelcontextprotocol.io/" rel="noopener noreferrer" target="_blank">Model Context Protocol (MCP) &amp; MCP Apps Specification</a> - Official open protocol specification for <code>ui://</code> resources, JSON-RPC over <code>postMessage</code>, and sandboxed interactive views.</li>
+<li><a class="gold-link" href="https://github.com/modelcontextprotocol/ext-apps" rel="noopener noreferrer" target="_blank">MCP Apps SDK (<code>@modelcontextprotocol/ext-apps</code>)</a> - Official TypeScript server helpers (<code>registerAppTool</code>, <code>registerAppResource</code>) and client <code>App</code> bridge.</li>
+<li><a class="gold-link" href="claude-plugins.html">Claude Plugins: Unifying Skills &amp; Connectors</a> - How Skills, Connectors, and MCP servers package into unified plugins.</li>
+<li><a class="gold-link" href="claude-mcp.html">Claude MCP: Model Context Protocol &amp; Custom Tool Servers</a> - Core MCP transports, OAuth security hardening, and server architecture.</li>
+<li><a class="gold-link" href="claude-artifacts.html">Claude Artifacts Engineering Guide</a> - Building interactive components and exporting standalone workflows.</li>
 </ol>
 </section>
 </article>
 
 <section class="cta-banner" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
-<h2 style="color:var(--gold);font-size:1.8rem;margin-bottom:0.75rem;">Build Secure Claude Business Connectors &amp; Integrations</h2>
-<p style="color:#94a3b8;max-width:680px;margin:0 auto 1.5rem;font-size:0.95rem;">Deploy resilient remote MCP connectors bridging Claude with internal databases, CRM/ERP platforms, GitHub repos, and cloud infrastructure securely.</p>
+<h2 style="color:var(--gold);font-size:1.85rem;margin-bottom:0.75rem;">Build Custom Claude Apps &amp; Production Agent Workflows</h2>
+<p style="color:#94a3b8;max-width:680px;margin:0 auto 1.5rem;font-size:0.95rem;">From interactive MCP Apps and unified Claude Plugins to enterprise AI governance and workforce training - let's build your production AI stack.</p>
 <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
 <a class="btn btn-primary" href="../contact.html">Schedule Architecture Session →</a>
 <a class="btn btn-linkedin" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Free LinkedIn Consultation ↗</a>
@@ -813,7 +884,7 @@ graph TD
     </p>
   </footer>
     <!-- END:FOOTER -->
-<script src="../components.js"></script>
-<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; mermaid.initialize({ startOnLoad: true, theme: 'dark' });</script>
+  <script src="../components.js"></script>
+  <script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; mermaid.initialize({ startOnLoad: true, theme: 'dark' });</script>
 </body>
 </html>

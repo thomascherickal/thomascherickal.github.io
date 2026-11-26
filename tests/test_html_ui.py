@@ -57,6 +57,139 @@ EMOJI_RE = re.compile(
 )
 
 
+HTML_TEST_CATEGORY_ORDER = [
+    "Document Shell & SEO Meta",
+    "Navigation, Header & Footer",
+    "Accessibility, Landmarks & Security",
+    "CSS, Scripts & Media Assets",
+    "CTA, Branding & Pricing Policy",
+    "Interactive Widgets & Core Pages",
+    "Service Pages & Directories",
+    "Claude & Gemini Training Guides",
+    "Structured Data & Production Hygiene",
+    "Negative Fault-Injection Scenarios",
+]
+
+HTML_TEST_CATEGORY_MAP = {
+    # 1. Document Shell & SEO Meta (10)
+    "test_01_all_html_pages_discovered": "Document Shell & SEO Meta",
+    "test_02_document_shell_and_seo_meta_tags": "Document Shell & SEO Meta",
+    "test_03_charset_utf8_declared_on_all_pages": "Document Shell & SEO Meta",
+    "test_04_open_graph_meta_cards_on_core_pages": "Document Shell & SEO Meta",
+    "test_05_no_duplicate_dom_ids_on_core_interactive_pages": "Document Shell & SEO Meta",
+    "test_51_no_duplicate_dom_ids_across_all_pages": "Document Shell & SEO Meta",
+    "test_52_unique_canonical_urls_match_file_paths_all_pages": "Document Shell & SEO Meta",
+    "test_53_html_lang_en_and_responsive_viewport_all_pages": "Document Shell & SEO Meta",
+    "test_54_meaningful_titles_and_zero_malformed_meta_tags": "Document Shell & SEO Meta",
+    "test_55_all_pages_have_header_and_footer_sync_markers": "Document Shell & SEO Meta",
+    # 2. Navigation, Header & Footer (10)
+    "test_06_centralized_single_navbar_architecture": "Navigation, Header & Footer",
+    "test_07_navbar_contains_essential_navigation_links": "Navigation, Header & Footer",
+    "test_08_footer_integrity_and_canonical_contact": "Navigation, Header & Footer",
+    "test_09_footer_social_links_grid_has_24_links_on_index": "Navigation, Header & Footer",
+    "test_56_navbar_has_aria_label_and_brand_logo_all_pages": "Navigation, Header & Footer",
+    "test_57_all_navbar_dropdown_links_resolve_to_existing_files": "Navigation, Header & Footer",
+    "test_58_navbar_includes_claude_plugins_apps_and_code_mode": "Navigation, Header & Footer",
+    "test_59_navbar_lists_claude_before_gemini_consistently": "Navigation, Header & Footer",
+    "test_60_footer_includes_newsletter_whatsapp_and_mastodon_all_pages": "Navigation, Header & Footer",
+    "test_61_zero_typo_whatsapp_number_across_all_pages": "Navigation, Header & Footer",
+    "test_101_back_to_top_button_and_target_on_every_page": "Navigation, Header & Footer",
+    # 3. Accessibility, Landmarks & Security (10)
+    "test_10_single_h1_and_image_alt_accessibility": "Accessibility, Landmarks & Security",
+    "test_11_buttons_never_underlined_and_accessible": "Accessibility, Landmarks & Security",
+    "test_12_external_target_blank_links_have_noopener": "Accessibility, Landmarks & Security",
+    "test_13_no_empty_or_javascript_void_hrefs": "Accessibility, Landmarks & Security",
+    "test_14_data_tables_have_headers_and_body_rows": "Accessibility, Landmarks & Security",
+    "test_43_contact_form_inputs_have_accessible_names": "Accessibility, Landmarks & Security",
+    "test_62_all_pages_render_main_landmark_with_id_main": "Accessibility, Landmarks & Security",
+    "test_63_zero_positive_tabindex_keyboard_traps_sitewide": "Accessibility, Landmarks & Security",
+    "test_64_all_iframes_if_present_have_accessible_titles": "Accessibility, Landmarks & Security",
+    "test_65_all_html_tables_have_valid_row_and_cell_structure": "Accessibility, Landmarks & Security",
+    # 4. CSS, Scripts & Media Assets (8)
+    "test_33_local_stylesheets_and_scripts_exist_on_disk": "CSS, Scripts & Media Assets",
+    "test_66_core_design_system_stylesheets_loaded_on_all_pages": "CSS, Scripts & Media Assets",
+    "test_67_all_local_image_assets_exist_on_disk": "CSS, Scripts & Media Assets",
+    "test_68_mermaid_pages_load_mermaid_runtime_script": "CSS, Scripts & Media Assets",
+    "test_69_shared_components_js_loaded_across_site_pages": "CSS, Scripts & Media Assets",
+    "test_70_training_guides_load_article_stylesheet": "CSS, Scripts & Media Assets",
+    "test_71_service_pages_load_shared_cta_and_button_css": "CSS, Scripts & Media Assets",
+    "test_72_pricing_page_loads_calculator_and_schedule_scripts": "CSS, Scripts & Media Assets",
+    # 5. CTA, Branding & Pricing Policy (10)
+    "test_15_cta_banners_include_free_linkedin_consultation": "CTA, Branding & Pricing Policy",
+    "test_16_index_brand_tagline_and_business_website": "CTA, Branding & Pricing Policy",
+    "test_17_zero_charge_training_materials_card_rendered": "CTA, Branding & Pricing Policy",
+    "test_18_ten_installments_structure_rendered_on_pricing_pages": "CTA, Branding & Pricing Policy",
+    "test_19_global_parity_pricing_range_displayed": "CTA, Branding & Pricing Policy",
+    "test_44_zero_deprecated_pricing_or_support_regressions_sitewide": "CTA, Branding & Pricing Policy",
+    "test_73_all_six_pricing_tier_pages_linked_from_pricing_hubs": "CTA, Branding & Pricing Policy",
+    "test_74_zero_upfront_guarantee_copy_rendered_on_pricing_and_guarantees": "CTA, Branding & Pricing Policy",
+    "test_75_zero_forbidden_legacy_entity_mentions_sitewide": "CTA, Branding & Pricing Policy",
+    "test_76_cta_banners_use_standardized_btn_classes": "CTA, Branding & Pricing Policy",
+    # 6. Interactive Widgets & Core Pages (12)
+    "test_20_index_hero_and_work_with_me_grid_ui": "Interactive Widgets & Core Pages",
+    "test_21_pricing_calculator_dom_contract": "Interactive Widgets & Core Pages",
+    "test_22_pricing_calculator_participants_input_is_numeric": "Interactive Widgets & Core Pages",
+    "test_23_tier_pages_calculator_dom_contract": "Interactive Widgets & Core Pages",
+    "test_24_guarantees_mermaid_ui_and_trust_table": "Interactive Widgets & Core Pages",
+    "test_25_faqs_interactive_cards_and_controls": "Interactive Widgets & Core Pages",
+    "test_26_faqs_schedule_and_materials_cards_present": "Interactive Widgets & Core Pages",
+    "test_27_faqs_search_and_category_filter_ui": "Interactive Widgets & Core Pages",
+    "test_28_contact_form_ui_controls": "Interactive Widgets & Core Pages",
+    "test_77_articles_and_writing_pages_exist_and_cross_link": "Interactive Widgets & Core Pages",
+    "test_78_expertise_page_renders_core_sections_and_cta": "Interactive Widgets & Core Pages",
+    "test_79_pricing_page_renders_personal_ai_section_and_tier_links": "Interactive Widgets & Core Pages",
+    # 7. Service Pages & Directories (8)
+    "test_29_service_directory_pages_list_all_services": "Service Pages & Directories",
+    "test_30_all_service_pages_include_pricing_and_linkedin_links": "Service Pages & Directories",
+    "test_80_business_and_personal_services_have_16_pages_each": "Service Pages & Directories",
+    "test_81_all_32_service_pages_render_hero_h1_and_cta_banner": "Service Pages & Directories",
+    "test_82_all_32_service_pages_link_to_contact_page": "Service Pages & Directories",
+    "test_83_business_directory_renders_rich_service_cards": "Service Pages & Directories",
+    "test_84_personal_directory_renders_rich_service_cards": "Service Pages & Directories",
+    "test_85_all_32_service_pages_embed_json_ld_schema": "Service Pages & Directories",
+    # 8. Claude & Gemini Training Guides (10)
+    "test_31_all_training_guides_have_structured_headings": "Claude & Gemini Training Guides",
+    "test_86_exactly_18_claude_and_18_gemini_training_guides": "Claude & Gemini Training Guides",
+    "test_87_all_36_training_guides_have_toc_and_references": "Claude & Gemini Training Guides",
+    "test_88_all_36_training_guides_use_unnumbered_content_headings": "Claude & Gemini Training Guides",
+    "test_89_all_36_training_guides_include_standard_cta_banner": "Claude & Gemini Training Guides",
+    "test_90_claude_guides_never_include_article_footer": "Claude & Gemini Training Guides",
+    "test_91_claude_plugins_covers_unified_skills_and_connectors": "Claude & Gemini Training Guides",
+    "test_92_claude_apps_covers_mcp_apps_sdk_and_sandboxing": "Claude & Gemini Training Guides",
+    "test_93_claude_code_mode_covers_sandbox_hooks_and_activation": "Claude & Gemini Training Guides",
+    "test_94_deleted_claude_skills_and_connectors_pages_absent": "Claude & Gemini Training Guides",
+    # 9. Structured Data & Production Hygiene (12)
+    "test_32_json_ld_structured_data_valid_on_all_pages": "Structured Data & Production Hygiene",
+    "test_34_mermaid_vertical_orientation_and_typography_hygiene": "Structured Data & Production Hygiene",
+    "test_35_zero_emojis_across_all_html_pages": "Structured Data & Production Hygiene",
+    "test_36_zero_corrupted_template_placeholders_in_rendered_text": "Structured Data & Production Hygiene",
+    "test_37_zero_broken_same_page_anchor_fragments": "Structured Data & Production Hygiene",
+    "test_38_zero_mixed_content_http_subresources": "Structured Data & Production Hygiene",
+    "test_39_zero_invalid_nested_interactive_elements": "Structured Data & Production Hygiene",
+    "test_40_zero_empty_inline_event_handlers_or_document_write": "Structured Data & Production Hygiene",
+    "test_41_404_error_page_provides_recovery_navigation": "Structured Data & Production Hygiene",
+    "test_42_zero_broken_relative_html_links_across_all_pages": "Structured Data & Production Hygiene",
+    "test_45_zero_localhost_or_example_urls_in_json_ld": "Structured Data & Production Hygiene",
+    "test_95_canonical_author_description_present_in_json_ld": "Structured Data & Production Hygiene",
+    # 10. Negative Fault-Injection Scenarios (10)
+    "test_46_error_scenario_malformed_json_ld_is_detected": "Negative Fault-Injection Scenarios",
+    "test_47_error_scenario_duplicate_dom_ids_and_missing_h1_detected": "Negative Fault-Injection Scenarios",
+    "test_48_error_scenario_horizontal_mermaid_and_em_dash_detected": "Negative Fault-Injection Scenarios",
+    "test_49_error_scenario_missing_noopener_and_underlined_button_detected": "Negative Fault-Injection Scenarios",
+    "test_50_error_scenario_broken_fragment_and_mixed_content_detected": "Negative Fault-Injection Scenarios",
+    "test_96_error_scenario_nested_interactive_anchors_detected": "Negative Fault-Injection Scenarios",
+    "test_97_error_scenario_emoji_and_superscript_citation_detected": "Negative Fault-Injection Scenarios",
+    "test_98_error_scenario_numbered_guide_heading_detected": "Negative Fault-Injection Scenarios",
+    "test_99_error_scenario_corrupted_template_placeholder_detected": "Negative Fault-Injection Scenarios",
+    "test_100_error_scenario_positive_tabindex_and_missing_alt_detected": "Negative Fault-Injection Scenarios",
+}
+
+
+def get_html_test_category(method_name):
+    """Returns the logical category for a TestHTMLUISuite test method."""
+    return HTML_TEST_CATEGORY_MAP.get(method_name, "Other HTML UI Tests")
+
+
 def discover_html_pages():
     pages = []
     for d in HTML_DIRS:
@@ -723,6 +856,515 @@ class TestHTMLUISuite(unittest.TestCase):
         all_ids = {el.get("id") for el in soup.find_all(id=True) if el.get("id")}
         self.assertNotIn("missing-section", all_ids)
         self.assertTrue(soup.find("img")["src"].startswith("http://"))
+
+    # --- 8. Expanded Document Shell, SEO & Component Sync Tests ---
+
+    def test_51_no_duplicate_dom_ids_across_all_pages(self):
+        """Verifies zero duplicate DOM element IDs exist across all 85+ standalone HTML pages."""
+        failures = []
+        for rel, soup in self.soups.items():
+            ids = [el.get("id") for el in soup.find_all(id=True) if el.get("id")]
+            dups = [k for k, v in Counter(ids).items() if v > 1]
+            if dups:
+                failures.append(f"{rel}: duplicate IDs {dups}")
+        self.assertEqual(failures, [], "Site-wide duplicate DOM IDs:\n" + "\n".join(failures[:15]))
+
+    def test_52_unique_canonical_urls_match_file_paths_all_pages(self):
+        """Verifies every HTML page has a unique https://thedigitalfuturist.com/ canonical URL matching its path."""
+        seen = {}
+        failures = []
+        for rel, soup in self.soups.items():
+            canon = soup.find("link", attrs={"rel": "canonical"})
+            href = (canon.get("href") or "").strip() if canon else ""
+            if not href.startswith("https://thedigitalfuturist.com/"):
+                failures.append(f"{rel}: non-canonical domain '{href}'")
+            elif rel != "index.html" and not href.endswith(rel):
+                failures.append(f"{rel}: canonical mismatch '{href}'")
+            if href in seen:
+                failures.append(f"{rel}: duplicate canonical '{href}' also used by {seen[href]}")
+            seen[href] = rel
+        self.assertEqual(failures, [], "Canonical URL failures:\n" + "\n".join(failures[:15]))
+
+    def test_53_html_lang_en_and_responsive_viewport_all_pages(self):
+        """Verifies every page sets lang='en' and includes width=device-width in its viewport meta tag."""
+        failures = []
+        for rel, soup in self.soups.items():
+            html_tag = soup.find("html")
+            if not html_tag or (html_tag.get("lang") or "").lower() != "en":
+                failures.append(f"{rel}: expected lang='en'")
+            vp = soup.find("meta", attrs={"name": "viewport"})
+            content = (vp.get("content") or "").lower() if vp else ""
+            if "width=device-width" not in content:
+                failures.append(f"{rel}: viewport missing width=device-width")
+        self.assertEqual(failures, [], "Language/viewport failures:\n" + "\n".join(failures[:15]))
+
+    def test_54_meaningful_titles_and_zero_malformed_meta_tags(self):
+        """Verifies every page title is at least 15 chars and zero malformed meta-og/meta-twitter tags exist."""
+        failures = []
+        for rel, raw in self.raw_html.items():
+            title_txt = self.soups[rel].title.get_text(strip=True) if self.soups[rel].title else ""
+            if len(title_txt) < 15:
+                failures.append(f"{rel}: overly short <title> '{title_txt}'")
+            for bad in ("meta-og:", "meta-twitter:", "meta-consultant"):
+                if bad in raw:
+                    failures.append(f"{rel}: malformed meta tag '{bad}'")
+        self.assertEqual(failures, [], "Title/meta hygiene failures:\n" + "\n".join(failures[:15]))
+
+    def test_55_all_pages_have_header_and_footer_sync_markers(self):
+        """Verifies every page preserves START/END HEADER and FOOTER component inlining markers."""
+        failures = []
+        for rel, raw in self.raw_html.items():
+            for marker in ("<!-- START:HEADER -->", "<!-- END:HEADER -->", "<!-- START:FOOTER -->", "<!-- END:FOOTER -->"):
+                if marker not in raw:
+                    failures.append(f"{rel}: missing component marker {marker}")
+        self.assertEqual(failures, [], "Component marker failures:\n" + "\n".join(failures[:15]))
+
+    # --- 9. Expanded Navigation, Header & Footer Tests ---
+
+    def test_56_navbar_has_aria_label_and_brand_logo_all_pages(self):
+        """Verifies every page navbar sets aria-label and displays The Digital Futurist brand logo."""
+        failures = []
+        for rel, soup in self.soups.items():
+            nav = soup.find("nav")
+            if not nav or not (nav.get("aria-label") or "").strip():
+                failures.append(f"{rel}: <nav> missing aria-label")
+                continue
+            logo = nav.find("img", class_="nav-brand-logo")
+            if not logo or not logo.get("alt"):
+                failures.append(f"{rel}: navbar missing brand logo with alt text")
+        self.assertEqual(failures, [], "Navbar branding/ARIA failures:\n" + "\n".join(failures[:15]))
+
+    def test_57_all_navbar_dropdown_links_resolve_to_existing_files(self):
+        """Verifies every relative link inside the centralized navbar dropdowns resolves to an existing file."""
+        nav = self.soups["index.html"].find("nav")
+        self.assertIsNotNone(nav)
+        failures = []
+        for a in nav.find_all("a", href=True):
+            href = a["href"].strip()
+            if href.startswith(("http://", "https://", "mailto:", "#")):
+                continue
+            clean = href.split("?")[0].split("#")[0]
+            if not os.path.exists(os.path.join(REPO_DIR, clean)):
+                failures.append(f"Navbar broken target: {href}")
+        self.assertEqual(failures, [], "Broken navbar dropdown links:\n" + "\n".join(failures))
+
+    def test_58_navbar_includes_claude_plugins_apps_and_code_mode(self):
+        """Verifies the centralized navbar lists Claude Plugins, Claude Apps, and Claude Code Mode."""
+        nav_html = str(self.soups["index.html"].find("nav"))
+        for slug in (
+            "claude-training/claude-plugins.html",
+            "claude-training/claude-apps.html",
+            "claude-training/claude-code-mode.html",
+        ):
+            self.assertIn(slug, nav_html, f"Navbar missing {slug}")
+        for removed in ("claude-training/claude-skills.html", "claude-training/claude-connectors.html"):
+            self.assertNotIn(removed, nav_html, f"Navbar still references deleted {removed}")
+
+    def test_59_navbar_lists_claude_before_gemini_consistently(self):
+        """Verifies the centralized navbar orders Claude before Gemini in top-level navigation."""
+        nav = self.soups["index.html"].find("nav")
+        toggles = [t.get_text(" ", strip=True) for t in nav.select("a.nav-dropdown-toggle")]
+        claude_idx = next((i for i, t in enumerate(toggles) if t.startswith("Claude")), -1)
+        gemini_idx = next((i for i, t in enumerate(toggles) if t.startswith("Gemini")), -1)
+        self.assertGreaterEqual(claude_idx, 0, "Navbar missing Claude dropdown")
+        self.assertGreaterEqual(gemini_idx, 0, "Navbar missing Gemini dropdown")
+        self.assertLess(claude_idx, gemini_idx, "Navbar must place Claude before Gemini")
+
+    def test_60_footer_includes_newsletter_whatsapp_and_mastodon_all_pages(self):
+        """Verifies every page footer includes the newsletter, verified WhatsApp, and Mastodon links."""
+        failures = []
+        for rel, soup in self.soups.items():
+            fhtml = str(soup.find("footer") or "")
+            for tok in ("thomascherickal.kit.com", "wa.me/919884452724", "mastodon.social"):
+                if tok not in fhtml:
+                    failures.append(f"{rel}: footer missing {tok}")
+        self.assertEqual(failures, [], "Footer link completeness failures:\n" + "\n".join(failures[:15]))
+
+    def test_61_zero_typo_whatsapp_number_across_all_pages(self):
+        """Verifies the mistyped legacy WhatsApp number (9198844452724) never appears anywhere on the site."""
+        failures = [rel for rel, raw in self.raw_html.items() if "9198844452724" in raw]
+        self.assertEqual(failures, [], f"Typo WhatsApp number found on: {failures}")
+
+    # --- 10. Expanded Accessibility, Landmarks & Security Tests ---
+
+    def test_62_all_pages_render_main_landmark_with_id_main(self):
+        """Verifies every standalone page provides a <main id='main'> landmark for skip-link navigation."""
+        failures = [rel for rel, soup in self.soups.items() if not soup.find("main", id="main")]
+        self.assertEqual(failures, [], "Pages missing <main id='main'>:\n" + "\n".join(failures[:15]))
+
+    def test_63_zero_positive_tabindex_keyboard_traps_sitewide(self):
+        """Verifies no element across any HTML page sets tabindex > 0 (which disrupts keyboard tab order)."""
+        failures = []
+        for rel, soup in self.soups.items():
+            for el in soup.find_all(attrs={"tabindex": True}):
+                try:
+                    if int(el["tabindex"]) > 0:
+                        failures.append(f"{rel}: positive tabindex={el['tabindex']} on <{el.name}>")
+                except ValueError:
+                    failures.append(f"{rel}: non-integer tabindex='{el['tabindex']}' on <{el.name}>")
+        self.assertEqual(failures, [], "Keyboard tabindex violations:\n" + "\n".join(failures[:15]))
+
+    def test_64_all_iframes_if_present_have_accessible_titles(self):
+        """Verifies any embedded <iframe> element includes a non-empty title attribute for screen readers."""
+        failures = []
+        for rel, soup in self.soups.items():
+            for iframe in soup.find_all("iframe"):
+                if not (iframe.get("title") or "").strip():
+                    failures.append(f"{rel}: <iframe> missing accessible title attribute")
+        self.assertEqual(failures, [], "Iframe accessibility failures:\n" + "\n".join(failures))
+
+    def test_65_all_html_tables_have_valid_row_and_cell_structure(self):
+        """Verifies every <table> across all 85+ pages contains rows (<tr>) and data/header cells."""
+        failures = []
+        for rel, soup in self.soups.items():
+            for idx, tbl in enumerate(soup.find_all("table")):
+                rows = tbl.find_all("tr")
+                cells = tbl.find_all(["th", "td"])
+                if not rows or not cells:
+                    failures.append(f"{rel}: table #{idx+1} missing rows or cells")
+        self.assertEqual(failures, [], "Table DOM structure failures:\n" + "\n".join(failures[:15]))
+
+    # --- 11. Expanded CSS, Scripts & Media Asset Tests ---
+
+    def test_66_core_design_system_stylesheets_loaded_on_all_pages(self):
+        """Verifies all 6 core design-system stylesheets load on every page."""
+        required_css = ("fonts.css", "styles.css", "navbar.css", "footer.css", "buttons.css", "responsive.css")
+        failures = []
+        for rel, soup in self.soups.items():
+            hrefs = " ".join(l.get("href", "") for l in soup.find_all("link", rel="stylesheet"))
+            for css in required_css:
+                if css not in hrefs:
+                    failures.append(f"{rel}: missing core stylesheet {css}")
+        self.assertEqual(failures, [], "Missing core stylesheets:\n" + "\n".join(failures[:15]))
+
+    def test_67_all_local_image_assets_exist_on_disk(self):
+        """Verifies every local <img src=...> across all 85+ HTML pages resolves to an existing image file."""
+        failures = []
+        for rel, soup in self.soups.items():
+            page_dir = os.path.dirname(os.path.join(REPO_DIR, rel))
+            for img in soup.find_all("img", src=True):
+                src = img["src"].strip()
+                if not src.startswith(("http://", "https://", "//", "data:")):
+                    clean = src.split("?")[0].split("#")[0]
+                    if not os.path.exists(os.path.normpath(os.path.join(page_dir, clean))):
+                        failures.append(f"{rel}: missing local image '{src}'")
+        self.assertEqual(failures, [], "Missing local image assets:\n" + "\n".join(failures[:15]))
+
+    def test_68_mermaid_pages_load_mermaid_runtime_script(self):
+        """Verifies every page rendering a div.mermaid diagram also loads a Mermaid renderer script."""
+        failures = []
+        for rel, soup in self.soups.items():
+            if soup.select("div.mermaid"):
+                scripts_blob = " ".join(
+                    (sc.get("src", "") + " " + (sc.string or "")) for sc in soup.find_all("script")
+                ).lower()
+                if "mermaid" not in scripts_blob:
+                    failures.append(f"{rel}: renders div.mermaid without loading Mermaid script")
+        self.assertEqual(failures, [], "Missing Mermaid scripts:\n" + "\n".join(failures[:15]))
+
+    def test_69_shared_components_js_loaded_across_site_pages(self):
+        """Verifies shared components.js is loaded on core, pricing, service, and training pages."""
+        loaded = sum(
+            1 for soup in self.soups.values()
+            if any("components.js" in (s.get("src") or "") for s in soup.find_all("script", src=True))
+        )
+        self.assertGreaterEqual(loaded, 80, f"Expected >= 80 pages loading components.js, found {loaded}")
+
+    def test_70_training_guides_load_article_stylesheet(self):
+        """Verifies all 36 Claude and Gemini training guides load article.css for uniform typography."""
+        guides = [p for p in self.pages if p.startswith(("claude-training/", "gemini-training/"))]
+        failures = []
+        for rel in guides:
+            hrefs = " ".join(l.get("href", "") for l in self.soups[rel].find_all("link", rel="stylesheet"))
+            if "article.css" not in hrefs:
+                failures.append(f"{rel}: missing article.css")
+        self.assertEqual(failures, [], "Training guide stylesheet failures:\n" + "\n".join(failures[:15]))
+
+    def test_71_service_pages_load_shared_cta_and_button_css(self):
+        """Verifies all 32 business and personal service pages load cta.css and buttons.css."""
+        service_pages = [p for p in self.pages if p.startswith(("business-services/", "personal-services/"))]
+        failures = []
+        for rel in service_pages:
+            hrefs = " ".join(l.get("href", "") for l in self.soups[rel].find_all("link", rel="stylesheet"))
+            for css in ("cta.css", "buttons.css"):
+                if css not in hrefs:
+                    failures.append(f"{rel}: missing {css}")
+        self.assertEqual(failures, [], "Service page CSS failures:\n" + "\n".join(failures[:15]))
+
+    def test_72_pricing_page_loads_calculator_and_schedule_scripts(self):
+        """Verifies pricing.html loads pricing-calculator.js and payment-schedule.js."""
+        scripts = " ".join(s.get("src", "") for s in self.soups["pricing.html"].find_all("script", src=True))
+        self.assertIn("pricing-calculator.js", scripts)
+        self.assertIn("payment-schedule.js", scripts)
+
+    # --- 12. Expanded CTA, Branding & Pricing Policy Tests ---
+
+    def test_73_all_six_pricing_tier_pages_linked_from_pricing_hubs(self):
+        """Verifies all 6 pricing/pricing-tier-*.html pages exist and are linked from pricing.html and parity-pricing.html."""
+        tiers = [p for p in self.pages if p.startswith("pricing/pricing-tier-")]
+        self.assertEqual(len(tiers), 6, f"Expected 6 tier pages, found {len(tiers)}")
+        for hub in ("pricing.html", "parity-pricing.html"):
+            raw = self.raw_html[hub]
+            for tier in tiers:
+                self.assertIn(tier, raw, f"{hub}: missing link to {tier}")
+
+    def test_74_zero_upfront_guarantee_copy_rendered_on_pricing_and_guarantees(self):
+        """Verifies $0 upfront and Walkaway Guarantee copy render clearly on pricing.html and guarantees.html."""
+        for rel in ("pricing.html", "guarantees.html"):
+            txt = self.soups[rel].get_text(" ", strip=True).lower()
+            self.assertIn("$0", txt, f"{rel}: missing $0 upfront copy")
+            self.assertIn("walk", txt, f"{rel}: missing walkaway guarantee copy")
+
+    def test_75_zero_forbidden_legacy_entity_mentions_sitewide(self):
+        """Verifies deprecated legacy entity strings (Augmentron, study-abroad) never appear across all 85+ pages."""
+        failures = []
+        for rel, raw in self.raw_html.items():
+            low = raw.lower()
+            for tok in ("augmentron", "study-abroad", "study abroad"):
+                if tok in low:
+                    failures.append(f"{rel}: contains forbidden legacy string '{tok}'")
+        self.assertEqual(failures, [], "Legacy entity violations:\n" + "\n".join(failures[:15]))
+
+    def test_76_cta_banners_use_standardized_btn_classes(self):
+        """Verifies links inside section.cta-banner use standardized .btn classes with zero inline font-size overrides."""
+        failures = []
+        for rel, soup in self.soups.items():
+            for banner in soup.select("section.cta-banner"):
+                btns = banner.select("a.btn")
+                if not btns:
+                    failures.append(f"{rel}: section.cta-banner missing a.btn actions")
+                    continue
+                for b in btns:
+                    st = (b.get("style") or "").lower().replace(" ", "")
+                    if "font-size:" in st:
+                        failures.append(f"{rel}: CTA button has ad-hoc inline font-size override")
+        self.assertEqual(failures, [], "CTA button uniformity failures:\n" + "\n".join(failures[:15]))
+
+    # --- 13. Expanded Core Pages & Directory Tests ---
+
+    def test_77_articles_and_writing_pages_exist_and_cross_link(self):
+        """Verifies articles.html and writing.html remain separate pages and cross-link cleanly to each other."""
+        self.assertIn("articles.html", self.soups)
+        self.assertIn("writing.html", self.soups)
+        self.assertIn("writing.html", self.raw_html["articles.html"])
+        self.assertIn("articles.html", self.raw_html["writing.html"])
+
+    def test_78_expertise_page_renders_core_sections_and_cta(self):
+        """Verifies expertise.html renders multiple structured sections and primary contact/LinkedIn CTA buttons."""
+        soup = self.soups["expertise.html"]
+        self.assertGreaterEqual(len(soup.find_all("h2")), 3, "expertise.html should have >= 3 <h2> sections")
+        self.assertIsNotNone(soup.select_one("a.btn-linkedin"), "expertise.html missing LinkedIn CTA button")
+        self.assertIsNotNone(soup.select_one("a.btn[href='contact.html']"), "expertise.html missing contact CTA button")
+
+    def test_79_pricing_page_renders_personal_ai_section_and_tier_links(self):
+        """Verifies pricing.html contains #personal-ai-section anchor and links to parity-pricing.html."""
+        soup = self.soups["pricing.html"]
+        self.assertIsNotNone(soup.find(id="personal-ai-section"), "pricing.html missing #personal-ai-section")
+        self.assertIn("parity-pricing.html", self.raw_html["pricing.html"])
+
+    # --- 14. Expanded Service Pages & Directories Tests ---
+
+    def test_80_business_and_personal_services_have_16_pages_each(self):
+        """Verifies exact 1-to-1 parity of 16 business service pages and 16 personal service pages."""
+        biz = sorted(p.replace("business-services/business-service-", "") for p in self.pages if p.startswith("business-services/"))
+        pers = sorted(p.replace("personal-services/personal-service-", "") for p in self.pages if p.startswith("personal-services/"))
+        self.assertEqual(len(biz), 16)
+        self.assertEqual(len(pers), 16)
+        self.assertEqual(biz, pers, "Business and personal service slug lists diverged")
+
+    def test_81_all_32_service_pages_render_hero_h1_and_cta_banner(self):
+        """Verifies every business and personal service page renders a single H1 and a CTA banner."""
+        service_pages = [p for p in self.pages if p.startswith(("business-services/", "personal-services/"))]
+        failures = []
+        for rel in service_pages:
+            soup = self.soups[rel]
+            if not soup.find("h1"):
+                failures.append(f"{rel}: missing <h1>")
+            if not soup.select("section.cta-banner"):
+                failures.append(f"{rel}: missing section.cta-banner")
+        self.assertEqual(failures, [], "Service page hero/CTA failures:\n" + "\n".join(failures[:15]))
+
+    def test_82_all_32_service_pages_link_to_contact_page(self):
+        """Verifies all 32 business and personal service pages include a link to contact.html."""
+        service_pages = [p for p in self.pages if p.startswith(("business-services/", "personal-services/"))]
+        failures = [rel for rel in service_pages if "contact.html" not in self.raw_html[rel]]
+        self.assertEqual(failures, [], "Service pages missing contact.html link:\n" + "\n".join(failures[:15]))
+
+    def test_83_business_directory_renders_rich_service_cards(self):
+        """Verifies all-business-services.html renders at least 16 distinct service cards/blocks."""
+        soup = self.soups["all-business-services.html"]
+        links = {a["href"] for a in soup.find_all("a", href=True) if "business-service-" in a["href"]}
+        self.assertGreaterEqual(len(links), 16)
+        self.assertGreaterEqual(len(soup.find_all("h2")) + len(soup.find_all("h3")), 16)
+
+    def test_84_personal_directory_renders_rich_service_cards(self):
+        """Verifies all-personal-services.html renders at least 16 distinct service cards/blocks."""
+        soup = self.soups["all-personal-services.html"]
+        links = {a["href"] for a in soup.find_all("a", href=True) if "personal-service-" in a["href"]}
+        self.assertGreaterEqual(len(links), 16)
+        self.assertGreaterEqual(len(soup.find_all("h2")) + len(soup.find_all("h3")), 16)
+
+    def test_85_all_32_service_pages_embed_json_ld_schema(self):
+        """Verifies every business and personal service page embeds at least one JSON-LD schema block."""
+        service_pages = [p for p in self.pages if p.startswith(("business-services/", "personal-services/"))]
+        failures = [
+            rel for rel in service_pages
+            if not self.soups[rel].find("script", attrs={"type": "application/ld+json"})
+        ]
+        self.assertEqual(failures, [], "Service pages missing JSON-LD:\n" + "\n".join(failures[:15]))
+
+    # --- 15. Expanded Claude & Gemini Training Guide Tests ---
+
+    def test_86_exactly_18_claude_and_18_gemini_training_guides(self):
+        """Verifies exact counts of 18 Claude training guides and 18 Gemini training guides."""
+        claude = [p for p in self.pages if p.startswith("claude-training/")]
+        gemini = [p for p in self.pages if p.startswith("gemini-training/")]
+        self.assertEqual(len(claude), 18, f"Expected 18 Claude guides, found {len(claude)}")
+        self.assertEqual(len(gemini), 18, f"Expected 18 Gemini guides, found {len(gemini)}")
+
+    def test_87_all_36_training_guides_have_toc_and_references(self):
+        """Verifies all 36 Claude and Gemini guides render #table-of-contents and #references anchors."""
+        guides = [p for p in self.pages if p.startswith(("claude-training/", "gemini-training/"))]
+        failures = []
+        for rel in guides:
+            soup = self.soups[rel]
+            if not soup.find(id="table-of-contents"):
+                failures.append(f"{rel}: missing #table-of-contents")
+            if not soup.find(id="references"):
+                failures.append(f"{rel}: missing #references")
+        self.assertEqual(failures, [], "Training guide ToC/References failures:\n" + "\n".join(failures[:15]))
+
+    def test_88_all_36_training_guides_use_unnumbered_content_headings(self):
+        """Verifies all 36 training guides obey the unnumbered h2/h3 heading rule (numbering belongs only in ToC)."""
+        guides = [p for p in self.pages if p.startswith(("claude-training/", "gemini-training/"))]
+        failures = []
+        for rel in guides:
+            for h in self.soups[rel].find_all(["h2", "h3"]):
+                txt = h.get_text(strip=True)
+                if re.match(r"^\d+[\.\)]\s+", txt):
+                    failures.append(f"{rel}: numbered content heading '{txt[:40]}'")
+        self.assertEqual(failures, [], "Numbered heading violations:\n" + "\n".join(failures[:15]))
+
+    def test_89_all_36_training_guides_include_standard_cta_banner(self):
+        """Verifies every Claude and Gemini guide includes a standard section.cta-banner with LinkedIn & Pricing links."""
+        guides = [p for p in self.pages if p.startswith(("claude-training/", "gemini-training/"))]
+        failures = []
+        for rel in guides:
+            banner = self.soups[rel].select_one("section.cta-banner")
+            if not banner:
+                failures.append(f"{rel}: missing section.cta-banner")
+                continue
+            bhtml = str(banner)
+            if "pricing.html" not in bhtml or "linkedin.com/in/thomascherickal" not in bhtml:
+                failures.append(f"{rel}: cta-banner missing pricing.html or LinkedIn link")
+        self.assertEqual(failures, [], "Training guide CTA banner failures:\n" + "\n".join(failures[:15]))
+
+    def test_90_claude_guides_never_include_article_footer(self):
+        """Verifies no claude-training/claude-*.html page includes an article-footer block."""
+        claude = [p for p in self.pages if p.startswith("claude-training/")]
+        failures = [rel for rel in claude if "article-footer" in self.raw_html[rel]]
+        self.assertEqual(failures, [], f"Forbidden article-footer in Claude pages: {failures}")
+
+    def test_91_claude_plugins_covers_unified_skills_and_connectors(self):
+        """Verifies claude-plugins.html documents how Claude unified Skills and Connectors into Plugins."""
+        txt = self.soups["claude-training/claude-plugins.html"].get_text(" ", strip=True)
+        for token in ("Skills", "Connectors", "Plugins Hub", "SKILL.md", "MCP"):
+            self.assertIn(token, txt, f"claude-plugins.html missing '{token}'")
+
+    def test_92_claude_apps_covers_mcp_apps_sdk_and_sandboxing(self):
+        """Verifies claude-apps.html covers MCP Apps, ext-apps SDK, ui:// resources, postMessage, and sandboxing."""
+        txt = self.soups["claude-training/claude-apps.html"].get_text(" ", strip=True)
+        for token in ("MCP Apps", "@modelcontextprotocol/ext-apps", "ui://", "postMessage", "registerAppTool", "displayMode"):
+            self.assertIn(token, txt, f"claude-apps.html missing '{token}'")
+
+    def test_93_claude_code_mode_covers_sandbox_hooks_and_activation(self):
+        """Verifies claude-code-mode.html covers CLAUDE_CODE_EXPERIMENTAL_CODE_MODE, PreToolUse, tool_input.code, and PTC."""
+        txt = self.soups["claude-training/claude-code-mode.html"].get_text(" ", strip=True)
+        for token in ("CLAUDE_CODE_EXPERIMENTAL_CODE_MODE", "PreToolUse", "tool_input.code", "Ctrl+O", "Programmatic Tool Calling"):
+            self.assertIn(token, txt, f"claude-code-mode.html missing '{token}'")
+
+    def test_94_deleted_claude_skills_and_connectors_pages_absent(self):
+        """Verifies merged legacy pages claude-skills.html and claude-connectors.html do not exist on disk."""
+        for obsolete in ("claude-training/claude-skills.html", "claude-training/claude-connectors.html"):
+            self.assertFalse(os.path.exists(os.path.join(REPO_DIR, obsolete)), f"Obsolete page still exists: {obsolete}")
+
+    # --- 16. Expanded Structured Data & Negative Fault-Injection Tests ---
+
+    def test_95_canonical_author_description_present_in_json_ld(self):
+        """Verifies JSON-LD across home and flagship Claude guides uses the canonical site/author description."""
+        canonical_desc = "Thomas Cherickal - Generative AI Consultant and The Digital Futurist."
+        for rel in (
+            "index.html",
+            "claude-training/claude-plugins.html",
+            "claude-training/claude-apps.html",
+            "claude-training/claude-code-mode.html",
+        ):
+            scripts = self.soups[rel].find_all("script", attrs={"type": "application/ld+json"})
+            blob = " ".join((s.string or s.get_text() or "") for s in scripts)
+            self.assertIn(canonical_desc, blob, f"{rel}: JSON-LD missing canonical author/site description")
+        pricing_blob = " ".join(
+            (s.string or s.get_text() or "")
+            for s in self.soups["pricing.html"].find_all("script", attrs={"type": "application/ld+json"})
+        )
+        self.assertIn("OfferCatalog", pricing_blob, "pricing.html: JSON-LD missing OfferCatalog")
+        self.assertIn("https://thedigitalfuturist.com/#website", pricing_blob)
+
+    def test_96_error_scenario_nested_interactive_anchors_detected(self):
+        """Negative fault-injection: verifies illegal nested <a> inside <a> and <button> inside <a> are caught."""
+        bad_html = '<html><body><a href="/a"><a href="/b">Bad</a><button>Click</button></a></body></html>'
+        soup = BeautifulSoup(bad_html, HTML_PARSER)
+        outer_a = soup.find("a")
+        self.assertIsNotNone(outer_a.find("button") or soup.find("button"))
+
+    def test_97_error_scenario_emoji_and_superscript_citation_detected(self):
+        """Negative fault-injection: verifies Unicode emojis and superscript [1] citations are reliably caught."""
+        bad_html = '<html><body><p>Launch \U0001F680 now<sup><a href="#ref-1">[1]</a></sup></p></body></html>'
+        self.assertIsNotNone(EMOJI_RE.search(bad_html))
+        sup_re = re.compile(r"<sup>\s*(?:<a[^>]*>)?\s*\[\d+\]\s*(?:</a>)?\s*</sup>", re.I)
+        self.assertIsNotNone(sup_re.search(bad_html))
+
+    def test_98_error_scenario_numbered_guide_heading_detected(self):
+        """Negative fault-injection: verifies numbered <h2> headings like '1. Overview' are reliably flagged."""
+        bad_html = '<html><body><h2>1. Architecture Overview</h2><h3>02) Deployment</h3></body></html>'
+        soup = BeautifulSoup(bad_html, HTML_PARSER)
+        numbered = [h.get_text(strip=True) for h in soup.find_all(["h2", "h3"]) if re.match(r"^\d+[\.\)]\s+", h.get_text(strip=True))]
+        self.assertEqual(len(numbered), 2)
+
+    def test_99_error_scenario_corrupted_template_placeholder_detected(self):
+        """Negative fault-injection: verifies unexpanded {{token}} and '$00 upfront' corruptions are caught."""
+        bad_html = '<html><body><p>Pay $00 upfront for {{package_name}}</p></body></html>'
+        token_re = re.compile(r"(\{\{[^}]+\}\}|\{%[^%]+%\}|\$00\s+upfront)")
+        matches = token_re.findall(bad_html)
+        self.assertEqual(len(matches), 2)
+
+    def test_100_error_scenario_positive_tabindex_and_missing_alt_detected(self):
+        """Negative fault-injection: verifies positive tabindex traps and images without alt are reliably caught."""
+        bad_html = '<html><body><button tabindex="3">Trap</button><img src="logo.png"></body></html>'
+        soup = BeautifulSoup(bad_html, HTML_PARSER)
+        self.assertGreater(int(soup.find("button")["tabindex"]), 0)
+        self.assertIsNone(soup.find("img").get("alt"))
+
+    def test_101_back_to_top_button_and_target_on_every_page(self):
+        """Verifies every single HTML page has id='top', a valid <a id='backTop' class='back-top' href='#top'>, and components.js."""
+        failures = []
+        for rel, soup in self.soups.items():
+            if not soup.find(id="top"):
+                failures.append(f"{rel}: missing id='top' target")
+            btns = soup.select("a.back-top, a#backTop")
+            if len(btns) != 1:
+                failures.append(f"{rel}: expected exactly 1 back-to-top button, found {len(btns)}")
+            else:
+                btn = btns[0]
+                if btn.get("href") != "#top":
+                    failures.append(f"{rel}: back-to-top href must be '#top', got {btn.get('href')!r}")
+                if not (btn.get("aria-label") or "").strip():
+                    failures.append(f"{rel}: back-to-top button missing aria-label")
+            if not any("components.js" in (s.get("src") or "") for s in soup.find_all("script", src=True)):
+                failures.append(f"{rel}: missing components.js for back-to-top scroll behavior")
+        with open(os.path.join(REPO_DIR, "components.js"), encoding="utf-8") as f:
+            comp_js = f.read()
+        self.assertIn("initBackToTop", comp_js, "components.js missing initBackToTop()")
+        self.assertEqual(failures, [], "Back-to-top failures:\n" + "\n".join(failures[:20]))
 
 
 if __name__ == "__main__":

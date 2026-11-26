@@ -247,12 +247,12 @@
           <li><a href="../claude-training/claude-101.html">Claude 101</a></li>
           <li><a href="../claude-training/claude-projects.html">Claude Projects</a></li>
           <li><a href="../claude-training/claude-code.html">Claude Code</a></li>
+          <li><a href="../claude-training/claude-code-mode.html">Claude Code Mode</a></li>
           <li><a href="../claude-training/claude-desktop.html">Claude Desktop</a></li>
           <li><a href="../claude-training/claude-office.html">Claude Office</a></li>
-          <li><a href="../claude-training/claude-skills.html">Claude Skills</a></li>
           <li><a href="../claude-training/claude-mcp.html">Claude MCP</a></li>
           <li><a href="../claude-training/claude-plugins.html">Claude Plugins</a></li>
-          <li><a href="../claude-training/claude-connectors.html">Claude Connectors</a></li>
+          <li><a href="../claude-training/claude-apps.html">Claude Apps</a></li>
           <li><a href="../claude-training/claude-orchestration.html">Claude Orchestration</a></li>
           <li><a href="../claude-training/claude-design.html">Claude Design</a></li>
           <li><a href="../claude-training/claude-science.html">Claude for Science</a></li>
@@ -304,8 +304,9 @@
     </ul>
   </nav>
   <!-- END:HEADER -->
+  <a aria-label="Back to top" class="back-top" href="#top" id="backTop" title="Back to top">↑</a>
 
-<main id="main">
+<main class="container single-column-article" id="main">
 <header class="hero content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <div class="hero-badge content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">FRONTIER REASONING</div>
 <h1>Claude Fable: Frontier Long-Horizon Reasoning & Agentic Engineering</h1>
@@ -314,7 +315,7 @@
 <p class="hero-byline">By <strong>Thomas Cherickal</strong> - Generative AI Consultant &amp; The Digital Futurist</p>
 </header>
 
-<article class="article-body" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.25rem;">
+<article class="article-body">
 <div id="table-of-contents" aria-label="Table of contents" class="content-card toc-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <p class="article-p" style="font-size:1.02rem;color:#f1f5f9;">Short chat prompts are easy for almost any language model, but real business breakthroughs happen on long-horizon work: auditing an entire codebase, reconciling fifty legal agreements, or planning a six-month product migration without losing track of earlier constraints. Claude Fable represents Anthropic's frontier push toward adaptive always-on thinking and million-token context coherence - and knowing how to deploy it selectively gives both enterprises and startups an unfair advantage.</p>
 <div class="rule"></div>
@@ -327,6 +328,9 @@
 <li><a class="gold-link" href="#failure-modes-long-horizon">Common Failure Modes in Long-Horizon Work</a></li>
 <li><a class="gold-link" href="#evaluating-frontier-roi">Measuring Real Business ROI from Frontier Reasoning</a></li>
 <li><a class="gold-link" href="#frontier-readiness-checklist">Frontier Readiness Checklist Before Scaling Up</a></li>
+<li><a class="gold-link" href="#fable-mythos-effort-and-code-mode">Claude Fable vs. Claude Mythos, Effort Scaling, Fast Mode, and Code Mode Integration</a></li>
+<li><a class="gold-link" href="#frontier-deployment-modes-matrix">Comparing Deployment Profiles: Claude Fable, Fast Mode, Claude Mythos, and Fast-Tier Routing</a></li>
+<li><a class="gold-link" href="#claude-fable-faq">Practical Questions on Deploying Claude Fable Safely</a></li>
 <li><a class="gold-link" href="#references">Authoritative References</a></li>
 </ol>
 </div>
@@ -336,7 +340,7 @@
 
 <p class="article-p">Earlier reasoning models forced developers to guess how much thinking time a prompt needed. Set the thinking budget too low and the model rushed through a complex proof; set it too high and simple questions crawled. Adaptive always-on thinking solves this by letting the model dynamically scale its internal reasoning depth based on the difficulty of the problem in front of it, building on Anthropic's <a class="gold-link" href="#references">extended thinking architecture</a>.</p>
 <p class="article-p">Equally important is million-token context coherence. Simply accepting a huge input window is not enough if the model forgets a critical clause buried on page 340. Frontier long-horizon models maintain high recall and cross-document reasoning across entire repositories, regulatory filings, and multi-day research logs, allowing teams to ask synthesis questions that previously required a room full of analysts.</p>
-<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.25rem;margin:1.5rem 0;"><div class="mermaid">
+<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.5rem;margin:1.75rem 0;"><div class="mermaid">
 flowchart TD
     I["Complex Long-Horizon Problem
 (Full Repo / Legal Corpus / Spec)"] --> C["Million-Token Context Loader
@@ -405,7 +409,7 @@ with Prompt Caching"]
 <li><strong>SMB / Growth Team Budget Profile:</strong> Assign per-project API keys with hard monthly spend alerts, enforce prompt caching on shared knowledge bases (cutting repeated input costs by up to 90 percent), and batch non-urgent overnight audits using the Message Batches API for a 50 percent discount.</li>
 <li><strong>Enterprise Department Profile:</strong> Implement a central gateway that tracks cost-per-ticket and cost-per-audit, caps maximum thinking tokens per request, and compares frontier reasoning spend directly against saved engineering or legal review hours.</li>
 </ul>
-<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.25rem;margin:1.5rem 0;"><div class="mermaid">
+<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.5rem;margin:1.75rem 0;"><div class="mermaid">
 graph TD
     R["Incoming Analytical Task"] --> B{"Requires Long-Horizon
 Frontier Reasoning?"}
@@ -471,12 +475,112 @@ Frontier Reasoning?"}
 </section>
 
 <section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="fable-mythos-effort-and-code-mode">Claude Fable vs. Claude Mythos, Effort Scaling, Fast Mode, and Code Mode Integration</h2>
+<p class="article-p">Anthropic's frontier model architecture introduces clear deployment controls designed for production engineering, scientific research, and enterprise governance. Rather than forcing every organization onto a single rigid runtime, teams tune safeguards, reasoning depth, output speed, and tool execution to fit each workload:</p>
+<ul class="article-p" style="list-style-type:disc;padding-left:1.5rem;display:flex;flex-direction:column;gap:0.55rem;">
+<li><strong>Dual-Track Safeguard Deployment (Claude Fable and Claude Mythos):</strong> Claude Fable and Claude Mythos share the same underlying frontier reasoning architecture but are separated by deployment safeguards and access pathways. <strong>Claude Fable</strong> serves general availability across Pro, Team, Enterprise, and API deployments for complex software engineering, multi-repository migrations, and long-horizon synthesis. <strong>Claude Mythos</strong> provides specialized pathways for vetted high-risk dual-use domains - including defensive cybersecurity and life sciences R&amp;D - strictly gated through Anthropic's Cyber and Life Sciences Verification Programs.</li>
+<li><strong>Configurable Reasoning Effort Levels:</strong> Alongside adaptive extended thinking, engineering teams calibrate reasoning intensity across explicit effort tiers (<strong>Medium</strong>, <strong>High</strong>, and <strong>Xhigh</strong>). Routine architectural drafts run efficiently at Medium effort, while multi-module migrations, subtle race-condition debugging, and formal verification step up to High or Xhigh effort.</li>
+<li><strong>Optional Fast Mode for Latency-Sensitive Sessions:</strong> When live interactive responsiveness matters more than raw token cost - such as production incident triage or pair-architecting in the terminal - optional <strong>Fast Mode</strong> delivers up to 2.5x faster output token generation at a 2x per-token rate multiplier compared to standard throughput.</li>
+<li><strong>Programmatic Tool Orchestration with Claude Code Mode:</strong> On large-repository audits and autonomous multi-agent loops, pairing Claude Fable with experimental <a class="gold-link" href="claude-code-mode.html">Claude Code Mode</a> lets the model author sandboxed JavaScript blocks that parallelize searches, test runs, and MCP queries locally. Filtering raw output inside the local sandbox keeps noisy intermediate dumps out of the million-token context window while reducing multi-step round-trip latency.</li>
+</ul>
+<div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid #38bdf8;border-radius:10px;margin:1.5rem 0;overflow:hidden;"><div style="background:#0b1220;padding:0.5rem 1rem;border-bottom:1px solid rgba(56,189,248,0.22);display:flex;justify-content:space-between;align-items:center;font-size:0.8rem;color:#94a3b8;"><span style="color:#fbbf24;font-weight:600;">Enterprise Frontier Routing, Effort &amp; Fast Mode Policy</span><span>JSON</span></div><pre style="background:#040711;margin:0;padding:1.1rem 1.25rem;overflow-x:auto;color:#e2e8f0;font-size:0.86rem;line-height:1.55;"><code>{
+  &quot;routing_policy&quot;: &quot;frontier-engineering-v1&quot;,
+  &quot;profiles&quot;: {
+    &quot;incident_triage&quot;: {
+      &quot;tier&quot;: &quot;fable&quot;,
+      &quot;reasoning_effort&quot;: &quot;high&quot;,
+      &quot;fast_mode&quot;: true,
+      &quot;prompt_caching&quot;: true
+    },
+    &quot;multi_repo_migration&quot;: {
+      &quot;tier&quot;: &quot;fable&quot;,
+      &quot;reasoning_effort&quot;: &quot;xhigh&quot;,
+      &quot;fast_mode&quot;: false,
+      &quot;code_mode_enabled&quot;: true,
+      &quot;require_pretooluse_audit_hook&quot;: true
+    },
+    &quot;nightly_compliance_audit&quot;: {
+      &quot;tier&quot;: &quot;fable&quot;,
+      &quot;reasoning_effort&quot;: &quot;medium&quot;,
+      &quot;use_message_batches_api&quot;: true
+    }
+  }
+}</code></pre></div>
+</section>
+
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="frontier-deployment-modes-matrix">Comparing Deployment Profiles: Claude Fable, Fast Mode, Claude Mythos, and Fast-Tier Routing</h2>
+<p class="article-p">Match each workload to the appropriate safeguard track, speed mode, and model tier so frontier reasoning budget delivers maximum impact:</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.9rem;color:#e2e8f0;">
+<thead>
+<tr style="border-bottom:2px solid rgba(251,191,36,0.45);text-align:left;color:var(--gold);">
+<th style="padding:0.75rem;">Dimension</th>
+<th style="padding:0.75rem;">Claude Fable (Standard)</th>
+<th style="padding:0.75rem;">Claude Fable (Fast Mode)</th>
+<th style="padding:0.75rem;">Claude Mythos (Vetted)</th>
+<th style="padding:0.75rem;">Claude Sonnet / Claude Haiku</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Access &amp; Safeguards</td>
+<td style="padding:0.75rem;">General availability (Pro, Team, Enterprise, API) with standard safety filters</td>
+<td style="padding:0.75rem;">Opt-in API and enterprise throughput mode with standard safety filters</td>
+<td style="padding:0.75rem;">Restricted to vetted Cyber and Life Sciences Verification Programs</td>
+<td style="padding:0.75rem;">Broad general availability across all plans and cloud gateways</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Throughput Profile</td>
+<td style="padding:0.75rem;">Standard frontier generation speed</td>
+<td style="padding:0.75rem;">Up to 2.5x faster output token generation</td>
+<td style="padding:0.75rem;">Standard or Fast Mode for authorized research workflows</td>
+<td style="padding:0.75rem;">High-throughput, low-latency workhorse execution</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Reasoning Controls</td>
+<td style="padding:0.75rem;">Adaptive thinking + Medium / High / Xhigh effort</td>
+<td style="padding:0.75rem;">Adaptive thinking + configurable effort at accelerated speed</td>
+<td style="padding:0.75rem;">Full frontier adaptive thinking and effort scaling</td>
+<td style="padding:0.75rem;">Lightweight or bounded reasoning for routine subtasks</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Cost Optimization Lever</td>
+<td style="padding:0.75rem;">Prompt caching (up to 90% input savings) + Message Batches API (50% off)</td>
+<td style="padding:0.75rem;">Reserve selectively for live sessions (2x base token rate)</td>
+<td style="padding:0.75rem;">Scoped strictly to verified defensive or scientific workloads</td>
+<td style="padding:0.75rem;">Handles 75%-85% of routine coding, extraction, and triage</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Primary Role</td>
+<td style="padding:0.75rem;">Architecture plans, multi-repo audits, subagent orchestration</td>
+<td style="padding:0.75rem;">Live incident triage and interactive terminal engineering</td>
+<td style="padding:0.75rem;">Authorized vulnerability defense and biomedical research</td>
+<td style="padding:0.75rem;">Parallel subtask execution delegated by frontier plans</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="claude-fable-faq">Practical Questions on Deploying Claude Fable Safely</h2>
+<p class="article-p"><strong>How does Claude Fable differ from Claude Mythos?</strong> Both run on the same underlying frontier architecture. Claude Fable is generally available with standard safety safeguards for software engineering, research, and enterprise reasoning, whereas Claude Mythos restricts specialized dual-use cybersecurity and life sciences workflows to organizations approved through Anthropic's verification programs.</p>
+<p class="article-p"><strong>When should engineering teams enable Fast Mode or Xhigh effort?</strong> Keep most planning runs on Medium or High effort at standard throughput, and route overnight audits through the Message Batches API. Reserve Xhigh effort for high-stakes root-cause debugging or formal design verification, and reserve Fast Mode for live interactive engineering where rapid turnaround justifies a 2x per-token rate.</p>
+<p class="article-p"><strong>Why pair Claude Fable with Claude Code Mode on large repositories?</strong> Without <a class="gold-link" href="claude-code-mode.html">Claude Code Mode</a>, verbose grep matches, build logs, and raw MCP payloads flood the prompt history across dozens of turns. Executing parallel tool chains inside a local JavaScript sandbox keeps raw noise out of context so Claude Fable preserves its million-token coherence for architectural synthesis and verification.</p>
+</section>
+
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <h2 id="references">Authoritative References</h2>
 <ol class="references-list" style="display:flex;flex-direction:column;gap:0.75rem;padding-left:1.25rem;">
-<li><a class="gold-link" href="https://docs.anthropic.com/en/docs/build-with-claude/extended-thinking" rel="noopener noreferrer" target="_blank">Anthropic Extended Thinking Documentation</a> - How Claude allocates internal reasoning tokens for complex multi-step problems.</li>
+<li><a class="gold-link" href="https://docs.anthropic.com/en/docs/build-with-claude/extended-thinking" rel="noopener noreferrer" target="_blank">Anthropic Extended Thinking Documentation</a> - How Claude allocates adaptive internal reasoning tokens and effort levels for complex multi-step problems.</li>
 <li><a class="gold-link" href="https://www.anthropic.com/research" rel="noopener noreferrer" target="_blank">Anthropic Research Publications</a> - Primary research on long-context recall, agentic engineering, and frontier model evaluations.</li>
+<li><a class="gold-link" href="https://www.anthropic.com/safety" rel="noopener noreferrer" target="_blank">Anthropic Safety &amp; Responsible Scaling</a> - Safeguard frameworks, dual-use verification programs, and frontier governance standards.</li>
+<li><a class="gold-link" href="https://docs.anthropic.com/en/docs/about-claude/pricing" rel="noopener noreferrer" target="_blank">Anthropic API Pricing &amp; Throughput Tiers</a> - Current per-token rates, prompt caching discounts, batch pricing, and throughput options.</li>
 <li><a class="gold-link" href="https://docs.anthropic.com/en/docs/build-with-claude/batch-processing" rel="noopener noreferrer" target="_blank">Anthropic Message Batches API</a> - Asynchronous batch processing guide for cutting non-urgent API costs by 50 percent.</li>
 <li><a class="gold-link" href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching" rel="noopener noreferrer" target="_blank">Anthropic Prompt Caching Guide</a> - Best practices for caching large static corpora across repeated long-horizon queries.</li>
+<li><a class="gold-link" href="claude-code-mode.html">Claude Code Mode: Programmatic Tool Orchestration</a> - Pairing frontier Claude models with sandboxed JavaScript tool orchestration to eliminate context pollution.</li>
+<li><a class="gold-link" href="claude-orchestration.html">Claude Multi-Agent Swarm Orchestration</a> - Delegating bounded subtasks from frontier planners to fast-tier worker agents.</li>
 </ol>
 </section>
 </article>

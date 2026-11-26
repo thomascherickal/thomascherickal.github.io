@@ -17,8 +17,10 @@ Starting a fresh chat every morning and re-uploading the same client brief, styl
 5. Step-by-Step: Onboarding a Team onto Shared Claude Projects
 6. Common Claude Projects Pitfalls and How to Fix Them
 7. Practical Habits That Multiply Claude Projects Value
-8. Frequently Asked Questions on Claude Projects
-9. Authoritative References
+8. Automatic RAG Scaling, Project Memory, and Live Connectors
+9. Static Project Uploads vs. Automatic RAG vs. Live Connectors
+10. Frequently Asked Questions on Claude Projects
+11. Authoritative References
 
 ---
 

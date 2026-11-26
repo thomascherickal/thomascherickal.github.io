@@ -17,8 +17,10 @@ Before the Model Context Protocol, connecting an AI assistant to five internal t
 5. Designing MCP Tools That Claude Calls Accurately
 6. Production Deployment Checklist for Team MCP Servers
 7. High-Value Custom MCP Server Ideas for Engineering and Operations
-8. Practical Questions When Adopting MCP
-9. Authoritative References
+8. Modern MCP Specification: Stateless Streamable HTTP, OAuth 2.1, Elicitation, Tasks & Registry
+9. MCP Transport, Authorization, and Extension Specification Matrix
+10. Practical Questions When Adopting MCP
+11. Authoritative References
 
 ---
 

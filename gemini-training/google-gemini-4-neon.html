@@ -248,12 +248,12 @@
           <li><a href="../claude-training/claude-101.html">Claude 101</a></li>
           <li><a href="../claude-training/claude-projects.html">Claude Projects</a></li>
           <li><a href="../claude-training/claude-code.html">Claude Code</a></li>
+          <li><a href="../claude-training/claude-code-mode.html">Claude Code Mode</a></li>
           <li><a href="../claude-training/claude-desktop.html">Claude Desktop</a></li>
           <li><a href="../claude-training/claude-office.html">Claude Office</a></li>
-          <li><a href="../claude-training/claude-skills.html">Claude Skills</a></li>
           <li><a href="../claude-training/claude-mcp.html">Claude MCP</a></li>
           <li><a href="../claude-training/claude-plugins.html">Claude Plugins</a></li>
-          <li><a href="../claude-training/claude-connectors.html">Claude Connectors</a></li>
+          <li><a href="../claude-training/claude-apps.html">Claude Apps</a></li>
           <li><a href="../claude-training/claude-orchestration.html">Claude Orchestration</a></li>
           <li><a href="../claude-training/claude-design.html">Claude Design</a></li>
           <li><a href="../claude-training/claude-science.html">Claude for Science</a></li>
@@ -305,6 +305,7 @@
     </ul>
   </nav>
   <!-- END:HEADER -->
+  <a aria-label="Back to top" class="back-top" href="#top" id="backTop" title="Back to top">↑</a>
 
 <main class="container single-column-article" id="main">
 <header class="hero content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);text-align:left;display:flex;flex-direction:column;gap:1.25rem;padding:2rem 2.25rem;margin-top:110px;margin-bottom:2rem;">
@@ -323,7 +324,10 @@
 <a class="toc-link gold-link" href="#agentic-assistants">4. Running 24/7 Agentic Assistants and Enterprise Connectors</a>
 <a class="toc-link gold-link" href="#python-integration">5. Building With Gemini Neon in Python</a>
 <a class="toc-link gold-link" href="#real-world-scenarios">6. Real-World Scenarios and Production Rollout Playbook</a>
-<a class="toc-link gold-link" href="#references">7. References</a>
+<a class="toc-link gold-link" href="#interactions-api-and-governance">7. Interactions API, Long Decode, Context Compaction, and Security Governance</a>
+<a class="toc-link gold-link" href="#neon-workload-matrix">8. Gemini Neon vs. Adjacent Gemini Tiers: Architectural Selection Matrix</a>
+<a class="toc-link gold-link" href="#neon-faq">9. Practical Questions When Deploying Gemini Neon</a>
+<a class="toc-link gold-link" href="#references">10. References</a>
 </div>
 </article>
 
@@ -440,14 +444,123 @@ audit_log_path: ./logs/neon-ops-audit.jsonl</code></pre>
 <p>To roll out a 24/7 Neon assistant safely, follow a four-step graduation path. Start in <strong>shadow mode</strong> for one week, where the agent reads real events and writes its proposed actions to a private log without touching production systems. Second, review twenty logged runs with domain experts to tighten system instructions and fix edge cases. Third, enable <strong>draft-and-approve mode</strong> where Neon opens pull requests or prepares ticket replies for one-click human confirmation. Fourth, promote only the most deterministic, schema-validated read and tagging actions to full hands-free execution while keeping destructive or customer-facing write actions behind explicit approval gates.</p>
 </article>
 
+<article class="content-card" id="interactions-api-and-governance" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2>Interactions API, Long Decode, Context Compaction, and Security Governance</h2>
+<p>For production engineering teams running persistent coding agents and 24/7 operational assistants, the <a class="gold-link" href="#references">Gemini Interactions API</a> (<code>client.interactions.create</code> in <code>google-genai</code>) is the cleanest integration boundary for Gemini Neon. Instead of manually re-serializing multi-turn message arrays and tool outputs on every turn, teams chain stateful workflows through <code>previous_interaction_id</code>, delegate multi-minute audits with <code>background=True</code>, and enforce structured payloads through the unified top-level <code>response_format</code> object.</p>
+<ul style="padding-left:1.5rem;color:var(--text-secondary);line-height:1.8;margin-bottom:1.25rem;">
+<li><strong>Unified 1,048,576-Token Window and Long Decode:</strong> Input, thinking, and output tokens share one 1M-token budget. Synchronous calls default to a 65,536-token output limit, while <code>background=True</code> long decode runs past 64K up to 1,048,576 tokens across automatic server-managed continuation hops as specified in the <a class="gold-link" href="#references">Gemini Long Decode documentation</a>.</li>
+<li><strong>Context Compaction and Implicit Caching:</strong> Across extended tool-calling sessions, Gemini Neon reduces redundant file reads, preserves plan fidelity through context compaction, and automatically captures up to 95 percent implicit caching discounts on repeated prefix tokens during multi-hop runs. Always base compaction thresholds on active window size (<code>initial_input_tokens</code> plus <code>total_output_tokens</code> and <code>total_thought_tokens</code>) rather than multi-hop summed <code>total_input_tokens</code>.</li>
+<li><strong>Four Thinking Levels Without Model Switching:</strong> Gemini Neon defaults to <code>high</code> and supports <code>low</code>, <code>medium</code>, <code>high</code>, and <code>xhigh</code> via <code>generation_config</code>. Reserve <code>xhigh</code> for hard multi-step debugging, formal quantitative synthesis, or security root-cause analysis where <code>high</code> falls short; avoid <code>xhigh</code> on simple formatting tasks where overthinking increases latency and token burn.</li>
+<li><strong>Security Hardening and Operational Governance:</strong> Gemini Neon lowers insecure code generation rates, strengthens root-cause vulnerability patching, and reduces both agentic overreach and task shortcuts. Authorized security defenders can access specialized cyberdefense workflows through <a class="gold-link" href="#references">Google DeepMind's Fairwind Program</a>. In enterprise pipelines, pair Neon with fail-closed policy hooks, read/write tool segregation, and JSONL audit logging for every state-changing call.</li>
+</ul>
+<div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid var(--cyan);border-radius:10px;margin:1.5rem 0;overflow:hidden;">
+<div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.55rem 1rem;background:rgba(255,255,255,0.04);border-bottom:1px solid rgba(255,255,255,0.08);">
+<span style="font-family:var(--font-mono);font-size:0.8rem;color:var(--cyan);">neon_interactions_background.py</span>
+<button class="copy-btn" onclick="copyCode(this)" style="text-decoration:none !important;" type="button">Copy</button>
+</div>
+<pre style="white-space:pre-wrap;word-break:break-word;overflow-x:hidden;padding:1rem;margin:0;color:#e2e8f0;font-size:0.88rem;"><code>from google import genai
+
+client = genai.Client()
+
+audit_schema = {
+    "type": "object",
+    "properties": {
+        "root_cause": {"type": "string"},
+        "affected_files": {"type": "array", "items": {"type": "string"}},
+        "patch_plan": {"type": "array", "items": {"type": "string"}},
+        "requires_human_approval": {"type": "boolean"},
+    },
+    "required": ["root_cause", "affected_files", "patch_plan", "requires_human_approval"],
+}
+
+# Start a deep background architecture and security audit on Gemini Neon
+job = client.interactions.create(
+    model="gemini-4-neon",
+    input="Audit the checkout lock manager for race conditions and propose a minimal tested patch.",
+    background=True,
+    generation_config={"thinking_level": "xhigh"},
+    response_format={
+        "type": "text",
+        "mime_type": "application/json",
+        "schema": audit_schema,
+    },
+)
+
+print("Started background interaction:", job.id)
+# After polling job status to completion, chain follow-up steps cleanly:
+# followup = client.interactions.create(
+#     model="gemini-4-neon",
+#     previous_interaction_id=job.id,
+#     input="Generate the regression test cases covering each lock edge case.",
+# )</code></pre>
+</div>
+<p>Note that chaining a follow-up request via <code>previous_interaction_id</code> requires the parent background interaction to finish first - polling until completion prevents race errors in automated orchestration loops.</p>
+</article>
+
+<article class="content-card" id="neon-workload-matrix" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2>Gemini Neon vs. Adjacent Gemini Tiers: Architectural Selection Matrix</h2>
+<p>Position Gemini Neon deliberately alongside <a class="gold-link" href="google-gemini-4-hydrogen.html">Gemini Hydrogen</a> and deeper reasoning tiers like <a class="gold-link" href="google-gemini-4-carbon.html">Gemini Carbon</a> so every workload matches its latency, depth, and governance profile:</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.9rem;color:#e2e8f0;">
+<thead>
+<tr style="border-bottom:2px solid rgba(251,191,36,0.45);text-align:left;color:var(--gold);">
+<th style="padding:0.75rem;">Dimension</th>
+<th style="padding:0.75rem;">Gemini Hydrogen</th>
+<th style="padding:0.75rem;">Gemini Neon</th>
+<th style="padding:0.75rem;">Gemini Argon &amp; Gemini Carbon</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Thinking Levels</td>
+<td style="padding:0.75rem;"><code>low</code>, <code>medium</code>, <code>high</code> (default), <code>xhigh</code></td>
+<td style="padding:0.75rem;"><code>low</code>, <code>medium</code>, <code>high</code> (default), <code>xhigh</code></td>
+<td style="padding:0.75rem;"><code>medium</code> (default), <code>high</code> (max depth)</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Context &amp; Decode</td>
+<td style="padding:0.75rem;">1M unified window; 64K sync cap / 1M long decode</td>
+<td style="padding:0.75rem;">1M unified window; 64K sync cap / 1M long decode</td>
+<td style="padding:0.75rem;">1M unified window; long decode for deep research and synthesis</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Primary Role</td>
+<td style="padding:0.75rem;">Parallel subagent swarms, high-volume triage, live streaming, default Managed Agent worker</td>
+<td style="padding:0.75rem;">Production lead for multi-file coding, 24/7 assistants, finance/legal/science synthesis, security patching</td>
+<td style="padding:0.75rem;">Hardest long-horizon architecture, specialized security defense, deep frontier research</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Multi-Model Pattern</td>
+<td style="padding:0.75rem;">Fast fan-out workers and first-pass extractors</td>
+<td style="padding:0.75rem;">Primary coordinator orchestrating Hydrogen workers and validating final deliverables</td>
+<td style="padding:0.75rem;">Targeted escalation lane for rare high-stakes verification and deep architectural proofs</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+
+<article class="content-card" id="neon-faq" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2>Practical Questions When Deploying Gemini Neon</h2>
+<p><strong>When should we escalate Gemini Neon from <code>high</code> (default) to <code>xhigh</code> thinking?</strong> Keep <code>high</code> as your default for day-to-day PR reviews, repository refactors, and document synthesis. Switch selectively to <code>xhigh</code> on tasks where <code>high</code> misses subtle invariants - such as distributed lock debugging, complex quantitative modeling, or root-cause vulnerability verification - and always pair <code>xhigh</code> with generous output budgets.</p>
+<p><strong>Why use <code>background=True</code> on the Interactions API for 24/7 Neon agents?</strong> Deep repository audits and multi-step tool chains can run past standard HTTP timeout windows or exceed the 65,536-token synchronous output cap. Background execution lets Neon complete long-decode reasoning asynchronously without dropped connections while your orchestrator polls cleanly for completion.</p>
+<p><strong>How does Gemini Neon pair with Gemini Hydrogen inside Managed Agents?</strong> In environments like the Antigravity agent, Gemini Neon acts as the high-judgment coordinator - decomposing engineering goals, validating diffs, and enforcing policy boundaries - while <a class="gold-link" href="google-gemini-4-hydrogen.html">Gemini Hydrogen</a> handles rapid parallel file inspection, search fan-out, and high-volume extraction.</p>
+<p><strong>What governance guardrails are mandatory before enabling write tools on a 24/7 Neon assistant?</strong> Graduate every assistant through shadow logging, draft-and-approve review, and strict read/write tool separation. Require schema validation on every tool payload, fail-closed policy hooks before destructive shell or API mutations, and immutable JSONL audit trails recording inputs, tool calls, and human approvals.</p>
+</article>
+
 <article class="content-card" id="references" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <h2>References</h2>
 <p>Official documentation, research papers, and developer guides referenced in this article:</p>
 <ul style="display:flex;flex-direction:column;gap:0.65rem;padding-left:1.25rem;margin-top:1rem;">
 <li><a class="gold-link" href="https://deepmind.google/models/gemini/" rel="noopener noreferrer" target="_blank">Google DeepMind - Gemini Model Family</a> - Official overview of Gemini capabilities, multimodal context, and reasoning tiers.</li>
 <li><a class="gold-link" href="https://blog.google/technology/google-deepmind/" rel="noopener noreferrer" target="_blank">Google DeepMind Blog</a> - Official announcements, research updates, and release notes for Gemini models.</li>
-<li><a class="gold-link" href="https://ai.google.dev/gemini-api/docs" rel="noopener noreferrer" target="_blank">Google Gemini API Documentation</a> - Guides for thinking levels, context caching, tool calling, and the google-genai SDK.</li>
+<li><a class="gold-link" href="https://ai.google.dev/gemini-api/docs" rel="noopener noreferrer" target="_blank">Google Gemini API Documentation</a> - Guides for the Interactions API, context caching, tool calling, and the <code>google-genai</code> SDK.</li>
+<li><a class="gold-link" href="https://ai.google.dev/gemini-api/docs/thinking" rel="noopener noreferrer" target="_blank">Gemini API Thinking Guide</a> - Official specification of <code>low</code>, <code>medium</code>, <code>high</code>, and <code>xhigh</code> thinking levels on Gemini Neon.</li>
+<li><a class="gold-link" href="https://ai.google.dev/gemini-api/docs/long-decode" rel="noopener noreferrer" target="_blank">Gemini API Long Decode Guide</a> - Unified 1M-token context budgeting, background continuation hops, and implicit caching telemetry.</li>
+<li><a class="gold-link" href="https://deepmind.google/fairwind-program/" rel="noopener noreferrer" target="_blank">Google DeepMind Fairwind Program</a> - Authorized cyberdefense program providing access to defensive security capabilities.</li>
 <li><a class="gold-link" href="https://github.com/google-gemini/cookbook" rel="noopener noreferrer" target="_blank">Google Gemini Cookbook</a> - Practical Python examples for coding agents, multi-step workflows, and structured outputs.</li>
+<li><a class="gold-link" href="google-gemini-4-hydrogen.html">Gemini Hydrogen Engineering Guide</a> - Pairing fast parallel Hydrogen workers with a Gemini Neon lead coordinator.</li>
+<li><a class="gold-link" href="google-gemini-4-carbon.html">Gemini Carbon Engineering Guide</a> - Escalating ultra-complex long-horizon architecture beyond Gemini Neon.</li>
 </ul>
 </article>
 

@@ -115,11 +115,97 @@ Teams new to Deep Research often ask how long a run takes and how to handle broa
 
 ---
 
+## Interactions API Background Execution, Collaborative Planning, and MCP Grounding
+
+Beyond the interactive Gemini web workspace, engineering teams can embed autonomous research directly into internal portals, diligence pipelines, and scheduled analyst workflows using the Gemini Interactions API. Because Deep Research runs multi-step search, reading, and synthesis loops that span several minutes, the Interactions API executes the agent asynchronously with background=True rather than holding open a single synchronous HTTP request.
+
+Developers can choose between two specialized agent profiles documented in the Gemini Deep Research Agent guide: deep-research-preview-04-2026 for fast, efficient research that streams intermediate progress cleanly to a user interface, and deep-research-max-preview-04-2026 for maximum breadth and depth on exhaustive competitive, legal, or scientific synthesis.
+
+The agent_config dictionary exposes fine-grained orchestration controls for production teams:
+
+- Collaborative Planning (collaborative_planning: True): Pauses after drafting the multi-step research plan so a human reviewer or upstream workflow can approve or amend the plan before search execution begins.
+- Thinking Summaries (thinking_summaries: "auto"): Emits concise progress summaries during streaming or polling so applications can show users which sources and hypotheses the agent is evaluating in real time.
+- Visualizations (visualization: "auto"): Enables the agent to generate supporting charts and visual summaries alongside cited narrative tables.
+- Blended Enterprise Grounding (file_search and mcp_server): Combines live Google Search with persistent embeddings in Gemini File Search stores and authenticated remote Model Context Protocol (MCP) servers - with optional allowed_tools allowlisting - so the agent cross-references private company records, deployment trackers, or BigQuery datasets against public web findings.
+- Stateful Follow-Up Analysis (previous_interaction_id): Once the background report completes, your application can pass the finished interaction ID to Gemini Argon or Gemini Carbon to drill into specific sections, reformat tables, or extract JSON without re-running the research loop.
+
+#### `deep_research_interactions.py`
+```python
+import os
+import time
+from google import genai
+
+client = genai.Client()
+
+# Launch autonomous Deep Research asynchronously with web + private File Search + MCP grounding
+job = client.interactions.create(
+    agent="deep-research-preview-04-2026",
+    input=(
+        "Compare our internal Q3 infrastructure roadmap against public cloud GPU pricing "
+        "and open-source inference serving releases from the past 12 months. "
+        "Return an executive recommendation, a cited comparison table, and migration risks."
+    ),
+    agent_config={
+        "type": "deep-research",
+        "thinking_summaries": "auto",
+        "visualization": "auto",
+        "collaborative_planning": False,
+    },
+    tools=[
+        {"type": "google_search"},
+        {
+            "type": "file_search",
+            "file_search_store_names": ["filesearchstores/q3-infra-roadmap"],
+        },
+        {
+            "type": "mcp_server",
+            "name": "Internal Architecture Registry",
+            "url": "https://mcp.internal.example.com/mcp",
+            "headers": {"Authorization": f"Bearer {os.environ['MCP_TOKEN']}"},
+            "allowed_tools": ["list_service_slas", "get_cluster_utilization"],
+        },
+    ],
+    background=True,
+)
+
+print(f"Started background research job: {job.id}")
+
+while True:
+    current = client.interactions.get(id=job.id)
+    if current.status == "completed":
+        print(current.output_text)
+        break
+    if current.status in ("failed", "cancelled"):
+        raise RuntimeError(f"Deep Research stopped with status: {current.status}")
+    time.sleep(10)
+
+# Ask a targeted follow-up against the completed report without restarting search
+followup = client.interactions.create(
+    model="gemini-4-carbon",
+    previous_interaction_id=current.id,
+    input="Distill the top three budget risks from the report into a 5-bullet CFO memo.",
+)
+print(followup.output_text)
+```
+
+---
+
+## Comparing Grounded Search, Deep Research, and Deep Research Max
+
+Selecting the right research execution mode prevents both wasted latency on simple factual lookups and shallow answers on strategic investigations. Use the specification matrix below to match each research pattern to your latency budget and evidence bar:
+
+When exporting completed reports from the Gemini Workspace UI to Google Docs or Canvas, pair the document archive with a reproducible prompt brief in Git so your team can re-run the identical research query quarterly and track verified deltas over time.
+
+---
+
 ## References
 
 Official documentation, research papers, and developer guides referenced in this article:
 
 - Google Blog - Gemini Deep Research - Official product announcements and feature guides for Google Deep Research.
+- Gemini Deep Research Agent API Guide - Official documentation for background execution, collaborative planning, visualizations, File Search, and MCP servers.
+- Gemini Interactions API Overview - Unified stateful API for long-running background agents and previous_interaction_id follow-ups.
+- Gemini API File Search Documentation - Guide to persistent document embedding stores for private corpus grounding.
 - Gemini API Grounding with Google Search - Developer documentation for programmatic web grounding and citation metadata.
 - Google Workspace Gemini Resources - Enterprise guides for combining Gemini research with Google Docs and Drive.
 - Google DeepMind Research - Foundational research on long-context synthesis and multi-step reasoning.

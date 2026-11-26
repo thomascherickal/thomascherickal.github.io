@@ -252,12 +252,12 @@
           <li><a href="../claude-training/claude-101.html">Claude 101</a></li>
           <li><a href="../claude-training/claude-projects.html">Claude Projects</a></li>
           <li><a href="../claude-training/claude-code.html">Claude Code</a></li>
+          <li><a href="../claude-training/claude-code-mode.html">Claude Code Mode</a></li>
           <li><a href="../claude-training/claude-desktop.html">Claude Desktop</a></li>
           <li><a href="../claude-training/claude-office.html">Claude Office</a></li>
-          <li><a href="../claude-training/claude-skills.html">Claude Skills</a></li>
           <li><a href="../claude-training/claude-mcp.html">Claude MCP</a></li>
           <li><a href="../claude-training/claude-plugins.html">Claude Plugins</a></li>
-          <li><a href="../claude-training/claude-connectors.html">Claude Connectors</a></li>
+          <li><a href="../claude-training/claude-apps.html">Claude Apps</a></li>
           <li><a href="../claude-training/claude-orchestration.html">Claude Orchestration</a></li>
           <li><a href="../claude-training/claude-design.html">Claude Design</a></li>
           <li><a href="../claude-training/claude-science.html">Claude for Science</a></li>
@@ -309,8 +309,9 @@
     </ul>
   </nav>
   <!-- END:HEADER -->
+  <a aria-label="Back to top" class="back-top" href="#top" id="backTop" title="Back to top">↑</a>
 
-<main id="main">
+<main class="container single-column-article" id="main">
 <header class="hero content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <div class="hero-badge content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">MULTI-AGENT SWARMS</div>
 <h1>Claude Multi-Agent Swarm Orchestration</h1>
@@ -319,7 +320,7 @@
 <p class="hero-byline">By <strong>Thomas Cherickal</strong> - Generative AI Consultant &amp; The Digital Futurist</p>
 </header>
 
-<article class="article-body" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.25rem;">
+<article class="article-body">
 <div id="table-of-contents" aria-label="Table of contents" class="content-card toc-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <p class="article-p" style="font-size:1.02rem;color:#f1f5f9;">A single agent trying to research ten files, write three modules, update documentation, and verify security rules all in one giant conversation quickly loses focus. Multi-agent orchestration solves this by splitting complex work into small, independent roles - a coordinator plans and tracks progress while focused worker agents execute in parallel and pass results through strict verification gates.</p>
 <div class="rule"></div>
@@ -332,6 +333,8 @@
 <li><a class="gold-link" href="#step-by-step-swarm-design">Step-by-Step Guide to Designing Your First Multi-Agent Swarm</a></li>
 <li><a class="gold-link" href="#observability-and-human-control">Observability, Cost Caps, and Human-in-the-Loop Checkpoints</a></li>
 <li><a class="gold-link" href="#when-not-to-use-swarms">When to Keep It Simple Versus Scaling to a Swarm</a></li>
+<li><a class="gold-link" href="#agent-sdk-teams-and-code-mode">Claude Agent SDK, Agent Teams, Handoffs, and Programmatic Tool Calling</a></li>
+<li><a class="gold-link" href="#orchestration-topology-matrix">Orchestration Topologies: Single Agent vs Subagents vs Agent Teams vs Programmatic Tool Calling</a></li>
 <li><a class="gold-link" href="#swarm-faq">Practical Questions on Multi-Agent Orchestration</a></li>
 <li><a class="gold-link" href="#references">Authoritative References</a></li>
 </ol>
@@ -342,7 +345,7 @@
 
 <p class="article-p">The most reliable multi-agent pattern in production is the coordinator-worker topology, highlighted in Anthropic's research on <a class="gold-link" href="#references">multi-agent research systems</a>. Instead of letting five agents chat freely in an unstructured group thread, you assign one Coordinator to own the overall goal, decompose it into clean, non-overlapping subtasks, dispatch those subtasks to parallel Workers, and synthesize the verified outputs.</p>
 <p class="article-p">Parallel execution delivers two huge advantages: speed and clean context. If you need to audit 18 microservices or summarize 12 market reports, spinning up four parallel workers finishes in a quarter of the time, and each worker operates with a fresh, uncluttered context window dedicated strictly to its own slice of work.</p>
-<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.25rem;margin:1.5rem 0;"><div class="mermaid">
+<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.5rem;margin:1.75rem 0;"><div class="mermaid">
 flowchart TD
     G["Complex Goal / Engineering Epic"] --> CO["Coordinator Agent
 (Decompose & Assign Non-Overlapping Slices)"]
@@ -423,7 +426,7 @@ async def coordinate(slices: dict[str, str]) -&gt; list[dict]:
 <h2 id="preventing-swarm-failure-modes">Preventing Multi-Agent Failure Modes</h2>
 
 <p class="article-p">Watch out for three classic swarm failure modes: infinite retry loops between a worker and verifier, duplicate work caused by vague slice boundaries, and runaway token spend when too many workers run unchecked. Enforce strict retry caps (maximum two retries per slice), explicit file ownership lists, and a total swarm token budget. When a worker hits its retry cap, escalate cleanly to a human with the exact error log instead of burning more compute.</p>
-<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.25rem;margin:1.5rem 0;"><div class="mermaid">
+<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.5rem;margin:1.75rem 0;"><div class="mermaid">
 graph TD
     W["Worker Submits Output"] --> T{"Deterministic Check
 (Tests / Schema)"}
@@ -477,9 +480,109 @@ graph TD
 
 
 <section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="agent-sdk-teams-and-code-mode">Claude Agent SDK, Agent Teams, Handoffs, and Programmatic Tool Calling</h2>
+<p class="article-p">Building production swarms no longer requires hand-rolling raw message arrays, retry loops, and manual context compaction. Anthropic's modern orchestration stack spans the <a class="gold-link" href="#references">Claude Agent SDK</a> (Python and TypeScript), native <strong>Claude Code Agent Teams</strong>, and <a class="gold-link" href="claude-code-mode.html">Programmatic Tool Calling (Code Mode)</a>:</p>
+<ul class="article-p" style="list-style-type:disc;padding-left:1.5rem;display:flex;flex-direction:column;gap:0.55rem;">
+<li><strong>Claude Agent SDK Subagents &amp; Context Isolation:</strong> Declare specialized subagents programmatically through the SDK's <code>agents</code> configuration or via Markdown files in <code>.claude/agents/</code>. Each subagent executes in its own isolated conversation history with a narrowed <code>allowedTools</code> scope (such as read-only <code>Read</code> and <code>Grep</code> for a security auditor) and returns only a distilled summary to the coordinator, keeping the parent context window clean during parallel fan-out.</li>
+<li><strong>Claude Code Agent Teams (Peer-to-Peer Coordination):</strong> For cross-layer epics spanning backend, frontend, and test suites simultaneously, Agent Teams (enabled via <code>CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1</code> in <code>settings.json</code>) pair a Team Lead with independent peer Claude Code sessions coordinated through a file-locked <strong>shared task list</strong> (<code>pending</code>, <code>in_progress</code>, <code>completed</code> with automatic dependency unblocking) and an <strong>inter-agent mailbox</strong> for direct peer messaging and adversarial review inside isolated Git worktrees.</li>
+<li><strong>Concise State Handoffs (Avoiding Coordination Tax):</strong> Never forward raw multi-turn transcripts across agent handoffs. Pass a compact structured state contract specifying the exact objective, owned file paths, verification command, and artifact links so downstream workers start fast without inheriting noise or token bloat.</li>
+<li><strong>Programmatic Tool Calling &amp; Code Mode Synergy:</strong> Pairing multi-agent workers with <a class="gold-link" href="claude-code-mode.html">Claude Code Mode and Programmatic Tool Calling</a> lets each worker chain tool calls, loops, and data transformations inside a sandboxed execution container rather than spending a full LLM inference round-trip per tool call - cutting end-to-end latency and intermediate token burn while pairing with on-demand Tool Search across large tool catalogs.</li>
+<li><strong>Evaluation Gates &amp; Hard Budget Guardrails:</strong> Enforce deterministic acceptance gates (pytest, linters, JSON schema checks, and build exit codes) alongside hard runtime ceilings: per-agent <code>max_turns</code>, parallel concurrency caps, wall-clock timeouts, and SDK <code>total_cost_usd</code> spend limits that halt and escalate cleanly before a retry loop burns budget.</li>
+</ul>
+<div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid #38bdf8;border-radius:10px;margin:1.5rem 0;overflow:hidden;"><div style="background:#0b1220;padding:0.5rem 1rem;border-bottom:1px solid rgba(56,189,248,0.22);display:flex;justify-content:space-between;align-items:center;font-size:0.8rem;color:#94a3b8;"><span style="color:#fbbf24;font-weight:600;">Claude Agent SDK Multi-Agent Subagents With Budget Guardrails</span><span>Python</span></div><pre style="background:#040711;margin:0;padding:1.1rem 1.25rem;overflow-x:auto;color:#e2e8f0;font-size:0.86rem;line-height:1.55;"><code>import asyncio
+from claude_agent_sdk import query
+
+MAX_BUDGET_USD = 2.50
+
+async def run_verified_audit() -&gt; None:
+    options = {
+        &quot;model&quot;: &quot;claude-sonnet-4-20250514&quot;,
+        &quot;max_turns&quot;: 25,
+        &quot;permissionMode&quot;: &quot;acceptEdits&quot;,
+        &quot;allowedTools&quot;: [&quot;Read&quot;, &quot;Glob&quot;, &quot;Grep&quot;, &quot;Bash&quot;, &quot;Agent&quot;],
+        &quot;agents&quot;: {
+            &quot;security_auditor&quot;: {
+                &quot;description&quot;: &quot;Audits authentication, SQL queries, and secret handling.&quot;,
+                &quot;prompt&quot;: &quot;Return concise JSON findings with file, line, severity, and fix.&quot;,
+                &quot;allowedTools&quot;: [&quot;Read&quot;, &quot;Grep&quot;],
+            },
+            &quot;test_verifier&quot;: {
+                &quot;description&quot;: &quot;Runs deterministic unit and integration test suites.&quot;,
+                &quot;prompt&quot;: &quot;Execute pytest and report pass counts plus exact failing tracebacks.&quot;,
+                &quot;allowedTools&quot;: [&quot;Read&quot;, &quot;Bash&quot;],
+            },
+        },
+    }
+
+    prompt = (
+        &quot;Dispatch security_auditor and test_verifier in parallel across services/auth/. &quot;
+        &quot;Synthesize one prioritized remediation checklist.&quot;
+    )
+
+    async for message in query(prompt=prompt, options=options):
+        if message.type == &quot;result&quot; and message.subtype == &quot;success&quot;:
+            if message.total_cost_usd &gt; MAX_BUDGET_USD:
+                raise RuntimeError(f&quot;Budget cap exceeded: ${message.total_cost_usd:.2f}&quot;)
+            print(message.result)
+            print(f&quot;Verified run cost: ${message.total_cost_usd:.2f}&quot;)
+
+asyncio.run(run_verified_audit())</code></pre></div>
+</section>
+
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="orchestration-topology-matrix">Orchestration Topologies: Single Agent vs Subagents vs Agent Teams vs Programmatic Tool Calling</h2>
+<p class="article-p">Select the lightest orchestration primitive that satisfies your concurrency, isolation, and verification bar:</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.9rem;color:#e2e8f0;">
+<thead>
+<tr style="border-bottom:2px solid rgba(251,191,36,0.45);text-align:left;color:var(--gold);">
+<th style="padding:0.75rem;">Orchestration Pattern</th>
+<th style="padding:0.75rem;">Context &amp; State Model</th>
+<th style="padding:0.75rem;">Communication Mechanism</th>
+<th style="padding:0.75rem;">Token &amp; Latency Profile</th>
+<th style="padding:0.75rem;">Ideal Production Workload</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Single Agent Loop</td>
+<td style="padding:0.75rem;">One shared conversation thread</td>
+<td style="padding:0.75rem;">Direct tool calls within one session</td>
+<td style="padding:0.75rem;">Lowest token overhead; sequential execution</td>
+<td style="padding:0.75rem;">Localized bug fixes, single-file edits, focused Q&amp;A</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Agent SDK Subagents (Fan-Out)</td>
+<td style="padding:0.75rem;">Isolated child context per worker</td>
+<td style="padding:0.75rem;">Hierarchical delegation returning concise summaries to lead</td>
+<td style="padding:0.75rem;">Fast parallel wall-clock; controlled parent context size</td>
+<td style="padding:0.75rem;">Parallel repo audits, multi-angle PR reviews, sharded research</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Claude Code Agent Teams</td>
+<td style="padding:0.75rem;">Independent peer sessions + file-locked shared task board</td>
+<td style="padding:0.75rem;">Direct inter-agent mailbox + dependency-unblocked tasks</td>
+<td style="padding:0.75rem;">Highest token footprint; parallel cross-layer coordination</td>
+<td style="padding:0.75rem;">Full-stack features, competing debug hypotheses, multi-service refactors</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Programmatic Tool Calling (Code Mode)</td>
+<td style="padding:0.75rem;">Sandboxed container holding intermediate data</td>
+<td style="padding:0.75rem;">Code-driven loops and batched tool invocations</td>
+<td style="padding:0.75rem;">Minimal LLM round-trips; massive intermediate token savings</td>
+<td style="padding:0.75rem;">High-volume API aggregation, ETL filtering, multi-tool pipelines</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <h2 id="swarm-faq">Practical Questions on Multi-Agent Orchestration</h2>
 <p class="article-p"><strong>How many parallel workers should a swarm run?</strong> Most engineering and research workflows hit their sweet spot at 3 to 5 parallel workers. Beyond that, coordination overhead grows unless slices are completely independent.</p>
 <p class="article-p"><strong>How do we debug a failing swarm run?</strong> Log every worker prompt, tool result, and verifier verdict to a structured JSONL file so you can replay any single failed slice locally without re-running the entire swarm.</p>
+<p class="article-p"><strong>When should we use Claude Code Agent Teams instead of standard Agent SDK subagents?</strong> Use Agent SDK subagents when independent workers only need to report concise summaries back to a central coordinator. Reach for Agent Teams when teammates must claim tasks from a dependency-tracked board and exchange direct peer feedback across interdependent backend, frontend, and test layers.</p>
+<p class="article-p"><strong>How does Programmatic Tool Calling complement a multi-agent swarm?</strong> Inside each worker, <a class="gold-link" href="claude-code-mode.html">Programmatic Tool Calling</a> batches loops, pagination, and filtering inside sandboxed code rather than burning a full model turn on every tool call - cutting both token spend and wall-clock latency across the entire swarm.</p>
 </section>
 
 <section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
@@ -487,8 +590,12 @@ graph TD
 <ol class="references-list" style="display:flex;flex-direction:column;gap:0.75rem;padding-left:1.25rem;">
 <li><a class="gold-link" href="https://www.anthropic.com/engineering/multi-agent-research-system" rel="noopener noreferrer" target="_blank">Anthropic Multi-Agent Research System</a> - Engineering deep dive into coordinator-worker orchestration, parallel search, and evaluation.</li>
 <li><a class="gold-link" href="https://www.anthropic.com/research/building-effective-agents" rel="noopener noreferrer" target="_blank">Building Effective Agents</a> - Core patterns for routing, parallelization, orchestrator-workers, and evaluator-optimizer loops.</li>
+<li><a class="gold-link" href="https://docs.anthropic.com/en/docs/claude-code/sdk" rel="noopener noreferrer" target="_blank">Anthropic Claude Agent SDK Documentation</a> - Official Python and TypeScript SDK reference for subagents, permission modes, hooks, and cost tracking.</li>
+<li><a class="gold-link" href="https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/programmatic-tool-calling" rel="noopener noreferrer" target="_blank">Anthropic Programmatic Tool Calling &amp; Advanced Tool Use</a> - Code-driven tool chaining and on-demand tool discovery inside sandboxed execution environments.</li>
 <li><a class="gold-link" href="https://docs.python.org/3/library/asyncio.html" rel="noopener noreferrer" target="_blank">Python asyncio Documentation</a> - Standard async concurrency primitives for running parallel Claude worker calls.</li>
 <li><a class="gold-link" href="https://git-scm.com/docs/git-worktree" rel="noopener noreferrer" target="_blank">Git Worktree Documentation</a> - Isolating working directories so parallel coding agents never overwrite each other's files.</li>
+<li><a class="gold-link" href="claude-code-mode.html">Claude Code Mode: Programmatic Tool Execution Guide</a> - Deep dive into executing multi-tool workflows cleanly inside sandboxed code containers.</li>
+<li><a class="gold-link" href="claude-mcp.html">Claude MCP: Model Context Protocol &amp; Custom Tool Servers</a> - Wiring scoped, OAuth-hardened MCP tool servers into coordinator and worker agents.</li>
 </ol>
 </section>
 </article>

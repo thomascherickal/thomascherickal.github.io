@@ -17,7 +17,10 @@ Copying code back and forth between a browser chat and your editor wastes time a
 5. Test-Driven Debugging and Safe Git Workflows
 6. Step-by-Step Multi-File Refactoring Workflow
 7. IDE Integration and Headless CI Automation
-8. Authoritative References
+8. Lifecycle Hooks, Subagents, Git Worktrees, MCP, and OpenTelemetry
+9. Comparing Claude Code Execution Modes and Isolation Primitives
+10. Practical Questions for Production Claude Code Teams
+11. Authoritative References
 
 ---
 

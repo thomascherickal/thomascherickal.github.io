@@ -247,12 +247,12 @@
           <li><a href="../claude-training/claude-101.html">Claude 101</a></li>
           <li><a href="../claude-training/claude-projects.html">Claude Projects</a></li>
           <li><a href="../claude-training/claude-code.html">Claude Code</a></li>
+          <li><a href="../claude-training/claude-code-mode.html">Claude Code Mode</a></li>
           <li><a href="../claude-training/claude-desktop.html">Claude Desktop</a></li>
           <li><a href="../claude-training/claude-office.html">Claude Office</a></li>
-          <li><a href="../claude-training/claude-skills.html">Claude Skills</a></li>
           <li><a href="../claude-training/claude-mcp.html">Claude MCP</a></li>
           <li><a href="../claude-training/claude-plugins.html">Claude Plugins</a></li>
-          <li><a href="../claude-training/claude-connectors.html">Claude Connectors</a></li>
+          <li><a href="../claude-training/claude-apps.html">Claude Apps</a></li>
           <li><a href="../claude-training/claude-orchestration.html">Claude Orchestration</a></li>
           <li><a href="../claude-training/claude-design.html">Claude Design</a></li>
           <li><a href="../claude-training/claude-science.html">Claude for Science</a></li>
@@ -304,6 +304,7 @@
     </ul>
   </nav>
   <!-- END:HEADER -->
+  <a aria-label="Back to top" class="back-top" href="#top" id="backTop" title="Back to top">↑</a>
 
 <main class="container single-column-article" id="main">
 <header class="hero content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);text-align:left;display:flex;flex-direction:column;gap:1.25rem;padding:2rem 2.25rem;margin-top:110px;margin-bottom:2rem;">
@@ -323,7 +324,10 @@
 <a class="toc-link gold-link" href="#building-today">5. How to Build Recursive Verification Today on Released Models</a>
 <a class="toc-link gold-link" href="#preparing-frontier-evals">6. How to Build a Frontier Evaluation Suite While Waiting for Official Release</a>
 <a class="toc-link gold-link" href="#architectural-readiness">7. Architectural Readiness Checklist for Next-Generation Frontier Models</a>
-<a class="toc-link gold-link" href="#references">8. References</a>
+<a class="toc-link gold-link" href="#interactions-api-frontier-contract">8. Standardizing on the Interactions API, Long Decode, and Verifier Governance Today</a>
+<a class="toc-link gold-link" href="#frontier-tier-comparison">9. Released Gemini Tiers Today vs. Anticipated Gemini Krypton Capabilities</a>
+<a class="toc-link gold-link" href="#krypton-faq">10. Practical Questions About Gemini Krypton and Frontier Readiness</a>
+<a class="toc-link gold-link" href="#references">11. References</a>
 </div>
 </article>
 
@@ -441,6 +445,123 @@ def verified_step(task: str, max_attempts: int = 3) -&gt; str:
 <p>Until an official launch announcement arrives, keep iterating on your verification gates, context caching patterns, and private benchmark tasks on released Gemini models so your architecture is already battle-tested on day one.</p>
 </article>
 
+<article class="content-card" id="interactions-api-frontier-contract" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2>Standardizing on the Interactions API, Long Decode, and Verifier Governance Today</h2>
+<p>While Gemini Krypton remains unreleased with no public endpoint or published benchmark profile, Google has already shipped the core API primitives that frontier verification pipelines depend on. Standardizing your architecture on the released <a class="gold-link" href="#references">Gemini Interactions API</a> (<code>client.interactions.create</code> in <code>google-genai</code>) today lets you run disciplined multi-stage verification on released <a class="gold-link" href="google-gemini-4-argon.html">Gemini Argon</a>, <a class="gold-link" href="google-gemini-4-carbon.html">Gemini Carbon</a>, and <a class="gold-link" href="google-gemini-4-neon.html">Gemini Neon</a> while keeping any future frontier upgrade a single configuration swap.</p>
+<ul style="padding-left:1.5rem;color:var(--text-secondary);line-height:1.8;margin-bottom:1.25rem;">
+<li><strong>Stateful Multi-Round Verification:</strong> Chain draft generation and independent critique rounds with <code>previous_interaction_id</code> so the server maintains full context and structured thought steps without fragile client-side history reconstruction.</li>
+<li><strong>Background Execution and Long Decode:</strong> Released element-named models already share a unified 1,048,576-token window across input, thinking, and output tokens. Setting <code>background=True</code> enables long-decode runs beyond the 65,536-token synchronous ceiling up to 1,048,576 tokens across continuation hops, with repeated hop inputs automatically discounted up to 95 percent via implicit caching as described in the <a class="gold-link" href="#references">Gemini Long Decode guide</a>.</li>
+<li><strong>Unified Schema-Locked Verdicts:</strong> Use the top-level <code>response_format</code> object (embedding <code>mime_type</code> and JSON <code>schema</code>) so verifier stages emit machine-checkable verdicts - pass/fail status, cited flaws, and required external tool checks - rather than free-form prose that breaks automated gates.</li>
+<li><strong>Operational Governance and Token Accounting:</strong> Separate generator and verifier model roles in configuration, attach objective external verifiers (unit test runners, static analyzers, schema validators), and track active context pressure using <code>initial_input_tokens</code> plus <code>total_output_tokens</code> and <code>total_thought_tokens</code> rather than multi-hop summed <code>total_input_tokens</code>.</li>
+</ul>
+<div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid var(--cyan);border-radius:10px;margin:1.5rem 0;overflow:hidden;">
+<div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.55rem 1rem;background:rgba(255,255,255,0.04);border-bottom:1px solid rgba(255,255,255,0.08);">
+<span style="font-family:var(--font-mono);font-size:0.8rem;color:var(--cyan);">interactions_verifier_contract.py</span>
+<button class="copy-btn" onclick="copyCode(this)" style="text-decoration:none !important;" type="button">Copy</button>
+</div>
+<pre style="white-space:pre-wrap;word-break:break-word;overflow-x:hidden;padding:1rem;margin:0;color:#e2e8f0;font-size:0.88rem;"><code>import json
+from google import genai
+
+client = genai.Client()
+
+# Config-driven model contract using released endpoints today
+MODEL_CONFIG = {
+    "solver": "gemini-4-argon",    # Evaluate future official frontier IDs here post-launch
+    "verifier": "gemini-4-carbon",
+}
+
+verdict_schema = {
+    "type": "object",
+    "properties": {
+        "status": {"type": "string", "enum": ["PASS", "FAIL"]},
+        "flaws": {"type": "array", "items": {"type": "string"}},
+        "required_external_checks": {"type": "array", "items": {"type": "string"}},
+    },
+    "required": ["status", "flaws", "required_external_checks"],
+}
+
+def run_verified_contract(task_spec: str, max_rounds: int = 3) -&gt; dict:
+    feedback = ""
+    for round_idx in range(1, max_rounds + 1):
+        proposal = client.interactions.create(
+            model=MODEL_CONFIG["solver"],
+            input=f"Specification:\n{task_spec}\nPrior verifier feedback:\n{feedback}",
+            generation_config={"thinking_level": "high"},
+        )
+        verdict_call = client.interactions.create(
+            model=MODEL_CONFIG["verifier"],
+            input=f"Audit this proposal strictly against the specification:\n{proposal.output_text}",
+            generation_config={"thinking_level": "high"},
+            response_format={
+                "type": "text",
+                "mime_type": "application/json",
+                "schema": verdict_schema,
+            },
+        )
+        verdict = json.loads(verdict_call.output_text)
+        if verdict["status"] == "PASS":
+            return {"round": round_idx, "output": proposal.output_text, "verdict": verdict}
+        feedback = "\n".join(verdict["flaws"])
+    raise RuntimeError("Frontier verification gate exhausted max_rounds without PASS.")</code></pre>
+</div>
+</article>
+
+<article class="content-card" id="frontier-tier-comparison" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2>Released Gemini Tiers Today vs. Anticipated Gemini Krypton Capabilities</h2>
+<p>Keep architectural roadmaps strictly grounded by separating officially released, verifiable endpoints from unannounced future directions:</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.9rem;color:#e2e8f0;">
+<thead>
+<tr style="border-bottom:2px solid rgba(251,191,36,0.45);text-align:left;color:var(--gold);">
+<th style="padding:0.75rem;">Tier</th>
+<th style="padding:0.75rem;">Official Release Status</th>
+<th style="padding:0.75rem;">Context &amp; Decode Architecture</th>
+<th style="padding:0.75rem;">Thinking Controls</th>
+<th style="padding:0.75rem;">Recommended Engineering Role Today</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Gemini Hydrogen</td>
+<td style="padding:0.75rem;">Released</td>
+<td style="padding:0.75rem;">1M unified window; 64K sync cap / 1M long decode</td>
+<td style="padding:0.75rem;"><code>low</code>, <code>medium</code>, <code>high</code> (default), <code>xhigh</code></td>
+<td style="padding:0.75rem;">High-throughput worker swarms, fast extraction, parallel search</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Gemini Neon</td>
+<td style="padding:0.75rem;">Released</td>
+<td style="padding:0.75rem;">1M unified window; 64K sync cap / 1M long decode</td>
+<td style="padding:0.75rem;"><code>low</code>, <code>medium</code>, <code>high</code> (default), <code>xhigh</code></td>
+<td style="padding:0.75rem;">Production lead for multi-file coding, 24/7 assistants, security patching</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Gemini Argon &amp; Gemini Carbon</td>
+<td style="padding:0.75rem;">Released</td>
+<td style="padding:0.75rem;">1M unified window; background long decode supported</td>
+<td style="padding:0.75rem;"><code>medium</code> (default), <code>high</code></td>
+<td style="padding:0.75rem;">Hardest long-horizon architecture, deep debugging, formal verification gates</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Gemini Krypton</td>
+<td style="padding:0.75rem;">Not Yet Officially Released</td>
+<td style="padding:0.75rem;">Unannounced; anticipated push toward ultra-scale MoE and expanded memory</td>
+<td style="padding:0.75rem;">Unannounced; expected explicit verification and token-budget controls</td>
+<td style="padding:0.75rem;">Do not depend on unannounced dates; maintain private benchmarks and config-driven routers on released tiers</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+
+<article class="content-card" id="krypton-faq" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2>Practical Questions About Gemini Krypton and Frontier Readiness</h2>
+<p><strong>Has Google DeepMind officially released Gemini Krypton or published verified benchmarks?</strong> No. As of now, Gemini Krypton has not been officially released, and there are no public API identifiers, pricing schedules, or verified benchmark tables. Always verify active models against the official <a class="gold-link" href="#references">Google Gemini API Models registry</a>.</p>
+<p><strong>Should engineering teams delay frontier AI projects until Gemini Krypton launches?</strong> No. Waiting for an unannounced release stalls immediate engineering value. Deploy production verification pipelines today on released <a class="gold-link" href="google-gemini-4-argon.html">Gemini Argon</a>, <a class="gold-link" href="google-gemini-4-carbon.html">Gemini Carbon</a>, and <a class="gold-link" href="google-gemini-4-neon.html">Gemini Neon</a> behind a config-driven model registry so future frontier tiers drop in cleanly.</p>
+<p><strong>Why does standardizing on the Interactions API help with future frontier upgrades?</strong> The Interactions API decouples your workflow orchestration - stateful turns via <code>previous_interaction_id</code>, asynchronous <code>background=True</code> long decode, thinking controls, and schema-enforced <code>response_format</code> payloads - from individual model strings. When a stronger frontier tier launches, you benchmark it against the exact same orchestration contract without rewriting application plumbing.</p>
+<p><strong>What makes a private frontier evaluation suite trustworthy?</strong> Build twenty to thirty genuinely hard tasks drawn from your own repositories, data pipelines, or regulatory audits, each paired with objective automated graders (unit tests, compiler checks, deterministic schema assertions, or golden reference calculations) rather than subjective prose ratings.</p>
+</article>
+
 <article class="content-card" id="references" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <h2>References</h2>
 <p>Official documentation, research papers, and developer guides referenced in this article:</p>
@@ -448,7 +569,12 @@ def verified_step(task: str, max_attempts: int = 3) -&gt; str:
 <li><a class="gold-link" href="https://blog.google/technology/google-deepmind/" rel="noopener noreferrer" target="_blank">Google DeepMind Research Blog</a> - Official source for verified frontier model releases and research papers.</li>
 <li><a class="gold-link" href="https://ai.google.dev/gemini-api/docs/models" rel="noopener noreferrer" target="_blank">Google Gemini API Models</a> - Authoritative registry of currently released Gemini models and limits.</li>
 <li><a class="gold-link" href="https://deepmind.google/models/gemini/" rel="noopener noreferrer" target="_blank">Google DeepMind - Gemini Overview</a> - Architecture overview of the Gemini family and long-context capabilities.</li>
-<li><a class="gold-link" href="https://ai.google.dev/gemini-api/docs" rel="noopener noreferrer" target="_blank">Google Gemini API Documentation</a> - Developer guides for thinking controls, caching, and tool verification.</li>
+<li><a class="gold-link" href="https://ai.google.dev/gemini-api/docs" rel="noopener noreferrer" target="_blank">Google Gemini API Documentation</a> - Developer guides for the Interactions API, caching, and tool verification.</li>
+<li><a class="gold-link" href="https://ai.google.dev/gemini-api/docs/thinking" rel="noopener noreferrer" target="_blank">Gemini API Thinking Guide</a> - Official thinking-level specifications across released Gemini models.</li>
+<li><a class="gold-link" href="https://ai.google.dev/gemini-api/docs/long-decode" rel="noopener noreferrer" target="_blank">Gemini API Long Decode Guide</a> - Unified 1M-token window, background continuation, and implicit caching mechanics.</li>
+<li><a class="gold-link" href="https://ai.google.dev/gemini-api/docs/structured-output" rel="noopener noreferrer" target="_blank">Gemini API Structured Outputs</a> - Constraining verifier verdicts with unified <code>response_format</code> schemas.</li>
+<li><a class="gold-link" href="google-gemini-4-argon.html">Gemini Argon Engineering Guide</a> - Deploying today's released frontier reasoning architecture.</li>
+<li><a class="gold-link" href="google-gemini-4-carbon.html">Gemini Carbon Engineering Guide</a> - Deep multi-step debugging and architectural verification on released models.</li>
 </ul>
 </article>
 

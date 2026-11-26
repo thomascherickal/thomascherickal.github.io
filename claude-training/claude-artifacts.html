@@ -247,12 +247,12 @@
           <li><a href="../claude-training/claude-101.html">Claude 101</a></li>
           <li><a href="../claude-training/claude-projects.html">Claude Projects</a></li>
           <li><a href="../claude-training/claude-code.html">Claude Code</a></li>
+          <li><a href="../claude-training/claude-code-mode.html">Claude Code Mode</a></li>
           <li><a href="../claude-training/claude-desktop.html">Claude Desktop</a></li>
           <li><a href="../claude-training/claude-office.html">Claude Office</a></li>
-          <li><a href="../claude-training/claude-skills.html">Claude Skills</a></li>
           <li><a href="../claude-training/claude-mcp.html">Claude MCP</a></li>
           <li><a href="../claude-training/claude-plugins.html">Claude Plugins</a></li>
-          <li><a href="../claude-training/claude-connectors.html">Claude Connectors</a></li>
+          <li><a href="../claude-training/claude-apps.html">Claude Apps</a></li>
           <li><a href="../claude-training/claude-orchestration.html">Claude Orchestration</a></li>
           <li><a href="../claude-training/claude-design.html">Claude Design</a></li>
           <li><a href="../claude-training/claude-science.html">Claude for Science</a></li>
@@ -304,8 +304,9 @@
     </ul>
   </nav>
   <!-- END:HEADER -->
+  <a aria-label="Back to top" class="back-top" href="#top" id="backTop" title="Back to top">↑</a>
 
-<main id="main">
+<main class="container single-column-article" id="main">
 <header class="hero content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <div class="hero-badge content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">CLAUDE ARTIFACTS</div>
 <h1>Claude Artifacts: Interactive Code, Diagrams & Live Previews</h1>
@@ -314,7 +315,7 @@
 <p class="hero-byline">By <strong>Thomas Cherickal</strong> - Generative AI Consultant &amp; The Digital Futurist</p>
 </header>
 
-<article class="article-body" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.25rem;">
+<article class="article-body">
 <div id="table-of-contents" aria-label="Table of contents" class="content-card toc-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <p class="article-p" style="font-size:1.02rem;color:#f1f5f9;">Reading code inside a chat bubble forces you to imagine how a button feels, how a chart scales, or whether a layout breaks on mobile screens. Claude Artifacts removes that guesswork by opening a live preview pane right beside your conversation. Within seconds, Claude can render a working React calculator, an interactive SVG architecture diagram, or a self-contained HTML dashboard that you can click, edit, share, and even wire directly to Claude AI for live Q&A.</p>
 <div class="rule"></div>
@@ -326,6 +327,9 @@
 <li><a class="gold-link" href="#data-visualization-and-failure-modes">Data Visualization Best Practices and Common Pitfalls</a></li>
 <li><a class="gold-link" href="#real-world-artifact-use-cases">Real-World Business and Personal Use Cases</a></li>
 <li><a class="gold-link" href="#artifact-shipping-checklist">Step-by-Step Checklist Before Sharing an Artifact</a></li>
+<li><a class="gold-link" href="#persistent-storage-and-desktop-apps">Persistent Storage, Install as App, and Sharing Workflows</a></li>
+<li><a class="gold-link" href="#artifact-storage-and-deployment-matrix">Artifact Persistence, Desktop Install, and Claude Apps Comparison</a></li>
+<li><a class="gold-link" href="#claude-artifacts-faq">Practical Questions on Persistent Artifacts and Desktop Export</a></li>
 <li><a class="gold-link" href="#references">Authoritative References</a></li>
 </ol>
 </div>
@@ -341,7 +345,7 @@
 <li><strong>Structured Documents and Diagrams:</strong> Formatted specs, Markdown playbooks, and Mermaid flowcharts that update cleanly as you refine requirements.</li>
 </ul>
 <p class="article-p">Because every revision is saved as a numbered version inside the panel, you can ask Claude to try a bold visual redesign and jump back to an earlier version in one click if you prefer the original layout.</p>
-<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.25rem;margin:1.5rem 0;"><div class="mermaid">
+<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.5rem;margin:1.75rem 0;"><div class="mermaid">
 flowchart TD
     P["Plain-English Product Brief"] --> G["Claude Generates Standalone Artifact"]
     G --> R["Live Sandboxed Preview Pane"]
@@ -416,7 +420,7 @@ export default function ShipmentTracker() {
 <p class="article-p">One of the most powerful capabilities in modern Artifacts is building AI-powered apps that call Claude directly from inside the interactive interface. Instead of building a static FAQ page or a rigid form, you can embed an intelligent Q&A assistant right inside your Artifact - such as a policy explainer, a study coach, a sales objection trainer, or a dataset explorer where users ask plain-English questions about the chart on screen.</p>
 <p class="article-p">When you build a Claude-powered Artifact, the app sends the user's question along with the current screen context (for instance, the selected row, filtered metrics, or uploaded policy snippet) to the <a class="gold-link" href="#references">Anthropic Messages API</a> or the built-in Artifact AI bridge. Claude returns a focused, grounded answer that renders right inside the widget without forcing the user to leave the tool.</p>
 <p class="article-p">To keep embedded Q&A fast and trustworthy, always pass structured context rather than the entire page DOM, show a clear loading state while Claude thinks, and instruct Claude to say "I do not see that in the current data" whenever a user asks about something outside the provided dataset.</p>
-<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.25rem;margin:1.5rem 0;"><div class="mermaid">
+<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.5rem;margin:1.75rem 0;"><div class="mermaid">
 graph TD
     U["User Asks Question Inside Artifact UI"] --> C["Collect Active UI State
 (Selected Filters + Visible Rows)"]
@@ -501,12 +505,101 @@ with Citations to Active Data"]
 </section>
 
 <section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="persistent-storage-and-desktop-apps">Persistent Storage, Install as App, and Sharing Workflows</h2>
+<p class="article-p">Claude Artifacts have evolved far beyond disposable single-session previews. With built-in persistent storage, one-click standalone desktop installation, and clean sharing or remixing controls, interactive React and HTML artifacts can now operate as durable daily utilities without standing up external databases or build pipelines.</p>
+<h3>Persistent Key-Value Storage with <code>window.storage</code></h3>
+<p class="article-p">On Pro, Max, Team, and Enterprise plans, published Artifacts can persist structured text and JSON state across sessions using the asynchronous <code>window.storage</code> API (<code>get</code>, <code>set</code>, <code>delete</code>, and <code>list</code>):</p>
+<ul class="article-p" style="list-style-type:disc;padding-left:1.5rem;display:flex;flex-direction:column;gap:0.55rem;">
+<li><strong>Personal vs. Shared Scoping:</strong> Passing <code>shared: false</code> (the default) stores private per-user data, whereas passing <code>shared: true</code> syncs collaborative state - such as team scoreboards, shared triage queues, or workshop polls - across everyone using that published Artifact after a first-use consent prompt.</li>
+<li><strong>Quota and Key Hygiene:</strong> Storage is strictly text-only (up to <strong>20 MB total per artifact</strong> and <strong>5 MB per value</strong>; binary uploads and raw PDFs are excluded). Keys must stay under 200 characters with no whitespace, quotes, or slashes. Batch related settings into one JSON object rather than firing loops of small writes.</li>
+<li><strong>Publish-to-Activate Rule:</strong> Persistent storage activates once an Artifact is published or saved rather than during ephemeral chat drafting, and it must never hold regulated PII or raw API credentials.</li>
+</ul>
+<h3>Install as App: Standalone macOS and Windows Desktop Utilities</h3>
+<p class="article-p">Through <strong>Install as app</strong> in <a class="gold-link" href="claude-desktop.html">Claude Desktop</a> (macOS and Windows), any custom interactive code Artifact can be promoted into its own standalone window with a dedicated dock or taskbar icon - requiring zero Xcode packaging or app-store signing. Installed apps auto-sync whenever the source Artifact is updated, retain access to your connected workspace tools, and follow a three-tier security model: <strong>Default</strong> browser-style isolation, <strong>App Permissions</strong> (OS notifications, global shortcuts, always-on-top windows, macOS menu bar or Windows system tray placement), and admin-restricted <strong>Full Computer Access</strong> for trusted self-authored local file or script workflows.</p>
+<h3>Sharing, Remixing, and Graduating to Claude Apps</h3>
+<p class="article-p">Published Artifacts can be shared via direct links so teammates can interact with your live tool or <strong>remix</strong> a private fork without mutating the canonical version. When a workflow needs live authenticated SaaS sessions, real-time server mutations via <code>callServerTool</code>, or centralized enterprise OAuth rather than client-side <code>window.storage</code>, graduate from standalone Artifacts into full <a class="gold-link" href="claude-apps.html">Claude Apps</a> powered by MCP Apps.</p>
+<div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid #38bdf8;border-radius:10px;margin:1.5rem 0;overflow:hidden;"><div style="background:#0b1220;padding:0.5rem 1rem;border-bottom:1px solid rgba(56,189,248,0.22);display:flex;justify-content:space-between;align-items:center;font-size:0.8rem;color:#94a3b8;"><span style="color:#fbbf24;font-weight:600;">Batched Personal &amp; Shared Persistence with window.storage</span><span>JavaScript</span></div><pre style="background:#040711;margin:0;padding:1.1rem 1.25rem;overflow-x:auto;color:#e2e8f0;font-size:0.86rem;line-height:1.55;"><code>async function saveWorkspaceState(state, isShared = false) {
+  if (!window.storage) return null;
+  const payload = JSON.stringify({
+    updatedAt: new Date().toISOString(),
+    ...state
+  });
+  // Batch state into a single key (under 200 chars, no spaces or slashes)
+  return window.storage.set(&quot;workspace:v1:state&quot;, payload, isShared);
+}
+
+async function loadWorkspaceState(isShared = false) {
+  if (!window.storage) return null;
+  const record = await window.storage.get(&quot;workspace:v1:state&quot;, isShared);
+  return record ? JSON.parse(record.value) : null;
+}</code></pre></div>
+</section>
+
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="artifact-storage-and-deployment-matrix">Artifact Persistence, Desktop Install, and Claude Apps Comparison</h2>
+<p class="article-p">Choose the right deployment tier based on state persistence, OS integration, and backend connectivity:</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.9rem;color:#e2e8f0;">
+<thead>
+<tr style="border-bottom:2px solid rgba(251,191,36,0.45);text-align:left;color:var(--gold);">
+<th style="padding:0.75rem;">Deployment Mode</th>
+<th style="padding:0.75rem;">State &amp; Storage</th>
+<th style="padding:0.75rem;">OS / Backend Access</th>
+<th style="padding:0.75rem;">Sharing &amp; Lifecycle</th>
+<th style="padding:0.75rem;">Best-Fit Scenario</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Standard Interactive Artifact</td>
+<td style="padding:0.75rem;">In-memory React/JS session state only</td>
+<td style="padding:0.75rem;">Strict browser iframe sandbox</td>
+<td style="padding:0.75rem;">Versioned in chat; share or remix link</td>
+<td style="padding:0.75rem;">One-off calculators, SVG diagrams, UI mockups</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Persistent Published Artifact</td>
+<td style="padding:0.75rem;"><code>window.storage</code> text/JSON up to 20 MB (personal or shared)</td>
+<td style="padding:0.75rem;">Sandboxed runtime plus optional Claude AI bridge</td>
+<td style="padding:0.75rem;">Published URL with live collaborative state</td>
+<td style="padding:0.75rem;">Habit trackers, study tools, team feedback boards</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Installed Desktop App</td>
+<td style="padding:0.75rem;">Persistent artifact state tied to your Claude account</td>
+<td style="padding:0.75rem;">Granular OS permissions (tray, shortcuts, optional local files)</td>
+<td style="padding:0.75rem;">Dedicated macOS/Windows window; live sync with source artifact</td>
+<td style="padding:0.75rem;">Daily focus utilities, quick triage launchers, personal dashboards</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Claude App (MCP App)</td>
+<td style="padding:0.75rem;">Production database or SaaS backend via MCP server</td>
+<td style="padding:0.75rem;">Bidirectional JSON-RPC (<code>callServerTool</code>) and OAuth</td>
+<td style="padding:0.75rem;">Distributed across teams via <a class="gold-link" href="claude-plugins.html">Claude Plugins</a></td>
+<td style="padding:0.75rem;">Live CRM/analytics workspaces and audited enterprise approvals</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="claude-artifacts-faq">Practical Questions on Persistent Artifacts and Desktop Export</h2>
+<p class="article-p"><strong>Why do <code>window.storage</code> calls appear not to save while I am still editing in chat?</strong> Persistent storage is bound to the published artifact workspace. Publish or save the Artifact first, verify key names contain no spaces or slashes, and keep a clean in-memory fallback when testing draft iterations inside the conversation pane.</p>
+<p class="article-p"><strong>Do Artifacts installed via Install as App work completely offline?</strong> No. Even though an installed Artifact runs in its own macOS or Windows window with a native taskbar or dock icon, it remains synced to your authenticated Claude Desktop session and requires an active internet connection. For strictly offline or air-gapped tools, export the React or HTML source and run it locally.</p>
+<p class="article-p"><strong>When should we choose a Persistent Artifact over a full Claude App?</strong> Choose a Persistent Artifact when client-side logic and up to 20 MB of text or JSON state cover your workflow. Switch to <a class="gold-link" href="claude-apps.html">Claude Apps</a> whenever you need live enterprise SaaS authentication, binary file handling, or zero-LLM-turn backend tool calls through an MCP server.</p>
+</section>
+
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <h2 id="references">Authoritative References</h2>
 <ol class="references-list" style="display:flex;flex-direction:column;gap:0.75rem;padding-left:1.25rem;">
-<li><a class="gold-link" href="https://support.anthropic.com/en/articles/9487310-what-are-artifacts-and-how-do-i-use-them" rel="noopener noreferrer" target="_blank">Anthropic Artifacts Overview</a> - Official guide to creating, editing, versioning, and sharing interactive Claude Artifacts.</li>
-<li><a class="gold-link" href="https://docs.anthropic.com/en/api/messages" rel="noopener noreferrer" target="_blank">Anthropic Messages API Reference</a> - API specification for wiring live Claude Q&A into interactive front-end applications.</li>
+<li><a class="gold-link" href="https://support.anthropic.com/en/articles/9487310-what-are-artifacts-and-how-do-i-use-them" rel="noopener noreferrer" target="_blank">Anthropic Artifacts Overview</a> - Official guide to creating, editing, versioning, persisting, and sharing interactive Claude Artifacts.</li>
+<li><a class="gold-link" href="https://docs.anthropic.com/en/api/messages" rel="noopener noreferrer" target="_blank">Anthropic Messages API Reference</a> - API specification for wiring live Claude Q&amp;A into interactive front-end applications.</li>
+<li><a class="gold-link" href="https://docs.anthropic.com/en/home" rel="noopener noreferrer" target="_blank">Anthropic Claude Documentation</a> - Official platform reference for Artifacts, desktop workflows, and model capabilities.</li>
 <li><a class="gold-link" href="https://react.dev/" rel="noopener noreferrer" target="_blank">React Official Documentation</a> - Modern component patterns, hooks, and state management used inside React Artifacts.</li>
 <li><a class="gold-link" href="https://developer.mozilla.org/en-US/docs/Web/SVG" rel="noopener noreferrer" target="_blank">MDN SVG &amp; Accessibility Guide</a> - Standards for clean, accessible vector graphics and interactive web widgets.</li>
+<li><a class="gold-link" href="claude-apps.html">Claude Apps: Interactive MCP Apps &amp; Full App View</a> - Guide to graduating standalone Artifacts into live authenticated SaaS and MCP Apps.</li>
+<li><a class="gold-link" href="claude-desktop.html">Claude Desktop Engineering Guide</a> - Desktop workspace capabilities including Install as App permissions and local MCP integration.</li>
 </ol>
 </section>
 </article>

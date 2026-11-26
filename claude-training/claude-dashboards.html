@@ -245,12 +245,12 @@
           <li><a href="../claude-training/claude-101.html">Claude 101</a></li>
           <li><a href="../claude-training/claude-projects.html">Claude Projects</a></li>
           <li><a href="../claude-training/claude-code.html">Claude Code</a></li>
+          <li><a href="../claude-training/claude-code-mode.html">Claude Code Mode</a></li>
           <li><a href="../claude-training/claude-desktop.html">Claude Desktop</a></li>
           <li><a href="../claude-training/claude-office.html">Claude Office</a></li>
-          <li><a href="../claude-training/claude-skills.html">Claude Skills</a></li>
           <li><a href="../claude-training/claude-mcp.html">Claude MCP</a></li>
           <li><a href="../claude-training/claude-plugins.html">Claude Plugins</a></li>
-          <li><a href="../claude-training/claude-connectors.html">Claude Connectors</a></li>
+          <li><a href="../claude-training/claude-apps.html">Claude Apps</a></li>
           <li><a href="../claude-training/claude-orchestration.html">Claude Orchestration</a></li>
           <li><a href="../claude-training/claude-design.html">Claude Design</a></li>
           <li><a href="../claude-training/claude-science.html">Claude for Science</a></li>
@@ -302,8 +302,9 @@
     </ul>
   </nav>
   <!-- END:HEADER -->
+  <a aria-label="Back to top" class="back-top" href="#top" id="backTop" title="Back to top">↑</a>
 
-<main id="main">
+<main class="container single-column-article" id="main">
 <header class="hero content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <div class="hero-badge content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">CLAUDE DASHBOARDS</div>
 <h1>Claude Dashboards: Executive Analytics & Live Data Visualization</h1>
@@ -312,7 +313,7 @@
 <p class="hero-byline">By <strong>Thomas Cherickal</strong> - Generative AI Consultant &amp; The Digital Futurist</p>
 </header>
 
-<article class="article-body" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.25rem;">
+<article class="article-body">
 <div id="table-of-contents" aria-label="Table of contents" class="content-card toc-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <p class="article-p" style="font-size:1.02rem;color:#f1f5f9;">Executives rarely have time to dig through a 15-tab spreadsheet before a Monday morning review. Yet building a custom BI dashboard for every new question can take days of analyst time. With Claude, you can transform clean CSV exports, financial ledgers, and operational logs into interactive, board-ready dashboards in minutes - provided you pair clear visual design with strict number verification.</p>
 <div class="rule"></div>
@@ -325,6 +326,9 @@
 <li><a class="gold-link" href="#real-world-dashboard-scenarios">Real-World Executive and Operational Dashboard Scenarios</a></li>
 <li><a class="gold-link" href="#repeatable-refresh-workflow">Building a Repeatable Weekly Refresh Workflow</a></li>
 <li><a class="gold-link" href="#executive-presentation-tips">Presenting Claude Dashboards in Leadership Meetings</a></li>
+<li><a class="gold-link" href="#live-mcp-warehouses-and-apps">Live Data Warehouses, MCP Apps, and BI Hand-Off Architecture</a></li>
+<li><a class="gold-link" href="#dashboard-architecture-comparison">Comparing Static Artifacts, Live Warehouse Dashboards, and MCP App Views</a></li>
+<li><a class="gold-link" href="#dashboards-faq">Practical Questions on Live Claude Dashboards and KPI Governance</a></li>
 <li><a class="gold-link" href="#references">Authoritative References</a></li>
 </ol>
 </div>
@@ -339,7 +343,7 @@
 <li><strong>Bottom Row - Actionable Detail Table:</strong> A filterable table highlighting outliers, overdue accounts, or top-performing segments so leaders can drill straight into root causes.</li>
 </ul>
 <p class="article-p">This top-down hierarchy prevents the "wall of charts" problem where every metric fights for attention and nobody knows which number actually matters.</p>
-<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.25rem;margin:1.5rem 0;"><div class="mermaid">
+<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.5rem;margin:1.75rem 0;"><div class="mermaid">
 flowchart TD
     R["Raw CSV / Ledger / Telemetry"] --> V["Automated Validation Script
 (Row Counts, Nulls, Totals)"]
@@ -424,7 +428,7 @@ print(validate_ledger(&quot;q3_regional_revenue.csv&quot;))</code></pre></div>
 <li><strong>Mixed Time Zones or Fiscal Calendars:</strong> Explicitly state whether dates are UTC or local time, and whether Q1 starts in January or April, so period totals align with Finance.</li>
 <li><strong>Static Snapshots Mistaken for Live Feeds:</strong> Stamp every dashboard header with an explicit "Data as of" timestamp and source filename so nobody mistakes last week's CSV export for live telemetry.</li>
 </ul>
-<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.25rem;margin:1.5rem 0;"><div class="mermaid">
+<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.5rem;margin:1.75rem 0;"><div class="mermaid">
 graph TD
     A["Load CSV Export"] --> B{"Schema & Type Check"}
     B -->|"Currency / Date Parse Error"| F["Halt & Highlight Bad Rows"]
@@ -477,12 +481,99 @@ with Data Timestamp"]
 </section>
 
 <section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="live-mcp-warehouses-and-apps">Live Data Warehouses, MCP Apps, and BI Hand-Off Architecture</h2>
+<p class="article-p">Modern Claude Dashboards extend far beyond static CSV uploads. By connecting Claude directly to cloud data warehouses and interactive <a class="gold-link" href="claude-apps.html">Claude Apps (MCP Apps)</a>, teams move from ad-hoc file snapshots to governed, live executive reporting inside the same conversation workspace:</p>
+<ul class="article-p" style="list-style-type:disc;padding-left:1.5rem;display:flex;flex-direction:column;gap:0.55rem;">
+<li><strong>Direct Cloud Warehouse SQL Generation:</strong> Claude connects natively to enterprise warehouses including <strong>Snowflake</strong>, <strong>Google BigQuery</strong>, <strong>Databricks</strong>, <strong>Amazon Redshift</strong>, and <strong>ClickHouse</strong>. Plain-English analytical questions compile into live SQL queries that build multi-chart views with click-to-inspect SQL lineage and explicit last-refresh timestamps.</li>
+<li><strong>Interactive MCP App Views (Amplitude and Hex):</strong> Built on the open <a class="gold-link" href="#references">Model Context Protocol (MCP)</a> Apps extension, interactive connectors render sandboxed application UIs directly inline or fullscreen inside Claude. Product teams manipulate <strong>Amplitude</strong> funnels and cohort parameters right in chat without jumping tabs, while analytics teams query <strong>Hex</strong> for interactive tables, charts, and cited answers.</li>
+<li><strong>Seamless Downstream BI Hand-Off:</strong> When an exploratory dashboard matures into collaborative Python modeling, versioned notebooks, or department-wide alerting, teams hand off the generated SQL and visual structure directly into platforms such as <strong>Hex</strong>, Sigma, Omni, or PostHog rather than rebuilding queries from scratch.</li>
+<li><strong>Warehouse Compute Metering and KPI Governance:</strong> Because every live refresh executes SQL against your warehouse meter (such as Snowflake credits or BigQuery slots), production deployments bind Claude to read-only service roles, certified semantic models or pre-aggregated marts, and strict per-query byte and timeout ceilings so unverified joins never inflate bills or contradict finance numbers.</li>
+</ul>
+<div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid #38bdf8;border-radius:10px;margin:1.5rem 0;overflow:hidden;"><div style="background:#0b1220;padding:0.5rem 1rem;border-bottom:1px solid rgba(56,189,248,0.22);display:flex;justify-content:space-between;align-items:center;font-size:0.8rem;color:#94a3b8;"><span style="color:#fbbf24;font-weight:600;">Governed Warehouse MCP Connector &amp; KPI Semantic Contract</span><span>JSON</span></div><pre style="background:#040711;margin:0;padding:1.1rem 1.25rem;overflow-x:auto;color:#e2e8f0;font-size:0.86rem;line-height:1.55;"><code>{
+  &quot;connector&quot;: &quot;warehouse-analytics-mcp&quot;,
+  &quot;engine&quot;: &quot;bigquery&quot;,
+  &quot;execution_policy&quot;: {
+    &quot;read_only&quot;: true,
+    &quot;allowed_schemas&quot;: [&quot;mart_finance_certified&quot;, &quot;mart_product_kpis&quot;],
+    &quot;maximum_bytes_billed&quot;: 5368709120,
+    &quot;query_timeout_seconds&quot;: 30,
+    &quot;require_lineage_badge&quot;: true
+  },
+  &quot;semantic_guardrails&quot;: {
+    &quot;fiscal_year_start_month&quot;: 1,
+    &quot;canonical_revenue_view&quot;: &quot;mart_finance_certified.v_net_arr_daily&quot;,
+    &quot;handoff_targets&quot;: [&quot;hex&quot;, &quot;amplitude&quot;]
+  }
+}</code></pre></div>
+</section>
+
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="dashboard-architecture-comparison">Comparing Static Artifacts, Live Warehouse Dashboards, and MCP App Views</h2>
+<p class="article-p">Select the right dashboard architecture based on your data freshness requirements, warehouse cost controls, and whether stakeholders need native SaaS controls inside chat:</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.9rem;color:#e2e8f0;">
+<thead>
+<tr style="border-bottom:2px solid rgba(251,191,36,0.45);text-align:left;color:var(--gold);">
+<th style="padding:0.75rem;">Dimension</th>
+<th style="padding:0.75rem;">Static CSV / Artifact Dashboard</th>
+<th style="padding:0.75rem;">Live Warehouse Dashboard (Snowflake / BigQuery)</th>
+<th style="padding:0.75rem;">Interactive MCP App View (Amplitude / Hex)</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Data Freshness</td>
+<td style="padding:0.75rem;">Point-in-time CSV or ledger upload</td>
+<td style="padding:0.75rem;">Live SQL executed on demand against warehouse views</td>
+<td style="padding:0.75rem;">Real-time vendor API state via bidirectional JSON-RPC</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Interactive Controls</td>
+<td style="padding:0.75rem;">Client-side filters, tabs, and Recharts tooltips</td>
+<td style="padding:0.75rem;">Prompt-driven drilldowns plus click-to-inspect SQL</td>
+<td style="padding:0.75rem;">Native sandboxed <code>ui://</code> controls, funnel sliders, and tables</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Compute &amp; Cost Model</td>
+<td style="padding:0.75rem;">Zero warehouse compute after export</td>
+<td style="padding:0.75rem;">Metered per refresh (Snowflake credits or BigQuery slots)</td>
+<td style="padding:0.75rem;">Handled by SaaS connector quotas; UI refreshes avoid extra LLM turns</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">KPI Governance</td>
+<td style="padding:0.75rem;">Pre-render Python decimal reconciliation script</td>
+<td style="padding:0.75rem;">Certified semantic models, read-only roles, and byte caps</td>
+<td style="padding:0.75rem;">Platform RBAC, OAuth scopes, and host consent policies</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Best Fit</td>
+<td style="padding:0.75rem;">Board packets, offline audits, sensitivity modeling</td>
+<td style="padding:0.75rem;">Executive revenue reviews, ad-hoc SQL exploration</td>
+<td style="padding:0.75rem;">Product telemetry funnels, Hex notebook collaboration</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="dashboards-faq">Practical Questions on Live Claude Dashboards and KPI Governance</h2>
+<p class="article-p"><strong>How do we control Snowflake credit or BigQuery slot spend when executives refresh dashboards?</strong> Point Claude exclusively at pre-aggregated, certified mart views rather than raw event tables, enforce read-only warehouse roles with hard per-query byte limits, and reserve live refreshes for scheduled review windows.</p>
+<p class="article-p"><strong>When should a team stay inside Claude Dashboards versus handing off to Hex or a BI suite?</strong> Use Claude Dashboards for rapid ad-hoc exploration and weekly executive cockpits where speed to insight matters most. Hand off the verified SQL to Hex or a dedicated BI tool once a dashboard requires multi-user Python notebooks, complex row-level security, or automated threshold alerting.</p>
+<p class="article-p"><strong>How do Claude Dashboards and Claude Apps work together?</strong> <a class="gold-link" href="claude-apps.html">Claude Apps</a> render interactive vendor-built UIs (such as Amplitude charts or Hex data tables) inside sandboxed iframes over MCP, complementing native SQL-backed dashboards so leadership can combine warehouse finance views with live product telemetry in one thread.</p>
+</section>
+
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <h2 id="references">Authoritative References</h2>
 <ol class="references-list" style="display:flex;flex-direction:column;gap:0.75rem;padding-left:1.25rem;">
 <li><a class="gold-link" href="https://docs.anthropic.com/en/docs/build-with-claude/overview" rel="noopener noreferrer" target="_blank">Anthropic Analysis Tool &amp; Data Workflows</a> - Building reliable analytical workflows and code-backed visualizations with Claude.</li>
+<li><a class="gold-link" href="https://modelcontextprotocol.io/" rel="noopener noreferrer" target="_blank">Model Context Protocol (MCP) &amp; MCP Apps Specification</a> - Open protocol standard connecting live data warehouses and interactive analytics views to Claude.</li>
+<li><a class="gold-link" href="https://github.com/modelcontextprotocol/ext-apps" rel="noopener noreferrer" target="_blank">MCP Apps SDK (<code>@modelcontextprotocol/ext-apps</code>)</a> - Reference SDK for building interactive sandboxed dashboard widgets and bidirectional server tool refreshes.</li>
 <li><a class="gold-link" href="https://recharts.org/en-US/" rel="noopener noreferrer" target="_blank">Recharts Documentation</a> - Composable React charting library widely used inside interactive Claude dashboards.</li>
 <li><a class="gold-link" href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html" rel="noopener noreferrer" target="_blank">W3C Web Accessibility Color Contrast</a> - Standards for readable typography and chart contrast across dark and light displays.</li>
 <li><a class="gold-link" href="https://docs.python.org/3/library/decimal.html" rel="noopener noreferrer" target="_blank">Python CSV &amp; Decimal Documentation</a> - Exact decimal arithmetic for financial reconciliation before rendering dashboards.</li>
+<li><a class="gold-link" href="claude-apps.html">Claude Apps: Interactive MCP Apps &amp; Live Workspace UI</a> - Deep dive into Amplitude, Hex, and custom <code>ui://</code> dashboard connectors inside Claude.</li>
+<li><a class="gold-link" href="claude-mcp.html">Claude MCP: Model Context Protocol &amp; Custom Tool Servers</a> - Securing warehouse connectors, OAuth flows, and read-only SQL tool schemas.</li>
 </ol>
 </section>
 </article>

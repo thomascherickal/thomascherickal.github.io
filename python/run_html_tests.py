@@ -88,10 +88,32 @@ def run_html_ui_tests(quiet=False):
     total = result.testsRun
     status = "PASSED" if result.wasSuccessful() else "FAILED"
 
-    # Discover page count for reporting
-    from tests.test_html_ui import HTML_PARSER, discover_html_pages
+    # Discover page count and aggregate category-only summaries for reporting
+    from tests.test_html_ui import (
+        HTML_PARSER,
+        HTML_TEST_CATEGORY_ORDER,
+        discover_html_pages,
+        get_html_test_category,
+    )
     pages_scanned = len(discover_html_pages())
     framework_label = f"BeautifulSoup4 + {HTML_PARSER} (unittest)"
+
+    categories = {}
+    for cat in HTML_TEST_CATEGORY_ORDER:
+        categories[cat] = {"total": 0, "passed": 0, "failed": 0, "skipped": 0}
+    for rec in result.records:
+        cat = get_html_test_category(rec["method"])
+        rec["category"] = cat
+        if cat not in categories:
+            categories[cat] = {"total": 0, "passed": 0, "failed": 0, "skipped": 0}
+        categories[cat]["total"] += 1
+        if rec["status"] == "PASSED":
+            categories[cat]["passed"] += 1
+        elif rec["status"] == "SKIPPED":
+            categories[cat]["skipped"] += 1
+        else:
+            categories[cat]["failed"] += 1
+    categories = {k: v for k, v in categories.items() if v["total"] > 0}
 
     cache_payload = {
         "timestamp": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC"),
@@ -102,6 +124,7 @@ def run_html_ui_tests(quiet=False):
         "failed": failed,
         "elapsed_seconds": elapsed,
         "status": status,
+        "categories": categories,
         "tests": result.records,
     }
     with open(CACHE_PATH, "w", encoding="utf-8") as f:
@@ -113,6 +136,29 @@ def run_html_ui_tests(quiet=False):
         print("=" * 80)
         print(f"Framework:     {framework_label}")
         print(f"Pages Scanned: {pages_scanned} HTML pages")
+        headers = ("Category", "Total", "Passed", "Failed", "Status")
+        rows = [
+            (
+                cat,
+                str(stats["total"]),
+                str(stats["passed"]),
+                str(stats["failed"]),
+                "PASS" if stats["failed"] == 0 else "FAIL",
+            )
+            for cat, stats in categories.items()
+        ]
+        rows.append(("TOTAL", str(total), str(passed), str(failed), status))
+        widths = [max(len(headers[i]), max(len(r[i]) for r in rows)) for i in range(len(headers))]
+        sep = "+" + "+".join("-" * (w + 2) for w in widths) + "+"
+        fmt = lambda r: "| " + " | ".join(r[i].ljust(widths[i]) if i == 0 else r[i].rjust(widths[i]) if i in (1, 2, 3) else r[i].ljust(widths[i]) for i in range(len(headers))) + " |"
+        print(sep)
+        print(fmt(headers))
+        print(sep)
+        for idx, r in enumerate(rows):
+            if idx == len(rows) - 1:
+                print(sep)
+            print(fmt(r))
+        print(sep)
         print(f"Tests Run:     {total} | Passed: {passed} | Failed: {failed} | Time: {elapsed}s")
         print(f"Status:        {status}")
         print("=" * 80)

@@ -247,12 +247,12 @@
           <li><a href="../claude-training/claude-101.html">Claude 101</a></li>
           <li><a href="../claude-training/claude-projects.html">Claude Projects</a></li>
           <li><a href="../claude-training/claude-code.html">Claude Code</a></li>
+          <li><a href="../claude-training/claude-code-mode.html">Claude Code Mode</a></li>
           <li><a href="../claude-training/claude-desktop.html">Claude Desktop</a></li>
           <li><a href="../claude-training/claude-office.html">Claude Office</a></li>
-          <li><a href="../claude-training/claude-skills.html">Claude Skills</a></li>
           <li><a href="../claude-training/claude-mcp.html">Claude MCP</a></li>
           <li><a href="../claude-training/claude-plugins.html">Claude Plugins</a></li>
-          <li><a href="../claude-training/claude-connectors.html">Claude Connectors</a></li>
+          <li><a href="../claude-training/claude-apps.html">Claude Apps</a></li>
           <li><a href="../claude-training/claude-orchestration.html">Claude Orchestration</a></li>
           <li><a href="../claude-training/claude-design.html">Claude Design</a></li>
           <li><a href="../claude-training/claude-science.html">Claude for Science</a></li>
@@ -304,6 +304,7 @@
     </ul>
   </nav>
   <!-- END:HEADER -->
+  <a aria-label="Back to top" class="back-top" href="#top" id="backTop" title="Back to top">↑</a>
 
 <main class="container single-column-article" id="main">
 <header class="hero content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);text-align:left;display:flex;flex-direction:column;gap:1.25rem;padding:2rem 2.25rem;margin-top:110px;margin-bottom:2rem;">
@@ -323,7 +324,10 @@
 <a class="toc-link gold-link" href="#post-launch-evaluation">5. What to Measure Once Gemini Helium Officially Launches</a>
 <a class="toc-link gold-link" href="#real-world-high-volume-scenarios">6. High-Volume Scenarios Where a Flash-Lite Tier Delivers Maximum Value</a>
 <a class="toc-link gold-link" href="#migration-readiness-checklist">7. Migration Readiness Checklist for Future Flash-Lite Releases</a>
-<a class="toc-link gold-link" href="#references">8. References</a>
+<a class="toc-link gold-link" href="#interactions-api-low-latency-architecture">8. Interactions API, Low-Thinking Routing, and Implicit Caching for High-Volume Pipelines</a>
+<a class="toc-link gold-link" href="#fast-tier-comparison-matrix">9. Released Fast Tiers Today vs. Anticipated Gemini Helium Profile</a>
+<a class="toc-link gold-link" href="#helium-faq">10. Practical Questions About Gemini Helium and Flash-Lite Readiness</a>
+<a class="toc-link gold-link" href="#references">11. References</a>
 </div>
 </article>
 
@@ -437,6 +441,122 @@ def benchmark_fast_model(model_id: str, prompts: list[str]) -&gt; dict:
 <p>To make sure your engineering team can evaluate and adopt Gemini Helium quickly once Google DeepMind officially launches it, verify four items in your repository today. First, confirm that all fast-tier model names are read from a central configuration file rather than hardcoded across microservices. Second, maintain a versioned JSONL test dataset of at least two hundred messy, real-world classification and extraction inputs. Third, automate schema-validity and p95 latency reporting in CI so any model swap is backed by hard numbers. Fourth, document clear rollback steps so you can revert to Gemini Hydrogen in seconds if an edge case behaves unexpectedly.</p>
 </article>
 
+<article class="content-card" id="interactions-api-low-latency-architecture" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2>Interactions API, Low-Thinking Routing, and Implicit Caching for High-Volume Pipelines</h2>
+<p>Because Gemini Helium has not yet been officially launched, production teams needing ultra-low-latency classification, extraction, and guardrail filtering today should build directly on the released <a class="gold-link" href="#references">Gemini Interactions API</a> (<code>client.interactions.create</code> in <code>google-genai</code>) paired with released <a class="gold-link" href="google-gemini-4-hydrogen.html">Gemini Hydrogen</a> configured at <code>thinking_level: "low"</code>. Designing around this clean contract delivers high throughput immediately while making any future Flash-Lite release a drop-in configuration swap.</p>
+<ul style="padding-left:1.5rem;color:var(--text-secondary);line-height:1.8;margin-bottom:1.25rem;">
+<li><strong>Low Thinking as Today's Fastest Path:</strong> On the element-named lineup, <code>minimal</code> thinking is not supported (it applies only to legacy Flash-Lite models). Setting <code>generation_config={"thinking_level": "low"}</code> on Gemini Hydrogen delivers the lowest-latency, lowest-token-overhead path while retaining strong structured instruction following as detailed in the <a class="gold-link" href="#references">Gemini Thinking Guide</a>.</li>
+<li><strong>Unified Schema Enforcement via <code>response_format</code>:</strong> Declare your output MIME type and JSON schema directly inside the top-level <code>response_format</code> object. Pairing tight enum fields with an explicit <code>needs_escalation</code> boolean ensures deterministic backend parsing and clean fallback routing to <a class="gold-link" href="google-gemini-4-neon.html">Gemini Neon</a> on ambiguous inputs.</li>
+<li><strong>Prefix-First Layout for Implicit Caching:</strong> Keep static taxonomy rules, moderation policies, and few-shot examples identical at the beginning of every prompt while appending variable user text at the end. High-volume traffic hitting identical prefixes automatically benefits from implicit caching discounts without maintaining manual cache lifecycles.</li>
+<li><strong>Strict Output Ceilings and Canary Telemetry:</strong> Cap <code>max_output_tokens</code> tightly on micro-task routes to prevent runaway generation, log <code>total_cached_tokens</code>, <code>total_thought_tokens</code>, JSON pass rate, and p95 latency per route, and replay shadow datasets before promoting any newly launched Flash-Lite model into live traffic.</li>
+</ul>
+<div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid var(--cyan);border-radius:10px;margin:1.5rem 0;overflow:hidden;">
+<div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.55rem 1rem;background:rgba(255,255,255,0.04);border-bottom:1px solid rgba(255,255,255,0.08);">
+<span style="font-family:var(--font-mono);font-size:0.8rem;color:var(--cyan);">low_latency_interactions_router.py</span>
+<button class="copy-btn" onclick="copyCode(this)" style="text-decoration:none !important;" type="button">Copy</button>
+</div>
+<pre style="white-space:pre-wrap;word-break:break-word;overflow-x:hidden;padding:1rem;margin:0;color:#e2e8f0;font-size:0.88rem;"><code>import json
+from google import genai
+
+client = genai.Client()
+
+# Keep fast-tier model selection config-driven for future Flash-Lite swaps
+ROUTER_CONFIG = {
+    "fast_tier": "gemini-4-hydrogen",   # Replace with official Helium ID after launch
+    "escalation_tier": "gemini-4-neon",
+}
+
+STATIC_POLICY_PREFIX = (
+    "You are a high-throughput intent router. Classify the incoming message into one "
+    "strict enum intent and set needs_escalation=true when the request is ambiguous "
+    "or involves account security, billing disputes, or legal claims.\n\nMessage:\n"
+)
+
+ROUTE_SCHEMA = {
+    "type": "object",
+    "properties": {
+        "intent": {"type": "string", "enum": ["faq", "order_status", "bug_report", "other"]},
+        "needs_escalation": {"type": "boolean"},
+    },
+    "required": ["intent", "needs_escalation"],
+}
+
+def classify_fast(message: str) -&gt; dict:
+    interaction = client.interactions.create(
+        model=ROUTER_CONFIG["fast_tier"],
+        input=STATIC_POLICY_PREFIX + message,
+        generation_config={
+            "thinking_level": "low",
+            "max_output_tokens": 256,
+        },
+        response_format={
+            "type": "text",
+            "mime_type": "application/json",
+            "schema": ROUTE_SCHEMA,
+        },
+    )
+    decision = json.loads(interaction.output_text)
+    decision["cached_tokens"] = getattr(interaction.usage, "total_cached_tokens", 0)
+    return decision</code></pre>
+</div>
+</article>
+
+<article class="content-card" id="fast-tier-comparison-matrix" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2>Released Fast Tiers Today vs. Anticipated Gemini Helium Profile</h2>
+<p>Map every high-volume route to an officially released model today while documenting the exact promotion gates a future Flash-Lite successor must clear after launch:</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.9rem;color:#e2e8f0;">
+<thead>
+<tr style="border-bottom:2px solid rgba(251,191,36,0.45);text-align:left;color:var(--gold);">
+<th style="padding:0.75rem;">Tier &amp; Configuration</th>
+<th style="padding:0.75rem;">Official Release Status</th>
+<th style="padding:0.75rem;">Thinking Setup</th>
+<th style="padding:0.75rem;">Latency &amp; Caching Pattern</th>
+<th style="padding:0.75rem;">Recommended Production Use</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Gemini Hydrogen (Low Thinking)</td>
+<td style="padding:0.75rem;">Released</td>
+<td style="padding:0.75rem;"><code>thinking_level: "low"</code></td>
+<td style="padding:0.75rem;">Lowest latency on element-named lineup; automatic implicit prefix caching</td>
+<td style="padding:0.75rem;">Primary production workhorse today for classification, tagging, and guardrail pre-filters</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Gemini Hydrogen (Medium / High)</td>
+<td style="padding:0.75rem;">Released</td>
+<td style="padding:0.75rem;"><code>medium</code> or <code>high</code> (default)</td>
+<td style="padding:0.75rem;">Balanced throughput with 1M unified window and parallel tool batching</td>
+<td style="padding:0.75rem;">Multimodal document extraction, agentic video inspection, subagent worker swarms</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Gemini Neon (Escalation Lane)</td>
+<td style="padding:0.75rem;">Released</td>
+<td style="padding:0.75rem;"><code>high</code> (default) or <code>xhigh</code></td>
+<td style="padding:0.75rem;">Higher deliberation budget reserved for flagged low-confidence slices</td>
+<td style="padding:0.75rem;">Ambiguous edge cases, sensitive policy disputes, multi-file engineering fixes</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Gemini Helium (Flash-Lite Successor)</td>
+<td style="padding:0.75rem;">Not Yet Officially Launched</td>
+<td style="padding:0.75rem;">Unannounced; anticipated ultra-lightweight fast-decode focus</td>
+<td style="padding:0.75rem;">Unannounced; evaluate p50/p95 latency and schema adherence post-launch</td>
+<td style="padding:0.75rem;">Track official release notes; shadow-benchmark on private datasets before swapping from Hydrogen</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+
+<article class="content-card" id="helium-faq" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2>Practical Questions About Gemini Helium and Flash-Lite Readiness</h2>
+<p><strong>Is Gemini Helium currently available in the Gemini API or Google AI Studio?</strong> No. Gemini Helium has not yet been officially launched or published by Google DeepMind. Always confirm active production identifiers in the official <a class="gold-link" href="#references">Gemini API Models Reference</a> rather than relying on unverified community rumors.</p>
+<p><strong>What is the fastest released model and configuration to use today for Flash-Lite-style micro-tasks?</strong> Run released <a class="gold-link" href="google-gemini-4-hydrogen.html">Gemini Hydrogen</a> on the Interactions API with <code>thinking_level: "low"</code>, a compact <code>max_output_tokens</code> cap, strict <code>response_format</code> JSON schemas, and static policy instructions placed at the front of the prompt for implicit caching.</p>
+<p><strong>Does Gemini Hydrogen support a <code>minimal</code> thinking level while we wait for Gemini Helium?</strong> No. The <code>minimal</code> setting applies only to earlier Flash-Lite models and is not supported on Gemini Hydrogen or Gemini Neon. Use <code>low</code> as the lowest-latency supported thinking setting on the element-named lineup.</p>
+<p><strong>How should we gate a future migration to Gemini Helium once Google officially announces it?</strong> Replay at least two hundred versioned production samples in shadow mode comparing Gemini Helium against your Gemini Hydrogen baseline on five metrics: p95 latency under peak concurrency, strict JSON validity, domain classification accuracy, multilingual stability, and escalation rate to <a class="gold-link" href="google-gemini-4-neon.html">Gemini Neon</a>. Promote traffic only after every gate passes with a documented one-line rollback path.</p>
+</article>
+
 <article class="content-card" id="references" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <h2>References</h2>
 <p>Official documentation, research papers, and developer guides referenced in this article:</p>
@@ -444,7 +564,12 @@ def benchmark_fast_model(model_id: str, prompts: list[str]) -&gt; dict:
 <li><a class="gold-link" href="https://blog.google/technology/google-deepmind/" rel="noopener noreferrer" target="_blank">Google DeepMind Blog</a> - Official channel for new Gemini model launches and verified benchmark announcements.</li>
 <li><a class="gold-link" href="https://ai.google.dev/gemini-api/docs/models" rel="noopener noreferrer" target="_blank">Gemini API Models Reference</a> - Authoritative list of currently released Gemini model identifiers and capabilities.</li>
 <li><a class="gold-link" href="https://ai.google.dev/gemini-api/docs/changelog" rel="noopener noreferrer" target="_blank">Gemini API Release Notes</a> - Official changelog tracking new endpoints, deprecations, and SDK updates.</li>
+<li><a class="gold-link" href="https://ai.google.dev/gemini-api/docs/thinking" rel="noopener noreferrer" target="_blank">Gemini API Thinking Guide</a> - Official reference for <code>low</code>, <code>medium</code>, <code>high</code>, and <code>xhigh</code> thinking levels across released tiers.</li>
+<li><a class="gold-link" href="https://ai.google.dev/gemini-api/docs/structured-output" rel="noopener noreferrer" target="_blank">Gemini API Structured Outputs</a> - Official guide for constraining high-volume JSON responses with <code>response_format</code>.</li>
+<li><a class="gold-link" href="https://github.com/googleapis/python-genai" rel="noopener noreferrer" target="_blank">Google GenAI Python SDK</a> - Official Python SDK for the Interactions API and async batch workloads.</li>
 <li><a class="gold-link" href="https://deepmind.google/models/gemini/" rel="noopener noreferrer" target="_blank">Google DeepMind - Gemini Family</a> - Overview of the Gemini architecture and released model tiers.</li>
+<li><a class="gold-link" href="google-gemini-4-hydrogen.html">Gemini Hydrogen Engineering Guide</a> - Deploying today's released fast tier for low-latency swarms and extraction pipelines.</li>
+<li><a class="gold-link" href="google-gemini-4-neon.html">Gemini Neon Engineering Guide</a> - Pairing fast classification lanes with a balanced escalation coordinator.</li>
 </ul>
 </article>
 

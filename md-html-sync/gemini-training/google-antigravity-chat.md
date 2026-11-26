@@ -94,9 +94,61 @@ description: Run pre-release verification across tests, links, and build output.
 
 ## Real-World Team Scenarios and Rollout Checklist
 
-Teams adopt Antigravity Chat fastest when they start with concrete, repeatable engineering chores rather than vague open-ended experiments. Three starter workflows consistently pay off in the first week. First, onboarding onto unfamiliar services: a new engineer opens Antigravity Chat, asks it to map request flow from an HTTP endpoint down to the database layer, and receives a verified walkthrough grounded in the actual repository files. Second, targeted bug fixes with regression tests: paste a real error log, let the agent locate the offending handler, write a failing unit test, patch the root cause, and confirm the suite turns green. Third, pre-PR quality sweeps: run a custom skill that checks naming conventions, documentation updates, and broken links before requesting human review.
+Teams adopt Antigravity Chat fastest when they start with concrete, repeatable engineering chores rather than vague open-ended experiments. Three starter workflows consistently deliver immediate payoff. First, onboarding onto unfamiliar services: a new engineer opens Antigravity Chat, asks it to map request flow from an HTTP endpoint down to the database layer, and receives a verified walkthrough grounded in the actual repository files. Second, targeted bug fixes with regression tests: paste a real error log, let the agent locate the offending handler, write a failing unit test, patch the root cause, and confirm the suite turns green. Third, pre-PR quality sweeps: run a custom skill that checks naming conventions, documentation updates, and broken links before requesting human review.
 
-When rolling out Antigravity Chat across a team of five or fifty developers, publish a shared GEMINI.md file in each core repository during week one. Hold a short thirty-minute working session where engineers practice reviewing an implementation plan artifact before clicking approve, launching a read-only research subagent, and running a live browser check through Chrome DevTools. Within two weeks, teams typically move from ad-hoc chat prompts to disciplined, repeatable agentic sessions that cut routine maintenance time while raising test coverage across the codebase.
+When rolling out Antigravity Chat across a team of five or fifty developers, begin by publishing a shared GEMINI.md file in each core repository. Run a focused working session where engineers practice reviewing an implementation plan artifact before clicking approve, launching a read-only research subagent, and running a live browser check through Chrome DevTools. Teams quickly progress from ad-hoc chat prompts to disciplined, repeatable agentic sessions that cut routine maintenance time while raising test coverage across the codebase.
+
+---
+
+## Context Mentions, Permission Policies, and the Auxiliary Pane
+
+Getting crisp, repeatable outputs from Antigravity Chat depends on controlling both what enters the conversation and what boundaries govern tool execution. Modern Antigravity desktop and IDE chat surfaces combine precision context targeting, a dedicated workspace Auxiliary Pane, and layered global-to-project security policies:
+
+- Precision @ Mentions and Media Drops: Typing @ opens a structured context picker so you can attach exact source files, folders, prior conversations, live terminal output, workspace rules, or specific MCP servers and tools without copying text. Drag-and-drop screenshots, architecture diagrams, or UI mockups directly onto the chat canvas for multimodal inspection.
+- The Auxiliary Pane for Live State: Instead of losing plans and logs in long chat scrollback, the Auxiliary Pane tracks running subagents, background tasks, scheduled cron automations, modified file diffs, active terminal panes, and pinned Artifacts side by side with the conversation.
+- Layered Global and Project-Level Permissions: Teams configure tool execution policies (proceed-in-sandbox, request-review, strict, or always-proceed), terminal sandboxing, non-workspace file access (allow, ask, deny), internet access policies, command allowlists and denylists, and browser domain allowlists. Project-level overrides take precedence over global defaults whenever a sensitive repository is active, following the controls in the Antigravity permissions and sandbox documentation.
+- Scheduled Tasks and Background Execution: Recurring operational checks - such as morning dependency audits, log triage, or status summaries - can be configured as scheduled tasks or delayed timers that wake the agent asynchronously and notify you once verification completes.
+
+#### `project-permissions-profile.json`
+```python
+{
+  "toolExecutionPolicy": "proceed-in-sandbox",
+  "terminalSandbox": true,
+  "nonWorkspaceFileAccess": "deny",
+  "internetAccessPolicy": "ask",
+  "commandAllowlist": [
+    "pytest",
+    "ruff check",
+    "npm test"
+  ],
+  "commandDenylist": [
+    "git push --force",
+    "rm -rf /"
+  ],
+  "browserAllowlist": [
+    "http://localhost:3000",
+    "http://127.0.0.1:8000"
+  ]
+}
+```
+
+---
+
+## Comparing Antigravity Chat Primitives: Rules, Skills, Artifacts, and Subagents
+
+Each workspace primitive solves a distinct problem in agentic conversations - combining them cleanly keeps sessions fast, accurate, and easy to audit:
+
+---
+
+## Practical Questions When Running Antigravity Chat
+
+When should I delegate to a read-only research subagent instead of searching in the main chat? Delegate whenever exploration requires reading more than five to ten files or searching across multiple modules. The subagent absorbs the noisy search results in its own context window and returns a tight, citation-backed brief to your main thread.
+
+How do /compact and fresh threads work together to prevent context drift? Use /compact mid-feature when a single ticket spans many tool iterations and you want to preserve key decisions without carrying stale terminal logs. Once a feature is verified and merged, open a fresh conversation thread for the next ticket so unrelated history never biases new edits.
+
+What happens when project-level permissions conflict with global settings? Project-level settings always take precedence while that repository is active. This lets you keep a convenient global workflow for personal prototypes while enforcing strict sandboxing, denied external file access, and explicit network approval on production client repositories.
+
+Can Antigravity Chat run automated checks while I am away from the keyboard? Yes. Use /schedule or the Scheduled Tasks view to register recurring cron workflows or one-shot delayed checks, paired with strict sandbox and command allowlist rules so unattended runs remain completely safe.
 
 ---
 
@@ -105,6 +157,10 @@ When rolling out Antigravity Chat across a team of five or fifty developers, pub
 Official documentation, research papers, and developer guides referenced in this article:
 
 - Google Antigravity Platform - Official overview of Google Antigravity, agentic chat, and workspace orchestration.
+- Google Antigravity Rules Documentation - Guide to global and repository rules, glob triggers, and file includes.
+- Google Antigravity Permissions & Security Docs - Configuring execution policies, allowlists, and project-level overrides.
+- Google Antigravity Terminal Sandbox Docs - Technical details on isolated command execution and workspace boundaries.
+- Model Context Protocol (MCP) Specification - Open standard connecting Antigravity Chat to local tools and enterprise data sources.
 - Google Gemini API Documentation - Technical documentation for tool calling, structured outputs, and agentic workflows.
 - Chrome DevTools Protocol - Underlying browser inspection and automation protocol used for live web verification.
 - Google DeepMind Gemini Overview - Core model capabilities powering reasoning and tool use in Antigravity.

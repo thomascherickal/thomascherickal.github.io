@@ -247,12 +247,12 @@
           <li><a href="../claude-training/claude-101.html">Claude 101</a></li>
           <li><a href="../claude-training/claude-projects.html">Claude Projects</a></li>
           <li><a href="../claude-training/claude-code.html">Claude Code</a></li>
+          <li><a href="../claude-training/claude-code-mode.html">Claude Code Mode</a></li>
           <li><a href="../claude-training/claude-desktop.html">Claude Desktop</a></li>
           <li><a href="../claude-training/claude-office.html">Claude Office</a></li>
-          <li><a href="../claude-training/claude-skills.html">Claude Skills</a></li>
           <li><a href="../claude-training/claude-mcp.html">Claude MCP</a></li>
           <li><a href="../claude-training/claude-plugins.html">Claude Plugins</a></li>
-          <li><a href="../claude-training/claude-connectors.html">Claude Connectors</a></li>
+          <li><a href="../claude-training/claude-apps.html">Claude Apps</a></li>
           <li><a href="../claude-training/claude-orchestration.html">Claude Orchestration</a></li>
           <li><a href="../claude-training/claude-design.html">Claude Design</a></li>
           <li><a href="../claude-training/claude-science.html">Claude for Science</a></li>
@@ -304,6 +304,7 @@
     </ul>
   </nav>
   <!-- END:HEADER -->
+  <a aria-label="Back to top" class="back-top" href="#top" id="backTop" title="Back to top">↑</a>
 
 <main class="container single-column-article" id="main">
 <header class="hero content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);text-align:left;display:flex;flex-direction:column;gap:1.25rem;padding:2rem 2.25rem;margin-top:110px;margin-bottom:2rem;">
@@ -322,7 +323,10 @@
 <a class="toc-link gold-link" href="#commercial-governance">4. Commercial Production Workflows, Watermarking, and Quality Gates</a>
 <a class="toc-link gold-link" href="#production-playbook-and-pitfalls">5. Step-by-Step Commercial Production Playbook and Common Pitfalls</a>
 <a class="toc-link gold-link" href="#team-workflow-and-scaling">6. Scaling Creative Multimodal Workflows Across Marketing and Product Teams</a>
-<a class="toc-link gold-link" href="#references">7. References</a>
+<a class="toc-link gold-link" href="#live-api-world-models-and-files">7. Real-Time Multimodality: Gemini Live API, Files API, and Genie World Models</a>
+<a class="toc-link gold-link" href="#multimodal-capability-matrix">8. Google Multimodal Architecture and API Selection Matrix</a>
+<a class="toc-link gold-link" href="#multimodality-faq">9. Practical Questions on Multimodal Gemini Pipelines</a>
+<a class="toc-link gold-link" href="#references">10. References</a>
 </div>
 </article>
 
@@ -434,14 +438,138 @@ graph TD
 <p>By treating multimodal AI as a structured studio pipeline rather than isolated one-off prompts, organizations turn rapid creative exploration into repeatable, brand-safe commercial output week after week.</p>
 </article>
 
+<article class="content-card" id="live-api-world-models-and-files" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2>Real-Time Multimodality: Gemini Live API, Files API, and Genie World Models</h2>
+<p>Beyond offline creative asset batches, Google's multimodal platform powers real-time perception, long-form video intelligence, and interactive world simulation through unified developer APIs.</p>
+<ul style="padding-left:1.5rem;color:var(--text-secondary);line-height:1.8;margin-bottom:1.25rem;">
+<li><strong>Gemini Live API (Bidirectional WebSocket Streaming):</strong> Built over persistent WebSockets (<code>BidiGenerateContent</code>), the <a class="gold-link" href="#references">Gemini Live API</a> streams raw audio and live camera or screen frames bidirectionally with sub-second responsiveness. Because it runs native speech-to-speech audio models rather than chained ASR-LLM-TTS pipelines, it supports affective tone adaptation, natural mid-sentence interruption ("barge-in"), proactive audio responses, and asynchronous function calling mid-conversation.</li>
+<li><strong>Native Video, Audio, Image, and PDF Understanding via the Files API:</strong> For assets too large for inline base64 payloads, the <a class="gold-link" href="#references">Gemini Files API</a> ingests multi-gigabyte videos, multi-hour audio recordings, and dense PDFs once so applications can query them repeatedly. Gemini reasons across visual frames, on-screen text, and audio tracks simultaneously - returning exact <code>MM:SS</code> event timestamps and configurable frame-sampling density without separate OCR or transcription pipelines.</li>
+<li><strong>Native Conversational Editing and Omni Video Workflows:</strong> Developers combine native multi-turn image editing directly in Gemini with clip-based video generation and conversational video editing across <strong>Veo</strong> and <strong>Gemini Omni Flash</strong>, plus interactive musical scoring with <strong>Lyria</strong>.</li>
+<li><strong>Genie Interactive World Models:</strong> Pushing past fixed video clips, <a class="gold-link" href="#references">Google DeepMind's Genie</a> generates interactive, spatially consistent simulated environments with synchronized audio from text prompts or reference images - allowing real-time user control and mid-session prompt steering for prototyping, gaming, and embodied agent training.</li>
+</ul>
+<p>The Python snippet below demonstrates both Files API timestamped video inspection and an asynchronous Gemini Live API session using the official <code>google-genai</code> SDK:</p>
+<div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid var(--cyan);border-radius:10px;margin:1.5rem 0;overflow:hidden;">
+<div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.55rem 1rem;background:rgba(255,255,255,0.04);border-bottom:1px solid rgba(255,255,255,0.08);">
+<span style="font-family:var(--font-mono);font-size:0.8rem;color:var(--cyan);">gemini_files_and_live_api.py</span>
+<button class="copy-btn" onclick="copyCode(this)" style="text-decoration:none !important;" type="button">Copy</button>
+</div>
+<pre style="white-space:pre-wrap;word-break:break-word;overflow-x:hidden;padding:1rem;margin:0;color:#e2e8f0;font-size:0.88rem;"><code>import asyncio
+from google import genai
+from google.genai import types
+
+client = genai.Client()
+
+# 1. Native video understanding with exact MM:SS timestamps via Files API
+video_file = client.files.upload(file="factory_line_audit.mp4")
+audit = client.models.generate_content(
+    model="gemini-4-neon",
+    contents=[
+        video_file,
+        "List every safety anomaly with exact MM:SS timestamps and visual evidence.",
+    ],
+)
+print(audit.text)
+
+# 2. Real-time bidirectional audio/vision session via Gemini Live API
+async def run_live_copilot() -&gt; None:
+    config = types.LiveConnectConfig(
+        response_modalities=["AUDIO"],
+        system_instruction="Act as a concise live field-inspection copilot.",
+    )
+    async with client.aio.live.connect(
+        model="gemini-2.5-flash",
+        config=config,
+    ) as session:
+        await session.send_client_content(
+            turns=types.Content(
+                role="user",
+                parts=[types.Part(text="Ready for live camera inspection.")],
+            ),
+            turn_complete=True,
+        )
+        async for message in session.receive():
+            if message.server_content and message.server_content.turn_complete:
+                break
+
+# asyncio.run(run_live_copilot())</code></pre>
+</div>
+</article>
+
+<article class="content-card" id="multimodal-capability-matrix" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2>Google Multimodal Architecture and API Selection Matrix</h2>
+<p>Select the exact multimodal engine, transport pattern, and control primitive based on whether your workload requires passive understanding, live streaming interaction, or high-craft media synthesis:</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.9rem;color:#e2e8f0;">
+<thead>
+<tr style="border-bottom:2px solid rgba(251,191,36,0.45);text-align:left;color:var(--gold);">
+<th style="padding:0.75rem;">Multimodal Engine</th>
+<th style="padding:0.75rem;">Input / Output Modalities</th>
+<th style="padding:0.75rem;">Transport &amp; Latency</th>
+<th style="padding:0.75rem;">Primary Enterprise &amp; Product Use Cases</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Gemini Native Understanding + Files API</td>
+<td style="padding:0.75rem;">Video, audio, images, PDFs -> text, structured JSON</td>
+<td style="padding:0.75rem;">REST / Files API upload, batch or interactive turns</td>
+<td style="padding:0.75rem;">Video QA auditing, meeting synthesis, PDF table extraction</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Gemini Live API</td>
+<td style="padding:0.75rem;">Continuous mic audio + camera/screen -> live audio &amp; tools</td>
+<td style="padding:0.75rem;">Bidirectional WebSocket, sub-second with barge-in</td>
+<td style="padding:0.75rem;">Voice copilots, live industrial inspection, interactive tutoring</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Native Image &amp; Imagen</td>
+<td style="padding:0.75rem;">Text + reference images -> photorealistic &amp; edited images</td>
+<td style="padding:0.75rem;">Request/response API with SynthID watermarking</td>
+<td style="padding:0.75rem;">Campaign keyframes, localized ad variants, product mockups</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Veo &amp; Gemini Omni Flash</td>
+<td style="padding:0.75rem;">Text, keyframes, or source video -> HD video clips &amp; edits</td>
+<td style="padding:0.75rem;">Async generation jobs &amp; multi-turn video editing</td>
+<td style="padding:0.75rem;">Product trailers, storyboard animation, first-to-last-frame transitions</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Lyria Audio &amp; Music</td>
+<td style="padding:0.75rem;">Mood, tempo &amp; instrument prompts -> original music &amp; stems</td>
+<td style="padding:0.75rem;">Batch generation or real-time WebSocket music streaming</td>
+<td style="padding:0.75rem;">Royalty-safe commercial beds, adaptive soundscapes, podcasts</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Genie World Models</td>
+<td style="padding:0.75rem;">Text or image seed + live actions -> interactive 24 fps world</td>
+<td style="padding:0.75rem;">Real-time streaming session (WebRTC / WebSocket)</td>
+<td style="padding:0.75rem;">Interactive digital twins, spatial prototyping, agent simulation</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+
+<article class="content-card" id="multimodality-faq" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2>Practical Questions on Multimodal Gemini Pipelines</h2>
+<p><strong>When should developers use the Gemini Files API instead of inline media bytes?</strong> Use inline payloads only for small single-request images or short audio clips under standard request-size limits. For multi-minute videos, long audio tracks, multi-hundred-page PDFs, or any asset you plan to query across multiple turns, upload once through the Files API (supporting multi-gigabyte media) and pass the returned file URI, as detailed in the <a class="gold-link" href="#references">Gemini API Video Understanding Guide</a>.</p>
+<p><strong>Why does the Gemini Live API feel more responsive than chained speech-to-text and text-to-speech pipelines?</strong> Legacy voice pipelines wait for full sentence transcription, send text to an LLM, and then synthesize speech from scratch - compounding latency and erasing vocal nuance. Native audio Live API sessions process audio tokens directly over a persistent WebSocket, enabling natural interruption, tone awareness, and real-time tool invocation.</p>
+<p><strong>How does SynthID watermarking protect commercial transparency?</strong> SynthID embeds an imperceptible digital signal directly into the pixels of generated images and video frames or the audio waveform of Lyria tracks. The watermark survives common cropping, compression, and color adjustments so teams can verify AI provenance downstream.</p>
+<p><strong>How do Veo video generation and Genie interactive world models differ in production?</strong> Veo and Gemini Omni Flash render directed, fixed-timeline video clips ideal for marketing, film pre-visualization, and automated video editing. Genie generates live, stateful interactive environments that respond frame-by-frame to user keyboard or action inputs in real time.</p>
+</article>
+
 <article class="content-card" id="references" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <h2>References</h2>
 <p>Official documentation, research papers, and developer guides referenced in this article:</p>
 <ul style="display:flex;flex-direction:column;gap:0.65rem;padding-left:1.25rem;margin-top:1rem;">
 <li><a class="gold-link" href="https://deepmind.google/technologies/veo/" rel="noopener noreferrer" target="_blank">Google DeepMind - Veo Video Generation</a> - Official overview of Veo high-definition video synthesis capabilities.</li>
 <li><a class="gold-link" href="https://deepmind.google/technologies/imagen-3/" rel="noopener noreferrer" target="_blank">Google DeepMind - Imagen and Lyria</a> - Official overview of Google's generative image and audio research.</li>
+<li><a class="gold-link" href="https://deepmind.google/models/genie/" rel="noopener noreferrer" target="_blank">Google DeepMind - Genie World Models</a> - Interactive generative environments with real-time action control and native audio.</li>
 <li><a class="gold-link" href="https://deepmind.google/technologies/synthid/" rel="noopener noreferrer" target="_blank">Google DeepMind - SynthID Watermarking</a> - Technical overview of imperceptible watermarking for AI-generated media.</li>
 <li><a class="gold-link" href="https://ai.google.dev/gemini-api/docs" rel="noopener noreferrer" target="_blank">Google Gemini API Multimodal Docs</a> - Developer guides for image, audio, and video understanding and generation.</li>
+<li><a class="gold-link" href="https://ai.google.dev/gemini-api/docs/live" rel="noopener noreferrer" target="_blank">Gemini Live API Documentation</a> - WebSocket protocol guide for bidirectional voice, video, and real-time function calling.</li>
+<li><a class="gold-link" href="https://ai.google.dev/gemini-api/docs/video-understanding" rel="noopener noreferrer" target="_blank">Gemini API Video Understanding Guide</a> - Timestamped cross-modal video analysis, frame sampling, and resolution controls.</li>
+<li><a class="gold-link" href="https://ai.google.dev/gemini-api/docs/files" rel="noopener noreferrer" target="_blank">Gemini Files API Reference</a> - Uploading, managing, and reusing large multimodal media assets across prompts.</li>
 </ul>
 </article>
 

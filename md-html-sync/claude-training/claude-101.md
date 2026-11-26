@@ -15,8 +15,10 @@ Many teams first meet Claude as a chat window for drafting emails or summarizing
 3. Tool Calling and the Model Context Protocol
 4. Computer Use and Claude Code in Daily Engineering
 5. Building Reliable Agent Systems and Avoiding Failure Modes
-6. A Practical Four-Week Adoption Roadmap
-7. Authoritative References
+6. Adaptive Thinking, Effort Controls, and Modern Platform Primitives
+7. Claude Platform Capabilities and Execution Surface Matrix
+8. Practical Questions When Adopting the Claude Platform
+9. Authoritative References
 
 ---
 

@@ -106,11 +106,73 @@ Start with three high-frequency workflows this week, package them cleanly into v
 
 ---
 
+## Open SKILL.md Portability Across Antigravity, Gemini CLI, and Official Skill Registries
+
+The SKILL.md format has converged into a cross-tool open standard across Google Antigravity, Gemini CLI, Google AI Studio workflows, and compatible coding agents. Because every skill is simply a directory containing Markdown instructions, YAML frontmatter, optional scripts/, and references/, teams write an operational playbook once and reuse it cleanly across desktop IDEs, terminal sessions, and automated CI agents.
+
+Modern runtimes resolve skills across layered discovery scopes so personal utilities, repository standards, and enterprise plugins coexist cleanly without colliding:
+
+- Workspace Scope (Repository-Local): Skills checked directly into a repository (such as .agents/skills/ or workspace plugin directories) travel with Git history so every contributor and CI agent follows identical migration, linting, or deployment conventions.
+- User Scope (Developer-Global): Skills placed under user configuration roots (such as ~/.gemini/skills/ or ~/.agents/skills/) remain available across all local repositories for personal workflows like incident triage, note indexing, or writing reviews.
+- First-Party Official Skill Registries: To prevent coding assistants trained on static datasets from emitting outdated SDK syntax, Google maintains official skill repositories including google-gemini/gemini-skills for the Gemini Developer API and google/skills for the Gemini Enterprise Agent Platform.
+- Security and Least-Privilege Governance: Before enabling a third-party skill in an enterprise environment, review its bundled scripts/ for shell injection, network egress, or credential harvesting, pin repository commits rather than floating branches, and disable unused heavy skills per workspace using scoped skill controls.
+
+#### `skill_lifecycle_and_audit.sh`
+```python
+# Recommended portable skill folder layout
+# my-skill/
+#   SKILL.md            # YAML frontmatter (name, description) + procedural workflow
+#   scripts/            # Deterministic validators, formatters, or schema checks
+#   references/         # Long lookup tables loaded only on demand
+#   assets/             # Static templates or sample fixtures
+
+# 1. Inspect installed skills in Gemini CLI / terminal agent sessions
+gemini skills list
+
+# 2. Install an official skill repository scoped to the current workspace
+gemini skills install https://github.com/google-gemini/gemini-skills --scope workspace
+
+# 3. Pre-merge CI check: verify every SKILL.md has valid frontmatter and no hardcoded home paths
+python3 -c '
+import pathlib, re, sys
+for skill in pathlib.Path(".agents/skills").rglob("SKILL.md"):
+    text = skill.read_text(encoding="utf-8")
+    if not text.startswith("---\n") or "name:" not in text[:400] or "description:" not in text[:600]:
+        sys.exit(f"Invalid YAML frontmatter in {skill}")
+    if re.search(r"/Users/|/home/[a-zA-Z0-9_-]+/", text):
+        sys.exit(f"Hardcoded absolute user path found in {skill}")
+print("All workspace skills passed frontmatter and portability checks.")
+'
+```
+
+---
+
+## Comparing Project Rules, Gemini Skills, MCP Servers, and Plugins
+
+A common architectural mistake is stuffing every rule, API connector, and runbook into a single file. Each customization layer in the Gemini and Antigravity ecosystem solves a distinct problem:
+
+---
+
+## Practical Questions When Designing and Governing Gemini Skills
+
+When should an instruction live in GEMINI.md versus a dedicated SKILL.md? Put a rule in GEMINI.md only if it applies to nearly every task in the repository, such as file naming conventions or test commands. Move any workflow that applies only to specific scenarios - like auditing OpenAPI specs, preparing a release, or debugging accessibility - into a SKILL.md so its instructions consume zero tokens during unrelated turns.
+
+How do we keep SKILL.md concise when a workflow requires dense rubrics or schemas? Keep SKILL.md focused on the decision tree, preconditions, and exact command invocations, and move long checklists, error catalogs, or API schemas into a sibling references/ directory. Instruct the agent inside SKILL.md to read a specific reference file only when that branch of the workflow is triggered.
+
+How should security teams vet external or community skills before adoption? Treat an untrusted skill like a third-party build script: inspect SKILL.md for prompt-injection instructions that bypass approval prompts, audit every file in scripts/ for outbound network calls or secret reads, pin installations to an audited commit hash, and run bundled helper scripts inside a sandboxed environment.
+
+Can one skill directory serve both Google Antigravity and terminal agents like Gemini CLI? Yes. Because both environments follow the open SKILL.md frontmatter convention and relative directory layout (scripts/, references/, assets/), a single version-controlled skill folder works seamlessly across Antigravity workspaces, Gemini CLI sessions, and CI automation runners as long as scripts avoid machine-specific paths.
+
+---
+
 ## References
 
 Official documentation, research papers, and developer guides referenced in this article:
 
 - Google Antigravity Platform - Official platform documentation for Antigravity workspaces, skills, and plugins.
+- Official Gemini API Agent Skills (google-gemini/gemini-skills) - First-party SKILL.md packages keeping coding assistants synchronized with current Gemini SDK patterns.
+- Google Enterprise Agent Skills (google/skills) - Official skill library for Google Cloud and Gemini Enterprise Agent Platform workflows.
+- Gemini CLI Agent Skills Documentation - Guide to progressive disclosure, workspace scoping, and terminal skill management.
 - Google Gemini API Documentation - Guides for structured tool use and agentic workflow design.
 - Google Gemini Cookbook - Open-source examples of modular agent patterns and helper scripts.
 - YAML Specification - Reference for valid YAML frontmatter used in SKILL.md headers.

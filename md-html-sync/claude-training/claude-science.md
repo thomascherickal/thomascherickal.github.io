@@ -18,7 +18,9 @@ Scientific research demands two things that rarely come together easily: rapid e
 6. Preparing Reproducible Code and Reviewer-Response Packages
 7. Lab Collaboration, Data Integrity, and Ethical Research Guardrails
 8. Frequently Asked Questions on Scientific Workflows with Claude
-9. Authoritative References
+9. Claude for Life Sciences, Claude Science Workbench, and Native Connectors
+10. Scientific Ecosystem Connectors and Verification Matrix
+11. Authoritative References
 
 ---
 

@@ -116,11 +116,88 @@ Before wiring Gemini Argon into a production workflow, run through four quick en
 
 ---
 
+## Unified Context Window, Thinking Levels, Long Decode, and Interactions API Patterns
+
+Architecting production workloads on Gemini Argon requires understanding four core runtime behaviors documented in the Gemini Argon model guide and the Gemini Long Decode guide:
+
+- Unified 1,048,576-Token Context Budget: Gemini Argon allocates a single shared 1,048,576-token window across input tokens, internal thinking tokens, function calls, and final text output. Standard synchronous requests default to a 65,536-token output ceiling (32,768 tokens per non-streaming hop), and if input plus max_output_tokens exceeds the window, the API automatically caps output to the remaining headroom.
+- Reasoning Effort via thinking_level: Rather than tuning legacy sampling parameters like temperature, top_p, or top_k - which Argon ignores - developers steer reasoning depth with thinking_level across low, medium (default), and high. Reserve high for dense algorithmic, legal, financial, or distributed-systems tasks where thorough backtracking pays off.
+- Long Decode and Background Execution: When a formal proof, full-repository audit, or exhaustive technical dossier needs more than 64K tokens of combined thinking and output in a single response, Argon supports Long Decode up to the remaining unified context window. Running via the Interactions API with background=True executes continuation hops server-side for up to 24 hours so client network drops cannot interrupt progress.
+- Implicit Durable Caching and Consumption Tiers: Gemini Argon uses implicit context caching (with durable prefix caching enabled by default) rather than manual explicit cache handles. Keeping static system instructions, policy manuals, and schemas at the front of the prompt - and chaining multi-turn sessions via previous_interaction_id - maximizes cache hit rates. Teams can also route non-urgent batch audits through the Batch API or Flex inference while reserving Priority inference for latency-critical escalations.
+
+#### `argon_interactions_long_decode.py`
+```python
+import time
+from google import genai
+
+client = genai.Client()
+
+# Run a high-reasoning, server-managed background Long Decode job on Gemini Argon
+job = client.interactions.create(
+    model="gemini-4-argon",
+    input=(
+        "Audit the attached multi-region consensus specification for split-brain scenarios, "
+        "fencing-token violations, and recovery invariants. Provide a formal failure table "
+        "and minimal protocol patches."
+    ),
+    generation_config={
+        "thinking_level": "high",
+        "max_output_tokens": 131072,
+    },
+    tools=[{"type": "file_search", "file_search_store_names": ["filesearchstores/consensus-specs"]}],
+    background=True,
+)
+
+while True:
+    result = client.interactions.get(id=job.id)
+    if result.status == "completed":
+        print(result.output_text)
+        break
+    if result.status in ("failed", "cancelled"):
+        raise RuntimeError(f"Argon interaction ended with status: {result.status}")
+    time.sleep(10)
+
+# Continue statefully on the same server-side context using previous_interaction_id
+summary = client.interactions.create(
+    model="gemini-4-argon",
+    previous_interaction_id=result.id,
+    input="Convert the critical findings into a prioritized remediation checklist for Sprint 14.",
+    generation_config={"thinking_level": "medium"},
+)
+print(summary.output_text)
+```
+
+---
+
+## Comparing Gemini Argon Against Sibling Gemini Models
+
+Mature AI architectures route every request to the most cost-effective model that clears the quality bar. Compare Gemini Argon against its sibling models across thinking controls, context accounting, and native capabilities before locking in production routing rules:
+
+Note that Gemini Argon focuses strictly on multimodal understanding (text, image, video, audio, and PDF inputs) and text/structured outputs; for native image generation, speech synthesis, or real-time bidirectional Live API streaming, route those specialized steps to dedicated media or Live models.
+
+---
+
+## Practical Questions When Deploying Gemini Argon
+
+How does the unified 1,048,576-token context window affect output capacity? Because input, internal reasoning tokens, and final output share one 1,048,576-token budget, sending an 800K-token prompt leaves roughly 248K tokens for combined thinking and answer text. Always count input tokens upfront and keep prompts focused on high-signal files so Argon retains generous headroom for deep reasoning.
+
+Why are custom temperature, top_p, and top_k values ignored on Gemini Argon? Argon controls answer rigor through internal reasoning effort rather than surface token randomness. Use thinking_level (low, medium, or high) alongside explicit JSON schemas (structured outputs) and clear acceptance criteria to govern determinism and depth.
+
+When should we enable background=True Long Decode instead of a standard request? Keep standard synchronous calls for prompts that finish cleanly under 64K tokens of combined thinking and output. Switch to background=True on the Interactions API whenever an audit, formal verification, or deep multi-document synthesis risks exceeding 64K tokens or running longer than standard HTTP client timeouts.
+
+How do we prevent runaway token spend in multi-turn Argon agent loops? Place unchanging system instructions, policy rubrics, and shared repository summaries at the exact beginning of your context so implicit durable caching triggers reliably, chain turns via previous_interaction_id, and route routine triage or formatting sub-tasks to Gemini Hydrogen or Gemini Neon while escalating only high-stakes planning and verification to Argon.
+
+---
+
 ## References
 
 Official documentation, research papers, and developer guides referenced in this article:
 
 - Google DeepMind - Gemini Models - Official overview of Gemini flagship reasoning models and multimodal architecture.
+- Gemini Argon Model Guide - Official API capabilities, unified context limits, thinking levels, and consumption options.
+- Google DeepMind - Gemini Argon Model Card - Official technical model card and safety evaluation documentation.
+- Gemini API Long Decode Guide - Background execution and client-side continuation patterns for outputs exceeding 64K tokens.
+- Gemini API Thinking Levels Guide - Controlling reasoning effort, latency, and token budgets across Gemini models.
 - Gemini API Context Caching - Developer guide for caching large files and system instructions across agent turns.
 - Gemini API Function Calling - Documentation for defining typed tool schemas and handling tool execution loops.
 - Google GenAI Python SDK - Official Python client library for production Gemini integrations.

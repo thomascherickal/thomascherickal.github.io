@@ -247,12 +247,12 @@
           <li><a href="../claude-training/claude-101.html">Claude 101</a></li>
           <li><a href="../claude-training/claude-projects.html">Claude Projects</a></li>
           <li><a href="../claude-training/claude-code.html">Claude Code</a></li>
+          <li><a href="../claude-training/claude-code-mode.html">Claude Code Mode</a></li>
           <li><a href="../claude-training/claude-desktop.html">Claude Desktop</a></li>
           <li><a href="../claude-training/claude-office.html">Claude Office</a></li>
-          <li><a href="../claude-training/claude-skills.html">Claude Skills</a></li>
           <li><a href="../claude-training/claude-mcp.html">Claude MCP</a></li>
           <li><a href="../claude-training/claude-plugins.html">Claude Plugins</a></li>
-          <li><a href="../claude-training/claude-connectors.html">Claude Connectors</a></li>
+          <li><a href="../claude-training/claude-apps.html">Claude Apps</a></li>
           <li><a href="../claude-training/claude-orchestration.html">Claude Orchestration</a></li>
           <li><a href="../claude-training/claude-design.html">Claude Design</a></li>
           <li><a href="../claude-training/claude-science.html">Claude for Science</a></li>
@@ -304,8 +304,9 @@
     </ul>
   </nav>
   <!-- END:HEADER -->
+  <a aria-label="Back to top" class="back-top" href="#top" id="backTop" title="Back to top">↑</a>
 
-<main id="main">
+<main class="container single-column-article" id="main">
 <header class="hero content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <div class="hero-badge content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">CLAUDE OFFICE SUITE</div>
 <h1>Claude Office: Enterprise Spreadsheets, Decks & Document Automation</h1>
@@ -314,7 +315,7 @@
 <p class="hero-byline">By <strong>Thomas Cherickal</strong> - Generative AI Consultant &amp; The Digital Futurist</p>
 </header>
 
-<article class="article-body" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.25rem;">
+<article class="article-body">
 <div id="table-of-contents" aria-label="Table of contents" class="content-card toc-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <p class="article-p" style="font-size:1.02rem;color:#f1f5f9;">Knowledge workers spend half their week inside three file formats: spreadsheets, slide decks, and Word or PDF documents. Traditionally, AI assistants could only hand you raw text that you still had to copy, paste, and format by hand. Claude Office changes that equation by letting Claude create, edit, audit, and format real spreadsheets, presentations, and documents directly - turning rough notes and raw data into polished deliverables.</p>
 <div class="rule"></div>
@@ -327,6 +328,8 @@
 <li><a class="gold-link" href="#step-by-step-office-automation">Step-by-Step Workflow: From Raw Data to Finished Executive Pack</a></li>
 <li><a class="gold-link" href="#template-hygiene-for-teams">Maintaining Clean Corporate Templates for Consistent Output</a></li>
 <li><a class="gold-link" href="#rolling-out-claude-office">Rolling Out Claude Office Safely Across Business Teams</a></li>
+<li><a class="gold-link" href="#m365-addins-and-cowork">Claude for Microsoft 365 Add-Ins, Cowork Workflows, and Enterprise Controls</a></li>
+<li><a class="gold-link" href="#office-surface-matrix">Microsoft 365 Add-Ins, Cowork, and Automated Pipeline Comparison</a></li>
 <li><a class="gold-link" href="#office-faq">Quick Answers for Teams Adopting Claude Office</a></li>
 <li><a class="gold-link" href="#references">Authoritative References</a></li>
 </ol>
@@ -337,7 +340,7 @@
 
 <p class="article-p">Instead of treating a spreadsheet or slide deck as flat text, Claude Office operates on the real structural elements of each document: live formulas and cell references in Excel workbooks, master slide layouts and speaker notes in PowerPoint decks, and styled headings, tables, and tracked revisions in Word documents.</p>
 <p class="article-p">When you ask Claude to build a three-year cash-flow model, it does not hardcode static numbers - it writes real dynamic formulas (<code>SUM</code>, <code>XLOOKUP</code>, margin percentages) so when your CFO changes a growth assumption in cell B4, every downstream total recalculates automatically. Similarly, when generating a client deck, Claude applies consistent typography, clean visual hierarchy, and concise slide takeaways rather than dumping walls of unformatted text.</p>
-<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.25rem;margin:1.5rem 0;"><div class="mermaid">
+<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.5rem;margin:1.75rem 0;"><div class="mermaid">
 flowchart TD
     I["Source Inputs
 (CSV Data + Meeting Notes + Brand Template)"] --> C["Claude Office Engine"]
@@ -406,7 +409,7 @@ wb.save(&quot;quarterly_variance_report.xlsx&quot;)</code></pre></div>
 <li><strong>Database to Weekly Excel Report:</strong> Query your analytics warehouse through a read-only SQL MCP tool, populate a formatted multi-tab workbook with live formulas, and post a short summary link in Slack for team review.</li>
 <li><strong>GitHub Milestones to Executive Memo:</strong> Summarize closed sprint issues from GitHub into a polished Word release brief for non-technical stakeholders.</li>
 </ol>
-<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.25rem;margin:1.5rem 0;"><div class="mermaid">
+<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.5rem;margin:1.75rem 0;"><div class="mermaid">
 graph TD
     S["Live Data Sources
 (CRM / SQL / GitHub via MCP)"] --> C["Claude Office Synthesis"]
@@ -475,18 +478,109 @@ verification:
 
 
 <section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="m365-addins-and-cowork">Claude for Microsoft 365 Add-Ins, Cowork Workflows, and Enterprise Controls</h2>
+<p class="article-p">Beyond standalone file generation, Anthropic provides native <strong>Claude for Microsoft 365</strong> task-pane add-ins distributed through Microsoft AppSource for Pro, Max, Team, and Enterprise workspaces. These native surfaces run directly inside your live Office documents so analysts, legal reviewers, and executives collaborate without exporting files back and forth:</p>
+<ul class="article-p" style="list-style-type:disc;padding-left:1.5rem;display:flex;flex-direction:column;gap:0.55rem;">
+<li><strong>Claude for Excel:</strong> Operates inside multi-tab workbooks, constructs auditable financial and operational models with live formulas, attaches cell-level citations to every analytical explanation, and updates scenario assumptions without breaking downstream sheet references.</li>
+<li><strong>Claude for PowerPoint:</strong> Builds and restructures decks directly against corporate slide masters (respecting approved layouts, typography, and brand color palettes) while inserting native, editable Office charts rather than static raster screenshots.</li>
+<li><strong>Claude for Word:</strong> Collaborates directly inside live documents by writing suggested revisions as native <strong>Word Tracked Changes</strong> and inline comment threads, letting legal and editorial reviewers accept or reject every edit like a human co-author.</li>
+<li><strong>Claude for Outlook:</strong> Triages high-volume inboxes, summarizes multi-party threads, drafts context-aware replies, and cross-references calendar availability before proposing meeting slots.</li>
+</ul>
+<h3>Claude Cowork and Cross-App Document Context</h3>
+<p class="article-p">Through <strong>Claude Cowork</strong> workflows and the official <strong>Microsoft 365 connector</strong>, context carries continuously across Excel, PowerPoint, Word, SharePoint, OneDrive, Outlook, and Teams while strictly honoring native Microsoft user access permissions. An analyst can audit a revenue forecast inside Excel, pull the verified figures directly into a PowerPoint board slide, and draft the accompanying Word executive memo within one continuous thread - eliminating version drift across deliverables.</p>
+<h3>Enterprise Governance, Admin Deployment, and Cloud Gateways</h3>
+<p class="article-p">Security and IT teams govern Claude across Microsoft 365 using three layered controls documented in the <a class="gold-link" href="#references">Microsoft 365 Admin Center deployment guide</a> and <a class="gold-link" href="#references">Anthropic Claude Help Center</a>:</p>
+<ul class="article-p" style="list-style-type:disc;padding-left:1.5rem;display:flex;flex-direction:column;gap:0.55rem;">
+<li><strong>Centralized Integrated Apps Deployment:</strong> Team and Enterprise administrators centrally deploy, scope to pilot security groups, or block Office add-ins via the Microsoft 365 Admin Center Integrated Apps console.</li>
+<li><strong>Entra Admin Consent for Write Scopes:</strong> While read-only indexing respects native SharePoint and OneDrive ACLs, write-capable connector actions (such as automated calendar scheduling or outbound email drafting) can be gated behind Microsoft Entra Global Administrator consent policies.</li>
+<li><strong>Commercial Confidentiality &amp; Enterprise Gateways:</strong> Team and Enterprise plans enforce commercial zero-training data guarantees, and regulated organizations can route Claude traffic through enterprise compliance boundaries on Amazon Bedrock, Google Vertex AI, or certified Microsoft Online Services gateways.</li>
+</ul>
+<div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid #38bdf8;border-radius:10px;margin:1.5rem 0;overflow:hidden;"><div style="background:#0b1220;padding:0.5rem 1rem;border-bottom:1px solid rgba(56,189,248,0.22);display:flex;justify-content:space-between;align-items:center;font-size:0.8rem;color:#94a3b8;"><span style="color:#fbbf24;font-weight:600;">Enterprise Microsoft 365 Add-In &amp; Cowork Rollout Policy</span><span>JSON</span></div><pre style="background:#040711;margin:0;padding:1.1rem 1.25rem;overflow-x:auto;color:#e2e8f0;font-size:0.86rem;line-height:1.55;"><code>{
+  &quot;tenant_rollout&quot;: {
+    &quot;deployment_channel&quot;: &quot;m365_admin_center_integrated_apps&quot;,
+    &quot;pilot_groups&quot;: [&quot;finance-fpna&quot;, &quot;legal-contracts&quot;, &quot;revops-analysts&quot;],
+    &quot;office_store_self_install&quot;: &quot;restricted_to_approved_catalog&quot;
+  },
+  &quot;connector_permissions&quot;: {
+    &quot;sharepoint_onedrive&quot;: &quot;read_only_native_acl&quot;,
+    &quot;outlook_calendar_write&quot;: &quot;require_entra_admin_consent&quot;,
+    &quot;cloud_routing_boundary&quot;: &quot;enterprise_zero_training_gateway&quot;
+  },
+  &quot;deliverable_guardrails&quot;: {
+    &quot;excel&quot;: &quot;enforce_live_formulas_and_reconciliation_tab&quot;,
+    &quot;word&quot;: &quot;require_tracked_changes_for_contract_edits&quot;,
+    &quot;powerpoint&quot;: &quot;lock_to_approved_corporate_slide_master&quot;
+  }
+}</code></pre></div>
+</section>
+
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="office-surface-matrix">Microsoft 365 Add-Ins, Cowork, and Automated Pipeline Comparison</h2>
+<p class="article-p">Match each Microsoft 365 surface and workflow mode to the right document lifecycle and enterprise review control:</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.9rem;color:#e2e8f0;">
+<thead>
+<tr style="border-bottom:2px solid rgba(251,191,36,0.45);text-align:left;color:var(--gold);">
+<th style="padding:0.75rem;">Office Surface</th>
+<th style="padding:0.75rem;">Native Document Capabilities</th>
+<th style="padding:0.75rem;">Review &amp; Audit Mechanism</th>
+<th style="padding:0.75rem;">Enterprise Governance Control</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Claude for Excel</td>
+<td style="padding:0.75rem;">Multi-tab modeling, live formulas, assumption sensitivity updates</td>
+<td style="padding:0.75rem;">Cell-level citations and reconciliation check tabs</td>
+<td style="padding:0.75rem;">M365 Integrated Apps group scoping + zero-training guarantee</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Claude for PowerPoint</td>
+<td style="padding:0.75rem;">Slide master adherence, deck restructuring, native editable charts</td>
+<td style="padding:0.75rem;">Visual layout scan and master template compliance</td>
+<td style="padding:0.75rem;">Shared corporate <code>.pptx</code> master locked in team Projects</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Claude for Word</td>
+<td style="padding:0.75rem;">Clause redlining, policy drafting, structured executive memos</td>
+<td style="padding:0.75rem;">Native Word Tracked Changes and inline comment threads</td>
+<td style="padding:0.75rem;">Mandatory human accept/reject sign-off before publication</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Claude for Outlook</td>
+<td style="padding:0.75rem;">Thread triage, structured summaries, draft responses, scheduling</td>
+<td style="padding:0.75rem;">Draft-only review before external transmission</td>
+<td style="padding:0.75rem;">Entra admin consent required for write and calendar scopes</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Cowork &amp; M365 Connector</td>
+<td style="padding:0.75rem;">Cross-app synthesis across Excel, Deck, Word, SharePoint, and Teams</td>
+<td style="padding:0.75rem;">Single verified source workbook feeding downstream slides and memos</td>
+<td style="padding:0.75rem;">Native SharePoint/OneDrive ACL enforcement + cloud gateway routing</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <h2 id="office-faq">Quick Answers for Teams Adopting Claude Office</h2>
 <p class="article-p"><strong>Does Claude Office replace Excel or PowerPoint?</strong> No - it generates and edits native <code>.xlsx</code>, <code>.pptx</code>, and <code>.docx</code> files so your finance, sales, and legal teams keep working in the exact tools they already know.</p>
 <p class="article-p"><strong>How do we guarantee formula accuracy?</strong> Always ask Claude to use live spreadsheet formulas rather than hardcoded totals, and include a reconciliation check tab comparing grand totals back to your raw CSV export.</p>
+<p class="article-p"><strong>Can IT administrators centrally deploy or restrict Claude Office add-ins?</strong> Yes. Enterprise IT teams manage rollout through the Microsoft 365 Admin Center Integrated Apps console, scope access to specific security groups, and require Microsoft Entra Global Administrator consent before enabling write-capable connectors.</p>
+<p class="article-p"><strong>How does Claude for Word protect approved contract or policy wording?</strong> Suggested revisions are inserted as native Word Tracked Changes and comments rather than silent overwrites, allowing legal and compliance reviewers to inspect and approve every single clause change.</p>
 </section>
 
 <section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <h2 id="references">Authoritative References</h2>
 <ol class="references-list" style="display:flex;flex-direction:column;gap:0.75rem;padding-left:1.25rem;">
 <li><a class="gold-link" href="https://www.anthropic.com/claude" rel="noopener noreferrer" target="_blank">Anthropic Claude for Work</a> - Overview of Claude's enterprise productivity, document, and office automation capabilities.</li>
+<li><a class="gold-link" href="https://support.claude.com/" rel="noopener noreferrer" target="_blank">Anthropic Claude Help Center (Microsoft 365 &amp; Office Integrations)</a> - Official documentation covering Claude for Excel, PowerPoint, Word, Outlook, Cowork, and connector permissions.</li>
+<li><a class="gold-link" href="https://learn.microsoft.com/en-us/microsoft-365/admin/manage/manage-deployment-of-add-ins" rel="noopener noreferrer" target="_blank">Microsoft 365 Admin Center: Manage Add-In Deployment</a> - Enterprise IT controls for deploying, scoping, and restricting Integrated Apps across Microsoft 365 tenants.</li>
 <li><a class="gold-link" href="https://openpyxl.readthedocs.io/en/stable/" rel="noopener noreferrer" target="_blank">OpenPyXL Documentation</a> - Python library for programmatic Excel workbook generation with live formulas and styling.</li>
 <li><a class="gold-link" href="https://python-pptx.readthedocs.io/en/latest/" rel="noopener noreferrer" target="_blank">python-pptx Documentation</a> - Standard library for creating and updating native PowerPoint decks programmatically.</li>
 <li><a class="gold-link" href="https://modelcontextprotocol.io/" rel="noopener noreferrer" target="_blank">Model Context Protocol (MCP)</a> - Connecting live business systems cleanly into automated Claude Office workflows.</li>
+<li><a class="gold-link" href="claude-mcp.html">Claude MCP: Model Context Protocol &amp; Custom Tool Servers</a> - Architecture guide for bridging internal SQL warehouses, CRMs, and APIs into automated Office packs.</li>
 </ol>
 </section>
 </article>

@@ -247,12 +247,12 @@
           <li><a href="../claude-training/claude-101.html">Claude 101</a></li>
           <li><a href="../claude-training/claude-projects.html">Claude Projects</a></li>
           <li><a href="../claude-training/claude-code.html">Claude Code</a></li>
+          <li><a href="../claude-training/claude-code-mode.html">Claude Code Mode</a></li>
           <li><a href="../claude-training/claude-desktop.html">Claude Desktop</a></li>
           <li><a href="../claude-training/claude-office.html">Claude Office</a></li>
-          <li><a href="../claude-training/claude-skills.html">Claude Skills</a></li>
           <li><a href="../claude-training/claude-mcp.html">Claude MCP</a></li>
           <li><a href="../claude-training/claude-plugins.html">Claude Plugins</a></li>
-          <li><a href="../claude-training/claude-connectors.html">Claude Connectors</a></li>
+          <li><a href="../claude-training/claude-apps.html">Claude Apps</a></li>
           <li><a href="../claude-training/claude-orchestration.html">Claude Orchestration</a></li>
           <li><a href="../claude-training/claude-design.html">Claude Design</a></li>
           <li><a href="../claude-training/claude-science.html">Claude for Science</a></li>
@@ -304,8 +304,9 @@
     </ul>
   </nav>
   <!-- END:HEADER -->
+  <a aria-label="Back to top" class="back-top" href="#top" id="backTop" title="Back to top">↑</a>
 
-<main id="main">
+<main class="container single-column-article" id="main">
 <header class="hero content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <div class="hero-badge content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">CLAUDE DESKTOP &amp; COMPUTER USE</div>
 <h1>Claude Desktop: Native Workstation & MCP Workflows</h1>
@@ -314,7 +315,7 @@
 <p class="hero-byline">By <strong>Thomas Cherickal</strong> - Generative AI Consultant &amp; The Digital Futurist</p>
 </header>
 
-<article class="article-body" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.25rem;">
+<article class="article-body">
 <div id="table-of-contents" aria-label="Table of contents" class="content-card toc-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <p class="article-p" style="font-size:1.02rem;color:#f1f5f9;">Browser tabs get buried, sessions expire, and copying files into a web upload box breaks your focus. Claude Desktop turns Claude into a native workstation companion that sits one keyboard shortcut away, connects directly to your local folders and Model Context Protocol servers, and brings Computer Use to legacy apps that never had an API.</p>
 <div class="rule"></div>
@@ -326,6 +327,9 @@
 <li><a class="gold-link" href="#daily-automation-playbooks">Practical Desktop Automation Playbooks</a></li>
 <li><a class="gold-link" href="#security-and-sandbox-hygiene">Workstation Security, Sandboxing, and Failure Modes</a></li>
 <li><a class="gold-link" href="#personal-and-team-desktop-recipes">Step-by-Step Desktop Workflows for Founders and Operations Teams</a></li>
+<li><a class="gold-link" href="#cowork-mcpb-and-install-as-app">Cowork, MCP Bundles (<code>.mcpb</code>), Local Connectors, and Install as App</a></li>
+<li><a class="gold-link" href="#desktop-extension-surface-comparison">Comparing Claude Desktop Extension and Execution Surfaces</a></li>
+<li><a class="gold-link" href="#claude-desktop-faq">Practical Questions on Claude Desktop Extensions and Governance</a></li>
 <li><a class="gold-link" href="#references">Authoritative References</a></li>
 </ol>
 </div>
@@ -335,7 +339,7 @@
 
 <p class="article-p">Running Claude as a native desktop application changes how you interact with AI throughout the workday. Instead of switching browser windows and manually uploading documents every time you start a task, <a class="gold-link" href="#references">Claude Desktop</a> acts as a local control center. It remembers your approved local tool connections, launches cleanly via global keyboard shortcuts, and bridges cloud intelligence with files living safely on your own machine.</p>
 <p class="article-p">When you pair Claude Desktop with local <a class="gold-link" href="#references">Model Context Protocol (MCP)</a> servers, Claude can read your project notes, inspect local CSV exports, query a local SQLite database, or draft structured Markdown reports directly into your workspace folder - all while prompting you for permission before any sensitive write action occurs.</p>
-<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.25rem;margin:1.5rem 0;"><div class="mermaid">
+<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.5rem;margin:1.75rem 0;"><div class="mermaid">
 flowchart TD
     U["Global Shortcut / Desktop Prompt"] --> CD["Claude Desktop Native App"]
     CD --> F["Local Filesystem MCP
@@ -392,7 +396,7 @@ flowchart TD
 <p class="article-p">For decades, software automation hit a hard wall whenever a company relied on older desktop applications, vendor web portals, or government compliance sites that offered no API. <a class="gold-link" href="#references">Anthropic Computer Use</a> breaks through that wall by letting Claude see the screen, understand buttons and menus visually, move the cursor, type text, and verify the result on the next screenshot.</p>
 <p class="article-p">In businesses, Computer Use eliminates tedious swivel-chair work where staff manually copy numbers from an ERP screen into a shipping portal, reconcile vendor invoices across legacy accounting software, or run repetitive QA click-through tests on desktop builds. In your personal daily routine, it can organize cluttered download folders, fill repetitive expense reimbursement forms from receipt images, compare travel itineraries across booking portals, and prepare your morning briefing across multiple apps before you even pour coffee.</p>
 <p class="article-p">The key shift is that software no longer has to be rewritten to become AI-ready. Any interface a human can operate on screen can now be automated inside a supervised workflow.</p>
-<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.25rem;margin:1.5rem 0;"><div class="mermaid">
+<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.5rem;margin:1.75rem 0;"><div class="mermaid">
 graph TD
     T["User Defines Multi-App Routine"] --> S["Capture Current Screen State"]
     S --> R["Claude Plans Next GUI Action
@@ -464,12 +468,107 @@ graph TD
 </section>
 
 <section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="cowork-mcpb-and-install-as-app">Cowork, MCP Bundles (<code>.mcpb</code>), Local Connectors, and Install as App</h2>
+<p class="article-p">Modern Claude Desktop moves well beyond hand-edited JSON config files. Anthropic's desktop architecture now unifies autonomous local execution, 1-click packaged extensions, interactive <a class="gold-link" href="claude-apps.html">Claude Apps</a>, and standalone desktop app export, built on the open <a class="gold-link" href="#references">MCP Bundles (<code>.mcpb</code>) specification</a>:</p>
+<ul class="article-p" style="list-style-type:disc;padding-left:1.5rem;display:flex;flex-direction:column;gap:0.55rem;">
+<li><strong>Claude Cowork Local Execution:</strong> Available on paid plans inside Claude Desktop, Cowork executes multi-step autonomous assignments directly against approved local directories - organizing bulk assets, transforming batches of spreadsheets or PDFs, and compiling finished reports without forcing manual copy-and-paste loops.</li>
+<li><strong>MCP Bundles (<code>.mcpb</code>, Formerly <code>.dxt</code> Desktop Extensions):</strong> To eliminate manual <code>claude_desktop_config.json</code> editing and local runtime dependency headaches, Anthropic and the MCP community standardized Desktop Extensions as <strong>MCP Bundles (<code>.mcpb</code>)</strong>. Each <code>.mcpb</code> archive packages a local MCP server with a declarative <code>manifest.json</code> that installs in one click, renders a native user configuration form for directory paths or API keys, and supports enterprise allowlists plus optional detached PKCS#7 cryptographic signature verification.</li>
+<li><strong>Local Connectors vs. Remote Cloud Connectors:</strong> Remote connectors (such as Slack, GitHub, or Notion) authenticate over OAuth on external infrastructure and stay synced across Web, Mobile, Desktop, and Cowork. Local connectors run directly on your OS inside Claude Desktop, Cowork, and <a class="gold-link" href="claude-code.html">Claude Code</a>, and can be bundled alongside skills and playbooks via <a class="gold-link" href="claude-plugins.html">Claude Plugins</a>.</li>
+<li><strong>Install as App (Standalone macOS &amp; Windows Apps):</strong> On macOS and Windows, Claude Desktop lets you promote functional <a class="gold-link" href="claude-artifacts.html">Claude Artifacts</a> directly into standalone native desktop windows with dedicated dock or taskbar icons, live artifact syncing, and zero separate API-key setup. Security follows a strict three-tier permission model: <em>Default</em> (standard browser sandbox), <em>App Permissions</em> (notifications, global shortcuts, menu bar/system tray, always-on-top), and administrator-gated <em>Full Computer Access</em> for background scripts and local filesystem automation.</li>
+</ul>
+<div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid #38bdf8;border-radius:10px;margin:1.5rem 0;overflow:hidden;"><div style="background:#0b1220;padding:0.5rem 1rem;border-bottom:1px solid rgba(56,189,248,0.22);display:flex;justify-content:space-between;align-items:center;font-size:0.8rem;color:#94a3b8;"><span style="color:#fbbf24;font-weight:600;">MCP Bundle Manifest for One-Click Desktop Extension (manifest.json inside .mcpb)</span><span>JSON</span></div><pre style="background:#040711;margin:0;padding:1.1rem 1.25rem;overflow-x:auto;color:#e2e8f0;font-size:0.86rem;line-height:1.55;"><code>{
+  &quot;manifest_version&quot;: &quot;0.3&quot;,
+  &quot;name&quot;: &quot;ops-ledger-connector&quot;,
+  &quot;version&quot;: &quot;1.2.0&quot;,
+  &quot;description&quot;: &quot;Read-only local SQLite ledger and invoice reconciliation connector for Claude Desktop.&quot;,
+  &quot;server&quot;: {
+    &quot;type&quot;: &quot;node&quot;,
+    &quot;entry_point&quot;: &quot;server/index.js&quot;,
+    &quot;mcp_config&quot;: {
+      &quot;command&quot;: &quot;node&quot;,
+      &quot;args&quot;: [&quot;${__dirname}/server/index.js&quot;],
+      &quot;env&quot;: {
+        &quot;LEDGER_DIR&quot;: &quot;${user_config.ledger_directory}&quot;
+      }
+    }
+  },
+  &quot;user_config&quot;: {
+    &quot;ledger_directory&quot;: {
+      &quot;type&quot;: &quot;directory&quot;,
+      &quot;title&quot;: &quot;Approved Invoices Folder&quot;,
+      &quot;description&quot;: &quot;Scoped directory this local connector is permitted to read.&quot;,
+      &quot;required&quot;: true
+    }
+  }
+}</code></pre></div>
+</section>
+
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="desktop-extension-surface-comparison">Comparing Claude Desktop Extension and Execution Surfaces</h2>
+<p class="article-p">Choose the cleanest integration mechanism based on whether you need one-click team distribution, OS-level file access, or standalone desktop utilities:</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.9rem;color:#e2e8f0;">
+<thead>
+<tr style="border-bottom:2px solid rgba(251,191,36,0.45);text-align:left;color:var(--gold);">
+<th style="padding:0.75rem;">Desktop Surface</th>
+<th style="padding:0.75rem;">Setup &amp; Distribution</th>
+<th style="padding:0.75rem;">Execution Location</th>
+<th style="padding:0.75rem;">Governance &amp; Security Controls</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Manual <code>claude_desktop_config.json</code></td>
+<td style="padding:0.75rem;">Local JSON edit + developer runtime install</td>
+<td style="padding:0.75rem;">Local stdio process on workstation</td>
+<td style="padding:0.75rem;">Directory path scoping &amp; per-tool user approval</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">MCP Bundles (<code>.mcpb</code>)</td>
+<td style="padding:0.75rem;">1-click install with auto-rendered config form</td>
+<td style="padding:0.75rem;">Local packaged MCP runtime</td>
+<td style="padding:0.75rem;">Enterprise bundle allowlists, PKCS#7 signatures, drift audits</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Remote Connectors &amp; <a class="gold-link" href="claude-apps.html">Claude Apps</a></td>
+<td style="padding:0.75rem;">OAuth sign-in across Web, Mobile &amp; Desktop</td>
+<td style="padding:0.75rem;">Cloud SaaS server + sandboxed <code>ui://</code> iframe</td>
+<td style="padding:0.75rem;">Source OAuth scopes, CSP headers, explicit write consent</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Install as App (Artifacts)</td>
+<td style="padding:0.75rem;">1-click export to native macOS/Windows window</td>
+<td style="padding:0.75rem;">Dedicated desktop window synced to source artifact</td>
+<td style="padding:0.75rem;">Three-tier OS permissions (Full Computer Access admin-gated)</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Cowork &amp; Computer Use</td>
+<td style="padding:0.75rem;">Built-in paid-tier local desktop orchestration</td>
+<td style="padding:0.75rem;">Local folders &amp; sandboxed GUI environment</td>
+<td style="padding:0.75rem;">VM isolation, human checkpoints before submits or deletes</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="claude-desktop-faq">Practical Questions on Claude Desktop Extensions and Governance</h2>
+<p class="article-p"><strong>What happened to <code>.dxt</code> Desktop Extensions and how do they relate to <code>.mcpb</code>?</strong> Anthropic and the open MCP community renamed Desktop Extensions (<code>.dxt</code>) to <strong>MCP Bundles (<code>.mcpb</code>)</strong> so packaged local MCP servers use one cross-client standard. Existing manual <code>claude_desktop_config.json</code> entries continue to work for custom development, while <code>.mcpb</code> bundles are the preferred format for one-click user installation and enterprise allowlisting.</p>
+<p class="article-p"><strong>Can any artifact or document in Claude Desktop be exported with Install as App?</strong> Interactive web-style <a class="gold-link" href="claude-artifacts.html">Claude Artifacts</a> (dashboards, trackers, calculators, internal tools) can be installed as standalone macOS and Windows apps with live syncing. Native workspace document templates (Claude Docs, Slides, and Sheets) and live Cowork session artifacts are currently excluded, and Full Computer Access permissions remain disabled by default on Team and Enterprise plans until explicitly enabled by administrators.</p>
+<p class="article-p"><strong>When should we build a local <code>.mcpb</code> connector versus relying on Computer Use?</strong> Always prefer a local <code>.mcpb</code> connector or remote OAuth connector whenever files, databases, or APIs are directly accessible - structured tools are faster, deterministic, and cheaper. Reserve Computer Use for legacy desktop applications or external vendor portals that have no API or local data export.</p>
+</section>
+
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <h2 id="references">Authoritative References</h2>
 <ol class="references-list" style="display:flex;flex-direction:column;gap:0.75rem;padding-left:1.25rem;">
 <li><a class="gold-link" href="https://claude.ai/download" rel="noopener noreferrer" target="_blank">Claude Desktop Official Guide</a> - Official download and workstation setup instructions for macOS and Windows.</li>
 <li><a class="gold-link" href="https://modelcontextprotocol.io/quickstart/user" rel="noopener noreferrer" target="_blank">Model Context Protocol (MCP) Quickstart</a> - Step-by-step guide to adding local MCP servers to Claude Desktop.</li>
+<li><a class="gold-link" href="https://github.com/modelcontextprotocol/mcpb" rel="noopener noreferrer" target="_blank">MCP Bundles (<code>.mcpb</code>) Specification &amp; CLI</a> - Open standard (formerly DXT) for one-click packaged local MCP desktop extensions.</li>
 <li><a class="gold-link" href="https://docs.anthropic.com/en/docs/agents-and-tools/computer-use" rel="noopener noreferrer" target="_blank">Anthropic Computer Use Documentation</a> - Technical architecture, sandbox recommendations, and safety best practices for Computer Use.</li>
 <li><a class="gold-link" href="https://github.com/modelcontextprotocol/servers" rel="noopener noreferrer" target="_blank">MCP Reference Servers Repository</a> - Open-source filesystem, database, and developer MCP servers maintained by the community.</li>
+<li><a class="gold-link" href="claude-apps.html">Claude Apps: Interactive MCP Apps &amp; Desktop Export</a> - Deep dive into interactive <code>ui://</code> views and standalone desktop apps.</li>
+<li><a class="gold-link" href="claude-plugins.html">Claude Plugins: Unifying Skills &amp; Connectors</a> - Packaging local/remote connectors with domain playbooks for team rollout.</li>
 </ol>
 </section>
 </article>

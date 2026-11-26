@@ -3,58 +3,52 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Claude Skills: Custom Skill Engineering & Repositories | Thomas Cherickal</title>
-<meta content="Thomas Cherickal - Generative AI Consultant and The Digital Futurist. Author modular SKILL.md capability packs with YAML metadata, step-by-step protocols, helper scripts, progressive disclosure, and testing conventions." name="description"/>
+<title>Claude Code Mode: Programmatic Tool Orchestration & Sandboxed Execution | Thomas Cherickal</title>
+<meta content="Thomas Cherickal - Generative AI Consultant and The Digital Futurist. Master experimental Claude Code Mode: programmatic JavaScript tool orchestration in an in-memory sandbox, distilled context returns, prerequisites, and PreToolUse security hooks." name="description"/>
 <meta content="Thomas Cherickal" name="author"/>
-<link href="https://thedigitalfuturist.com/claude-training/claude-skills.html" rel="canonical"/>
+<link href="https://thedigitalfuturist.com/claude-training/claude-code-mode.html" rel="canonical"/>
 <!-- Open Graph -->
 <meta content="article" property="og:type"/>
-<meta content="https://thedigitalfuturist.com/claude-training/claude-skills.html" property="og:url"/>
+<meta content="https://thedigitalfuturist.com/claude-training/claude-code-mode.html" property="og:url"/>
 <meta content="Thomas Cherickal | The Digital Futurist" property="og:site_name"/>
-<meta content="Claude Skills: Custom Skill Engineering &amp; Repositories | Thomas Cherickal" property="og:title"/>
-<meta content="Author modular SKILL.md capability packs with YAML metadata, step-by-step protocols, helper scripts, progressive disclosure, and testing conventions." property="og:description"/>
+<meta content="Claude Code Mode: Programmatic Tool Orchestration | Thomas Cherickal" property="og:title"/>
+<meta content="Master experimental Claude Code Mode: programmatic JavaScript tool orchestration in an in-memory sandbox, distilled context returns, prerequisites, and PreToolUse security hooks." property="og:description"/>
 <meta content="https://thedigitalfuturist.com/assets/og-card.png" property="og:image"/>
 <meta content="en_US" property="og:locale"/>
 <!-- Twitter Card -->
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="@thomazcherickal" name="twitter:site"/>
-<meta content="Claude Skills: Custom Skill Engineering &amp; Repositories | Thomas Cherickal" name="twitter:title"/>
-<meta content="How Claude skills work, how to write your own SKILL.md, the skills that already exist across Claude and the open Agent Skills standard, and what this extensibility means for automation and work." property="twitter:description"/>
-<meta content="https://thedigitalfuturist.com/assets/og-card.png" name="twitter:image"/>
+<meta content="Claude Code Mode: Programmatic Tool Orchestration | Thomas Cherickal" name="twitter:title"/>
+<meta content="Master experimental Claude Code Mode: programmatic JavaScript tool orchestration in an in-memory sandbox, distilled context returns, prerequisites, and PreToolUse security hooks." property="og:description"/>
+<meta content="https://thedigitalfuturist.com/assets/og-card.png" property="og:image"/>
 <!-- Favicons -->
 <link href="../assets/favicon.ico" rel="icon" sizes="any"/>
 <link href="../assets/favicon.svg" rel="icon" type="image/svg+xml"/>
 <link href="../assets/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
 <link href="../site.webmanifest" rel="manifest"/>
 <meta content="#020408" name="theme-color"/>
-<!-- JSON-LD Article Schema -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": [
-        "TechArticle",
-        "Article"
-      ],
-      "@id": "https://thedigitalfuturist.com/claude-training/claude-skills.html#article",
+      "@type": ["TechArticle", "Article"],
+      "@id": "https://thedigitalfuturist.com/claude-training/claude-code-mode.html#article",
       "isPartOf": {
         "@type": "WebPage",
-        "@id": "https://thedigitalfuturist.com/claude-training/claude-skills.html",
-        "url": "https://thedigitalfuturist.com/claude-training/claude-skills.html",
-        "name": "Claude Skills: Custom Skill Engineering &amp; Repositories | Thomas Cherickal"
+        "@id": "https://thedigitalfuturist.com/claude-training/claude-code-mode.html",
+        "url": "https://thedigitalfuturist.com/claude-training/claude-code-mode.html",
+        "name": "Claude Code Mode: Programmatic Tool Orchestration | Thomas Cherickal"
       },
-      "headline": "Claude Skills: Custom Skill Engineering & Repositories",
-      "description": "Author modular SKILL.md capability packs with YAML metadata, step-by-step protocols, helper scripts, progressive disclosure, and testing conventions.",
-      "image": [
-        "https://thedigitalfuturist.com/assets/og-card.png"
-      ],
-      "datePublished": "2026-10-22T00:00:00+05:30",
-      "dateModified": "2026-11-21T12:00:00+05:30",
+      "headline": "Claude Code Mode: Programmatic Tool Orchestration",
+      "description": "Thomas Cherickal - Generative AI Consultant and The Digital Futurist. Master experimental Claude Code Mode: programmatic JavaScript tool orchestration in an in-memory sandbox, distilled context returns, prerequisites, and PreToolUse security hooks.",
+      "image": ["https://thedigitalfuturist.com/assets/og-card.png"],
+      "datePublished": "2026-11-26T00:00:00+05:30",
+      "dateModified": "2026-11-26T00:00:00+05:30",
       "inLanguage": "en-US",
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://thedigitalfuturist.com/claude-training/claude-skills.html"
+        "@id": "https://thedigitalfuturist.com/claude-training/claude-code-mode.html"
       },
       "author": {
         "@type": "Person",
@@ -62,58 +56,17 @@
         "name": "Thomas Cherickal",
         "jobTitle": "Generative AI Consultant and The Digital Futurist",
         "url": "https://thedigitalfuturist.com",
-        "description": "Thomas Cherickal - Generative AI Consultant and The Digital Futurist.",
-        "sameAs": [
-          "https://linkedin.com/in/thomascherickal",
-          "https://github.com/thomascherickal",
-          "https://x.com/thomazcherickal"
-        ]
+        "description": "Thomas Cherickal - Generative AI Consultant and The Digital Futurist."
       },
       "publisher": {
         "@type": "Organization",
         "@id": "https://thedigitalfuturist.com/#organization",
         "name": "The Digital Futurist",
         "url": "https://thedigitalfuturist.com",
-        "description": "Thomas Cherickal - Generative AI Consultant and The Digital Futurist.",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://thedigitalfuturist.com/assets/digital-futurist-logo.jpg",
-          "width": 256,
-          "height": 256
-        }
+        "description": "Thomas Cherickal - Generative AI Consultant and The Digital Futurist."
       },
-      "articleSection": "Agent Skills & Procedures",
-      "keywords": [
-        "Claude Skills",
-        "SKILL.md Authoring",
-        "Progressive Disclosure",
-        "Helper Scripts",
-        "Skill Repositories"
-      ]
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://thedigitalfuturist.com/claude-training/claude-skills.html#breadcrumb",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://thedigitalfuturist.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Writing",
-          "item": "https://thedigitalfuturist.com/writing.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Claude Skills",
-          "item": "https://thedigitalfuturist.com/claude-training/claude-skills.html"
-        }
-      ]
+      "articleSection": "Claude Training",
+      "keywords": ["Claude Code Mode", "Claude Code", "JavaScript Sandbox", "Tool Orchestration", "PreToolUse Hooks"]
     }
   ]
 }
@@ -248,12 +201,12 @@
           <li><a href="../claude-training/claude-101.html">Claude 101</a></li>
           <li><a href="../claude-training/claude-projects.html">Claude Projects</a></li>
           <li><a href="../claude-training/claude-code.html">Claude Code</a></li>
+          <li><a href="../claude-training/claude-code-mode.html">Claude Code Mode</a></li>
           <li><a href="../claude-training/claude-desktop.html">Claude Desktop</a></li>
           <li><a href="../claude-training/claude-office.html">Claude Office</a></li>
-          <li><a href="../claude-training/claude-skills.html">Claude Skills</a></li>
           <li><a href="../claude-training/claude-mcp.html">Claude MCP</a></li>
           <li><a href="../claude-training/claude-plugins.html">Claude Plugins</a></li>
-          <li><a href="../claude-training/claude-connectors.html">Claude Connectors</a></li>
+          <li><a href="../claude-training/claude-apps.html">Claude Apps</a></li>
           <li><a href="../claude-training/claude-orchestration.html">Claude Orchestration</a></li>
           <li><a href="../claude-training/claude-design.html">Claude Design</a></li>
           <li><a href="../claude-training/claude-science.html">Claude for Science</a></li>
@@ -305,177 +258,286 @@
     </ul>
   </nav>
   <!-- END:HEADER -->
+  <a aria-label="Back to top" class="back-top" href="#top" id="backTop" title="Back to top">↑</a>
 
-<main id="main">
+<main class="container single-column-article" id="main">
 <header class="hero content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
-<div class="hero-badge content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">CLAUDE SKILLS</div>
-<h1>Claude Skills: Custom Skill Engineering & Repositories</h1>
-<div class="title-tags" aria-label="Article topics"><span class="title-tag">Claude Skills</span><span class="title-tag">SKILL.md Authoring</span><span class="title-tag">Progressive Disclosure</span><span class="title-tag">Helper Scripts</span><span class="title-tag">Skill Repositories</span></div>
-<p class="hero-desc">Author modular SKILL.md capability packs with YAML metadata, step-by-step protocols, and bundled helper scripts. Learn progressive disclosure, skill composition, testing conventions, and repository organization so Claude executes specialized team workflows reliably on demand.</p>
+<div class="hero-badge content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">CLAUDE CODE MODE</div>
+<h1>Claude Code Mode: Programmatic Tool Orchestration & Sandboxed Execution</h1>
+<div class="title-tags" aria-label="Article topics"><span class="title-tag">Claude Code Mode</span><span class="title-tag">JavaScript Sandbox</span><span class="title-tag">Context Efficiency</span><span class="title-tag">PreToolUse Hooks</span><span class="title-tag">Claude Code</span></div>
+<p class="hero-desc">Replace slow, token-heavy turn-by-turn tool loops with programmatic JavaScript orchestration. Learn how experimental Claude Code Mode executes parallel tool chains inside an in-memory sandbox, returns distilled results to context, and enforces PreToolUse security guardrails.</p>
 <p class="hero-byline">By <strong>Thomas Cherickal</strong> - Generative AI Consultant &amp; The Digital Futurist</p>
 </header>
 
-<article class="article-body" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.25rem;">
+<article class="article-body">
 <div id="table-of-contents" aria-label="Table of contents" class="content-card toc-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
-<p class="article-p" style="font-size:1.02rem;color:#f1f5f9;">Every team has specialized procedures - how to audit a database migration, how to format a compliance report, or how to debug a flaky CI pipeline. Stuffing all of those procedures into one giant system prompt wastes tokens and confuses the model. Claude Skills solve this with progressive disclosure: modular SKILL.md folders that stay lightweight until the exact moment a task needs them.</p>
+<p class="article-p" style="font-size:1.02rem;color:#f1f5f9;">In traditional <a class="gold-link" href="claude-code.html">Claude Code</a> sessions, every single shell command, file search, or MCP lookup demands a full model round-trip and pours raw output directly into the conversation window. <strong>Claude Code Mode</strong> replaces that sequential request-response bottleneck with programmatic orchestration: Claude authors a single JavaScript block that chains, fans out, and filters tool calls locally inside an in-memory sandbox, returning only the distilled summary required for the next engineering decision.</p>
 <div class="rule"></div>
 <h2 style="color:var(--gold);font-size:1.45rem;font-weight:700;margin-bottom:1.15rem;border-bottom:1px solid rgba(251,191,36,0.25);padding-bottom:0.5rem;">Table of Contents</h2>
 <ol class="toc-list">
-<li><a class="gold-link" href="#anatomy-of-a-skill">Anatomy of a Modular SKILL.md Capability Pack</a></li>
-<li><a class="gold-link" href="#authoring-skill-md-and-scripts">Writing Crisp SKILL.md Protocols and Helper Scripts</a></li>
-<li><a class="gold-link" href="#composition-testing-and-repo-organization">Skill Composition, Testing Conventions, and Repository Layout</a></li>
-<li><a class="gold-link" href="#skill-pitfalls">Common Skill Engineering Pitfalls</a></li>
-<li><a class="gold-link" href="#step-by-step-skill-workflow">Step-by-Step: From Repeated Prompt to Production Skill</a></li>
-<li><a class="gold-link" href="#real-world-skill-examples">High-Leverage Skill Examples for Engineering and Business Teams</a></li>
-<li><a class="gold-link" href="#scaling-and-maintaining-skills">Maintaining a Clean, High-Trust Team Skill Library</a></li>
-<li><a class="gold-link" href="#skills-faq">Frequently Asked Questions on Claude Skills</a></li>
+<li><a class="gold-link" href="#how-code-mode-works">How Code Mode Eliminates Context Pollution</a></li>
+<li><a class="gold-link" href="#requirements-and-enabling">Prerequisites, Activation, and Environment Constraints</a></li>
+<li><a class="gold-link" href="#runtime-limits-and-execution">Runtime Execution Model, Timeouts, and Backgrounding</a></li>
+<li><a class="gold-link" href="#benchmarks-and-workloads">Real-World Performance and Benchmark Profiles</a></li>
+<li><a class="gold-link" href="#security-and-hooks">Security, Permissions, <code>PreToolUse</code> Hooks, and Governance</a></li>
+<li><a class="gold-link" href="#code-mode-vs-ptc">Claude Code Mode vs. Messages API Programmatic Tool Calling</a></li>
+<li><a class="gold-link" href="#production-workflow-patterns">High-Impact Engineering Workflows for Code Mode</a></li>
+<li><a class="gold-link" href="#code-mode-faq">Practical Questions When Adopting Code Mode</a></li>
 <li><a class="gold-link" href="#references">Authoritative References</a></li>
 </ol>
 </div>
 
 <section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
-<h2 id="anatomy-of-a-skill">Anatomy of a Modular SKILL.md Capability Pack</h2>
-
-<p class="article-p">A <a class="gold-link" href="#references">Claude Skill</a> is a self-contained folder centered on a single <code>SKILL.md</code> file. At the top sits a tiny YAML frontmatter block with two fields: <code>name</code> and <code>description</code>. Below the frontmatter live the step-by-step protocol, decision trees, edge-case rules, and pointers to optional bundled resources inside <code>scripts/</code>, <code>references/</code>, or <code>examples/</code>.</p>
-<p class="article-p">This structure enables <strong>progressive disclosure</strong>: at startup, Claude only reads the short YAML name and description of available skills (a few dozen tokens each). Only when a user's request matches a skill's description does Claude load the full <code>SKILL.md</code> instructions and invoke its helper scripts.</p>
-<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.25rem;margin:1.5rem 0;"><div class="mermaid">
+<h2 id="how-code-mode-works">How Code Mode Eliminates Context Pollution</h2>
+<p class="article-p">Standard agent loops pay a steep double tax on data-heavy engineering tasks: network round-trip latency on every sequential step, plus severe <strong>context pollution</strong> whenever grep matches, build logs, or large MCP payloads flood the prompt history. Once tens of thousands of noisy intermediate tokens enter context, subsequent reasoning slows down, costs rise, and attention degrades.</p>
+<p class="article-p"><strong>Claude Code Mode</strong> (also referred to as client-side programmatic tool orchestration) solves this by letting Claude emit a single JavaScript orchestration script executed in an isolated local in-memory runtime against Claude Code's built-in tools (<code>Bash</code>, <code>Read</code>, <code>Edit</code>, search utilities, and connected <a class="gold-link" href="claude-mcp.html">MCP servers</a>):</p>
+<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.5rem;margin:1.75rem 0;"><div class="mermaid">
 flowchart TD
-    U["User Request Arrives"] --> D["Scan Lightweight YAML Metadata
-(Name + Trigger Description Only)"]
-    D --> M{"Matches Specialized Skill?"}
-    M -->|"No"| G["Handle with Standard Context"]
-    M -->|"Yes"| L["Load Full SKILL.md Protocol"]
-    L --> S["Run Bundled Helper Scripts
-& Check References"]
-    S --> O["Deliver Standardized Team Output"]
+    P["Complex Multi-Step Engineering Task"] --> JS["Claude Generates Single JS Block
+(Stored in tool_input.code)"]
+    JS --> HOOK["PreToolUse Hooks &amp; Permission Checks"]
+    HOOK --> SB["Local In-Memory JS Runtime Sandbox"]
+    SB --> T1["Parallel Fan-Out &amp; Chained Tool Calls
+(Bash, Read, Edit, MCP Tools)"]
+    T1 --> F["Local Filtering, Loops &amp; Aggregation
+(Raw Noise Stays Out of Context)"]
+    F --> D["Distilled Concise Return Payload"]
+    D --> C["Clean Claude Context Window"]
 
     classDef gold fill:#000000,stroke:#fbbf24,stroke-width:2px,color:#f8fafc
     classDef cyan fill:#000000,stroke:#38bdf8,stroke-width:2px,color:#f8fafc
     classDef emerald fill:#000000,stroke:#34d399,stroke-width:2px,color:#f8fafc
     classDef purple fill:#000000,stroke:#c084fc,stroke-width:2px,color:#f8fafc
 
-    class U,O gold
-    class D,M purple
-    class L,S cyan
-    class G emerald
-</div><p style="color:#94a3b8;font-size:0.86rem;margin-top:0.75rem;text-align:center;">Progressive disclosure keeps everyday prompts lean while loading deep expertise strictly on demand.</p></div>
+    class P,C gold
+    class JS,SB purple
+    class HOOK,T1 cyan
+    class F,D emerald
+</div><p style="color:#94a3b8;font-size:0.86rem;margin-top:0.75rem;text-align:center;">Single-turn JavaScript orchestration keeps verbose intermediate tool outputs out of Claude's context window.</p></div>
+<ul class="article-p" style="list-style-type:disc;padding-left:1.5rem;display:flex;flex-direction:column;gap:0.55rem;">
+<li><strong>Chaining &amp; Concurrent Fan-Out:</strong> Dependent steps pass typed variables directly in JavaScript memory, while independent searches, file reads, or API fetches run concurrently via <code>Promise.all()</code>.</li>
+<li><strong>Distilled Context Returns:</strong> Raw test logs, massive JSON responses, and thousands of grep lines are parsed and reduced inside the sandbox so only the final actionable summary enters the model's context window.</li>
+<li><strong>Clean Terminal UX with Full Inspectability:</strong> Generated JavaScript blocks stay collapsed out of the primary chat stream while file diffs render normally; press <code>Ctrl+O</code> at any point to open the CLI transcript viewer and inspect the exact compiled code (<code>tool_input.code</code>).</li>
+</ul>
 </section>
 
 <section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
-<h2 id="authoring-skill-md-and-scripts">Writing Crisp SKILL.md Protocols and Helper Scripts</h2>
+<h2 id="requirements-and-enabling">Prerequisites, Activation, and Environment Constraints</h2>
+<p class="article-p">Code Mode is an experimental opt-in runtime that is disabled by default. To activate it for an interactive terminal session, launch the native Claude Code binary with the environment variable enabled:</p>
+<div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid #38bdf8;border-radius:10px;margin:1.5rem 0;overflow:hidden;"><div style="background:#0b1220;padding:0.5rem 1rem;border-bottom:1px solid rgba(56,189,248,0.22);display:flex;justify-content:space-between;align-items:center;font-size:0.8rem;color:#94a3b8;"><span style="color:#fbbf24;font-weight:600;">Enable Experimental Code Mode &amp; Verify Status</span><span>Bash</span></div><pre style="background:#040711;margin:0;padding:1.1rem 1.25rem;overflow-x:auto;color:#e2e8f0;font-size:0.86rem;line-height:1.55;"><code># Launch an interactive Claude Code session with Code Mode enabled
+CLAUDE_CODE_EXPERIMENTAL_CODE_MODE=1 claude
 
-<p class="article-p">The secret to a reliable skill is writing a clear trigger description in the YAML frontmatter and pairing plain-English steps with deterministic helper scripts. Offload anything that requires exact arithmetic, regex validation, or file parsing to a small Python or Bash script in <code>scripts/</code>, and let <code>SKILL.md</code> focus on judgment, sequencing, and reporting.</p>
-<div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid #38bdf8;border-radius:10px;margin:1.5rem 0;overflow:hidden;"><div style="background:#0b1220;padding:0.5rem 1rem;border-bottom:1px solid rgba(56,189,248,0.22);display:flex;justify-content:space-between;align-items:center;font-size:0.8rem;color:#94a3b8;"><span style="color:#fbbf24;font-weight:600;">Example SKILL.md with YAML Frontmatter</span><span>Markdown</span></div><pre style="background:#040711;margin:0;padding:1.1rem 1.25rem;overflow-x:auto;color:#e2e8f0;font-size:0.86rem;line-height:1.55;"><code>---
-name: sql-migration-reviewer
-description: Review SQL schema migrations for locking risks, missing indexes, and rollback safety. Use whenever the user asks to review, audit, or validate a database migration file.
----
-
-# SQL Migration Review Protocol
-
-1. Read the target `.sql` migration file completely.
-2. Run `python3 scripts/check_locks.py &lt;file&gt;` to detect blocking `ALTER TABLE` operations.
-3. Verify that every `CREATE TABLE` or `ADD COLUMN` change includes a matching rollback plan.
-4. Report findings grouped by severity: Blocker, Warning, and Info.
-5. Never execute the migration against a live database.</code></pre></div>
+# Inside the active session, verify Code Mode initialized cleanly
+/status</code></pre></div>
+<p class="article-p">Running <code>/status</code> confirms whether Code Mode is active or reports the specific environment condition that prevented activation. Verify all four runtime prerequisites before testing:</p>
+<ul class="article-p" style="list-style-type:disc;padding-left:1.5rem;display:flex;flex-direction:column;gap:0.55rem;">
+<li><strong>Native Build Requirement:</strong> Requires the native Claude Code binary <code>v2.1.323</code> or newer.</li>
+<li><strong>Interactive Terminal Only:</strong> Supported exclusively in interactive terminal sessions. It is not supported in non-interactive <code>-p</code> print runs, the Claude Agent SDK, IDE side panels (such as VS Code extensions), Claude Desktop, or custom API key helper flows.</li>
+<li><strong>Direct Anthropic Authentication:</strong> Requires a direct Claude subscription or Anthropic Console account. Third-party cloud gateways - including Amazon Bedrock, Google Cloud Vertex AI, Microsoft Foundry, and custom proxies - are not supported for this experimental local runtime.</li>
+<li><strong>Compatible Frontier Models:</strong> Supported across frontier Claude Opus, Claude Sonnet, Claude Haiku, and <a class="gold-link" href="claude-fable.html">Claude Fable</a> models engineered for programmatic tool orchestration.</li>
+<li><strong>User-Level Opt-In Only:</strong> Code Mode must be opted into via your shell environment or user-level settings; repository-level configuration files cannot silently force-enable Code Mode when you clone an untrusted repo.</li>
+</ul>
 </section>
 
 <section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
-<h2 id="composition-testing-and-repo-organization">Skill Composition, Testing Conventions, and Repository Layout</h2>
+<h2 id="runtime-limits-and-execution">Runtime Execution Model, Timeouts, and Backgrounding</h2>
+<p class="article-p">Because Code Mode runs JavaScript locally inside your active developer session, Anthropic enforces clear execution ceilings to stop runaway loops while still supporting heavy builds and test suites:</p>
+<ul class="article-p" style="list-style-type:disc;padding-left:1.5rem;display:flex;flex-direction:column;gap:0.55rem;">
+<li><strong>Interactive Script Timeout (10 Minutes):</strong> Any generated script that Claude is actively blocking and waiting on has a strict 10-minute execution ceiling. If it exceeds that cap, the runtime halts execution cleanly.</li>
+<li><strong>Background Execution in Auto Mode (Up to 2 Hours):</strong> When a session runs in <code>auto</code> or <code>bypassPermissions</code> mode, long-running scripts (such as full integration test matrices or large repository migrations) can be pushed into the background for up to 2 hours while you keep conversing in the main thread.</li>
+<li><strong>Conceptual Orchestration Pattern:</strong> Instead of issuing 15 sequential file reads and grep calls, Claude compresses discovery, filtering, and targeted verification into a single self-contained script:</li>
+</ul>
+<div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid #38bdf8;border-radius:10px;margin:1.5rem 0;overflow:hidden;"><div style="background:#0b1220;padding:0.5rem 1rem;border-bottom:1px solid rgba(56,189,248,0.22);display:flex;justify-content:space-between;align-items:center;font-size:0.8rem;color:#94a3b8;"><span style="color:#fbbf24;font-weight:600;">Conceptual Code Mode Script Pattern: Parallel Inspection &amp; Distilled Return</span><span>JavaScript</span></div><pre style="background:#040711;margin:0;padding:1.1rem 1.25rem;overflow-x:auto;color:#e2e8f0;font-size:0.86rem;line-height:1.55;"><code>// Conceptual illustration of how Code Mode collapses multi-turn tool calls:
+// 1. Fan out searches and test logs in parallel
+const [matches, testRun] = await Promise.all([
+  tools.Grep({ pattern: &quot;legacyAuthToken&quot;, path: &quot;src/&quot; }),
+  tools.Bash({ command: &quot;npm test -- --reporter=json&quot; }),
+]);
 
-<p class="article-p">Keep each skill focused on one cohesive job so skills can compose cleanly. For example, a release workflow might invoke a <code>changelog-writer</code> skill followed by a <code>sql-migration-reviewer</code> skill without either skill knowing the internals of the other.</p>
-<p class="article-p">Organize your team's skill repository with a clean, predictable directory layout and test every skill before merging changes: verify that realistic user prompts trigger the right skill, confirm out-of-scope prompts do NOT trigger it, and run unit tests on every helper script under <code>scripts/</code>.</p>
-<div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid #38bdf8;border-radius:10px;margin:1.5rem 0;overflow:hidden;"><div style="background:#0b1220;padding:0.5rem 1rem;border-bottom:1px solid rgba(56,189,248,0.22);display:flex;justify-content:space-between;align-items:center;font-size:0.8rem;color:#94a3b8;"><span style="color:#fbbf24;font-weight:600;">Clean Team Skill Repository Layout</span><span>Text</span></div><pre style="background:#040711;margin:0;padding:1.1rem 1.25rem;overflow-x:auto;color:#e2e8f0;font-size:0.86rem;line-height:1.55;"><code>team-skills/
-├── sql-migration-reviewer/
-│   ├── SKILL.md
-│   ├── scripts/check_locks.py
-│   └── examples/safe-migration.sql
-├── incident-postmortem/
-│   ├── SKILL.md
-│   └── references/postmortem-template.md
-└── tests/
-    └── test_skill_scripts.py</code></pre></div>
+// 2. Filter thousands of lines locally inside the sandbox
+const parsed = JSON.parse(testRun.stdout);
+const failingSuites = parsed.testResults
+  .filter((suite) =&gt; suite.status === &quot;failed&quot;)
+  .map((suite) =&gt; ({ file: suite.name, errors: suite.assertionResults.length }));
+
+// 3. Return only a concise structured payload to Claude's context window
+return {
+  matchedFiles: matches.files.length,
+  samplePaths: matches.files.slice(0, 10),
+  failingSuites,
+};</code></pre></div>
 </section>
 
 <section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
-<h2 id="skill-pitfalls">Common Skill Engineering Pitfalls</h2>
+<h2 id="benchmarks-and-workloads">Real-World Performance and Benchmark Profiles</h2>
+<p class="article-p">Early developer benchmarks show that Code Mode does not accelerate every task uniformly - its gains scale directly with intermediate data volume and tool fan-out:</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.9rem;color:#e2e8f0;">
+<thead>
+<tr style="border-bottom:2px solid rgba(251,191,36,0.45);text-align:left;color:var(--gold);">
+<th style="padding:0.75rem;">Workload Profile</th>
+<th style="padding:0.75rem;">Observed Token Impact</th>
+<th style="padding:0.75rem;">Latency &amp; Quality Impact</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">MCP &amp; Data-Heavy Pipelines</td>
+<td style="padding:0.75rem;">40%-77% fewer tokens (frequently 60%-70%+ when filtering large API or database payloads)</td>
+<td style="padding:0.75rem;">Major speedup; raw JSON never enters prompt history</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Multi-File Structural Refactoring</td>
+<td style="padding:0.75rem;">Moderate token reduction</td>
+<td style="padding:0.75rem;">High execution velocity and stronger consistency across dependent reads and regex checks</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Single-File Targeted Edits</td>
+<td style="padding:0.75rem;">Minimal difference vs. standard mode</td>
+<td style="padding:0.75rem;">Comparable latency; standard direct tool calls remain equally efficient</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
 
-<p class="article-p">Avoid writing vague trigger descriptions like "helps with coding," which cause Claude to load the skill on unrelated tasks. Keep <code>SKILL.md</code> concise (under 250 lines) by moving bulky reference tables into <code>references/</code>, and review skills quarterly to retire outdated procedures.</p>
-<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.25rem;margin:1.5rem 0;"><div class="mermaid">
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="security-and-hooks">Security, Permissions, <code>PreToolUse</code> Hooks, and Governance</h2>
+<p class="article-p">For security engineers and platform teams, executing agent-generated orchestration code requires careful hook design. While every underlying operation inside a Code Mode script remains bound by local deny/ask rules and lifecycle hooks, programmatic execution introduces an important nuance called the <strong>runtime-value blindspot</strong>:</p>
+<ul class="article-p" style="list-style-type:disc;padding-left:1.5rem;display:flex;flex-direction:column;gap:0.55rem;">
+<li><strong>The Classifier Paradox in Auto Mode:</strong> When running under <code>auto</code> or <code>bypassPermissions</code> modes, upfront safety classifiers evaluate the static structure of the generated JavaScript <em>before</em> it runs - they cannot see dynamic file paths or shell strings computed mid-execution from earlier search results.</li>
+<li><strong>Auditing Raw Code via <code>tool_input.code</code>:</strong> Simple tool-name allowlists are insufficient for Code Mode. Configure <code>PreToolUse</code> hooks to inspect <code>tool_input.code</code> directly, validating both high-risk API patterns and compound shell commands (such as <code>cd 'app' &amp;&amp; git push</code>) before execution starts.</li>
+<li><strong>Fail-Closed Hook Enforcement:</strong> Ensure mission-critical command or HTTP validation hooks are explicitly configured to fail closed (for example, blocking execution if the policy validator times out or errors) rather than silently failing open.</li>
+<li><strong>Enterprise Managed Settings &amp; OpenTelemetry:</strong> Organization administrators can explicitly disable Code Mode globally via managed settings files while keeping standard turn-by-turn Claude Code governance active. Sessions continue to emit metrics and lifecycle events through built-in <strong>OpenTelemetry (OTLP)</strong> exporters for cost and compliance monitoring.</li>
+</ul>
+<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.5rem;margin:1.75rem 0;"><div class="mermaid">
 graph TD
-    A["Draft SKILL.md + Helper Script"] --> T1["Test Positive Trigger Prompts"]
-    T1 --> T2["Test Negative (Non-Matching) Prompts"]
-    T2 --> T3["Run Unit Tests on scripts/"]
-    T3 -->|"All Pass"| M["Merge to Shared Skill Repo"]
-    T3 -->|"Fail"| A
+    GEN["Claude Emits JS Block
+(tool_input.code)"] --> MGD{"Enterprise Managed Policy"}
+    MGD -->|"Blocked"| DENY["Reject Code Mode Activation"]
+    MGD -->|"Permitted"| PRE["PreToolUse Hook Inspection
+(Parse tool_input.code &amp; Compound Commands)"]
+    PRE -->|"Policy Violation / Timeout"| BLK["Fail-Closed Block"]
+    PRE -->|"Approved"| RUN["Execute in Local Sandbox"]
+    RUN --> INNER["Per-Call Deny / Ask Checks
+(Bash / Edit / MCP Tools)"]
+    INNER --> OTLP["Emit OpenTelemetry Metrics &amp; Events"]
 
     classDef gold fill:#000000,stroke:#fbbf24,stroke-width:2px,color:#f8fafc
     classDef cyan fill:#000000,stroke:#38bdf8,stroke-width:2px,color:#f8fafc
     classDef emerald fill:#000000,stroke:#34d399,stroke-width:2px,color:#f8fafc
+    classDef rose fill:#000000,stroke:#f472b6,stroke-width:2px,color:#f8fafc
 
-    class A,M gold
-    class T1,T2 cyan
-    class T3 emerald
-</div><p style="color:#94a3b8;font-size:0.86rem;margin-top:0.75rem;text-align:center;">Testing both positive triggers and negative boundaries ensures skills activate only when needed.</p></div>
+    class GEN,RUN gold
+    class MGD,PRE,INNER cyan
+    class OTLP emerald
+    class DENY,BLK rose
+</div><p style="color:#94a3b8;font-size:0.86rem;margin-top:0.75rem;text-align:center;">Layered governance pipeline from enterprise managed settings and PreToolUse code auditing to OpenTelemetry logging.</p></div>
+
+<div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid #38bdf8;border-radius:10px;margin:1.5rem 0;overflow:hidden;"><div style="background:#0b1220;padding:0.5rem 1rem;border-bottom:1px solid rgba(56,189,248,0.22);display:flex;justify-content:space-between;align-items:center;font-size:0.8rem;color:#94a3b8;"><span style="color:#fbbf24;font-weight:600;">Defensive PreToolUse Hook Script Auditing tool_input.code</span><span>Python</span></div><pre style="background:#040711;margin:0;padding:1.1rem 1.25rem;overflow-x:auto;color:#e2e8f0;font-size:0.86rem;line-height:1.55;"><code>#!/usr/bin/env python3
+import json, re, sys
+
+payload = json.load(sys.stdin)
+tool_input = payload.get(&quot;tool_input&quot;, {})
+code_blob = str(tool_input.get(&quot;code&quot;, &quot;&quot;)) + &quot;\n&quot; + str(tool_input.get(&quot;command&quot;, &quot;&quot;))
+
+BLOCKED_PATTERNS = [
+    r&quot;\bgit\s+push\b&quot;,
+    r&quot;\brm\s+-rf\s+/&quot;,
+    r&quot;\bcurl\b.*\|\s*(sh|bash)\b&quot;,
+]
+
+for pattern in BLOCKED_PATTERNS:
+    if re.search(pattern, code_blob, flags=re.IGNORECASE):
+        print(json.dumps({
+            &quot;decision&quot;: &quot;block&quot;,
+            &quot;reason&quot;: f&quot;Blocked high-risk pattern matched in Code Mode script: {pattern}&quot;
+        }))
+        sys.exit(2)
+
+sys.exit(0)</code></pre></div>
 </section>
 
-
 <section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
-<h2 id="step-by-step-skill-workflow">Step-by-Step: From Repeated Prompt to Production Skill</h2>
-
-<p class="article-p">The best Claude Skills are not invented in a vacuum - they are distilled from real workflows your team already runs every week. Follow this five-step engineering loop:</p>
-<ol class="article-p" style="padding-left:1.5rem;display:flex;flex-direction:column;gap:0.55rem;">
-<li><strong>Capture a Working Session:</strong> Start with a real task where you guided Claude through a specialized procedure - such as auditing a Terraform plan, preparing a WCAG accessibility report, or migrating a legacy API endpoint.</li>
-<li><strong>Extract the Stable Protocol:</strong> Strip out one-off project details and write down the repeatable 5 to 8 steps in plain, imperative English inside <code>SKILL.md</code>.</li>
-<li><strong>Offload Deterministic Checks to Scripts:</strong> Move any counting, regex matching, schema validation, or file diffing into a small, tested script inside <code>scripts/</code> so Claude invokes exact code instead of guessing.</li>
-<li><strong>Sharpen the YAML Trigger Description:</strong> Write a concrete <code>description</code> stating both when to activate the skill and when NOT to activate it.</li>
-<li><strong>Verify with Positive and Negative Tests:</strong> Test the skill on three real matching requests and two unrelated requests to confirm crisp activation and consistent output formatting.</li>
-</ol>
-
+<h2 id="code-mode-vs-ptc">Claude Code Mode vs. Messages API Programmatic Tool Calling</h2>
+<p class="article-p">Engineers frequently ask how terminal <strong>Claude Code Mode</strong> relates to Anthropic's server-side <strong>Programmatic Tool Calling (PTC)</strong> in the Messages API. Both solve context pollution and turn latency through script-based tool orchestration, but they target different environments and architectures:</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.9rem;color:#e2e8f0;">
+<thead>
+<tr style="border-bottom:2px solid rgba(251,191,36,0.45);text-align:left;color:var(--gold);">
+<th style="padding:0.75rem;">Dimension</th>
+<th style="padding:0.75rem;">Claude Code Mode (CLI)</th>
+<th style="padding:0.75rem;">Programmatic Tool Calling (Messages API)</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Primary Audience</td>
+<td style="padding:0.75rem;">Developers running interactive Claude Code in the terminal</td>
+<td style="padding:0.75rem;">Teams building custom backend AI agents via the Anthropic API</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Orchestration Language</td>
+<td style="padding:0.75rem;">JavaScript</td>
+<td style="padding:0.75rem;">Python (async <code>asyncio.gather</code> inside Python 3.11)</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Activation / Config</td>
+<td style="padding:0.75rem;"><code>CLAUDE_CODE_EXPERIMENTAL_CODE_MODE=1</code></td>
+<td style="padding:0.75rem;"><code>code_execution</code> tool + <code>allowed_callers</code> on tool schemas</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Execution Runtime</td>
+<td style="padding:0.75rem;">Local in-memory sandbox inside your developer terminal session</td>
+<td style="padding:0.75rem;">Remote Anthropic-managed container (no outbound internet)</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Tool Surface</td>
+<td style="padding:0.75rem;"><code>Bash</code>, <code>Read</code>, <code>Edit</code>, local filesystem, and configured MCP servers</td>
+<td style="padding:0.75rem;">Custom API function tools (SQL, internal REST, CRM, analytics)</td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 
 <section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
-<h2 id="real-world-skill-examples">High-Leverage Skill Examples for Engineering and Business Teams</h2>
-
-<p class="article-p">Teams quickly build high-value internal skill libraries around recurring specialist tasks: a <strong>Database Migration Reviewer</strong> that checks lock safety and rollback scripts, a <strong>Security Threat-Modeler</strong> that walks new features through OWASP checklists, a <strong>Release Notes Composer</strong> that turns merged PRs into customer-friendly updates, and a <strong>Brand Copy Editor</strong> that enforces company terminology and plain-English clarity. Because progressive disclosure only loads a skill when relevant, you can maintain dozens of specialist skills without ever bloating everyday conversations.</p>
-
+<h2 id="production-workflow-patterns">High-Impact Engineering Workflows for Code Mode</h2>
+<p class="article-p">Adopt Code Mode selectively where parallel data gathering and local filtering yield the biggest return:</p>
+<ul class="article-p" style="list-style-type:disc;padding-left:1.5rem;display:flex;flex-direction:column;gap:0.55rem;">
+<li><strong>Cross-Repository Migrations &amp; Dependency Audits:</strong> Scan hundreds of TypeScript or Python modules, extract deprecated import patterns, verify symbol call sites, and group files by migration risk in a single turn.</li>
+<li><strong>CI/CD &amp; Test Log Triage:</strong> Execute verbose unit or integration suites, parse JSON or JUnit output inside JavaScript, deduplicate identical stack traces, and surface only the root-cause failing assertions to Claude.</li>
+<li><strong>Multi-Server MCP Correlation:</strong> Query an issue tracker MCP server, pull matching error logs from an observability MCP server, and join records by commit SHA locally without filling the context window with raw log dumps.</li>
+<li><strong>Long-Running Background Verification:</strong> Kick off extended static analysis, fuzzing, or end-to-end test runs in background auto mode (up to 2 hours) while continuing architectural planning in the same session.</li>
+</ul>
 </section>
 
-
 <section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
-<h2 id="scaling-and-maintaining-skills">Maintaining a Clean, High-Trust Team Skill Library</h2>
-
-<p class="article-p">A small library of ten crisp, well-tested skills outperforms a messy folder of eighty overlapping prompt files every single time. Establish three simple maintenance rules for your team's skill repository: every skill must have a single clear owner, every bundled script in <code>scripts/</code> must pass automated unit tests in CI, and every <code>SKILL.md</code> must stay focused on one domain procedure with clear boundaries on when NOT to trigger.</p>
-<p class="article-p">When a team process changes - for example, a new deployment checklist or updated API style rule - update the corresponding <code>SKILL.md</code> in the very same pull request as the code change. That way, your skills stay permanently synchronized with real engineering practice, and every new hire inherits senior-level operational workflows on their very first day.</p>
-
-</section>
-
-
-<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
-<h2 id="skills-faq">Frequently Asked Questions on Claude Skills</h2>
-<p class="article-p"><strong>How is a Claude Skill different from a standard system prompt?</strong> A system prompt loads on every single turn whether you need it or not. A Claude Skill uses progressive disclosure - only its short YAML name and description stay in memory until a matching request arrives, keeping everyday prompts lean and focused.</p>
-<p class="article-p"><strong>What makes a skill fail to trigger reliably?</strong> Vague descriptions are the number-one cause. Write concrete trigger phrases in the YAML <code>description</code> field, list explicit file types or task patterns that should activate the skill, and test both positive and negative prompts before sharing with your team.</p>
-
-<p class="article-p"><strong>Can one Claude Skill call another skill or external MCP tool?</strong> Yes. A skill protocol can reference approved MCP tools or advise Claude to hand off a subtask to a complementary skill when clear boundaries exist. Keep each skill focused on a single domain responsibility so workflows remain modular, readable, and easy to test as your team grows.</p>
+<h2 id="code-mode-faq">Practical Questions When Adopting Code Mode</h2>
+<p class="article-p"><strong>How can I inspect what JavaScript Claude actually ran?</strong> Press <code>Ctrl+O</code> in the Claude Code terminal UI to open the transcript viewer. Every collapsed Code Mode script and its distilled return payload remain fully auditable out-of-band.</p>
+<p class="article-p"><strong>Can a cloned GitHub repository turn on Code Mode automatically?</strong> No. Project-level configuration files cannot enable <code>CLAUDE_CODE_EXPERIMENTAL_CODE_MODE</code>; it must be explicitly set by the developer in their shell or user settings, and enterprise administrators can block it completely via managed settings.</p>
+<p class="article-p"><strong>When should I stick with standard turn-by-turn tool calling?</strong> For quick single-file edits, CI/CD headless <code>-p</code> pipelines, Agent SDK services, or cloud-routed Bedrock and Vertex AI environments, use standard Claude Code tool loops or server-side Messages API Programmatic Tool Calling instead.</p>
 </section>
 
 <section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <h2 id="references">Authoritative References</h2>
 <ol class="references-list" style="display:flex;flex-direction:column;gap:0.75rem;padding-left:1.25rem;">
-<li><a class="gold-link" href="https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills" rel="noopener noreferrer" target="_blank">Anthropic Agent Skills Engineering Guide</a> - Official architecture guide to SKILL.md files, progressive disclosure, and bundled scripts.</li>
-<li><a class="gold-link" href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview" rel="noopener noreferrer" target="_blank">Anthropic Prompt Engineering Best Practices</a> - Writing clear, unambiguous step-by-step protocols for Claude.</li>
-<li><a class="gold-link" href="https://yaml.org/spec/1.2.2/" rel="noopener noreferrer" target="_blank">YAML 1.2 Specification</a> - Syntax reference for clean SKILL.md frontmatter metadata.</li>
-<li><a class="gold-link" href="https://docs.python.org/3/library/unittest.html" rel="noopener noreferrer" target="_blank">Python unittest Documentation</a> - Standard testing framework for verifying helper scripts bundled inside skills.</li>
+<li><a class="gold-link" href="https://docs.anthropic.com/en/docs/claude-code/overview" rel="noopener noreferrer" target="_blank">Claude Code Official Documentation</a> - Setup, permissions, <code>PreToolUse</code> hooks, managed enterprise settings, and OpenTelemetry configuration.</li>
+<li><a class="gold-link" href="https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/overview" rel="noopener noreferrer" target="_blank">Anthropic Tool Use &amp; Programmatic Tool Calling Documentation</a> - Server-side <code>code_execution</code> and <code>allowed_callers</code> architecture.</li>
+<li><a class="gold-link" href="claude-code.html">Claude Code Engineering Guide</a> - Core terminal workflows, test-driven loops, and repository automation patterns.</li>
+<li><a class="gold-link" href="claude-mcp.html">Claude MCP: Model Context Protocol &amp; Custom Tool Servers</a> - Connecting local and remote MCP servers cleanly to Claude Code.</li>
+<li><a class="gold-link" href="claude-orchestration.html">Claude Multi-Agent Swarm Orchestration</a> - Scaling beyond single-session scripts to multi-agent teams.</li>
 </ol>
 </section>
 </article>
 
 <section class="cta-banner" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
-<h3 style="color:#ffffff;font-size:1.6rem;font-weight:700;margin-bottom:0.75rem;">Scale Your Business AI Agents with Custom Production Skills</h3>
-<p style="color:#94a3b8;font-size:1.02rem;max-width:680px;margin:0 auto 1.75rem;line-height:1.7;">Architect resilient skill repositories, custom prompt injection harnesses, and multi-model agentic workflows tailored for your organization's unique domain.</p>
-<div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+<h2 style="color:var(--gold);font-size:1.85rem;margin-bottom:0.75rem;">Scale Claude Code Across Your Engineering Team</h2>
+<p style="color:#94a3b8;max-width:680px;margin:0 auto 1.5rem;font-size:0.95rem;">From custom PreToolUse security hooks and unified Claude Plugins to hands-on developer training - let's accelerate your engineering velocity.</p>
+<div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
+<a class="btn btn-primary" href="../contact.html">Schedule Architecture Session →</a>
 <a class="btn btn-linkedin" href="https://linkedin.com/in/thomascherickal" rel="noopener" target="_blank">Free LinkedIn Consultation ↗</a>
-<a class="btn btn-primary" href="../contact.html">Start A Project →</a>
-<a class="btn btn-outline" href="../pricing.html">View Advisory Tiers →</a>
+<a class="btn btn-outline" href="../pricing.html">View Advisory Packages</a>
 </div>
 </section>
 </main>
@@ -796,7 +858,7 @@ graph TD
     </p>
   </footer>
     <!-- END:FOOTER -->
-<script src="../components.js"></script>
-<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; mermaid.initialize({ startOnLoad: true, theme: 'dark' });</script>
+  <script src="../components.js"></script>
+  <script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; mermaid.initialize({ startOnLoad: true, theme: 'dark' });</script>
 </body>
 </html>

@@ -247,12 +247,12 @@
           <li><a href="../claude-training/claude-101.html">Claude 101</a></li>
           <li><a href="../claude-training/claude-projects.html">Claude Projects</a></li>
           <li><a href="../claude-training/claude-code.html">Claude Code</a></li>
+          <li><a href="../claude-training/claude-code-mode.html">Claude Code Mode</a></li>
           <li><a href="../claude-training/claude-desktop.html">Claude Desktop</a></li>
           <li><a href="../claude-training/claude-office.html">Claude Office</a></li>
-          <li><a href="../claude-training/claude-skills.html">Claude Skills</a></li>
           <li><a href="../claude-training/claude-mcp.html">Claude MCP</a></li>
           <li><a href="../claude-training/claude-plugins.html">Claude Plugins</a></li>
-          <li><a href="../claude-training/claude-connectors.html">Claude Connectors</a></li>
+          <li><a href="../claude-training/claude-apps.html">Claude Apps</a></li>
           <li><a href="../claude-training/claude-orchestration.html">Claude Orchestration</a></li>
           <li><a href="../claude-training/claude-design.html">Claude Design</a></li>
           <li><a href="../claude-training/claude-science.html">Claude for Science</a></li>
@@ -304,8 +304,9 @@
     </ul>
   </nav>
   <!-- END:HEADER -->
+  <a aria-label="Back to top" class="back-top" href="#top" id="backTop" title="Back to top">↑</a>
 
-<main id="main">
+<main class="container single-column-article" id="main">
 <header class="hero content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <div class="hero-badge content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">CLAUDE CODE CLI</div>
 <h1>Claude Code: Terminal CLI, Agent Workflows & IDE Integration</h1>
@@ -314,7 +315,7 @@
 <p class="hero-byline">By <strong>Thomas Cherickal</strong> - Generative AI Consultant &amp; The Digital Futurist</p>
 </header>
 
-<article class="article-body" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.25rem;">
+<article class="article-body">
 <div id="table-of-contents" aria-label="Table of contents" class="content-card toc-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <p class="article-p" style="font-size:1.02rem;color:#f1f5f9;">Copying code back and forth between a browser chat and your editor wastes time and strips away crucial project context. Claude Code brings Claude directly into your terminal and IDE where your files, git history, compiler, and test suite already live. When configured with clear project memory, tight permissions, and strict spend caps, Claude Code handles multi-file refactoring and bug hunts in minutes without blowing up your monthly API budget.</p>
 <div class="rule"></div>
@@ -327,6 +328,9 @@
 <li><a class="gold-link" href="#test-driven-debugging-workflow">Test-Driven Debugging and Safe Git Workflows</a></li>
 <li><a class="gold-link" href="#multi-file-refactoring-workflow">Step-by-Step Multi-File Refactoring Workflow</a></li>
 <li><a class="gold-link" href="#ide-and-headless-ci-patterns">IDE Integration and Headless CI Automation</a></li>
+<li><a class="gold-link" href="#hooks-subagents-worktrees-and-otel">Lifecycle Hooks, Subagents, Git Worktrees, MCP, and OpenTelemetry</a></li>
+<li><a class="gold-link" href="#claude-code-execution-surfaces">Comparing Claude Code Execution Modes and Isolation Primitives</a></li>
+<li><a class="gold-link" href="#claude-code-faq">Practical Questions for Production Claude Code Teams</a></li>
 <li><a class="gold-link" href="#references">Authoritative References</a></li>
 </ol>
 </div>
@@ -336,7 +340,7 @@
 
 <p class="article-p">Unlike a basic autocomplete plugin that only sees the file currently open in your editor, <a class="gold-link" href="#references">Claude Code</a> behaves like a disciplined junior engineer sitting at your command line. When you give it a goal, it searches your repository using fast file and text tools, reads the relevant modules, proposes a step-by-step plan, applies coordinated edits across multiple files, and runs your actual test commands to verify the change.</p>
 <p class="article-p">You can run Claude Code directly in any terminal or connect it to VS Code and JetBrains IDEs so diffs appear inline beside your editor tabs. Every file edit and shell command passes through a permission layer that you control, ensuring Claude never runs destructive scripts or pushes code without your explicit approval.</p>
-<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.25rem;margin:1.5rem 0;"><div class="mermaid">
+<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.5rem;margin:1.75rem 0;"><div class="mermaid">
 flowchart TD
     G["Developer Task Prompt"] --> E["Explore Codebase
 (Search Files & Read Context)"]
@@ -418,7 +422,7 @@ flowchart TD
 <li><strong>Scope Your File Reads:</strong> Point Claude directly to the target folder or failing test file instead of asking it to "scan the whole repo." Add build artifacts and lockfiles to ignore rules.</li>
 <li><strong>Set Hard Spend Caps:</strong> Use API workspace spend limits and per-session budget flags in headless CI scripts so no runaway loop can ever exceed your approved ceiling.</li>
 </ul>
-<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.25rem;margin:1.5rem 0;"><div class="mermaid">
+<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.5rem;margin:1.75rem 0;"><div class="mermaid">
 graph TD
     S["Start Coding Ticket"] --> M["Load Concise CLAUDE.md"]
     M --> C["Point to Exact Target Files"]
@@ -472,12 +476,111 @@ graph TD
 </section>
 
 <section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="hooks-subagents-worktrees-and-otel">Lifecycle Hooks, Subagents, Git Worktrees, MCP, and OpenTelemetry</h2>
+<p class="article-p">For engineering organizations deploying Claude Code across dozens of repositories, Anthropic's production runtime adds five deterministic governance and scaling primitives documented in the <a class="gold-link" href="#references">Claude Code Hooks and Monitoring documentation</a>:</p>
+<ul class="article-p" style="list-style-type:disc;padding-left:1.5rem;display:flex;flex-direction:column;gap:0.55rem;">
+<li><strong>Deterministic Lifecycle Hooks:</strong> Register shell commands, HTTP webhooks, or policy validators in <code>.claude/settings.json</code> against lifecycle events including <code>PreToolUse</code>, <code>PostToolUse</code>, <code>UserPromptSubmit</code>, <code>SessionStart</code>, <code>SubagentStart</code>, <code>WorktreeCreate</code>, and <code>WorktreeRemove</code>. A <code>PreToolUse</code> script receives structured JSON on <code>stdin</code> and can fail closed with exit code <code>2</code> to block dangerous shell commands or policy violations before execution. Enterprise teams can enforce <code>allowManagedHooksOnly</code> via managed settings so security guardrails cannot be overridden locally.</li>
+<li><strong>Specialized Subagents &amp; Isolated Git Worktrees:</strong> Define scoped child agents inside <code>.claude/agents/&lt;name&gt;.md</code> with restricted toolsets and focused prompts so exploratory searches never pollute the parent context window. Forked subagents (<code>subagent_type: "fork"</code>) spin up inside isolated Git worktrees, keeping experimental edits and test builds separated from your uncommitted working tree until reviewed and merged.</li>
+<li><strong>Repository-Scoped MCP &amp; Plugins:</strong> Commit shared team server definitions in <code>.mcp.json</code> (exposing tools under clean <code>mcp__&lt;server&gt;__&lt;tool&gt;</code> namespaces with on-demand discovery after explicit workspace trust verification) or bundle recurring workflows and playbooks as <a class="gold-link" href="claude-plugins.html">Claude Plugins</a>.</li>
+<li><strong>Programmatic Tool Orchestration (Code Mode):</strong> When tasks involve heavy grep fan-outs, massive test logs, or multi-server MCP correlation, interactive terminal sessions can opt into <a class="gold-link" href="claude-code-mode.html">Claude Code Mode</a> to execute parallel JavaScript chains inside a local in-memory sandbox and return only distilled results to context.</li>
+<li><strong>Native OpenTelemetry (OTLP) Observability:</strong> Enable built-in telemetry export to stream token consumption, latency metrics, tool calls, hook events, and subagent traces directly into OTLP-compatible backends such as Datadog, Honeycomb, Grafana, or OpenObserve.</li>
+</ul>
+<div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid #38bdf8;border-radius:10px;margin:1.5rem 0;overflow:hidden;"><div style="background:#0b1220;padding:0.5rem 1rem;border-bottom:1px solid rgba(56,189,248,0.22);display:flex;justify-content:space-between;align-items:center;font-size:0.8rem;color:#94a3b8;"><span style="color:#fbbf24;font-weight:600;">Deterministic Lifecycle Hooks (.claude/settings.json)</span><span>JSON</span></div><pre style="background:#040711;margin:0;padding:1.1rem 1.25rem;overflow-x:auto;color:#e2e8f0;font-size:0.86rem;line-height:1.55;"><code>{
+  &quot;hooks&quot;: {
+    &quot;PreToolUse&quot;: [
+      {
+        &quot;matcher&quot;: &quot;Bash&quot;,
+        &quot;hooks&quot;: [
+          {
+            &quot;type&quot;: &quot;command&quot;,
+            &quot;command&quot;: &quot;./scripts/validate-bash-policy.py&quot;
+          }
+        ]
+      }
+    ],
+    &quot;PostToolUse&quot;: [
+      {
+        &quot;matcher&quot;: &quot;Edit&quot;,
+        &quot;hooks&quot;: [
+          {
+            &quot;type&quot;: &quot;command&quot;,
+            &quot;command&quot;: &quot;npm run format -- --silent&quot;
+          }
+        ]
+      }
+    ]
+  }
+}</code></pre></div>
+
+<div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid #38bdf8;border-radius:10px;margin:1.5rem 0;overflow:hidden;"><div style="background:#0b1220;padding:0.5rem 1rem;border-bottom:1px solid rgba(56,189,248,0.22);display:flex;justify-content:space-between;align-items:center;font-size:0.8rem;color:#94a3b8;"><span style="color:#fbbf24;font-weight:600;">OpenTelemetry (OTLP) Metrics &amp; Trace Export</span><span>Bash</span></div><pre style="background:#040711;margin:0;padding:1.1rem 1.25rem;overflow-x:auto;color:#e2e8f0;font-size:0.86rem;line-height:1.55;"><code>export CLAUDE_CODE_ENABLE_TELEMETRY=1
+export OTEL_METRICS_EXPORTER=otlp
+export OTEL_LOGS_EXPORTER=otlp
+export OTEL_EXPORTER_OTLP_PROTOCOL=http/protobuf
+export OTEL_EXPORTER_OTLP_ENDPOINT=https://otel-collector.internal.example:4318
+
+claude</code></pre></div>
+</section>
+
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="claude-code-execution-surfaces">Comparing Claude Code Execution Modes and Isolation Primitives</h2>
+<p class="article-p">Select the execution pattern that aligns with your repository risk profile, concurrency needs, and telemetry requirements:</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.9rem;color:#e2e8f0;">
+<thead>
+<tr style="border-bottom:2px solid rgba(251,191,36,0.45);text-align:left;color:var(--gold);">
+<th style="padding:0.75rem;">Execution Mode</th>
+<th style="padding:0.75rem;">Trigger / Configuration</th>
+<th style="padding:0.75rem;">Context &amp; Filesystem Isolation</th>
+<th style="padding:0.75rem;">Best Engineering Workload</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Standard Interactive CLI</td>
+<td style="padding:0.75rem;"><code>claude</code> in repo root</td>
+<td style="padding:0.75rem;">Shared working tree; per-action allow/ask/deny prompts</td>
+<td style="padding:0.75rem;">Daily feature builds, targeted edits, interactive debugging</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Forked Subagents &amp; Git Worktrees</td>
+<td style="padding:0.75rem;"><code>.claude/agents/*.md</code> &amp; <code>WorktreeCreate</code></td>
+<td style="padding:0.75rem;">Dedicated context window + isolated Git worktree branch</td>
+<td style="padding:0.75rem;">Parallel refactors, speculative prototypes, isolated test runs</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;"><a class="gold-link" href="claude-code-mode.html">Claude Code Mode</a></td>
+<td style="padding:0.75rem;"><code>CLAUDE_CODE_EXPERIMENTAL_CODE_MODE=1</code></td>
+<td style="padding:0.75rem;">Local in-memory JS sandbox returning distilled summaries</td>
+<td style="padding:0.75rem;">Log-heavy test triage, large cross-repo audits, multi-MCP joins</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Headless CI Pipeline</td>
+<td style="padding:0.75rem;"><code>claude -p</code> with turn &amp; spend caps</td>
+<td style="padding:0.75rem;">Ephemeral CI runner container + read-only or scoped hooks</td>
+<td style="padding:0.75rem;">PR review checklists, migration audits, release-note generation</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="claude-code-faq">Practical Questions for Production Claude Code Teams</h2>
+<p class="article-p"><strong>How do <code>PreToolUse</code> hooks differ from instructions in <code>CLAUDE.md</code>?</strong> Rules in <code>CLAUDE.md</code> are advisory guidance interpreted by the model, whereas <code>PreToolUse</code> hooks execute deterministic code outside the model before any shell command or edit runs. Always enforce security policies (blocking credential reads, force-pushes, or destructive scripts) with fail-closed hooks and enterprise managed settings (<code>allowManagedHooksOnly</code>).</p>
+<p class="article-p"><strong>When should we use forked Git worktree subagents instead of Claude Code Mode?</strong> Use forked worktree subagents when you need isolated filesystem edits and parallel branch experiments that must not disturb your active working copy. Use <a class="gold-link" href="claude-code-mode.html">Claude Code Mode</a> when you want a single turn to chain searches, filter verbose test logs, or join multiple MCP responses without flooding the context window.</p>
+<p class="article-p"><strong>How can platform teams track Claude Code spend and tool activity across developers?</strong> Configure OpenTelemetry via <code>CLAUDE_CODE_ENABLE_TELEMETRY=1</code> and <code>OTEL_EXPORTER_OTLP_ENDPOINT</code> in your enterprise managed settings so token usage, cost metrics, and tool audit logs stream uniformly into your existing observability stack.</p>
+</section>
+
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <h2 id="references">Authoritative References</h2>
 <ol class="references-list" style="display:flex;flex-direction:column;gap:0.75rem;padding-left:1.25rem;">
-<li><a class="gold-link" href="https://docs.anthropic.com/en/docs/claude-code/overview" rel="noopener noreferrer" target="_blank">Claude Code Official Documentation</a> - Installation, CLI flags, IDE integrations, and core workflows for Claude Code.</li>
+<li><a class="gold-link" href="https://docs.anthropic.com/en/docs/claude-code/overview" rel="noopener noreferrer" target="_blank">Claude Code Official Documentation</a> - Installation, CLI flags, IDE integrations, subagents, and core workflows for Claude Code.</li>
 <li><a class="gold-link" href="https://www.anthropic.com/engineering/claude-code-best-practices" rel="noopener noreferrer" target="_blank">Claude Code Best Practices</a> - Anthropic engineering guide to CLAUDE.md, test-driven loops, and context management.</li>
-<li><a class="gold-link" href="https://docs.anthropic.com/en/docs/claude-code/settings" rel="noopener noreferrer" target="_blank">Claude Code Settings &amp; Permissions</a> - Configuring allowlists, denylists, and security boundaries for team repositories.</li>
-<li><a class="gold-link" href="https://git-scm.com/doc" rel="noopener noreferrer" target="_blank">Git Documentation</a> - Reference for clean branching, diff inspection, and safe commit workflows.</li>
+<li><a class="gold-link" href="https://docs.anthropic.com/en/docs/claude-code/settings" rel="noopener noreferrer" target="_blank">Claude Code Settings &amp; Permissions</a> - Configuring allowlists, denylists, managed enterprise policies, and security boundaries.</li>
+<li><a class="gold-link" href="https://docs.anthropic.com/en/docs/claude-code/hooks" rel="noopener noreferrer" target="_blank">Claude Code Hooks Reference</a> - Deterministic <code>PreToolUse</code>, <code>PostToolUse</code>, subagent, and Git worktree lifecycle hooks.</li>
+<li><a class="gold-link" href="https://docs.anthropic.com/en/docs/claude-code/monitoring-usage" rel="noopener noreferrer" target="_blank">Claude Code OpenTelemetry Monitoring</a> - Streaming metrics, logs, and traces via OTLP exporters for enterprise governance.</li>
+<li><a class="gold-link" href="claude-code-mode.html">Claude Code Mode Engineering Guide</a> - Programmatic JavaScript tool orchestration and sandboxed execution inside Claude Code.</li>
+<li><a class="gold-link" href="https://git-scm.com/doc" rel="noopener noreferrer" target="_blank">Git Documentation</a> - Reference for Git worktrees, clean branching, diff inspection, and safe commit workflows.</li>
 </ol>
 </section>
 </article>

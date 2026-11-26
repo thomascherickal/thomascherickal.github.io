@@ -237,12 +237,12 @@
           <li><a href="../claude-training/claude-101.html">Claude 101</a></li>
           <li><a href="../claude-training/claude-projects.html">Claude Projects</a></li>
           <li><a href="../claude-training/claude-code.html">Claude Code</a></li>
+          <li><a href="../claude-training/claude-code-mode.html">Claude Code Mode</a></li>
           <li><a href="../claude-training/claude-desktop.html">Claude Desktop</a></li>
           <li><a href="../claude-training/claude-office.html">Claude Office</a></li>
-          <li><a href="../claude-training/claude-skills.html">Claude Skills</a></li>
           <li><a href="../claude-training/claude-mcp.html">Claude MCP</a></li>
           <li><a href="../claude-training/claude-plugins.html">Claude Plugins</a></li>
-          <li><a href="../claude-training/claude-connectors.html">Claude Connectors</a></li>
+          <li><a href="../claude-training/claude-apps.html">Claude Apps</a></li>
           <li><a href="../claude-training/claude-orchestration.html">Claude Orchestration</a></li>
           <li><a href="../claude-training/claude-design.html">Claude Design</a></li>
           <li><a href="../claude-training/claude-science.html">Claude for Science</a></li>
@@ -294,7 +294,7 @@
     </ul>
   </nav>
   <!-- END:HEADER -->
-<a aria-label="Back to top" class="back-top" href=\"#top\" id="backTop" title="Back to top">↑</a>
+<a aria-label="Back to top" class="back-top" href="#top" id="backTop" title="Back to top">↑</a>
 <main id="main">
 <div class="doc-container" style="max-width:980px;margin:0 auto;padding:2.75rem 1.25rem 3rem;">
 
@@ -315,7 +315,6 @@
   <section id="table-of-contents" class="content-card" style="background:#000000;border:1.5px solid rgba(251,191,36,0.45);border-radius:14px;padding:1.75rem 2rem;margin-bottom:2rem;">
     <h2 style="color:#fbbf24;margin-bottom:0.9rem;font-size:1.35rem;">Table of Contents</h2>
     <ol style="list-style:none;padding-left:0;margin:0;line-height:1.7;">
-      <li style="margin-bottom:0.45rem;"><a class="gold-link" href="#why-vector-search-alone-fails">1. Why Vector Search Alone Fails Multi-Hop Enterprise Questions</a></li><li style="margin-bottom:0.45rem;"><a class="gold-link" href="#ontology-and-entity-resolution">2. Designing Clean Schemas and Solving Entity Resolution</a></li><li style="margin-bottom:0.45rem;"><a class="gold-link" href="#hybrid-graph-vector-retrieval">3. Hybrid Graph + Vector Retrieval and Token Efficiency</a></li><li style="margin-bottom:0.45rem;"><a class="gold-link" href="#governance-and-deliverables">4. Keeping Graphs Accurate Over Time and Team Deliverables</a></li><li style="margin-bottom:0.45rem;"><a class="gold-link" href="#graphrag-rollout-playbook">5. Step-by-Step GraphRAG Implementation Playbook and Failure Modes</a></li><li style="margin-bottom:0.45rem;"><a class="gold-link" href="#references">6. References and Further Reading</a></li>
     </ol>
   </section>
 
@@ -397,22 +396,7 @@ graph TD
 
 </section>
 
-  <section id="graphrag-rollout-playbook" class="content-card" style="background:#000000;border:1.5px solid rgba(251,191,36,0.45);border-radius:14px;padding:2rem;margin-bottom:2rem;">
-<h2 style="color:#fbbf24;margin-bottom:1rem;">Step-by-Step GraphRAG Implementation Playbook and Failure Modes</h2>
-
-<p style="color:#e2e8f0;line-height:1.78;margin-bottom:1rem;">Building a production Knowledge Graph does not mean boiling the ocean or modeling your entire company on day one. Our implementation playbook starts with one high-value multi-hop domain - such as customer-to-contract-to-service dependencies, regulatory compliance mapping, or supply-chain vendor risk - where plain vector search already struggles. In Week One, domain experts and engineers write down the ten core entity types and fifteen relationship types that answer eighty percent of leadership's hardest questions.</p>
-<p style="color:#e2e8f0;line-height:1.78;margin-bottom:1rem;">In Week Two, teams build the schema-constrained extraction pipeline and canonical entity resolver. Every extracted triple is validated against your ontology before writing to Neo4j or PostgreSQL, and aliases are normalized to unique canonical IDs so "Acme Corp" and "ACME Inc." never split into disconnected subgraphs. Every edge stores its exact source document ID, page or section anchor, and extraction timestamp.</p>
-<p style="color:#e2e8f0;line-height:1.78;margin-bottom:1rem;">In Week Three and Week Four, engineers wire the hybrid GraphRAG retriever into your agent or search interface and run a head-to-head benchmark against plain vector RAG on fifty real multi-hop questions. Teams measure both answer accuracy and average prompt token count. In almost every enterprise evaluation, GraphRAG eliminates multi-hop hallucinations while cutting prompt token volume by more than half because the model reads a compact, verified subgraph instead of dozens of noisy text chunks.</p>
-<p style="color:#e2e8f0;line-height:1.78;margin-bottom:1rem;">Finally, teams configure incremental sync hooks so whenever a contract renews, a service changes owner, or a policy is superseded, stale edges are expired automatically rather than poisoning future answers.</p>
-
-
-<h3 style="color:#38bdf8;margin:1.25rem 0 0.75rem;">Common GraphRAG Failure Modes and Safeguards</h3>
-<ul style="color:#e2e8f0;line-height:1.75;padding-left:1.35rem;margin-bottom:0.5rem;">
-<li style="margin-bottom:0.55rem;"><strong>Entity Duplication:</strong> Enforce canonical ID lookups and fuzzy alias matching during ingestion so one customer or vendor never splits across multiple disconnected nodes.</li>
-<li style="margin-bottom:0.55rem;"><strong>Unbounded Graph Walks:</strong> Cap traversal depth at two or three hops and filter by active status so queries stay fast and compact instead of pulling half the database.</li>
-<li style="margin-bottom:0.55rem;"><strong>Missing Provenance:</strong> Require every edge to carry a source document ID and timestamp so agents can cite exact evidence and expire outdated relationships cleanly.</li>
-</ul>
-</section>
+  
 
   <section id="references" class="content-card" style="background:#000000;border:1.5px solid rgba(251,191,36,0.45);border-radius:14px;padding:2rem;margin-bottom:2rem;">
     <h2 style="color:#fbbf24;margin-bottom:1rem;">References and Further Reading</h2>

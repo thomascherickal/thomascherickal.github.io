@@ -37,7 +37,8 @@ function createHarness() {
     total: 0,
     passed: 0,
     failed: 0,
-    failures: []
+    failures: [],
+    tests: []
   };
 
   const sections = {};
@@ -59,10 +60,12 @@ function createHarness() {
     if (condition) {
       results.passed++;
       sections[currentSection].passed++;
+      results.tests.push({ section: currentSection, name: testName, status: "PASSED" });
     } else {
       results.failed++;
       sections[currentSection].failed++;
       results.failures.push({ testName, message, section: currentSection });
+      results.tests.push({ section: currentSection, name: testName, status: "FAILED", reason: message || "" });
     }
   }
 

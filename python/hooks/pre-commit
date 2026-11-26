@@ -83,7 +83,7 @@ rm -f "$REPO_ROOT"/failed_*.md 2>/dev/null || true
 
 # Stage EVERYTHING the generators and tests may have written. This must come last.
 git add -A -- "$REPO_ROOT/METRICS.md" "$REPO_ROOT/LAST-COMMIT-REPORT.md" "$REPO_ROOT/README.md" 2>/dev/null || true
-git add -- "$REPO_ROOT/tests/.test_reports_cache.json" "$REPO_ROOT/tests/.js_test_reports_cache.json" 2>/dev/null || true
+git add -- "$REPO_ROOT/tests/.test_reports_cache.json" "$REPO_ROOT/tests/.js_test_reports_cache.json" "$REPO_ROOT/tests/.html_ui_test_reports_cache.json" 2>/dev/null || true
 git add -- "$REPO_ROOT/nlp-fuzzy-expert"/*.md \
            "$REPO_ROOT/nlp-fuzzy-expert"/*_references.json \
            "$REPO_ROOT/nlp-fuzzy-expert/references_dictionary.json" \

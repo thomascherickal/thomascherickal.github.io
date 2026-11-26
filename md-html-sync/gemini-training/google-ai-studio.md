@@ -134,12 +134,78 @@ The third mistake is skipping regression checks when switching models. A prompt 
 
 ---
 
+## Build Mode, Stream Realtime, and Bidirectional Live API Workflows
+
+Google AI Studio has evolved well beyond a static prompt box into a multi-mode engineering environment covering full-stack app generation and real-time voice/video streaming. Two surfaces stand out for teams shipping interactive AI products:
+
+- Build Mode (Full-Stack App Prototyping): Rather than copying snippets manually into an empty repository, Build Mode uses an integrated build agent to turn natural-language specifications into interactive web or mobile prototypes directly in the browser. Teams can iterate on UI components, wire Gemini API calls, preview behavior live, and connect backend services before exporting the source tree to Git.
+- Stream Realtime and the Gemini Live API: For voice assistants, live tutoring, and screen-sharing co-pilots, the Stream Realtime surface tests persistent bidirectional WebSocket sessions. The Live API ingests raw 16-bit 16kHz PCM audio, up to 1 FPS video or screen frames, and text concurrently while streaming natural 24kHz PCM speech directly from the model without an intermediate text-to-speech hop.
+- Interactive Dialogue Controls: Live sessions support Voice Activity Detection (VAD) for natural barge-in interruptions, affective dialog that adapts tone to the speaker, live transcription and translation, and mid-stream function calling or Google Search grounding.
+- Production Transport Security: Never embed a long-lived GEMINI_API_KEY in browser JavaScript. For client-to-server WebSockets, mint short-lived ephemeral tokens from your backend; for server-to-server architectures, proxy audio and video chunks through a Python or Node.js WebSocket gateway and enable sliding-window context compression (ContextWindowCompressionConfig) on long calls, as outlined in the Gemini Live API documentation.
+
+#### `live_api_session.py`
+```python
+import asyncio
+import os
+from google import genai
+
+client = genai.Client(
+    api_key=os.environ["GEMINI_API_KEY"],
+    http_options={"api_version": "v1beta"},
+)
+
+async def run_live_session() -> None:
+    config = {"response_modalities": ["AUDIO"]}
+    async with client.aio.live.connect(
+        model="gemini-3.8-live",
+        config=config,
+    ) as session:
+        await session.send_realtime_input(
+            text="Give a 15-second status briefing on our deployment checklist."
+        )
+        async for response in session.receive():
+            content = response.server_content
+            if content and content.model_turn:
+                for part in content.model_turn.parts:
+                    if part.text:
+                        print(part.text, end="", flush=True)
+                    elif part.inline_data:
+                        # Stream 24kHz PCM audio bytes to client speaker buffer
+                        audio_chunk = part.inline_data.data
+                        _ = len(audio_chunk)
+
+if __name__ == "__main__":
+    asyncio.run(run_live_session())
+```
+
+---
+
+## Comparing Google AI Studio Modes and Export Targets
+
+Match each AI Studio workspace mode to the right engineering phase and production SDK integration pattern:
+
+---
+
+## Practical Questions When Prototyping in Google AI Studio
+
+How do we transition a prototype from AI Studio to enterprise security on Google Cloud? Because both AI Studio and Vertex AI use the unified google-genai SDK, your prompt files, Pydantic schemas, and tool definitions stay identical. Switch client initialization to Vertex AI mode with Google Cloud IAM credentials, VPC Service Controls, and regional endpoints when entering staging or production.
+
+How should browser apps authenticate against the Live API safely? Never expose your developer API key in frontend code. Issue short-lived ephemeral tokens from a lightweight backend endpoint and pass that token to the browser WebSocket client, or relay streams through your own authenticated backend server.
+
+When should we use Structured Output JSON schemas versus open Markdown responses? Enforce a JSON schema whenever downstream software reads fields programmatically (routing tickets, updating a CRM, or rendering typed UI cards). Keep responses in structured Markdown only when a human reads the output directly and flexible prose layout is preferred.
+
+How do we prevent silent prompt regressions when switching to a faster Gemini tier? Keep a version-controlled JSONL evaluation set of 20 to 50 messy edge cases in your repository. Run automated schema-validation and accuracy checks in CI every time you update system instructions or test a faster tier like Gemini Hydrogen.
+
+---
+
 ## References
 
 Official documentation, research papers, and developer guides referenced in this article:
 
-- Google AI Studio - Official browser workbench for prototyping prompts, schemas, and multimodal Gemini workflows.
+- Google AI Studio - Official browser workbench for prototyping prompts, Build Mode apps, schemas, and multimodal Gemini workflows.
 - Google Gemini API Documentation - Complete guides for system instructions, structured outputs, safety settings, and grounding.
+- Google Gemini Live API Guide - Reference for bidirectional WebSocket audio/video streaming, VAD, and ephemeral token security.
+- Gemini Structured Outputs Documentation - Authoritative guide to constrained JSON schemas and Pydantic validation.
 - Google GenAI Python SDK (GitHub) - Official Python client library for calling Gemini models in production.
 - Google Gemini Cookbook - Practical notebooks and production examples for multimodal and structured workflows.
 

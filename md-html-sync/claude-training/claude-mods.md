@@ -16,8 +16,10 @@ Out of the box, Claude is a generalist. Yet every developer, writer, analyst, an
 4. Keeping Your Mod Stack Fast and Conflict-Free
 5. Step-by-Step: Building Your First Custom Claude Mod
 6. Governing Shared Mods Across Engineering and Business Teams
-7. Quick Answers on Using Claude Mods Safely
-8. Authoritative References
+7. Layered Customization: CLAUDE.md, Skills, Lifecycle Hooks, and In-Process Mods
+8. Decision Matrix: CLAUDE.md vs. Skills vs. Lifecycle Hooks vs. Claude Plugins
+9. Quick Answers on Using Claude Mods Safely
+10. Authoritative References
 
 ---
 

@@ -99,13 +99,71 @@ With the right quantization tier, local hardware sizing, and disciplined evaluat
 
 ---
 
+## Multimodal Gemma, MoE Throughput, Function Calling, and Edge Runtimes
+
+The modern open-weight Gemma ecosystem from Google DeepMind's Gemma portal has expanded well beyond text-only checkpoints into a complete sovereign AI stack - released under permissive open licensing (including Apache 2.0 on flagship releases) and spanning smartphones, laptops, and multi-GPU private clusters.
+
+- Edge Multimodal Variants (E2B and E4B Class): Compact effective-parameter models engineered for smartphones, Raspberry Pi boards, and NVIDIA Jetson modules deliver 128K context windows alongside native text, image, video, and audio understanding completely offline.
+- Mixture-of-Experts (MoE) Versus Dense Server Models: For workstation and private-cloud serving, Gemma spans balanced dense models (12B class), high-throughput 26B MoE models (activating roughly 3.8B parameters per token for rapid generation speed), and high-reasoning 31B Dense checkpoints scaling up to 256K context windows.
+- Native Function Calling and FunctionGemma Routing: Modern Gemma checkpoints ship with built-in structured tool use and system-prompt adherence for local coding and automation agents. At the ultra-compact edge, FunctionGemma (a 270M-parameter function-calling specialist) translates natural language into deterministic local API calls on-device, acting as a zero-latency router that handles simple UI or device commands offline and escalates only complex reasoning tasks.
+- Unified Multimodal Embeddings (EmbeddingGemma): Organizations building 100% air-gapped RAG pipelines can pair local Gemma chat models with EmbeddingGemma to index code, documents, images, and audio into a shared local vector space without calling an external embedding endpoint.
+- Quantization-Aware Training (QAT) Across Four Core Runtimes: Google publishes QAT-optimized checkpoints so INT4, Q4_K_M GGUF, FP8, and NVFP4 builds retain strong accuracy under steep memory compression. Teams deploy identically across Ollama (single-command laptop setup), llama.cpp (maximum raw CPU/GPU control via GGUF), vLLM (continuous-batching production clusters), and MediaPipe / LiteRT (Android, iOS, and AICore hardware acceleration).
+
+The commands below demonstrate three production-ready local serving patterns using llama.cpp GGUF weights, Ollama edge/MoE models, and vLLM FP8 serving:
+
+#### `gemma_multi_runtime_deploy.sh`
+```python
+# 1. Edge multimodal laptop or Jetson deployment with Ollama
+ollama run gemma4:e4b "Describe the defect shown in this board inspection photo."
+
+# 2. Raw GGUF Q4_K_M server with llama.cpp (OpenAI-compatible API + tool calling)
+llama-server \
+  -m ./models/gemma-4-26b-a4b-it-Q4_K_M.gguf \
+  --host 127.0.0.1 \
+  --port 8080 \
+  --ctx-size 32768 \
+  --jinja \
+  -ngl 99
+
+# 3. High-throughput sovereign enterprise cluster with vLLM (FP8 quantization)
+vllm serve google/gemma-4-31b-it \
+  --quantization fp8 \
+  --enable-auto-tool-choice \
+  --tool-call-parser hermes \
+  --max-model-len 65536 \
+  --port 8000
+```
+
+---
+
+## Gemma Model Tiers, Quantization, and Runtime Specification Matrix
+
+Use this hardware and runtime matrix to size sovereign local Gemma deployments without running into silent CPU fallback or KV-cache memory pressure:
+
+---
+
+## Practical Questions on Deploying Local Gemma Models
+
+Why does Quantization-Aware Training (QAT) outperform standard post-training quantization? Post-training quantization compresses weights only after training finishes, which can degrade tricky coding or JSON formatting tasks at 4-bit precision. Google's official QAT Gemma checkpoints simulate low-bit rounding during training so the model learns to preserve accuracy in INT4 and Q4_K_M deployments.
+
+When should a team choose the 26B MoE Gemma variant over a 31B Dense variant? Choose the 26B Mixture-of-Experts variant when latency and tokens-per-second throughput matter most (such as interactive chat, live coding assistants, or multi-user team endpoints) because only a small fraction of parameters activate per token. Choose the 31B Dense checkpoint when raw reasoning depth on complex audits or scientific tasks outweighs generation speed.
+
+How does FunctionGemma fit into a hybrid edge-plus-cloud system? Deploy FunctionGemma directly on user phones, browsers, or edge gateways to parse frequent commands (toggling settings, querying local SQLite records, triggering deterministic APIs) with near-zero latency and zero API spend, forwarding only ambiguous open-ended prompts to a larger private vLLM server or cloud Gemini model.
+
+Can regulated enterprises run Gemma completely air-gapped with Apache 2.0 flexibility? Yes. Flagship open-weight Gemma releases under the Apache 2.0 license allow commercial internal deployment, private fine-tuning, and completely offline execution inside air-gapped VPCs or on-premise GPU servers with zero telemetry leaving your perimeter.
+
+---
+
 ## References
 
 Official documentation, research papers, and developer guides referenced in this article:
 
-- Google Gemma Official Documentation - Official overview of Gemma open-weights models, sizes, and responsible use.
+- Google Gemma Official Documentation - Official overview of Gemma open-weights models, sizes, QAT checkpoints, and responsible use.
+- Google DeepMind - Gemma Open Models - Architecture details for edge multimodal, MoE, FunctionGemma, and EmbeddingGemma models.
 - Ollama Documentation - Simple local runtime for pulling and serving quantized Gemma models on laptops.
-- vLLM Serving Engine - High-throughput production serving engine for open-weights models on GPUs.
+- llama.cpp Repository - High-performance C/C++ inference engine for GGUF quantization on CPUs and consumer GPUs.
+- vLLM Serving Engine - High-throughput production serving engine with continuous batching and FP8/NVFP4 quantization.
+- Google AI Edge - MediaPipe LLM Inference - On-device Android, iOS, and web runtime guides for compact edge Gemma models.
 - Hugging Face Gemma Model Hub - Official model cards, weights, and fine-tuning resources from Google.
 
 ---

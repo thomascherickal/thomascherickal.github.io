@@ -60,7 +60,8 @@ async function runAllModules(PricingCalculator, constants) {
         failed: harness.results.failed,
         elapsed_seconds: ((Date.now() - startTime) / 1000).toFixed(2),
         status: harness.results.failed === 0 ? "PASSED" : "FAILED",
-        sections: harness.sections
+        sections: harness.sections,
+        tests: harness.results.tests || []
       };
       fs.writeFileSync(cachePath, JSON.stringify(cacheData, null, 2), 'utf8');
     } catch (e) { }

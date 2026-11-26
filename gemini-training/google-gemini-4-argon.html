@@ -247,12 +247,12 @@
           <li><a href="../claude-training/claude-101.html">Claude 101</a></li>
           <li><a href="../claude-training/claude-projects.html">Claude Projects</a></li>
           <li><a href="../claude-training/claude-code.html">Claude Code</a></li>
+          <li><a href="../claude-training/claude-code-mode.html">Claude Code Mode</a></li>
           <li><a href="../claude-training/claude-desktop.html">Claude Desktop</a></li>
           <li><a href="../claude-training/claude-office.html">Claude Office</a></li>
-          <li><a href="../claude-training/claude-skills.html">Claude Skills</a></li>
           <li><a href="../claude-training/claude-mcp.html">Claude MCP</a></li>
           <li><a href="../claude-training/claude-plugins.html">Claude Plugins</a></li>
-          <li><a href="../claude-training/claude-connectors.html">Claude Connectors</a></li>
+          <li><a href="../claude-training/claude-apps.html">Claude Apps</a></li>
           <li><a href="../claude-training/claude-orchestration.html">Claude Orchestration</a></li>
           <li><a href="../claude-training/claude-design.html">Claude Design</a></li>
           <li><a href="../claude-training/claude-science.html">Claude for Science</a></li>
@@ -304,6 +304,7 @@
     </ul>
   </nav>
   <!-- END:HEADER -->
+  <a aria-label="Back to top" class="back-top" href="#top" id="backTop" title="Back to top">↑</a>
 
 <main class="container single-column-article" id="main">
 <header class="hero content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);text-align:left;display:flex;flex-direction:column;gap:1.25rem;padding:2rem 2.25rem;margin-top:110px;margin-bottom:2rem;">
@@ -323,7 +324,10 @@
 <a class="toc-link gold-link" href="#when-to-use-argon">5. When to Choose Argon Versus Lighter Tiers</a>
 <a class="toc-link gold-link" href="#high-stakes-use-cases">6. High-Stakes Enterprise Use Cases and Evaluation Playbook</a>
 <a class="toc-link gold-link" href="#operational-checklist">7. Operational Checklist Before Shipping Argon in Production</a>
-<a class="toc-link gold-link" href="#references">8. References</a>
+<a class="toc-link gold-link" href="#argon-architecture-and-long-decode">8. Unified Context Window, Thinking Levels, Long Decode, and Interactions API Patterns</a>
+<a class="toc-link gold-link" href="#argon-model-comparison-matrix">9. Comparing Gemini Argon Against Sibling Gemini Models</a>
+<a class="toc-link gold-link" href="#gemini-argon-faq">10. Practical Questions When Deploying Gemini Argon</a>
+<a class="toc-link gold-link" href="#references">11. References</a>
 </div>
 </article>
 
@@ -451,11 +455,127 @@ print(response.text)</code></pre>
 <p>Before wiring Gemini Argon into a production workflow, run through four quick engineering checks. First, confirm that static background specifications are stored in an explicit context cache rather than resent raw on every turn. Second, set clear timeout and retry policies in your client code because deep reasoning calls naturally take longer than fast classification calls. Third, log the exact model identifier, prompt version, and verification outcome for every run so you can audit decisions weeks later. Fourth, keep a fast fallback or escalation path for simple requests so Argon stays reserved for the high-stakes problems where its reasoning depth truly shines.</p>
 </article>
 
+<article class="content-card" id="argon-architecture-and-long-decode" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2>Unified Context Window, Thinking Levels, Long Decode, and Interactions API Patterns</h2>
+<p>Architecting production workloads on Gemini Argon requires understanding four core runtime behaviors documented in the <a class="gold-link" href="#references">Gemini Argon model guide</a> and the <a class="gold-link" href="#references">Gemini Long Decode guide</a>:</p>
+<ul style="display:flex;flex-direction:column;gap:0.55rem;padding-left:1.35rem;margin:0.75rem 0 1.15rem;">
+<li><strong>Unified 1,048,576-Token Context Budget:</strong> Gemini Argon allocates a single shared 1,048,576-token window across input tokens, internal thinking tokens, function calls, and final text output. Standard synchronous requests default to a 65,536-token output ceiling (32,768 tokens per non-streaming hop), and if input plus <code>max_output_tokens</code> exceeds the window, the API automatically caps output to the remaining headroom.</li>
+<li><strong>Reasoning Effort via <code>thinking_level</code>:</strong> Rather than tuning legacy sampling parameters like <code>temperature</code>, <code>top_p</code>, or <code>top_k</code> - which Argon ignores - developers steer reasoning depth with <code>thinking_level</code> across <code>low</code>, <code>medium</code> (default), and <code>high</code>. Reserve <code>high</code> for dense algorithmic, legal, financial, or distributed-systems tasks where thorough backtracking pays off.</li>
+<li><strong>Long Decode and Background Execution:</strong> When a formal proof, full-repository audit, or exhaustive technical dossier needs more than 64K tokens of combined thinking and output in a single response, Argon supports Long Decode up to the remaining unified context window. Running via the Interactions API with <code>background=True</code> executes continuation hops server-side for up to 24 hours so client network drops cannot interrupt progress.</li>
+<li><strong>Implicit Durable Caching and Consumption Tiers:</strong> Gemini Argon uses implicit context caching (with durable prefix caching enabled by default) rather than manual explicit cache handles. Keeping static system instructions, policy manuals, and schemas at the front of the prompt - and chaining multi-turn sessions via <code>previous_interaction_id</code> - maximizes cache hit rates. Teams can also route non-urgent batch audits through the Batch API or Flex inference while reserving Priority inference for latency-critical escalations.</li>
+</ul>
+<div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid var(--cyan);border-radius:10px;margin:1.5rem 0;overflow:hidden;">
+<div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.55rem 1rem;background:rgba(255,255,255,0.04);border-bottom:1px solid rgba(255,255,255,0.08);">
+<span style="font-family:var(--font-mono);font-size:0.8rem;color:var(--cyan);">argon_interactions_long_decode.py</span>
+<button class="copy-btn" onclick="copyCode(this)" style="text-decoration:none !important;" type="button">Copy</button>
+</div>
+<pre style="white-space:pre-wrap;word-break:break-word;overflow-x:hidden;padding:1rem;margin:0;color:#e2e8f0;font-size:0.88rem;"><code>import time
+from google import genai
+
+client = genai.Client()
+
+# Run a high-reasoning, server-managed background Long Decode job on Gemini Argon
+job = client.interactions.create(
+    model="gemini-4-argon",
+    input=(
+        "Audit the attached multi-region consensus specification for split-brain scenarios, "
+        "fencing-token violations, and recovery invariants. Provide a formal failure table "
+        "and minimal protocol patches."
+    ),
+    generation_config={
+        "thinking_level": "high",
+        "max_output_tokens": 131072,
+    },
+    tools=[{"type": "file_search", "file_search_store_names": ["filesearchstores/consensus-specs"]}],
+    background=True,
+)
+
+while True:
+    result = client.interactions.get(id=job.id)
+    if result.status == "completed":
+        print(result.output_text)
+        break
+    if result.status in ("failed", "cancelled"):
+        raise RuntimeError(f"Argon interaction ended with status: {result.status}")
+    time.sleep(10)
+
+# Continue statefully on the same server-side context using previous_interaction_id
+summary = client.interactions.create(
+    model="gemini-4-argon",
+    previous_interaction_id=result.id,
+    input="Convert the critical findings into a prioritized remediation checklist for Sprint 14.",
+    generation_config={"thinking_level": "medium"},
+)
+print(summary.output_text)</code></pre>
+</div>
+</article>
+
+<article class="content-card" id="argon-model-comparison-matrix" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2>Comparing Gemini Argon Against Sibling Gemini Models</h2>
+<p>Mature AI architectures route every request to the most cost-effective model that clears the quality bar. Compare Gemini Argon against its sibling models across thinking controls, context accounting, and native capabilities before locking in production routing rules:</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.9rem;color:#e2e8f0;">
+<thead>
+<tr style="border-bottom:2px solid rgba(251,191,36,0.45);text-align:left;color:var(--gold);">
+<th style="padding:0.75rem;">Model Tier</th>
+<th style="padding:0.75rem;">Unified Context Window</th>
+<th style="padding:0.75rem;">Thinking Levels</th>
+<th style="padding:0.75rem;">Long Decode &amp; Built-In Tools</th>
+<th style="padding:0.75rem;">Primary Production Role</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Gemini Argon (<code>gemini-4-argon</code>)</td>
+<td style="padding:0.75rem;">1,048,576 tokens (shared input + thinking + output)</td>
+<td style="padding:0.75rem;"><code>low</code>, <code>medium</code> (default), <code>high</code></td>
+<td style="padding:0.75rem;">Up to 1M Long Decode; Search, Maps, File Search, URL Context, Code Execution, Computer Use, Tool Retrieval</td>
+<td style="padding:0.75rem;">Deep frontier reasoning for hard software engineering, finance, legal/tax, and high-stakes synthesis</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Gemini Carbon (<code>gemini-4-carbon</code>)</td>
+<td style="padding:0.75rem;">1,048,576 tokens (shared input + thinking + output)</td>
+<td style="padding:0.75rem;"><code>low</code>, <code>medium</code> (default), <code>high</code></td>
+<td style="padding:0.75rem;">Up to 1M Long Decode; full built-in tool suite plus Batch, Flex, and Priority inference</td>
+<td style="padding:0.75rem;">Sustained agentic coding, multimodal knowledge work, scientific discovery, and cybersecurity defense</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Gemini Neon (<code>gemini-4-neon</code>)</td>
+<td style="padding:0.75rem;">1,048,576 tokens (shared input + thinking + output)</td>
+<td style="padding:0.75rem;"><code>low</code>, <code>medium</code>, <code>high</code> (default), <code>xhigh</code></td>
+<td style="padding:0.75rem;">Up to 1M Long Decode (64K per non-streaming hop); full built-in tool suite</td>
+<td style="padding:0.75rem;">Fast end-to-end completion for complex software engineering, analytics, and science loops</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Gemini Hydrogen (<code>gemini-4-hydrogen</code>)</td>
+<td style="padding:0.75rem;">1,048,576 tokens (shared input + thinking + output)</td>
+<td style="padding:0.75rem;"><code>low</code>, <code>medium</code>, <code>high</code> (default), <code>xhigh</code></td>
+<td style="padding:0.75rem;">Up to 1M Long Decode (64K per non-streaming hop); full built-in tool suite</td>
+<td style="padding:0.75rem;">High-speed, dependable execution across everyday coding, agentic workflows, and multimodal work</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Note that Gemini Argon focuses strictly on multimodal understanding (text, image, video, audio, and PDF inputs) and text/structured outputs; for native image generation, speech synthesis, or real-time bidirectional Live API streaming, route those specialized steps to dedicated media or Live models.</p>
+</article>
+
+<article class="content-card" id="gemini-argon-faq" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2>Practical Questions When Deploying Gemini Argon</h2>
+<p><strong>How does the unified 1,048,576-token context window affect output capacity?</strong> Because input, internal reasoning tokens, and final output share one 1,048,576-token budget, sending an 800K-token prompt leaves roughly 248K tokens for combined thinking and answer text. Always count input tokens upfront and keep prompts focused on high-signal files so Argon retains generous headroom for deep reasoning.</p>
+<p><strong>Why are custom <code>temperature</code>, <code>top_p</code>, and <code>top_k</code> values ignored on Gemini Argon?</strong> Argon controls answer rigor through internal reasoning effort rather than surface token randomness. Use <code>thinking_level</code> (<code>low</code>, <code>medium</code>, or <code>high</code>) alongside explicit JSON schemas (structured outputs) and clear acceptance criteria to govern determinism and depth.</p>
+<p><strong>When should we enable <code>background=True</code> Long Decode instead of a standard request?</strong> Keep standard synchronous calls for prompts that finish cleanly under 64K tokens of combined thinking and output. Switch to <code>background=True</code> on the Interactions API whenever an audit, formal verification, or deep multi-document synthesis risks exceeding 64K tokens or running longer than standard HTTP client timeouts.</p>
+<p><strong>How do we prevent runaway token spend in multi-turn Argon agent loops?</strong> Place unchanging system instructions, policy rubrics, and shared repository summaries at the exact beginning of your context so implicit durable caching triggers reliably, chain turns via <code>previous_interaction_id</code>, and route routine triage or formatting sub-tasks to Gemini Hydrogen or Gemini Neon while escalating only high-stakes planning and verification to Argon.</p>
+</article>
+
 <article class="content-card" id="references" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <h2>References</h2>
 <p>Official documentation, research papers, and developer guides referenced in this article:</p>
 <ul style="display:flex;flex-direction:column;gap:0.65rem;padding-left:1.25rem;margin-top:1rem;">
 <li><a class="gold-link" href="https://deepmind.google/models/gemini/" rel="noopener noreferrer" target="_blank">Google DeepMind - Gemini Models</a> - Official overview of Gemini flagship reasoning models and multimodal architecture.</li>
+<li><a class="gold-link" href="https://ai.google.dev/gemini-api/docs/models/gemini-4-argon" rel="noopener noreferrer" target="_blank">Gemini Argon Model Guide</a> - Official API capabilities, unified context limits, thinking levels, and consumption options.</li>
+<li><a class="gold-link" href="https://deepmind.google/models/model-cards/gemini-4-argon/" rel="noopener noreferrer" target="_blank">Google DeepMind - Gemini Argon Model Card</a> - Official technical model card and safety evaluation documentation.</li>
+<li><a class="gold-link" href="https://ai.google.dev/gemini-api/docs/long-decode" rel="noopener noreferrer" target="_blank">Gemini API Long Decode Guide</a> - Background execution and client-side continuation patterns for outputs exceeding 64K tokens.</li>
+<li><a class="gold-link" href="https://ai.google.dev/gemini-api/docs/thinking" rel="noopener noreferrer" target="_blank">Gemini API Thinking Levels Guide</a> - Controlling reasoning effort, latency, and token budgets across Gemini models.</li>
 <li><a class="gold-link" href="https://ai.google.dev/gemini-api/docs/caching" rel="noopener noreferrer" target="_blank">Gemini API Context Caching</a> - Developer guide for caching large files and system instructions across agent turns.</li>
 <li><a class="gold-link" href="https://ai.google.dev/gemini-api/docs/function-calling" rel="noopener noreferrer" target="_blank">Gemini API Function Calling</a> - Documentation for defining typed tool schemas and handling tool execution loops.</li>
 <li><a class="gold-link" href="https://github.com/googleapis/python-genai" rel="noopener noreferrer" target="_blank">Google GenAI Python SDK</a> - Official Python client library for production Gemini integrations.</li>

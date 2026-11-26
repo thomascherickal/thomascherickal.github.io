@@ -39,19 +39,34 @@ Settlement links and wire routing instructions are dispatched directly upon reac
 *Payment:
  Schedule & Milestones · FAQ #50*  
 All training payments are distributed into ten
- equal installments (10% per installment), mapped directly to completed training days, with dedicated support 100% included at zero extra charge ($0 USD) across all 6 Purchasing Power Parity tiers:
+ equal installments (10% per installment), mapped directly to completed training days, with
+ dedicated support 100% included at zero extra charge ($0 USD) across all 6 Purchasing Power Parity
+ tiers:
 
 - 2-Month Business AI
- Training Flagship ($1,000 / $750 / $500 / $500 / $250 / Custom USD): Ten equal installments (10% each: $100 / $75 / $50 / $50 / $25 / Custom USD), due after Days 5, 10, 15, 20, 25, 30, 35, 40, 45, and 50 of completed live training. Up to 10 participants included (+$100 / +$75 / +$50 / +$50 / +$25 / Custom USD per extra seat, max 20 seats). 30 days of dedicated support is 100% included ($0 charge).
+ Training Flagship ($1,000 / $750 / $500 / $500 / $250 / Custom USD): Ten equal
+ installments (10% each: $100 / $75 / $50 / $50 / $25 / Custom USD), due after Days 5, 10, 15, 20,
+ 25, 30, 35, 40, 45, and 50 of completed live training. Up to 10 participants included (+$100 / +$75
+ / +$50 / +$50 / +$25 / Custom USD per extra seat, max 20 seats). 30 days of dedicated support is
+ 100% included ($0 charge).
 
 - 2-Month Personal AI
- Training Flagship ($1,000 / $750 / $500 / $500 / $250 / Custom USD): Ten equal installments (10% each: $100 / $75 / $50 / $50 / $25 / Custom USD), due after Days 5, 10, 15, 20, 25, 30, 35, 40, 45, and 50 of completed live Personal Training. Up to 10 participants included (+$100 / +$75 / +$50 / +$50 / +$25 / Custom USD per extra seat, max 20 seats). 30 days of dedicated support is 100% included ($0 charge).
+ Training Flagship ($1,000 / $750 / $500 / $500 / $250 / Custom USD): Ten equal
+ installments (10% each: $100 / $75 / $50 / $50 / $25 / Custom USD), due after Days 5, 10, 15, 20,
+ 25, 30, 35, 40, 45, and 50 of completed live Personal Training. Up to 10 participants included
+ (+$100 / +$75 / +$50 / +$50 / +$25 / Custom USD per extra seat, max 20 seats). 30 days of dedicated
+ support is 100% included ($0 charge).
 
-- 10-Day Service Picks ($100 / $75 / $50 / $50 / $25 / Custom USD):
- Ten equal installments (10% each: $10 / $7.50 / $5 / $5 / $2.50 / Custom USD), due after Days 1 through 10 of completed live training. 1 seat included (+$100 / +$75 / +$50 / +$50 / +$25 / Custom USD per extra seat, max 20 seats). 5 days of dedicated support is 100% included ($0 charge).
+- 10-Day Service Picks ($100 / $75 / $50
+ / $50 / $25 / Custom USD):
+ Ten equal installments (10% each: $10 / $7.50 / $5 / $5 / $2.50 / Custom USD), due after Days 1
+ through 10 of completed live training. 1 seat included (+$100 / +$75 / +$50 / +$50 / +$25 / Custom
+ USD per extra seat, max 20 seats). 5 days of dedicated support is 100% included ($0 charge).
 
-- Dedicated Support Included ($0 Extra Charge):
- All dedicated support (assistance, Q&A, code reviews, and written materials licensed under Apache 2.0) is 100% included in the base engagement price with zero additional invoices.
+- Dedicated Support Included ($0 Extra
+ Charge):
+ All dedicated support (assistance, Q&A, code reviews, and written materials licensed under
+ Apache 2.0) is 100% included in the base engagement price with zero additional invoices.
 
 All schedules count business days (excluding Saturdays and Sundays). You never pay ahead of delivery
  - each installment is settled strictly as milestones are achieved.
@@ -87,42 +102,59 @@ This policy guarantees complete risk elimination, aligning my incentives entirel
 ### 4. Are there any charges or licensing fees for the training materials?
 *Payment:
  Zero Charge Training Materials · FAQ #65*  
-No. Zero charge for training materials: All training materials will be provided to the client with an Apache 2.0 license for internal use, commercial use, or even resale which requires attribution and keeping the licence and notice files. The Apache 2.0 licence is granted only on full completion, and never if the client walks away at any stage.
+No. Zero charge for training
+ materials: All training materials will be provided to the client with an Apache 2.0 license for internal use,
+ commercial use, or even resale which requires attribution and keeping the licence and notice files.
+ The Apache 2.0 licence is granted only on full completion, and never if the client walks away at any
+ stage.
 
 - Zero Extra Charge:
- All curriculum guides, code, prompts, and written training materials are 100% included in your engagement at $0 additional charge.
+ All curriculum guides, code, prompts, and written training materials are 100% included in your
+ engagement at $0 additional
+ charge.
 
-- Full Commercial & Resale Rights:
- Licensed under Apache 2.0 for internal deployment, commercial use, or resale with attribution to the original author.
+- Full Commercial & Resale
+ Rights:
+ Licensed under Apache 2.0 for internal deployment, commercial use, or resale with attribution to the
+ original author.
 
 - Completion Requirement:
  The Apache 2.0 license will not be provided if the training ends early.
 
-There are zero surprise invoices, no recurring subscriptions, and zero additional payments beyond the 10 training milestones.
+There are zero surprise invoices, no recurring subscriptions, and zero additional payments beyond the
+ 10 training milestones.
 
 ---
 
 ### 5. How is the dedicated support period delivered across parity tiers?
 *Payment:
  Support & Parity · FAQ #66*  
-Because support periods carry zero extra charge, clients across all 6 World Bank Purchasing Power Parity (PPP) tiers receive identical comprehensive operational support fully covered by their package rate:
+Because support periods carry zero extra
+ charge, clients across all 6 World Bank Purchasing Power Parity (PPP) tiers receive
+ identical comprehensive operational support fully covered by their package rate:
 
-- Tier 1 (High-Income Economies, 100%):
+- Tier 1 (High-Income Economies,
+ 100%):
  $1,000 flagship / $100 individual service (30d/5d support 100% included at $0 USD).
 
-- Tier 2 (Upper-Middle-Income, 25% Off):
+- Tier 2 (Upper-Middle-Income, 25%
+ Off):
  $750 flagship / $75 individual service (30d/5d support 100% included at $0 USD).
 
-- Tier 3 & 4 (Lower-Middle/Low-Income & Startups, 50% Off):
+- Tier 3 & 4
+ (Lower-Middle/Low-Income & Startups, 50% Off):
  $500 flagship / $50 individual service (30d/5d support 100% included at $0 USD).
 
-- Tier 5 (Academia & Non-Profits, 75% Off):
+- Tier 5 (Academia & Non-Profits,
+ 75% Off):
  $250 flagship / $25 individual service (30d/5d support 100% included at $0 USD).
 
-- Tier 6 (Crisis-Affected & Under-Resourced):
+- Tier 6 (Crisis-Affected &
+ Under-Resourced):
  Custom subsidized micro-rates with support 100% included.
 
-Every builder and business worldwide receives fair, equitable pricing. Explore our full matrix on the Pricing Page.
+Every builder and business worldwide receives fair, equitable pricing. Explore our full matrix on the
+ Pricing Page.
 
 ---
 
@@ -156,7 +188,8 @@ Graduates emerge operating as high-leverage solo powerhouses
 *Personal:
  Pricing Offer · FAQ #24*  
 Personal Training is $1,000 USD in Tier 1 for 2 months total (30 days training, + 30 days guidance,
- Q&A and written guides). Up to 10 participants included (+$100/extra seat, max 20). Clients are encouraged to choose services
+ Q&A and written guides). Up to 10 participants included (+$100/extra seat, max 20). Clients are
+ encouraged to choose services
  relevant to their work or interests.
 
 - Zero Corporate Overhead: For independent builders, corporate coordination
@@ -182,29 +215,43 @@ Rather than forcing clients to purchase separate standalone packages, the 12-ser
  catalogue is modular: you choose the focus areas relevant to your work, and I tailor the
  20-day intensive live sprint around your live stack:
 
-- 1. Generative AI Transformation: Transform personal workflows and consulting practices from manual chatbot prompts to autonomous, coordinated teams of Claude agents.
+- 1. Generative AI Transformation: Transform personal workflows and consulting
+ practices from manual chatbot prompts to autonomous, coordinated teams of Claude agents.
 
-- 2. Local LLMs & Cost Slashing: Eliminate cloud API dependencies and recurring costs by self-hosting quantized open-weights models locally with Ollama and vLLM.
+- 2. Local LLMs & Cost Slashing: Eliminate cloud API dependencies and recurring
+ costs by self-hosting quantized open-weights models locally with Ollama and vLLM.
 
-- 3. Claude Agent Orchestration: Build single-operator multi-agent swarms with orchestrator loops, subagent delegation, automated evaluation, and budget limits.
+- 3. Claude Agent Orchestration: Build single-operator multi-agent swarms with
+ orchestrator loops, subagent delegation, automated evaluation, and budget limits.
 
-- 4. Agentic Assistant Training: Run private, unaligned autonomous agent loops on local hardware with open-weights agentic models and structured tool execution.
+- 4. Agentic Assistant Training: Run private, unaligned autonomous agent loops on
+ local hardware with open-weights agentic models and structured tool execution.
 
-- 5. AI Budget & Cost Control: Enforce strict financial caps on personal developer API accounts, semantic caching, and local fallback routing to keep costs predictable.
+- 5. AI Budget & Cost Control: Enforce strict financial caps on personal
+ developer API accounts, semantic caching, and local fallback routing to keep costs predictable.
 
-- 6. AI Developer Training: Elevate your developer practice with Claude Code CLI, test-driven prompt harnesses, autonomous debugging, and automated refactoring.
+- 6. AI Developer Training: Elevate your developer practice with Claude Code CLI,
+ test-driven prompt harnesses, autonomous debugging, and automated refactoring.
 
-- 7. Advanced AI Agents: Architect persistent, self-evaluating autonomous agents that execute long-horizon projects while you sleep.
+- 7. Advanced AI Agents: Architect persistent, self-evaluating autonomous agents
+ that execute long-horizon projects while you sleep.
 
-- 8. Continuous Learning & Synthesis: Architect an autonomous personal continuous learning engine using automated paper ingestion, podcast transcription, spaced-repetition drills, and research synthesis.
+- 8. Continuous Learning & Synthesis: Architect an autonomous personal
+ continuous learning engine using automated paper ingestion, podcast transcription, spaced-repetition
+ drills, and research synthesis.
 
-- 9. Gemini Research Training: Master deep academic literature review, technical synthesis, million-token context grounding, and multi-source verification using Gemini models.
+- 9. Gemini Research Training: Master deep academic literature review, technical
+ synthesis, million-token context grounding, and multi-source verification using Gemini models.
 
-- 10. AI Second Brain: Build your private Markdown knowledge vault with automated capture, local-model tagging, and cited question answering.
+- 10. AI Second Brain: Build your private Markdown knowledge vault with automated
+ capture, local-model tagging, and cited question answering.
 
-- 11. Claude Research Training: Accelerate personal research with Claude: 1M token context synthesis, multi-paper literature reviews, market intelligence, and executive research dossiers.
+- 11. Claude Research Training: Accelerate personal research with Claude: 1M token
+ context synthesis, multi-paper literature reviews, market intelligence, and executive research
+ dossiers.
 
-- 12. Workflow Automations: End-to-end automation pipelines connecting email, task managers, and local LLMs via n8n and open-source stacks.
+- 12. Workflow Automations: End-to-end automation pipelines connecting email, task
+ managers, and local LLMs via n8n and open-source stacks.
 
 I selectively emphasize the disciplines most crucial to your immediate products and career goals.
 
@@ -234,7 +281,8 @@ Purchasing Power Parity applies unconditionally to Personal Training across six 
 - Tier 5: Academia, Researchers & Non-Profits: $250 USD rate (75% academic
  discount).
 
-- Tier 6: Crisis-Affected & Under-Resourced Regions: Custom Subsidized rate (Custom
+- Tier 6: Crisis-Affected & Under-Resourced Regions: Custom Subsidized rate
+ (Custom
  subsidized quote / nominal honorarium).
 
 Tiers follow the current World Bank income classification, updated each July.
@@ -255,7 +303,8 @@ No. Personal Training is strictly for up to 20 seats max (private Personal
  private local models, and personal productivity workflow.
 
 - Business Training for Teams: If you wish to train a founding team, corporate
- department, or developer cohort, explore our Business Training ($1,000 USD for 2 months),
+ department, or developer cohort, explore our Business Training ($1,000 USD for 2
+ months),
  which covers up to 10 participants in its fixed base rate (with additional seats at $250/head scaled
  by parity up to 20 seats max).
 
@@ -266,7 +315,8 @@ No. Personal Training is strictly for up to 20 seats max (private Personal
 *Personal:
  20+20 Cadence · FAQ #28*  
 Personal AI Transformation is structured as an intensive two-phase acceleration program strictly for
- up to 20 seats max: 30 days of intensive Personal Training sprint training drawing on the
+ up to 20 seats max: 30 days of intensive Personal Training sprint training
+ drawing on the
  full 12-service catalogue (you choose the focus areas relevant to your work), immediately
  followed by 30 days of included support with daily questions and doubts clarification, and
  guidance, assistance, and written guides licensed under Apache 2.0 (total 2-month
@@ -334,7 +384,8 @@ Freshers and recent computer science graduates often experience a steep disconne
 - Tool Calling & MCP Integration: Hands-on training on the Model Context
  Protocol (MCP) to connect models safely to databases, filesystems, and APIs.
 
-- Autonomous Open Agents: Hands-on experience with Nous Research Agentic assistants and
+- Autonomous Open Agents: Hands-on experience with Nous Research Agentic assistants
+ and
  terminal-native debugging loops.
 
 Freshers graduate with the practical productivity, testing rigor, and architectural judgment
@@ -450,7 +501,8 @@ For founders, speed to customer validation is existential. Our curriculum enable
 - Zero-to-One Scaffolding: Rapid generation of database schemas, API backends, and
  frontend components using Claude Code and terminal agent loops.
 
-- Automated Customer Support & Onboarding: Deploying autonomous Agentic Assistants agent
+- Automated Customer Support & Onboarding: Deploying autonomous Agentic
+ Assistants agent
  instances to handle early user inquiries and product telemetry.
 
 - Runway Preservation: Minimizing capital expenditure by substituting early
@@ -577,7 +629,9 @@ Global MNCs gain a consistent, world-class standard of agentic software engineer
  quota and 30-day training plus 30-day support guarantee cover?
 *Pricing:
  Business Guarantee · FAQ #13*  
-Our Business Training bookings feature a fixed base investment of $1,000 USD covering up to 10 participants for 2 months (30 days training + 30 days guidance, assistance, and written guides licensed under Apache 2.0).
+Our Business Training bookings feature a fixed base investment of $1,000 USD covering up to 10
+ participants for 2 months (30 days training + 30 days guidance, assistance, and written guides
+ licensed under Apache 2.0).
  There are no hidden licensing royalties or hourly surprise fees.
 
 - 30 Days Live Training Sprint: 60 days over 2 months, Saturday & Sunday holidays, 4 hours per day.
@@ -589,7 +643,8 @@ Our Business Training bookings feature a fixed base investment of $1,000 USD cov
  handbooks, and reproducible starter repositories included under Apache 2.0.
 
 - Up to 10 Learners Included: Base fee covers up to 10 participants. Additional
- seats scale transparently at ($100 / $75 / $50 / $50 / $25 / Custom USD) per head (adjusted by country parity tier) up to a strict maximum of 20 seats.
+ seats scale transparently at ($100 / $75 / $50 / $50 / $25 / Custom USD) per head (adjusted by
+ country parity tier) up to a strict maximum of 20 seats.
 
 - Apache 2.0 Open Licensing: Unrestricted commercial use, modification, and
  deployment with attribution.
@@ -603,7 +658,8 @@ This 30+30 dual guarantee ensures your organization achieves lasting capability 
 *Pricing:
  Scale-Out · FAQ #14*  
 When a team desires to include more than 10 participants in a single Business Training cohort, pricing
- scales simply, transparently, and predictably: ($100 / $75 / $50 / $50 / $25 / Custom USD) per additional seat up to a strict maximum of 20 seats.
+ scales simply, transparently, and predictably: ($100 / $75 / $50 / $50 / $25 / Custom USD) per
+ additional seat up to a strict maximum of 20 seats.
 
 - Parity Discounts Apply Directly: The qualifying country parity multiplier applies
  to the $250 per-head fee as well.
@@ -656,11 +712,14 @@ Response SLA: 7 days reply, 30 days start. Remote only worldwide.
 Yes, absolutely. Clients have complete freedom to pick and choose individual services
  from our 12-service catalogue without committing to a full multi-week transformation package.
 
-- Individual / Personal Pricing: ($100 / $75 / $50 / $50 / $25 / Custom USD) per service strictly for
+- Individual / Personal Pricing: ($100 / $75 / $50 / $50 / $25 / Custom
+ USD) per service strictly for
  up to 20 seats max (private Personal Training sprint).
 
-- Business / Organization Pricing: ($100 / $75 / $50 / $50 / $25 / Custom USD) per service for up to
- 10 team participants (additional seats at ($100 / $75 / $50 / $50 / $25 / Custom USD) per seat up to a maximum of 20 seats).
+- Business / Organization Pricing: ($100 / $75 / $50 / $50 / $25 / Custom
+ USD) per service for up to
+ 10 team participants (additional seats at ($100 / $75 / $50 / $50 / $25 / Custom USD) per seat up to
+ a maximum of 20 seats).
 
 - Delivery Cadence: Every individual service includes 5 days of live,
  hands-on engineering training followed by 5 days of dedicated operational support
@@ -827,7 +886,8 @@ Tier 6 engagements are reviewed directly by founder Thomas Cherickal on a missio
  discount) pricing?
 *Parity:
  Tier 5 Qualification · FAQ #46*  
-Qualification for Tier 5 (75% Parity Discount: $500 USD for Flagship Business, ($100 / $75 / $50 / $50 / $25 / Custom USD) for
+Qualification for Tier 5 (75% Parity Discount: $500 USD for Flagship Business, ($100 / $75 /
+ $50 / $50 / $25 / Custom USD) for
  Flagship Personal, $50 USD for Individual Business, and $25 USD for Individual Personal) is
  straightforward and designed to support public education, open science, and humanitarian missions with
  minimal bureaucracy:
@@ -988,7 +1048,8 @@ Coupling an business codebase tightly to a single proprietary AI vendor creates 
  price, latency benchmarks, and context length requirements.
 
 - Automated Redundant Fallbacks: If Claude experiences latency spikes or temporary
- outages, workloads fail over automatically to Gemini, OpenAI, Grok, or a private local Agentic Assistants
+ outages, workloads fail over automatically to Gemini, OpenAI, Grok, or a private local Agentic
+ Assistants
  instance.
 
 Your team retains total architectural sovereignty, effortlessly adopting new frontier models the
@@ -1004,9 +1065,12 @@ Each Flagship training contract spans 2 months total (Mon-Fri, excluding weekend
  structured into 30 days of live immersive training (4 hours per day, 120 live hours total) followed by
  30 days of dedicated ongoing support and implementation guidance:
 
-- Phase 1 (Days 1-30) - 30 Days of Live Immersive Engineering & Leadership Training:
- Architectural assessment, secure developer sandboxes, Claude Code CLI, custom MCP servers, local LLM serving (vLLM/Ollama),
- AI-assisted TDD, multi-agent swarms, hard budget governance, and Apache 2.0 licensing handover (4 hours per day, 120 hours total).
+- Phase 1 (Days 1-30) - 30 Days of Live Immersive Engineering & Leadership
+ Training:
+ Architectural assessment, secure developer sandboxes, Claude Code CLI, custom MCP servers, local LLM
+ serving (vLLM/Ollama),
+ AI-assisted TDD, multi-agent swarms, hard budget governance, and Apache 2.0 licensing handover (4
+ hours per day, 120 hours total).
 
 - Phase 2 (Days 31-60) - 30 Days Included Ongoing Support: Dedicated asynchronous
  advisory,
@@ -1152,7 +1216,8 @@ Our flagship Claude curriculum covers eight meticulously structured modules refl
 ### 48. What is Agentic Assistants Training and how are autonomous systems built with it?
 *Curriculum:
  Agentic Assistantss · FAQ #38*  
-Agentic Assistants Training covers Agentic Assistants, the open-source agent framework from Nous Research:
+Agentic Assistants Training covers Agentic Assistants, the open-source agent framework from Nous
+ Research:
  persistent memory across sessions, skills it saves and reuses, scheduled tasks and sandboxed tool
  execution on your own servers.
 
@@ -1224,19 +1289,25 @@ Every service engagement is governed by an explicit duration and included suppor
 
 - Flagship Business AI Training: Strictly 30 days of live intensive
  training AND
- 30 days of included support (total 2 months of coverage, 4 hours per day, 120 live training
- hours total), covering up to 10 participants (with additional seats at $250/head scaled by parity, up to a maximum of 20 seats).
- Phase 1: Architectural Scoping, Toolchains, Agent Orchestration, Local LLMs, AI-Assisted TDD, Production Handover & Apache 2.0 Licensing,
+ 30 days of included support (total 2 months of coverage, 4 hours per day, 120 live
+ training
+ hours total), covering up to 10 participants (with additional seats at $250/head scaled by parity,
+ up to a maximum of 20 seats).
+ Phase 1: Architectural Scoping, Toolchains, Agent Orchestration, Local LLMs, AI-Assisted TDD,
+ Production Handover & Apache 2.0 Licensing,
  followed by 30 business days (excluding weekends) of technical assistance and doubt resolution.
 
 - Flagship Personal AI Training: Strictly 30 days of intensive Personal
  training
  drawing on the full 12-service catalogue AND 30 days of included daily work support
- (total 2 months of coverage, 4 hours per day, 120 live training hours total) for up to 10 participants (+$100/extra seat, max 20).
+ (total 2 months of coverage, 4 hours per day, 120 live training hours total) for up to 10
+ participants (+$100/extra seat, max 20).
 
 - Individual Pick Services: Strictly 5 days of intensive live training AND
  5 days of included support (total 10 days of coverage, 4 hours per day, 20 live training
- hours total), priced at ($100 / $75 / $50 / $50 / $25 / Custom USD) (Business or Personal, 1 seat included, additional seats at +$100 / +$75 / +$50 / +$50 / +$25 / Custom USD per extra seat, max 20 seats) in Tier 1
+ hours total), priced at ($100 / $75 / $50 / $50 / $25 / Custom USD) (Business or Personal, 1 seat
+ included, additional seats at +$100 / +$75 / +$50 / +$50 / +$25 / Custom USD per extra seat, max 20
+ seats) in Tier 1
  with universal parity scaling.
 
 - Free Concurrency: All business services and programs can freely overlap or run

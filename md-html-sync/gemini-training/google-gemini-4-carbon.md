@@ -117,11 +117,96 @@ Teams should also capture reusable review rubrics in plain Markdown files inside
 
 ---
 
+## Interactions API Architecture, Thinking Levels, and Long Decode Loops
+
+In Google DeepMind's model lineup, Gemini Carbon is positioned as the flagship deep-reasoning tier engineered for sustained agentic coding, multimodal knowledge work, scientific discovery, and end-to-end cybersecurity defense - spanning vulnerability validation, exploit tracing, and verified root-cause patching. Detailed runtime capabilities are documented in the Gemini Carbon model guide.
+
+When wiring Gemini Carbon into production services through the modern Gemini Interactions API, four architectural levers determine reliability and throughput:
+
+- Unified 1,048,576-Token Window: Input context, internal thinking tokens, tool calls, and output text all draw from one shared 1,048,576-token pool. Default synchronous calls cap output at 65,536 tokens (32,768 tokens per non-streaming hop), while Long Decode lets a single response expand up to the remaining context window via server-managed background=True jobs or client-managed continuation_token loops.
+- Granular thinking_level Control: Carbon supports low, medium (default), and high reasoning effort. Use medium for interactive multi-file coding and pull-request verification, and elevate to high for formal security audits, concurrency debugging, or open-ended scientific derivations.
+- Native Agentic Tooling and Multimodal Ingestion: Carbon natively processes text, images, video, audio, and PDFs alongside built-in tools including Code Execution, Computer Use, File Search, URL Context, Google Search and Maps grounding, Structured Outputs, and Tool Retrieval (Preview).
+- Implicit Prefix Caching and Tiered Consumption: Carbon automatically applies implicit context caching to stable prompt prefixes and supports Batch API, Flex inference, and Priority inference so teams can balance cost on overnight CI security scans against speed on developer-facing loops.
+
+#### `carbon_interactions_continuation.py`
+```python
+from google import genai
+
+client = genai.Client()
+
+# Client-controlled Long Decode loop on Gemini Carbon with explicit hop logging
+gen_config = {
+    "thinking_level": "high",
+    "max_output_tokens": 131072,
+}
+
+interaction = client.interactions.create(
+    model="gemini-4-carbon",
+    input=(
+        "Perform an end-to-end security and concurrency audit of the authentication "
+        "middleware in this store. Trace each vulnerability to exact call sites and "
+        "produce minimal verified patch diffs plus regression tests."
+    ),
+    tools=[{"type": "file_search", "file_search_store_names": ["filesearchstores/auth-core"]}],
+    automatic_continuation=False,
+    generation_config=gen_config,
+)
+
+chunks = [interaction.output_text or ""]
+hop = 1
+
+while interaction.status == "requires_continuation":
+    hop += 1
+    interaction = client.interactions.create(
+        model="gemini-4-carbon",
+        previous_interaction_id=interaction.id,
+        continuation_token=interaction.continuation_token,
+        automatic_continuation=False,
+        generation_config=gen_config,
+    )
+    chunks.append(interaction.output_text or "")
+
+print(f"Completed audit across {hop} continuation hop(s).")
+print("".join(chunks))
+```
+
+---
+
+## Gemini Carbon Specification Matrix and Production Deployment Checklist
+
+Use the reference matrix below to position Gemini Carbon cleanly alongside sibling Gemini models in multi-model enterprise architectures:
+
+### Production Deployment Checklist
+
+- Measure Context Headroom Upfront: Verify input_tokens + expected_thinking + output stays safely inside the unified 1,048,576-token window so deep reasoning never gets truncated.
+- Sweep thinking_level on Golden Tasks: Benchmark low, medium, and high on a fixed set of 20 real repository diffs or policy audits, then ship the lowest level that consistently passes your verification bar.
+- Stabilize Static Prefixes for Cache Hits: Place static system prompts, compliance rubrics, and schema definitions first - before dynamic ticket payloads or diffs - so implicit caching discounts repeated turns automatically.
+- Enforce Deterministic CI Gates and Circuit Breakers: Always require failing reproduction tests before edits, enforce hard iteration and identical-error caps, and route automated patches through standard CI checks and human approval before merge.
+- Match Inference Tier to SLA: Run overnight security sweeps and bulk codebase audits through the Batch API or Flex inference, reserving Priority inference for interactive engineering tools.
+
+---
+
+## Practical Questions When Running Gemini Carbon in Production
+
+How should teams choose between Gemini Carbon and Gemini Argon on a new workflow? Both share the same unified 1M-token context window, thinking_level controls, and built-in tool surface. Reach for Gemini Carbon first on sustained agentic coding loops, constraint verification, scientific exploration, and cybersecurity defense lifecycles, and evaluate both side by side on your own golden dataset before locking in a default.
+
+When does a Gemini Carbon workflow actually need Long Decode? Most coding, refactoring, and compliance checks finish well under 64K output tokens and should stay on standard calls. Enable Long Decode via background=True or continuation tokens only when a single turn requires exhaustive deep reasoning plus large structured output - such as formal verification proofs, full-module security dossiers, or complex multi-file synthesis.
+
+Can Gemini Carbon combine File Search, Code Execution, and custom function calling together? Yes. Through the Interactions API, you can bind persistent File Search stores for private documentation alongside built-in Code Execution and typed custom functions, allowing Carbon to query internal policy docs, test hypotheses in code, and return schema-validated audit reports in one coordinated flow.
+
+How do engineering teams keep costs predictable when running Carbon inside CI pipelines? Trigger Gemini Carbon selectively on high-risk paths (such as authentication, billing, or infrastructure-as-code changes) rather than trivial documentation commits, default to thinking_level="medium", keep rubric prefixes identical for implicit cache hits, and offload non-blocking nightly audits to the Batch API.
+
+---
+
 ## References
 
 Official documentation, research papers, and developer guides referenced in this article:
 
 - Google DeepMind - Gemini Models - Official overview of Gemini deep-thinking and frontier reasoning tiers.
+- Gemini Carbon Model Guide - Official API capabilities, unified context window, thinking levels, and consumption options.
+- Google DeepMind - Gemini Carbon Model Card - Official technical model card and evaluation methodology.
+- Gemini Interactions API Guide - Unified stateful API for server-managed sessions, built-in tools, and background execution.
+- Gemini API Long Decode Guide - Background execution and continuation_token patterns for long-horizon outputs.
 - Google Gemini API Documentation - Guides for structured outputs, thinking configuration, and function calling.
 - Vertex AI Generative AI Best Practices - Enterprise architecture patterns, security controls, and reliability guidelines.
 - Google Gemini Cookbook - Reference implementations for autonomous coding and verification loops.

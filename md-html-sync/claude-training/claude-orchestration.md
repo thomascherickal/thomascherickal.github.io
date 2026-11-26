@@ -17,8 +17,10 @@ A single agent trying to research ten files, write three modules, update documen
 5. Step-by-Step Guide to Designing Your First Multi-Agent Swarm
 6. Observability, Cost Caps, and Human-in-the-Loop Checkpoints
 7. When to Keep It Simple Versus Scaling to a Swarm
-8. Practical Questions on Multi-Agent Orchestration
-9. Authoritative References
+8. Claude Agent SDK, Agent Teams, Handoffs, and Programmatic Tool Calling
+9. Orchestration Topologies: Single Agent vs Subagents vs Agent Teams vs Programmatic Tool Calling
+10. Practical Questions on Multi-Agent Orchestration
+11. Authoritative References
 
 ---
 

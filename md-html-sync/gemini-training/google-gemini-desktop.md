@@ -105,12 +105,66 @@ When desktop agents operate inside clear sandboxes with transparent audit trails
 
 ---
 
+## Workstation Shortcuts, Background Window Execution, and MCP Apps
+
+Modern Gemini Desktop workstations pair vision-guided Computer Use with native operating system ergonomics and the Model Context Protocol (MCP). Instead of locking your mouse and keyboard while an agent clicks through a tedious workflow, the desktop runtime separates human focus from automated execution and upgrades brittle UI clicks to deterministic tool calls wherever an API exists:
+
+- Background Window Execution: Multi-step desktop workflows - such as batch image edits, PDF dimension extraction into shipping forms, or pulling dashboard metrics into Google Slides - execute inside an isolated background window with a live preview. Your primary cursor, clipboard, and active applications stay completely uninterrupted, and you can pause or take over at any instant.
+- Quick Summon Overlay: Native workstation shortcuts (Option + Space on macOS and Alt + Space on Windows) summon Gemini directly over any active application to fact-check visible content, refine dictated text, or kick off a background task without switching windows.
+- Hybrid MCP Workstation Bridge: Connecting local and remote MCP servers bridges Gemini Desktop directly to internal SQL databases, CRMs, local filesystem directories, Google Workspace tools, and remote Notebook MCP servers. Teams reserve pixel-level Computer Use for legacy apps without APIs while routing structured lookups and writes through fast, typed MCP tools.
+- Interactive MCP Apps and Antigravity Handoff: Beyond plain text responses, MCP Apps render sandboxed interactive UIs - such as live charts, document highlighters, and approval cards - with bidirectional state sync right inside the desktop canvas. For repository-level coding or prototyping, a one-click shortcut hands work directly into Google Antigravity IDE, as outlined in the Model Context Protocol specification.
+
+#### `desktop_mcp_config.json`
+```python
+{
+  "mcpServers": {
+    "finance-readonly-db": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-postgres", "postgresql://readonly@localhost:5432/ops"],
+      "permissions": {
+        "mode": "read-only"
+      }
+    },
+    "local-invoices-folder": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/Users/ops/Invoices"],
+      "permissions": {
+        "requireApprovalOnWrite": true
+      }
+    }
+  }
+}
+```
+
+---
+
+## Choosing Between Computer Use, MCP Servers, and Chrome DevTools
+
+Combine all three workstation automation layers strategically so every workflow uses the fastest, most reliable execution path available:
+
+---
+
+## Practical Questions When Deploying Gemini Desktop
+
+Does Computer Use take over my mouse while running a desktop workflow? With background window execution enabled, Gemini runs clicks, typing, and menu navigation inside an isolated background window while showing a live thumbnail preview. Your primary cursor and active desktop apps stay completely free until you choose to intervene or approve a sensitive step.
+
+When should we build an MCP server instead of automating a desktop UI? Whenever the target system exposes a database connection, REST API, or local file directory that your workflow hits daily, wrap it in an MCP server. MCP calls run orders of magnitude faster, never break on UI redesigns, and enforce strict schema and OAuth boundaries. Reserve vision-guided Computer Use for legacy desktop software or third-party portals with no API.
+
+How do we defend desktop agents against prompt injection from untrusted websites or PDFs? Combine three controls: restrict the agent to explicit app and domain allowlists, require mandatory human confirmation before any external send, payment, or file deletion, and run recurring automations inside a dedicated least-privilege user profile without saved financial passwords.
+
+How do enterprise teams audit automated workstation actions? Enable structured action and screenshot logging for every desktop run, pair it with an automated audit verifier (such as checking that every sensitive verb carries a human_approved flag), and retain logs according to your internal compliance schedule.
+
+---
+
 ## References
 
 Official documentation, research papers, and developer guides referenced in this article:
 
 - Google DeepMind - Project Mariner and Computer Use - Research updates on vision-guided browser and computer-use agents.
+- Model Context Protocol (MCP) Specification - Open protocol standard connecting Gemini Desktop to local tools, databases, and interactive MCP Apps.
 - Google Gemini API Documentation - Technical guides for multimodal vision grounding and structured tool calling.
+- Gemini Function Calling & Tool Orchestration Guide - Official patterns for pairing structured tool calls with human approval gates.
+- Google Antigravity Platform - Developer workstation environment integrated with Gemini Desktop workflows.
 - Chrome DevTools Protocol - Low-level browser automation protocol complementing vision-guided desktop agents.
 - Google Safety and AI Principles - Guidelines for human oversight and safe deployment of autonomous AI systems.
 

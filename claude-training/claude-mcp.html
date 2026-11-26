@@ -6,10 +6,10 @@
 <title>Claude MCP: Model Context Protocol & Custom Tool Servers | Thomas Cherickal</title>
 <meta content="Thomas Cherickal - Generative AI Consultant and The Digital Futurist. Master the Model Context Protocol (MCP) to connect Claude to internal APIs and databases with transports, primitives, Python/TypeScript servers, and security hardening." name="description"/>
 <meta content="Thomas Cherickal" name="author"/>
-<link href="https://thedigitalfuturist.com/claude-training/claude-custom-mcp.html" rel="canonical"/>
+<link href="https://thedigitalfuturist.com/claude-training/claude-mcp.html" rel="canonical"/>
 <!-- Open Graph -->
 <meta content="article" property="og:type"/>
-<meta content="https://thedigitalfuturist.com/claude-training/claude-custom-mcp.html" property="og:url"/>
+<meta content="https://thedigitalfuturist.com/claude-training/claude-mcp.html" property="og:url"/>
 <meta content="Thomas Cherickal | The Digital Futurist" property="og:site_name"/>
 <meta content="Claude MCP: Model Context Protocol &amp; Custom Tool Servers | Thomas Cherickal" property="og:title"/>
 <meta content="Master the Model Context Protocol (MCP) to connect Claude to internal APIs and databases with transports, primitives, Python/TypeScript servers, and security hardening." property="og:description"/>
@@ -248,12 +248,12 @@
           <li><a href="../claude-training/claude-101.html">Claude 101</a></li>
           <li><a href="../claude-training/claude-projects.html">Claude Projects</a></li>
           <li><a href="../claude-training/claude-code.html">Claude Code</a></li>
+          <li><a href="../claude-training/claude-code-mode.html">Claude Code Mode</a></li>
           <li><a href="../claude-training/claude-desktop.html">Claude Desktop</a></li>
           <li><a href="../claude-training/claude-office.html">Claude Office</a></li>
-          <li><a href="../claude-training/claude-skills.html">Claude Skills</a></li>
           <li><a href="../claude-training/claude-mcp.html">Claude MCP</a></li>
           <li><a href="../claude-training/claude-plugins.html">Claude Plugins</a></li>
-          <li><a href="../claude-training/claude-connectors.html">Claude Connectors</a></li>
+          <li><a href="../claude-training/claude-apps.html">Claude Apps</a></li>
           <li><a href="../claude-training/claude-orchestration.html">Claude Orchestration</a></li>
           <li><a href="../claude-training/claude-design.html">Claude Design</a></li>
           <li><a href="../claude-training/claude-science.html">Claude for Science</a></li>
@@ -305,8 +305,9 @@
     </ul>
   </nav>
   <!-- END:HEADER -->
+  <a aria-label="Back to top" class="back-top" href="#top" id="backTop" title="Back to top">↑</a>
 
-<main id="main">
+<main class="container single-column-article" id="main">
 <header class="hero content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <div class="hero-badge content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">MODEL CONTEXT PROTOCOL</div>
 <h1>Claude MCP: Model Context Protocol & Custom Tool Servers</h1>
@@ -315,7 +316,7 @@
 <p class="hero-byline">By <strong>Thomas Cherickal</strong> - Generative AI Consultant &amp; The Digital Futurist</p>
 </header>
 
-<article class="article-body" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.25rem;">
+<article class="article-body">
 <div id="table-of-contents" aria-label="Table of contents" class="content-card toc-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <p class="article-p" style="font-size:1.02rem;color:#f1f5f9;">Before the Model Context Protocol, connecting an AI assistant to five internal tools meant writing five brittle custom integrations - and rewriting them again for every new editor or chat client. MCP replaces that N-by-M glue code with one open, clean standard. Build a single MCP server for your database, ticketing system, or internal API, and use it across Claude Desktop, Claude Code, and your own production agents.</p>
 <div class="rule"></div>
@@ -328,6 +329,8 @@
 <li><a class="gold-link" href="#designing-great-mcp-tools">Designing MCP Tools That Claude Calls Accurately</a></li>
 <li><a class="gold-link" href="#production-mcp-deployment-checklist">Production Deployment Checklist for Team MCP Servers</a></li>
 <li><a class="gold-link" href="#real-world-mcp-patterns">High-Value Custom MCP Server Ideas for Engineering and Operations</a></li>
+<li><a class="gold-link" href="#modern-mcp-specification-capabilities">Modern MCP Specification: Stateless Streamable HTTP, OAuth 2.1, Elicitation, Tasks &amp; Registry</a></li>
+<li><a class="gold-link" href="#mcp-protocol-capabilities-matrix">MCP Transport, Authorization, and Extension Specification Matrix</a></li>
 <li><a class="gold-link" href="#mcp-faq">Practical Questions When Adopting MCP</a></li>
 <li><a class="gold-link" href="#references">Authoritative References</a></li>
 </ol>
@@ -343,7 +346,7 @@
 <li><strong>Resources (Application-Controlled):</strong> Read-only data objects identified by URIs - such as a log file, database schema, or policy document that the client can attach as context.</li>
 <li><strong>Prompts (User-Controlled):</strong> Reusable workflow templates exposed as slash commands so users invoke standardized checklists with one click.</li>
 </ul>
-<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.25rem;margin:1.5rem 0;"><div class="mermaid">
+<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.5rem;margin:1.75rem 0;"><div class="mermaid">
 flowchart TD
     H["MCP Client / Host
 (Claude Desktop, Claude Code, Custom App)"] --> T{"Transport Layer
@@ -419,7 +422,7 @@ server.tool(
 <li><strong>Tool Description Integrity:</strong> Only install MCP servers from trusted, version-pinned sources, because malicious tool descriptions can hijack model behavior.</li>
 <li><strong>Output Size Caps and Audit Logs:</strong> Truncate oversized tool responses cleanly and log every tool invocation with caller identity and timestamp.</li>
 </ol>
-<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.25rem;margin:1.5rem 0;"><div class="mermaid">
+<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.5rem;margin:1.75rem 0;"><div class="mermaid">
 graph TD
     C["Claude Tool Call Request"] --> A["Verify OAuth Token & Scopes"]
     A --> V["Validate Schema & Enum Allowlist"]
@@ -481,18 +484,119 @@ graph TD
 
 
 <section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="modern-mcp-specification-capabilities">Modern MCP Specification: Stateless Streamable HTTP, OAuth 2.1, Elicitation, Tasks &amp; Registry</h2>
+<p class="article-p">The <a class="gold-link" href="#references">Model Context Protocol specification</a> has evolved rapidly from local workstation scripts into a cloud-native, enterprise-ready protocol. Production teams building or consuming MCP servers today should design directly for seven core protocol capabilities:</p>
+<ul class="article-p" style="list-style-type:disc;padding-left:1.5rem;display:flex;flex-direction:column;gap:0.55rem;">
+<li><strong>Stateless Streamable HTTP Transport:</strong> Replaces legacy stateful HTTP+SSE handshakes with clean HTTP <code>POST</code> and <code>GET</code> streaming. Because the transport layer no longer requires sticky protocol sessions, multi-tenant MCP servers deploy seamlessly behind standard round-robin load balancers, API gateways, and serverless platforms.</li>
+<li><strong>OAuth 2.1 Resource Server Authorization:</strong> Formally separates authorization from execution: the MCP server acts as an OAuth 2.1 Resource Server that validates incoming bearer tokens rather than issuing them. The spec mandates <strong>PKCE (<code>S256</code>)</strong>, <a class="gold-link" href="#references">Protected Resource Metadata (RFC 9728)</a> for automatic authorization server discovery, <strong>Resource Indicators (RFC 8707)</strong> to audience-bind tokens against cross-server replay, and <strong>OAuth Client ID Metadata Documents</strong> so enterprise clients connect cleanly without brittle Dynamic Client Registration workarounds.</li>
+<li><strong>Elicitation (Form &amp; URL Modes):</strong> Enables an MCP server to pause mid-execution and ask the human user directly for missing structured parameters or high-stakes confirmation - including secure <strong>URL mode</strong> redirects for sensitive external consent or credential steps that should never pass through the model context.</li>
+<li><strong>Asynchronous Tasks Extension:</strong> Moves long-running backend work (large warehouse queries, multi-minute CI builds, or batch enrichment jobs) into first-class asynchronous task handles so clients poll or stream progress without timing out standard HTTP connections.</li>
+<li><strong>Interactive MCP Apps (<code>ui://</code>):</strong> Extends headless JSON tools with sandboxed interactive HTML/JS dashboards, forms, and visual editors directly inside Claude. See our dedicated engineering guide to <a class="gold-link" href="claude-apps.html">Claude Apps and MCP Apps</a> for <code>registerAppTool</code>, <code>text/html;profile=mcp-app</code> bundles, and bidirectional JSON-RPC over <code>postMessage</code>.</li>
+<li><strong>Skills Over MCP (<code>io.modelcontextprotocol/skills</code> / SEP-2640):</strong> Allows remote MCP servers to expose structured <code>SKILL.md</code> playbooks and domain references alongside raw tool schemas via progressive disclosure over MCP resources - shipping the operating manual right alongside the API without inflating upfront context tokens.</li>
+<li><strong>Official MCP Registry (<code>registry.modelcontextprotocol.io</code>):</strong> Provides a canonical, namespace-scoped metadata directory (<code>server.json</code>) mapping verified server names (such as <code>io.github.org/billing-readonly</code>) to distribution packages on npm, PyPI, or container registries for predictable discovery across Claude Desktop, Claude Code, and IDE hosts.</li>
+</ul>
+<div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid #38bdf8;border-radius:10px;margin:1.5rem 0;overflow:hidden;"><div style="background:#0b1220;padding:0.5rem 1rem;border-bottom:1px solid rgba(56,189,248,0.22);display:flex;justify-content:space-between;align-items:center;font-size:0.8rem;color:#94a3b8;"><span style="color:#fbbf24;font-weight:600;">RFC 9728 Protected Resource Metadata &amp; MCP Registry server.json</span><span>JSON</span></div><pre style="background:#040711;margin:0;padding:1.1rem 1.25rem;overflow-x:auto;color:#e2e8f0;font-size:0.86rem;line-height:1.55;"><code>// GET https://mcp.acme.example/.well-known/oauth-protected-resource
+{
+  &quot;resource&quot;: &quot;https://mcp.acme.example/v1/mcp&quot;,
+  &quot;authorization_servers&quot;: [&quot;https://auth.acme.example&quot;],
+  &quot;scopes_supported&quot;: [&quot;orders:read&quot;, &quot;invoices:read&quot;],
+  &quot;bearer_methods_supported&quot;: [&quot;header&quot;]
+}
+
+// Official MCP Registry Metadata (server.json)
+{
+  &quot;name&quot;: &quot;io.github.acme/orders-readonly&quot;,
+  &quot;description&quot;: &quot;Stateless Streamable HTTP server for order and invoice lookups with Skills Over MCP.&quot;,
+  &quot;version&quot;: &quot;2.1.0&quot;,
+  &quot;remotes&quot;: [
+    {
+      &quot;type&quot;: &quot;streamable-http&quot;,
+      &quot;url&quot;: &quot;https://mcp.acme.example/v1/mcp&quot;
+    }
+  ]
+}</code></pre></div>
+</section>
+
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="mcp-protocol-capabilities-matrix">MCP Transport, Authorization, and Extension Specification Matrix</h2>
+<p class="article-p">Use this protocol reference matrix when selecting transports, security layers, and extensions for internal or public MCP servers:</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.9rem;color:#e2e8f0;">
+<thead>
+<tr style="border-bottom:2px solid rgba(251,191,36,0.45);text-align:left;color:var(--gold);">
+<th style="padding:0.75rem;">Protocol Capability</th>
+<th style="padding:0.75rem;">Primary Role</th>
+<th style="padding:0.75rem;">Key Standards / Mechanism</th>
+<th style="padding:0.75rem;">Production Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;"><code>stdio</code> Transport</td>
+<td style="padding:0.75rem;">Local subprocess communication</td>
+<td style="padding:0.75rem;">JSON-RPC 2.0 over stdin/stdout (logs on stderr)</td>
+<td style="padding:0.75rem;">Workstation developer tools, local file and Git utilities</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Stateless Streamable HTTP</td>
+<td style="padding:0.75rem;">Cloud &amp; multi-tenant transport</td>
+<td style="padding:0.75rem;">HTTP POST/GET streaming with zero sticky-session state</td>
+<td style="padding:0.75rem;">Load-balanced team MCP gateways and serverless deployments</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">OAuth 2.1 Authorization</td>
+<td style="padding:0.75rem;">Scoped remote identity &amp; access</td>
+<td style="padding:0.75rem;">PKCE <code>S256</code>, RFC 9728 discovery, RFC 8707 audience binding</td>
+<td style="padding:0.75rem;">Enterprise SaaS connectors and per-user least-privilege SQL access</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Elicitation</td>
+<td style="padding:0.75rem;">Human-in-the-loop clarification</td>
+<td style="padding:0.75rem;">Structured input prompts and external URL-mode handoffs</td>
+<td style="padding:0.75rem;">Mid-workflow approvals, disambiguation, sensitive external consent</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Tasks Extension</td>
+<td style="padding:0.75rem;">Long-running asynchronous jobs</td>
+<td style="padding:0.75rem;">Background task handles with status polling and completion events</td>
+<td style="padding:0.75rem;">Heavy warehouse queries, test suites, batch document pipelines</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">MCP Apps &amp; Skills Over MCP</td>
+<td style="padding:0.75rem;">Interactive UI + domain playbooks</td>
+<td style="padding:0.75rem;"><code>ui://</code> sandboxed views + SEP-2640 progressive <code>SKILL.md</code> resources</td>
+<td style="padding:0.75rem;">In-chat dashboards (<a class="gold-link" href="claude-apps.html">Claude Apps</a>) and self-documenting API bridges</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Official MCP Registry</td>
+<td style="padding:0.75rem;">Verifiable catalog discovery</td>
+<td style="padding:0.75rem;">Namespace-scoped <code>server.json</code> metadata REST API</td>
+<td style="padding:0.75rem;">Standardized publishing and client installation across hosts</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <h2 id="mcp-faq">Practical Questions When Adopting MCP</h2>
 <p class="article-p"><strong>Should we build one big MCP server or several small ones?</strong> Always prefer small, domain-focused servers (for example, one for billing lookups and one for deployment status). Smaller servers keep tool schemas concise, reduce permission blast radius, and make independent deployments easy.</p>
 <p class="article-p"><strong>How do we keep credentials safe?</strong> Pass API tokens through environment variables or short-lived OAuth 2.1 headers at runtime - never hardcode secrets inside server source code or prompt templates.</p>
+<p class="article-p"><strong>Why did MCP transition from legacy HTTP+SSE to stateless Streamable HTTP?</strong> Legacy SSE bindings required long-lived sticky sessions that broke behind standard cloud load balancers and serverless runtimes. Stateless Streamable HTTP handles each request cleanly over standard HTTP while still streaming progress events when needed.</p>
+<p class="article-p"><strong>When should an MCP server add MCP Apps or Skills Over MCP?</strong> Add <a class="gold-link" href="claude-apps.html">MCP Apps</a> whenever users need interactive charts, forms, or visual approvals directly inside Claude; add Skills Over MCP when Claude needs domain-specific operating procedures loaded progressively on demand without crowding the base system prompt.</p>
 </section>
 
 <section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <h2 id="references">Authoritative References</h2>
 <ol class="references-list" style="display:flex;flex-direction:column;gap:0.75rem;padding-left:1.25rem;">
-<li><a class="gold-link" href="https://modelcontextprotocol.io/specification/latest" rel="noopener noreferrer" target="_blank">Model Context Protocol Specification</a> - Official protocol specification covering transports, tools, resources, prompts, and authorization.</li>
+<li><a class="gold-link" href="https://modelcontextprotocol.io/specification/latest" rel="noopener noreferrer" target="_blank">Model Context Protocol Specification</a> - Official protocol specification covering stateless Streamable HTTP, OAuth 2.1, elicitation, tasks, tools, resources, and prompts.</li>
+<li><a class="gold-link" href="https://registry.modelcontextprotocol.io/" rel="noopener noreferrer" target="_blank">Official MCP Registry</a> - Centralized namespace-scoped metadata directory (<code>server.json</code>) for discovering and publishing public MCP servers.</li>
+<li><a class="gold-link" href="https://datatracker.ietf.org/doc/html/rfc9728" rel="noopener noreferrer" target="_blank">IETF RFC 9728: OAuth 2.0 Protected Resource Metadata</a> - Authorization server discovery standard required for remote MCP OAuth 2.1 Resource Servers.</li>
 <li><a class="gold-link" href="https://github.com/modelcontextprotocol/python-sdk" rel="noopener noreferrer" target="_blank">MCP Python SDK</a> - Official Python SDK including FastMCP for rapid server development.</li>
 <li><a class="gold-link" href="https://github.com/modelcontextprotocol/typescript-sdk" rel="noopener noreferrer" target="_blank">MCP TypeScript SDK</a> - Official TypeScript SDK with Zod schema validation and transport helpers.</li>
 <li><a class="gold-link" href="https://owasp.org/API-Security/" rel="noopener noreferrer" target="_blank">OWASP API Security Top 10</a> - Security principles for authentication, object-level authorization, and safe internal API exposure.</li>
+<li><a class="gold-link" href="claude-apps.html">Claude Apps: Interactive MCP Apps &amp; Sandboxed Workspace UI</a> - Engineering guide for building interactive <code>ui://</code> views on top of MCP servers.</li>
+<li><a class="gold-link" href="claude-plugins.html">Claude Plugins: Unified Skills, Connectors &amp; Production Ecosystems</a> - Packaging MCP servers together with <code>SKILL.md</code> playbooks, commands, and hooks.</li>
 </ol>
 </section>
 </article>

@@ -345,12 +345,12 @@
           <li><a href="../claude-training/claude-101.html">Claude 101</a></li>
           <li><a href="../claude-training/claude-projects.html">Claude Projects</a></li>
           <li><a href="../claude-training/claude-code.html">Claude Code</a></li>
+          <li><a href="../claude-training/claude-code-mode.html">Claude Code Mode</a></li>
           <li><a href="../claude-training/claude-desktop.html">Claude Desktop</a></li>
           <li><a href="../claude-training/claude-office.html">Claude Office</a></li>
-          <li><a href="../claude-training/claude-skills.html">Claude Skills</a></li>
           <li><a href="../claude-training/claude-mcp.html">Claude MCP</a></li>
           <li><a href="../claude-training/claude-plugins.html">Claude Plugins</a></li>
-          <li><a href="../claude-training/claude-connectors.html">Claude Connectors</a></li>
+          <li><a href="../claude-training/claude-apps.html">Claude Apps</a></li>
           <li><a href="../claude-training/claude-orchestration.html">Claude Orchestration</a></li>
           <li><a href="../claude-training/claude-design.html">Claude Design</a></li>
           <li><a href="../claude-training/claude-science.html">Claude for Science</a></li>
@@ -402,8 +402,9 @@
     </ul>
   </nav>
   <!-- END:HEADER -->
+  <a aria-label="Back to top" class="back-top" href="#top" id="backTop" title="Back to top">↑</a>
 
-<main id="main">
+<main class="container single-column-article" id="main">
 <header class="hero content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <div class="hero-badge content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">CLAUDE WHITEBOARDS</div>
 <h1>Claude Whiteboards: Visual Architecture & Collaborative Diagramming</h1>
@@ -412,7 +413,7 @@
 <p class="hero-byline">By <strong>Thomas Cherickal</strong> - Generative AI Consultant &amp; The Digital Futurist</p>
 </header>
 
-<article class="article-body" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.25rem;">
+<article class="article-body">
 <div id="table-of-contents" aria-label="Table of contents" class="content-card toc-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <p class="article-p" style="font-size:1.02rem;color:#f1f5f9;">Great ideas often die in the gap between a lively whiteboard meeting and Monday morning execution. Someone snaps a blurry photo of messy boxes and arrows, drops it in chat, and a week later nobody remembers who owns Phase Two. Claude Whiteboards turns meeting transcripts, voice notes, and rough sketches into crisp, structured visual whiteboards - clearly marked with phases, milestones, and deliverables - that plug straight into your project tracker and codebase.</p>
 <div class="rule"></div>
@@ -422,9 +423,11 @@
 <li><a class="gold-link" href="#whiteboard-to-plans-code-and-tools">Connecting Whiteboards to Project Plans, Code, and External Tools</a></li>
 <li><a class="gold-link" href="#enterprise-and-startup-collaboration">Collaboration Guidelines for Enterprises and Startups</a></li>
 <li><a class="gold-link" href="#whiteboard-pitfalls">Keeping Collaborative Whiteboards Clear and Actionable</a></li>
-<li><a class="gold-link" href="#step-by-step-meeting-to-execution">Step-by-Step: Turning a 45-Minute Kickoff into an Automated Roadmap</a></li>
+<li><a class="gold-link" href="#step-by-step-meeting-to-execution">Step-by-Step: Turning a Planning Kickoff into an Automated Execution Plan</a></li>
 <li><a class="gold-link" href="#keeping-whiteboards-alive">Keeping Visual Whiteboards Alive Throughout Delivery</a></li>
 <li><a class="gold-link" href="#whiteboard-adoption-playbook">Making Visual Whiteboards a Repeatable Team Habit</a></li>
+<li><a class="gold-link" href="#mcp-canvas-ecosystem">Live Canvas Collaboration: Excalidraw, Figma, Miro, and MCP App Whiteboards</a></li>
+<li><a class="gold-link" href="#whiteboard-tooling-comparison">Choosing the Right Whiteboard Mode: Native Canvas, Diagram-as-Code, and MCP Boards</a></li>
 <li><a class="gold-link" href="#whiteboards-faq">Frequently Asked Questions on Claude Whiteboards</a></li>
 <li><a class="gold-link" href="#references">Authoritative References</a></li>
 </ol>
@@ -435,7 +438,7 @@
 
 <p class="article-p">At the end of a kickoff call, architecture review, or startup sprint planning session, feed the raw transcript or bulleted notes into Claude. Ask it to extract four structured layers onto a single visual whiteboard: <strong>Project Phases</strong>, <strong>Key Milestones</strong>, <strong>Concrete Deliverables with Owners</strong>, and <strong>Cross-Team Dependencies</strong>.</p>
 <p class="article-p">Because Claude renders the whiteboard as clean SVG, interactive React canvas, or <a class="gold-link" href="#references">Mermaid diagrams</a> inside Artifacts, every participant can immediately see the entire roadmap on one screen, spot missing handoffs in real time, and request live edits before the meeting even ends.</p>
-<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.25rem;margin:1.5rem 0;"><div class="mermaid">
+<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.5rem;margin:1.75rem 0;"><div class="mermaid">
 flowchart TD
     M["Meeting Transcript / Rough Notes"] --> E["Claude Extracts Structure
 (Phases, Milestones, Owners, Risks)"]
@@ -505,7 +508,7 @@ output_formats:
 <h2 id="whiteboard-pitfalls">Keeping Collaborative Whiteboards Clear and Actionable</h2>
 
 <p class="article-p">Avoid turning a whiteboard into an unreadable spiderweb of fifty tiny boxes. Limit each board to 8-12 major nodes, assign exactly one owner per milestone (never "Team"), and stamp every revision with a date and version number so nobody works off last month's snapshot.</p>
-<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.25rem;margin:1.5rem 0;"><div class="mermaid">
+<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.5rem;margin:1.75rem 0;"><div class="mermaid">
 graph TD
     P1["Phase 1: Discovery & Architecture
 Deliverable: Approved Spec"] --> G1{"Design Sign-Off Gate"}
@@ -527,7 +530,7 @@ Deliverable: Live Production + Docs"]
 
 
 <section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
-<h2 id="step-by-step-meeting-to-execution">Step-by-Step: Turning a 45-Minute Kickoff into an Automated Roadmap</h2>
+<h2 id="step-by-step-meeting-to-execution">Step-by-Step: Turning a Planning Kickoff into an Automated Execution Plan</h2>
 
 <p class="article-p">Follow this practical five-step cadence during your next project kickoff or quarterly planning workshop:</p>
 <ol class="article-p" style="padding-left:1.5rem;display:flex;flex-direction:column;gap:0.55rem;">
@@ -558,11 +561,97 @@ Deliverable: Live Production + Docs"]
 
 
 <section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="mcp-canvas-ecosystem">Live Canvas Collaboration: Excalidraw, Figma, Miro, and MCP App Whiteboards</h2>
+<p class="article-p">Visual ideation in Claude has evolved beyond static diagram code blocks. Through native canvas artifacts and interactive <a class="gold-link" href="claude-apps.html">Claude Apps (MCP Apps)</a>, Claude and <a class="gold-link" href="claude-code.html">Claude Code</a> can now read, draw, and update live multi-user whiteboards directly inside the tools where product, design, and engineering teams collaborate:</p>
+<ul class="article-p" style="list-style-type:disc;padding-left:1.5rem;display:flex;flex-direction:column;gap:0.55rem;">
+<li><strong>Native Claude Whiteboards with Ecosystem Export:</strong> Start with zero setup by dropping messy meeting notes, voice transcripts, or retrospective fragments directly into Claude. Claude clusters themes into visual timelines and action groups on a clean canvas, then exports mature boards outward into enterprise tools such as <strong>Miro</strong>, <strong>Lucid</strong>, or <strong>Zoho Vani</strong> for cross-functional execution.</li>
+<li><strong>Excalidraw and Local Whiteboard MCP Canvases:</strong> Developers pair Claude with interactive <strong>Excalidraw</strong> MCP App views or local servers (such as <code>excalidraw-mcp</code> and <code>whiteboard-mcp</code>) to generate editable hand-drawn system diagrams, sequence flows, and low-fidelity wireframes in real time, exporting clean SVG, PNG, or JSON scene files straight into repository documentation.</li>
+<li><strong>Miro and Figma / FigJam MCP Servers:</strong> Authenticated MCP connectors let Claude inspect existing <strong>Miro</strong> workshop boards and <strong>Figma / FigJam</strong> design drafts, extract user journeys or component hierarchies, and place structured system architecture diagrams directly onto shared team canvases without manual copy-paste.</li>
+<li><strong>Bidirectional Sketch-to-Spec and Code-to-Architecture Loops:</strong> Connect your whiteboard server alongside your codebase in Claude Code to work in both directions - turn an approved FigJam or Excalidraw architecture sketch into Architecture Decision Records (ADRs), OpenAPI contracts, and folder scaffolds, or point Claude at a live repository to reverse-engineer an up-to-date component diagram onto a shared whiteboard.</li>
+</ul>
+<div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid #38bdf8;border-radius:10px;margin:1.5rem 0;overflow:hidden;"><div style="background:#0b1220;padding:0.5rem 1rem;border-bottom:1px solid rgba(56,189,248,0.22);display:flex;justify-content:space-between;align-items:center;font-size:0.8rem;color:#94a3b8;"><span style="color:#fbbf24;font-weight:600;">MCP Configuration Combining Local Excalidraw Canvas &amp; Enterprise Board Connectors</span><span>JSON</span></div><pre style="background:#040711;margin:0;padding:1.1rem 1.25rem;overflow-x:auto;color:#e2e8f0;font-size:0.86rem;line-height:1.55;"><code>{
+  &quot;mcpServers&quot;: {
+    &quot;excalidraw-canvas&quot;: {
+      &quot;command&quot;: &quot;npx&quot;,
+      &quot;args&quot;: [&quot;-y&quot;, &quot;excalidraw-mcp&quot;],
+      &quot;env&quot;: {
+        &quot;EXPORT_DIR&quot;: &quot;./docs/architecture/diagrams&quot;
+      }
+    },
+    &quot;miro-workspace&quot;: {
+      &quot;url&quot;: &quot;https://mcp.miro.com/sse&quot;,
+      &quot;auth&quot;: &quot;oauth&quot;
+    },
+    &quot;figma-design-context&quot;: {
+      &quot;url&quot;: &quot;https://mcp.figma.com/mcp&quot;,
+      &quot;auth&quot;: &quot;oauth&quot;
+    }
+  }
+}</code></pre></div>
+</section>
+
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="whiteboard-tooling-comparison">Choosing the Right Whiteboard Mode: Native Canvas, Diagram-as-Code, and MCP Boards</h2>
+<p class="article-p">Match your diagramming surface to the stage of your project - from messy early ideation to version-controlled architecture contracts:</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.9rem;color:#e2e8f0;">
+<thead>
+<tr style="border-bottom:2px solid rgba(251,191,36,0.45);text-align:left;color:var(--gold);">
+<th style="padding:0.75rem;">Dimension</th>
+<th style="padding:0.75rem;">Native Claude Whiteboards</th>
+<th style="padding:0.75rem;">Mermaid / SVG Diagram-as-Code</th>
+<th style="padding:0.75rem;">Excalidraw MCP Canvas</th>
+<th style="padding:0.75rem;">Miro / FigJam MCP Workspace</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Primary Strength</td>
+<td style="padding:0.75rem;">Zero-friction synthesis of transcripts and raw notes</td>
+<td style="padding:0.75rem;">Plain-text precision inside Markdown wikis and PRs</td>
+<td style="padding:0.75rem;">Editable hand-drawn technical diagrams and wireframes</td>
+<td style="padding:0.75rem;">Enterprise multi-team workshops and UI/UX alignment</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Live Multi-User Editing</td>
+<td style="padding:0.75rem;">Single-session visual iteration with export hand-off</td>
+<td style="padding:0.75rem;">Async via Git commits and pull request reviews</td>
+<td style="padding:0.75rem;">Live interactive canvas inside Claude Apps or local browser</td>
+<td style="padding:0.75rem;">Full real-time cursors, comments, and board permissions</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Git &amp; PR Diffability</td>
+<td style="padding:0.75rem;">Structured JSON/Markdown export</td>
+<td style="padding:0.75rem;">Native line-by-line Git diffs</td>
+<td style="padding:0.75rem;">Versionable <code>.excalidraw</code> JSON and SVG exports</td>
+<td style="padding:0.75rem;">Board version history plus exported specs in Git</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Code &amp; Spec Round-Trip</td>
+<td style="padding:0.75rem;">Exports milestones, plans, and task payloads</td>
+<td style="padding:0.75rem;">Direct input to Claude Code scaffolding and tests</td>
+<td style="padding:0.75rem;">Fast code-to-architecture and sketch-to-spec loops</td>
+<td style="padding:0.75rem;">Reads design context directly into implementation specs</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Best Fit</td>
+<td style="padding:0.75rem;">Kickoff calls, brainstorms, startup sprint maps</td>
+<td style="padding:0.75rem;">Architecture Review Boards, repo ADRs, runbooks</td>
+<td style="padding:0.75rem;">Engineering design sessions and rapid system sketches</td>
+<td style="padding:0.75rem;">Cross-functional product, design, and engineering programs</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <h2 id="whiteboards-faq">Frequently Asked Questions on Claude Whiteboards</h2>
 <p class="article-p"><strong>Can non-technical teams use Claude Whiteboards without learning diagram syntax?</strong> Yes. Stakeholders simply paste plain-English meeting notes or call transcripts and ask for visual edits in natural language - such as "move security review before beta launch" or "assign Phase Two to Operations."</p>
 <p class="article-p"><strong>How do whiteboards stay synchronized with Jira or GitHub?</strong> Because every visual board is backed by structured text and JSON, you can export updated milestones and deliverables directly through approved MCP connectors whenever priorities shift.</p>
-
 <p class="article-p"><strong>What should a team do when project scope changes mid-sprint?</strong> Update the visual whiteboard first before touching individual tickets. Marking revised dependencies and owners on the board takes two minutes and keeps every contributor aligned on what moved out of scope.</p>
+<p class="article-p"><strong>Can Claude reverse-engineer an architecture whiteboard directly from an existing Git repository?</strong> Yes. By connecting a whiteboard MCP server (such as Excalidraw or Miro) inside <a class="gold-link" href="claude-code.html">Claude Code</a>, Claude can inspect service boundaries, API routes, and database schemas across your codebase and render an accurate component map directly onto a live canvas.</p>
+<p class="article-p"><strong>When should teams use Excalidraw via MCP versus Miro or FigJam?</strong> Use Excalidraw when engineers want lightweight, fast-loading technical sketches and versionable JSON or SVG files checked into Git. Use Miro or FigJam via MCP when product managers, designers, and stakeholders already run workshops and design critiques inside those enterprise workspaces.</p>
 </section>
 
 <section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
@@ -570,8 +659,13 @@ Deliverable: Live Production + Docs"]
 <ol class="references-list" style="display:flex;flex-direction:column;gap:0.75rem;padding-left:1.25rem;">
 <li><a class="gold-link" href="https://mermaid.js.org/intro/" rel="noopener noreferrer" target="_blank">Mermaid Diagramming Documentation</a> - Open diagram-as-code syntax for clean, version-controlled visual whiteboards.</li>
 <li><a class="gold-link" href="https://support.anthropic.com/en/articles/9487310-what-are-artifacts-and-how-do-i-use-them" rel="noopener noreferrer" target="_blank">Anthropic Artifacts Overview</a> - Rendering and sharing live interactive SVG and HTML whiteboards inside Claude.</li>
-<li><a class="gold-link" href="https://modelcontextprotocol.io/" rel="noopener noreferrer" target="_blank">Model Context Protocol (MCP)</a> - Connecting structured whiteboard outputs directly to Jira, GitHub, and Slack.</li>
+<li><a class="gold-link" href="https://modelcontextprotocol.io/" rel="noopener noreferrer" target="_blank">Model Context Protocol (MCP)</a> - Open standard connecting live whiteboard canvases, Jira, GitHub, and Slack directly to Claude.</li>
+<li><a class="gold-link" href="https://excalidraw.com/" rel="noopener noreferrer" target="_blank">Excalidraw Virtual Whiteboard</a> - Open-source hand-drawn diagramming canvas widely paired with Claude via MCP Apps and local MCP servers.</li>
+<li><a class="gold-link" href="https://developers.miro.com/" rel="noopener noreferrer" target="_blank">Miro Developer Platform</a> - Enterprise whiteboard APIs and MCP integration patterns for collaborative engineering diagrams.</li>
+<li><a class="gold-link" href="https://www.figma.com/developers" rel="noopener noreferrer" target="_blank">Figma &amp; FigJam Developer Documentation</a> - Bridging design files, FigJam workshops, and code-ready specifications.</li>
 <li><a class="gold-link" href="https://docs.github.com/en/issues/planning-and-tracking-with-projects" rel="noopener noreferrer" target="_blank">GitHub Projects &amp; Milestones Guide</a> - Translating visual milestones and deliverables into trackable engineering issues.</li>
+<li><a class="gold-link" href="claude-apps.html">Claude Apps: Interactive MCP Apps &amp; Live Workspace UI</a> - Running sandboxed Excalidraw, Figma, and collaborative canvas views directly inside Claude.</li>
+<li><a class="gold-link" href="claude-mcp.html">Claude MCP: Model Context Protocol &amp; Custom Tool Servers</a> - Configuring local and remote OAuth MCP servers securely for team workflows.</li>
 </ol>
 </section>
 </article>

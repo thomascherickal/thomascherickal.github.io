@@ -17,7 +17,10 @@ Design bottlenecks slow down product launches more often than backend code does.
 5. High-Impact Use Cases for Founders and Product Teams
 6. Design Review Checklist and Common Pitfalls to Avoid
 7. Closing the Feedback Loop Between Product, Design, and Engineering
-8. Authoritative References
+8. Figma MCP Integration, On-Canvas Editing, and Bidirectional Token Sync
+9. Claude Design, Figma MCP, and Canva Architecture Comparison
+10. Practical Questions on Claude Design and Token-Driven Workflows
+11. Authoritative References
 
 ---
 

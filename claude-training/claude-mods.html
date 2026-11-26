@@ -247,12 +247,12 @@
           <li><a href="../claude-training/claude-101.html">Claude 101</a></li>
           <li><a href="../claude-training/claude-projects.html">Claude Projects</a></li>
           <li><a href="../claude-training/claude-code.html">Claude Code</a></li>
+          <li><a href="../claude-training/claude-code-mode.html">Claude Code Mode</a></li>
           <li><a href="../claude-training/claude-desktop.html">Claude Desktop</a></li>
           <li><a href="../claude-training/claude-office.html">Claude Office</a></li>
-          <li><a href="../claude-training/claude-skills.html">Claude Skills</a></li>
           <li><a href="../claude-training/claude-mcp.html">Claude MCP</a></li>
           <li><a href="../claude-training/claude-plugins.html">Claude Plugins</a></li>
-          <li><a href="../claude-training/claude-connectors.html">Claude Connectors</a></li>
+          <li><a href="../claude-training/claude-apps.html">Claude Apps</a></li>
           <li><a href="../claude-training/claude-orchestration.html">Claude Orchestration</a></li>
           <li><a href="../claude-training/claude-design.html">Claude Design</a></li>
           <li><a href="../claude-training/claude-science.html">Claude for Science</a></li>
@@ -304,8 +304,9 @@
     </ul>
   </nav>
   <!-- END:HEADER -->
+  <a aria-label="Back to top" class="back-top" href="#top" id="backTop" title="Back to top">↑</a>
 
-<main id="main">
+<main class="container single-column-article" id="main">
 <header class="hero content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <div class="hero-badge content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">CLAUDE MODS &amp; EXTENSIONS</div>
 <h1>Claude Mods: Custom Extensions, Hooks & Behavior Tuning</h1>
@@ -314,7 +315,7 @@
 <p class="hero-byline">By <strong>Thomas Cherickal</strong> - Generative AI Consultant &amp; The Digital Futurist</p>
 </header>
 
-<article class="article-body" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.25rem;">
+<article class="article-body">
 <div id="table-of-contents" aria-label="Table of contents" class="content-card toc-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <p class="article-p" style="font-size:1.02rem;color:#f1f5f9;">Out of the box, Claude is a generalist. Yet every developer, writer, analyst, and founder has recurring habits - exact formatting rules, safety checks, domain terminology, and tool shortcuts. Claude Mods let you tailor Claude's behavior, interface hooks, and automation triggers so the assistant works the way your business and daily routine actually operate.</p>
 <div class="rule"></div>
@@ -326,6 +327,8 @@
 <li><a class="gold-link" href="#mod-hygiene-and-pitfalls">Keeping Your Mod Stack Fast and Conflict-Free</a></li>
 <li><a class="gold-link" href="#building-your-first-custom-mod">Step-by-Step: Building Your First Custom Claude Mod</a></li>
 <li><a class="gold-link" href="#team-mod-governance">Governing Shared Mods Across Engineering and Business Teams</a></li>
+<li><a class="gold-link" href="#deterministic-lifecycle-architecture">Layered Customization: <code>CLAUDE.md</code>, Skills, Lifecycle Hooks, and In-Process Mods</a></li>
+<li><a class="gold-link" href="#customization-primitives-matrix">Decision Matrix: <code>CLAUDE.md</code> vs. Skills vs. Lifecycle Hooks vs. Claude Plugins</a></li>
 <li><a class="gold-link" href="#mods-faq">Quick Answers on Using Claude Mods Safely</a></li>
 <li><a class="gold-link" href="#references">Authoritative References</a></li>
 </ol>
@@ -336,7 +339,7 @@
 
 <p class="article-p">A Claude Mod is a lightweight customization package - combining instruction overlays, custom slash commands, and event-driven <a class="gold-link" href="#references">Claude Code hooks</a> - that modifies how Claude behaves before or after key actions. Instead of repeating "always run my linter after editing a file" or "never use corporate jargon in client emails," a mod enforces that rule automatically every single time.</p>
 <p class="article-p">Lifecycle hooks fire at deterministic moments such as <code>PreToolUse</code>, <code>PostToolUse</code>, or <code>Stop</code>. Because hooks run as real shell scripts or local policies, they guarantee compliance even during long, complex sessions.</p>
-<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.25rem;margin:1.5rem 0;"><div class="mermaid">
+<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.5rem;margin:1.75rem 0;"><div class="mermaid">
 flowchart TD
     U["User Prompt or Slash Command"] --> M["Active Claude Mod Profile
 (Rules + Tone + Shortcuts)"]
@@ -419,7 +422,7 @@ if &quot;.env&quot; in target_path or &quot;id_rsa&quot; in target_path:
 <h2 id="mod-hygiene-and-pitfalls">Keeping Your Mod Stack Fast and Conflict-Free</h2>
 
 <p class="article-p">Installing twenty overlapping mods at once slows down every tool call and creates contradictory style instructions. Keep your active stack lean - three to five high-value mods per project - and version-control team mods inside your repository so every colleague shares the exact same guardrails.</p>
-<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.25rem;margin:1.5rem 0;"><div class="mermaid">
+<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.5rem;margin:1.75rem 0;"><div class="mermaid">
 graph TD
     F["Find or Author a Mod"] --> A["Inspect All Scripts & Rules"]
     A --> S["Test in Isolated Sandbox Repo"]
@@ -464,18 +467,126 @@ graph TD
 
 
 <section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="deterministic-lifecycle-architecture">Layered Customization: <code>CLAUDE.md</code>, Skills, Lifecycle Hooks, and In-Process Mods</h2>
+<p class="article-p">Production Claude Code environments separate soft behavioral guidance from hard deterministic enforcement. Instead of overloading a single system prompt with fifty rules that the model might overlook deep into a long session, engineering teams layer four complementary extension primitives:</p>
+<ul class="article-p" style="list-style-type:disc;padding-left:1.5rem;display:flex;flex-direction:column;gap:0.55rem;">
+<li><strong><code>CLAUDE.md</code> (Advisory Project Memory):</strong> Loaded automatically at session start to communicate repository architecture, build commands, and coding idioms. Because <code>CLAUDE.md</code> operates as model context, it guides reasoning probabilistically rather than guaranteeing hard enforcement.</li>
+<li><strong>Skills and Unified Slash Commands (<code>.claude/skills/</code> and <code>.claude/commands/</code>):</strong> Custom slash commands have converged with folder-based <strong>Skills</strong> (each defined by a <code>SKILL.md</code> playbook and optional helper scripts). Invoking <code>/deploy</code> or <code>/review</code> injects structured prompt templates with <code>$ARGUMENTS</code> support on demand without bloating baseline context.</li>
+<li><strong>Deterministic Lifecycle Hooks:</strong> Configured in user or project <code>.claude/settings.json</code>, hooks fire automatically at engine lifecycle boundaries across the session (<code>SessionStart</code>, <code>SessionEnd</code>), turn (<code>UserPromptSubmit</code>, <code>Stop</code>, <code>StopFailure</code>), and agentic tool loop (<code>PreToolUse</code>, <code>PostToolUse</code>, <code>PostToolUseFailure</code>). A <code>PreToolUse</code> hook receives structured JSON on <code>stdin</code> and can block unsafe actions outright by exiting with code <code>2</code> or returning a denial JSON decision, while <code>PostToolUse</code> triggers guaranteed formatters, linters, or telemetry after edits succeed.</li>
+<li><strong>In-Process Mods and Plugin Distribution:</strong> Beyond external shell scripts or HTTP webhooks, in-process TypeScript/JavaScript function mods execute inside a capability-scoped runtime interface so security scanners can audit every file, command, or network boundary a mod touches. For multi-team rollout, bundle your hooks, skills, and MCP servers into versioned <a class="gold-link" href="claude-plugins.html">Claude Plugins</a>.</li>
+</ul>
+<div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid #38bdf8;border-radius:10px;margin:1.5rem 0;overflow:hidden;"><div style="background:#0b1220;padding:0.5rem 1rem;border-bottom:1px solid rgba(56,189,248,0.22);display:flex;justify-content:space-between;align-items:center;font-size:0.8rem;color:#94a3b8;"><span style="color:#fbbf24;font-weight:600;">Multi-Stage Deterministic Guardrails (.claude/settings.json)</span><span>JSON</span></div><pre style="background:#040711;margin:0;padding:1.1rem 1.25rem;overflow-x:auto;color:#e2e8f0;font-size:0.86rem;line-height:1.55;"><code>{
+  &quot;hooks&quot;: {
+    &quot;PreToolUse&quot;: [
+      {
+        &quot;matcher&quot;: &quot;Bash&quot;,
+        &quot;hooks&quot;: [
+          {
+            &quot;type&quot;: &quot;command&quot;,
+            &quot;command&quot;: &quot;python3 .claude/hooks/validate_shell_policy.py&quot;
+          }
+        ]
+      }
+    ],
+    &quot;PostToolUse&quot;: [
+      {
+        &quot;matcher&quot;: &quot;Edit|Write&quot;,
+        &quot;hooks&quot;: [
+          {
+            &quot;type&quot;: &quot;command&quot;,
+            &quot;command&quot;: &quot;jq -r &#x27;.tool_input.file_path&#x27; | xargs -r npx prettier --write&quot;
+          }
+        ]
+      }
+    ],
+    &quot;Stop&quot;: [
+      {
+        &quot;hooks&quot;: [
+          {
+            &quot;type&quot;: &quot;command&quot;,
+            &quot;command&quot;: &quot;python3 .claude/hooks/verify_tests_before_stop.py&quot;
+          }
+        ]
+      }
+    ]
+  }
+}</code></pre></div>
+</section>
+
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="customization-primitives-matrix">Decision Matrix: <code>CLAUDE.md</code> vs. Skills vs. Lifecycle Hooks vs. Claude Plugins</h2>
+<p class="article-p">Use this specification matrix to place every team rule in the right layer so workflows stay fast, predictable, and easy to audit:</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.9rem;color:#e2e8f0;">
+<thead>
+<tr style="border-bottom:2px solid rgba(251,191,36,0.45);text-align:left;color:var(--gold);">
+<th style="padding:0.75rem;">Dimension</th>
+<th style="padding:0.75rem;"><code>CLAUDE.md</code></th>
+<th style="padding:0.75rem;">Skills &amp; Slash Commands</th>
+<th style="padding:0.75rem;">Lifecycle Hooks &amp; Mods</th>
+<th style="padding:0.75rem;">Claude Plugins</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Enforcement Model</td>
+<td style="padding:0.75rem;">Advisory (relies on LLM compliance)</td>
+<td style="padding:0.75rem;">On-demand procedural prompt injection</td>
+<td style="padding:0.75rem;">100% deterministic engine execution</td>
+<td style="padding:0.75rem;">Versioned bundle combining all layers</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Trigger Point</td>
+<td style="padding:0.75rem;">Loaded automatically at session start</td>
+<td style="padding:0.75rem;">Explicit <code>/skill-name</code> or auto-discovery</td>
+<td style="padding:0.75rem;"><code>PreToolUse</code>, <code>PostToolUse</code>, <code>Stop</code>, session events</td>
+<td style="padding:0.75rem;">Workspace or organization install</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Can Block Actions?</td>
+<td style="padding:0.75rem;">No (soft instruction only)</td>
+<td style="padding:0.75rem;">No (guides workflow steps)</td>
+<td style="padding:0.75rem;">Yes (exit code <code>2</code> or JSON block decision)</td>
+<td style="padding:0.75rem;">Yes (via packaged hooks and policies)</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Primary Location</td>
+<td style="padding:0.75rem;">Repo root or subdirectory <code>CLAUDE.md</code></td>
+<td style="padding:0.75rem;"><code>.claude/skills/</code> or <code>.claude/commands/</code></td>
+<td style="padding:0.75rem;"><code>.claude/settings.json</code> or in-process mod worker</td>
+<td style="padding:0.75rem;">Internal registry or Git plugin package</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Best Use Case</td>
+<td style="padding:0.75rem;">Architecture maps, style guides, build commands</td>
+<td style="padding:0.75rem;">Repeatable PR reviews, release checklists, scaffolding</td>
+<td style="padding:0.75rem;">Secret blocking, auto-formatting, Code Mode auditing</td>
+<td style="padding:0.75rem;">Cross-team distribution with centralized governance</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <h2 id="mods-faq">Quick Answers on Using Claude Mods Safely</h2>
 <p class="article-p"><strong>Can I use different mods for work and personal projects?</strong> Yes. Store global personal preferences in your user config directory and keep project-specific hooks and commands inside each repository so work rules never leak into personal projects.</p>
 <p class="article-p"><strong>What if a hook fails during a coding session?</strong> Exit with a clear non-zero status and a short plain-English message on stderr so Claude immediately understands why the action was blocked and adjusts its plan cleanly.</p>
+<p class="article-p"><strong>When should a rule live in <code>CLAUDE.md</code> versus a <code>PreToolUse</code> hook?</strong> Keep architectural guidance, naming conventions, and preferred libraries in <code>CLAUDE.md</code>. Move any non-negotiable security or quality gate - such as blocking <code>.env</code> reads, stopping destructive shell commands, or enforcing Prettier and Ruff formatting - into deterministic hooks so compliance never depends on context length.</p>
+<p class="article-p"><strong>How do Claude Mods relate to Claude Plugins?</strong> Mods, hooks, and skills tune behavior inside a local or repository workspace. When you want to distribute those hooks alongside custom skills and MCP connectors across an entire department with clean version pinning, package them as <a class="gold-link" href="claude-plugins.html">Claude Plugins</a>.</p>
 </section>
 
 <section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <h2 id="references">Authoritative References</h2>
 <ol class="references-list" style="display:flex;flex-direction:column;gap:0.75rem;padding-left:1.25rem;">
 <li><a class="gold-link" href="https://docs.anthropic.com/en/docs/claude-code/hooks" rel="noopener noreferrer" target="_blank">Claude Code Hooks Reference</a> - Official specification for PreToolUse, PostToolUse, Notification, and Stop lifecycle hooks.</li>
-<li><a class="gold-link" href="https://docs.anthropic.com/en/docs/claude-code/slash-commands" rel="noopener noreferrer" target="_blank">Claude Code Slash Commands &amp; Customizations</a> - How to author and share reusable command mods across personal and team repositories.</li>
+<li><a class="gold-link" href="https://docs.anthropic.com/en/docs/claude-code/slash-commands" rel="noopener noreferrer" target="_blank">Claude Code Slash Commands &amp; Customizations</a> - How to author and share reusable command mods and skills across personal and team repositories.</li>
+<li><a class="gold-link" href="https://docs.anthropic.com/en/docs/claude-code/memory" rel="noopener noreferrer" target="_blank">Claude Code Memory &amp; <code>CLAUDE.md</code> Guide</a> - Structuring hierarchical project instructions and advisory memory files cleanly.</li>
+<li><a class="gold-link" href="https://docs.anthropic.com/en/docs/claude-code/settings" rel="noopener noreferrer" target="_blank">Claude Code Settings &amp; Managed Policies</a> - Configuring user, repository, and enterprise managed settings for deterministic guardrails.</li>
 <li><a class="gold-link" href="https://www.conventionalcommits.org/" rel="noopener noreferrer" target="_blank">Conventional Commits Specification</a> - Standard commit format commonly enforced by Git workflow mods.</li>
 <li><a class="gold-link" href="https://docs.astral.sh/ruff/" rel="noopener noreferrer" target="_blank">Ruff Python Linter &amp; Formatter</a> - Ultra-fast formatter ideal for zero-lag PostToolUse code-quality hooks.</li>
+<li><a class="gold-link" href="claude-plugins.html">Claude Plugins: Unifying Skills, Hooks &amp; Connectors</a> - Packaging custom mods and MCP servers for organization-wide deployment.</li>
+<li><a class="gold-link" href="claude-code-mode.html">Claude Code Mode: Programmatic Tool Orchestration</a> - Auditing <code>tool_input.code</code> inside <code>PreToolUse</code> hooks for sandboxed JavaScript execution.</li>
 </ol>
 </section>
 </article>

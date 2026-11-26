@@ -17,7 +17,10 @@ Executives rarely have time to dig through a 15-tab spreadsheet before a Monday 
 5. Real-World Executive and Operational Dashboard Scenarios
 6. Building a Repeatable Weekly Refresh Workflow
 7. Presenting Claude Dashboards in Leadership Meetings
-8. Authoritative References
+8. Live Data Warehouses, MCP Apps, and BI Hand-Off Architecture
+9. Comparing Static Artifacts, Live Warehouse Dashboards, and MCP App Views
+10. Practical Questions on Live Claude Dashboards and KPI Governance
+11. Authoritative References
 
 ---
 

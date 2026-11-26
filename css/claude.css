@@ -72,25 +72,106 @@
   color: #ffffff;
 }
 
+/* Claude Guide Single-Column Block-Spaced Layout (Matching Gemini Pages) */
+.single-column-article header.hero.content-card {
+  min-height: auto !important;
+  text-align: left !important;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 2rem 2.25rem !important;
+  margin-top: 110px;
+  margin-bottom: 2rem;
+}
+
+.single-column-article header.hero.content-card .hero-badge.content-card {
+  align-self: flex-start;
+  padding: 0.35rem 0.9rem;
+  margin: 0;
+  border-radius: 999px;
+  box-shadow: none;
+}
+
+.single-column-article header.hero.content-card .hero-desc {
+  max-width: none;
+  margin: 0.25rem 0 0;
+  font-size: 1.08rem;
+  line-height: 1.7;
+  text-align: left;
+}
+
+.single-column-article header.hero.content-card .hero-byline {
+  margin: 0;
+  text-align: left;
+}
+
+.single-column-article header.hero.content-card .title-tags {
+  justify-content: flex-start;
+}
+
+.single-column-article .article-body {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-shadow: none !important;
+}
+
+.single-column-article .article-body > .content-card,
+.single-column-article .article-body > section.content-card,
+.single-column-article .article-body > .toc-card {
+  padding: 2.25rem;
+  margin-bottom: 2rem;
+  border-radius: var(--radius-lg, 14px);
+  text-align: left;
+}
+
+/* Mermaid Diagrams Block-Spaced Styling (Matching Gemini Pages) */
+.diagram-container {
+  background: #000000;
+  border: 1.5px solid rgba(251, 191, 36, 0.45);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.75rem 0;
+  overflow-x: auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.45);
+}
+
+.diagram-container .mermaid {
+  text-align: center;
+}
+
+.diagram-container .mermaid p {
+  line-height: 1.5 !important;
+  margin: 0 !important;
+  font-size: inherit !important;
+}
+
+.diagram-container .mermaid svg {
+  max-width: 100% !important;
+  height: auto !important;
+  display: inline-block;
+}
+
 /* Claude Guide Prose & Figures */
 .article-p {
-  color: #e2e8f0;
-  font-size: 0.98rem;
+  color: #cbd5e1;
+  font-size: 1rem;
   margin-bottom: 1.15rem;
-  line-height: 1.8;
+  line-height: 1.75;
 }
 
 .article-p a {
-  color: var(--cyan, #38bdf8);
+  color: var(--gold, #fbbf24);
   text-decoration: underline;
-  text-decoration-color: rgba(56, 189, 248, 0.4);
+  text-decoration-color: rgba(251, 191, 36, 0.4);
   text-underline-offset: 3px;
   transition: color 0.2s ease, text-decoration-color 0.2s ease;
 }
 
 .article-p a:hover {
-  color: var(--gold, #fbbf24);
-  text-decoration-color: var(--gold, #fbbf24);
+  color: var(--gold-dim, #d97706);
+  text-decoration-color: var(--gold-dim, #d97706);
 }
 
 figcaption.article-figcaption {

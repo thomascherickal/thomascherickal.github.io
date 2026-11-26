@@ -115,14 +115,85 @@ Combining disciplined source hygiene with Audio Overviews and inline citation ch
 
 ---
 
+## Multimodal Studio: Video Overviews, Interactive Mind Maps, and Context Caching
+
+NotebookLM and Gemini Notebook have evolved far beyond static text summaries into a full multi-output research studio. Rather than restricting each notebook to a single generated summary, the redesigned Studio panel lets analysts generate and retain multiple tailored artifacts from the exact same verified corpus - serving executives, engineers, and learners simultaneously.
+
+- Video Overviews and Cinematic Visual Explainers: Transform dense PDFs, architectural charts, and slide decks into narrated visual walkthroughs that pull key figures, diagrams, and verbatim quotes directly onto the screen. Advanced tiers also unlock Veo-backed Cinematic Video Overviews for richer visual storytelling.
+- Prompt-Steerable Interactive Mind Maps: Move past static topic clouds by prompting the notebook to organize concepts into specific analytical structures - such as decision-architecture maps, contradiction and tension maps, or literature constellations. Users can click individual branch nodes to inspect underlying citations while listening to an Audio Overview in parallel.
+- Interactive and Multilingual Audio Overviews: Audio Overviews now span over 50 languages with explicit length, audience, and focus steering. In Interactive Mode, listeners can interrupt the AI hosts mid-conversation to ask a targeted follow-up question and receive an immediate spoken answer grounded strictly in the notebook's uploaded sources.
+- Expanded Multi-Output Studio Deliverables: Generate multiple distinct briefing documents, structured data tables, slide decks, infographics, flashcards, and adaptive quizzes inside a single notebook without overwriting earlier outputs.
+- Workspace, Education, and Enterprise Governance: Across Google Workspace, Education, and Enterprise plans, uploaded sources, queries, and generated Studio artifacts remain strictly private within organizational boundaries and are never used to train foundation models, while higher tiers unlock deeper reasoning modes such as Gemini Deep Think and larger source budgets.
+
+When engineering teams replicate this multi-query notebook experience inside a custom internal application, pairing the Files API with Gemini API Context Caching avoids re-processing the same multi-hundred-page corpus on every user question:
+
+#### `context_cached_notebook.py`
+```python
+from google import genai
+from google.genai import types
+
+client = genai.Client()
+
+# Upload large reference PDFs once via the Files API
+spec_pdf = client.files.upload(file="enterprise_security_spec.pdf")
+audit_pdf = client.files.upload(file="annual_compliance_audit.pdf")
+
+# Cache the closed-world corpus for repeated low-latency Q&A
+corpus_cache = client.caches.create(
+    model="gemini-4-neon",
+    config=types.CreateCachedContentConfig(
+        display_name="security-audit-notebook-v1",
+        system_instruction=(
+            "Answer strictly from the cached documents. Cite filename and "
+            "section heading for every claim. If absent, state 'Not in sources.'"
+        ),
+        contents=[spec_pdf, audit_pdf],
+        ttl="3600s",
+    ),
+)
+
+# Ask multiple grounded questions without re-uploading or re-tokenizing
+response = client.models.generate_content(
+    model="gemini-4-neon",
+    contents="Build a markdown table of all open high-severity audit gaps.",
+    config=types.GenerateContentConfig(
+        cached_content=corpus_cache.name,
+        temperature=0.1,
+    ),
+)
+print(response.text)
+```
+
+---
+
+## Gemini Notebook Studio Outputs and Grounding Matrix
+
+Choose the Studio deliverable and grounding workflow that matches your audience, review depth, and source complexity using capabilities detailed in the NotebookLM Official Help Center:
+
+---
+
+## Practical Questions on Scaling Gemini Notebook
+
+Are documents uploaded to Workspace or Enterprise notebooks used to train Gemini models? No. Under Google Workspace, Education, and Enterprise data-protection terms, uploaded sources, questions, and generated Studio outputs stay private inside your organization and are never used to train foundation models.
+
+Can one notebook hold multiple Audio Overviews or Mind Maps for different teams? Yes. The multi-output Studio panel lets you generate and save separate Audio Overviews, Video Overviews, briefings, or mind maps from the same corpus - for instance, a five-minute executive brief alongside a deep technical architecture review.
+
+When should we use Gemini Notebook directly versus building a custom Files API + Context Caching app? Use Gemini Notebook directly for human researchers, analysts, and internal knowledge hubs where built-in citation UI, Audio/Video Overviews, and Mind Maps save weeks of engineering. Build a custom Gemini API pipeline with Context Caching when you need programmatic triggers, CRM/database writes, or strict JSON outputs embedded inside your own product.
+
+How do Interactive Audio Overviews and Q&A handle conflicting numbers across uploaded sources? When two uploaded documents disagree, prompt the notebook explicitly to surface discrepancies and list each claim with its clickable inline citation. Removing superseded drafts before generating Audio or Video Overviews prevents outdated metrics from entering the narration.
+
+---
+
 ## References
 
 Official documentation, research papers, and developer guides referenced in this article:
 
 - Google NotebookLM - Official home for source-grounded notebooks, audio overviews, and study guides.
+- NotebookLM Official Help Center - Documentation on Studio outputs, Mind Maps, Audio/Video Overviews, and sharing controls.
 - Gemini API Files and Document Understanding - Developer guide for uploading PDFs and building citation-locked Q&A.
+- Gemini API Context Caching - Guide for caching large document corpora to reduce latency and token overhead on repeated queries.
 - Google Workspace AI Solutions - Enterprise workflows connecting Docs, Drive, and Gemini notebooks.
-- Google Blog - NotebookLM Updates - Official product announcements for Audio Overviews and research features.
+- Google Blog - NotebookLM Updates - Official product announcements for Audio Overviews, Video Overviews, and research features.
 
 ---
 

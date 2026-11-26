@@ -247,12 +247,12 @@
           <li><a href="../claude-training/claude-101.html">Claude 101</a></li>
           <li><a href="../claude-training/claude-projects.html">Claude Projects</a></li>
           <li><a href="../claude-training/claude-code.html">Claude Code</a></li>
+          <li><a href="../claude-training/claude-code-mode.html">Claude Code Mode</a></li>
           <li><a href="../claude-training/claude-desktop.html">Claude Desktop</a></li>
           <li><a href="../claude-training/claude-office.html">Claude Office</a></li>
-          <li><a href="../claude-training/claude-skills.html">Claude Skills</a></li>
           <li><a href="../claude-training/claude-mcp.html">Claude MCP</a></li>
           <li><a href="../claude-training/claude-plugins.html">Claude Plugins</a></li>
-          <li><a href="../claude-training/claude-connectors.html">Claude Connectors</a></li>
+          <li><a href="../claude-training/claude-apps.html">Claude Apps</a></li>
           <li><a href="../claude-training/claude-orchestration.html">Claude Orchestration</a></li>
           <li><a href="../claude-training/claude-design.html">Claude Design</a></li>
           <li><a href="../claude-training/claude-science.html">Claude for Science</a></li>
@@ -304,6 +304,7 @@
     </ul>
   </nav>
   <!-- END:HEADER -->
+  <a aria-label="Back to top" class="back-top" href="#top" id="backTop" title="Back to top">↑</a>
 
 <main class="container single-column-article" id="main">
 <header class="hero content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);text-align:left;display:flex;flex-direction:column;gap:1.25rem;padding:2rem 2.25rem;margin-top:110px;margin-bottom:2rem;">
@@ -323,7 +324,10 @@
 <a class="toc-link gold-link" href="#common-mistakes">5. Common Skill Authoring Mistakes to Avoid</a>
 <a class="toc-link gold-link" href="#building-a-team-skill-library">6. Building and Maintaining a High-Trust Team Skill Library</a>
 <a class="toc-link gold-link" href="#testing-and-governance">7. Testing, Measuring, and Governing Skills Across Teams</a>
-<a class="toc-link gold-link" href="#references">8. References</a>
+<a class="toc-link gold-link" href="#open-skills-standard-and-runtimes">8. Open SKILL.md Portability Across Antigravity, Gemini CLI, and Official Skill Registries</a>
+<a class="toc-link gold-link" href="#skills-architecture-matrix">9. Comparing Project Rules, Gemini Skills, MCP Servers, and Plugins</a>
+<a class="toc-link gold-link" href="#gemini-skills-faq">10. Practical Questions When Designing and Governing Gemini Skills</a>
+<a class="toc-link gold-link" href="#references">11. References</a>
 </div>
 </article>
 
@@ -436,11 +440,112 @@ graph TD
 <p>Start with three high-frequency workflows this week, package them cleanly into versioned skill folders, and watch how quickly consistent, verifiable execution becomes the default across your entire engineering team.</p>
 </article>
 
+<article class="content-card" id="open-skills-standard-and-runtimes" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2>Open SKILL.md Portability Across Antigravity, Gemini CLI, and Official Skill Registries</h2>
+<p>The <code>SKILL.md</code> format has converged into a cross-tool open standard across Google Antigravity, Gemini CLI, Google AI Studio workflows, and compatible coding agents. Because every skill is simply a directory containing Markdown instructions, YAML frontmatter, optional <code>scripts/</code>, and <code>references/</code>, teams write an operational playbook once and reuse it cleanly across desktop IDEs, terminal sessions, and automated CI agents.</p>
+<p>Modern runtimes resolve skills across layered discovery scopes so personal utilities, repository standards, and enterprise plugins coexist cleanly without colliding:</p>
+<ul style="display:flex;flex-direction:column;gap:0.55rem;padding-left:1.35rem;margin:0.75rem 0 1.15rem;">
+<li><strong>Workspace Scope (Repository-Local):</strong> Skills checked directly into a repository (such as <code>.agents/skills/</code> or workspace plugin directories) travel with Git history so every contributor and CI agent follows identical migration, linting, or deployment conventions.</li>
+<li><strong>User Scope (Developer-Global):</strong> Skills placed under user configuration roots (such as <code>~/.gemini/skills/</code> or <code>~/.agents/skills/</code>) remain available across all local repositories for personal workflows like incident triage, note indexing, or writing reviews.</li>
+<li><strong>First-Party Official Skill Registries:</strong> To prevent coding assistants trained on static datasets from emitting outdated SDK syntax, Google maintains official skill repositories including <a class="gold-link" href="#references"><code>google-gemini/gemini-skills</code></a> for the Gemini Developer API and <a class="gold-link" href="#references"><code>google/skills</code></a> for the Gemini Enterprise Agent Platform.</li>
+<li><strong>Security and Least-Privilege Governance:</strong> Before enabling a third-party skill in an enterprise environment, review its bundled <code>scripts/</code> for shell injection, network egress, or credential harvesting, pin repository commits rather than floating branches, and disable unused heavy skills per workspace using scoped skill controls.</li>
+</ul>
+<div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid var(--cyan);border-radius:10px;margin:1.5rem 0;overflow:hidden;">
+<div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.55rem 1rem;background:rgba(255,255,255,0.04);border-bottom:1px solid rgba(255,255,255,0.08);">
+<span style="font-family:var(--font-mono);font-size:0.8rem;color:var(--cyan);">skill_lifecycle_and_audit.sh</span>
+<button class="copy-btn" onclick="copyCode(this)" style="text-decoration:none !important;" type="button">Copy</button>
+</div>
+<pre style="white-space:pre-wrap;word-break:break-word;overflow-x:hidden;padding:1rem;margin:0;color:#e2e8f0;font-size:0.88rem;"><code># Recommended portable skill folder layout
+# my-skill/
+#   SKILL.md            # YAML frontmatter (name, description) + procedural workflow
+#   scripts/            # Deterministic validators, formatters, or schema checks
+#   references/         # Long lookup tables loaded only on demand
+#   assets/             # Static templates or sample fixtures
+
+# 1. Inspect installed skills in Gemini CLI / terminal agent sessions
+gemini skills list
+
+# 2. Install an official skill repository scoped to the current workspace
+gemini skills install https://github.com/google-gemini/gemini-skills --scope workspace
+
+# 3. Pre-merge CI check: verify every SKILL.md has valid frontmatter and no hardcoded home paths
+python3 -c '
+import pathlib, re, sys
+for skill in pathlib.Path(".agents/skills").rglob("SKILL.md"):
+    text = skill.read_text(encoding="utf-8")
+    if not text.startswith("---\n") or "name:" not in text[:400] or "description:" not in text[:600]:
+        sys.exit(f"Invalid YAML frontmatter in {skill}")
+    if re.search(r"/Users/|/home/[a-zA-Z0-9_-]+/", text):
+        sys.exit(f"Hardcoded absolute user path found in {skill}")
+print("All workspace skills passed frontmatter and portability checks.")
+'</code></pre>
+</div>
+</article>
+
+<article class="content-card" id="skills-architecture-matrix" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2>Comparing Project Rules, Gemini Skills, MCP Servers, and Plugins</h2>
+<p>A common architectural mistake is stuffing every rule, API connector, and runbook into a single file. Each customization layer in the Gemini and Antigravity ecosystem solves a distinct problem:</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.9rem;color:#e2e8f0;">
+<thead>
+<tr style="border-bottom:2px solid rgba(251,191,36,0.45);text-align:left;color:var(--gold);">
+<th style="padding:0.75rem;">Mechanism</th>
+<th style="padding:0.75rem;">Context Loading</th>
+<th style="padding:0.75rem;">Executable Capability</th>
+<th style="padding:0.75rem;">Best Used For</th>
+<th style="padding:0.75rem;">Governance &amp; Distribution</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Project Rules (<code>GEMINI.md</code>)</td>
+<td style="padding:0.75rem;">Always loaded into system context on every turn</td>
+<td style="padding:0.75rem;">Declarative policy only (no bundled runtime)</td>
+<td style="padding:0.75rem;">Universal invariants (coding standards, naming rules, forbidden commands)</td>
+<td style="padding:0.75rem;">Checked into repo root; keep short to prevent token bloat</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Gemini Skills (<code>SKILL.md</code>)</td>
+<td style="padding:0.75rem;">Progressive disclosure (name + description indexed; body loaded on match)</td>
+<td style="padding:0.75rem;">Procedural instructions plus local <code>scripts/</code> and <code>references/</code></td>
+<td style="padding:0.75rem;">Specialized multi-step workflows (audits, migrations, QA, doc extraction)</td>
+<td style="padding:0.75rem;">Versioned in Git repos, user directories, or shared skill registries</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">MCP Servers</td>
+<td style="padding:0.75rem;">Tool schemas exposed dynamically to the host runtime</td>
+<td style="padding:0.75rem;">Live RPC calls to databases, SaaS APIs, browsers, and internal services</td>
+<td style="padding:0.75rem;">Authenticated external data access and structured state mutations</td>
+<td style="padding:0.75rem;">Centralized OAuth / API tokens, tool allowlists, and audit logs</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Antigravity Plugins</td>
+<td style="padding:0.75rem;">Namespaced bundle loading skills, rules, hooks, and MCP servers together</td>
+<td style="padding:0.75rem;">End-to-end capabilities combining tools, UI panels, and domain playbooks</td>
+<td style="padding:0.75rem;">One-click team distribution of complete platform integrations</td>
+<td style="padding:0.75rem;">Single installable, toggleable unit managed via plugin registries</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+
+<article class="content-card" id="gemini-skills-faq" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2>Practical Questions When Designing and Governing Gemini Skills</h2>
+<p><strong>When should an instruction live in <code>GEMINI.md</code> versus a dedicated <code>SKILL.md</code>?</strong> Put a rule in <code>GEMINI.md</code> only if it applies to nearly every task in the repository, such as file naming conventions or test commands. Move any workflow that applies only to specific scenarios - like auditing OpenAPI specs, preparing a release, or debugging accessibility - into a <code>SKILL.md</code> so its instructions consume zero tokens during unrelated turns.</p>
+<p><strong>How do we keep <code>SKILL.md</code> concise when a workflow requires dense rubrics or schemas?</strong> Keep <code>SKILL.md</code> focused on the decision tree, preconditions, and exact command invocations, and move long checklists, error catalogs, or API schemas into a sibling <code>references/</code> directory. Instruct the agent inside <code>SKILL.md</code> to read a specific reference file only when that branch of the workflow is triggered.</p>
+<p><strong>How should security teams vet external or community skills before adoption?</strong> Treat an untrusted skill like a third-party build script: inspect <code>SKILL.md</code> for prompt-injection instructions that bypass approval prompts, audit every file in <code>scripts/</code> for outbound network calls or secret reads, pin installations to an audited commit hash, and run bundled helper scripts inside a sandboxed environment.</p>
+<p><strong>Can one skill directory serve both Google Antigravity and terminal agents like Gemini CLI?</strong> Yes. Because both environments follow the open <code>SKILL.md</code> frontmatter convention and relative directory layout (<code>scripts/</code>, <code>references/</code>, <code>assets/</code>), a single version-controlled skill folder works seamlessly across Antigravity workspaces, Gemini CLI sessions, and CI automation runners as long as scripts avoid machine-specific paths.</p>
+</article>
+
 <article class="content-card" id="references" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <h2>References</h2>
 <p>Official documentation, research papers, and developer guides referenced in this article:</p>
 <ul style="display:flex;flex-direction:column;gap:0.65rem;padding-left:1.25rem;margin-top:1rem;">
 <li><a class="gold-link" href="https://antigravity.google/" rel="noopener noreferrer" target="_blank">Google Antigravity Platform</a> - Official platform documentation for Antigravity workspaces, skills, and plugins.</li>
+<li><a class="gold-link" href="https://github.com/google-gemini/gemini-skills" rel="noopener noreferrer" target="_blank">Official Gemini API Agent Skills (<code>google-gemini/gemini-skills</code>)</a> - First-party <code>SKILL.md</code> packages keeping coding assistants synchronized with current Gemini SDK patterns.</li>
+<li><a class="gold-link" href="https://github.com/google/skills" rel="noopener noreferrer" target="_blank">Google Enterprise Agent Skills (<code>google/skills</code>)</a> - Official skill library for Google Cloud and Gemini Enterprise Agent Platform workflows.</li>
+<li><a class="gold-link" href="https://geminicli.com/docs/cli/skills/" rel="noopener noreferrer" target="_blank">Gemini CLI Agent Skills Documentation</a> - Guide to progressive disclosure, workspace scoping, and terminal skill management.</li>
 <li><a class="gold-link" href="https://ai.google.dev/gemini-api/docs" rel="noopener noreferrer" target="_blank">Google Gemini API Documentation</a> - Guides for structured tool use and agentic workflow design.</li>
 <li><a class="gold-link" href="https://github.com/google-gemini/cookbook" rel="noopener noreferrer" target="_blank">Google Gemini Cookbook</a> - Open-source examples of modular agent patterns and helper scripts.</li>
 <li><a class="gold-link" href="https://yaml.org/spec/" rel="noopener noreferrer" target="_blank">YAML Specification</a> - Reference for valid YAML frontmatter used in SKILL.md headers.</li>

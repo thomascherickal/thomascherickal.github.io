@@ -248,12 +248,12 @@
           <li><a href="../claude-training/claude-101.html">Claude 101</a></li>
           <li><a href="../claude-training/claude-projects.html">Claude Projects</a></li>
           <li><a href="../claude-training/claude-code.html">Claude Code</a></li>
+          <li><a href="../claude-training/claude-code-mode.html">Claude Code Mode</a></li>
           <li><a href="../claude-training/claude-desktop.html">Claude Desktop</a></li>
           <li><a href="../claude-training/claude-office.html">Claude Office</a></li>
-          <li><a href="../claude-training/claude-skills.html">Claude Skills</a></li>
           <li><a href="../claude-training/claude-mcp.html">Claude MCP</a></li>
           <li><a href="../claude-training/claude-plugins.html">Claude Plugins</a></li>
-          <li><a href="../claude-training/claude-connectors.html">Claude Connectors</a></li>
+          <li><a href="../claude-training/claude-apps.html">Claude Apps</a></li>
           <li><a href="../claude-training/claude-orchestration.html">Claude Orchestration</a></li>
           <li><a href="../claude-training/claude-design.html">Claude Design</a></li>
           <li><a href="../claude-training/claude-science.html">Claude for Science</a></li>
@@ -305,6 +305,7 @@
     </ul>
   </nav>
   <!-- END:HEADER -->
+  <a aria-label="Back to top" class="back-top" href="#top" id="backTop" title="Back to top">↑</a>
 
 <main class="container single-column-article" id="main">
 <header class="hero content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);text-align:left;display:flex;flex-direction:column;gap:1.25rem;padding:2rem 2.25rem;margin-top:110px;margin-bottom:2rem;">
@@ -323,7 +324,10 @@
 <a class="toc-link gold-link" href="#artifacts-and-subagents">4. Artifacts, Subagent Delegation, and Core Slash Commands</a>
 <a class="toc-link gold-link" href="#practical-workflow">5. A Step-by-Step Daily Workflow and Failure Modes</a>
 <a class="toc-link gold-link" href="#team-adoption-scenarios">6. Real-World Team Scenarios and Rollout Checklist</a>
-<a class="toc-link gold-link" href="#references">7. References</a>
+<a class="toc-link gold-link" href="#mentions-permissions-and-auxiliary-pane">7. Context Mentions, Permission Policies, and the Auxiliary Pane</a>
+<a class="toc-link gold-link" href="#chat-primitives-comparison">8. Comparing Antigravity Chat Primitives: Rules, Skills, Artifacts, and Subagents</a>
+<a class="toc-link gold-link" href="#antigravity-chat-faq">9. Practical Questions When Running Antigravity Chat</a>
+<a class="toc-link gold-link" href="#references">10. References</a>
 </div>
 </article>
 
@@ -434,8 +438,88 @@ description: Run pre-release verification across tests, links, and build output.
 </article>
 <article class="content-card" id="team-adoption-scenarios" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <h2>Real-World Team Scenarios and Rollout Checklist</h2>
-<p>Teams adopt Antigravity Chat fastest when they start with concrete, repeatable engineering chores rather than vague open-ended experiments. Three starter workflows consistently pay off in the first week. First, <strong>onboarding onto unfamiliar services</strong>: a new engineer opens Antigravity Chat, asks it to map request flow from an HTTP endpoint down to the database layer, and receives a verified walkthrough grounded in the actual repository files. Second, <strong>targeted bug fixes with regression tests</strong>: paste a real error log, let the agent locate the offending handler, write a failing unit test, patch the root cause, and confirm the suite turns green. Third, <strong>pre-PR quality sweeps</strong>: run a custom skill that checks naming conventions, documentation updates, and broken links before requesting human review.</p>
-<p>When rolling out Antigravity Chat across a team of five or fifty developers, publish a shared <code>GEMINI.md</code> file in each core repository during week one. Hold a short thirty-minute working session where engineers practice reviewing an implementation plan artifact before clicking approve, launching a read-only research subagent, and running a live browser check through Chrome DevTools. Within two weeks, teams typically move from ad-hoc chat prompts to disciplined, repeatable agentic sessions that cut routine maintenance time while raising test coverage across the codebase.</p>
+<p>Teams adopt Antigravity Chat fastest when they start with concrete, repeatable engineering chores rather than vague open-ended experiments. Three starter workflows consistently deliver immediate payoff. First, <strong>onboarding onto unfamiliar services</strong>: a new engineer opens Antigravity Chat, asks it to map request flow from an HTTP endpoint down to the database layer, and receives a verified walkthrough grounded in the actual repository files. Second, <strong>targeted bug fixes with regression tests</strong>: paste a real error log, let the agent locate the offending handler, write a failing unit test, patch the root cause, and confirm the suite turns green. Third, <strong>pre-PR quality sweeps</strong>: run a custom skill that checks naming conventions, documentation updates, and broken links before requesting human review.</p>
+<p>When rolling out Antigravity Chat across a team of five or fifty developers, begin by publishing a shared <code>GEMINI.md</code> file in each core repository. Run a focused working session where engineers practice reviewing an implementation plan artifact before clicking approve, launching a read-only research subagent, and running a live browser check through Chrome DevTools. Teams quickly progress from ad-hoc chat prompts to disciplined, repeatable agentic sessions that cut routine maintenance time while raising test coverage across the codebase.</p>
+</article>
+
+<article class="content-card" id="mentions-permissions-and-auxiliary-pane" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2>Context Mentions, Permission Policies, and the Auxiliary Pane</h2>
+<p>Getting crisp, repeatable outputs from Antigravity Chat depends on controlling both what enters the conversation and what boundaries govern tool execution. Modern Antigravity desktop and IDE chat surfaces combine precision context targeting, a dedicated workspace Auxiliary Pane, and layered global-to-project security policies:</p>
+<ul style="padding-left:1.5rem;color:var(--text-secondary);line-height:1.8;margin-bottom:1.25rem;"><li><strong>Precision <code>@</code> Mentions and Media Drops:</strong> Typing <code>@</code> opens a structured context picker so you can attach exact source files, folders, prior conversations, live terminal output, workspace rules, or specific MCP servers and tools without copying text. Drag-and-drop screenshots, architecture diagrams, or UI mockups directly onto the chat canvas for multimodal inspection.</li><li><strong>The Auxiliary Pane for Live State:</strong> Instead of losing plans and logs in long chat scrollback, the Auxiliary Pane tracks running subagents, background tasks, scheduled cron automations, modified file diffs, active terminal panes, and pinned Artifacts side by side with the conversation.</li><li><strong>Layered Global and Project-Level Permissions:</strong> Teams configure tool execution policies (<code>proceed-in-sandbox</code>, <code>request-review</code>, <code>strict</code>, or <code>always-proceed</code>), terminal sandboxing, non-workspace file access (<code>allow</code>, <code>ask</code>, <code>deny</code>), internet access policies, command allowlists and denylists, and browser domain allowlists. Project-level overrides take precedence over global defaults whenever a sensitive repository is active, following the controls in the <a class="gold-link" href="#references">Antigravity permissions and sandbox documentation</a>.</li><li><strong>Scheduled Tasks and Background Execution:</strong> Recurring operational checks - such as morning dependency audits, log triage, or status summaries - can be configured as scheduled tasks or delayed timers that wake the agent asynchronously and notify you once verification completes.</li></ul>
+<div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid var(--cyan);border-radius:10px;margin:1.5rem 0;overflow:hidden;">
+<div class="code-bar" style="display:flex;justify-content:space-between;align-items:center;padding:0.55rem 1rem;background:rgba(255,255,255,0.04);border-bottom:1px solid rgba(255,255,255,0.08);">
+<span style="font-family:var(--font-mono);font-size:0.8rem;color:var(--cyan);">project-permissions-profile.json</span>
+<button class="copy-btn" onclick="copyCode(this)" style="text-decoration:none !important;" type="button">Copy</button>
+</div>
+<pre style="white-space:pre-wrap;word-break:break-word;overflow-x:hidden;padding:1rem;margin:0;color:#e2e8f0;font-size:0.88rem;"><code>{
+  "toolExecutionPolicy": "proceed-in-sandbox",
+  "terminalSandbox": true,
+  "nonWorkspaceFileAccess": "deny",
+  "internetAccessPolicy": "ask",
+  "commandAllowlist": [
+    "pytest",
+    "ruff check",
+    "npm test"
+  ],
+  "commandDenylist": [
+    "git push --force",
+    "rm -rf /"
+  ],
+  "browserAllowlist": [
+    "http://localhost:3000",
+    "http://127.0.0.1:8000"
+  ]
+}</code></pre>
+</div>
+</article>
+<article class="content-card" id="chat-primitives-comparison" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2>Comparing Antigravity Chat Primitives: Rules, Skills, Artifacts, and Subagents</h2>
+<p>Each workspace primitive solves a distinct problem in agentic conversations - combining them cleanly keeps sessions fast, accurate, and easy to audit:</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.9rem;color:#e2e8f0;">
+<thead>
+<tr style="border-bottom:2px solid rgba(251,191,36,0.45);text-align:left;color:var(--gold);">
+<th style="padding:0.75rem;">Primitive</th>
+<th style="padding:0.75rem;">Activation Mechanism</th>
+<th style="padding:0.75rem;">Context Footprint</th>
+<th style="padding:0.75rem;">Ideal Usage Pattern</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Workspace Rules (<code>GEMINI.md</code>)</td>
+<td style="padding:0.75rem;">Always-on or glob-matched automatically</td>
+<td style="padding:0.75rem;">Low, concise policy constraints</td>
+<td style="padding:0.75rem;">Coding conventions, test gates, security boundaries</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Composable Skills (<code>SKILL.md</code>)</td>
+<td style="padding:0.75rem;">Progressive disclosure when task matches description</td>
+<td style="padding:0.75rem;">Zero body cost until actively loaded</td>
+<td style="padding:0.75rem;">Specialized multi-step workflows, scripts, and checklists</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Structured Artifacts</td>
+<td style="padding:0.75rem;">Created by the agent in the Auxiliary Pane</td>
+<td style="padding:0.75rem;">Persistent, reviewable standalone documents</td>
+<td style="padding:0.75rem;">Implementation plans, walkthroughs, interactive previews</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Delegated Subagents</td>
+<td style="padding:0.75rem;">Spawned on demand with isolated conversation context</td>
+<td style="padding:0.75rem;">Keeps raw logs and scans out of main chat</td>
+<td style="padding:0.75rem;">Deep codebase research, live Chrome checks, parallel file updates</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+<article class="content-card" id="antigravity-chat-faq" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2>Practical Questions When Running Antigravity Chat</h2>
+<p><strong>When should I delegate to a read-only research subagent instead of searching in the main chat?</strong> Delegate whenever exploration requires reading more than five to ten files or searching across multiple modules. The subagent absorbs the noisy search results in its own context window and returns a tight, citation-backed brief to your main thread.</p>
+<p><strong>How do <code>/compact</code> and fresh threads work together to prevent context drift?</strong> Use <code>/compact</code> mid-feature when a single ticket spans many tool iterations and you want to preserve key decisions without carrying stale terminal logs. Once a feature is verified and merged, open a fresh conversation thread for the next ticket so unrelated history never biases new edits.</p>
+<p><strong>What happens when project-level permissions conflict with global settings?</strong> Project-level settings always take precedence while that repository is active. This lets you keep a convenient global workflow for personal prototypes while enforcing strict sandboxing, denied external file access, and explicit network approval on production client repositories.</p>
+<p><strong>Can Antigravity Chat run automated checks while I am away from the keyboard?</strong> Yes. Use <code>/schedule</code> or the Scheduled Tasks view to register recurring cron workflows or one-shot delayed checks, paired with strict sandbox and command allowlist rules so unattended runs remain completely safe.</p>
 </article>
 
 <article class="content-card" id="references" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
@@ -443,6 +527,10 @@ description: Run pre-release verification across tests, links, and build output.
 <p>Official documentation, research papers, and developer guides referenced in this article:</p>
 <ul style="display:flex;flex-direction:column;gap:0.65rem;padding-left:1.25rem;margin-top:1rem;">
 <li><a class="gold-link" href="https://antigravity.google/" rel="noopener noreferrer" target="_blank">Google Antigravity Platform</a> - Official overview of Google Antigravity, agentic chat, and workspace orchestration.</li>
+<li><a class="gold-link" href="https://antigravity.google/docs/rules" rel="noopener noreferrer" target="_blank">Google Antigravity Rules Documentation</a> - Guide to global and repository rules, glob triggers, and file includes.</li>
+<li><a class="gold-link" href="https://antigravity.google/docs/permissions" rel="noopener noreferrer" target="_blank">Google Antigravity Permissions &amp; Security Docs</a> - Configuring execution policies, allowlists, and project-level overrides.</li>
+<li><a class="gold-link" href="https://antigravity.google/docs/sandbox" rel="noopener noreferrer" target="_blank">Google Antigravity Terminal Sandbox Docs</a> - Technical details on isolated command execution and workspace boundaries.</li>
+<li><a class="gold-link" href="https://modelcontextprotocol.io/" rel="noopener noreferrer" target="_blank">Model Context Protocol (MCP) Specification</a> - Open standard connecting Antigravity Chat to local tools and enterprise data sources.</li>
 <li><a class="gold-link" href="https://ai.google.dev/gemini-api/docs" rel="noopener noreferrer" target="_blank">Google Gemini API Documentation</a> - Technical documentation for tool calling, structured outputs, and agentic workflows.</li>
 <li><a class="gold-link" href="https://chromedevtools.github.io/devtools-protocol/" rel="noopener noreferrer" target="_blank">Chrome DevTools Protocol</a> - Underlying browser inspection and automation protocol used for live web verification.</li>
 <li><a class="gold-link" href="https://deepmind.google/models/gemini/" rel="noopener noreferrer" target="_blank">Google DeepMind Gemini Overview</a> - Core model capabilities powering reasoning and tool use in Antigravity.</li>

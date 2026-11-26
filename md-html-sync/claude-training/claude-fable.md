@@ -17,7 +17,10 @@ Short chat prompts are easy for almost any language model, but real business bre
 5. Common Failure Modes in Long-Horizon Work
 6. Measuring Real Business ROI from Frontier Reasoning
 7. Frontier Readiness Checklist Before Scaling Up
-8. Authoritative References
+8. Claude Fable vs. Claude Mythos, Effort Scaling, Fast Mode, and Code Mode Integration
+9. Comparing Deployment Profiles: Claude Fable, Fast Mode, Claude Mythos, and Fast-Tier Routing
+10. Practical Questions on Deploying Claude Fable Safely
+11. Authoritative References
 
 ---
 

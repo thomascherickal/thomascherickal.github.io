@@ -16,7 +16,10 @@ Reading code inside a chat bubble forces you to imagine how a button feels, how 
 4. Data Visualization Best Practices and Common Pitfalls
 5. Real-World Business and Personal Use Cases
 6. Step-by-Step Checklist Before Sharing an Artifact
-7. Authoritative References
+7. Persistent Storage, Install as App, and Sharing Workflows
+8. Artifact Persistence, Desktop Install, and Claude Apps Comparison
+9. Practical Questions on Persistent Artifacts and Desktop Export
+10. Authoritative References
 
 ---
 

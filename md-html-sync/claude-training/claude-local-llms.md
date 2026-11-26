@@ -14,10 +14,13 @@ You do not have to choose between cloud frontier intelligence and on-premise dat
 2. Practical Hardware and VRAM Sizing Guide
 3. Enforcing Strict Privacy Boundaries via Local MCP
 4. Common Pitfalls in Hybrid Local-Cloud Setups
-5. Step-by-Step Setup: Pairing Ollama with Claude in Fifteen Minutes
+5. Step-by-Step Setup: Pairing Ollama with Claude
 6. High-Value Hybrid Use Cases Across Industries
 7. Benchmarking Local Models Against Your Real Workloads
-8. Authoritative References
+8. Anthropic Messages API Compatibility in Ollama, vLLM, and LiteLLM Gateways
+9. Local Serving Stack and Hybrid Routing Comparison
+10. Practical Questions on Hybrid Claude and Local LLM Governance
+11. Authoritative References
 
 ---
 

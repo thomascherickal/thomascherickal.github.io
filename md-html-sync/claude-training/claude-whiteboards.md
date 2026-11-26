@@ -14,11 +14,13 @@ Great ideas often die in the gap between a lively whiteboard meeting and Monday 
 2. Connecting Whiteboards to Project Plans, Code, and External Tools
 3. Collaboration Guidelines for Enterprises and Startups
 4. Keeping Collaborative Whiteboards Clear and Actionable
-5. Step-by-Step: Turning a 45-Minute Kickoff into an Automated Roadmap
+5. Step-by-Step: Turning a Planning Kickoff into an Automated Execution Plan
 6. Keeping Visual Whiteboards Alive Throughout Delivery
 7. Making Visual Whiteboards a Repeatable Team Habit
-8. Frequently Asked Questions on Claude Whiteboards
-9. Authoritative References
+8. Live Canvas Collaboration: Excalidraw, Figma, Miro, and MCP App Whiteboards
+9. Choosing the Right Whiteboard Mode: Native Canvas, Diagram-as-Code, and MCP Boards
+10. Frequently Asked Questions on Claude Whiteboards
+11. Authoritative References
 
 ---
 

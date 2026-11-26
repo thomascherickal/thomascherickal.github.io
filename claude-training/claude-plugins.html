@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Claude Plugins Architecture & Production Ecosystems | Thomas Cherickal</title>
-<meta content="Thomas Cherickal - Generative AI Consultant and The Digital Futurist. Package skills, MCP servers, slash commands, rules, and hooks into versioned, distributable Claude plugins with clean manifests, namespacing, and security reviews." name="description"/>
+<title>Claude Plugins: Unified Skills, Connectors & Production Ecosystems | Thomas Cherickal</title>
+<meta content="Thomas Cherickal - Generative AI Consultant and The Digital Futurist. How Claude unified Skills and Connectors into a single Plugins Hub and marketplace, plus manifest architecture, permission decoupling, Skills over MCP, and security review." name="description"/>
 <meta content="Thomas Cherickal" name="author"/>
 <link href="https://thedigitalfuturist.com/claude-training/claude-plugins.html" rel="canonical"/>
 <!-- Open Graph -->
@@ -248,12 +248,12 @@
           <li><a href="../claude-training/claude-101.html">Claude 101</a></li>
           <li><a href="../claude-training/claude-projects.html">Claude Projects</a></li>
           <li><a href="../claude-training/claude-code.html">Claude Code</a></li>
+          <li><a href="../claude-training/claude-code-mode.html">Claude Code Mode</a></li>
           <li><a href="../claude-training/claude-desktop.html">Claude Desktop</a></li>
           <li><a href="../claude-training/claude-office.html">Claude Office</a></li>
-          <li><a href="../claude-training/claude-skills.html">Claude Skills</a></li>
           <li><a href="../claude-training/claude-mcp.html">Claude MCP</a></li>
           <li><a href="../claude-training/claude-plugins.html">Claude Plugins</a></li>
-          <li><a href="../claude-training/claude-connectors.html">Claude Connectors</a></li>
+          <li><a href="../claude-training/claude-apps.html">Claude Apps</a></li>
           <li><a href="../claude-training/claude-orchestration.html">Claude Orchestration</a></li>
           <li><a href="../claude-training/claude-design.html">Claude Design</a></li>
           <li><a href="../claude-training/claude-science.html">Claude for Science</a></li>
@@ -305,22 +305,24 @@
     </ul>
   </nav>
   <!-- END:HEADER -->
+  <a aria-label="Back to top" class="back-top" href="#top" id="backTop" title="Back to top">↑</a>
 
-<main id="main">
+<main class="container single-column-article" id="main">
 <header class="hero content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
-<div class="hero-badge content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">CLAUDE PLUGINS</div>
-<h1>Claude Plugins Architecture & Production Ecosystems</h1>
-<div class="title-tags" aria-label="Article topics"><span class="title-tag">Claude Plugins</span><span class="title-tag">Plugin Manifest</span><span class="title-tag">Namespacing</span><span class="title-tag">Team Distribution</span><span class="title-tag">Security Review</span></div>
-<p class="hero-desc">Package skills, MCP servers, slash commands, rules, and hooks into versioned, distributable Claude plugins. Learn manifest structure, namespacing conventions, team distribution, and security review practices for scaling reusable AI capabilities across organizations.</p>
+<div class="hero-badge content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">CLAUDE PLUGINS (SKILLS + CONNECTORS)</div>
+<h1>Claude Plugins: Unified Skills, Connectors & Production Ecosystems</h1>
+<div class="title-tags" aria-label="Article topics"><span class="title-tag">Claude Plugins</span><span class="title-tag">Claude Skills</span><span class="title-tag">Claude Connectors</span><span class="title-tag">Skills Over MCP</span><span class="title-tag">Plugins Hub</span></div>
+<p class="hero-desc">Anthropic has unified Skills and Connectors into a single Claude Plugins experience and marketplace hub. Learn how Skills (knowledge), Connectors (authorized MCP access), and Plugins (versioned Git packaging) work together, including permission decoupling, manifest design, and enterprise governance.</p>
 <p class="hero-byline">By <strong>Thomas Cherickal</strong> - Generative AI Consultant &amp; The Digital Futurist</p>
 </header>
 
-<article class="article-body" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.25rem;">
+<article class="article-body">
 <div id="table-of-contents" aria-label="Table of contents" class="content-card toc-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
-<p class="article-p" style="font-size:1.02rem;color:#f1f5f9;">Copying loose prompt files, hook scripts, and MCP configs from one laptop to another works for a single developer, but it breaks down fast across a 20-person engineering team. Claude Plugins solve distribution by bundling skills, MCP servers, slash commands, rules, and lifecycle hooks into a single versioned package that installs, updates, and disables cleanly as one unit.</p>
+<p class="article-p" style="font-size:1.02rem;color:#f1f5f9;">In its latest ecosystem update, Anthropic merged what used to be separate Skills and Connectors workflows into one centralized <strong>Claude Plugins</strong> hub across web, desktop, and Claude Code. Instead of juggling disconnected prompt manuals and OAuth integrations, teams now install self-contained, versioned plugins that bundle reusable <code>SKILL.md</code> playbooks, scoped MCP connectors, slash commands, rules, and hooks as a single unit.</p>
 <div class="rule"></div>
 <h2 style="color:var(--gold);font-size:1.45rem;font-weight:700;margin-bottom:1.15rem;border-bottom:1px solid rgba(251,191,36,0.25);padding-bottom:0.5rem;">Table of Contents</h2>
 <ol class="toc-list">
+<li><a class="gold-link" href="#how-claude-combined-skills-and-connectors">How Claude Combined Skills and Connectors Into Plugins</a></li>
 <li><a class="gold-link" href="#anatomy-of-a-claude-plugin">Anatomy of a Versioned Claude Plugin</a></li>
 <li><a class="gold-link" href="#manifest-and-namespacing">Manifest Structure and Namespacing Conventions</a></li>
 <li><a class="gold-link" href="#team-distribution-and-security-review">Team Distribution and Security Review Practices</a></li>
@@ -328,10 +330,39 @@
 <li><a class="gold-link" href="#step-by-step-plugin-authoring">Step-by-Step: Packaging Your First Team Plugin</a></li>
 <li><a class="gold-link" href="#plugin-lifecycle-and-upgrades">Managing Plugin Upgrades, Rollbacks, and Deprecations</a></li>
 <li><a class="gold-link" href="#plugin-adoption-playbook">Building an Internal Plugin Ecosystem That Engineers Actually Use</a></li>
+<li><a class="gold-link" href="#skills-connectors-plugins-comparison">Comparing Skills, Connectors, and Unified Claude Plugins</a></li>
+<li><a class="gold-link" href="#claude-plugin-manifest-and-hub-governance">Directory Anatomy (<code>.claude-plugin/</code>), CLI Workflow, and Plugins Hub Governance</a></li>
 <li><a class="gold-link" href="#plugins-faq">Frequently Asked Questions on Claude Plugins</a></li>
 <li><a class="gold-link" href="#references">Authoritative References</a></li>
 </ol>
 </div>
+
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="how-claude-combined-skills-and-connectors">How Claude Combined Skills and Connectors Into Plugins</h2>
+<p class="article-p">Previously, extending Claude required managing two separate layers: uploading or authoring standalone Skills for domain instructions, and separately configuring Connectors to reach external APIs and SaaS platforms. Anthropic's unified Plugins update brings both layers under one roof while keeping their engineering responsibilities clearly separated:</p>
+<ul class="article-p" style="list-style-type:disc;padding-left:1.5rem;display:flex;flex-direction:column;gap:0.55rem;">
+<li><strong>Skills (The Knowledge):</strong> Structured <code>SKILL.md</code> manuals, SOPs, brand guidelines, helper scripts, and reference templates that teach Claude how to execute a workflow accurately.</li>
+<li><strong>Connectors (The Access):</strong> Authorized bridges built on the <a class="gold-link" href="#references">Model Context Protocol (MCP)</a> that grant Claude scoped access to external tools, databases, and enterprise APIs.</li>
+<li><strong>Plugins (The Packaging):</strong> Self-contained, Git-hosted packages that bundle Skills, Connectors, named slash commands, sub-agents, and lifecycle hooks into one installable unit.</li>
+<li><strong>Consolidated Plugins Hub:</strong> The former "Customize" sidebar is now the unified <strong>Plugins</strong> hub, launching with a marketplace of over 10,000 Verified and Community plugins searchable by department, industry, and task.</li>
+<li><strong>Permission Decoupling:</strong> Uninstalling a plugin does not automatically revoke its underlying OAuth or token data connection. Data connections remain managed separately so teams avoid accidental workflow breakage and can audit credentials independently.</li>
+<li><strong>Skills Over MCP (Public Beta):</strong> Remote MCP servers can dynamically ship on-demand <code>SKILL.md</code> playbooks alongside raw tool schemas, giving Claude both the API bridge and the exact operating manual in one handshake.</li>
+</ul>
+<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.5rem;margin:1.75rem 0;"><div class="mermaid">
+flowchart TD
+    SK["Claude Skills
+(SKILL.md Playbooks & Scripts)"] --> PL["Unified Claude Plugin
+(Versioned Git Package)"]
+    CN["Claude Connectors
+(Authorized MCP Tool Bridges)"] --> PL
+    HK["Commands, Rules & Hooks
+(Guardrails & Automation)"] --> PL
+    PL --> HUB["Centralized Plugins Hub
+(10,000+ Verified & Community)"]
+    HUB --> RUN["Claude Web, Desktop & Claude Code
+(Decoupled OAuth Permissions)"]
+</div></div>
+</section>
 
 <section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <h2 id="anatomy-of-a-claude-plugin">Anatomy of a Versioned Claude Plugin</h2>
@@ -344,7 +375,7 @@
 <li><strong>MCP Servers (<code>mcp/</code>):</strong> Scoped tool and data connectors declared with clear environment variable requirements.</li>
 <li><strong>Rules &amp; Hooks (<code>rules/</code>, <code>hooks/</code>):</strong> Always-on guardrails and deterministic pre/post-tool scripts.</li>
 </ul>
-<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.25rem;margin:1.5rem 0;"><div class="mermaid">
+<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.5rem;margin:1.75rem 0;"><div class="mermaid">
 flowchart TD
     M["plugin.json Manifest
 (Name, SemVer, Entry Points)"] --> S["skills/
@@ -422,7 +453,7 @@ def audit_plugin(plugin_dir: str) -&gt; list[str]:
 <h2 id="scaling-plugin-ecosystems">Scaling Reusable AI Capabilities Across Organizations</h2>
 
 <p class="article-p">As your plugin catalog grows, keep each plugin focused on one clear job rather than building a single giant "company-everything" bundle. Small, domain-focused plugins let engineers enable only what they need for their current project, keeping Claude's context window clean and tool selection sharp.</p>
-<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.25rem;margin:1.5rem 0;"><div class="mermaid">
+<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.5rem;margin:1.75rem 0;"><div class="mermaid">
 graph TD
     A["Author Plugin in Feature Branch"] --> R["Peer Code & Security Review"]
     R --> T["Tag SemVer Release (v1.2.0)"]
@@ -474,20 +505,113 @@ graph TD
 
 
 <section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="skills-connectors-plugins-comparison">Comparing Skills, Connectors, and Unified Claude Plugins</h2>
+<p class="article-p">Inside the unified <a class="gold-link" href="#references">Claude Plugins Hub</a> and Claude Code CLI, Skills, Connectors, and Plugins play distinct, complementary roles often summarized as <strong>Teach</strong>, <strong>Reach</strong>, and <strong>Ship</strong>. Use this comparison matrix to decide which layer solves your current requirement cleanly:</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.9rem;color:#e2e8f0;">
+<thead>
+<tr style="border-bottom:2px solid rgba(251,191,36,0.45);text-align:left;color:var(--gold);">
+<th style="padding:0.75rem;">Dimension</th>
+<th style="padding:0.75rem;">Claude Skills ("Teach")</th>
+<th style="padding:0.75rem;">Claude Connectors ("Reach")</th>
+<th style="padding:0.75rem;">Claude Plugins ("Ship")</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Core Responsibility</td>
+<td style="padding:0.75rem;">Domain SOPs, review checklists, style guides, helper scripts</td>
+<td style="padding:0.75rem;">Authorized read/write bridges to external APIs, databases, and SaaS</td>
+<td style="padding:0.75rem;">Versioned package bundling Skills, Connectors, subagents, commands, and hooks</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Primary Artifact</td>
+<td style="padding:0.75rem;"><code>skills/&lt;slug&gt;/SKILL.md</code> with YAML frontmatter and references</td>
+<td style="padding:0.75rem;"><code>.mcp.json</code> or remote Streamable HTTP <a class="gold-link" href="claude-mcp.html">MCP server</a></td>
+<td style="padding:0.75rem;">Self-contained Git directory with <code>.claude-plugin/plugin.json</code></td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Auth &amp; Permission Boundary</td>
+<td style="padding:0.75rem;">Prompt instructions and local helper execution only</td>
+<td style="padding:0.75rem;">Explicit OAuth 2.1 user/admin consent or scoped runtime tokens</td>
+<td style="padding:0.75rem;">Decoupled lifecycle - uninstalling never silently revokes active OAuth connections</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Discovery &amp; Distribution</td>
+<td style="padding:0.75rem;">Local repo folder, Plugin bundle, or Skills Over MCP</td>
+<td style="padding:0.75rem;">Plugins Hub Connectors filter or Official MCP Registry</td>
+<td style="padding:0.75rem;">Official Plugins Hub (<code>claude-plugins-official</code>) or private Git marketplaces</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Best Fit</td>
+<td style="padding:0.75rem;">Single-user iteration or lightweight formatting workflows</td>
+<td style="padding:0.75rem;">Connecting live tools like GitHub, Jira, Slack, Google Drive, or SQL</td>
+<td style="padding:0.75rem;">One-command department onboarding with versioned governance and rollbacks</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="claude-plugin-manifest-and-hub-governance">Directory Anatomy (<code>.claude-plugin/</code>), CLI Workflow, and Plugins Hub Governance</h2>
+<p class="article-p">In Claude Code and cross-surface plugin repositories, metadata lives inside a dedicated <code>.claude-plugin/</code> directory at the package root. The <code>name</code> value declared in <code>.claude-plugin/plugin.json</code> automatically acts as a namespace prefix for installed skills and commands (for example, <code>acme-platform:audit-migration</code>), guaranteeing zero identifier collisions even when dozens of plugins are active simultaneously.</p>
+<div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid #38bdf8;border-radius:10px;margin:1.5rem 0;overflow:hidden;"><div style="background:#0b1220;padding:0.5rem 1rem;border-bottom:1px solid rgba(56,189,248,0.22);display:flex;justify-content:space-between;align-items:center;font-size:0.8rem;color:#94a3b8;"><span style="color:#fbbf24;font-weight:600;">Standard .claude-plugin Directory Anatomy &amp; Manifest</span><span>Text / JSON</span></div><pre style="background:#040711;margin:0;padding:1.1rem 1.25rem;overflow-x:auto;color:#e2e8f0;font-size:0.86rem;line-height:1.55;"><code>acme-platform-plugin/
+├── .claude-plugin/
+│   └── plugin.json          # Required package metadata &amp; namespace root
+├── .mcp.json                # Scoped MCP connector declarations
+├── skills/
+│   └── audit-migration/
+│       └── SKILL.md         # Invoked as acme-platform:audit-migration
+├── agents/
+│   └── schema-reviewer.md   # Scoped subagent definition
+├── hooks/
+│   └── hooks.json           # Deterministic pre/post-tool guardrails
+└── readme.md
+
+// .claude-plugin/plugin.json
+{
+  &quot;name&quot;: &quot;acme-platform&quot;,
+  &quot;version&quot;: &quot;1.4.0&quot;,
+  &quot;description&quot;: &quot;Database migration playbooks, read-only schema MCP connector, and reviewer subagent.&quot;,
+  &quot;author&quot;: &quot;Acme Platform Engineering&quot;
+}</code></pre></div>
+<div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid #38bdf8;border-radius:10px;margin:1.5rem 0;overflow:hidden;"><div style="background:#0b1220;padding:0.5rem 1rem;border-bottom:1px solid rgba(56,189,248,0.22);display:flex;justify-content:space-between;align-items:center;font-size:0.8rem;color:#94a3b8;"><span style="color:#fbbf24;font-weight:600;">Claude Code Marketplace &amp; Plugin Lifecycle Commands</span><span>Claude Code CLI</span></div><pre style="background:#040711;margin:0;padding:1.1rem 1.25rem;overflow-x:auto;color:#e2e8f0;font-size:0.86rem;line-height:1.55;"><code># Register a private team GitHub marketplace (.claude-plugin/marketplace.json)
+/plugin marketplace add acme-corp/internal-claude-marketplace
+
+# Install a versioned plugin from your internal catalog or official hub
+/plugin install acme-platform@internal-claude-marketplace
+
+# Hot-reload local manifest, skill, or hook edits during plugin authoring
+/reload-plugins</code></pre></div>
+<h3>Plugins Hub Trust Tiers: Verified vs Community Governance</h3>
+<p class="article-p">As the Plugins Hub scales past 10,000 listings across web, desktop, and Claude Code, enterprise administrators should enforce clear intake rules between marketplace trust tiers:</p>
+<ul class="article-p" style="list-style-type:disc;padding-left:1.5rem;display:flex;flex-direction:column;gap:0.55rem;">
+<li><strong>Anthropic Verified Plugins:</strong> Official first-party packs and vetted partner integrations (such as GitHub, Atlassian, Vercel, and core SaaS connectors) that undergo direct publisher verification and security review before receiving the Verified badge.</li>
+<li><strong>Community Plugins:</strong> Open-source and third-party submissions screened through automated manifest and safety validation. Regulated teams should mirror approved Community plugins into a private internal marketplace pinned to audited Git commit SHAs rather than allowing unrestricted self-installation.</li>
+<li><strong>Explicit Connector Consent &amp; Decoupled Uninstallation:</strong> Installing a plugin that bundles an MCP connector never silently authorizes live SaaS access - every connector requires explicit user or administrator OAuth approval, and removing a plugin keeps underlying data connections independently auditable so teams never accidentally sever shared integrations.</li>
+</ul>
+</section>
+
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <h2 id="plugins-faq">Frequently Asked Questions on Claude Plugins</h2>
 <p class="article-p"><strong>When should we bundle a skill into a plugin instead of leaving it loose?</strong> Leave a workflow as a single local skill while you are still experimenting. Once two or more teammates rely on it weekly - or once it combines a skill with an MCP server and hooks - package it into a versioned plugin with a clean manifest.</p>
 <p class="article-p"><strong>How do we prevent plugin sprawl across departments?</strong> Maintain one lightweight internal catalog with clear owner names, last-reviewed dates, and read-only versus write badges. Review installed plugins each quarter and archive anything that no longer sees active use so developer workspaces stay fast and uncluttered.</p>
-
 <p class="article-p"><strong>How should teams handle secrets inside a shared plugin?</strong> Never commit API keys, database passwords, or private tokens into any plugin repository. Declare required environment variable names in the plugin README and let each developer or CI runner inject scoped credentials locally at runtime.</p>
+<p class="article-p"><strong>What is the difference between Verified and Community plugins in the Plugins Hub?</strong> Anthropic Verified plugins are first-party or official partner integrations that pass direct publisher and security verification; Community plugins pass automated checks and should still be reviewed, pinned to specific versions, and allowlisted by your security team before enterprise rollout.</p>
+<p class="article-p"><strong>If a user uninstalls a plugin, does Claude automatically revoke its underlying OAuth connector?</strong> No. Because Claude enforces permission decoupling between packaging and data access, uninstalling a plugin removes its bundled skills, commands, and hooks while keeping OAuth connections separately managed and auditable in your Connections settings.</p>
 </section>
 
 <section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <h2 id="references">Authoritative References</h2>
 <ol class="references-list" style="display:flex;flex-direction:column;gap:0.75rem;padding-left:1.25rem;">
-<li><a class="gold-link" href="https://docs.anthropic.com/en/docs/claude-code/overview" rel="noopener noreferrer" target="_blank">Claude Code Plugins &amp; Extensions</a> - Official documentation on extending Claude Code with packaged capabilities.</li>
+<li><a class="gold-link" href="https://claude.ai/plugins" rel="noopener noreferrer" target="_blank">Claude Plugins Hub</a> - Centralized directory for discovering Verified and Community plugins, skills, and MCP connectors.</li>
+<li><a class="gold-link" href="https://docs.anthropic.com/en/docs/claude-code/overview" rel="noopener noreferrer" target="_blank">Claude Code Plugins &amp; Extensions</a> - Official documentation on extending Claude Code with <code>.claude-plugin/plugin.json</code> packages and custom marketplaces.</li>
 <li><a class="gold-link" href="https://semver.org/" rel="noopener noreferrer" target="_blank">Semantic Versioning 2.0.0</a> - Standard versioning rules for predictable plugin upgrades and compatibility.</li>
-<li><a class="gold-link" href="https://modelcontextprotocol.io/" rel="noopener noreferrer" target="_blank">Model Context Protocol (MCP)</a> - Standard server specification bundled inside production Claude plugins.</li>
+<li><a class="gold-link" href="https://modelcontextprotocol.io/" rel="noopener noreferrer" target="_blank">Model Context Protocol (MCP)</a> - Standard server specification and Skills Over MCP extension bundled inside production Claude plugins.</li>
 <li><a class="gold-link" href="https://csrc.nist.gov/projects/ssdf" rel="noopener noreferrer" target="_blank">NIST Secure Software Development Framework</a> - Security review practices for internal developer tooling and extensions.</li>
+<li><a class="gold-link" href="claude-mcp.html">Claude MCP: Model Context Protocol &amp; Custom Tool Servers</a> - Deep dive into Streamable HTTP, OAuth 2.1, and custom tool servers that power plugin connectors.</li>
+<li><a class="gold-link" href="claude-apps.html">Claude Apps: Interactive MCP Apps &amp; Workspace UI</a> - Shipping interactive <code>ui://</code> views inside packaged Claude plugins.</li>
 </ol>
 </section>
 </article>

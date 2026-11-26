@@ -16,7 +16,10 @@ Browser tabs get buried, sessions expire, and copying files into a web upload bo
 4. Practical Desktop Automation Playbooks
 5. Workstation Security, Sandboxing, and Failure Modes
 6. Step-by-Step Desktop Workflows for Founders and Operations Teams
-7. Authoritative References
+7. Cowork, MCP Bundles (.mcpb), Local Connectors, and Install as App
+8. Comparing Claude Desktop Extension and Execution Surfaces
+9. Practical Questions on Claude Desktop Extensions and Governance
+10. Authoritative References
 
 ---
 

@@ -248,12 +248,12 @@
           <li><a href="../claude-training/claude-101.html">Claude 101</a></li>
           <li><a href="../claude-training/claude-projects.html">Claude Projects</a></li>
           <li><a href="../claude-training/claude-code.html">Claude Code</a></li>
+          <li><a href="../claude-training/claude-code-mode.html">Claude Code Mode</a></li>
           <li><a href="../claude-training/claude-desktop.html">Claude Desktop</a></li>
           <li><a href="../claude-training/claude-office.html">Claude Office</a></li>
-          <li><a href="../claude-training/claude-skills.html">Claude Skills</a></li>
           <li><a href="../claude-training/claude-mcp.html">Claude MCP</a></li>
           <li><a href="../claude-training/claude-plugins.html">Claude Plugins</a></li>
-          <li><a href="../claude-training/claude-connectors.html">Claude Connectors</a></li>
+          <li><a href="../claude-training/claude-apps.html">Claude Apps</a></li>
           <li><a href="../claude-training/claude-orchestration.html">Claude Orchestration</a></li>
           <li><a href="../claude-training/claude-design.html">Claude Design</a></li>
           <li><a href="../claude-training/claude-science.html">Claude for Science</a></li>
@@ -305,8 +305,9 @@
     </ul>
   </nav>
   <!-- END:HEADER -->
+  <a aria-label="Back to top" class="back-top" href="#top" id="backTop" title="Back to top">↑</a>
 
-<main id="main">
+<main class="container single-column-article" id="main">
 <header class="hero content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <div class="hero-badge content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">SCIENTIFIC DISCOVERY</div>
 <h1>Claude for Scientific Discovery & Quantitative Research</h1>
@@ -315,7 +316,7 @@
 <p class="hero-byline">By <strong>Thomas Cherickal</strong> - Generative AI Consultant &amp; The Digital Futurist</p>
 </header>
 
-<article class="article-body" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.25rem;">
+<article class="article-body">
 <div id="table-of-contents" aria-label="Table of contents" class="content-card toc-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <p class="article-p" style="font-size:1.02rem;color:#f1f5f9;">Scientific research demands two things that rarely come together easily: rapid exploration across massive literature and uncompromising precision in numbers, methods, and citations. Used casually, any language model can invent a plausible-sounding reference or misstate a p-value. Used with disciplined verification workflows, Claude becomes an extraordinary research partner for literature synthesis, statistical code, bioinformatics pipelines, and clean LaTeX manuscripts.</p>
 <div class="rule"></div>
@@ -329,6 +330,8 @@
 <li><a class="gold-link" href="#peer-review-and-reproducibility">Preparing Reproducible Code and Reviewer-Response Packages</a></li>
 <li><a class="gold-link" href="#research-integrity-and-collaboration">Lab Collaboration, Data Integrity, and Ethical Research Guardrails</a></li>
 <li><a class="gold-link" href="#science-faq">Frequently Asked Questions on Scientific Workflows with Claude</a></li>
+<li><a class="gold-link" href="#claude-science-workbench-and-connectors">Claude for Life Sciences, Claude Science Workbench, and Native Connectors</a></li>
+<li><a class="gold-link" href="#scientific-connectors-specification">Scientific Ecosystem Connectors and Verification Matrix</a></li>
 <li><a class="gold-link" href="#references">Authoritative References</a></li>
 </ol>
 </div>
@@ -338,7 +341,7 @@
 
 <p class="article-p">Never ask a language model to recall citations from memory. Instead, supply the primary papers directly - PDFs, PubMed abstracts, or arXiv preprints - inside a structured research workspace. Ask Claude to build an evidence matrix comparing sample sizes, experimental controls, effect sizes, and stated limitations across every uploaded paper.</p>
 <p class="article-p">Once the evidence matrix is verified against the source PDFs, use Claude as a rigorous sparring partner for hypothesis formulation: ask it to propose three testable hypotheses that explain contradictions across the studies, identify potential confounding variables, and suggest the smallest control experiment that would falsify each hypothesis.</p>
-<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.25rem;margin:1.5rem 0;"><div class="mermaid">
+<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.5rem;margin:1.75rem 0;"><div class="mermaid">
 flowchart TD
     P["Primary Papers & Raw Experimental Data
 (PDFs, CSVs, FASTQ Metadata)"] --> S["Grounded Literature Matrix
@@ -415,7 +418,7 @@ print(f&quot;Verified {len(cited_keys)} citation keys against references.bib.&qu
 <h2 id="scientific-failure-modes">Avoiding Common Failure Modes in AI-Assisted Research</h2>
 
 <p class="article-p">Never let an AI assistant silently drop outlier rows, choose a statistical test after peeking at p-values, or paraphrase a numeric result without linking back to the script that produced it. Log every analysis script, package version, and dataset checksum alongside your manuscript so any reviewer can reproduce your exact tables and figures from scratch.</p>
-<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.25rem;margin:1.5rem 0;"><div class="mermaid">
+<div class="diagram-container content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);padding:1.5rem;margin:1.75rem 0;"><div class="mermaid">
 graph TD
     B["Verified references.bib
 (Exported from Zotero / Crossref)"] --> D["Draft LaTeX with Claude
@@ -476,12 +479,95 @@ graph TD
 </section>
 
 <section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="claude-science-workbench-and-connectors">Claude for Life Sciences, Claude Science Workbench, and Native Connectors</h2>
+<p class="article-p">Building on Anthropic's rollout of <strong>Claude for Life Sciences</strong>, the dedicated <strong>Claude Science</strong> research workbench brings literature discovery, wet-lab data lineage, bioinformatics execution, and auditable manuscript drafting into one cohesive workspace running locally or on high-performance computing (HPC) clusters.</p>
+<h3>Direct Scientific Infrastructure Connectors via MCP</h3>
+<p class="article-p">Instead of copying spreadsheets and PDF snippets manually across browser tabs, researchers connect Claude directly to authoritative scientific systems through native connectors and <a class="gold-link" href="claude-mcp.html">Model Context Protocol (MCP)</a> servers:</p>
+<ul class="article-p" style="list-style-type:disc;padding-left:1.5rem;display:flex;flex-direction:column;gap:0.55rem;">
+<li><strong>Benchling Integration:</strong> Query electronic lab notebooks, structured assay results, and molecular registries in plain English while preserving full experimental data lineage and writing structured summaries back to <a class="gold-link" href="#references">Benchling</a> with explicit approval.</li>
+<li><strong>PubMed and Scholar Gateways:</strong> Retrieve peer-reviewed biomedical literature from <a class="gold-link" href="#references">PubMed</a> and Wiley's Scholar Gateway alongside preprint archives such as bioRxiv and medRxiv, grounding every synthesis step in verifiable PMIDs and DOIs.</li>
+<li><strong>BioRender Visual Asset Search:</strong> Search <a class="gold-link" href="#references">BioRender</a>'s library of over 50,000 vetted scientific icons and pathway templates using natural language to assemble accurate graphical abstracts, mechanism figures, and grant visuals.</li>
+<li><strong>Genomics, Clinical, and Cheminformatics Connectors:</strong> Pair 10x Genomics Cloud, ClinicalTrials.gov, ChEMBL, and Open Targets data streams with pre-packaged bioinformatics <strong>Agent Skills</strong> (including single-cell RNA-seq quality control via <code>scVI-tools</code>, proteomics, and structural biology pipelines).</li>
+</ul>
+<h3>Auditable Artifacts and End-to-End Traceability</h3>
+<p class="article-p">Every table, hypothesis matrix, and statistical plot generated inside the Claude Science workbench links back to the exact raw file checksum, execution script, and primary literature citation. This audit trail transforms AI assistance from an opaque black box into a peer-reviewable research artifact ready for institutional compliance checks.</p>
+<div class="code-window" style="background:#040711;border:1px solid rgba(56,189,248,0.32);border-left:3px solid #38bdf8;border-radius:10px;margin:1.5rem 0;overflow:hidden;"><div style="background:#0b1220;padding:0.5rem 1rem;border-bottom:1px solid rgba(56,189,248,0.22);display:flex;justify-content:space-between;align-items:center;font-size:0.8rem;color:#94a3b8;"><span style="color:#fbbf24;font-weight:600;">Claude Science Reproducible Connector &amp; Audit Manifest</span><span>YAML</span></div><pre style="background:#040711;margin:0;padding:1.1rem 1.25rem;overflow-x:auto;color:#e2e8f0;font-size:0.86rem;line-height:1.55;"><code>research_workspace:
+  study_id: &quot;RNASeq-2026-041&quot;
+  execution_env: &quot;conda://envs/bioinfo-scvi-lock.yml&quot;
+  connectors:
+    - name: &quot;benchling&quot;
+      mode: &quot;read_with_write_approval&quot;
+      lineage_tracking: true
+    - name: &quot;pubmed_scholar_gateway&quot;
+      require_doi_or_pmid: true
+    - name: &quot;biorender&quot;
+      scope: &quot;vetted_icons_and_templates&quot;
+  verification_gates:
+    bib_allowlist: &quot;references.bib&quot;
+    fail_on_unverified_citation: true
+    record_dataset_sha256: true</code></pre></div>
+</section>
+
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
+<h2 id="scientific-connectors-specification">Scientific Ecosystem Connectors and Verification Matrix</h2>
+<p class="article-p">Map each stage of a quantitative or life-sciences project to its corresponding connector, verification mechanism, and governance guardrail:</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.9rem;color:#e2e8f0;">
+<thead>
+<tr style="border-bottom:2px solid rgba(251,191,36,0.45);text-align:left;color:var(--gold);">
+<th style="padding:0.75rem;">Scientific Connector</th>
+<th style="padding:0.75rem;">Primary Research Role</th>
+<th style="padding:0.75rem;">Verification &amp; Lineage</th>
+<th style="padding:0.75rem;">Mandatory Guardrail</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">Benchling</td>
+<td style="padding:0.75rem;">Electronic lab notebooks, assay queries, molecular entity records</td>
+<td style="padding:0.75rem;">Direct links to source notebook entries and assay IDs</td>
+<td style="padding:0.75rem;">Require human review before writing insights back to ELN</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">PubMed &amp; Scholar Gateway</td>
+<td style="padding:0.75rem;">Peer-reviewed literature retrieval and structured evidence matrices</td>
+<td style="padding:0.75rem;">PMID / DOI resolution against live Crossref and PubMed APIs</td>
+<td style="padding:0.75rem;">Restrict LaTeX citations strictly to verified <code>references.bib</code> keys</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">BioRender</td>
+<td style="padding:0.75rem;">Mechanism schematics, graphical abstracts, and grant figures</td>
+<td style="padding:0.75rem;">Sourced from 50,000+ peer-vetted scientific icon assets</td>
+<td style="padding:0.75rem;">Verify biological scale, pathway direction, and publication licensing</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">10x Genomics &amp; Bioinformatics Skills</td>
+<td style="padding:0.75rem;">Single-cell RNA-seq QC (<code>scVI-tools</code>), Snakemake, and Nextflow runs</td>
+<td style="padding:0.75rem;">Pinned lockfiles, fixed RNG seeds, and dataset SHA-256 checksums</td>
+<td style="padding:0.75rem;">Run all statistical calculations in scripted code, never prose math</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(148,163,184,0.2);">
+<td style="padding:0.75rem;font-weight:600;color:#f8fafc;">ChEMBL, Open Targets &amp; ClinicalTrials.gov</td>
+<td style="padding:0.75rem;">Target-disease association, bioactivity lookup, and trial landscape analysis</td>
+<td style="padding:0.75rem;">NCT identifiers, ChEMBL compound IDs, and timestamped API snapshots</td>
+<td style="padding:0.75rem;">Archive raw query snapshots alongside manuscript supplementary data</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section class="content-card" style="background:#000000;border:1.5px solid rgba(251, 191, 36, 0.45);">
 <h2 id="references">Authoritative References</h2>
 <ol class="references-list" style="display:flex;flex-direction:column;gap:0.75rem;padding-left:1.25rem;">
 <li><a class="gold-link" href="https://www.anthropic.com/research" rel="noopener noreferrer" target="_blank">Anthropic Claude for Science &amp; Research</a> - Anthropic's research initiatives and evaluation benchmarks for quantitative and scientific reasoning.</li>
+<li><a class="gold-link" href="https://pubmed.ncbi.nlm.nih.gov/" rel="noopener noreferrer" target="_blank">PubMed (National Library of Medicine)</a> - Authoritative biomedical literature database with verifiable PMIDs and citation metadata.</li>
+<li><a class="gold-link" href="https://www.benchling.com/" rel="noopener noreferrer" target="_blank">Benchling R&amp;D Cloud</a> - Electronic lab notebook and assay data platform integrated with Claude for Life Sciences workflows.</li>
+<li><a class="gold-link" href="https://www.biorender.com/" rel="noopener noreferrer" target="_blank">BioRender Scientific Illustration Library</a> - Peer-vetted biological icons and templates for scientific mechanisms and grant figures.</li>
 <li><a class="gold-link" href="https://docs.scipy.org/doc/scipy/reference/stats.html" rel="noopener noreferrer" target="_blank">SciPy Statistical Functions Documentation</a> - Authoritative Python library for reproducible hypothesis testing and statistical modeling.</li>
 <li><a class="gold-link" href="https://biopython.org/" rel="noopener noreferrer" target="_blank">Biopython Official Documentation</a> - Open-source Python tools for biological computation and sequence analysis.</li>
 <li><a class="gold-link" href="https://www.crossref.org/documentation/retrieve-metadata/rest-api/" rel="noopener noreferrer" target="_blank">Crossref REST API</a> - Official metadata service for programmatically verifying DOIs and scholarly citations.</li>
+<li><a class="gold-link" href="https://modelcontextprotocol.io/" rel="noopener noreferrer" target="_blank">Model Context Protocol (MCP)</a> - Open standard powering auditable connectors between Claude and scientific data platforms.</li>
 </ol>
 </section>
 </article>

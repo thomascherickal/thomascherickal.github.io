@@ -237,12 +237,12 @@
           <li><a href="../claude-training/claude-101.html">Claude 101</a></li>
           <li><a href="../claude-training/claude-projects.html">Claude Projects</a></li>
           <li><a href="../claude-training/claude-code.html">Claude Code</a></li>
+          <li><a href="../claude-training/claude-code-mode.html">Claude Code Mode</a></li>
           <li><a href="../claude-training/claude-desktop.html">Claude Desktop</a></li>
           <li><a href="../claude-training/claude-office.html">Claude Office</a></li>
-          <li><a href="../claude-training/claude-skills.html">Claude Skills</a></li>
           <li><a href="../claude-training/claude-mcp.html">Claude MCP</a></li>
           <li><a href="../claude-training/claude-plugins.html">Claude Plugins</a></li>
-          <li><a href="../claude-training/claude-connectors.html">Claude Connectors</a></li>
+          <li><a href="../claude-training/claude-apps.html">Claude Apps</a></li>
           <li><a href="../claude-training/claude-orchestration.html">Claude Orchestration</a></li>
           <li><a href="../claude-training/claude-design.html">Claude Design</a></li>
           <li><a href="../claude-training/claude-science.html">Claude for Science</a></li>
@@ -294,7 +294,7 @@
     </ul>
   </nav>
   <!-- END:HEADER -->
-<a aria-label="Back to top" class="back-top" href=\"#top\" id="backTop" title="Back to top">↑</a>
+<a aria-label="Back to top" class="back-top" href="#top" id="backTop" title="Back to top">↑</a>
 <main id="main">
 <div class="doc-container" style="max-width:980px;margin:0 auto;padding:2.75rem 1.25rem 3rem;">
 
@@ -315,7 +315,6 @@
   <section id="table-of-contents" class="content-card" style="background:#000000;border:1.5px solid rgba(251,191,36,0.45);border-radius:14px;padding:1.75rem 2rem;margin-bottom:2rem;">
     <h2 style="color:#fbbf24;margin-bottom:0.9rem;font-size:1.35rem;">Table of Contents</h2>
     <ol style="list-style:none;padding-left:0;margin:0;line-height:1.7;">
-      <li style="margin-bottom:0.45rem;"><a class="gold-link" href="#beyond-stateless-chatbots">1. Moving Beyond Stateless Chatbots to Persistent Assistants</a></li><li style="margin-bottom:0.45rem;"><a class="gold-link" href="#memory-and-skill-compounding">2. Persistent Vector Memory and Self-Improving Skills</a></li><li style="margin-bottom:0.45rem;"><a class="gold-link" href="#tool-orchestration-and-sandboxes">3. Structured Tool Orchestration and Isolated Sandboxes</a></li><li style="margin-bottom:0.45rem;"><a class="gold-link" href="#enterprise-rollout-and-governance">4. Department Rollout, Governance, and Failure Prevention</a></li><li style="margin-bottom:0.45rem;"><a class="gold-link" href="#practical-deployment-walkthrough">5. Step-by-Step Department Deployment Walkthrough and Edge Cases</a></li><li style="margin-bottom:0.45rem;"><a class="gold-link" href="#references">6. References and Further Reading</a></li>
     </ol>
   </section>
 
@@ -411,14 +410,7 @@ graph TD
 
 </section>
 
-  <section id="practical-deployment-walkthrough" class="content-card" style="background:#000000;border:1.5px solid rgba(251,191,36,0.45);border-radius:14px;padding:2rem;margin-bottom:2rem;">
-<h2 style="color:#fbbf24;margin-bottom:1rem;">Step-by-Step Department Deployment Walkthrough and Edge Cases</h2>
-
-<p style="color:#e2e8f0;line-height:1.78;margin-bottom:1rem;">Deploying an enterprise agentic assistant succeeds when teams follow a concrete four-week rollout rather than opening an unconfigured tool to the entire company on day one. In Week One, pick one pilot department - such as product operations or customer engineering - and map the five recurring tasks that eat up the most calendar time: summarizing morning support queues, drafting weekly status updates, checking pull-request release notes, preparing customer call briefs, and filing structured bug tickets. Document the exact inputs, required tools, and definition of done for each task in plain Markdown.</p>
-<p style="color:#e2e8f0;line-height:1.78;margin-bottom:1rem;">In Week Two, stand up the assistant runtime (whether Hermes Agent, OpenClaw, n8n Nod, or OpenBot) connected to your local Ollama or vLLM server and a scoped vector store. Run every pilot skill in draft-only mode so the assistant posts its proposed work into a private review channel instead of messaging customers or mutating Jira directly. Track two simple numbers: how often staff accept the draft with minor edits, and what percentage of calls were handled by the local LLM versus escalated to a cloud model.</p>
-<p style="color:#e2e8f0;line-height:1.78;margin-bottom:1rem;">In Week Three and Week Four, tighten edge-case handling. Teams learn to catch memory drift (when an assistant remembers an outdated pricing rule from a month ago), prompt injection hidden inside inbound emails, and silent tool timeouts when an external SaaS API rate-limits requests. By tagging every memory record with an expiration date and enforcing strict tool timeouts with clear fallback messages, your assistant becomes a dependable daily teammate that compounds productivity across every department.</p>
-
-</section>
+  
 
   <section id="references" class="content-card" style="background:#000000;border:1.5px solid rgba(251,191,36,0.45);border-radius:14px;padding:2rem;margin-bottom:2rem;">
     <h2 style="color:#fbbf24;margin-bottom:1rem;">References and Further Reading</h2>

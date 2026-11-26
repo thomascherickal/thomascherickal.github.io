@@ -221,12 +221,12 @@
           <li><a href="../claude-training/claude-101.html">Claude 101</a></li>
           <li><a href="../claude-training/claude-projects.html">Claude Projects</a></li>
           <li><a href="../claude-training/claude-code.html">Claude Code</a></li>
+          <li><a href="../claude-training/claude-code-mode.html">Claude Code Mode</a></li>
           <li><a href="../claude-training/claude-desktop.html">Claude Desktop</a></li>
           <li><a href="../claude-training/claude-office.html">Claude Office</a></li>
-          <li><a href="../claude-training/claude-skills.html">Claude Skills</a></li>
           <li><a href="../claude-training/claude-mcp.html">Claude MCP</a></li>
           <li><a href="../claude-training/claude-plugins.html">Claude Plugins</a></li>
-          <li><a href="../claude-training/claude-connectors.html">Claude Connectors</a></li>
+          <li><a href="../claude-training/claude-apps.html">Claude Apps</a></li>
           <li><a href="../claude-training/claude-orchestration.html">Claude Orchestration</a></li>
           <li><a href="../claude-training/claude-design.html">Claude Design</a></li>
           <li><a href="../claude-training/claude-science.html">Claude for Science</a></li>
@@ -278,7 +278,7 @@
     </ul>
   </nav>
   <!-- END:HEADER -->
-<a aria-label="Back to top" class="back-top" href=\"#top\" id="backTop" title="Back to top">↑</a>
+<a aria-label="Back to top" class="back-top" href="#top" id="backTop" title="Back to top">↑</a>
 <main id="main">
 <div class="doc-container" style="max-width:980px;margin:0 auto;padding:2.75rem 1.25rem 3rem;">
 
@@ -299,7 +299,6 @@
   <section id="table-of-contents" class="content-card" style="background:#000000;border:1.5px solid rgba(251,191,36,0.45);border-radius:14px;padding:1.75rem 2rem;margin-bottom:2rem;">
     <h2 style="color:#fbbf24;margin-bottom:0.9rem;font-size:1.35rem;">Table of Contents</h2>
     <ol style="list-style:none;padding-left:0;margin:0;line-height:1.7;">
-      <li style="margin-bottom:0.45rem;"><a class="gold-link" href="#why-manual-ci-breaks">1. Why Manual Competitor Tracking Fails Fast-Moving Teams</a></li><li style="margin-bottom:0.45rem;"><a class="gold-link" href="#structured-signal-extraction">2. Ingesting Public Signals and Extracting Structured Strategic Diffs</a></li><li style="margin-bottom:0.45rem;"><a class="gold-link" href="#weekly-executive-battlecards">3. Delivering Grounded Weekly Executive Battlecards</a></li><li style="margin-bottom:0.45rem;"><a class="gold-link" href="#rollout-and-deliverables">4. Avoiding Alert Fatigue and Shipping Your Intelligence System</a></li><li style="margin-bottom:0.45rem;"><a class="gold-link" href="#implementation-walkthrough-and-governance">5. Step-by-Step Implementation Playbook and Legal/Quality Guardrails</a></li><li style="margin-bottom:0.45rem;"><a class="gold-link" href="#references">6. References and Further Reading</a></li>
     </ol>
   </section>
 
@@ -405,15 +404,7 @@ graph TD
 
 </section>
 
-  <section id="implementation-walkthrough-and-governance" class="content-card" style="background:#000000;border:1.5px solid rgba(251,191,36,0.45);border-radius:14px;padding:2rem;margin-bottom:2rem;">
-<h2 style="color:#fbbf24;margin-bottom:1rem;">Step-by-Step Implementation Playbook and Legal/Quality Guardrails</h2>
-
-<p style="color:#e2e8f0;line-height:1.78;margin-bottom:1rem;">Standing up a trustworthy competitor intelligence system takes discipline on both engineering and governance. In Week One, sales leadership, product managers, and product marketing align on a focused watchlist: five direct competitors and three emerging disruptors. For each competitor, the team catalogs the exact public URLs that carry real strategic signal - pricing pages, enterprise security pages, API changelogs, release blogs, public GitHub repositories, and verified customer review hubs.</p>
-<p style="color:#e2e8f0;line-height:1.78;margin-bottom:1rem;">In Week Two, engineers configure the scheduled snapshot fetcher to respect `robots.txt` directives, apply polite crawl intervals, and store clean Markdown snapshots in versioned storage. The deterministic diff engine compares each new snapshot against the previous baseline, automatically ignoring timestamps, session tokens, and cosmetic layout changes. Only material textual or structural shifts - such as a new enterprise tier, a removed integration, or a pricing increase - are forwarded to the LLM diff extractor.</p>
-<p style="color:#e2e8f0;line-height:1.78;margin-bottom:1rem;">In Week Three, teams wire the battlecard generator into existing sales workflows. Every Monday morning, product marketing spends ten minutes reviewing the draft battlecard in Slack, verifying each linked source URL, and clicking approve. Once approved, the update syncs automatically to your CRM deal rooms and internal wiki so account executives walk into every competitive call armed with fresh, accurate talking points.</p>
-<p style="color:#e2e8f0;line-height:1.78;margin-bottom:1rem;">Common failure modes - such as broken HTML selectors when a competitor redesigns their site, or hallucinated "strategic implications" that go beyond the evidence - are prevented through automated fetch-health alerts and strict JSON Schema citation checks. Every claim is verifiable, every source is public and lawful, and your organization never gets blindsided by a competitor shift again.</p>
-
-</section>
+  
 
   <section id="references" class="content-card" style="background:#000000;border:1.5px solid rgba(251,191,36,0.45);border-radius:14px;padding:2rem;margin-bottom:2rem;">
     <h2 style="color:#fbbf24;margin-bottom:1rem;">References and Further Reading</h2>
