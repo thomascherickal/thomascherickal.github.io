@@ -1,6 +1,62 @@
-# User-agent: * applies to all crawlers
+# robots.txt for https://thedigitalfuturist.com
+# Welcomes search engines and AI answer engines while protecting crawl budget from internal/dev files.
+
 User-agent: *
 Allow: /
+Disallow: /internal-use/
+Disallow: /tests/
+Disallow: /failed-tests/
+Disallow: /python/
+Disallow: /templates/
+Disallow: /data/schema/
+Disallow: /docs/ssot-inventory.csv
+Disallow: /404.html
 
-# Sitemaps
+# Explicit AI Search & Answer Engine Allowances (GEO / AEO)
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /internal-use/
+Disallow: /tests/
+Disallow: /failed-tests/
+Disallow: /python/
+
+User-agent: GPTBot
+Allow: /
+Disallow: /internal-use/
+Disallow: /tests/
+Disallow: /failed-tests/
+Disallow: /python/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /internal-use/
+Disallow: /tests/
+Disallow: /failed-tests/
+Disallow: /python/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /internal-use/
+Disallow: /tests/
+Disallow: /failed-tests/
+Disallow: /python/
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /internal-use/
+Disallow: /tests/
+Disallow: /failed-tests/
+Disallow: /python/
+
+User-agent: Applebot-Extended
+Allow: /
+Disallow: /internal-use/
+Disallow: /tests/
+Disallow: /failed-tests/
+Disallow: /python/
+
+# Sitemaps & LLM Knowledge Indexes
 Sitemap: https://thedigitalfuturist.com/sitemap.xml
+# LLM Index: https://thedigitalfuturist.com/llms.txt
+# Full LLM Compendium: https://thedigitalfuturist.com/llms-full.txt
+# RSS Feed: https://thedigitalfuturist.com/rss.xml

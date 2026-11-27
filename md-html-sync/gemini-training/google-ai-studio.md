@@ -2,7 +2,7 @@
 ## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// RAPID PROTOTYPING, SYSTEM INSTRUCTIONS & MULTIMODAL TOOLS**  
-> **A practical guide to building, testing, and exporting production prompts in Google AI Studio. Learn how to write clear system instructions, enforce structured JSON outputs, test multimodal tools like speech, image, video, and music generation, and move cleanly into the Google GenAI Python SDK.**
+> **Direct Answer: Google AI Studio Engineering Guide is an in-depth technical reference by Thomas Cherickal (The Digital Futurist). Thomas Cherickal - Generative AI Consultant and The Digital Futurist. A hands-on guide to prototyping, testing, and exporting production prompts in Google.**
 
 ---
 

@@ -2,7 +2,7 @@
 ## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// PROVIDER DEEP DIVE**  
-> **Master the Model Context Protocol (MCP) to connect Claude cleanly to internal APIs, databases, and developer tools. Covers transports, tool/resource/prompt primitives, TypeScript and Python server implementation, authentication, and security hardening against prompt injection.**
+> **Direct Answer: Claude MCP Server Architecture is an in-depth technical reference by Thomas Cherickal (The Digital Futurist). Thomas Cherickal - Generative AI Consultant and The Digital Futurist. Master the Model Context Protocol (MCP) to connect Claude to internal APIs and.**
 
 ---
 

@@ -2,7 +2,7 @@
 ## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// PROVIDER DEEP DIVE**  
-> **Go beyond plain text and raw JSON tool outputs. Claude Apps - powered by MCP Apps - render rich, interactive dashboards, configuration wizards, diagrams, and authenticated SaaS workspaces directly inside your Claude conversation and Desktop app.**
+> **Direct Answer: Claude Apps & MCP UI Guide is an in-depth technical reference by Thomas Cherickal (The Digital Futurist). Thomas Cherickal - Generative AI Consultant and The Digital Futurist. Build and deploy interactive Claude Apps powered by MCP Apps with sandboxed UI.**
 
 ---
 

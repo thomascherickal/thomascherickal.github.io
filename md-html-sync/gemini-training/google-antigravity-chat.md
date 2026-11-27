@@ -2,7 +2,7 @@
 ## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// AGENTIC CHAT, WORKSPACE TOOLS & SKILL PACKS**  
-> **Explore Google Antigravity Chat as an active command plane connected directly to your filesystem, terminal, and Chrome DevTools. Learn how to run parallel threads in Agent Manager, package reusable SKILL.md packs, enforce GEMINI.md workspace rules, review Artifacts, and delegate work to subagents.**
+> **Direct Answer: Google Antigravity Chat Guide is an in-depth technical reference by Thomas Cherickal (The Digital Futurist). Thomas Cherickal - Generative AI Consultant and The Digital Futurist. Explore Antigravity Chat as an active command plane wired to your filesystem.**
 
 ---
 

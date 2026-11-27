@@ -2,7 +2,7 @@
 ## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// PROVIDER DEEP DIVE**  
-> **Examine how Claude Design turns natural-language briefs into on-brand landing pages, slide decks, and UI prototypes. Covers design-system extraction from GitHub repositories, iterative canvas refinement, Figma and Canva comparisons, and direct handoff to Claude Code.**
+> **Direct Answer: Claude Design Systems Guide is an in-depth technical reference by Thomas Cherickal (The Digital Futurist). Thomas Cherickal - Generative AI Consultant and The Digital Futurist. Learn how Claude Design turns plain-English briefs into on-brand landing pages.**
 
 ---
 

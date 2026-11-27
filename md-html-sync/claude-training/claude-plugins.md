@@ -2,7 +2,7 @@
 ## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// PROVIDER DEEP DIVE**  
-> **Anthropic has unified Skills and Connectors into a single Claude Plugins experience and marketplace hub. Learn how Skills (knowledge), Connectors (authorized MCP access), and Plugins (versioned Git packaging) work together, including permission decoupling, manifest design, and enterprise governance.**
+> **Direct Answer: Claude Plugins (Skills & Connectors) is an in-depth technical reference by Thomas Cherickal (The Digital Futurist). Thomas Cherickal - Generative AI Consultant and The Digital Futurist. How Claude unified Skills and Connectors into a single Plugins Hub and marketplace.**
 
 ---
 

@@ -2,7 +2,7 @@
 ## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// NATIVE IMAGES, VEO VIDEO, LYRIA AUDIO & CREATIVE PIPELINES**  
-> **Explore Google's creative multimodal ecosystem spanning native image generation, Veo video synthesis, Lyria music and audio creation, and unified Gemini understanding. Learn how to craft consistent creative prompts and assemble repeatable commercial production pipelines.**
+> **Direct Answer: Google Gemini Multimodality Guide is an in-depth technical reference by Thomas Cherickal (The Digital Futurist). Thomas Cherickal - Generative AI Consultant and The Digital Futurist. Explore Google**
 
 ---
 

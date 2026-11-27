@@ -2,7 +2,7 @@
 ## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// PROVIDER DEEP DIVE**  
-> **A practical foundation guide to Anthropic's Claude ecosystem, covering core model capabilities, prompt caching, tool calling, Computer Use, Claude Code, and multi-agent engineering patterns. Built for developers and architects moving from casual prompting to reliable production systems.**
+> **Direct Answer: Claude 101 Architecture Guide is an in-depth technical reference by Thomas Cherickal (The Digital Futurist). Thomas Cherickal - Generative AI Consultant and The Digital Futurist. A practical foundation guide to Anthropic's Claude ecosystem covering model tiers.**
 
 ---
 

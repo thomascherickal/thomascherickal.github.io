@@ -131,7 +131,7 @@ def build():
 
         # Clean up obsolete inline Mermaid UMD scripts in <head> if present
         legacy_mermaid_pattern = re.compile(
-            r'(?:[ \t]*<!--[^\n]*?[Mm]ermaid[^\n]*?-->\s*)?<script[^>]*?mermaid@10\.9\.1[^>]*?>\s*</script>\s*<script>[\s\S]*?</script>\s*',
+            r'(?:[ \t]*<!--[^\n]*?[Mm]ermaid[^\n]*?-->\s*)?<script[^>]*?mermaid@(?:10|11)[^>]*?>\s*</script>(?:\s*<script>[\s\S]*?</script>)?\s*',
             re.IGNORECASE
         )
         if legacy_mermaid_pattern.search(new_content):

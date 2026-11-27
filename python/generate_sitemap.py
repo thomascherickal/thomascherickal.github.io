@@ -1,201 +1,134 @@
 #!/usr/bin/env python3
 """
-generate_sitemap.py - Regenerate sitemap.xml dynamically from the repository file tree.
-Uses each file's last git commit date for <lastmod>.
-Excludes draft, internal, or excluded pages.
+generate_sitemap.py - Dynamically regenerates sitemap.xml from the repository file tree.
+
+Auto-discovers all indexable HTML pages across root, pricing/, business-services/,
+personal-services/, claude-training/, and gemini-training/, skips excluded or noindex pages,
+and uses each file's real last git commit date for <lastmod>.
 """
 
+import glob
 import os
+import re
 import subprocess
 
 REPO_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITEMAP_FILE = os.path.join(REPO_DIR, "sitemap.xml")
 BASE_URL = "https://thedigitalfuturist.com"
 
-# Core navigation & portal pages in logical order
-CORE_PAGES = [
-    ("", "index.html"),
-    ("articles.html", "articles.html"),
-    ("writing.html", "writing.html"),
-    ("pricing.html", "pricing.html"),
-    ("parity-pricing.html", "parity-pricing.html"),
-    ("expertise.html", "expertise.html"),
-    ("contact.html", "contact.html"),
-    ("faqs.html", "faqs.html"),
-    ("guarantees.html", "guarantees.html"),
-    ("all-business-services.html", "all-business-services.html"),
-    ("all-personal-services.html", "all-personal-services.html"),
+EXCLUDED_BASENAMES = {"header.html", "footer.html", "404.html", "mermaid.html"}
+
+CORE_ORDER = [
+    "index.html",
+    "articles.html",
+    "writing.html",
+    "pricing.html",
+    "parity-pricing.html",
+    "expertise.html",
+    "contact.html",
+    "faqs.html",
+    "guarantees.html",
+    "all-business-services.html",
+    "all-personal-services.html",
 ]
 
-# 6 Pricing Tier Pages
-PRICING_TIERS = [
-    "pricing/pricing-tier-1-usa-china-eu-100.html",
-    "pricing/pricing-tier-2-brazil-malaysia-75.html",
-    "pricing/pricing-tier-3-india-egypt-50.html",
-    "pricing/pricing-tier-4-tech-startups-50.html",
-    "pricing/pricing-tier-5-colleges-non-profits-25.html",
-    "pricing/pricing-tier-6-crisis-affected-10.html",
-]
 
-# 16 Business Service Pages
-BUSINESS_SERVICES = [
-    "business-services/business-service-generative-ai-transformation.html",
-    "business-services/business-service-local-llms-cost-slashing.html",
-    "business-services/business-service-claude-agents-orchestration.html",
-    "business-services/business-service-agentic-assistants.html",
-    "business-services/business-service-workflow-automations.html",
-    "business-services/business-service-ai-budget-cost-control.html",
-    "business-services/business-service-ai-developer-training.html",
-    "business-services/business-service-advanced-ai-agents.html",
-    "business-services/business-service-competitor-research.html",
-    "business-services/business-service-ai-assisted-leads-magnet.html",
-    "business-services/business-service-ai-second-brain.html",
-    "business-services/business-service-continuous-learning.html",
-    "business-services/business-service-claude-research-training.html",
-    "business-services/business-service-gemini-research-training.html",
-    "business-services/business-service-knowledge-graphs.html",
-    "business-services/business-service-local-ai-for-sensitive-data.html",
-]
+def is_noindex(abs_path: str) -> bool:
+    try:
+        with open(abs_path, "r", encoding="utf-8", errors="ignore") as f:
+            head = f.read(4096)
+        return bool(re.search(r'<meta[^>]+name=["\']robots["\'][^>]+noindex', head, re.I))
+    except OSError:
+        return False
 
-# 16 Personal Service Pages
-PERSONAL_SERVICES = [
-    "personal-services/personal-service-generative-ai-transformation.html",
-    "personal-services/personal-service-local-llms-cost-slashing.html",
-    "personal-services/personal-service-agentic-assistants.html",
-    "personal-services/personal-service-workflow-automations.html",
-    "personal-services/personal-service-ai-budget-cost-control.html",
-    "personal-services/personal-service-ai-developer-training.html",
-    "personal-services/personal-service-advanced-ai-agents.html",
-    "personal-services/personal-service-claude-agents-orchestration.html",
-    "personal-services/personal-service-claude-research-training.html",
-    "personal-services/personal-service-gemini-research-training.html",
-    "personal-services/personal-service-ai-second-brain.html",
-    "personal-services/personal-service-continuous-learning.html",
-    "personal-services/personal-service-ai-assisted-leads-magnet.html",
-    "personal-services/personal-service-competitor-research.html",
-    "personal-services/personal-service-knowledge-graphs.html",
-    "personal-services/personal-service-local-ai-for-sensitive-data.html",
-]
-
-# 18 Claude Guide Pages
-CLAUDE_GUIDES = [
-    "claude-training/claude-101.html",
-    "claude-training/claude-projects.html",
-    "claude-training/claude-code.html",
-    "claude-training/claude-code-mode.html",
-    "claude-training/claude-desktop.html",
-    "claude-training/claude-office.html",
-    "claude-training/claude-mcp.html",
-    "claude-training/claude-plugins.html",
-    "claude-training/claude-apps.html",
-    "claude-training/claude-orchestration.html",
-    "claude-training/claude-design.html",
-    "claude-training/claude-science.html",
-    "claude-training/claude-local-llms.html",
-    "claude-training/claude-artifacts.html",
-    "claude-training/claude-dashboards.html",
-    "claude-training/claude-mods.html",
-    "claude-training/claude-whiteboards.html",
-    "claude-training/claude-fable.html",
-]
-
-# 18 Google Gemini Guide Pages
-GEMINI_GUIDES = [
-    "gemini-training/google-gemini-101.html",
-    "gemini-training/google-ai-studio.html",
-    "gemini-training/google-antigravity-ide.html",
-    "gemini-training/google-gemini-4-argon.html",
-    "gemini-training/google-gemini-desktop.html",
-    "gemini-training/google-deepmind.html",
-    "gemini-training/google-gemini-spark.html",
-    "gemini-training/google-gemini-notebook.html",
-    "gemini-training/google-gemma-local-models.html",
-    "gemini-training/google-multimodality.html",
-    "gemini-training/google-gemini-4-carbon.html",
-    "gemini-training/google-gemini-4-hydrogen.html",
-    "gemini-training/google-code-wiki.html",
-    "gemini-training/google-deep-research.html",
-    "gemini-training/google-gemini-4-krypton.html",
-    "gemini-training/google-gemini-skills.html",
-    "gemini-training/google-antigravity-chat.html",
-    "gemini-training/google-gemini-4-helix.html",
-]
 
 def get_git_lastmod(rel_path: str) -> str:
     try:
         res = subprocess.run(
-            ["git", "log", "-1", "--format=%as", rel_path],
+            ["git", "log", "-1", "--format=%as", "--", rel_path],
             cwd=REPO_DIR,
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
             text=True,
-            check=True
+            check=True,
         )
         date = res.stdout.strip()
         if date:
             return date
     except Exception:  # pragma: no cover
         pass
-    return "2026-10-29"  # pragma: no cover
+    return "2026-11-27"  # pragma: no cover
+
+
+def discover_dir_html(subdir: str) -> list:
+    full_dir = os.path.join(REPO_DIR, subdir)
+    if not os.path.isdir(full_dir):
+        return []
+    found = []
+    for abs_p in sorted(glob.glob(os.path.join(full_dir, "*.html"))):
+        base = os.path.basename(abs_p)
+        if base in EXCLUDED_BASENAMES or base.startswith("google43d") or is_noindex(abs_p):
+            continue
+        found.append(f"{subdir}/{base}")
+    return found
+
+
+def discover_core_html() -> list:
+    ordered = []
+    seen = set()
+    for fn in CORE_ORDER:
+        abs_p = os.path.join(REPO_DIR, fn)
+        if os.path.isfile(abs_p) and not is_noindex(abs_p):
+            ordered.append(fn)
+            seen.add(fn)
+    for abs_p in sorted(glob.glob(os.path.join(REPO_DIR, "*.html"))):
+        base = os.path.basename(abs_p)
+        if base in seen or base in EXCLUDED_BASENAMES or base.startswith("google43d") or is_noindex(abs_p):
+            continue
+        ordered.append(base)
+    return ordered
+
+
+def _fmt_entry(rel_path: str) -> str:
+    loc = f"{BASE_URL}/" if rel_path == "index.html" else f"{BASE_URL}/{rel_path}"
+    lastmod = get_git_lastmod(rel_path)
+    return f"  <url>\n    <loc>{loc}</loc>\n    <lastmod>{lastmod}</lastmod>\n  </url>"
+
 
 def generate_sitemap():
+    sections = [
+        ("Core Navigation Pages", discover_core_html()),
+        ("Purchasing Power Parity Pricing Tier Pages", discover_dir_html("pricing")),
+        ("Business AI Transformation Service Pages", discover_dir_html("business-services")),
+        ("Personal AI Training Service Pages", discover_dir_html("personal-services")),
+        ("Claude Engineering Guide Pages", discover_dir_html("claude-training")),
+        ("Google Gemini Engineering Guide Pages", discover_dir_html("gemini-training")),
+    ]
+
     entries = []
+    total = 0
+    for label, files in sections:
+        if not files:
+            continue
+        prefix = "\n  " if entries else "  "
+        entries.append(f"{prefix}<!-- {label} ({len(files)}) -->")
+        for rel_p in files:
+            entries.append(_fmt_entry(rel_p))
+            total += 1
 
-    # 1. Core pages
-    entries.append("  <!-- Core Navigation Pages -->")
-    for url_suffix, file_path in CORE_PAGES:
-        loc = f"{BASE_URL}/{url_suffix}" if url_suffix else f"{BASE_URL}/"
-        lastmod = get_git_lastmod(file_path)
-        entries.append(f"  <url>\n    <loc>{loc}</loc>\n    <lastmod>{lastmod}</lastmod>\n  </url>")
-
-    # 2. Pricing tier pages (6 pages)
-    entries.append("\n  <!-- 6 Purchasing Power Parity Pricing Tier Pages -->")
-    for file_path in PRICING_TIERS:
-        if os.path.exists(os.path.join(REPO_DIR, file_path)):
-            loc = f"{BASE_URL}/{file_path}"
-            lastmod = get_git_lastmod(file_path)
-            entries.append(f"  <url>\n    <loc>{loc}</loc>\n    <lastmod>{lastmod}</lastmod>\n  </url>")
-
-    # 3. Business services (16 pages)
-    entries.append("\n  <!-- 16 Business AI Transformation Service Pages -->")
-    for file_path in BUSINESS_SERVICES:
-        if os.path.exists(os.path.join(REPO_DIR, file_path)):
-            loc = f"{BASE_URL}/{file_path}"
-            lastmod = get_git_lastmod(file_path)
-            entries.append(f"  <url>\n    <loc>{loc}</loc>\n    <lastmod>{lastmod}</lastmod>\n  </url>")
-
-    # 4. Personal services (16 pages)
-    entries.append("\n  <!-- 16 Personal AI Transformation Service Pages -->")
-    for file_path in PERSONAL_SERVICES:
-        if os.path.exists(os.path.join(REPO_DIR, file_path)):
-            loc = f"{BASE_URL}/{file_path}"
-            lastmod = get_git_lastmod(file_path)
-            entries.append(f"  <url>\n    <loc>{loc}</loc>\n    <lastmod>{lastmod}</lastmod>\n  </url>")
-
-    # 5. Claude Guides (18 pages)
-    entries.append("\n  <!-- 18 Claude Guides -->")
-    for file_path in CLAUDE_GUIDES:
-        if os.path.exists(os.path.join(REPO_DIR, file_path)):
-            loc = f"{BASE_URL}/{file_path}"
-            lastmod = get_git_lastmod(file_path)
-            entries.append(f"  <url>\n    <loc>{loc}</loc>\n    <lastmod>{lastmod}</lastmod>\n  </url>")
-
-    # 6. Google Gemini Guides (18 pages)
-    entries.append("\n  <!-- 18 Google Gemini Guides -->")
-    for file_path in GEMINI_GUIDES:
-        if os.path.exists(os.path.join(REPO_DIR, file_path)):
-            loc = f"{BASE_URL}/{file_path}"
-            lastmod = get_git_lastmod(file_path)
-            entries.append(f"  <url>\n    <loc>{loc}</loc>\n    <lastmod>{lastmod}</lastmod>\n  </url>")
-
-    xml_content = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-    xml_content += "\n".join(entries)
-    xml_content += "\n</urlset>\n"
+    xml_content = (
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+        + "\n".join(entries)
+        + "\n</urlset>\n"
+    )
 
     with open(SITEMAP_FILE, "w", encoding="utf-8") as f:
         f.write(xml_content)
-    total = len(CORE_PAGES) + len(PRICING_TIERS) + len(BUSINESS_SERVICES) + len(PERSONAL_SERVICES) + len(CLAUDE_GUIDES) + len(GEMINI_GUIDES)
-    print(f"Generated {SITEMAP_FILE} with {total} entries.")
+
+    print(f"Generated {SITEMAP_FILE} with {total} indexable URLs.")
+    return total
+
 
 if __name__ == "__main__":  # pragma: no cover
     generate_sitemap()

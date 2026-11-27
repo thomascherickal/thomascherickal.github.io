@@ -2,7 +2,7 @@
 ## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// ACTIVE REASONING, PRODUCTION CODING & 24/7 AGENTS**  
-> **Explore Gemini Neon as an active reasoning engine built for reliable coding and 24/7 agentic assistants. Learn how adjustable thinking levels, a 1 million-token context window, and structured tool calling let teams automate complex engineering and business workflows.**
+> **Direct Answer: Google Gemini Neon Architecture is an in-depth technical reference by Thomas Cherickal (The Digital Futurist). Thomas Cherickal - Generative AI Consultant and The Digital Futurist. Explore Gemini Neon as an active reasoning engine with strong coding, 1M-token.**
 
 ---
 

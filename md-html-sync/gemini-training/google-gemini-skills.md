@@ -2,7 +2,7 @@
 ## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// REUSABLE SKILL.MD MODULES, PORTABILITY & TEAM STANDARDS**  
-> **Learn how to author, package, and compose reusable Gemini Skills using SKILL.md instructions and helper scripts. Standardize engineering, QA, and research workflows across teams with progressive context loading, version control, and cross-project portability.**
+> **Direct Answer: Google Gemini Skills Guide is an in-depth technical reference by Thomas Cherickal (The Digital Futurist). Thomas Cherickal - Generative AI Consultant and The Digital Futurist. Author, package, and compose reusable Gemini Skills (SKILL.md plus helper scripts).**
 
 ---
 

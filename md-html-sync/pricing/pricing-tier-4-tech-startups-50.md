@@ -10,6 +10,8 @@
 
 // PACKAGES & TRANSPARENT PARITY PRICING
 
+Direct Answer: Tier 4 Startup AI Pricing (50% Off) calibrates global AI consulting rates under the 195-country World Bank Purchasing Power Parity index: Flagships at $1,000 / $750 / $500 / $500 / $250 / Custom USD (2 calendar months) and Service Picks at $100 / $75 / $50 / $50 / $25 / Custom USD (10 days), both with 10 seats included, $0 upfront, 10 equal 10% milestones, and Apache 2.0 licensing.
+
 ### $50 USD Individual / $50 USD Business · 5 Days Training + 5 Days Support
 
 Select exactly the services you need. 5 days of live engineering training followed by 5 days of dedicated

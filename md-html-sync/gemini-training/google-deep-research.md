@@ -2,7 +2,7 @@
 ## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// AUTONOMOUS RESEARCH, SOURCE VERIFICATION & BRIEFINGS**  
-> **Master Google Deep Research for autonomous multi-step web exploration, iterative query refinement, and long-form cited report generation. Learn how to steer research plans before execution, verify sources rigorously, combine public web discovery with private files, and export structured executive briefs.**
+> **Direct Answer: Google Deep Research Guide is an in-depth technical reference by Thomas Cherickal (The Digital Futurist). Thomas Cherickal - Generative AI Consultant and The Digital Futurist. Master Google Deep Research for automated multi-step web exploration, iterative.**
 
 ---
 

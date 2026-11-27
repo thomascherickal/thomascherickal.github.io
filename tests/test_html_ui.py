@@ -67,10 +67,18 @@ HTML_TEST_CATEGORY_ORDER = [
     "Service Pages & Directories",
     "Claude & Gemini Training Guides",
     "Structured Data & Production Hygiene",
+    "SEO, AEO & GEO Verification",
     "Negative Fault-Injection Scenarios",
 ]
 
 HTML_TEST_CATEGORY_MAP = {
+    # SEO, AEO & GEO Verification (6)
+    "test_102_unique_titles_and_meta_descriptions": "SEO, AEO & GEO Verification",
+    "test_103_zero_render_blocking_head_scripts": "SEO, AEO & GEO Verification",
+    "test_104_complete_twitter_and_og_cards": "SEO, AEO & GEO Verification",
+    "test_105_sitemap_and_rss_and_robots_integrity": "SEO, AEO & GEO Verification",
+    "test_106_images_have_dimensions_and_loading_policy": "SEO, AEO & GEO Verification",
+    "test_107_llms_txt_and_llms_full_synced_with_zero_broken_urls": "SEO, AEO & GEO Verification",
     # 1. Document Shell & SEO Meta (10)
     "test_01_all_html_pages_discovered": "Document Shell & SEO Meta",
     "test_02_document_shell_and_seo_meta_tags": "Document Shell & SEO Meta",
@@ -1365,6 +1373,98 @@ class TestHTMLUISuite(unittest.TestCase):
             comp_js = f.read()
         self.assertIn("initBackToTop", comp_js, "components.js missing initBackToTop()")
         self.assertEqual(failures, [], "Back-to-top failures:\n" + "\n".join(failures[:20]))
+
+    def test_102_unique_titles_and_meta_descriptions(self):
+        """SEO: verifies zero duplicate <title> tags and zero duplicate meta descriptions across indexable pages."""
+        titles = {}
+        descs = {}
+        for rel, soup in self.soups.items():
+            if rel in ("404.html", "mermaid.html"):
+                continue
+            t = soup.title.get_text(strip=True) if soup.title else ""
+            titles.setdefault(t, []).append(rel)
+            dm = soup.find("meta", attrs={"name": "description"})
+            d = (dm.get("content") or "").strip() if dm else ""
+            descs.setdefault(d, []).append(rel)
+        dup_t = {k: v for k, v in titles.items() if len(v) > 1}
+        dup_d = {k: v for k, v in descs.items() if len(v) > 1}
+        self.assertEqual(dup_t, {}, f"Duplicate <title> tags found: {dup_t}")
+        self.assertEqual(dup_d, {}, f"Duplicate meta descriptions found: {dup_d}")
+
+    def test_103_zero_render_blocking_head_scripts(self):
+        """CWV/SEO: verifies zero synchronous render-blocking external <script> tags inside <head>."""
+        blocking = []
+        for rel, soup in self.soups.items():
+            head = soup.find("head")
+            if not head:
+                continue
+            for sc in head.find_all("script", src=True):
+                if not sc.has_attr("defer") and not sc.has_attr("async") and sc.get("type") != "module":
+                    blocking.append(f"{rel}: {sc.get('src')}")
+        self.assertEqual(blocking, [], "Render-blocking <head> scripts:\n" + "\n".join(blocking))
+
+    def test_104_complete_twitter_and_og_cards(self):
+        """SEO/Social: verifies every indexable HTML page includes og:image and full Twitter Card meta tags."""
+        missing = []
+        for rel, soup in self.soups.items():
+            if rel in ("404.html", "mermaid.html"):
+                continue
+            if not soup.find("meta", attrs={"property": "og:image"}):
+                missing.append(f"{rel}: missing og:image")
+            for name in ("twitter:card", "twitter:title", "twitter:description"):
+                if not soup.find("meta", attrs={"name": name}):
+                    missing.append(f"{rel}: missing {name}")
+        self.assertEqual(missing, [], "Missing social meta tags:\n" + "\n".join(missing[:20]))
+
+    def test_105_sitemap_and_rss_and_robots_integrity(self):
+        """SEO/GEO: verifies sitemap.xml covers all indexable pages, rss.xml exists, and robots.txt blocks dev dirs."""
+        with open(os.path.join(REPO_DIR, "sitemap.xml"), encoding="utf-8") as f:
+            sm = f.read()
+        locs = re.findall(r"<loc>(.*?)</loc>", sm)
+        sm_paths = set()
+        for loc in locs:
+            p = loc.replace("https://thedigitalfuturist.com/", "").strip("/")
+            p = p if p else "index.html"
+            self.assertTrue(os.path.exists(os.path.join(REPO_DIR, p)), f"Sitemap dead URL: {loc}")
+            sm_paths.add(p)
+        for rel in self.soups:
+            if rel not in ("404.html", "mermaid.html"):
+                self.assertIn(rel, sm_paths, f"Indexable page missing from sitemap.xml: {rel}")
+
+        self.assertTrue(os.path.exists(os.path.join(REPO_DIR, "rss.xml")), "Missing rss.xml")
+        with open(os.path.join(REPO_DIR, "robots.txt"), encoding="utf-8") as f:
+            rb = f.read()
+        for token in ("Disallow: /internal-use/", "Disallow: /tests/", "Disallow: /failed-tests/", "OAI-SearchBot", "ClaudeBot", "PerplexityBot"):
+            self.assertIn(token, rb, f"robots.txt missing {token}")
+
+    def test_106_images_have_dimensions_and_loading_policy(self):
+        """CWV/CLS: verifies every <img> tag declares explicit width, height, and loading attributes."""
+        issues = []
+        for rel, soup in self.soups.items():
+            if rel in ("404.html", "mermaid.html"):
+                continue
+            for img in soup.find_all("img"):
+                src = img.get("src") or ""
+                if not img.get("width") or not img.get("height"):
+                    issues.append(f"{rel}: img missing width/height ({src})")
+                if not img.get("loading"):
+                    issues.append(f"{rel}: img missing loading attr ({src})")
+        self.assertEqual(issues, [], "Image CWV issues:\n" + "\n".join(issues[:20]))
+
+    def test_107_llms_txt_and_llms_full_synced_with_zero_broken_urls(self):
+        """GEO/AEO: verifies llms.txt uses SSOT markers, has zero stale prices, zero broken URLs, and llms-full.txt exists."""
+        with open(os.path.join(REPO_DIR, "llms.txt"), encoding="utf-8") as f:
+            llms = f.read()
+        self.assertIn("<!--ssot:", llms, "llms.txt must use SSOT markers")
+        self.assertNotIn("$2,500", llms, "llms.txt contains stale $2,500 flagship price")
+        self.assertNotIn("Tier 1: $250", llms, "llms.txt contains stale $250 pick price")
+        self.assertTrue(os.path.exists(os.path.join(REPO_DIR, "llms-full.txt")), "Missing llms-full.txt")
+        broken = []
+        for m in re.finditer(r"https://thedigitalfuturist\.com/([A-Za-z0-9_./-]+\.(?:html|md|txt|xml))", llms):
+            rel = m.group(1)
+            if not os.path.exists(os.path.join(REPO_DIR, rel)):
+                broken.append(rel)
+        self.assertEqual(broken, [], f"Broken URLs in llms.txt: {broken}")
 
 
 if __name__ == "__main__":

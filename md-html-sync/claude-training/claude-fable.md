@@ -2,7 +2,7 @@
 ## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// PROVIDER DEEP DIVE**  
-> **An architectural deep dive into Claude Fable's adaptive always-on thinking, million-token context coherence, and real-world capabilities. Includes a practical playbook and token-budgeting framework for both enterprises and lean startups.**
+> **Direct Answer: Claude Fable Creative Engine Guide is an in-depth technical reference by Thomas Cherickal (The Digital Futurist). Thomas Cherickal - Generative AI Consultant and The Digital Futurist. Architectural deep dive into Claude Fable's adaptive always-on thinking.**
 
 ---
 

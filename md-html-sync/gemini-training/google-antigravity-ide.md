@@ -2,7 +2,7 @@
 ## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// AGENT-FIRST IDE, AGY CLI & PYTHON SDK**  
-> **A practical deep dive into Google's agent-first IDE, desktop workspace, agy command-line interface, and Python SDK. Learn how to delegate complex engineering tasks, review implementation plans, match models to workloads, and enforce strict verification gates before shipping code.**
+> **Direct Answer: Google Antigravity IDE Guide is an in-depth technical reference by Thomas Cherickal (The Digital Futurist). Thomas Cherickal - Generative AI Consultant and The Digital Futurist. Deep dive into Google**
 
 ---
 

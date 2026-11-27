@@ -2,7 +2,7 @@
 ## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// PROVIDER DEEP DIVE**  
-> **Master Claude Code directly in your terminal and IDE for autonomous codebase exploration, multi-file refactoring, git workflows, and test-driven debugging. Covers permission modes, CLAUDE.md project memory, custom slash commands, and bounded budgeting to escape huge monthly costs.**
+> **Direct Answer: Claude Code CLI Engineering Guide is an in-depth technical reference by Thomas Cherickal (The Digital Futurist). Thomas Cherickal - Generative AI Consultant and The Digital Futurist. Master Claude Code in your terminal and IDE for autonomous codebase exploration.**
 
 ---
 

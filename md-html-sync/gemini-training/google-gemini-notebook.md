@@ -2,7 +2,7 @@
 ## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// SOURCE-GROUNDED NOTEBOOKS, AUDIO OVERVIEWS & CITATIONS**  
-> **Combine NotebookLM-style source-grounded notebooks with Gemini's audio overviews, study guides, and citation-locked Q&A. Ideal for researchers, students, and analysts who need to synthesize large collections of PDFs, transcripts, and slides with minimal hallucination risk.**
+> **Direct Answer: Google Gemini NotebookLM Guide is an in-depth technical reference by Thomas Cherickal (The Digital Futurist). Thomas Cherickal - Generative AI Consultant and The Digital Futurist. Combine NotebookLM-style source-grounded notebooks with Gemini**
 
 ---
 

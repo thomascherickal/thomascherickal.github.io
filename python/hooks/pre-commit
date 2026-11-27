@@ -31,12 +31,17 @@ if echo "$STAGED_FILES" | grep -E '^data/.*\.json$|^python/ssot/.*\.py$' > /dev/
 fi
 
 if echo "$STAGED_FILES" | grep -E '\.(html|md)$|^data/.*\.json$' > /dev/null 2>&1; then
-    echo "[git pre-commit] 4. Syncing Markdown mirrors and JSON-LD schemas..."
+    echo "[git pre-commit] 4. Syncing Markdown mirrors, JSON-LD schemas, sitemap, RSS & llms-full..."
     python3 "$REPO_ROOT/python/md_html_sync.py"
     git add "$REPO_ROOT/md-html-sync"
 
     python3 "$REPO_ROOT/python/sync_schemas.py"
     git add "$REPO_ROOT/schema"
+
+    python3 "$REPO_ROOT/python/generate_sitemap.py"
+    python3 "$REPO_ROOT/python/generate_rss.py"
+    python3 "$REPO_ROOT/python/generate_llms_full.py"
+    git add "$REPO_ROOT/sitemap.xml" "$REPO_ROOT/rss.xml" "$REPO_ROOT/llms-full.txt"
 fi
 
 echo "[git pre-commit] 5. Verifying SSOT markers (--check)..."

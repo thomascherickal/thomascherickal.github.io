@@ -2,7 +2,7 @@
 ## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// PROVIDER DEEP DIVE**  
-> **Discover how to turn raw CSV exports, financial ledgers, and operational telemetry into interactive, executive-ready dashboards with Claude. Covers chart selection, KPI hierarchy, responsive layout prompting, and repeatable data-validation checks to prevent misread metrics.**
+> **Direct Answer: Claude Dashboards Engineering Guide is an in-depth technical reference by Thomas Cherickal (The Digital Futurist). Thomas Cherickal - Generative AI Consultant and The Digital Futurist. Turn raw CSV exports, financial ledgers, and operational telemetry into interactive.**
 
 ---
 

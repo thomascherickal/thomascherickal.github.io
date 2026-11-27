@@ -2,7 +2,7 @@
 ## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// PROVIDER DEEP DIVE**  
-> **A practical guide to using Claude Desktop as an always-available workstation hub connected to local files, shell tools, and Model Context Protocol servers. Covers desktop workflow automation and shows how Computer Use is transforming business operations and daily routines.**
+> **Direct Answer: Claude Desktop Workflows Guide is an in-depth technical reference by Thomas Cherickal (The Digital Futurist). Thomas Cherickal - Generative AI Consultant and The Digital Futurist. Use Claude Desktop as a native workstation hub connected to local files, shell.**
 
 ---
 

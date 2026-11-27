@@ -1,6 +1,6 @@
 # Repository Code & Engineering Metrics
 
-> **Automated Status Report** | Generated on `2026-11-27 07:16:59 UTC` | Branch: `main` | Head Commit: `f840f04`
+> **Automated Status Report** | Generated on `2026-11-27 07:53:02 UTC` | Branch: `main` | Head Commit: `7cedc32`
 > This report tracks comprehensive codebase, architectural, structural, and content metrics across `thomascherickal.github.io`.
 > Updated automatically on every build and push.
 
@@ -10,15 +10,15 @@
 
 | Metric | Count | Details |
 | :--- | :--- | :--- |
-| **Total Tracked Files** | **537** | Fully tracked Git artifacts |
-| **Total Lines of Source Code & Content** | **158,207** | All text, markup, styles & scripts |
-| **Source Code Lines (SLOC)** | **141,705** | Executable / renderable content lines |
-| **Comment & Documentation Lines** | **5,254** | In-code and architectural documentation |
-| **Blank / Spacing Lines** | **11,248** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **18.50 MB (19,401,669 bytes)** | HTML, CSS, JS, Python, SVG & Images |
-| **Total Word Count (Prose & Technical)** | **401,836 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **589** | Since repository inception (2023-03-30) |
-| **Latest Commit Date** | **2026-11-27** | Subject: "Final Changes" |
+| **Total Tracked Files** | **538** | Fully tracked Git artifacts |
+| **Total Lines of Source Code & Content** | **161,579** | All text, markup, styles & scripts |
+| **Source Code Lines (SLOC)** | **144,808** | Executable / renderable content lines |
+| **Comment & Documentation Lines** | **5,334** | In-code and architectural documentation |
+| **Blank / Spacing Lines** | **11,437** | Code formatting and structural layout |
+| **Total Repository Size (Tracked Assets)** | **18.71 MB (19,622,363 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Word Count (Prose & Technical)** | **419,140 words** | Educational, curriculum, & marketing prose |
+| **Total Git Commits** | **590** | Since repository inception (2023-03-30) |
+| **Latest Commit Date** | **2026-11-27** | Subject: "docs: add detailed SEO, AEO, and GEO improvement report with tutorials" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
 ---
@@ -27,15 +27,15 @@
 
 | Category | Files | Total Lines | Total Size | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| **HTML Documents** | 91 | 96,156 | 7.81 MB (8,184,277 bytes) | Production static web pages, services, frameworks & guides |
+| **HTML Documents** | 91 | 98,078 | 7.95 MB (8,337,327 bytes) | Production static web pages, services, frameworks & guides |
 | **CSS Stylesheets** | 16 | 12,250 | 286.36 KB (293,233 bytes) | Design tokens, animations, responsive layout & themes |
 | **JavaScript Scripts** | 33 | 11,579 | 3.70 MB (3,884,078 bytes) | Client-side interactivity, search, filter & components |
-| **Python Tooling** | 38 | 10,763 | 489.53 KB (501,283 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
-| **Markdown Documentation** | 153 | 15,545 | 1.05 MB (1,105,442 bytes) | Project documentation, sync mirrors, guidelines & rules |
-| **JSON Schemas & Data** | 112 | 11,847 | 490.12 KB (501,883 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
+| **Python Tooling** | 38 | 10,796 | 490.78 KB (502,555 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
+| **Markdown Documentation** | 154 | 16,265 | 1.10 MB (1,155,667 bytes) | Project documentation, sync mirrors, guidelines & rules |
+| **JSON Schemas & Data** | 112 | 12,544 | 524.63 KB (537,217 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 44 | 67 | 188.24 KB (192,754 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
 | **Raster Images (WebP, JPG, PNG)** | 37 | 0 | 4.06 MB (4,259,892 bytes) | Optimized feature hero graphics, social cards & assets |
-| **Config & Metadata** | 13 | 0 | 467.60 KB (478,827 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
+| **Config & Metadata** | 13 | 0 | 448.87 KB (459,640 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
 
 ---
 
@@ -43,23 +43,23 @@
 
 | Extension | Tracked Files | Total Lines | Total Size | Percentage of Files |
 | :--- | :--- | :--- | :--- | :--- |
-| `.html` | 91 | 96,156 | 7.81 MB (8,184,277 bytes) | 16.9% |
-| `.md` | 153 | 15,545 | 1.05 MB (1,105,442 bytes) | 28.5% |
+| `.html` | 91 | 98,078 | 7.95 MB (8,337,327 bytes) | 16.9% |
+| `.md` | 154 | 16,265 | 1.10 MB (1,155,667 bytes) | 28.6% |
+| `.json` | 112 | 12,544 | 524.63 KB (537,217 bytes) | 20.8% |
 | `.css` | 16 | 12,250 | 286.36 KB (293,233 bytes) | 3.0% |
-| `.json` | 112 | 11,847 | 490.12 KB (501,883 bytes) | 20.9% |
 | `.js` | 33 | 11,579 | 3.70 MB (3,884,078 bytes) | 6.1% |
-| `.py` | 38 | 10,763 | 489.53 KB (501,283 bytes) | 7.1% |
+| `.py` | 38 | 10,796 | 490.78 KB (502,555 bytes) | 7.1% |
 | `.svg` | 44 | 67 | 188.24 KB (192,754 bytes) | 8.2% |
-| `.webp` | 18 | 0 | 1.66 MB (1,745,378 bytes) | 3.4% |
+| `.webp` | 18 | 0 | 1.66 MB (1,745,378 bytes) | 3.3% |
 | `.png` | 12 | 0 | 1.28 MB (1,339,427 bytes) | 2.2% |
 | `.jpg` | 5 | 0 | 988.42 KB (1,012,141 bytes) | 0.9% |
 | `.csv` | 1 | 0 | 384.80 KB (394,031 bytes) | 0.2% |
 | `.jpeg` | 1 | 0 | 152.39 KB (156,047 bytes) | 0.2% |
-| `.txt` | 2 | 0 | 35.51 KB (36,358 bytes) | 0.4% |
 | `.docx` | 2 | 0 | 28.83 KB (29,519 bytes) | 0.4% |
-| `.xml` | 1 | 0 | 11.92 KB (12,210 bytes) | 0.2% |
+| `.txt` | 2 | 0 | 16.20 KB (16,585 bytes) | 0.4% |
+| `.xml` | 1 | 0 | 12.24 KB (12,533 bytes) | 0.2% |
 | `.ico` | 1 | 0 | 6.74 KB (6,899 bytes) | 0.2% |
-| `[no extension]` | 6 | 0 | 6.03 KB (6,171 bytes) | 1.1% |
+| `[no extension]` | 6 | 0 | 6.28 KB (6,434 bytes) | 1.1% |
 | `.webmanifest` | 1 | 0 | 538 bytes | 0.2% |
 
 ---
@@ -73,11 +73,11 @@
 | **CSS Design Tokens (`--var`)** | **90** | Standardized color palettes, typography, spacing & radii |
 | **FAQ Question Cards** | **198** | Rich searchable & filterable accordion cards |
 | **Primary Headings (`<h1>`)** | **86** | Strict single-H1 semantic hierarchy per page |
-| **Secondary Section Headings (`<h2>`)** | **833** | Structural topic subdivisions |
+| **Secondary Section Headings (`<h2>`)** | **869** | Structural topic subdivisions |
 | **Card & Item Headings (`<h3>`)** | **483** | Individual service, question, and feature cards |
 | **Call-to-Action (CTA) Modules** | **100** | Standardized CTAs with Free LinkedIn Consultation rule |
 | **Canonical Links Configured** | **85** | 100% SEO canonical URL coverage across public pages |
-| **Open Graph Meta Tags** | **605** | Social preview cards across Twitter/LinkedIn/Facebook |
+| **Open Graph Meta Tags** | **608** | Social preview cards across Twitter/LinkedIn/Facebook |
 | **Structured Data Blocks (JSON-LD)** | **86** | Schema.org FAQPage, Service, Person, Organization schemas |
 
 ---
@@ -110,7 +110,7 @@
 | [`python/generate_favicons.py`](python/generate_favicons.py) | Dynamic multi-size favicon generator | Icon Resizer, Asset Pipeline |
 | [`python/generate_og_card.py`](python/generate_og_card.py) | OpenGraph social preview image generator | Pillow Compositor, Brand Styler |
 | [`python/hooks/post_edit_hook.py`](python/hooks/post_edit_hook.py) | IDE lifecycle hook triggering component updates on file modification | Hook Trigger, Event Dispatcher |
-| **Python Function Definitions** | **315 functions** across tooling scripts | Modular execution units |
+| **Python Function Definitions** | **325 functions** across tooling scripts | Modular execution units |
 | **Python Class Definitions** | **11 classes** | Structured state containers |
 
 ---
@@ -131,10 +131,10 @@
 
 ## 8. HTML UI Verification Suite Summary (`tests/test_html_ui.py`)
 
-- **Framework**: `BeautifulSoup4 + html.parser (unittest)`
+- **Framework**: `BeautifulSoup4 + lxml (unittest)`
 - **Pages Scanned**: **85 HTML pages**
-- **Summary**: **101 / 101 PASSED** (`0` failures, `5.61s`, Status: **PASSED**)
-- **Last Verified**: `2026-11-27 07:06:33 UTC`
+- **Summary**: **107 / 107 PASSED** (`0` failures, `8.13s`, Status: **PASSED**)
+- **Last Verified**: `2026-11-27 07:26:49 UTC`
 
 | Test Category | Tests | Passed | Failed | Pass Rate | Status |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -145,7 +145,7 @@
 | **Interactive Widgets & Page DOM Contracts** | 12 | 12 | 0 | 100.0% | **PASSED** |
 | **Structured Data, Assets & Hygiene** | 4 | 4 | 0 | 100.0% | **PASSED** |
 | **Production Error Scenarios & Fault Injection** | 15 | 15 | 0 | 100.0% | **PASSED** |
-| **HTML UI Total** | **101** | **101** | **0** | **100.0%** | **PASSED** |
+| **HTML UI Total** | **107** | **107** | **0** | **100.0%** | **PASSED** |
 
 ---
 

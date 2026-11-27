@@ -10,7 +10,12 @@
       "publisher": {
         "@id": "https://thedigitalfuturist.com/#organization"
       },
-      "inLanguage": "en-US"
+      "inLanguage": "en-US",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://thedigitalfuturist.com/articles.html?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
     },
     {
       "@type": "Organization",
@@ -74,45 +79,29 @@
         "@id": "https://thedigitalfuturist.com/#organization"
       },
       "knowsAbout": [
-        "Technical Writing",
-        "Claude Agent Orchestration",
-        "Generative AI Systems Consulting",
-        "Quantum Systems Exploration",
-        "Python Programming",
-        "Scikit-Learn Stack",
-        "PyTorch",
-        "AI Agents",
-        "Microsoft Agent Framework",
-        "Rust Programming",
-        "Candle",
-        "Burn",
-        "AI Engineering",
-        "Systems Engineering",
-        "Test-Driven Development(TDD)",
-        "Generative AI",
-        "Large Language Models",
-        "Small Language Models",
-        "HuggingFace",
-        "Open Source",
-        "Agentic AI",
-        "OpenClaw",
-        "Agentic Assistants",
-        "Retrieval Augmented Generation",
-        "Local LLM Deployment",
-        "Model Quantisation",
-        "Quantum Computing",
-        "Quantum Machine Learning",
-        "Quantum Technologies",
-        "Quantum Algorithms",
-        "IBM Qiskit",
-        "Microsoft Q#",
-        "Quantinuum Stack",
-        "PennyLane",
-        "Google Cirq",
-        "TensorFlow Quantum",
-        "Post-Quantum Cryptography",
-        "SEO | AEO | GEO",
-        "Git | GitHub | GitLab"
+        {
+          "@type": "Thing",
+          "name": "Generative Artificial Intelligence",
+          "sameAs": "https://www.wikidata.org/wiki/Q117246174"
+        },
+        {
+          "@type": "Thing",
+          "name": "Large Language Models",
+          "sameAs": "https://www.wikidata.org/wiki/Q115305900"
+        },
+        {
+          "@type": "Thing",
+          "name": "Intelligent Agent",
+          "sameAs": "https://www.wikidata.org/wiki/Q1142726"
+        },
+        {
+          "@type": "Thing",
+          "name": "Model Context Protocol (MCP)"
+        },
+        {
+          "@type": "Thing",
+          "name": "Local LLM Inference (vLLM, Ollama, llama.cpp)"
+        }
       ],
       "sameAs": [
         "https://thomascherickal.com",

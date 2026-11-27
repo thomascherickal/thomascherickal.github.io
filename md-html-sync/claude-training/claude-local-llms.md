@@ -2,7 +2,7 @@
 ## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// PROVIDER DEEP DIVE**  
-> **Learn how to pair Claude's frontier planning capabilities with sovereign local open-weights models such as Llama, Gemma, and Qwen. Covers hybrid routing architectures, hardware VRAM sizing, privacy boundaries, and cost-efficient local worker execution.**
+> **Direct Answer: Claude with Local LLMs Guide is an in-depth technical reference by Thomas Cherickal (The Digital Futurist). Thomas Cherickal - Generative AI Consultant and The Digital Futurist. Pair Claude's frontier planning with sovereign local open-weights models like Llama.**
 
 ---
 

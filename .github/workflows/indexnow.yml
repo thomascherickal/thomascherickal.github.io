@@ -1,0 +1,59 @@
+name: Notify IndexNow on Deploy
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '**.html'
+      - 'sitemap.xml'
+      - 'llms.txt'
+      - 'rss.xml'
+
+jobs:
+  indexnow:
+    runs-on: ubuntu-latest
+    if: ${{ secrets.INDEXNOW_KEY != '' }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Wait for GitHub Pages propagation
+        run: sleep 45
+
+      - name: Submit changed HTML URLs to IndexNow
+        env:
+          INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+        run: |
+          python3 - << 'PY'
+          import json, os, subprocess, urllib.request
+          key = os.environ.get("INDEXNOW_KEY", "").strip()
+          if not key:
+              print("INDEXNOW_KEY secret not set; skipping IndexNow ping.")
+              raise SystemExit(0)
+          changed = subprocess.check_output(
+              ["git", "diff", "--name-only", "HEAD~1", "HEAD"], text=True
+          ).splitlines()
+          urls = []
+          for p in changed:
+              if p.endswith(".html") and os.path.basename(p) not in ("header.html", "footer.html", "404.html", "mermaid.html"):
+                  url = "https://thedigitalfuturist.com/" + ("" if p == "index.html" else p)
+                  urls.append(url)
+          if not urls:
+              print("No indexable HTML URLs changed.")
+              raise SystemExit(0)
+          payload = json.dumps({
+              "host": "thedigitalfuturist.com",
+              "key": key,
+              "keyLocation": f"https://thedigitalfuturist.com/{key}.txt",
+              "urlList": urls
+          }).encode("utf-8")
+          req = urllib.request.Request(
+              "https://api.indexnow.org/indexnow",
+              data=payload,
+              headers={"Content-Type": "application/json; charset=utf-8"},
+              method="POST"
+          )
+          with urllib.request.urlopen(req, timeout=20) as resp:
+              print(f"IndexNow status: {resp.status} for {len(urls)} URL(s)")
+          PY

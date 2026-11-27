@@ -2,7 +2,7 @@
 ## AI Agent Architecture & Orchestration - Thomas Cherickal
 
 > **// PROVIDER DEEP DIVE**  
-> **Use Claude to convert meetings and discussions into a clear visual whiteboard marked with milestones, deliverables, and project phases. Turn that shared visual artifact into project plans, code scaffolds, and automated updates across external team tools.**
+> **Direct Answer: Claude Whiteboards Architecture is an in-depth technical reference by Thomas Cherickal (The Digital Futurist). Thomas Cherickal - Generative AI Consultant and The Digital Futurist. Convert meetings and discussions into clear visual whiteboards with milestones.**
 
 ---
 
