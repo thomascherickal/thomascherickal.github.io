@@ -58,8 +58,8 @@ To fix the tests automatically with AGY, run:
 [Auto-Healer] Invoking agy CLI to diagnose and heal failure (Attempt 1/3)...
 Checked 2 internal links across 1 HTML files.
 FOUND 2 BROKEN LINKS/ANCHORS:
-  - Broken link in ../../../../../../../tmp/tmpj0k78eng/broken.html: 'missing.html' -> Target file ../../../../../../../tmp/tmpj0k78eng/missing.html not found
-  - Broken anchor in ../../../../../../../tmp/tmpj0k78eng/broken.html: '#missing-anchor' -> ID '#missing-anchor' not found in ../../../../../../../tmp/tmpj0k78eng/broken.html
+  - Broken link in ../../../../../../../tmp/tmpgarj_jku/broken.html: 'missing.html' -> Target file ../../../../../../../tmp/tmpgarj_jku/missing.html not found
+  - Broken anchor in ../../../../../../../tmp/tmpgarj_jku/broken.html: '#missing-anchor' -> ID '#missing-anchor' not found in ../../../../../../../tmp/tmpgarj_jku/broken.html
 Checked 1 internal links across 2 HTML files.
 ZERO broken internal links or fragments found! All links verified.
 Checked 1 internal links across 2 HTML files.
@@ -112,7 +112,7 @@ ZERO broken internal links or fragments found! All links verified.
 
 [Step 4b] Synchronizing source code and unit test suites...
   [UPDATE SCOPE] Fields: Authoritative facts -> Target: python/*.py, root JS, and tests/*
-  -> All 50 source/test files evaluated. Zero changes required (fully in sync).
+  -> All 51 source/test files evaluated. Zero changes required (fully in sync).
 
 [Step 5/6] Generating domain references and master dictionary...
   [UPDATE SCOPE] Fields: Tracked occurrences & references -> Target: nlp-fuzzy-expert/*_references.json
@@ -177,22 +177,22 @@ Summary: 99 files evaluated | 2 updated | 97 in sync | 64 references tracked
 
 [Step 4b] Synchronizing source code and unit test suites...
   [UPDATE SCOPE] Fields: Authoritative facts -> Target: python/*.py, root JS, and tests/*
-  -> All 50 source/test files evaluated. Zero changes required (fully in sync).
+  -> All 51 source/test files evaluated. Zero changes required (fully in sync).
 
 [Step 5/6] Generating domain references and master dictionary...
   [UPDATE SCOPE] Fields: Tracked occurrences & references -> Target: nlp-fuzzy-expert/*_references.json
-  -> Exhaustive scan located 28089 term occurrences across 99 documents
-  -> Wrote pricing_references.json (3228 references)
-  -> Wrote business_services_references.json (3290 references)
-  -> Wrote tiers_references.json (3437 references)
+  -> Exhaustive scan located 27847 term occurrences across 99 documents
+  -> Wrote pricing_references.json (3077 references)
+  -> Wrote personal_services_references.json (1115 references)
+  -> Wrote tiers_references.json (3353 references)
   -> Wrote config_references.json (6847 references)
-  -> Master Dictionary generated: references_dictionary.json (28207 total references)
+  -> Master Dictionary generated: references_dictionary.json (27964 total references)
   -> Lightweight Manifest generated: references_manifest.json (108 documents indexed)
 
 [Step 6/6] Generating domain markdown synchronization reports...
   [UPDATE SCOPE] Fields: Domain summaries & occurrence tables -> Target: nlp-fuzzy-expert/*.md reports
   -> Wrote pricing.md
-  -> Wrote business-services.md
+  -> Wrote personal-services.md
   -> Wrote tiers.md
   -> Wrote config.md
 
@@ -204,7 +204,7 @@ Summary: 99 files evaluated | 2 updated | 97 in sync | 64 references tracked
 +-----------------------------------------------+---------+---------------+--------------------------+--------------------------+
 | personal-services/personal-service-agentic... | UPDATED | 6, 296        | PersonalServicesNames... | individual_service_du... |
 +-----------------------------------------------+---------+---------------+--------------------------+--------------------------+
-Summary: 99 files evaluated | 1 updated | 98 in sync | 100 references tracked
+Summary: 99 files evaluated | 1 updated | 98 in sync | 99 references tracked
 ================================================================================
 ================================================================================
            NLP-FUZZY-EXPERT KNOWLEDGE SYNCHRONIZATION SYSTEM
@@ -258,17 +258,17 @@ Summary: 99 files evaluated | 1 updated | 98 in sync | 100 references tracked
      Changed Lines: 423, 443, 542
      Rules Fired:   PricingCalculatorScriptRule
      Fields Synced: calculator_seat_threshold, tier_1_calc_multiplier, tier_2_calc_multiplier, tier_3_calc_multiplier, tier_4_calc_multiplier, tier_5_calc_multiplier, tier_6_calc_multiplier
-  -> [MODIFIED] pricing.html | Field: business_flagship_days, business_flagship_price, business_service_01_pricing_card, business_service_02_pricing_card, business_service_03_pricing_card, business_service_04_pricing_card, business_service_05_pricing_card, business_service_06_pricing_card, business_service_07_pricing_card, business_service_08_pricing_card, business_service_09_pricing_card, business_service_10_pricing_card, business_service_11_pricing_card, business_service_12_pricing_card, business_service_13_pricing_card, business_service_14_pricing_card, business_service_15_pricing_card, business_service_16_pricing_card, calculator_options, personal_flagship_days, personal_flagship_price, tier_1_parity, tier_2_parity, tier_3_parity, tier_4_parity, tier_5_parity, tier_6_parity | Location: Line(s) 60, 94, 453, 1057, 1105, 1250, 1255
-     Changed Lines: 60, 94, 453, 1057, 1105, 1250, 1255
-     Rules Fired:   PricingHeroPackagesRule, PricingCalculatorSelectOptionsRule
-     Fields Synced: business_flagship_days, business_flagship_price, business_service_01_pricing_card, business_service_02_pricing_card, business_service_03_pricing_card, business_service_04_pricing_card, business_service_05_pricing_card, business_service_06_pricing_card, business_service_07_pricing_card, business_service_08_pricing_card, business_service_09_pricing_card, business_service_10_pricing_card, business_service_11_pricing_card, business_service_12_pricing_card, business_service_13_pricing_card, business_service_14_pricing_card, business_service_15_pricing_card, business_service_16_pricing_card, calculator_options, personal_flagship_days, personal_flagship_price, tier_1_parity, tier_2_parity, tier_3_parity, tier_4_parity, tier_5_parity, tier_6_parity
+  -> [MODIFIED] pricing.html | Field: business_flagship_days, business_flagship_price, business_service_01_pricing_card, business_service_02_pricing_card, business_service_03_pricing_card, business_service_04_pricing_card, business_service_05_pricing_card, business_service_06_pricing_card, business_service_07_pricing_card, business_service_08_pricing_card, business_service_09_pricing_card, business_service_10_pricing_card, business_service_11_pricing_card, business_service_12_pricing_card, business_service_13_pricing_card, business_service_14_pricing_card, business_service_15_pricing_card, business_service_16_pricing_card, personal_flagship_days, personal_flagship_price, tier_1_parity, tier_2_parity, tier_3_parity, tier_4_parity, tier_5_parity, tier_6_parity | Location: Line(s) 60, 94, 453
+     Changed Lines: 60, 94, 453
+     Rules Fired:   PricingHeroPackagesRule
+     Fields Synced: business_flagship_days, business_flagship_price, business_service_01_pricing_card, business_service_02_pricing_card, business_service_03_pricing_card, business_service_04_pricing_card, business_service_05_pricing_card, business_service_06_pricing_card, business_service_07_pricing_card, business_service_08_pricing_card, business_service_09_pricing_card, business_service_10_pricing_card, business_service_11_pricing_card, business_service_12_pricing_card, business_service_13_pricing_card, business_service_14_pricing_card, business_service_15_pricing_card, business_service_16_pricing_card, personal_flagship_days, personal_flagship_price, tier_1_parity, tier_2_parity, tier_3_parity, tier_4_parity, tier_5_parity, tier_6_parity
   -> Total documents modified: 5 of 99
 
 [Step 4b] Synchronizing source code and unit test suites...
   [UPDATE SCOPE] Fields: Authoritative facts -> Target: python/*.py, root JS, and tests/*
   -> [MODIFIED] pricing-calculator.js | Status: UPDATED | Changed Lines: 171
   -> [MODIFIED] pricing-tests.js | Status: UPDATED | Changed Lines: 21
-  -> Total source/test files updated: 2 of 50
+  -> Total source/test files updated: 2 of 51
 
 [Step 5/6] Generating domain references and master dictionary...
   [UPDATE SCOPE] Fields: Tracked occurrences & references -> Target: nlp-fuzzy-expert/*_references.json
@@ -281,106 +281,18 @@ Summary: 99 files evaluated | 1 updated | 98 in sync | 100 references tracked
 ================================================================================
                      SYNCHRONIZATION SUMMARY TABLE
 ================================================================================
-+-----------------------+---------+------------------------+--------------------------+--------------------------+
-| Target File           | Status  | Changed Lines          | Rules Fired              | Fields Synced            |
-+-----------------------+---------+------------------------+--------------------------+--------------------------+
-| faqs.html             | UPDATED | 1938, 1950             | FAQsPoliciesRule         | business_included_seats  |
-| guarantees.html       | UPDATED | 573                    | GuaranteesPageRule       | guarantees_business_f... |
-| llms.txt              | UPDATED | 13, 40, 42             | LLMsTxtRule              | llms_business_flagshi... |
-| pricing-calculator.js | UPDATED | 423, 443, 542          | PricingCalculatorScri... | calculator_seat_thres... |
-| pricing.html          | UPDATED | 60, 94, 453, 1057, ... | PricingHeroPackagesRu... | business_flagship_day... |
-| pricing-calculator.js | UPDATED | 171                    | CodeTestSynchronizer     | source_and_tests         |
-| pricing-tests.js      | UPDATED | 21                     | CodeTestSynchronizer     | source_and_tests         |
-+-----------------------+---------+------------------------+--------------------------+--------------------------+
-Summary: 99 files evaluated | 7 updated | 92 in sync | 230 references tracked
-================================================================================
-================================================================================
-           NLP-FUZZY-EXPERT KNOWLEDGE SYNCHRONIZATION SYSTEM
-================================================================================
-  [DATA FLOW] Direction: data/*.json -> HTML/JS/MD/Code (STRICTLY UNIDIRECTIONAL / ONE-WAY)
-[Step 1/6] Loading authoritative facts from data/*.json into KnowledgeBase...
-  [UPDATE SCOPE] Domain: data/*.json -> Target: KnowledgeBase atomic facts cache
-  -> Authoritative sources loaded: 11 data domains
-     - data/business_services.json: 3 top-level entries
-     - data/claude.json: 2 top-level entries
-     - data/config.json: 11 top-level entries
-     - data/contact.json: 6 top-level entries
-     - data/faqs.json: 2 top-level entries
-     - data/gemini.json: 2 top-level entries
-     - data/guarantees.json: 5 top-level entries
-     - data/personal_services.json: 3 top-level entries
-     - data/pricing.json: 7 top-level entries
-     - data/publications.json: 48 top-level entries
-     - data/tiers.json: 2 top-level entries
-  -> Total atomic propositions registered in KnowledgeBase: 310
-
-[Step 2/6] Registering production rules in salience priority order...
-  [UPDATE SCOPE] Domain: rules.py -> Target: InferenceEngine priority rule queue
-  -> Active production rules registered: 18
-     - Salience 100: PricingHeroPackagesRule (domain: pricing)
-     - Salience 100: PricingCalculatorScriptRule (domain: pricing)
-     - Salience  95: PricingCalculatorSelectOptionsRule (domain: pricing)
-     - Salience  92: PricingSection5CardsRule (domain: pricing)
-     - Salience  90: BusinessAITrainingRule (domain: business_training)
-     ... and 13 additional production rules
-
-[Step 3/6] Discovering target documents across repository...
-  [UPDATE SCOPE] Domain: Repository scan -> Target: Target HTML and JS documents list
-  -> Discovered 99 target documents (.html, .js) for synchronization.
-
-[Step 4/6] Executing forward-chaining inference & computing line diffs...
-  [UPDATE SCOPE] Fields: Authoritative pricing, tiers, curricula & configs -> Target: HTML/JS repository pages
-  -> [MODIFIED] faqs.html | Field: business_included_seats | Location: Line(s) 1938, 1950
-     Changed Lines: 1938, 1950
-     Rules Fired:   FAQsPoliciesRule
-     Fields Synced: business_included_seats
-  -> [MODIFIED] guarantees.html | Field: guarantees_business_flagship_price, guarantees_personal_flagship_price | Location: Line(s) 573
-     Changed Lines: 573
-     Rules Fired:   GuaranteesPageRule
-     Fields Synced: guarantees_business_flagship_price, guarantees_personal_flagship_price
-  -> [MODIFIED] llms.txt | Field: llms_business_flagship_price, llms_individual_service_price, llms_personal_flagship_price | Location: Line(s) 13, 40, 42
-     Changed Lines: 13, 40, 42
-     Rules Fired:   LLMsTxtRule
-     Fields Synced: llms_business_flagship_price, llms_individual_service_price, llms_personal_flagship_price
-  -> [MODIFIED] pricing-calculator.js | Field: calculator_seat_threshold, tier_1_calc_multiplier, tier_2_calc_multiplier, tier_3_calc_multiplier, tier_4_calc_multiplier, tier_5_calc_multiplier, tier_6_calc_multiplier | Location: Line(s) 423, 443, 542
-     Changed Lines: 423, 443, 542
-     Rules Fired:   PricingCalculatorScriptRule
-     Fields Synced: calculator_seat_threshold, tier_1_calc_multiplier, tier_2_calc_multiplier, tier_3_calc_multiplier, tier_4_calc_multiplier, tier_5_calc_multiplier, tier_6_calc_multiplier
-  -> [MODIFIED] pricing.html | Field: business_flagship_days, business_flagship_price, business_service_01_pricing_card, business_service_02_pricing_card, business_service_03_pricing_card, business_service_04_pricing_card, business_service_05_pricing_card, business_service_06_pricing_card, business_service_07_pricing_card, business_service_08_pricing_card, business_service_09_pricing_card, business_service_10_pricing_card, business_service_11_pricing_card, business_service_12_pricing_card, business_service_13_pricing_card, business_service_14_pricing_card, business_service_15_pricing_card, business_service_16_pricing_card, calculator_options, personal_flagship_days, personal_flagship_price, tier_1_parity, tier_2_parity, tier_3_parity, tier_4_parity, tier_5_parity, tier_6_parity | Location: Line(s) 60, 94, 453, 1057, 1105, 1250, 1255
-     Changed Lines: 60, 94, 453, 1057, 1105, 1250, 1255
-     Rules Fired:   PricingHeroPackagesRule, PricingCalculatorSelectOptionsRule
-     Fields Synced: business_flagship_days, business_flagship_price, business_service_01_pricing_card, business_service_02_pricing_card, business_service_03_pricing_card, business_service_04_pricing_card, business_service_05_pricing_card, business_service_06_pricing_card, business_service_07_pricing_card, business_service_08_pricing_card, business_service_09_pricing_card, business_service_10_pricing_card, business_service_11_pricing_card, business_service_12_pricing_card, business_service_13_pricing_card, business_service_14_pricing_card, business_service_15_pricing_card, business_service_16_pricing_card, calculator_options, personal_flagship_days, personal_flagship_price, tier_1_parity, tier_2_parity, tier_3_parity, tier_4_parity, tier_5_parity, tier_6_parity
-  -> Total documents modified: 5 of 99
-
-[Step 4b] Synchronizing source code and unit test suites...
-  [UPDATE SCOPE] Fields: Authoritative facts -> Target: python/*.py, root JS, and tests/*
-  -> [MODIFIED] pricing-calculator.js | Status: UPDATED | Changed Lines: 171
-  -> [MODIFIED] pricing-tests.js | Status: UPDATED | Changed Lines: 21
-  -> Total source/test files updated: 2 of 50
-
-[Step 5/6] Generating domain references and master dictionary...
-  [UPDATE SCOPE] Fields: Tracked occurrences & references -> Target: nlp-fuzzy-expert/*_references.json
-  -> Reference dictionaries and manifest already in sync.
-
-[Step 6/6] Generating domain markdown synchronization reports...
-  [UPDATE SCOPE] Fields: Domain summaries & occurrence tables -> Target: nlp-fuzzy-expert/*.md reports
-  -> Markdown reports already in sync.
-
-================================================================================
-                     SYNCHRONIZATION SUMMARY TABLE
-================================================================================
-+-----------------------+---------+------------------------+--------------------------+--------------------------+
-| Target File           | Status  | Changed Lines          | Rules Fired              | Fields Synced            |
-+-----------------------+---------+------------------------+--------------------------+--------------------------+
-| faqs.html             | UPDATED | 1938, 1950             | FAQsPoliciesRule         | business_included_seats  |
-| guarantees.html       | UPDATED | 573                    | GuaranteesPageRule       | guarantees_business_f... |
-| llms.txt              | UPDATED | 13, 40, 42             | LLMsTxtRule              | llms_business_flagshi... |
-| pricing-calculator.js | UPDATED | 423, 443, 542          | PricingCalculatorScri... | calculator_seat_thres... |
-| pricing.html          | UPDATED | 60, 94, 453, 1057, ... | PricingHeroPackagesRu... | business_flagship_day... |
-| pricing-calculator.js | UPDATED | 171                    | CodeTestSynchronizer     | source_and_tests         |
-| pricing-tests.js      | UPDATED | 21                     | CodeTestSynchronizer     | source_and_tests         |
-+-----------------------+---------+------------------------+--------------------------+--------------------------+
-Summary: 99 files evaluated | 7 updated | 92 in sync | 230 references tracked
++-----------------------+---------+---------------+--------------------------+--------------------------+
+| Target File           | Status  | Changed Lines | Rules Fired              | Fields Synced            |
++-----------------------+---------+---------------+--------------------------+--------------------------+
+| faqs.html             | UPDATED | 1938, 1950    | FAQsPoliciesRule         | business_included_seats  |
+| guarantees.html       | UPDATED | 573           | GuaranteesPageRule       | guarantees_business_f... |
+| llms.txt              | UPDATED | 13, 40, 42    | LLMsTxtRule              | llms_business_flagshi... |
+| pricing-calculator.js | UPDATED | 423, 443, 542 | PricingCalculatorScri... | calculator_seat_thres... |
+| pricing.html          | UPDATED | 60, 94, 453   | PricingHeroPackagesRule  | business_flagship_day... |
+| pricing-calculator.js | UPDATED | 171           | CodeTestSynchronizer     | source_and_tests         |
+| pricing-tests.js      | UPDATED | 21            | CodeTestSynchronizer     | source_and_tests         |
++-----------------------+---------+---------------+--------------------------+--------------------------+
+Summary: 99 files evaluated | 7 updated | 92 in sync | 229 references tracked
 ================================================================================
 ================================================================================
            NLP-FUZZY-EXPERT KNOWLEDGE SYNCHRONIZATION SYSTEM
@@ -431,16 +343,16 @@ Summary: 99 files evaluated | 7 updated | 92 in sync | 230 references tracked
 [Step 4b] Synchronizing source code and unit test suites...
   [UPDATE SCOPE] Fields: Authoritative facts -> Target: python/*.py, root JS, and tests/*
   -> [MODIFIED] pricing-tests.js | Status: UPDATED | Changed Lines: 21
-  -> Total source/test files updated: 1 of 50
+  -> Total source/test files updated: 1 of 51
 
 [Step 5/6] Generating domain references and master dictionary...
   [UPDATE SCOPE] Fields: Tracked occurrences & references -> Target: nlp-fuzzy-expert/*_references.json
-  -> Exhaustive scan located 28068 term occurrences across 99 documents
-  -> Wrote pricing_references.json (3242 references)
+  -> Exhaustive scan located 27847 term occurrences across 99 documents
+  -> Wrote pricing_references.json (3132 references)
   -> Wrote business_services_references.json (3322 references)
-  -> Wrote tiers_references.json (3499 references)
+  -> Wrote tiers_references.json (3395 references)
   -> Wrote config_references.json (6848 references)
-  -> Master Dictionary generated: references_dictionary.json (28316 total references)
+  -> Master Dictionary generated: references_dictionary.json (28094 total references)
   -> Lightweight Manifest generated: references_manifest.json (108 documents indexed)
 
 [Step 6/6] Generating domain markdown synchronization reports...
@@ -460,18 +372,18 @@ Summary: 99 files evaluated | 7 updated | 92 in sync | 230 references tracked
 | llms.txt         | UPDATED | 13, 40, 42    | LLMsTxtRule          | llms_business_flagshi... |
 | pricing-tests.js | UPDATED | 21            | CodeTestSynchronizer | source_and_tests         |
 +------------------+---------+---------------+----------------------+--------------------------+
-Summary: 99 files evaluated | 3 updated | 96 in sync | 230 references tracked
+Summary: 99 files evaluated | 3 updated | 96 in sync | 229 references tracked
 ================================================================================
-[Coverage Report] Successfully appended coverage report to /tmp/tmphsqx4r30/LAST-COMMIT-REPORT.md (Combined: 97.86% | Elapsed: 0.0s)
-[Coverage Report] Successfully appended coverage report to /tmp/tmphsqx4r30/LAST-COMMIT-REPORT.md (Combined: 97.86% | Elapsed: 0.0s)
-[Coverage Report] Successfully appended coverage report to /tmp/tmpzuz0dyd1/LAST-COMMIT-REPORT.md (Combined: 100.00% | Elapsed: 0.0s)
-[Pre-Commit Report] Successfully recorded report (parent 92de691) to /tmp/tmpe65qoaun/LAST-COMMIT-REPORT.md
-[Pre-Commit Report] Successfully recorded report (parent M	README.md) to /tmp/tmpe65qoaun/LAST-COMMIT-REPORT.md
-[Pre-Commit Report] Successfully recorded report (parent ) to /tmp/tmpe65qoaun/LAST-COMMIT-REPORT.md
-[README Commit Summary] Successfully updated /tmp/tmpanlmkb8s/README.md from /tmp/tmpanlmkb8s/rep.md and /tmp/tmpanlmkb8s/METRICS.md
-[README Commit Summary] Successfully updated /tmp/tmpanlmkb8s/README.md from /tmp/tmpanlmkb8s/rep.md and /tmp/tmpanlmkb8s/METRICS.md
-[README Commit Summary] Successfully updated /tmp/tmpanlmkb8s/README_plain.md from /tmp/tmpanlmkb8s/rep_min.md and /tmp/tmpanlmkb8s/missing_METRICS.md
-[README Commit Summary] Successfully updated /tmp/tmpanlmkb8s/README_plain.md from /tmp/tmpanlmkb8s/rep_min.md and /tmp/tmpanlmkb8s/missing_METRICS.md
+[Coverage Report] Successfully appended coverage report to /tmp/tmpo9u2b6v2/LAST-COMMIT-REPORT.md (Combined: 97.86% | Elapsed: 0.0s)
+[Coverage Report] Successfully appended coverage report to /tmp/tmpo9u2b6v2/LAST-COMMIT-REPORT.md (Combined: 97.86% | Elapsed: 0.0s)
+[Coverage Report] Successfully appended coverage report to /tmp/tmp_ybt11p5/LAST-COMMIT-REPORT.md (Combined: 100.00% | Elapsed: 0.0s)
+[Pre-Commit Report] Successfully recorded report (parent cdc426c) to /tmp/tmpcm301fkg/LAST-COMMIT-REPORT.md
+[Pre-Commit Report] Successfully recorded report (parent M	README.md) to /tmp/tmpcm301fkg/LAST-COMMIT-REPORT.md
+[Pre-Commit Report] Successfully recorded report (parent ) to /tmp/tmpcm301fkg/LAST-COMMIT-REPORT.md
+[README Commit Summary] Successfully updated /tmp/tmp7fkyoo6u/README.md from /tmp/tmp7fkyoo6u/rep.md and /tmp/tmp7fkyoo6u/METRICS.md
+[README Commit Summary] Successfully updated /tmp/tmp7fkyoo6u/README.md from /tmp/tmp7fkyoo6u/rep.md and /tmp/tmp7fkyoo6u/METRICS.md
+[README Commit Summary] Successfully updated /tmp/tmp7fkyoo6u/README_plain.md from /tmp/tmp7fkyoo6u/rep_min.md and /tmp/tmp7fkyoo6u/missing_METRICS.md
+[README Commit Summary] Successfully updated /tmp/tmp7fkyoo6u/README_plain.md from /tmp/tmp7fkyoo6u/rep_min.md and /tmp/tmp7fkyoo6u/missing_METRICS.md
 ================================================================================
            NLP-FUZZY-EXPERT KNOWLEDGE SYNCHRONIZATION SYSTEM
 ================================================================================
@@ -512,7 +424,7 @@ Summary: 99 files evaluated | 3 updated | 96 in sync | 230 references tracked
 
 [Step 4b] Synchronizing source code and unit test suites...
   [UPDATE SCOPE] Fields: Authoritative facts -> Target: python/*.py, root JS, and tests/*
-  -> All 50 source/test files evaluated. Zero changes required (fully in sync).
+  -> All 51 source/test files evaluated. Zero changes required (fully in sync).
 
 [Step 5/6] Generating domain references and master dictionary...
   [UPDATE SCOPE] Fields: Tracked occurrences & references -> Target: nlp-fuzzy-expert/*_references.json
@@ -580,7 +492,7 @@ Summary: 99 files evaluated | 0 updated | 99 in sync | 0 references tracked
 
 [Step 4b] Synchronizing source code and unit test suites...
   [UPDATE SCOPE] Fields: Authoritative facts -> Target: python/*.py, root JS, and tests/*
-  -> All 50 source/test files evaluated. Zero changes required (fully in sync).
+  -> All 51 source/test files evaluated. Zero changes required (fully in sync).
 
 [Step 5/6] Generating domain references and master dictionary...
   [UPDATE SCOPE] Fields: Tracked occurrences & references -> Target: nlp-fuzzy-expert/*_references.json
@@ -682,7 +594,7 @@ Summary: 99 files evaluated | 0 updated | 99 in sync | 0 references tracked
 
 [Step 4b] Synchronizing source code and unit test suites...
   [UPDATE SCOPE] Fields: Authoritative facts -> Target: python/*.py, root JS, and tests/*
-  -> All 50 source/test files evaluated. Zero changes required (fully in sync).
+  -> All 51 source/test files evaluated. Zero changes required (fully in sync).
 
 [Step 5/6] Generating domain references and master dictionary...
   [UPDATE SCOPE] Fields: Tracked occurrences & references -> Target: nlp-fuzzy-expert/*_references.json
@@ -750,7 +662,7 @@ Summary: 99 files evaluated | 0 updated | 99 in sync | 0 references tracked
 
 [Step 4b] Synchronizing source code and unit test suites...
   [UPDATE SCOPE] Fields: Authoritative facts -> Target: python/*.py, root JS, and tests/*
-  -> All 50 source/test files evaluated. Zero changes required (fully in sync).
+  -> All 51 source/test files evaluated. Zero changes required (fully in sync).
 
 [Step 5/6] Generating domain references and master dictionary...
   [UPDATE SCOPE] Fields: Tracked occurrences & references -> Target: nlp-fuzzy-expert/*_references.json
@@ -818,7 +730,7 @@ Summary: 99 files evaluated | 0 updated | 99 in sync | 0 references tracked
 
 [Step 4b] Synchronizing source code and unit test suites...
   [UPDATE SCOPE] Fields: Authoritative facts -> Target: python/*.py, root JS, and tests/*
-  -> All 50 source/test files evaluated. Zero changes required (fully in sync).
+  -> All 51 source/test files evaluated. Zero changes required (fully in sync).
 
 [Step 5/6] Generating domain references and master dictionary...
   [UPDATE SCOPE] Fields: Tracked occurrences & references -> Target: nlp-fuzzy-expert/*_references.json
@@ -886,7 +798,7 @@ Summary: 99 files evaluated | 0 updated | 99 in sync | 0 references tracked
 
 [Step 4b] Synchronizing source code and unit test suites...
   [UPDATE SCOPE] Fields: Authoritative facts -> Target: python/*.py, root JS, and tests/*
-  -> All 50 source/test files evaluated. Zero changes required (fully in sync).
+  -> All 51 source/test files evaluated. Zero changes required (fully in sync).
 
 [Step 5/6] Generating domain references and master dictionary...
   [UPDATE SCOPE] Fields: Tracked occurrences & references -> Target: nlp-fuzzy-expert/*_references.json
@@ -954,7 +866,7 @@ Summary: 99 files evaluated | 0 updated | 99 in sync | 0 references tracked
 
 [Step 4b] Synchronizing source code and unit test suites...
   [UPDATE SCOPE] Fields: Authoritative facts -> Target: python/*.py, root JS, and tests/*
-  -> All 50 source/test files evaluated. Zero changes required (fully in sync).
+  -> All 51 source/test files evaluated. Zero changes required (fully in sync).
 
 [Step 5/6] Generating domain references and master dictionary...
   [UPDATE SCOPE] Fields: Tracked occurrences & references -> Target: nlp-fuzzy-expert/*_references.json
@@ -1022,7 +934,7 @@ Summary: 99 files evaluated | 0 updated | 99 in sync | 0 references tracked
 
 [Step 4b] Synchronizing source code and unit test suites...
   [UPDATE SCOPE] Fields: Authoritative facts -> Target: python/*.py, root JS, and tests/*
-  -> All 50 source/test files evaluated. Zero changes required (fully in sync).
+  -> All 51 source/test files evaluated. Zero changes required (fully in sync).
 
 [Step 5/6] Generating domain references and master dictionary...
   [UPDATE SCOPE] Fields: Tracked occurrences & references -> Target: nlp-fuzzy-expert/*_references.json
@@ -1090,7 +1002,7 @@ Summary: 99 files evaluated | 0 updated | 99 in sync | 0 references tracked
 
 [Step 4b] Synchronizing source code and unit test suites...
   [UPDATE SCOPE] Fields: Authoritative facts -> Target: python/*.py, root JS, and tests/*
-  -> All 50 source/test files evaluated. Zero changes required (fully in sync).
+  -> All 51 source/test files evaluated. Zero changes required (fully in sync).
 
 [Step 5/6] Generating domain references and master dictionary...
   [UPDATE SCOPE] Fields: Tracked occurrences & references -> Target: nlp-fuzzy-expert/*_references.json
@@ -1158,7 +1070,7 @@ Summary: 99 files evaluated | 0 updated | 99 in sync | 0 references tracked
 
 [Step 4b] Synchronizing source code and unit test suites...
   [UPDATE SCOPE] Fields: Authoritative facts -> Target: python/*.py, root JS, and tests/*
-  -> All 50 source/test files evaluated. Zero changes required (fully in sync).
+  -> All 51 source/test files evaluated. Zero changes required (fully in sync).
 
 [Step 5/6] Generating domain references and master dictionary...
   [UPDATE SCOPE] Fields: Tracked occurrences & references -> Target: nlp-fuzzy-expert/*_references.json
@@ -1226,7 +1138,7 @@ Summary: 99 files evaluated | 0 updated | 99 in sync | 0 references tracked
 
 [Step 4b] Synchronizing source code and unit test suites...
   [UPDATE SCOPE] Fields: Authoritative facts -> Target: python/*.py, root JS, and tests/*
-  -> All 50 source/test files evaluated. Zero changes required (fully in sync).
+  -> All 51 source/test files evaluated. Zero changes required (fully in sync).
 
 [Step 5/6] Generating domain references and master dictionary...
   [UPDATE SCOPE] Fields: Tracked occurrences & references -> Target: nlp-fuzzy-expert/*_references.json
@@ -1294,7 +1206,7 @@ Summary: 99 files evaluated | 0 updated | 99 in sync | 0 references tracked
 
 [Step 4b] Synchronizing source code and unit test suites...
   [UPDATE SCOPE] Fields: Authoritative facts -> Target: python/*.py, root JS, and tests/*
-  -> All 50 source/test files evaluated. Zero changes required (fully in sync).
+  -> All 51 source/test files evaluated. Zero changes required (fully in sync).
 
 [Step 5/6] Generating domain references and master dictionary...
   [UPDATE SCOPE] Fields: Tracked occurrences & references -> Target: nlp-fuzzy-expert/*_references.json
@@ -1362,7 +1274,7 @@ Summary: 99 files evaluated | 0 updated | 99 in sync | 0 references tracked
 
 [Step 4b] Synchronizing source code and unit test suites...
   [UPDATE SCOPE] Fields: Authoritative facts -> Target: python/*.py, root JS, and tests/*
-  -> All 50 source/test files evaluated. Zero changes required (fully in sync).
+  -> All 51 source/test files evaluated. Zero changes required (fully in sync).
 
 [Step 5/6] Generating domain references and master dictionary...
   [UPDATE SCOPE] Fields: Tracked occurrences & references -> Target: nlp-fuzzy-expert/*_references.json
@@ -1430,7 +1342,7 @@ Summary: 99 files evaluated | 0 updated | 99 in sync | 0 references tracked
 
 [Step 4b] Synchronizing source code and unit test suites...
   [UPDATE SCOPE] Fields: Authoritative facts -> Target: python/*.py, root JS, and tests/*
-  -> All 50 source/test files evaluated. Zero changes required (fully in sync).
+  -> All 51 source/test files evaluated. Zero changes required (fully in sync).
 
 [Step 5/6] Generating domain references and master dictionary...
   [UPDATE SCOPE] Fields: Tracked occurrences & references -> Target: nlp-fuzzy-expert/*_references.json
@@ -1510,17 +1422,17 @@ Summary: 99 files evaluated | 0 updated | 99 in sync | 0 references tracked
      Changed Lines: 443, 542
      Rules Fired:   PricingCalculatorScriptRule
      Fields Synced: calculator_seat_threshold, tier_1_calc_multiplier, tier_2_calc_multiplier, tier_3_calc_multiplier, tier_4_calc_multiplier, tier_5_calc_multiplier, tier_6_calc_multiplier
-  -> [MODIFIED] pricing.html | Field: business_flagship_days, business_flagship_price, business_service_01_pricing_card, business_service_02_pricing_card, business_service_03_pricing_card, business_service_04_pricing_card, business_service_05_pricing_card, business_service_06_pricing_card, business_service_07_pricing_card, business_service_08_pricing_card, business_service_09_pricing_card, business_service_10_pricing_card, business_service_11_pricing_card, business_service_12_pricing_card, business_service_13_pricing_card, business_service_14_pricing_card, business_service_15_pricing_card, business_service_16_pricing_card, calculator_options, personal_flagship_days, personal_flagship_price, tier_1_parity, tier_2_parity, tier_3_parity, tier_4_parity, tier_5_parity, tier_6_parity | Location: Line(s) 60, 94, 453, 1057, 1105, 1255
-     Changed Lines: 60, 94, 453, 1057, 1105, 1255
-     Rules Fired:   PricingHeroPackagesRule, PricingCalculatorSelectOptionsRule
-     Fields Synced: business_flagship_days, business_flagship_price, business_service_01_pricing_card, business_service_02_pricing_card, business_service_03_pricing_card, business_service_04_pricing_card, business_service_05_pricing_card, business_service_06_pricing_card, business_service_07_pricing_card, business_service_08_pricing_card, business_service_09_pricing_card, business_service_10_pricing_card, business_service_11_pricing_card, business_service_12_pricing_card, business_service_13_pricing_card, business_service_14_pricing_card, business_service_15_pricing_card, business_service_16_pricing_card, calculator_options, personal_flagship_days, personal_flagship_price, tier_1_parity, tier_2_parity, tier_3_parity, tier_4_parity, tier_5_parity, tier_6_parity
+  -> [MODIFIED] pricing.html | Field: business_flagship_days, business_flagship_price, business_service_01_pricing_card, business_service_02_pricing_card, business_service_03_pricing_card, business_service_04_pricing_card, business_service_05_pricing_card, business_service_06_pricing_card, business_service_07_pricing_card, business_service_08_pricing_card, business_service_09_pricing_card, business_service_10_pricing_card, business_service_11_pricing_card, business_service_12_pricing_card, business_service_13_pricing_card, business_service_14_pricing_card, business_service_15_pricing_card, business_service_16_pricing_card, personal_flagship_days, personal_flagship_price, tier_1_parity, tier_2_parity, tier_3_parity, tier_4_parity, tier_5_parity, tier_6_parity | Location: Line(s) 60, 94, 453
+     Changed Lines: 60, 94, 453
+     Rules Fired:   PricingHeroPackagesRule
+     Fields Synced: business_flagship_days, business_flagship_price, business_service_01_pricing_card, business_service_02_pricing_card, business_service_03_pricing_card, business_service_04_pricing_card, business_service_05_pricing_card, business_service_06_pricing_card, business_service_07_pricing_card, business_service_08_pricing_card, business_service_09_pricing_card, business_service_10_pricing_card, business_service_11_pricing_card, business_service_12_pricing_card, business_service_13_pricing_card, business_service_14_pricing_card, business_service_15_pricing_card, business_service_16_pricing_card, personal_flagship_days, personal_flagship_price, tier_1_parity, tier_2_parity, tier_3_parity, tier_4_parity, tier_5_parity, tier_6_parity
   -> Total documents modified: 5 of 99
 
 [Step 4b] Synchronizing source code and unit test suites...
   [UPDATE SCOPE] Fields: Authoritative facts -> Target: python/*.py, root JS, and tests/*
   -> [MODIFIED] pricing-calculator.js | Status: UPDATED | Changed Lines: 171
   -> [MODIFIED] pricing-tests.js | Status: UPDATED | Changed Lines: 21
-  -> Total source/test files updated: 2 of 50
+  -> Total source/test files updated: 2 of 51
 
 [Step 5/6] Generating domain references and master dictionary...
   [UPDATE SCOPE] Fields: Tracked occurrences & references -> Target: nlp-fuzzy-expert/*_references.json
@@ -1533,18 +1445,18 @@ Summary: 99 files evaluated | 0 updated | 99 in sync | 0 references tracked
 ================================================================================
                      SYNCHRONIZATION SUMMARY TABLE
 ================================================================================
-+-----------------------+---------+------------------------+--------------------------+--------------------------+
-| Target File           | Status  | Changed Lines          | Rules Fired              | Fields Synced            |
-+-----------------------+---------+------------------------+--------------------------+--------------------------+
-| faqs.html             | UPDATED | 1938, 1950             | FAQsPoliciesRule         | business_included_seats  |
-| guarantees.html       | UPDATED | 573                    | GuaranteesPageRule       | guarantees_business_f... |
-| llms.txt              | UPDATED | 40, 42                 | LLMsTxtRule              | llms_business_flagshi... |
-| pricing-calculator.js | UPDATED | 443, 542               | PricingCalculatorScri... | calculator_seat_thres... |
-| pricing.html          | UPDATED | 60, 94, 453, 1057, ... | PricingHeroPackagesRu... | business_flagship_day... |
-| pricing-calculator.js | UPDATED | 171                    | CodeTestSynchronizer     | source_and_tests         |
-| pricing-tests.js      | UPDATED | 21                     | CodeTestSynchronizer     | source_and_tests         |
-+-----------------------+---------+------------------------+--------------------------+--------------------------+
-Summary: 99 files evaluated | 7 updated | 92 in sync | 230 references tracked
++-----------------------+---------+---------------+--------------------------+--------------------------+
+| Target File           | Status  | Changed Lines | Rules Fired              | Fields Synced            |
++-----------------------+---------+---------------+--------------------------+--------------------------+
+| faqs.html             | UPDATED | 1938, 1950    | FAQsPoliciesRule         | business_included_seats  |
+| guarantees.html       | UPDATED | 573           | GuaranteesPageRule       | guarantees_business_f... |
+| llms.txt              | UPDATED | 40, 42        | LLMsTxtRule              | llms_business_flagshi... |
+| pricing-calculator.js | UPDATED | 443, 542      | PricingCalculatorScri... | calculator_seat_thres... |
+| pricing.html          | UPDATED | 60, 94, 453   | PricingHeroPackagesRule  | business_flagship_day... |
+| pricing-calculator.js | UPDATED | 171           | CodeTestSynchronizer     | source_and_tests         |
+| pricing-tests.js      | UPDATED | 21            | CodeTestSynchronizer     | source_and_tests         |
++-----------------------+---------+---------------+--------------------------+--------------------------+
+Summary: 99 files evaluated | 7 updated | 92 in sync | 229 references tracked
 ================================================================================
 ================================================================================
            NLP-FUZZY-EXPERT KNOWLEDGE SYNCHRONIZATION SYSTEM
@@ -1604,11 +1516,11 @@ Summary: 99 files evaluated | 7 updated | 92 in sync | 230 references tracked
   [UPDATE SCOPE] Fields: Authoritative facts -> Target: python/*.py, root JS, and tests/*
   -> [MODIFIED] pricing-calculator.js | Status: UPDATED | Changed Lines: 171
   -> [MODIFIED] pricing-tests.js | Status: UPDATED | Changed Lines: 21
-  -> Total source/test files updated: 2 of 50
+  -> Total source/test files updated: 2 of 51
 
 [Step 5/6] Generating domain references and master dictionary...
   [UPDATE SCOPE] Fields: Tracked occurrences & references -> Target: nlp-fuzzy-expert/*_references.json
-  -> Exhaustive scan located 28068 term occurrences across 99 documents
+  -> Exhaustive scan located 27847 term occurrences across 99 documents
 
 [Step 6/6] Generating domain markdown synchronization reports...
   [UPDATE SCOPE] Fields: Domain summaries & occurrence tables -> Target: nlp-fuzzy-expert/*.md reports
@@ -1626,7 +1538,7 @@ Summary: 99 files evaluated | 7 updated | 92 in sync | 230 references tracked
 | pricing-calculator.js | UPDATED | 171           | CodeTestSynchronizer     | source_and_tests         |
 | pricing-tests.js      | UPDATED | 21            | CodeTestSynchronizer     | source_and_tests         |
 +-----------------------+---------+---------------+--------------------------+--------------------------+
-Summary: 99 files evaluated | 6 updated | 93 in sync | 230 references tracked
+Summary: 99 files evaluated | 6 updated | 93 in sync | 229 references tracked
 ================================================================================
 ================================================================================
            NLP-FUZZY-EXPERT KNOWLEDGE SYNCHRONIZATION SYSTEM
@@ -1664,25 +1576,25 @@ Summary: 99 files evaluated | 6 updated | 93 in sync | 230 references tracked
 
 [Step 4/6] Executing forward-chaining inference & computing line diffs...
   [UPDATE SCOPE] Fields: Authoritative pricing, tiers, curricula & configs -> Target: HTML/JS repository pages
-  -> [MODIFIED] pricing.html | Field: business_flagship_days, business_flagship_price, business_service_01_pricing_card, business_service_02_pricing_card, business_service_03_pricing_card, business_service_04_pricing_card, business_service_05_pricing_card, business_service_06_pricing_card, business_service_07_pricing_card, business_service_08_pricing_card, business_service_09_pricing_card, business_service_10_pricing_card, business_service_11_pricing_card, business_service_12_pricing_card, business_service_13_pricing_card, business_service_14_pricing_card, business_service_15_pricing_card, business_service_16_pricing_card, calculator_options, personal_flagship_days, personal_flagship_price, tier_1_parity, tier_2_parity, tier_3_parity, tier_4_parity, tier_5_parity, tier_6_parity | Location: Line(s) 60, 94, 453, 465, 922, 1057-1058, 1230, 1245
-     Changed Lines: 60, 94, 453, 465, 922, 1057-1058, 1230, 1245
-     Rules Fired:   PricingHeroPackagesRule, PricingCalculatorSelectOptionsRule
-     Fields Synced: business_flagship_days, business_flagship_price, business_service_01_pricing_card, business_service_02_pricing_card, business_service_03_pricing_card, business_service_04_pricing_card, business_service_05_pricing_card, business_service_06_pricing_card, business_service_07_pricing_card, business_service_08_pricing_card, business_service_09_pricing_card, business_service_10_pricing_card, business_service_11_pricing_card, business_service_12_pricing_card, business_service_13_pricing_card, business_service_14_pricing_card, business_service_15_pricing_card, business_service_16_pricing_card, calculator_options, personal_flagship_days, personal_flagship_price, tier_1_parity, tier_2_parity, tier_3_parity, tier_4_parity, tier_5_parity, tier_6_parity
+  -> [MODIFIED] pricing.html | Field: business_flagship_days, business_flagship_price, business_service_01_pricing_card, business_service_02_pricing_card, business_service_03_pricing_card, business_service_04_pricing_card, business_service_05_pricing_card, business_service_06_pricing_card, business_service_07_pricing_card, business_service_08_pricing_card, business_service_09_pricing_card, business_service_10_pricing_card, business_service_11_pricing_card, business_service_12_pricing_card, business_service_13_pricing_card, business_service_14_pricing_card, business_service_15_pricing_card, business_service_16_pricing_card, personal_flagship_days, personal_flagship_price, tier_1_parity, tier_2_parity, tier_3_parity, tier_4_parity, tier_5_parity, tier_6_parity | Location: Line(s) 60, 94, 453, 465, 581, 596
+     Changed Lines: 60, 94, 453, 465, 581, 596
+     Rules Fired:   PricingHeroPackagesRule
+     Fields Synced: business_flagship_days, business_flagship_price, business_service_01_pricing_card, business_service_02_pricing_card, business_service_03_pricing_card, business_service_04_pricing_card, business_service_05_pricing_card, business_service_06_pricing_card, business_service_07_pricing_card, business_service_08_pricing_card, business_service_09_pricing_card, business_service_10_pricing_card, business_service_11_pricing_card, business_service_12_pricing_card, business_service_13_pricing_card, business_service_14_pricing_card, business_service_15_pricing_card, business_service_16_pricing_card, personal_flagship_days, personal_flagship_price, tier_1_parity, tier_2_parity, tier_3_parity, tier_4_parity, tier_5_parity, tier_6_parity
   -> Total documents modified: 1 of 99
 
 [Step 4b] Synchronizing source code and unit test suites...
   [UPDATE SCOPE] Fields: Authoritative facts -> Target: python/*.py, root JS, and tests/*
-  -> All 50 source/test files evaluated. Zero changes required (fully in sync).
+  -> All 51 source/test files evaluated. Zero changes required (fully in sync).
 
 [Step 5/6] Generating domain references and master dictionary...
   [UPDATE SCOPE] Fields: Tracked occurrences & references -> Target: nlp-fuzzy-expert/*_references.json
-  -> Exhaustive scan located 28068 term occurrences across 99 documents
-  -> Wrote pricing_references.json (3152 references)
+  -> Exhaustive scan located 27847 term occurrences across 99 documents
+  -> Wrote pricing_references.json (3042 references)
   -> Wrote business_services_references.json (3290 references)
-  -> Wrote personal_services_references.json (1084 references)
-  -> Wrote tiers_references.json (3451 references)
+  -> Wrote personal_services_references.json (1083 references)
+  -> Wrote tiers_references.json (3347 references)
   -> Wrote config_references.json (6847 references)
-  -> Master Dictionary generated: references_dictionary.json (28113 total references)
+  -> Master Dictionary generated: references_dictionary.json (27891 total references)
   -> Lightweight Manifest generated: references_manifest.json (108 documents indexed)
 
 [Step 6/6] Generating domain markdown synchronization reports...
@@ -1696,12 +1608,12 @@ Summary: 99 files evaluated | 6 updated | 93 in sync | 230 references tracked
 ================================================================================
                      SYNCHRONIZATION SUMMARY TABLE
 ================================================================================
-+--------------+---------+------------------------+--------------------------+--------------------------+
-| Target File  | Status  | Changed Lines          | Rules Fired              | Fields Synced            |
-+--------------+---------+------------------------+--------------------------+--------------------------+
-| pricing.html | UPDATED | 60, 94, 453, 465, 9... | PricingHeroPackagesRu... | business_flagship_day... |
-+--------------+---------+------------------------+--------------------------+--------------------------+
-Summary: 99 files evaluated | 1 updated | 98 in sync | 27 references tracked
++--------------+---------+------------------------+-------------------------+--------------------------+
+| Target File  | Status  | Changed Lines          | Rules Fired             | Fields Synced            |
++--------------+---------+------------------------+-------------------------+--------------------------+
+| pricing.html | UPDATED | 60, 94, 453, 465, 5... | PricingHeroPackagesRule | business_flagship_day... |
++--------------+---------+------------------------+-------------------------+--------------------------+
+Summary: 99 files evaluated | 1 updated | 98 in sync | 26 references tracked
 ================================================================================
 ================================================================================
            NLP-FUZZY-EXPERT KNOWLEDGE SYNCHRONIZATION SYSTEM
@@ -1743,7 +1655,7 @@ Summary: 99 files evaluated | 1 updated | 98 in sync | 27 references tracked
 
 [Step 4b] Synchronizing source code and unit test suites...
   [UPDATE SCOPE] Fields: Authoritative facts -> Target: python/*.py, root JS, and tests/*
-  -> All 50 source/test files evaluated. Zero changes required (fully in sync).
+  -> All 51 source/test files evaluated. Zero changes required (fully in sync).
 
 [Step 5/6] Generating domain references and master dictionary...
   [UPDATE SCOPE] Fields: Tracked occurrences & references -> Target: nlp-fuzzy-expert/*_references.json
@@ -1769,20 +1681,20 @@ Summary: 99 files evaluated | 1 updated | 98 in sync | 27 references tracked
 | pricing-calculator.js      | IN SYNC | -             | -                       | -                        |
 | pricing.html               | IN SYNC | -             | PricingHeroPackagesRule | business_flagship_day... |
 +----------------------------+---------+---------------+-------------------------+--------------------------+
-Summary: 99 files evaluated | 0 updated | 99 in sync | 27 references tracked
+Summary: 99 files evaluated | 0 updated | 99 in sync | 26 references tracked
 ================================================================================
 --------------------------------------------------------------------------------
 TEST SUITE SUMMARY REPORT
 --------------------------------------------------------------------------------
-Tests Run:   257
-Failures:    1
-Errors:      3
+Tests Run:   258
+Failures:    12
+Errors:      4
 Skipped:     0
-Time Taken:  17.03 seconds
+Time Taken:  15.64 seconds
 ================================================================================
 RESULT: TEST SUITE FAILED.
 ================================================================================
 
-[Auto-Healer] Wrote failure report to: failed_test_pricing_and_policy_invariants_tests.report.md
+[Auto-Healer] Wrote failure report to: failed_test_continuous_updates_tests.report.md
 [Auto-Healer] Wrote aggregate report to: failed_tests_report.md
 ```

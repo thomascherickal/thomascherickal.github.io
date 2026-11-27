@@ -1,6 +1,6 @@
 # Repository Code & Engineering Metrics
 
-> **Automated Status Report** | Generated on `2026-11-27 06:14:35 UTC` | Branch: `ssot-migration` | Head Commit: `92de691`
+> **Automated Status Report** | Generated on `2026-11-27 06:19:14 UTC` | Branch: `ssot-migration` | Head Commit: `cdc426c`
 > This report tracks comprehensive codebase, architectural, structural, and content metrics across `thomascherickal.github.io`.
 > Updated automatically on every build and push.
 
@@ -10,15 +10,15 @@
 
 | Metric | Count | Details |
 | :--- | :--- | :--- |
-| **Total Tracked Files** | **573** | Fully tracked Git artifacts |
-| **Total Lines of Source Code & Content** | **981,688** | All text, markup, styles & scripts |
-| **Source Code Lines (SLOC)** | **963,855** | Executable / renderable content lines |
-| **Comment & Documentation Lines** | **5,545** | In-code and architectural documentation |
-| **Blank / Spacing Lines** | **12,288** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **58.03 MB (60,852,495 bytes)** | HTML, CSS, JS, Python, SVG & Images |
-| **Total Word Count (Prose & Technical)** | **852,034 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **583** | Since repository inception (2023-03-30) |
-| **Latest Commit Date** | **2026-11-27** | Subject: "chore(ssot): phase 0 freeze old sync and wire visible pre-commit hook" |
+| **Total Tracked Files** | **587** | Fully tracked Git artifacts |
+| **Total Lines of Source Code & Content** | **974,339** | All text, markup, styles & scripts |
+| **Source Code Lines (SLOC)** | **956,509** | Executable / renderable content lines |
+| **Comment & Documentation Lines** | **5,531** | In-code and architectural documentation |
+| **Blank / Spacing Lines** | **12,299** | Code formatting and structural layout |
+| **Total Repository Size (Tracked Assets)** | **57.60 MB (60,398,521 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Word Count (Prose & Technical)** | **847,519 words** | Educational, curriculum, & marketing prose |
+| **Total Git Commits** | **584** | Since repository inception (2023-03-30) |
+| **Latest Commit Date** | **2026-11-27** | Subject: "feat(synchronizer): synchronize repository state (1 test failure warnings - see failed_unit_tests.report.md)" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
 ---
@@ -27,15 +27,15 @@
 
 | Category | Files | Total Lines | Total Size | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| **HTML Documents** | 91 | 96,133 | 7.80 MB (8,181,383 bytes) | Production static web pages, services, frameworks & guides |
+| **HTML Documents** | 91 | 95,484 | 7.77 MB (8,142,899 bytes) | Production static web pages, services, frameworks & guides |
 | **CSS Stylesheets** | 16 | 12,250 | 286.36 KB (293,233 bytes) | Design tokens, animations, responsive layout & themes |
 | **JavaScript Scripts** | 33 | 11,590 | 3.70 MB (3,884,405 bytes) | Client-side interactivity, search, filter & components |
-| **Python Tooling** | 63 | 17,512 | 803.29 KB (822,566 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
-| **Markdown Documentation** | 162 | 44,091 | 5.01 MB (5,252,377 bytes) | Project documentation, sync mirrors, guidelines & rules |
-| **JSON Schemas & Data** | 115 | 800,045 | 36.13 MB (37,882,022 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
+| **Python Tooling** | 65 | 17,675 | 809.60 KB (829,027 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
+| **Markdown Documentation** | 162 | 44,138 | 4.99 MB (5,234,602 bytes) | Project documentation, sync mirrors, guidelines & rules |
+| **JSON Schemas & Data** | 127 | 793,135 | 35.74 MB (37,477,646 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 44 | 67 | 188.24 KB (192,754 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
 | **Raster Images (WebP, JPG, PNG)** | 37 | 0 | 4.06 MB (4,259,892 bytes) | Optimized feature hero graphics, social cards & assets |
-| **Config & Metadata** | 12 | 0 | 81.90 KB (83,863 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
+| **Config & Metadata** | 12 | 0 | 82.09 KB (84,063 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
 
 ---
 
@@ -43,22 +43,22 @@
 
 | Extension | Tracked Files | Total Lines | Total Size | Percentage of Files |
 | :--- | :--- | :--- | :--- | :--- |
-| `.json` | 115 | 800,045 | 36.13 MB (37,882,022 bytes) | 20.1% |
-| `.html` | 91 | 96,133 | 7.80 MB (8,181,383 bytes) | 15.9% |
-| `.md` | 162 | 44,091 | 5.01 MB (5,252,377 bytes) | 28.3% |
-| `.py` | 63 | 17,512 | 803.29 KB (822,566 bytes) | 11.0% |
-| `.css` | 16 | 12,250 | 286.36 KB (293,233 bytes) | 2.8% |
-| `.js` | 33 | 11,590 | 3.70 MB (3,884,405 bytes) | 5.8% |
-| `.svg` | 44 | 67 | 188.24 KB (192,754 bytes) | 7.7% |
+| `.json` | 127 | 793,135 | 35.74 MB (37,477,646 bytes) | 21.6% |
+| `.html` | 91 | 95,484 | 7.77 MB (8,142,899 bytes) | 15.5% |
+| `.md` | 162 | 44,138 | 4.99 MB (5,234,602 bytes) | 27.6% |
+| `.py` | 65 | 17,675 | 809.60 KB (829,027 bytes) | 11.1% |
+| `.css` | 16 | 12,250 | 286.36 KB (293,233 bytes) | 2.7% |
+| `.js` | 33 | 11,590 | 3.70 MB (3,884,405 bytes) | 5.6% |
+| `.svg` | 44 | 67 | 188.24 KB (192,754 bytes) | 7.5% |
 | `.webp` | 18 | 0 | 1.66 MB (1,745,378 bytes) | 3.1% |
-| `.png` | 12 | 0 | 1.28 MB (1,339,427 bytes) | 2.1% |
+| `.png` | 12 | 0 | 1.28 MB (1,339,427 bytes) | 2.0% |
 | `.jpg` | 5 | 0 | 988.42 KB (1,012,141 bytes) | 0.9% |
 | `.jpeg` | 1 | 0 | 152.39 KB (156,047 bytes) | 0.2% |
 | `.txt` | 2 | 0 | 35.51 KB (36,358 bytes) | 0.3% |
 | `.docx` | 2 | 0 | 28.83 KB (29,519 bytes) | 0.3% |
 | `.xml` | 1 | 0 | 11.92 KB (12,210 bytes) | 0.2% |
 | `.ico` | 1 | 0 | 6.74 KB (6,899 bytes) | 0.2% |
-| `[no extension]` | 6 | 0 | 5.12 KB (5,238 bytes) | 1.0% |
+| `[no extension]` | 6 | 0 | 5.31 KB (5,438 bytes) | 1.0% |
 | `.webmanifest` | 1 | 0 | 538 bytes | 0.2% |
 
 ---
@@ -72,8 +72,8 @@
 | **CSS Design Tokens (`--var`)** | **90** | Standardized color palettes, typography, spacing & radii |
 | **FAQ Question Cards** | **198** | Rich searchable & filterable accordion cards |
 | **Primary Headings (`<h1>`)** | **86** | Strict single-H1 semantic hierarchy per page |
-| **Secondary Section Headings (`<h2>`)** | **833** | Structural topic subdivisions |
-| **Card & Item Headings (`<h3>`)** | **483** | Individual service, question, and feature cards |
+| **Secondary Section Headings (`<h2>`)** | **830** | Structural topic subdivisions |
+| **Card & Item Headings (`<h3>`)** | **469** | Individual service, question, and feature cards |
 | **Call-to-Action (CTA) Modules** | **100** | Standardized CTAs with Free LinkedIn Consultation rule |
 | **Canonical Links Configured** | **85** | 100% SEO canonical URL coverage across public pages |
 | **Open Graph Meta Tags** | **605** | Social preview cards across Twitter/LinkedIn/Facebook |
@@ -107,7 +107,7 @@
 | [`python/generate_favicons.py`](python/generate_favicons.py) | Dynamic multi-size favicon generator | Icon Resizer, Asset Pipeline |
 | [`python/generate_og_card.py`](python/generate_og_card.py) | OpenGraph social preview image generator | Pillow Compositor, Brand Styler |
 | [`python/hooks/post_edit_hook.py`](python/hooks/post_edit_hook.py) | IDE lifecycle hook triggering component updates on file modification | Hook Trigger, Event Dispatcher |
-| **Python Function Definitions** | **570 functions** across tooling scripts | Modular execution units |
+| **Python Function Definitions** | **573 functions** across tooling scripts | Modular execution units |
 | **Python Class Definitions** | **42 classes** | Structured state containers |
 
 ---
@@ -130,8 +130,8 @@
 
 - **Framework**: `BeautifulSoup4 + lxml (unittest)`
 - **Pages Scanned**: **85 HTML pages**
-- **Summary**: **101 / 101 PASSED** (`0` failures, `6.66s`, Status: **PASSED**)
-- **Last Verified**: `2026-11-27 06:12:44 UTC`
+- **Summary**: **101 / 101 PASSED** (`0` failures, `6.59s`, Status: **PASSED**)
+- **Last Verified**: `2026-11-27 06:18:42 UTC`
 
 | Test Category | Tests | Passed | Failed | Pass Rate | Status |
 | :--- | :--- | :--- | :--- | :--- | :--- |

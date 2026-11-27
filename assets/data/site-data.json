@@ -1,0 +1,754 @@
+{
+  "pricing": {
+    "currency": "USD",
+    "purchasing_power_parity_framework": "World Bank FY2027 (effective 1 July 2026)",
+    "general_payment_rules": {
+      "advance_deposit": "$0 upfront (strictly zero advance payment required)",
+      "currency_acceptance": "USD, EUR, GBP, AUD, CAD, INR (via PayPal, international wire, or approved payment rails)",
+      "calendar_basis": "Business days (Monday through Friday, excluding Saturdays, Sundays, and public holidays)",
+      "hours_per_day": 4,
+      "concurrency_rule": "Programmes and individual services can run concurrently or in parallel across different cohorts or disciplines.",
+      "pricing_integrity": "No hidden licensing royalties, no recurring seat subscriptions, and no surprise hourly fees."
+    },
+    "ip_rules": {
+      "custom_client_code": "Apache 2.0 license. All custom agents, MCP servers, pipelines, test suites, and integration code built during the engagement fall under Apache 2.0 license, so can be used commercially as well as internally.",
+      "written_guides_and_training_materials": "Written guides, curriculum documentation, architectural patterns, and reusable course materials authored by Thomas Cherickal fall under Apache 2.0 license, granting the client an irrevocable, royalty-free, perpetual license to use, reproduce, and adapt anywhere for internal or commercial use.",
+      "non_disclosure": "Client or vendor NDAs signed before commencing technical discovery or reviewing private repositories."
+    },
+    "offerings": [
+      {
+        "id": "flagship-business-training",
+        "type": "flagship",
+        "target_audience": "Business / Enterprise Teams",
+        "name": "Business AI Training Flagship",
+        "tier1_base_price_usd": 1000.0,
+        "cohort_capacity": {
+          "included_seats": 10,
+          "additional_seat_fee_usd": 100.0,
+          "max_seats": 20,
+          "parity_applies_to_extra_seats": true
+        },
+        "schedule": {
+          "total_calendar_duration_days": 60,
+          "live_training_days": 30,
+          "live_hours_per_day": 4,
+          "support_phase_days": 30,
+          "support_phase_description": "30 days of guidance, assistance, implementation, Q&A, and written guides licensed under Apache 2.0.",
+          "support_phase_days_basis": "calendar_days",
+          "duration_meaning": "2 calendar months (includes weekends as holidays)"
+        },
+        "payment_rules": {
+          "milestone_schedule": [
+            {
+              "installment": 1,
+              "percentage": 10,
+              "due_after_day": 5,
+              "description": "Completed Day 5 of engagement"
+            },
+            {
+              "installment": 2,
+              "percentage": 10,
+              "due_after_day": 10,
+              "description": "Completed Day 10 of engagement"
+            },
+            {
+              "installment": 3,
+              "percentage": 10,
+              "due_after_day": 15,
+              "description": "Completed Day 15 of engagement"
+            },
+            {
+              "installment": 4,
+              "percentage": 10,
+              "due_after_day": 20,
+              "description": "Completed Day 20 of engagement"
+            },
+            {
+              "installment": 5,
+              "percentage": 10,
+              "due_after_day": 25,
+              "description": "Completed Day 25 of engagement"
+            },
+            {
+              "installment": 6,
+              "percentage": 10,
+              "due_after_day": 30,
+              "description": "Completed Day 30 of engagement"
+            },
+            {
+              "installment": 7,
+              "percentage": 10,
+              "due_after_day": 35,
+              "description": "Completed Day 35 of engagement"
+            },
+            {
+              "installment": 8,
+              "percentage": 10,
+              "due_after_day": 40,
+              "description": "Completed Day 40 of engagement"
+            },
+            {
+              "installment": 9,
+              "percentage": 10,
+              "due_after_day": 45,
+              "description": "Completed Day 45 of engagement"
+            },
+            {
+              "installment": 10,
+              "percentage": 10,
+              "due_after_day": 50,
+              "description": "Completed Day 50 of engagement"
+            }
+          ],
+          "support_payment": {
+            "total_usd": 0.0,
+            "structure": "Included at zero charge ($0 USD)",
+            "milestone_schedule": []
+          },
+          "walkaway_policy": "Walk away owing nothing more than already paid for at any phase if not satisfied after any 5 days of completed training, including the first."
+        }
+      },
+      {
+        "id": "flagship-personal-training",
+        "type": "flagship",
+        "target_audience": "Individuals / Solo Founders / Senior Engineers",
+        "name": "Personal AI Training Flagship",
+        "tier1_base_price_usd": 1000.0,
+        "cohort_capacity": {
+          "included_seats": 10,
+          "additional_seat_fee_usd": 100.0,
+          "max_seats": 20,
+          "parity_applies_to_extra_seats": true,
+          "note": "Strictly upto 20 people only."
+        },
+        "schedule": {
+          "total_calendar_duration_days": 60,
+          "live_training_days": 30,
+          "live_hours_per_day": 4,
+          "support_phase_days": 30,
+          "support_phase_description": "30 days of guidance, assistance, implementation, Q&A, and written guides licensed under Apache 2.0 for commercial, internal, relicensing by the company but with attribution.",
+          "support_phase_days_basis": "calendar_days",
+          "duration_meaning": "2 calendar months (includes weekends as holidays)"
+        },
+        "payment_rules": {
+          "milestone_schedule": [
+            {
+              "installment": 1,
+              "percentage": 10,
+              "due_after_day": 5,
+              "description": "Completed Day 5 of engagement"
+            },
+            {
+              "installment": 2,
+              "percentage": 10,
+              "due_after_day": 10,
+              "description": "Completed Day 10 of engagement"
+            },
+            {
+              "installment": 3,
+              "percentage": 10,
+              "due_after_day": 15,
+              "description": "Completed Day 15 of engagement"
+            },
+            {
+              "installment": 4,
+              "percentage": 10,
+              "due_after_day": 20,
+              "description": "Completed Day 20 of engagement"
+            },
+            {
+              "installment": 5,
+              "percentage": 10,
+              "due_after_day": 25,
+              "description": "Completed Day 25 of engagement"
+            },
+            {
+              "installment": 6,
+              "percentage": 10,
+              "due_after_day": 30,
+              "description": "Completed Day 30 of engagement"
+            },
+            {
+              "installment": 7,
+              "percentage": 10,
+              "due_after_day": 35,
+              "description": "Completed Day 35 of engagement"
+            },
+            {
+              "installment": 8,
+              "percentage": 10,
+              "due_after_day": 40,
+              "description": "Completed Day 40 of engagement"
+            },
+            {
+              "installment": 9,
+              "percentage": 10,
+              "due_after_day": 45,
+              "description": "Completed Day 45 of engagement"
+            },
+            {
+              "installment": 10,
+              "percentage": 10,
+              "due_after_day": 50,
+              "description": "Completed Day 50 of engagement"
+            }
+          ],
+          "walkaway_policy": "Walk away owing nothing more than already paid for at any phase if not satisfied after any 5 days of completed training, including the first."
+        }
+      },
+      {
+        "id": "individual-service-business",
+        "type": "individual_service",
+        "target_audience": "Business / Enterprise Teams",
+        "name": "Individual Service Pick (Business / Teams)",
+        "tier1_base_price_usd": 100.0,
+        "cohort_capacity": {
+          "included_seats": 10,
+          "additional_seat_fee_usd": 100.0,
+          "max_seats": 20,
+          "parity_applies_to_extra_seats": true
+        },
+        "schedule": {
+          "total_calendar_duration_days": 10,
+          "live_training_days": 5,
+          "live_hours_per_day": 4,
+          "support_phase_days": 5,
+          "support_phase_description": "5 days of guidance, assistance, implementation, Q&A, and written guides licensed under Apache 2.0 but with attribution.",
+          "support_phase_days_basis": "calendar_days",
+          "duration_meaning": "10 calendar days (includes weekends as holidays)"
+        },
+        "payment_rules": {
+          "milestone_schedule": [
+            {
+              "installment": 1,
+              "percentage": 10,
+              "due_after_day": 1,
+              "description": "Completed Day 1 of engagement"
+            },
+            {
+              "installment": 2,
+              "percentage": 10,
+              "due_after_day": 2,
+              "description": "Completed Day 2 of engagement"
+            },
+            {
+              "installment": 3,
+              "percentage": 10,
+              "due_after_day": 3,
+              "description": "Completed Day 3 of engagement"
+            },
+            {
+              "installment": 4,
+              "percentage": 10,
+              "due_after_day": 4,
+              "description": "Completed Day 4 of engagement"
+            },
+            {
+              "installment": 5,
+              "percentage": 10,
+              "due_after_day": 5,
+              "description": "Completed Day 5 of engagement"
+            },
+            {
+              "installment": 6,
+              "percentage": 10,
+              "due_after_day": 6,
+              "description": "Completed Day 6 of engagement"
+            },
+            {
+              "installment": 7,
+              "percentage": 10,
+              "due_after_day": 7,
+              "description": "Completed Day 7 of engagement"
+            },
+            {
+              "installment": 8,
+              "percentage": 10,
+              "due_after_day": 8,
+              "description": "Completed Day 8 of engagement"
+            },
+            {
+              "installment": 9,
+              "percentage": 10,
+              "due_after_day": 9,
+              "description": "Completed Day 9 of engagement"
+            },
+            {
+              "installment": 10,
+              "percentage": 10,
+              "due_after_day": 10,
+              "description": "Completed Day 10 of engagement"
+            }
+          ],
+          "walkaway_policy": "Walk away owing nothing more than already paid if not satisfied after any day of completed training, including the first."
+        }
+      },
+      {
+        "id": "individual-service-personal",
+        "type": "individual_service",
+        "target_audience": "Individuals / Solo Builders / Entrepreneurs",
+        "name": "Individual Service Pick (Personal)",
+        "tier1_base_price_usd": 100.0,
+        "cohort_capacity": {
+          "included_seats": 10,
+          "additional_seat_fee_usd": 100.0,
+          "max_seats": 20,
+          "parity_applies_to_extra_seats": true,
+          "note": "Strictly upto 20 people only."
+        },
+        "schedule": {
+          "total_calendar_duration_days": 10,
+          "live_training_days": 5,
+          "live_hours_per_day": 4,
+          "support_phase_days": 5,
+          "support_phase_description": "5 days of guidance, assistance, implementation, Q&A, and written guides with written guides licensed under Apache 2.0 but with attribution.",
+          "support_phase_days_basis": "calendar_days",
+          "duration_meaning": "10 calendar days (includes weekends as holidays)"
+        },
+        "payment_rules": {
+          "milestone_schedule": [
+            {
+              "installment": 1,
+              "percentage": 10,
+              "due_after_day": 1,
+              "description": "Completed Day 1 of engagement"
+            },
+            {
+              "installment": 2,
+              "percentage": 10,
+              "due_after_day": 2,
+              "description": "Completed Day 2 of engagement"
+            },
+            {
+              "installment": 3,
+              "percentage": 10,
+              "due_after_day": 3,
+              "description": "Completed Day 3 of engagement"
+            },
+            {
+              "installment": 4,
+              "percentage": 10,
+              "due_after_day": 4,
+              "description": "Completed Day 4 of engagement"
+            },
+            {
+              "installment": 5,
+              "percentage": 10,
+              "due_after_day": 5,
+              "description": "Completed Day 5 of engagement"
+            },
+            {
+              "installment": 6,
+              "percentage": 10,
+              "due_after_day": 6,
+              "description": "Completed Day 6 of engagement"
+            },
+            {
+              "installment": 7,
+              "percentage": 10,
+              "due_after_day": 7,
+              "description": "Completed Day 7 of engagement"
+            },
+            {
+              "installment": 8,
+              "percentage": 10,
+              "due_after_day": 8,
+              "description": "Completed Day 8 of engagement"
+            },
+            {
+              "installment": 9,
+              "percentage": 10,
+              "due_after_day": 9,
+              "description": "Completed Day 9 of engagement"
+            },
+            {
+              "installment": 10,
+              "percentage": 10,
+              "due_after_day": 10,
+              "description": "Completed Day 10 of engagement"
+            }
+          ],
+          "walkaway_policy": "Walk away owing nothing more than already paid if not satisfied after any day of completed training, including the first."
+        }
+      }
+    ],
+    "trust_and_payment_guarantees": {
+      "payment_structure": {
+        "upfront_deposit_usd": 0,
+        "installments_count": 10,
+        "installment_percentage": 10,
+        "billing_basis": "Billed only after completed milestone blocks of training progress",
+        "policy_summary": "Strictly $0 upfront. Invoiced in 10 equal installments (10% each) due strictly after completed milestone blocks of training progress."
+      },
+      "risk_free_guarantees": {
+        "walkaway_guarantee": "Walk away owing nothing more than already paid for at any phase if not satisfied after any completed milestone training phase, including the first.",
+        "scam_free_structure": "Clients maintain total financial control. No advance payment, no card on file required to begin, and zero ongoing subscription traps.",
+        "ip_licensing": "Apache 2.0 license. All custom code, scripts, architectural patterns, workflows, and high-quality training materials are transferred under Apache 2.0 with full rights for commercial use, internal deployment, resale, and relicensing with attribution."
+      }
+    },
+    "capacity": {
+      "flagship_cohorts_per_quarter": 2
+    }
+  },
+  "tiers": {
+    "tiers": [
+      {
+        "tier": 1,
+        "name": "Tier 1: High-Income",
+        "shortName": "Tier 1",
+        "discountPercent": 0,
+        "multiplier": 1.0,
+        "badge": "TIER 01 · HIGH-INCOME",
+        "subtitle": "World Bank High-Income Economies & Global Enterprise Hubs",
+        "examples": [
+          "United States",
+          "Canada",
+          "United Kingdom",
+          "Germany",
+          "France",
+          "Poland",
+          "Czech Republic",
+          "Hungary",
+          "Greece",
+          "Romania",
+          "Japan",
+          "South Korea",
+          "Singapore",
+          "Australia",
+          "New Zealand",
+          "Chile",
+          "UAE",
+          "Saudi Arabia",
+          "Switzerland",
+          "Netherlands",
+          "Sweden",
+          "Norway",
+          "Denmark",
+          "Ireland",
+          "Austria",
+          "Belgium",
+          "Finland"
+        ]
+      },
+      {
+        "tier": 2,
+        "name": "Tier 2: Upper-Middle-Income",
+        "shortName": "Tier 2",
+        "discountPercent": 25,
+        "multiplier": 0.75,
+        "badge": "TIER 02 · UPPER-MIDDLE-INCOME",
+        "subtitle": "World Bank Upper-Middle-Income Digital Ecosystems & Emerging Tech Hubs",
+        "examples": [
+          "Brazil",
+          "Mexico",
+          "Colombia",
+          "Argentina",
+          "Peru",
+          "Ecuador",
+          "Guatemala",
+          "Malaysia",
+          "Thailand",
+          "Indonesia",
+          "Vietnam",
+          "Philippines",
+          "Sri Lanka",
+          "Türkiye",
+          "South Africa"
+        ]
+      },
+      {
+        "tier": 3,
+        "name": "Tier 3: Lower-Middle & Low-Income",
+        "shortName": "Tier 3",
+        "discountPercent": 50,
+        "multiplier": 0.5,
+        "badge": "TIER 03 · LOWER-MIDDLE & LOW-INCOME",
+        "subtitle": "World Bank Lower-Middle & Low-Income Tech Ecosystems",
+        "examples": [
+          "India",
+          "Bangladesh",
+          "Pakistan",
+          "Nepal",
+          "Bhutan",
+          "Kenya",
+          "Nigeria",
+          "Ghana",
+          "Egypt",
+          "Morocco",
+          "Tanzania",
+          "Ethiopia",
+          "Uganda",
+          "Rwanda",
+          "Bolivia",
+          "Cambodia",
+          "Laos",
+          "Myanmar",
+          "Uzbekistan",
+          "Kyrgyzstan"
+        ]
+      },
+      {
+        "tier": 4,
+        "name": "Tier 4: Early-Stage Startups",
+        "shortName": "Tier 4",
+        "discountPercent": 50,
+        "multiplier": 0.5,
+        "badge": "TIER 04 · EARLY-STAGE STARTUPS",
+        "subtitle": "Global Pre-Seed, Seed & Bootstrapped Software Builders",
+        "examples": [
+          "Pre-Seed & Seed Startups (<$1M cumulative funding)",
+          "Bootstrapped Software Founders",
+          "Accelerator Teams (YC, Techstars, Antler, 500 Global)"
+        ],
+        "program_timeline": "2-month program (same as standard flagship)"
+      },
+      {
+        "tier": 5,
+        "name": "Tier 5: Academia & Non-Profits",
+        "shortName": "Tier 5",
+        "discountPercent": 75,
+        "multiplier": 0.25,
+        "badge": "TIER 05 · ACADEMIA & NON-PROFITS",
+        "subtitle": "Higher Education, Research Labs & Registered Non-Profits (including US 501(c)(3))",
+        "examples": [
+          "Accredited Universities & Faculty Labs",
+          "Post-Doctoral Laboratories & Clinical Research Centers",
+          "Registered Charities and Non-Profits (including US 501(c)(3) organizations)",
+          "Civic Open-Source Foundations & Public NGOs"
+        ]
+      },
+      {
+        "tier": 6,
+        "name": "Tier 6: Subsidized (Crisis-Affected & Under-Resourced)",
+        "shortName": "Tier 6",
+        "discountPercent": 90,
+        "multiplier": 0.1,
+        "badge": "TIER 06 · SUBSIDIZED",
+        "subtitle": "Crisis-Affected Regions, Displaced Builders & Under-Resourced Tech Collectives",
+        "examples": [
+          "Ukraine",
+          "UN LDC / Post-Conflict / Currency Crisis Regions",
+          "Under-Resourced Community Tech Collectives",
+          "Micro-Rate & Micro-Grant Candidates"
+        ]
+      }
+    ],
+    "precedence_rule": "Tier 6 (Subsidized / UN LDCs) takes precedence over Tier 3 when a country appears in both."
+  },
+  "contact": {
+    "contact_metadata": {
+      "page_title": "Contact | Thomas Cherickal",
+      "description": "Book AI training, Claude agent orchestration, local LLM cost reduction or quantum advisory with Thomas Cherickal, Generative AI Consultant.",
+      "canonical_url": "https://thedigitalfuturist.com/contact.html",
+      "section_label": "// INITIATE ENGAGEMENT",
+      "section_title": "Start an AI Transformation",
+      "section_sub": "Master teams of Claude Agents, learn in-depth agent orchestration principles and constraints, train your workforce (employees, developers, staff, CXOs), slash inference costs with Local LLMs, or explore quantum computing. Send an inquiry or schedule a briefing."
+    },
+    "config_references": {
+      "author_ref": "config.json#author",
+      "email_ref": "config.json#email",
+      "domain_ref": "config.json#domain",
+      "linkedin_ref": "config.json#linkedin",
+      "topmate_ref": "config.json#topmate",
+      "pricing_ref": "pricing.json",
+      "tiers_ref": "tiers.json"
+    },
+    "direct_communication": {
+      "response_time_standard": "Within one week for all incoming project inquiries, architecture audits, and training briefs",
+      "busy_notice": "I reply to every inquiry within one week (a little busy with current work).",
+      "specializations": "Specializing in AI Agent Mastery, Live & Remote Workforce Training, Local LLM Inference Cost Slashing & Early Quantum Systems Exploration.",
+      "location": "Remote Worldwide",
+      "channels": [
+        {
+          "channel": "Email",
+          "reference": "config.json#email",
+          "action_label": "Direct Email"
+        },
+        {
+          "channel": "1-on-1 Video Consult",
+          "reference": "config.json#topmate",
+          "action_label": "Book via Topmate ->"
+        },
+        {
+          "channel": "Direct Consultation",
+          "reference": "config.json#linkedin",
+          "action_label": "Book a free intro call on LinkedIn ↗"
+        },
+        {
+          "channel": "Location",
+          "value": "Remote Worldwide",
+          "action_label": "Remote Delivery"
+        }
+      ],
+      "reply_sla": "within one week"
+    },
+    "engagement_standards": [
+      {
+        "standard": "Inquiry Response",
+        "description": "I reply to every inquiry within one week (a little busy with current work) for all incoming project inquiries, architecture audits, and training briefs."
+      },
+      {
+        "standard": "Live & Remote Workforce Training",
+        "description": "Structured, cohort-specific training delivered live on-site or remotely for Employees, Developers, Corporate Staff, and CXOs."
+      },
+      {
+        "standard": "Runtime-Verified Code & TDD",
+        "description": "Every pipeline, agent tool, and LLM harness is built with Test-Driven Development (TDD) and verified in runtime sandboxes."
+      },
+      {
+        "standard": "Local LLMs & Cost Slashing",
+        "description": "Slash recurring inference costs by 60-90% via Ollama, vLLM, and quantized open-weight models (Qwen, DeepSeek, GPT-OSS, Gemma, Mistral)."
+      }
+    ],
+    "intake_workflow_steps": [
+      {
+        "step": 1,
+        "title": "AI Agent & Architecture Audit",
+        "summary": "In-depth review of agent workflows, domain constraints, task distribution, and training needs."
+      },
+      {
+        "step": 2,
+        "title": "Scope & Milestones",
+        "summary": "Transparent timeline, equal-weighted milestone proposal, and Country Parity pricing."
+      },
+      {
+        "step": 3,
+        "title": "Training & Sandbox Demonstrations",
+        "summary": "Hands-on training modules, architecture explainers, sample projects, and live sandbox demonstrations."
+      },
+      {
+        "step": 4,
+        "title": "Knowledge & Assets Handover",
+        "summary": "Comprehensive training modules, sample code guides, verified sandbox demos, and all materials licensed under Apache 2.0."
+      }
+    ],
+    "form_configuration": {
+      "action_endpoint": "https://formsubmit.co/ajax/thomascherickal@gmail.com",
+      "method": "POST",
+      "anti_spam": {
+        "honeypot_field": "_honey",
+        "captcha": "false",
+        "template": "table",
+        "subject": "Project Intake / Contact Inquiry - Thomas Cherickal Portfolio"
+      },
+      "fields": [
+        {
+          "name": "name",
+          "label": "Your Name",
+          "type": "text",
+          "required": true,
+          "placeholder": "John Doe"
+        },
+        {
+          "name": "email",
+          "label": "Email Address",
+          "type": "email",
+          "required": true,
+          "placeholder": "john@example.com"
+        },
+        {
+          "name": "organization",
+          "label": "Company / Organization",
+          "type": "text",
+          "required": false,
+          "placeholder": "e.g. Acme AI, Business Corp, Stealth Startup, or Individual"
+        },
+        {
+          "name": "timeline",
+          "label": "Target Timeline",
+          "type": "text",
+          "required": true,
+          "placeholder": "e.g. Q3 Launch, 2 weeks, Immediate"
+        },
+        {
+          "name": "role",
+          "label": "Role / Job Title",
+          "type": "text",
+          "required": false,
+          "placeholder": "e.g. CTO, VP of Engineering, Founder, Head of AI"
+        },
+        {
+          "name": "website",
+          "label": "Website / Project URL",
+          "type": "url",
+          "required": false,
+          "placeholder": "https://example.com"
+        },
+        {
+          "name": "tech_stack",
+          "label": "Preferred Tech Stack / Tooling",
+          "type": "text",
+          "required": false,
+          "placeholder": "e.g. Claude Code, Google Antigravity, OpenRouter, vLLM, Ollama, LangGraph, Python, Rust, Qiskit"
+        },
+        {
+          "name": "deliverable_format",
+          "label": "Deliverable Format Preferences",
+          "type": "text",
+          "required": false,
+          "placeholder": "e.g. Local LLM Service, Live Workshops, GitHub PRs, Jupyter / Colab, TDD Test Suites"
+        },
+        {
+          "name": "project_type",
+          "label": "Project Type",
+          "type": "select",
+          "required": true,
+          "default_value": "Personal AI Transformation (12-service catalogue)",
+          "options": [
+            "Personal AI Transformation (12-service catalogue)",
+            "Generative AI Transformation",
+            "Local LLMs & Cost Slashing",
+            "Claude Agent Orchestration",
+            "Agentic Assistants Training",
+            "Workflow Automation Training",
+            "AI Budget & Cost Control Training",
+            "AI Developer Training",
+            "Advanced AI Agents",
+            "Claude Advanced Training",
+            "Gemini Advanced Training",
+            "Competitor Research & Intelligence",
+            "AI Leads Magnet & Conversion Systems",
+            "Continuous Learning & AI Second Brain",
+            "Work-Life Balance & Autonomous Offloading",
+            "Other"
+          ]
+        },
+        {
+          "name": "budget",
+          "label": "Estimated Scope",
+          "type": "select",
+          "required": false,
+          "default_value": "",
+          "options": [
+            "Tier 1: High-Income Economies (100% Standard Rate)",
+            "Tier 2: Upper-Middle-Income Economies (25% Discount / 75% Rate)",
+            "Tier 3: Lower-Middle & Low-Income Economies (50% Rate)",
+            "Tier 4: Early-Stage Startups (50% Flat Discount)",
+            "Tier 5: Non-Profits & Academia (75% Discount / 25% Rate)",
+            "Tier 6: Crisis-Affected & Under-Resourced Builders (Custom Subsidized Quote)"
+          ]
+        },
+        {
+          "name": "message",
+          "label": "Project Details & Message",
+          "type": "textarea",
+          "required": true,
+          "rows": 12
+        }
+      ]
+    }
+  },
+  "config": {
+    "author": "Thomas Cherickal",
+    "email": "thomascherickal@gmail.com",
+    "domain": "https://thedigitalfuturist.com",
+    "brand": "The Digital Futurist",
+    "brandStartYear": 2020,
+    "title": "Generative AI Consultant",
+    "linkedin": "https://linkedin.com/in/thomascherickal",
+    "patreon": "https://patreon.com/thomascherickal",
+    "github": "https://github.com/thomascherickal",
+    "topmate": "https://topmate.io/thomascherickal",
+    "x": "https://x.com/thomazcherickal"
+  }
+}

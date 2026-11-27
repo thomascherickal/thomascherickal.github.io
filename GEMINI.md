@@ -1,5 +1,13 @@
 # Project Automation & Agent Rules
 
+## Single Source of Truth (highest priority rule)
+- Never type a price, seat count, duration, percentage, installment count, tier name or country, reply time, or publication title into HTML, JS, Markdown, `llms.txt` or JSON-LD.
+- To change a fact: edit `data/*.json`, then run `python3 python/ssot/render.py`.
+- To add a fact to a page: insert an `<!--ssot:...-->` marker; if no formatter fits, add one to `python/ssot/format.py` with a test.
+- Never edit text between `<!--ssot:...-->` and `<!--/ssot-->`. It is overwritten.
+- Never edit `assets/data/site-data.json`. It is generated.
+- If `validate.py` fails, fix `data/`, not the validator.
+
 ## Component Inlining (`header.html` & `footer.html`)
 Whenever `header.html` or `footer.html` is modified, created, or updated:
 - **ALWAYS automatically run** `python3 python/build_components.py` immediately in the same turn.

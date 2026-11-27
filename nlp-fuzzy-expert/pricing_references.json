@@ -2,8 +2,8 @@
   "metadata": {
     "domain": "pricing",
     "engine": "nlp-fuzzy-expert",
-    "total_references_tracked": 3152,
-    "last_synchronized": "2026-11-27T11:44:38.848540"
+    "total_references_tracked": 3042,
+    "last_synchronized": "2026-11-27T11:49:17.614158"
   },
   "all_references": [
     {
@@ -51,18 +51,6 @@
       "old_value": "60 Days",
       "new_value": "60 Days",
       "context": "<h3 style=\"font-family:var(--font-display);font-size:1.15rem;font-weight:800;color:var(--gold);margin-bottom:0.35rem;\">\n            $1,000 USD · 60 Days (30d Training + 30d Guidance &amp; Materials)\n          </h3>",
-      "match_type": "rule",
-      "data_source": "data/pricing.json"
-    },
-    {
-      "file": "pricing.html",
-      "page": "Pricing",
-      "section": "Interactive Calculator",
-      "line_number": 703,
-      "field_key": "calculator_options",
-      "old_value": "pkg-business",
-      "new_value": "<option value=\"pkg-business\" data-price=\"1000\" selected=\"\">Business Training Flagship - $1,000 USD (60 Days: 30d Training + 30d Guidance, up to 10 seats)</option>",
-      "context": "<option value=\"pkg-business\" data-price=\"1000\" selected=\"\">Business Training Flagship - $1,000 USD (60 Days: 30d Training + 30d Guidance, up to 10 seats)</option>",
       "match_type": "rule",
       "data_source": "data/pricing.json"
     },
@@ -4301,204 +4289,6 @@
     {
       "file": "contact.html",
       "page": "Contact | Thomas Cherickal",
-      "section": "Page Header",
-      "line_number": 271,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
-      "old_value": "100%",
-      "new_value": "100",
-      "context": "Tier 1: High-Income (100%) - USA | UK | EU",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.rate_percentage"
-      ]
-    },
-    {
-      "file": "contact.html",
-      "page": "Contact | Thomas Cherickal",
-      "section": "Page Header",
-      "line_number": 273,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
-      "old_value": "75%",
-      "new_value": "75",
-      "context": "Tier 2: Upper-Middle (75%) - Brazil |",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_2_upper_middle_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_2_upper_middle_income.rate_percentage",
-        "data/tiers.json#tiers[4].discountPercent"
-      ]
-    },
-    {
-      "file": "contact.html",
-      "page": "Contact | Thomas Cherickal",
-      "section": "Page Header",
-      "line_number": 275,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-      "old_value": "50%",
-      "new_value": "50",
-      "context": "Tier 3: Lower-Middle (50%) - India | Egypt",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_4_startups.rate_percentage",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_4_startups.rate_percentage",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_4_startups.rate_percentage",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_4_startups.rate_percentage",
-        "data/tiers.json#tiers[2].discountPercent",
-        "data/tiers.json#tiers[3].discountPercent"
-      ]
-    },
-    {
-      "file": "contact.html",
-      "page": "Contact | Thomas Cherickal",
-      "section": "Page Header",
-      "line_number": 277,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-      "old_value": "50%",
-      "new_value": "50",
-      "context": "Tier 4: Startups (50%) - Startups | Founders",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_4_startups.rate_percentage",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_4_startups.rate_percentage",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_4_startups.rate_percentage",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_4_startups.rate_percentage",
-        "data/tiers.json#tiers[2].discountPercent",
-        "data/tiers.json#tiers[3].discountPercent"
-      ]
-    },
-    {
-      "file": "contact.html",
-      "page": "Contact | Thomas Cherickal",
-      "section": "Page Header",
-      "line_number": 279,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
-      "old_value": "25%",
-      "new_value": "25",
-      "context": "Tier 5: Academia (25%) - Colleges |",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
-        "data/tiers.json#tiers[1].discountPercent"
-      ]
-    },
-    {
-      "file": "contact.html",
-      "page": "Contact | Thomas Cherickal",
-      "section": "What Happens Next?",
-      "line_number": 563,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
-      "old_value": "100%",
-      "new_value": "100",
-      "context": "Tier 1: High-Income (100% Standard)",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.rate_percentage"
-      ]
-    },
-    {
-      "file": "contact.html",
-      "page": "Contact | Thomas Cherickal",
-      "section": "What Happens Next?",
-      "line_number": 564,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
-      "old_value": "75%",
-      "new_value": "75",
-      "context": "Tier 2: Upper-Middle (75% Rate)",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_2_upper_middle_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_2_upper_middle_income.rate_percentage",
-        "data/tiers.json#tiers[4].discountPercent"
-      ]
-    },
-    {
-      "file": "contact.html",
-      "page": "Contact | Thomas Cherickal",
-      "section": "What Happens Next?",
-      "line_number": 565,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-      "old_value": "50%",
-      "new_value": "50",
-      "context": "Tier 3: Lower-Middle & Low (50% Rate)",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_4_startups.rate_percentage",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_4_startups.rate_percentage",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_4_startups.rate_percentage",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_4_startups.rate_percentage",
-        "data/tiers.json#tiers[2].discountPercent",
-        "data/tiers.json#tiers[3].discountPercent"
-      ]
-    },
-    {
-      "file": "contact.html",
-      "page": "Contact | Thomas Cherickal",
-      "section": "What Happens Next?",
-      "line_number": 566,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-      "old_value": "50%",
-      "new_value": "50",
-      "context": "Tier 4: Startups (50% Flat)",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_4_startups.rate_percentage",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_4_startups.rate_percentage",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_4_startups.rate_percentage",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_4_startups.rate_percentage",
-        "data/tiers.json#tiers[2].discountPercent",
-        "data/tiers.json#tiers[3].discountPercent"
-      ]
-    },
-    {
-      "file": "contact.html",
-      "page": "Contact | Thomas Cherickal",
-      "section": "What Happens Next?",
-      "line_number": 567,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
-      "old_value": "25%",
-      "new_value": "25",
-      "context": "Tier 5: Non-Profits & Academia (25% Rate)",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
-        "data/tiers.json#tiers[1].discountPercent"
-      ]
-    },
-    {
-      "file": "contact.html",
-      "page": "Contact | Thomas Cherickal",
       "section": "Personal Training: $1,000 USD for 2 Months (30d Training + 30d Guidance & Materials)",
       "line_number": 599,
       "field_key": "pricing:offerings[flagship-business-training].schedule.live_training_days",
@@ -4527,9 +4317,7 @@
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].tier1_base_price_usd",
       "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.price_usd",
-        "data/pricing.json#offerings[flagship-personal-training].tier1_base_price_usd",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.price_usd"
+        "data/pricing.json#offerings[flagship-personal-training].tier1_base_price_usd"
       ]
     },
     {
@@ -4544,17 +4332,11 @@
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
       "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.extra_seat_usd",
         "data/pricing.json#offerings[flagship-personal-training].cohort_capacity.additional_seat_fee_usd",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.extra_seat_usd",
         "data/pricing.json#offerings[individual-service-business].tier1_base_price_usd",
         "data/pricing.json#offerings[individual-service-business].cohort_capacity.additional_seat_fee_usd",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.price_usd",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.extra_seat_usd",
         "data/pricing.json#offerings[individual-service-personal].tier1_base_price_usd",
-        "data/pricing.json#offerings[individual-service-personal].cohort_capacity.additional_seat_fee_usd",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.price_usd",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.extra_seat_usd"
+        "data/pricing.json#offerings[individual-service-personal].cohort_capacity.additional_seat_fee_usd"
       ]
     },
     {
@@ -4569,7 +4351,9 @@
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats",
       "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].cohort_capacity.included_seats"
+        "data/pricing.json#offerings[flagship-personal-training].cohort_capacity.included_seats",
+        "data/pricing.json#offerings[individual-service-business].cohort_capacity.included_seats",
+        "data/pricing.json#offerings[individual-service-personal].cohort_capacity.included_seats"
       ]
     },
     {
@@ -4603,9 +4387,7 @@
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].tier1_base_price_usd",
       "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.price_usd",
-        "data/pricing.json#offerings[flagship-personal-training].tier1_base_price_usd",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.price_usd"
+        "data/pricing.json#offerings[flagship-personal-training].tier1_base_price_usd"
       ]
     },
     {
@@ -4620,9 +4402,7 @@
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].tier1_base_price_usd",
       "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.price_usd",
-        "data/pricing.json#offerings[flagship-personal-training].tier1_base_price_usd",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.price_usd"
+        "data/pricing.json#offerings[flagship-personal-training].tier1_base_price_usd"
       ]
     },
     {
@@ -4637,17 +4417,11 @@
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
       "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.extra_seat_usd",
         "data/pricing.json#offerings[flagship-personal-training].cohort_capacity.additional_seat_fee_usd",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.extra_seat_usd",
         "data/pricing.json#offerings[individual-service-business].tier1_base_price_usd",
         "data/pricing.json#offerings[individual-service-business].cohort_capacity.additional_seat_fee_usd",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.price_usd",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.extra_seat_usd",
         "data/pricing.json#offerings[individual-service-personal].tier1_base_price_usd",
-        "data/pricing.json#offerings[individual-service-personal].cohort_capacity.additional_seat_fee_usd",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.price_usd",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.extra_seat_usd"
+        "data/pricing.json#offerings[individual-service-personal].cohort_capacity.additional_seat_fee_usd"
       ]
     },
     {
@@ -4662,7 +4436,9 @@
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats",
       "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].cohort_capacity.included_seats"
+        "data/pricing.json#offerings[flagship-personal-training].cohort_capacity.included_seats",
+        "data/pricing.json#offerings[individual-service-business].cohort_capacity.included_seats",
+        "data/pricing.json#offerings[individual-service-personal].cohort_capacity.included_seats"
       ]
     },
     {
@@ -4696,9 +4472,7 @@
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].tier1_base_price_usd",
       "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.price_usd",
-        "data/pricing.json#offerings[flagship-personal-training].tier1_base_price_usd",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.price_usd"
+        "data/pricing.json#offerings[flagship-personal-training].tier1_base_price_usd"
       ]
     },
     {
@@ -5336,7 +5110,7 @@
       "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
       "old_value": "$100",
       "new_value": "100",
-      "context": "\"text\": \"If a training cohort exceeds 10 participants, additional seats are billed at a flat ($100 / $75 / $50 / $50 / $25 / Custom USD) per head (up to a strict maximum of 20 seats). Crucially, th...",
+      "context": "\"text\": \"If a training cohort exceeds 10 participants, additional seats are billed at a flat ( $100 / $75 / $50 / $50 / $25 / Custom USD) per head (up to a strict maximum of 20 seats). Crucially, t...",
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
       "also_in_data": [
@@ -5355,7 +5129,7 @@
       "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.included_seats",
       "old_value": "10 participants",
       "new_value": "10",
-      "context": "\"text\": \"If a training cohort exceeds 10 participants, additional seats are billed at a flat ($100 / $75 / $50 / $50 / $25 / Custom USD) per head (up to a strict maximum of 20 seats). Crucially, th...",
+      "context": "\"text\": \"If a training cohort exceeds 10 participants, additional seats are billed at a flat ( $100 / $75 / $50 / $50 / $25 / Custom USD) per head (up to a strict maximum of 20 seats). Crucially, t...",
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats",
       "also_in_data": [
@@ -5372,7 +5146,7 @@
       "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.max_seats",
       "old_value": "20 seats",
       "new_value": "20",
-      "context": "\"text\": \"If a training cohort exceeds 10 participants, additional seats are billed at a flat ($100 / $75 / $50 / $50 / $25 / Custom USD) per head (up to a strict maximum of 20 seats). Crucially, th...",
+      "context": "\"text\": \"If a training cohort exceeds 10 participants, additional seats are billed at a flat ( $100 / $75 / $50 / $50 / $25 / Custom USD) per head (up to a strict maximum of 20 seats). Crucially, t...",
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.max_seats",
       "also_in_data": [
@@ -5759,7 +5533,7 @@
       "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
       "old_value": "$100",
       "new_value": "100",
-      "context": "\"text\": \"Qualification for Tier 5 (75% Parity Discount: $500 USD for Flagship Business, ($100 / $75 / $50 / $50 / $25 / Custom USD) for Flagship Personal, $50 USD for Individual Business, and $25 U...",
+      "context": "\"text\": \"Qualification for Tier 5 (75% Parity Discount: $500 USD for Flagship Business, ( $100 / $75 / $50 / $50 / $25 / Custom USD) for Flagship Personal, $50 USD for Individual Business, and $25 ...",
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
       "also_in_data": [
@@ -5797,7 +5571,7 @@
       "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
       "old_value": "$100",
       "new_value": "100",
-      "context": "service for individuals and ($100 / $75 / $50 / $50 / $25 / Custom USD) per service for businesses (each",
+      "context": "service for individuals and ( $100 / $75 / $50 / $50 / $25 / Custom USD) per service for businesses (each",
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
       "also_in_data": [
@@ -6104,7 +5878,7 @@
       "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
       "old_value": "$100",
       "new_value": "100",
-      "context": "placeholder=\"Search 64 FAQs (e.g. Claude AI, Google Gemini, Apache 2.0, Antigravity, MCP, Individual Services, ($100 / $75 / $50 / $50 / $25 / Custom USD), Payment Details, Personal AI, Local LLMs)...",
+      "context": "placeholder=\"Search 64 FAQs (e.g. Claude AI, Google Gemini, Apache 2.0, Antigravity, MCP, Individual Services, ( $100 / $75 / $50 / $50 / $25 / Custom USD), Payment Details, Personal AI, Local LLMs...",
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
       "also_in_data": [
@@ -6177,7 +5951,7 @@
       "field_key": "pricing:offerings[flagship-business-training].tier1_base_price_usd",
       "old_value": "$1,000",
       "new_value": "1000",
-      "context": "Training Flagship ($1,000 / $750 / $500 / $500 / $250 / Custom USD): Ten equal",
+      "context": "Training Flagship ( $1,000 / $750 / $500 / $500 / $250 / Custom USD): Ten equal",
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].tier1_base_price_usd",
       "also_in_data": [
@@ -6337,7 +6111,7 @@
       "field_key": "pricing:offerings[flagship-business-training].tier1_base_price_usd",
       "old_value": "$1,000",
       "new_value": "1000",
-      "context": "Training Flagship ($1,000 / $750 / $500 / $500 / $250 / Custom USD): Ten equal",
+      "context": "Training Flagship ( $1,000 / $750 / $500 / $500 / $250 / Custom USD): Ten equal",
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].tier1_base_price_usd",
       "also_in_data": [
@@ -7541,7 +7315,7 @@
       "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
       "old_value": "$100",
       "new_value": "100",
-      "context": "seats scale transparently at ($100 / $75 / $50 / $50 / $25 / Custom USD) per head (adjusted by",
+      "context": "seats scale transparently at ( $100 / $75 / $50 / $50 / $25 / Custom USD) per head (adjusted by",
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
       "also_in_data": [
@@ -7630,7 +7404,7 @@
       "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
       "old_value": "$100",
       "new_value": "100",
-      "context": "scales simply, transparently, and predictably: ($100 / $75 / $50 / $50 / $25 / Custom USD) per",
+      "context": "scales simply, transparently, and predictably: ( $100 / $75 / $50 / $50 / $25 / Custom USD) per",
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
       "also_in_data": [
@@ -7738,7 +7512,7 @@
       "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
       "old_value": "$100",
       "new_value": "100",
-      "context": "data-service=\"Individual Services, Pick and Choose, ($100 / $75 / $50 / $50 / $25 / Custom USD), 5 Days Training, 5 Days Support\"",
+      "context": "data-service=\"Individual Services, Pick and Choose, ( $100 / $75 / $50 / $50 / $25 / Custom USD), 5 Days Training, 5 Days Support\"",
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
       "also_in_data": [
@@ -7757,7 +7531,7 @@
       "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
       "old_value": "$100",
       "new_value": "100",
-      "context": "Individual / Personal Pricing: ($100 / $75 / $50 / $50 / $25 / Custom",
+      "context": "Individual / Personal Pricing: ( $100 / $75 / $50 / $50 / $25 / Custom",
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
       "also_in_data": [
@@ -7793,7 +7567,7 @@
       "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
       "old_value": "$100",
       "new_value": "100",
-      "context": "Business / Organization Pricing: ($100 / $75 / $50 / $50 / $25 / Custom",
+      "context": "Business / Organization Pricing: ( $100 / $75 / $50 / $50 / $25 / Custom",
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
       "also_in_data": [
@@ -7812,7 +7586,7 @@
       "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
       "old_value": "$100",
       "new_value": "100",
-      "context": "10 team participants (additional seats at ($100 / $75 / $50 / $50 / $25 / Custom USD) per seat up to",
+      "context": "10 team participants (additional seats at ( $100 / $75 / $50 / $50 / $25 / Custom USD) per seat up to",
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
       "also_in_data": [
@@ -8368,7 +8142,7 @@
       "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
       "old_value": "$100",
       "new_value": "100",
-      "context": "hours total), priced at ($100 / $75 / $50 / $50 / $25 / Custom USD) (Business or Personal, 1 seat",
+      "context": "hours total), priced at ( $100 / $75 / $50 / $50 / $25 / Custom USD) (Business or Personal, 1 seat",
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
       "also_in_data": [
@@ -11306,7 +11080,7 @@
       "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
       "old_value": "$100",
       "new_value": "100",
-      "context": "$0 upfront; 10 equal milestone payments of 10% ($100 / $75 / $50 / $50 / $25 / Custom USD each) for live",
+      "context": "$0 upfront; 10 equal milestone payments of 10% ( $100 / $75 / $50 / $50 / $25 / Custom USD each) for live",
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
       "also_in_data": [
@@ -11325,7 +11099,7 @@
       "field_key": "pricing:offerings[flagship-business-training].payment_rules.milestone_schedule[0].percentage",
       "old_value": "10%",
       "new_value": "10",
-      "context": "$0 upfront; 10 equal milestone payments of 10% ($100 / $75 / $50 / $50 / $25 / Custom USD each) for live",
+      "context": "$0 upfront; 10 equal milestone payments of 10% ( $100 / $75 / $50 / $50 / $25 / Custom USD each) for live",
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[0].percentage",
       "also_in_data": [
@@ -11480,7 +11254,7 @@
       "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
       "old_value": "$100",
       "new_value": "100",
-      "context": "$0 upfront; 10 equal milestone payments of 10% ($100 / $75 / $50 / $50 / $25 / Custom USD each) for live",
+      "context": "$0 upfront; 10 equal milestone payments of 10% ( $100 / $75 / $50 / $50 / $25 / Custom USD each) for live",
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
       "also_in_data": [
@@ -11499,7 +11273,7 @@
       "field_key": "pricing:offerings[flagship-business-training].payment_rules.milestone_schedule[0].percentage",
       "old_value": "10%",
       "new_value": "10",
-      "context": "$0 upfront; 10 equal milestone payments of 10% ($100 / $75 / $50 / $50 / $25 / Custom USD each) for live",
+      "context": "$0 upfront; 10 equal milestone payments of 10% ( $100 / $75 / $50 / $50 / $25 / Custom USD each) for live",
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[0].percentage",
       "also_in_data": [
@@ -11850,122 +11624,6 @@
     {
       "file": "index.html",
       "page": "Thomas Cherickal | Generative AI Consultant",
-      "section": "Page Header",
-      "line_number": 411,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
-      "old_value": "100%",
-      "new_value": "100",
-      "context": "Tier 1: High-Income (100%) - USA | UK | EU",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.rate_percentage"
-      ]
-    },
-    {
-      "file": "index.html",
-      "page": "Thomas Cherickal | Generative AI Consultant",
-      "section": "Page Header",
-      "line_number": 413,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
-      "old_value": "75%",
-      "new_value": "75",
-      "context": "Tier 2: Upper-Middle (75%) - Brazil |",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_2_upper_middle_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_2_upper_middle_income.rate_percentage",
-        "data/tiers.json#tiers[4].discountPercent"
-      ]
-    },
-    {
-      "file": "index.html",
-      "page": "Thomas Cherickal | Generative AI Consultant",
-      "section": "Page Header",
-      "line_number": 415,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-      "old_value": "50%",
-      "new_value": "50",
-      "context": "Tier 3: Lower-Middle (50%) - India | Egypt",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_4_startups.rate_percentage",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_4_startups.rate_percentage",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_4_startups.rate_percentage",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_4_startups.rate_percentage",
-        "data/tiers.json#tiers[2].discountPercent",
-        "data/tiers.json#tiers[3].discountPercent"
-      ]
-    },
-    {
-      "file": "index.html",
-      "page": "Thomas Cherickal | Generative AI Consultant",
-      "section": "Page Header",
-      "line_number": 417,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-      "old_value": "50%",
-      "new_value": "50",
-      "context": "Tier 4: Startups (50%) - Startups | Founders",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_4_startups.rate_percentage",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_4_startups.rate_percentage",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_4_startups.rate_percentage",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_4_startups.rate_percentage",
-        "data/tiers.json#tiers[2].discountPercent",
-        "data/tiers.json#tiers[3].discountPercent"
-      ]
-    },
-    {
-      "file": "index.html",
-      "page": "Thomas Cherickal | Generative AI Consultant",
-      "section": "Page Header",
-      "line_number": 419,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
-      "old_value": "25%",
-      "new_value": "25",
-      "context": "Tier 5: Academia (25%) - Colleges |",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
-        "data/tiers.json#tiers[1].discountPercent"
-      ]
-    },
-    {
-      "file": "index.html",
-      "page": "Thomas Cherickal | Generative AI Consultant",
-      "section": "Generative AI Consultant",
-      "line_number": 535,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
-      "old_value": "100%",
-      "new_value": "100",
-      "context": "style=\"background:linear-gradient(145deg, rgba(12, 17, 29, 0.95) 0%, rgba(15, 23, 42, 0.9) 100%);border:2px solid var(--border-gold, #fbbf24);border-radius:var(--radius-lg);padding:2rem 2.25rem;box...",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.rate_percentage"
-      ]
-    },
-    {
-      "file": "index.html",
-      "page": "Thomas Cherickal | Generative AI Consultant",
       "section": "10% in Ten Milestone Installments",
       "line_number": 562,
       "field_key": "pricing:offerings[flagship-business-training].payment_rules.milestone_schedule[0].percentage",
@@ -12245,23 +11903,6 @@
     {
       "file": "index.html",
       "page": "Thomas Cherickal | Generative AI Consultant",
-      "section": "Purchasing Power Parity & Radical Pricing",
-      "line_number": 3295,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
-      "old_value": "100%",
-      "new_value": "100",
-      "context": "style=\"display:grid;grid-template-columns:repeat(auto-fit, minmax(min(100%, 280px), 1fr));gap:1.5rem;background:rgba(12, 17, 29, 0.95);border:2px solid var(--border-glow, rgba(56, 189, 248, 0.4));b...",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.rate_percentage"
-      ]
-    },
-    {
-      "file": "index.html",
-      "page": "Thomas Cherickal | Generative AI Consultant",
       "section": "$100 / $75 / $50 / $50 / $25 / Custom Individual / Business · 5d Training + 5d Support",
       "line_number": 3304,
       "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
@@ -12271,80 +11912,11 @@
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
       "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.extra_seat_usd",
         "data/pricing.json#offerings[flagship-personal-training].cohort_capacity.additional_seat_fee_usd",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.extra_seat_usd",
         "data/pricing.json#offerings[individual-service-business].tier1_base_price_usd",
         "data/pricing.json#offerings[individual-service-business].cohort_capacity.additional_seat_fee_usd",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.price_usd",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.extra_seat_usd",
         "data/pricing.json#offerings[individual-service-personal].tier1_base_price_usd",
-        "data/pricing.json#offerings[individual-service-personal].cohort_capacity.additional_seat_fee_usd",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.price_usd",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.extra_seat_usd"
-      ]
-    },
-    {
-      "file": "index.html",
-      "page": "Thomas Cherickal | Generative AI Consultant",
-      "section": "$100 / $75 / $50 / $50 / $25 / Custom Individual / Business · 5d Training + 5d Support",
-      "line_number": 3304,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.extra_seat_usd",
-      "old_value": "$75",
-      "new_value": "75",
-      "context": "$100 / $75 / $50 / $50 / $25 / Custom Individual / Business · 5d Training + 5d Support",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.extra_seat_usd",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_2_upper_middle_income.extra_seat_usd",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_2_upper_middle_income.price_usd",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_2_upper_middle_income.extra_seat_usd",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_2_upper_middle_income.price_usd",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_2_upper_middle_income.extra_seat_usd"
-      ]
-    },
-    {
-      "file": "index.html",
-      "page": "Thomas Cherickal | Generative AI Consultant",
-      "section": "$100 / $75 / $50 / $50 / $25 / Custom Individual / Business · 5d Training + 5d Support",
-      "line_number": 3304,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.extra_seat_usd",
-      "old_value": "$50",
-      "new_value": "50",
-      "context": "$100 / $75 / $50 / $50 / $25 / Custom Individual / Business · 5d Training + 5d Support",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.extra_seat_usd",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_4_startups.extra_seat_usd",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_3_lower_middle_low_income.extra_seat_usd",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_4_startups.extra_seat_usd",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_3_lower_middle_low_income.price_usd",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_3_lower_middle_low_income.extra_seat_usd",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_4_startups.price_usd",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_4_startups.extra_seat_usd",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_3_lower_middle_low_income.price_usd",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_3_lower_middle_low_income.extra_seat_usd",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_4_startups.price_usd",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_4_startups.extra_seat_usd"
-      ]
-    },
-    {
-      "file": "index.html",
-      "page": "Thomas Cherickal | Generative AI Consultant",
-      "section": "$100 / $75 / $50 / $50 / $25 / Custom Individual / Business · 5d Training + 5d Support",
-      "line_number": 3304,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.extra_seat_usd",
-      "old_value": "$25",
-      "new_value": "25",
-      "context": "$100 / $75 / $50 / $50 / $25 / Custom Individual / Business · 5d Training + 5d Support",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.extra_seat_usd",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_5_academia_nonprofits.extra_seat_usd",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_5_academia_nonprofits.price_usd",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_5_academia_nonprofits.extra_seat_usd",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_5_academia_nonprofits.price_usd",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_5_academia_nonprofits.extra_seat_usd"
+        "data/pricing.json#offerings[individual-service-personal].cohort_capacity.additional_seat_fee_usd"
       ]
     },
     {
@@ -12420,17 +11992,11 @@
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
       "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.extra_seat_usd",
         "data/pricing.json#offerings[flagship-personal-training].cohort_capacity.additional_seat_fee_usd",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.extra_seat_usd",
         "data/pricing.json#offerings[individual-service-business].tier1_base_price_usd",
         "data/pricing.json#offerings[individual-service-business].cohort_capacity.additional_seat_fee_usd",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.price_usd",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.extra_seat_usd",
         "data/pricing.json#offerings[individual-service-personal].tier1_base_price_usd",
-        "data/pricing.json#offerings[individual-service-personal].cohort_capacity.additional_seat_fee_usd",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.price_usd",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.extra_seat_usd"
+        "data/pricing.json#offerings[individual-service-personal].cohort_capacity.additional_seat_fee_usd"
       ]
     },
     {
@@ -12445,132 +12011,9 @@
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats",
       "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].cohort_capacity.included_seats"
-      ]
-    },
-    {
-      "file": "index.html",
-      "page": "Thomas Cherickal | Generative AI Consultant",
-      "section": "$100 / $75 / $50 / $50 / $25 / Custom Individual / Business · 5d Training + 5d Support",
-      "line_number": 3308,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.extra_seat_usd",
-      "old_value": "$75",
-      "new_value": "75",
-      "context": "total coverage per service). Up to 10 seats for businesses (+$100 / +$75 / +$50 / +$50 / +$25 /",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.extra_seat_usd",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_2_upper_middle_income.extra_seat_usd",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_2_upper_middle_income.price_usd",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_2_upper_middle_income.extra_seat_usd",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_2_upper_middle_income.price_usd",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_2_upper_middle_income.extra_seat_usd"
-      ]
-    },
-    {
-      "file": "index.html",
-      "page": "Thomas Cherickal | Generative AI Consultant",
-      "section": "$100 / $75 / $50 / $50 / $25 / Custom Individual / Business · 5d Training + 5d Support",
-      "line_number": 3308,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.extra_seat_usd",
-      "old_value": "$50",
-      "new_value": "50",
-      "context": "total coverage per service). Up to 10 seats for businesses (+$100 / +$75 / +$50 / +$50 / +$25 /",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.extra_seat_usd",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_4_startups.extra_seat_usd",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_3_lower_middle_low_income.extra_seat_usd",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_4_startups.extra_seat_usd",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_3_lower_middle_low_income.price_usd",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_3_lower_middle_low_income.extra_seat_usd",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_4_startups.price_usd",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_4_startups.extra_seat_usd",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_3_lower_middle_low_income.price_usd",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_3_lower_middle_low_income.extra_seat_usd",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_4_startups.price_usd",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_4_startups.extra_seat_usd"
-      ]
-    },
-    {
-      "file": "index.html",
-      "page": "Thomas Cherickal | Generative AI Consultant",
-      "section": "$100 / $75 / $50 / $50 / $25 / Custom Individual / Business · 5d Training + 5d Support",
-      "line_number": 3308,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.extra_seat_usd",
-      "old_value": "$25",
-      "new_value": "25",
-      "context": "total coverage per service). Up to 10 seats for businesses (+$100 / +$75 / +$50 / +$50 / +$25 /",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.extra_seat_usd",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_5_academia_nonprofits.extra_seat_usd",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_5_academia_nonprofits.price_usd",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_5_academia_nonprofits.extra_seat_usd",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_5_academia_nonprofits.price_usd",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_5_academia_nonprofits.extra_seat_usd"
-      ]
-    },
-    {
-      "file": "index.html",
-      "page": "Thomas Cherickal | Generative AI Consultant",
-      "section": "$100 / $75 / $50 / $50 / $25 / Custom Individual / Business · 5d Training + 5d Support",
-      "line_number": 3310,
-      "field_key": "pricing:offerings[individual-service-business].cohort_capacity.included_seats",
-      "old_value": "1 person",
-      "new_value": "1",
-      "context": "seat); 1 person for individuals.",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[individual-service-business].cohort_capacity.included_seats",
-      "also_in_data": [
+        "data/pricing.json#offerings[flagship-personal-training].cohort_capacity.included_seats",
+        "data/pricing.json#offerings[individual-service-business].cohort_capacity.included_seats",
         "data/pricing.json#offerings[individual-service-personal].cohort_capacity.included_seats"
-      ]
-    },
-    {
-      "file": "index.html",
-      "page": "Thomas Cherickal | Generative AI Consultant",
-      "section": "$1,000 / $750 / $500 / $500 / $250 / Custom for 2 Months (30d Training + 30d Guidance & Materials)",
-      "line_number": 3322,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.price_usd",
-      "old_value": "$750",
-      "new_value": "750",
-      "context": "$1,000 / $750 / $500 / $500 / $250 / Custom for 2 Months (30d Training + 30d Guidance & Materials)",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.price_usd",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_2_upper_middle_income.price_usd"
-      ]
-    },
-    {
-      "file": "index.html",
-      "page": "Thomas Cherickal | Generative AI Consultant",
-      "section": "$1,000 / $750 / $500 / $500 / $250 / Custom for 2 Months (30d Training + 30d Guidance & Materials)",
-      "line_number": 3322,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.price_usd",
-      "old_value": "$500",
-      "new_value": "500",
-      "context": "$1,000 / $750 / $500 / $500 / $250 / Custom for 2 Months (30d Training + 30d Guidance & Materials)",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.price_usd",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_4_startups.price_usd",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_3_lower_middle_low_income.price_usd",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_4_startups.price_usd"
-      ]
-    },
-    {
-      "file": "index.html",
-      "page": "Thomas Cherickal | Generative AI Consultant",
-      "section": "$1,000 / $750 / $500 / $500 / $250 / Custom for 2 Months (30d Training + 30d Guidance & Materials)",
-      "line_number": 3322,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.price_usd",
-      "old_value": "$250",
-      "new_value": "250",
-      "context": "$1,000 / $750 / $500 / $500 / $250 / Custom for 2 Months (30d Training + 30d Guidance & Materials)",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.price_usd",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_5_academia_nonprofits.price_usd"
       ]
     },
     {
@@ -12604,9 +12047,7 @@
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].tier1_base_price_usd",
       "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.price_usd",
-        "data/pricing.json#offerings[flagship-personal-training].tier1_base_price_usd",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.price_usd"
+        "data/pricing.json#offerings[flagship-personal-training].tier1_base_price_usd"
       ]
     },
     {
@@ -12640,17 +12081,11 @@
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
       "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.extra_seat_usd",
         "data/pricing.json#offerings[flagship-personal-training].cohort_capacity.additional_seat_fee_usd",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.extra_seat_usd",
         "data/pricing.json#offerings[individual-service-business].tier1_base_price_usd",
         "data/pricing.json#offerings[individual-service-business].cohort_capacity.additional_seat_fee_usd",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.price_usd",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.extra_seat_usd",
         "data/pricing.json#offerings[individual-service-personal].tier1_base_price_usd",
-        "data/pricing.json#offerings[individual-service-personal].cohort_capacity.additional_seat_fee_usd",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.price_usd",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.extra_seat_usd"
+        "data/pricing.json#offerings[individual-service-personal].cohort_capacity.additional_seat_fee_usd"
       ]
     },
     {
@@ -12665,117 +12100,9 @@
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats",
       "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].cohort_capacity.included_seats"
-      ]
-    },
-    {
-      "file": "index.html",
-      "page": "Thomas Cherickal | Generative AI Consultant",
-      "section": "$1,000 / $750 / $500 / $500 / $250 / Custom for 2 Months (30d Training + 30d Guidance & Materials)",
-      "line_number": 3326,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.extra_seat_usd",
-      "old_value": "$75",
-      "new_value": "75",
-      "context": "guides. Covers cohorts up to 10 participants (+$100 / +$75 / +$50 / +$50 / +$25 / Custom/seat). Clients",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.extra_seat_usd",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_2_upper_middle_income.extra_seat_usd",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_2_upper_middle_income.price_usd",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_2_upper_middle_income.extra_seat_usd",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_2_upper_middle_income.price_usd",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_2_upper_middle_income.extra_seat_usd"
-      ]
-    },
-    {
-      "file": "index.html",
-      "page": "Thomas Cherickal | Generative AI Consultant",
-      "section": "$1,000 / $750 / $500 / $500 / $250 / Custom for 2 Months (30d Training + 30d Guidance & Materials)",
-      "line_number": 3326,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.extra_seat_usd",
-      "old_value": "$50",
-      "new_value": "50",
-      "context": "guides. Covers cohorts up to 10 participants (+$100 / +$75 / +$50 / +$50 / +$25 / Custom/seat). Clients",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.extra_seat_usd",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_4_startups.extra_seat_usd",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_3_lower_middle_low_income.extra_seat_usd",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_4_startups.extra_seat_usd",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_3_lower_middle_low_income.price_usd",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_3_lower_middle_low_income.extra_seat_usd",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_4_startups.price_usd",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_4_startups.extra_seat_usd",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_3_lower_middle_low_income.price_usd",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_3_lower_middle_low_income.extra_seat_usd",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_4_startups.price_usd",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_4_startups.extra_seat_usd"
-      ]
-    },
-    {
-      "file": "index.html",
-      "page": "Thomas Cherickal | Generative AI Consultant",
-      "section": "$1,000 / $750 / $500 / $500 / $250 / Custom for 2 Months (30d Training + 30d Guidance & Materials)",
-      "line_number": 3326,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.extra_seat_usd",
-      "old_value": "$25",
-      "new_value": "25",
-      "context": "guides. Covers cohorts up to 10 participants (+$100 / +$75 / +$50 / +$50 / +$25 / Custom/seat). Clients",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.extra_seat_usd",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_5_academia_nonprofits.extra_seat_usd",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_5_academia_nonprofits.price_usd",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_5_academia_nonprofits.extra_seat_usd",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_5_academia_nonprofits.price_usd",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_5_academia_nonprofits.extra_seat_usd"
-      ]
-    },
-    {
-      "file": "index.html",
-      "page": "Thomas Cherickal | Generative AI Consultant",
-      "section": "$1,000 / $750 / $500 / $500 / $250 / Custom for 2 Months (30d Training + 30d Guidance & Materials)",
-      "line_number": 3340,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.price_usd",
-      "old_value": "$750",
-      "new_value": "750",
-      "context": "$1,000 / $750 / $500 / $500 / $250 / Custom for 2 Months (30d Training + 30d Guidance & Materials)",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.price_usd",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_2_upper_middle_income.price_usd"
-      ]
-    },
-    {
-      "file": "index.html",
-      "page": "Thomas Cherickal | Generative AI Consultant",
-      "section": "$1,000 / $750 / $500 / $500 / $250 / Custom for 2 Months (30d Training + 30d Guidance & Materials)",
-      "line_number": 3340,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.price_usd",
-      "old_value": "$500",
-      "new_value": "500",
-      "context": "$1,000 / $750 / $500 / $500 / $250 / Custom for 2 Months (30d Training + 30d Guidance & Materials)",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.price_usd",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_4_startups.price_usd",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_3_lower_middle_low_income.price_usd",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_4_startups.price_usd"
-      ]
-    },
-    {
-      "file": "index.html",
-      "page": "Thomas Cherickal | Generative AI Consultant",
-      "section": "$1,000 / $750 / $500 / $500 / $250 / Custom for 2 Months (30d Training + 30d Guidance & Materials)",
-      "line_number": 3340,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.price_usd",
-      "old_value": "$250",
-      "new_value": "250",
-      "context": "$1,000 / $750 / $500 / $500 / $250 / Custom for 2 Months (30d Training + 30d Guidance & Materials)",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.price_usd",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_5_academia_nonprofits.price_usd"
+        "data/pricing.json#offerings[flagship-personal-training].cohort_capacity.included_seats",
+        "data/pricing.json#offerings[individual-service-business].cohort_capacity.included_seats",
+        "data/pricing.json#offerings[individual-service-personal].cohort_capacity.included_seats"
       ]
     },
     {
@@ -12809,9 +12136,7 @@
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].tier1_base_price_usd",
       "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.price_usd",
-        "data/pricing.json#offerings[flagship-personal-training].tier1_base_price_usd",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.price_usd"
+        "data/pricing.json#offerings[flagship-personal-training].tier1_base_price_usd"
       ]
     },
     {
@@ -12845,17 +12170,11 @@
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
       "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.extra_seat_usd",
         "data/pricing.json#offerings[flagship-personal-training].cohort_capacity.additional_seat_fee_usd",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.extra_seat_usd",
         "data/pricing.json#offerings[individual-service-business].tier1_base_price_usd",
         "data/pricing.json#offerings[individual-service-business].cohort_capacity.additional_seat_fee_usd",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.price_usd",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.extra_seat_usd",
         "data/pricing.json#offerings[individual-service-personal].tier1_base_price_usd",
-        "data/pricing.json#offerings[individual-service-personal].cohort_capacity.additional_seat_fee_usd",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.price_usd",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.extra_seat_usd"
+        "data/pricing.json#offerings[individual-service-personal].cohort_capacity.additional_seat_fee_usd"
       ]
     },
     {
@@ -12887,56 +12206,7 @@
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].tier1_base_price_usd",
       "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.price_usd",
-        "data/pricing.json#offerings[flagship-personal-training].tier1_base_price_usd",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.price_usd"
-      ]
-    },
-    {
-      "file": "index.html",
-      "page": "Thomas Cherickal | Generative AI Consultant",
-      "section": "High-Income Economies",
-      "line_number": 3369,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.price_usd",
-      "old_value": "$750",
-      "new_value": "750",
-      "context": "Flagship: $1,000 / $750 / $500 / $500 / $250 / Custom",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.price_usd",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_2_upper_middle_income.price_usd"
-      ]
-    },
-    {
-      "file": "index.html",
-      "page": "Thomas Cherickal | Generative AI Consultant",
-      "section": "High-Income Economies",
-      "line_number": 3369,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.price_usd",
-      "old_value": "$500",
-      "new_value": "500",
-      "context": "Flagship: $1,000 / $750 / $500 / $500 / $250 / Custom",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.price_usd",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_4_startups.price_usd",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_3_lower_middle_low_income.price_usd",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_4_startups.price_usd"
-      ]
-    },
-    {
-      "file": "index.html",
-      "page": "Thomas Cherickal | Generative AI Consultant",
-      "section": "High-Income Economies",
-      "line_number": 3369,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.price_usd",
-      "old_value": "$250",
-      "new_value": "250",
-      "context": "Flagship: $1,000 / $750 / $500 / $500 / $250 / Custom",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.price_usd",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_5_academia_nonprofits.price_usd"
+        "data/pricing.json#offerings[flagship-personal-training].tier1_base_price_usd"
       ]
     },
     {
@@ -12951,9 +12221,7 @@
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].tier1_base_price_usd",
       "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.price_usd",
-        "data/pricing.json#offerings[flagship-personal-training].tier1_base_price_usd",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.price_usd"
+        "data/pricing.json#offerings[flagship-personal-training].tier1_base_price_usd"
       ]
     },
     {
@@ -12968,80 +12236,11 @@
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
       "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.extra_seat_usd",
         "data/pricing.json#offerings[flagship-personal-training].cohort_capacity.additional_seat_fee_usd",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.extra_seat_usd",
         "data/pricing.json#offerings[individual-service-business].tier1_base_price_usd",
         "data/pricing.json#offerings[individual-service-business].cohort_capacity.additional_seat_fee_usd",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.price_usd",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.extra_seat_usd",
         "data/pricing.json#offerings[individual-service-personal].tier1_base_price_usd",
-        "data/pricing.json#offerings[individual-service-personal].cohort_capacity.additional_seat_fee_usd",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.price_usd",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.extra_seat_usd"
-      ]
-    },
-    {
-      "file": "index.html",
-      "page": "Thomas Cherickal | Generative AI Consultant",
-      "section": "High-Income Economies",
-      "line_number": 3371,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.extra_seat_usd",
-      "old_value": "$75",
-      "new_value": "75",
-      "context": "Pick: $100 / $75 / $50 / $50 / $25 / Custom USD",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.extra_seat_usd",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_2_upper_middle_income.extra_seat_usd",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_2_upper_middle_income.price_usd",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_2_upper_middle_income.extra_seat_usd",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_2_upper_middle_income.price_usd",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_2_upper_middle_income.extra_seat_usd"
-      ]
-    },
-    {
-      "file": "index.html",
-      "page": "Thomas Cherickal | Generative AI Consultant",
-      "section": "High-Income Economies",
-      "line_number": 3371,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.extra_seat_usd",
-      "old_value": "$50",
-      "new_value": "50",
-      "context": "Pick: $100 / $75 / $50 / $50 / $25 / Custom USD",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.extra_seat_usd",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_4_startups.extra_seat_usd",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_3_lower_middle_low_income.extra_seat_usd",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_4_startups.extra_seat_usd",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_3_lower_middle_low_income.price_usd",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_3_lower_middle_low_income.extra_seat_usd",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_4_startups.price_usd",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_4_startups.extra_seat_usd",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_3_lower_middle_low_income.price_usd",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_3_lower_middle_low_income.extra_seat_usd",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_4_startups.price_usd",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_4_startups.extra_seat_usd"
-      ]
-    },
-    {
-      "file": "index.html",
-      "page": "Thomas Cherickal | Generative AI Consultant",
-      "section": "High-Income Economies",
-      "line_number": 3371,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.extra_seat_usd",
-      "old_value": "$25",
-      "new_value": "25",
-      "context": "Pick: $100 / $75 / $50 / $50 / $25 / Custom USD",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.extra_seat_usd",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_5_academia_nonprofits.extra_seat_usd",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_5_academia_nonprofits.price_usd",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_5_academia_nonprofits.extra_seat_usd",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_5_academia_nonprofits.price_usd",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_5_academia_nonprofits.extra_seat_usd"
+        "data/pricing.json#offerings[individual-service-personal].cohort_capacity.additional_seat_fee_usd"
       ]
     },
     {
@@ -13085,464 +12284,6 @@
     {
       "file": "index.html",
       "page": "Thomas Cherickal | Generative AI Consultant",
-      "section": "High-Income Economies",
-      "line_number": 3395,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
-      "old_value": "100%",
-      "new_value": "100",
-      "context": "style=\"width:100%;justify-content:center;border:1px solid #38bdf8;color:#38bdf8;background:rgba(56,189,248,0.08);\">",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.rate_percentage"
-      ]
-    },
-    {
-      "file": "index.html",
-      "page": "Thomas Cherickal | Generative AI Consultant",
-      "section": "Upper-Middle-Income Economies",
-      "line_number": 3410,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
-      "old_value": "25%",
-      "new_value": "25",
-      "context": "25% Parity Discount",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
-        "data/tiers.json#tiers[1].discountPercent"
-      ]
-    },
-    {
-      "file": "index.html",
-      "page": "Thomas Cherickal | Generative AI Consultant",
-      "section": "Upper-Middle-Income Economies",
-      "line_number": 3413,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
-      "old_value": "75%",
-      "new_value": "75",
-      "context": "75% BASE RATE · 0.75X MULTIPLIER",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_2_upper_middle_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_2_upper_middle_income.rate_percentage",
-        "data/tiers.json#tiers[4].discountPercent"
-      ]
-    },
-    {
-      "file": "index.html",
-      "page": "Thomas Cherickal | Generative AI Consultant",
-      "section": "Upper-Middle-Income Economies",
-      "line_number": 3417,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.price_usd",
-      "old_value": "$750",
-      "new_value": "750",
-      "context": "Flagship: $750 USD",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.price_usd",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_2_upper_middle_income.price_usd"
-      ]
-    },
-    {
-      "file": "index.html",
-      "page": "Thomas Cherickal | Generative AI Consultant",
-      "section": "Upper-Middle-Income Economies",
-      "line_number": 3418,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.extra_seat_usd",
-      "old_value": "$75",
-      "new_value": "75",
-      "context": "Pick: $75 USD",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.extra_seat_usd",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_2_upper_middle_income.extra_seat_usd",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_2_upper_middle_income.price_usd",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_2_upper_middle_income.extra_seat_usd",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_2_upper_middle_income.price_usd",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_2_upper_middle_income.extra_seat_usd"
-      ]
-    },
-    {
-      "file": "index.html",
-      "page": "Thomas Cherickal | Generative AI Consultant",
-      "section": "Upper-Middle-Income Economies",
-      "line_number": 3439,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
-      "old_value": "100%",
-      "new_value": "100",
-      "context": "style=\"width:100%;justify-content:center;border:1px solid #fbbf24;color:#fbbf24;background:rgba(251,191,36,0.08);\">",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.rate_percentage"
-      ]
-    },
-    {
-      "file": "index.html",
-      "page": "Thomas Cherickal | Generative AI Consultant",
-      "section": "Lower-Middle & Low-Income Economies",
-      "line_number": 3454,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-      "old_value": "50%",
-      "new_value": "50",
-      "context": "50% Parity Discount",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_4_startups.rate_percentage",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_4_startups.rate_percentage",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_4_startups.rate_percentage",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_4_startups.rate_percentage",
-        "data/tiers.json#tiers[2].discountPercent",
-        "data/tiers.json#tiers[3].discountPercent"
-      ]
-    },
-    {
-      "file": "index.html",
-      "page": "Thomas Cherickal | Generative AI Consultant",
-      "section": "Lower-Middle & Low-Income Economies",
-      "line_number": 3457,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-      "old_value": "50%",
-      "new_value": "50",
-      "context": "50% BASE RATE · 0.50X MULTIPLIER",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_4_startups.rate_percentage",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_4_startups.rate_percentage",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_4_startups.rate_percentage",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_4_startups.rate_percentage",
-        "data/tiers.json#tiers[2].discountPercent",
-        "data/tiers.json#tiers[3].discountPercent"
-      ]
-    },
-    {
-      "file": "index.html",
-      "page": "Thomas Cherickal | Generative AI Consultant",
-      "section": "Lower-Middle & Low-Income Economies",
-      "line_number": 3461,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.price_usd",
-      "old_value": "$500",
-      "new_value": "500",
-      "context": "Flagship: $500 USD",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.price_usd",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_4_startups.price_usd",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_3_lower_middle_low_income.price_usd",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_4_startups.price_usd"
-      ]
-    },
-    {
-      "file": "index.html",
-      "page": "Thomas Cherickal | Generative AI Consultant",
-      "section": "Lower-Middle & Low-Income Economies",
-      "line_number": 3462,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.extra_seat_usd",
-      "old_value": "$50",
-      "new_value": "50",
-      "context": "Pick: $50 USD",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.extra_seat_usd",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_4_startups.extra_seat_usd",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_3_lower_middle_low_income.extra_seat_usd",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_4_startups.extra_seat_usd",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_3_lower_middle_low_income.price_usd",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_3_lower_middle_low_income.extra_seat_usd",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_4_startups.price_usd",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_4_startups.extra_seat_usd",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_3_lower_middle_low_income.price_usd",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_3_lower_middle_low_income.extra_seat_usd",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_4_startups.price_usd",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_4_startups.extra_seat_usd"
-      ]
-    },
-    {
-      "file": "index.html",
-      "page": "Thomas Cherickal | Generative AI Consultant",
-      "section": "Lower-Middle & Low-Income Economies",
-      "line_number": 3484,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
-      "old_value": "100%",
-      "new_value": "100",
-      "context": "style=\"width:100%;justify-content:center;border:1px solid #34d399;color:#34d399;background:rgba(52,211,153,0.08);\">",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.rate_percentage"
-      ]
-    },
-    {
-      "file": "index.html",
-      "page": "Thomas Cherickal | Generative AI Consultant",
-      "section": "Early-Stage Tech Startups",
-      "line_number": 3499,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-      "old_value": "50%",
-      "new_value": "50",
-      "context": "50% Startup Discount",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_4_startups.rate_percentage",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_4_startups.rate_percentage",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_4_startups.rate_percentage",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_4_startups.rate_percentage",
-        "data/tiers.json#tiers[2].discountPercent",
-        "data/tiers.json#tiers[3].discountPercent"
-      ]
-    },
-    {
-      "file": "index.html",
-      "page": "Thomas Cherickal | Generative AI Consultant",
-      "section": "Early-Stage Tech Startups",
-      "line_number": 3502,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-      "old_value": "50%",
-      "new_value": "50",
-      "context": "FLAT 50% OFF WORLDWIDE · 0.50X MULTIPLIER",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_4_startups.rate_percentage",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_4_startups.rate_percentage",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_4_startups.rate_percentage",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_4_startups.rate_percentage",
-        "data/tiers.json#tiers[2].discountPercent",
-        "data/tiers.json#tiers[3].discountPercent"
-      ]
-    },
-    {
-      "file": "index.html",
-      "page": "Thomas Cherickal | Generative AI Consultant",
-      "section": "Early-Stage Tech Startups",
-      "line_number": 3506,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.price_usd",
-      "old_value": "$500",
-      "new_value": "500",
-      "context": "Flagship: $500 USD",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.price_usd",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_4_startups.price_usd",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_3_lower_middle_low_income.price_usd",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_4_startups.price_usd"
-      ]
-    },
-    {
-      "file": "index.html",
-      "page": "Thomas Cherickal | Generative AI Consultant",
-      "section": "Early-Stage Tech Startups",
-      "line_number": 3507,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.extra_seat_usd",
-      "old_value": "$50",
-      "new_value": "50",
-      "context": "Pick: $50 USD",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.extra_seat_usd",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_4_startups.extra_seat_usd",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_3_lower_middle_low_income.extra_seat_usd",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_4_startups.extra_seat_usd",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_3_lower_middle_low_income.price_usd",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_3_lower_middle_low_income.extra_seat_usd",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_4_startups.price_usd",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_4_startups.extra_seat_usd",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_3_lower_middle_low_income.price_usd",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_3_lower_middle_low_income.extra_seat_usd",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_4_startups.price_usd",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_4_startups.extra_seat_usd"
-      ]
-    },
-    {
-      "file": "index.html",
-      "page": "Thomas Cherickal | Generative AI Consultant",
-      "section": "Early-Stage Tech Startups",
-      "line_number": 3529,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
-      "old_value": "100%",
-      "new_value": "100",
-      "context": "style=\"width:100%;justify-content:center;border:1px solid #f472b6;color:#f472b6;background:rgba(244,114,182,0.08);\">",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.rate_percentage"
-      ]
-    },
-    {
-      "file": "index.html",
-      "page": "Thomas Cherickal | Generative AI Consultant",
-      "section": "Universities, Labs & Non-Profits",
-      "line_number": 3544,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
-      "old_value": "75%",
-      "new_value": "75",
-      "context": "75% Academic Discount",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_2_upper_middle_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_2_upper_middle_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_2_upper_middle_income.rate_percentage",
-        "data/tiers.json#tiers[4].discountPercent"
-      ]
-    },
-    {
-      "file": "index.html",
-      "page": "Thomas Cherickal | Generative AI Consultant",
-      "section": "Universities, Labs & Non-Profits",
-      "line_number": 3547,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
-      "old_value": "25%",
-      "new_value": "25",
-      "context": "25% BASE RATE · 0.25X MULTIPLIER",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_5_academia_nonprofits.rate_percentage",
-        "data/tiers.json#tiers[1].discountPercent"
-      ]
-    },
-    {
-      "file": "index.html",
-      "page": "Thomas Cherickal | Generative AI Consultant",
-      "section": "Universities, Labs & Non-Profits",
-      "line_number": 3551,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.price_usd",
-      "old_value": "$250",
-      "new_value": "250",
-      "context": "Flagship: $250 USD",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.price_usd",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_5_academia_nonprofits.price_usd"
-      ]
-    },
-    {
-      "file": "index.html",
-      "page": "Thomas Cherickal | Generative AI Consultant",
-      "section": "Universities, Labs & Non-Profits",
-      "line_number": 3552,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.extra_seat_usd",
-      "old_value": "$25",
-      "new_value": "25",
-      "context": "Pick: $25 USD",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_5_academia_nonprofits.extra_seat_usd",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_5_academia_nonprofits.extra_seat_usd",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_5_academia_nonprofits.price_usd",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_5_academia_nonprofits.extra_seat_usd",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_5_academia_nonprofits.price_usd",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_5_academia_nonprofits.extra_seat_usd"
-      ]
-    },
-    {
-      "file": "index.html",
-      "page": "Thomas Cherickal | Generative AI Consultant",
-      "section": "Universities, Labs & Non-Profits",
-      "line_number": 3575,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
-      "old_value": "100%",
-      "new_value": "100",
-      "context": "style=\"width:100%;justify-content:center;border:1px solid #c084fc;color:#c084fc;background:rgba(192,132,252,0.08);\">",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.rate_percentage"
-      ]
-    },
-    {
-      "file": "index.html",
-      "page": "Thomas Cherickal | Generative AI Consultant",
-      "section": "Crisis-Affected & Under-Resourced Regions",
-      "line_number": 3623,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
-      "old_value": "100%",
-      "new_value": "100",
-      "context": "style=\"width:100%;justify-content:center;border:1px solid #00f0ff;color:#00f0ff;background:rgba(0,240,255,0.08);\">",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.rate_percentage"
-      ]
-    },
-    {
-      "file": "index.html",
-      "page": "Thomas Cherickal | Generative AI Consultant",
-      "section": "Radical Pricing Available for Suitable Clients Worldwide",
-      "line_number": 3660,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
-      "old_value": "100%",
-      "new_value": "100",
-      "context": "style=\"background:radial-gradient(circle at 50% 0%, rgba(251, 191, 36, 0.12) 0%, rgba(12, 17, 29, 0.98) 100%);border-radius:var(--radius-lg);padding:clamp(2.5rem, 5vw, 3.5rem) clamp(1.5rem, 4vw, 3r...",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.rate_percentage"
-      ]
-    },
-    {
-      "file": "index.html",
-      "page": "Thomas Cherickal | Generative AI Consultant",
-      "section": "Radical Pricing Available for Suitable Clients Worldwide",
-      "line_number": 3660,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-      "old_value": "50%",
-      "new_value": "50",
-      "context": "style=\"background:radial-gradient(circle at 50% 0%, rgba(251, 191, 36, 0.12) 0%, rgba(12, 17, 29, 0.98) 100%);border-radius:var(--radius-lg);padding:clamp(2.5rem, 5vw, 3.5rem) clamp(1.5rem, 4vw, 3r...",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_4_startups.rate_percentage",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_4_startups.rate_percentage",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_4_startups.rate_percentage",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_4_startups.rate_percentage",
-        "data/tiers.json#tiers[2].discountPercent",
-        "data/tiers.json#tiers[3].discountPercent"
-      ]
-    },
-    {
-      "file": "index.html",
-      "page": "Thomas Cherickal | Generative AI Consultant",
       "section": "Personal Training: $1000 USD for 2 Months (or $100 USD per Individual Service)",
       "line_number": 3668,
       "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
@@ -13552,17 +12293,11 @@
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
       "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.extra_seat_usd",
         "data/pricing.json#offerings[flagship-personal-training].cohort_capacity.additional_seat_fee_usd",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.extra_seat_usd",
         "data/pricing.json#offerings[individual-service-business].tier1_base_price_usd",
         "data/pricing.json#offerings[individual-service-business].cohort_capacity.additional_seat_fee_usd",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.price_usd",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.extra_seat_usd",
         "data/pricing.json#offerings[individual-service-personal].tier1_base_price_usd",
-        "data/pricing.json#offerings[individual-service-personal].cohort_capacity.additional_seat_fee_usd",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.price_usd",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.extra_seat_usd"
+        "data/pricing.json#offerings[individual-service-personal].cohort_capacity.additional_seat_fee_usd"
       ]
     },
     {
@@ -13577,9 +12312,7 @@
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].tier1_base_price_usd",
       "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.price_usd",
-        "data/pricing.json#offerings[flagship-personal-training].tier1_base_price_usd",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.price_usd"
+        "data/pricing.json#offerings[flagship-personal-training].tier1_base_price_usd"
       ]
     },
     {
@@ -13613,9 +12346,7 @@
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].tier1_base_price_usd",
       "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.price_usd",
-        "data/pricing.json#offerings[flagship-personal-training].tier1_base_price_usd",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.price_usd"
+        "data/pricing.json#offerings[flagship-personal-training].tier1_base_price_usd"
       ]
     },
     {
@@ -13630,17 +12361,11 @@
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
       "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.extra_seat_usd",
         "data/pricing.json#offerings[flagship-personal-training].cohort_capacity.additional_seat_fee_usd",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.extra_seat_usd",
         "data/pricing.json#offerings[individual-service-business].tier1_base_price_usd",
         "data/pricing.json#offerings[individual-service-business].cohort_capacity.additional_seat_fee_usd",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.price_usd",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.extra_seat_usd",
         "data/pricing.json#offerings[individual-service-personal].tier1_base_price_usd",
-        "data/pricing.json#offerings[individual-service-personal].cohort_capacity.additional_seat_fee_usd",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.price_usd",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.extra_seat_usd"
+        "data/pricing.json#offerings[individual-service-personal].cohort_capacity.additional_seat_fee_usd"
       ]
     },
     {
@@ -13676,17 +12401,11 @@
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
       "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.extra_seat_usd",
         "data/pricing.json#offerings[flagship-personal-training].cohort_capacity.additional_seat_fee_usd",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.extra_seat_usd",
         "data/pricing.json#offerings[individual-service-business].tier1_base_price_usd",
         "data/pricing.json#offerings[individual-service-business].cohort_capacity.additional_seat_fee_usd",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.price_usd",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.extra_seat_usd",
         "data/pricing.json#offerings[individual-service-personal].tier1_base_price_usd",
-        "data/pricing.json#offerings[individual-service-personal].cohort_capacity.additional_seat_fee_usd",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.price_usd",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.extra_seat_usd"
+        "data/pricing.json#offerings[individual-service-personal].cohort_capacity.additional_seat_fee_usd"
       ]
     },
     {
@@ -13701,9 +12420,7 @@
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].tier1_base_price_usd",
       "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.price_usd",
-        "data/pricing.json#offerings[flagship-personal-training].tier1_base_price_usd",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.price_usd"
+        "data/pricing.json#offerings[flagship-personal-training].tier1_base_price_usd"
       ]
     },
     {
@@ -13718,9 +12435,7 @@
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].tier1_base_price_usd",
       "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.price_usd",
-        "data/pricing.json#offerings[flagship-personal-training].tier1_base_price_usd",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.price_usd"
+        "data/pricing.json#offerings[flagship-personal-training].tier1_base_price_usd"
       ]
     },
     {
@@ -13754,9 +12469,7 @@
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].tier1_base_price_usd",
       "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.price_usd",
-        "data/pricing.json#offerings[flagship-personal-training].tier1_base_price_usd",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.price_usd"
+        "data/pricing.json#offerings[flagship-personal-training].tier1_base_price_usd"
       ]
     },
     {
@@ -13771,17 +12484,11 @@
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
       "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.extra_seat_usd",
         "data/pricing.json#offerings[flagship-personal-training].cohort_capacity.additional_seat_fee_usd",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.extra_seat_usd",
         "data/pricing.json#offerings[individual-service-business].tier1_base_price_usd",
         "data/pricing.json#offerings[individual-service-business].cohort_capacity.additional_seat_fee_usd",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.price_usd",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.extra_seat_usd",
         "data/pricing.json#offerings[individual-service-personal].tier1_base_price_usd",
-        "data/pricing.json#offerings[individual-service-personal].cohort_capacity.additional_seat_fee_usd",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.price_usd",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.extra_seat_usd"
+        "data/pricing.json#offerings[individual-service-personal].cohort_capacity.additional_seat_fee_usd"
       ]
     },
     {
@@ -13813,9 +12520,7 @@
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].tier1_base_price_usd",
       "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.price_usd",
-        "data/pricing.json#offerings[flagship-personal-training].tier1_base_price_usd",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.price_usd"
+        "data/pricing.json#offerings[flagship-personal-training].tier1_base_price_usd"
       ]
     },
     {
@@ -13859,46 +12564,6 @@
     {
       "file": "index.html",
       "page": "Thomas Cherickal | Generative AI Consultant",
-      "section": "30 Days Guidance & Detailed Materials",
-      "line_number": 3735,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
-      "old_value": "100%",
-      "new_value": "100",
-      "context": "style=\"max-width: 960px; margin: 0 auto; text-align: center; padding: 2.75rem 2rem; background: radial-gradient(circle at 50% 0%, rgba(251, 191, 36, 0.08) 0%, rgba(12, 17, 29, 0.95) 100%);\">",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.rate_percentage",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.rate_percentage"
-      ]
-    },
-    {
-      "file": "index.html",
-      "page": "Thomas Cherickal | Generative AI Consultant",
-      "section": "30 Days Guidance & Detailed Materials",
-      "line_number": 3735,
-      "field_key": "pricing:offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-      "old_value": "50%",
-      "new_value": "50",
-      "context": "style=\"max-width: 960px; margin: 0 auto; text-align: center; padding: 2.75rem 2rem; background: radial-gradient(circle at 50% 0%, rgba(251, 191, 36, 0.08) 0%, rgba(12, 17, 29, 0.95) 100%);\">",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_4_startups.rate_percentage",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_4_startups.rate_percentage",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_4_startups.rate_percentage",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_3_lower_middle_low_income.rate_percentage",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_4_startups.rate_percentage",
-        "data/tiers.json#tiers[2].discountPercent",
-        "data/tiers.json#tiers[3].discountPercent"
-      ]
-    },
-    {
-      "file": "index.html",
-      "page": "Thomas Cherickal | Generative AI Consultant",
       "section": "Ready to Build Your Business AI Roadmap?",
       "line_number": 3748,
       "field_key": "pricing:offerings[flagship-business-training].schedule.live_training_days",
@@ -13927,17 +12592,11 @@
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
       "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].parity_pricing.tier_1_high_income.extra_seat_usd",
         "data/pricing.json#offerings[flagship-personal-training].cohort_capacity.additional_seat_fee_usd",
-        "data/pricing.json#offerings[flagship-personal-training].parity_pricing.tier_1_high_income.extra_seat_usd",
         "data/pricing.json#offerings[individual-service-business].tier1_base_price_usd",
         "data/pricing.json#offerings[individual-service-business].cohort_capacity.additional_seat_fee_usd",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.price_usd",
-        "data/pricing.json#offerings[individual-service-business].parity_pricing.tier_1_high_income.extra_seat_usd",
         "data/pricing.json#offerings[individual-service-personal].tier1_base_price_usd",
-        "data/pricing.json#offerings[individual-service-personal].cohort_capacity.additional_seat_fee_usd",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.price_usd",
-        "data/pricing.json#offerings[individual-service-personal].parity_pricing.tier_1_high_income.extra_seat_usd"
+        "data/pricing.json#offerings[individual-service-personal].cohort_capacity.additional_seat_fee_usd"
       ]
     },
     {
@@ -13952,7 +12611,9 @@
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats",
       "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].cohort_capacity.included_seats"
+        "data/pricing.json#offerings[flagship-personal-training].cohort_capacity.included_seats",
+        "data/pricing.json#offerings[individual-service-business].cohort_capacity.included_seats",
+        "data/pricing.json#offerings[individual-service-personal].cohort_capacity.included_seats"
       ]
     },
     {
@@ -19203,7 +17864,7 @@
       "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
       "old_value": "$100",
       "new_value": "100",
-      "context": "\"description\": \"Pick individual services at ($100 / $75 / $50 / $50 / $25 / Custom USD) per service for individuals, covering 5 days of live training plus 5 days of dedicated support (10 days total...",
+      "context": "\"description\": \"Pick individual services at ( $100 / $75 / $50 / $50 / $25 / Custom USD) per service for individuals, covering 5 days of live training plus 5 days of dedicated support (10 days tota...",
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
       "also_in_data": [
@@ -19222,7 +17883,7 @@
       "field_key": "pricing:offerings[flagship-business-training].payment_rules.milestone_schedule[0].due_after_day",
       "old_value": "5 days",
       "new_value": "5",
-      "context": "\"description\": \"Pick individual services at ($100 / $75 / $50 / $50 / $25 / Custom USD) per service for individuals, covering 5 days of live training plus 5 days of dedicated support (10 days total...",
+      "context": "\"description\": \"Pick individual services at ( $100 / $75 / $50 / $50 / $25 / Custom USD) per service for individuals, covering 5 days of live training plus 5 days of dedicated support (10 days tota...",
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[0].due_after_day",
       "also_in_data": [
@@ -19243,7 +17904,7 @@
       "field_key": "pricing:offerings[flagship-business-training].payment_rules.milestone_schedule[1].due_after_day",
       "old_value": "10 days",
       "new_value": "10",
-      "context": "\"description\": \"Pick individual services at ($100 / $75 / $50 / $50 / $25 / Custom USD) per service for individuals, covering 5 days of live training plus 5 days of dedicated support (10 days total...",
+      "context": "\"description\": \"Pick individual services at ( $100 / $75 / $50 / $50 / $25 / Custom USD) per service for individuals, covering 5 days of live training plus 5 days of dedicated support (10 days tota...",
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[1].due_after_day",
       "also_in_data": [
@@ -19274,7 +17935,7 @@
       "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
       "old_value": "$100",
       "new_value": "100",
-      "context": "\"description\": \"Pick individual services at ($100 / $75 / $50 / $50 / $25 / Custom USD) per service for businesses, covering 5 days of live training plus 5 days of dedicated support (10 days total ...",
+      "context": "\"description\": \"Pick individual services at ( $100 / $75 / $50 / $50 / $25 / Custom USD) per service for businesses, covering 5 days of live training plus 5 days of dedicated support (10 days total...",
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
       "also_in_data": [
@@ -19293,7 +17954,7 @@
       "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.included_seats",
       "old_value": "10 participants",
       "new_value": "10",
-      "context": "\"description\": \"Pick individual services at ($100 / $75 / $50 / $50 / $25 / Custom USD) per service for businesses, covering 5 days of live training plus 5 days of dedicated support (10 days total ...",
+      "context": "\"description\": \"Pick individual services at ( $100 / $75 / $50 / $50 / $25 / Custom USD) per service for businesses, covering 5 days of live training plus 5 days of dedicated support (10 days total...",
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats",
       "also_in_data": [
@@ -19310,7 +17971,7 @@
       "field_key": "pricing:offerings[flagship-business-training].payment_rules.milestone_schedule[0].due_after_day",
       "old_value": "5 days",
       "new_value": "5",
-      "context": "\"description\": \"Pick individual services at ($100 / $75 / $50 / $50 / $25 / Custom USD) per service for businesses, covering 5 days of live training plus 5 days of dedicated support (10 days total ...",
+      "context": "\"description\": \"Pick individual services at ( $100 / $75 / $50 / $50 / $25 / Custom USD) per service for businesses, covering 5 days of live training plus 5 days of dedicated support (10 days total...",
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[0].due_after_day",
       "also_in_data": [
@@ -19331,7 +17992,7 @@
       "field_key": "pricing:offerings[flagship-business-training].payment_rules.milestone_schedule[1].due_after_day",
       "old_value": "10 days",
       "new_value": "10",
-      "context": "\"description\": \"Pick individual services at ($100 / $75 / $50 / $50 / $25 / Custom USD) per service for businesses, covering 5 days of live training plus 5 days of dedicated support (10 days total ...",
+      "context": "\"description\": \"Pick individual services at ( $100 / $75 / $50 / $50 / $25 / Custom USD) per service for businesses, covering 5 days of live training plus 5 days of dedicated support (10 days total...",
       "match_type": "exact",
       "data_source": "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[1].due_after_day",
       "also_in_data": [
@@ -19664,556 +18325,7 @@
       "file": "pricing.html",
       "page": "Consulting & Training Pricing | Thomas Cherickal",
       "section": "Generative AI Packages & Transparent Parity Pricing",
-      "line_number": 477,
-      "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
-      "old_value": "$100",
-      "new_value": "100",
-      "context": "Prefer custom picks? Select individual services at $100 / $75 /",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].cohort_capacity.additional_seat_fee_usd",
-        "data/pricing.json#offerings[individual-service-business].tier1_base_price_usd",
-        "data/pricing.json#offerings[individual-service-business].cohort_capacity.additional_seat_fee_usd",
-        "data/pricing.json#offerings[individual-service-personal].tier1_base_price_usd",
-        "data/pricing.json#offerings[individual-service-personal].cohort_capacity.additional_seat_fee_usd"
-      ]
-    },
-    {
-      "file": "pricing.html",
-      "page": "Consulting & Training Pricing | Thomas Cherickal",
-      "section": "Generative AI Packages & Transparent Parity Pricing",
-      "line_number": 479,
-      "field_key": "pricing:offerings[flagship-business-training].payment_rules.milestone_schedule[0].due_after_day",
-      "old_value": "5 days",
-      "new_value": "5",
-      "context": "$50 / $25 / Custom USD each (5 days training + 5 days support). Full 195-country Purchasing",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[0].due_after_day",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].payment_rules.milestone_schedule[0].due_after_day",
-        "data/pricing.json#offerings[individual-service-business].schedule.live_training_days",
-        "data/pricing.json#offerings[individual-service-business].schedule.support_phase_days",
-        "data/pricing.json#offerings[individual-service-business].payment_rules.milestone_schedule[4].due_after_day",
-        "data/pricing.json#offerings[individual-service-personal].schedule.live_training_days",
-        "data/pricing.json#offerings[individual-service-personal].schedule.support_phase_days",
-        "data/pricing.json#offerings[individual-service-personal].payment_rules.milestone_schedule[4].due_after_day"
-      ]
-    },
-    {
-      "file": "pricing.html",
-      "page": "Consulting & Training Pricing | Thomas Cherickal",
-      "section": "$100 / $75 / $50 / $50 / $25 / Custom USD · 5 Days Training + 5 Days Support",
-      "line_number": 516,
-      "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
-      "old_value": "$100",
-      "new_value": "100",
-      "context": "$100 / $75 / $50 / $50 / $25 / Custom USD · 5 Days Training + 5 Days Support",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].cohort_capacity.additional_seat_fee_usd",
-        "data/pricing.json#offerings[individual-service-business].tier1_base_price_usd",
-        "data/pricing.json#offerings[individual-service-business].cohort_capacity.additional_seat_fee_usd",
-        "data/pricing.json#offerings[individual-service-personal].tier1_base_price_usd",
-        "data/pricing.json#offerings[individual-service-personal].cohort_capacity.additional_seat_fee_usd"
-      ]
-    },
-    {
-      "file": "pricing.html",
-      "page": "Consulting & Training Pricing | Thomas Cherickal",
-      "section": "$100 / $75 / $50 / $50 / $25 / Custom USD · 5 Days Training + 5 Days Support",
-      "line_number": 519,
-      "field_key": "pricing:offerings[flagship-business-training].payment_rules.milestone_schedule[0].due_after_day",
-      "old_value": "5 days",
-      "new_value": "5",
-      "context": "Select exactly the services you need. 5 days of live engineering training followed by 5 days of dedicated",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[0].due_after_day",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].payment_rules.milestone_schedule[0].due_after_day",
-        "data/pricing.json#offerings[individual-service-business].schedule.live_training_days",
-        "data/pricing.json#offerings[individual-service-business].schedule.support_phase_days",
-        "data/pricing.json#offerings[individual-service-business].payment_rules.milestone_schedule[4].due_after_day",
-        "data/pricing.json#offerings[individual-service-personal].schedule.live_training_days",
-        "data/pricing.json#offerings[individual-service-personal].schedule.support_phase_days",
-        "data/pricing.json#offerings[individual-service-personal].payment_rules.milestone_schedule[4].due_after_day"
-      ]
-    },
-    {
-      "file": "pricing.html",
-      "page": "Consulting & Training Pricing | Thomas Cherickal",
-      "section": "$100 / $75 / $50 / $50 / $25 / Custom USD · 5 Days Training + 5 Days Support",
-      "line_number": 520,
-      "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.included_seats",
-      "old_value": "10 seats",
-      "new_value": "10",
-      "context": "operational support (10 days total coverage per service). Up to 10 seats for businesses (additional seats at",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].cohort_capacity.included_seats",
-        "data/pricing.json#offerings[individual-service-business].cohort_capacity.included_seats",
-        "data/pricing.json#offerings[individual-service-personal].cohort_capacity.included_seats"
-      ]
-    },
-    {
-      "file": "pricing.html",
-      "page": "Consulting & Training Pricing | Thomas Cherickal",
-      "section": "$100 / $75 / $50 / $50 / $25 / Custom USD · 5 Days Training + 5 Days Support",
-      "line_number": 520,
-      "field_key": "pricing:offerings[flagship-business-training].payment_rules.milestone_schedule[1].due_after_day",
-      "old_value": "10 days",
-      "new_value": "10",
-      "context": "operational support (10 days total coverage per service). Up to 10 seats for businesses (additional seats at",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[1].due_after_day",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].payment_rules.milestone_schedule[1].due_after_day",
-        "data/pricing.json#offerings[individual-service-business].schedule.total_calendar_duration_days",
-        "data/pricing.json#offerings[individual-service-business].payment_rules.milestone_schedule[9].due_after_day",
-        "data/pricing.json#offerings[individual-service-personal].schedule.total_calendar_duration_days",
-        "data/pricing.json#offerings[individual-service-personal].payment_rules.milestone_schedule[9].due_after_day"
-      ]
-    },
-    {
-      "file": "pricing.html",
-      "page": "Consulting & Training Pricing | Thomas Cherickal",
-      "section": "$100 / $75 / $50 / $50 / $25 / Custom USD · 5 Days Training + 5 Days Support",
-      "line_number": 521,
-      "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
-      "old_value": "$100",
-      "new_value": "100",
-      "context": "+$100 / +$75 / +$50 / +$50 / +$25 / Custom USD per seat);",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].cohort_capacity.additional_seat_fee_usd",
-        "data/pricing.json#offerings[individual-service-business].tier1_base_price_usd",
-        "data/pricing.json#offerings[individual-service-business].cohort_capacity.additional_seat_fee_usd",
-        "data/pricing.json#offerings[individual-service-personal].tier1_base_price_usd",
-        "data/pricing.json#offerings[individual-service-personal].cohort_capacity.additional_seat_fee_usd"
-      ]
-    },
-    {
-      "file": "pricing.html",
-      "page": "Consulting & Training Pricing | Thomas Cherickal",
-      "section": "$100 / $75 / $50 / $50 / $25 / Custom USD · 5 Days Training + 5 Days Support",
-      "line_number": 522,
-      "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.included_seats",
-      "old_value": "10 people",
-      "new_value": "10",
-      "context": "10 people included here as well. Parity pricing applies to all services.",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].cohort_capacity.included_seats",
-        "data/pricing.json#offerings[individual-service-business].cohort_capacity.included_seats",
-        "data/pricing.json#offerings[individual-service-personal].cohort_capacity.included_seats"
-      ]
-    },
-    {
-      "file": "pricing.html",
-      "page": "Consulting & Training Pricing | Thomas Cherickal",
-      "section": "$1,000 / $750 / $500 / $500 / $250 / Custom USD · 2 Months (30d Training + 30d Guidance & Materials)",
-      "line_number": 534,
-      "field_key": "pricing:offerings[flagship-business-training].schedule.live_training_days",
-      "old_value": "30d",
-      "new_value": "30",
-      "context": "$1,000 / $750 / $500 / $500 / $250 / Custom USD · 2 Months (30d Training + 30d Guidance &",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.live_training_days",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].schedule.support_phase_days",
-        "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[5].due_after_day",
-        "data/pricing.json#offerings[flagship-personal-training].schedule.live_training_days",
-        "data/pricing.json#offerings[flagship-personal-training].schedule.support_phase_days",
-        "data/pricing.json#offerings[flagship-personal-training].payment_rules.milestone_schedule[5].due_after_day"
-      ]
-    },
-    {
-      "file": "pricing.html",
-      "page": "Consulting & Training Pricing | Thomas Cherickal",
-      "section": "$1,000 / $750 / $500 / $500 / $250 / Custom USD · 2 Months (30d Training + 30d Guidance & Materials)",
-      "line_number": 534,
-      "field_key": "pricing:offerings[flagship-business-training].tier1_base_price_usd",
-      "old_value": "$1,000",
-      "new_value": "1000",
-      "context": "$1,000 / $750 / $500 / $500 / $250 / Custom USD · 2 Months (30d Training + 30d Guidance &",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].tier1_base_price_usd",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].tier1_base_price_usd"
-      ]
-    },
-    {
-      "file": "pricing.html",
-      "page": "Consulting & Training Pricing | Thomas Cherickal",
-      "section": "$1,000 / $750 / $500 / $500 / $250 / Custom USD · 2 Months (30d Training + 30d Guidance & Materials)",
-      "line_number": 538,
-      "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
-      "old_value": "$100",
-      "new_value": "100",
-      "context": "Includes up to 10 participants (additional seats at +$100 / +$75 / +$50 / +$50 / +$25 / Custom USD per",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].cohort_capacity.additional_seat_fee_usd",
-        "data/pricing.json#offerings[individual-service-business].tier1_base_price_usd",
-        "data/pricing.json#offerings[individual-service-business].cohort_capacity.additional_seat_fee_usd",
-        "data/pricing.json#offerings[individual-service-personal].tier1_base_price_usd",
-        "data/pricing.json#offerings[individual-service-personal].cohort_capacity.additional_seat_fee_usd"
-      ]
-    },
-    {
-      "file": "pricing.html",
-      "page": "Consulting & Training Pricing | Thomas Cherickal",
-      "section": "$1,000 / $750 / $500 / $500 / $250 / Custom USD · 2 Months (30d Training + 30d Guidance & Materials)",
-      "line_number": 538,
-      "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.included_seats",
-      "old_value": "10 participants",
-      "new_value": "10",
-      "context": "Includes up to 10 participants (additional seats at +$100 / +$75 / +$50 / +$50 / +$25 / Custom USD per",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].cohort_capacity.included_seats",
-        "data/pricing.json#offerings[individual-service-business].cohort_capacity.included_seats",
-        "data/pricing.json#offerings[individual-service-personal].cohort_capacity.included_seats"
-      ]
-    },
-    {
-      "file": "pricing.html",
-      "page": "Consulting & Training Pricing | Thomas Cherickal",
-      "section": "$1,000 / $750 / $500 / $500 / $250 / Custom USD · 2 Months (30d Training + 30d Guidance & Materials)",
-      "line_number": 539,
-      "field_key": "pricing:offerings[flagship-business-training].schedule.live_training_days",
-      "old_value": "30 days",
-      "new_value": "30",
-      "context": "seat). Covers full cross-service engineering stacks tailored to your organizational goals. 30 days of live",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.live_training_days",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].schedule.support_phase_days",
-        "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[5].due_after_day",
-        "data/pricing.json#offerings[flagship-personal-training].schedule.live_training_days",
-        "data/pricing.json#offerings[flagship-personal-training].schedule.support_phase_days",
-        "data/pricing.json#offerings[flagship-personal-training].payment_rules.milestone_schedule[5].due_after_day"
-      ]
-    },
-    {
-      "file": "pricing.html",
-      "page": "Consulting & Training Pricing | Thomas Cherickal",
-      "section": "$1,000 / $750 / $500 / $500 / $250 / Custom USD · 2 Months (30d Training + 30d Guidance & Materials)",
-      "line_number": 540,
-      "field_key": "pricing:offerings[flagship-business-training].payment_rules.milestone_schedule[1].due_after_day",
-      "old_value": "10 days",
-      "new_value": "10",
-      "context": "training + 30 days of guidance and detailed guides/materials (30 working days over 8 weeks with 8 - 10 days",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[1].due_after_day",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].payment_rules.milestone_schedule[1].due_after_day",
-        "data/pricing.json#offerings[individual-service-business].schedule.total_calendar_duration_days",
-        "data/pricing.json#offerings[individual-service-business].payment_rules.milestone_schedule[9].due_after_day",
-        "data/pricing.json#offerings[individual-service-personal].schedule.total_calendar_duration_days",
-        "data/pricing.json#offerings[individual-service-personal].payment_rules.milestone_schedule[9].due_after_day"
-      ]
-    },
-    {
-      "file": "pricing.html",
-      "page": "Consulting & Training Pricing | Thomas Cherickal",
-      "section": "$1,000 / $750 / $500 / $500 / $250 / Custom USD · 2 Months (30d Training + 30d Guidance & Materials)",
-      "line_number": 540,
-      "field_key": "pricing:offerings[flagship-business-training].schedule.live_training_days",
-      "old_value": "30 days",
-      "new_value": "30",
-      "context": "training + 30 days of guidance and detailed guides/materials (30 working days over 8 weeks with 8 - 10 days",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.live_training_days",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].schedule.support_phase_days",
-        "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[5].due_after_day",
-        "data/pricing.json#offerings[flagship-personal-training].schedule.live_training_days",
-        "data/pricing.json#offerings[flagship-personal-training].schedule.support_phase_days",
-        "data/pricing.json#offerings[flagship-personal-training].payment_rules.milestone_schedule[5].due_after_day"
-      ]
-    },
-    {
-      "file": "pricing.html",
-      "page": "Consulting & Training Pricing | Thomas Cherickal",
-      "section": "$1,000 / $750 / $500 / $500 / $250 / Custom USD · 2 Months (30d Training + 30d Guidance & Materials)",
-      "line_number": 553,
-      "field_key": "pricing:offerings[flagship-business-training].schedule.live_training_days",
-      "old_value": "30d",
-      "new_value": "30",
-      "context": "$1,000 / $750 / $500 / $500 / $250 / Custom USD · 2 Months (30d Training + 30d Guidance &",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.live_training_days",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].schedule.support_phase_days",
-        "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[5].due_after_day",
-        "data/pricing.json#offerings[flagship-personal-training].schedule.live_training_days",
-        "data/pricing.json#offerings[flagship-personal-training].schedule.support_phase_days",
-        "data/pricing.json#offerings[flagship-personal-training].payment_rules.milestone_schedule[5].due_after_day"
-      ]
-    },
-    {
-      "file": "pricing.html",
-      "page": "Consulting & Training Pricing | Thomas Cherickal",
-      "section": "$1,000 / $750 / $500 / $500 / $250 / Custom USD · 2 Months (30d Training + 30d Guidance & Materials)",
-      "line_number": 553,
-      "field_key": "pricing:offerings[flagship-business-training].tier1_base_price_usd",
-      "old_value": "$1,000",
-      "new_value": "1000",
-      "context": "$1,000 / $750 / $500 / $500 / $250 / Custom USD · 2 Months (30d Training + 30d Guidance &",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].tier1_base_price_usd",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].tier1_base_price_usd"
-      ]
-    },
-    {
-      "file": "pricing.html",
-      "page": "Consulting & Training Pricing | Thomas Cherickal",
-      "section": "$1,000 / $750 / $500 / $500 / $250 / Custom USD · 2 Months (30d Training + 30d Guidance & Materials)",
-      "line_number": 557,
-      "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
-      "old_value": "$100",
-      "new_value": "100",
-      "context": "Up to 10 participants included (+$100/extra seat, max 20) (up to 10 participants included (+$100/extra seat,",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].cohort_capacity.additional_seat_fee_usd",
-        "data/pricing.json#offerings[individual-service-business].tier1_base_price_usd",
-        "data/pricing.json#offerings[individual-service-business].cohort_capacity.additional_seat_fee_usd",
-        "data/pricing.json#offerings[individual-service-personal].tier1_base_price_usd",
-        "data/pricing.json#offerings[individual-service-personal].cohort_capacity.additional_seat_fee_usd"
-      ]
-    },
-    {
-      "file": "pricing.html",
-      "page": "Consulting & Training Pricing | Thomas Cherickal",
-      "section": "$1,000 / $750 / $500 / $500 / $250 / Custom USD · 2 Months (30d Training + 30d Guidance & Materials)",
-      "line_number": 557,
-      "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.included_seats",
-      "old_value": "10 participants",
-      "new_value": "10",
-      "context": "Up to 10 participants included (+$100/extra seat, max 20) (up to 10 participants included (+$100/extra seat,",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].cohort_capacity.included_seats",
-        "data/pricing.json#offerings[individual-service-business].cohort_capacity.included_seats",
-        "data/pricing.json#offerings[individual-service-personal].cohort_capacity.included_seats"
-      ]
-    },
-    {
-      "file": "pricing.html",
-      "page": "Consulting & Training Pricing | Thomas Cherickal",
-      "section": "$1,000 / $750 / $500 / $500 / $250 / Custom USD · 2 Months (30d Training + 30d Guidance & Materials)",
-      "line_number": 558,
-      "field_key": "pricing:offerings[flagship-business-training].schedule.live_training_days",
-      "old_value": "30 days",
-      "new_value": "30",
-      "context": "max 20)). 30 days of intensive live instruction followed by",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.live_training_days",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].schedule.support_phase_days",
-        "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[5].due_after_day",
-        "data/pricing.json#offerings[flagship-personal-training].schedule.live_training_days",
-        "data/pricing.json#offerings[flagship-personal-training].schedule.support_phase_days",
-        "data/pricing.json#offerings[flagship-personal-training].payment_rules.milestone_schedule[5].due_after_day"
-      ]
-    },
-    {
-      "file": "pricing.html",
-      "page": "Consulting & Training Pricing | Thomas Cherickal",
-      "section": "$1,000 / $750 / $500 / $500 / $250 / Custom USD · 2 Months (30d Training + 30d Guidance & Materials)",
-      "line_number": 559,
-      "field_key": "pricing:offerings[flagship-business-training].schedule.live_training_days",
-      "old_value": "30 days",
-      "new_value": "30",
-      "context": "30 days of dedicated daily work guidance, Q&A and written guides tailored to your individual career or",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.live_training_days",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].schedule.support_phase_days",
-        "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[5].due_after_day",
-        "data/pricing.json#offerings[flagship-personal-training].schedule.live_training_days",
-        "data/pricing.json#offerings[flagship-personal-training].schedule.support_phase_days",
-        "data/pricing.json#offerings[flagship-personal-training].payment_rules.milestone_schedule[5].due_after_day"
-      ]
-    },
-    {
-      "file": "pricing.html",
-      "page": "Consulting & Training Pricing | Thomas Cherickal",
-      "section": "10% in Ten Milestone Installments",
-      "line_number": 809,
-      "field_key": "pricing:offerings[flagship-business-training].payment_rules.milestone_schedule[0].percentage",
-      "old_value": "10%",
-      "new_value": "10",
-      "context": "10% in Ten Milestone",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[0].percentage",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[1].percentage",
-        "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[2].percentage",
-        "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[3].percentage",
-        "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[4].percentage",
-        "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[5].percentage",
-        "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[6].percentage",
-        "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[7].percentage",
-        "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[8].percentage",
-        "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[9].percentage",
-        "data/pricing.json#offerings[flagship-personal-training].payment_rules.milestone_schedule[0].percentage",
-        "data/pricing.json#offerings[flagship-personal-training].payment_rules.milestone_schedule[1].percentage",
-        "data/pricing.json#offerings[flagship-personal-training].payment_rules.milestone_schedule[2].percentage",
-        "data/pricing.json#offerings[flagship-personal-training].payment_rules.milestone_schedule[3].percentage",
-        "data/pricing.json#offerings[flagship-personal-training].payment_rules.milestone_schedule[4].percentage",
-        "data/pricing.json#offerings[flagship-personal-training].payment_rules.milestone_schedule[5].percentage",
-        "data/pricing.json#offerings[flagship-personal-training].payment_rules.milestone_schedule[6].percentage",
-        "data/pricing.json#offerings[flagship-personal-training].payment_rules.milestone_schedule[7].percentage",
-        "data/pricing.json#offerings[flagship-personal-training].payment_rules.milestone_schedule[8].percentage",
-        "data/pricing.json#offerings[flagship-personal-training].payment_rules.milestone_schedule[9].percentage",
-        "data/pricing.json#offerings[individual-service-business].payment_rules.milestone_schedule[0].percentage",
-        "data/pricing.json#offerings[individual-service-business].payment_rules.milestone_schedule[1].percentage",
-        "data/pricing.json#offerings[individual-service-business].payment_rules.milestone_schedule[2].percentage",
-        "data/pricing.json#offerings[individual-service-business].payment_rules.milestone_schedule[3].percentage",
-        "data/pricing.json#offerings[individual-service-business].payment_rules.milestone_schedule[4].percentage",
-        "data/pricing.json#offerings[individual-service-business].payment_rules.milestone_schedule[5].percentage",
-        "data/pricing.json#offerings[individual-service-business].payment_rules.milestone_schedule[6].percentage",
-        "data/pricing.json#offerings[individual-service-business].payment_rules.milestone_schedule[7].percentage",
-        "data/pricing.json#offerings[individual-service-business].payment_rules.milestone_schedule[8].percentage",
-        "data/pricing.json#offerings[individual-service-business].payment_rules.milestone_schedule[9].percentage",
-        "data/pricing.json#offerings[individual-service-personal].payment_rules.milestone_schedule[0].percentage",
-        "data/pricing.json#offerings[individual-service-personal].payment_rules.milestone_schedule[1].percentage",
-        "data/pricing.json#offerings[individual-service-personal].payment_rules.milestone_schedule[2].percentage",
-        "data/pricing.json#offerings[individual-service-personal].payment_rules.milestone_schedule[3].percentage",
-        "data/pricing.json#offerings[individual-service-personal].payment_rules.milestone_schedule[4].percentage",
-        "data/pricing.json#offerings[individual-service-personal].payment_rules.milestone_schedule[5].percentage",
-        "data/pricing.json#offerings[individual-service-personal].payment_rules.milestone_schedule[6].percentage",
-        "data/pricing.json#offerings[individual-service-personal].payment_rules.milestone_schedule[7].percentage",
-        "data/pricing.json#offerings[individual-service-personal].payment_rules.milestone_schedule[8].percentage",
-        "data/pricing.json#offerings[individual-service-personal].payment_rules.milestone_schedule[9].percentage",
-        "data/pricing.json#trust_and_payment_guarantees.payment_structure.installment_percentage"
-      ]
-    },
-    {
-      "file": "pricing.html",
-      "page": "Consulting & Training Pricing | Thomas Cherickal",
-      "section": "10% in Ten Milestone Installments",
-      "line_number": 812,
-      "field_key": "pricing:offerings[flagship-business-training].payment_rules.milestone_schedule[0].percentage",
-      "old_value": "10%",
-      "new_value": "10",
-      "context": "Invoiced in ten equal installments (10% each) due strictly after completed milestone blocks of training",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[0].percentage",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[1].percentage",
-        "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[2].percentage",
-        "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[3].percentage",
-        "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[4].percentage",
-        "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[5].percentage",
-        "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[6].percentage",
-        "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[7].percentage",
-        "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[8].percentage",
-        "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[9].percentage",
-        "data/pricing.json#offerings[flagship-personal-training].payment_rules.milestone_schedule[0].percentage",
-        "data/pricing.json#offerings[flagship-personal-training].payment_rules.milestone_schedule[1].percentage",
-        "data/pricing.json#offerings[flagship-personal-training].payment_rules.milestone_schedule[2].percentage",
-        "data/pricing.json#offerings[flagship-personal-training].payment_rules.milestone_schedule[3].percentage",
-        "data/pricing.json#offerings[flagship-personal-training].payment_rules.milestone_schedule[4].percentage",
-        "data/pricing.json#offerings[flagship-personal-training].payment_rules.milestone_schedule[5].percentage",
-        "data/pricing.json#offerings[flagship-personal-training].payment_rules.milestone_schedule[6].percentage",
-        "data/pricing.json#offerings[flagship-personal-training].payment_rules.milestone_schedule[7].percentage",
-        "data/pricing.json#offerings[flagship-personal-training].payment_rules.milestone_schedule[8].percentage",
-        "data/pricing.json#offerings[flagship-personal-training].payment_rules.milestone_schedule[9].percentage",
-        "data/pricing.json#offerings[individual-service-business].payment_rules.milestone_schedule[0].percentage",
-        "data/pricing.json#offerings[individual-service-business].payment_rules.milestone_schedule[1].percentage",
-        "data/pricing.json#offerings[individual-service-business].payment_rules.milestone_schedule[2].percentage",
-        "data/pricing.json#offerings[individual-service-business].payment_rules.milestone_schedule[3].percentage",
-        "data/pricing.json#offerings[individual-service-business].payment_rules.milestone_schedule[4].percentage",
-        "data/pricing.json#offerings[individual-service-business].payment_rules.milestone_schedule[5].percentage",
-        "data/pricing.json#offerings[individual-service-business].payment_rules.milestone_schedule[6].percentage",
-        "data/pricing.json#offerings[individual-service-business].payment_rules.milestone_schedule[7].percentage",
-        "data/pricing.json#offerings[individual-service-business].payment_rules.milestone_schedule[8].percentage",
-        "data/pricing.json#offerings[individual-service-business].payment_rules.milestone_schedule[9].percentage",
-        "data/pricing.json#offerings[individual-service-personal].payment_rules.milestone_schedule[0].percentage",
-        "data/pricing.json#offerings[individual-service-personal].payment_rules.milestone_schedule[1].percentage",
-        "data/pricing.json#offerings[individual-service-personal].payment_rules.milestone_schedule[2].percentage",
-        "data/pricing.json#offerings[individual-service-personal].payment_rules.milestone_schedule[3].percentage",
-        "data/pricing.json#offerings[individual-service-personal].payment_rules.milestone_schedule[4].percentage",
-        "data/pricing.json#offerings[individual-service-personal].payment_rules.milestone_schedule[5].percentage",
-        "data/pricing.json#offerings[individual-service-personal].payment_rules.milestone_schedule[6].percentage",
-        "data/pricing.json#offerings[individual-service-personal].payment_rules.milestone_schedule[7].percentage",
-        "data/pricing.json#offerings[individual-service-personal].payment_rules.milestone_schedule[8].percentage",
-        "data/pricing.json#offerings[individual-service-personal].payment_rules.milestone_schedule[9].percentage",
-        "data/pricing.json#trust_and_payment_guarantees.payment_structure.installment_percentage"
-      ]
-    },
-    {
-      "file": "pricing.html",
-      "page": "Consulting & Training Pricing | Thomas Cherickal",
-      "section": "Personalized Milestone Breakdown & Commercial Terms",
-      "line_number": 873,
-      "field_key": "pricing:offerings[flagship-business-training].payment_rules.milestone_schedule[0].percentage",
-      "old_value": "10%",
-      "new_value": "10",
-      "context": "Tier 6: Crisis-Affected & Subsidized (10% / 90% Off)",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[0].percentage",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[1].percentage",
-        "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[2].percentage",
-        "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[3].percentage",
-        "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[4].percentage",
-        "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[5].percentage",
-        "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[6].percentage",
-        "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[7].percentage",
-        "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[8].percentage",
-        "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[9].percentage",
-        "data/pricing.json#offerings[flagship-personal-training].payment_rules.milestone_schedule[0].percentage",
-        "data/pricing.json#offerings[flagship-personal-training].payment_rules.milestone_schedule[1].percentage",
-        "data/pricing.json#offerings[flagship-personal-training].payment_rules.milestone_schedule[2].percentage",
-        "data/pricing.json#offerings[flagship-personal-training].payment_rules.milestone_schedule[3].percentage",
-        "data/pricing.json#offerings[flagship-personal-training].payment_rules.milestone_schedule[4].percentage",
-        "data/pricing.json#offerings[flagship-personal-training].payment_rules.milestone_schedule[5].percentage",
-        "data/pricing.json#offerings[flagship-personal-training].payment_rules.milestone_schedule[6].percentage",
-        "data/pricing.json#offerings[flagship-personal-training].payment_rules.milestone_schedule[7].percentage",
-        "data/pricing.json#offerings[flagship-personal-training].payment_rules.milestone_schedule[8].percentage",
-        "data/pricing.json#offerings[flagship-personal-training].payment_rules.milestone_schedule[9].percentage",
-        "data/pricing.json#offerings[individual-service-business].payment_rules.milestone_schedule[0].percentage",
-        "data/pricing.json#offerings[individual-service-business].payment_rules.milestone_schedule[1].percentage",
-        "data/pricing.json#offerings[individual-service-business].payment_rules.milestone_schedule[2].percentage",
-        "data/pricing.json#offerings[individual-service-business].payment_rules.milestone_schedule[3].percentage",
-        "data/pricing.json#offerings[individual-service-business].payment_rules.milestone_schedule[4].percentage",
-        "data/pricing.json#offerings[individual-service-business].payment_rules.milestone_schedule[5].percentage",
-        "data/pricing.json#offerings[individual-service-business].payment_rules.milestone_schedule[6].percentage",
-        "data/pricing.json#offerings[individual-service-business].payment_rules.milestone_schedule[7].percentage",
-        "data/pricing.json#offerings[individual-service-business].payment_rules.milestone_schedule[8].percentage",
-        "data/pricing.json#offerings[individual-service-business].payment_rules.milestone_schedule[9].percentage",
-        "data/pricing.json#offerings[individual-service-personal].payment_rules.milestone_schedule[0].percentage",
-        "data/pricing.json#offerings[individual-service-personal].payment_rules.milestone_schedule[1].percentage",
-        "data/pricing.json#offerings[individual-service-personal].payment_rules.milestone_schedule[2].percentage",
-        "data/pricing.json#offerings[individual-service-personal].payment_rules.milestone_schedule[3].percentage",
-        "data/pricing.json#offerings[individual-service-personal].payment_rules.milestone_schedule[4].percentage",
-        "data/pricing.json#offerings[individual-service-personal].payment_rules.milestone_schedule[5].percentage",
-        "data/pricing.json#offerings[individual-service-personal].payment_rules.milestone_schedule[6].percentage",
-        "data/pricing.json#offerings[individual-service-personal].payment_rules.milestone_schedule[7].percentage",
-        "data/pricing.json#offerings[individual-service-personal].payment_rules.milestone_schedule[8].percentage",
-        "data/pricing.json#offerings[individual-service-personal].payment_rules.milestone_schedule[9].percentage",
-        "data/pricing.json#trust_and_payment_guarantees.payment_structure.installment_percentage"
-      ]
-    },
-    {
-      "file": "pricing.html",
-      "page": "Consulting & Training Pricing | Thomas Cherickal",
-      "section": "Personalized Milestone Breakdown & Commercial Terms",
-      "line_number": 922,
+      "line_number": 581,
       "field_key": "pricing:offerings[flagship-business-training].tier1_base_price_usd",
       "old_value": "$1,000",
       "new_value": "1000",
@@ -20227,351 +18339,8 @@
     {
       "file": "pricing.html",
       "page": "Consulting & Training Pricing | Thomas Cherickal",
-      "section": "Purchasing Power Parity & Tier Rate Calculator",
-      "line_number": 998,
-      "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
-      "old_value": "$100",
-      "new_value": "100",
-      "context": "Individual ($100/svc) · Business ($100/svc)",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].cohort_capacity.additional_seat_fee_usd",
-        "data/pricing.json#offerings[individual-service-business].tier1_base_price_usd",
-        "data/pricing.json#offerings[individual-service-business].cohort_capacity.additional_seat_fee_usd",
-        "data/pricing.json#offerings[individual-service-personal].tier1_base_price_usd",
-        "data/pricing.json#offerings[individual-service-personal].cohort_capacity.additional_seat_fee_usd"
-      ]
-    },
-    {
-      "file": "pricing.html",
-      "page": "Consulting & Training Pricing | Thomas Cherickal",
-      "section": "Purchasing Power Parity & Tier Rate Calculator",
-      "line_number": 1004,
-      "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
-      "old_value": "$100",
-      "new_value": "100",
-      "context": "$100 / svc (10 seats included, +$100/extra",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].cohort_capacity.additional_seat_fee_usd",
-        "data/pricing.json#offerings[individual-service-business].tier1_base_price_usd",
-        "data/pricing.json#offerings[individual-service-business].cohort_capacity.additional_seat_fee_usd",
-        "data/pricing.json#offerings[individual-service-personal].tier1_base_price_usd",
-        "data/pricing.json#offerings[individual-service-personal].cohort_capacity.additional_seat_fee_usd"
-      ]
-    },
-    {
-      "file": "pricing.html",
-      "page": "Consulting & Training Pricing | Thomas Cherickal",
-      "section": "Purchasing Power Parity & Tier Rate Calculator",
-      "line_number": 1004,
-      "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.included_seats",
-      "old_value": "10 seats",
-      "new_value": "10",
-      "context": "$100 / svc (10 seats included, +$100/extra",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].cohort_capacity.included_seats",
-        "data/pricing.json#offerings[individual-service-business].cohort_capacity.included_seats",
-        "data/pricing.json#offerings[individual-service-personal].cohort_capacity.included_seats"
-      ]
-    },
-    {
-      "file": "pricing.html",
-      "page": "Consulting & Training Pricing | Thomas Cherickal",
-      "section": "Purchasing Power Parity & Tier Rate Calculator",
-      "line_number": 1010,
-      "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
-      "old_value": "$100",
-      "new_value": "100",
-      "context": "$100 / svc (10 seats included, +$100/extra",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].cohort_capacity.additional_seat_fee_usd",
-        "data/pricing.json#offerings[individual-service-business].tier1_base_price_usd",
-        "data/pricing.json#offerings[individual-service-business].cohort_capacity.additional_seat_fee_usd",
-        "data/pricing.json#offerings[individual-service-personal].tier1_base_price_usd",
-        "data/pricing.json#offerings[individual-service-personal].cohort_capacity.additional_seat_fee_usd"
-      ]
-    },
-    {
-      "file": "pricing.html",
-      "page": "Consulting & Training Pricing | Thomas Cherickal",
-      "section": "Purchasing Power Parity & Tier Rate Calculator",
-      "line_number": 1010,
-      "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.included_seats",
-      "old_value": "10 seats",
-      "new_value": "10",
-      "context": "$100 / svc (10 seats included, +$100/extra",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].cohort_capacity.included_seats",
-        "data/pricing.json#offerings[individual-service-business].cohort_capacity.included_seats",
-        "data/pricing.json#offerings[individual-service-personal].cohort_capacity.included_seats"
-      ]
-    },
-    {
-      "file": "pricing.html",
-      "page": "Consulting & Training Pricing | Thomas Cherickal",
-      "section": "Purchasing Power Parity & Tier Rate Calculator",
-      "line_number": 1057,
-      "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.included_seats",
-      "old_value": "10 seats",
-      "new_value": "10",
-      "context": "Business Training Flagship - $1,000 USD (60 Days: 30d Training + 30d Guidance, up to 10 seats)",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].cohort_capacity.included_seats",
-        "data/pricing.json#offerings[individual-service-business].cohort_capacity.included_seats",
-        "data/pricing.json#offerings[individual-service-personal].cohort_capacity.included_seats"
-      ]
-    },
-    {
-      "file": "pricing.html",
-      "page": "Consulting & Training Pricing | Thomas Cherickal",
-      "section": "Purchasing Power Parity & Tier Rate Calculator",
-      "line_number": 1057,
-      "field_key": "pricing:offerings[flagship-business-training].schedule.live_training_days",
-      "old_value": "30d",
-      "new_value": "30",
-      "context": "Business Training Flagship - $1,000 USD (60 Days: 30d Training + 30d Guidance, up to 10 seats)",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.live_training_days",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].schedule.support_phase_days",
-        "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[5].due_after_day",
-        "data/pricing.json#offerings[flagship-personal-training].schedule.live_training_days",
-        "data/pricing.json#offerings[flagship-personal-training].schedule.support_phase_days",
-        "data/pricing.json#offerings[flagship-personal-training].payment_rules.milestone_schedule[5].due_after_day"
-      ]
-    },
-    {
-      "file": "pricing.html",
-      "page": "Consulting & Training Pricing | Thomas Cherickal",
-      "section": "Purchasing Power Parity & Tier Rate Calculator",
-      "line_number": 1057,
-      "field_key": "pricing:offerings[flagship-business-training].tier1_base_price_usd",
-      "old_value": "$1,000",
-      "new_value": "1000",
-      "context": "Business Training Flagship - $1,000 USD (60 Days: 30d Training + 30d Guidance, up to 10 seats)",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].tier1_base_price_usd",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].tier1_base_price_usd"
-      ]
-    },
-    {
-      "file": "pricing.html",
-      "page": "Consulting & Training Pricing | Thomas Cherickal",
-      "section": "Purchasing Power Parity & Tier Rate Calculator",
-      "line_number": 1058,
-      "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.included_seats",
-      "old_value": "10 seats",
-      "new_value": "10",
-      "context": "Personal Training Flagship - $1,000 USD (60 Days: 30d Training + 30d Guidance, up to 10 seats included, max 20)",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].cohort_capacity.included_seats",
-        "data/pricing.json#offerings[individual-service-business].cohort_capacity.included_seats",
-        "data/pricing.json#offerings[individual-service-personal].cohort_capacity.included_seats"
-      ]
-    },
-    {
-      "file": "pricing.html",
-      "page": "Consulting & Training Pricing | Thomas Cherickal",
-      "section": "Purchasing Power Parity & Tier Rate Calculator",
-      "line_number": 1058,
-      "field_key": "pricing:offerings[flagship-business-training].schedule.live_training_days",
-      "old_value": "30d",
-      "new_value": "30",
-      "context": "Personal Training Flagship - $1,000 USD (60 Days: 30d Training + 30d Guidance, up to 10 seats included, max 20)",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].schedule.live_training_days",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-business-training].schedule.support_phase_days",
-        "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[5].due_after_day",
-        "data/pricing.json#offerings[flagship-personal-training].schedule.live_training_days",
-        "data/pricing.json#offerings[flagship-personal-training].schedule.support_phase_days",
-        "data/pricing.json#offerings[flagship-personal-training].payment_rules.milestone_schedule[5].due_after_day"
-      ]
-    },
-    {
-      "file": "pricing.html",
-      "page": "Consulting & Training Pricing | Thomas Cherickal",
-      "section": "Purchasing Power Parity & Tier Rate Calculator",
-      "line_number": 1058,
-      "field_key": "pricing:offerings[flagship-business-training].tier1_base_price_usd",
-      "old_value": "$1,000",
-      "new_value": "1000",
-      "context": "Personal Training Flagship - $1,000 USD (60 Days: 30d Training + 30d Guidance, up to 10 seats included, max 20)",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].tier1_base_price_usd",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].tier1_base_price_usd"
-      ]
-    },
-    {
-      "file": "pricing.html",
-      "page": "Consulting & Training Pricing | Thomas Cherickal",
-      "section": "Purchasing Power Parity & Tier Rate Calculator",
-      "line_number": 1059,
-      "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
-      "old_value": "$100",
-      "new_value": "100",
-      "context": "Pick Individual Services ($100 Individual / $100 Business per service, 5d + 5d)",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].cohort_capacity.additional_seat_fee_usd",
-        "data/pricing.json#offerings[individual-service-business].tier1_base_price_usd",
-        "data/pricing.json#offerings[individual-service-business].cohort_capacity.additional_seat_fee_usd",
-        "data/pricing.json#offerings[individual-service-personal].tier1_base_price_usd",
-        "data/pricing.json#offerings[individual-service-personal].cohort_capacity.additional_seat_fee_usd"
-      ]
-    },
-    {
-      "file": "pricing.html",
-      "page": "Consulting & Training Pricing | Thomas Cherickal",
-      "section": "Purchasing Power Parity & Tier Rate Calculator",
-      "line_number": 1059,
-      "field_key": "pricing:offerings[flagship-business-training].payment_rules.milestone_schedule[0].due_after_day",
-      "old_value": "5d",
-      "new_value": "5",
-      "context": "Pick Individual Services ($100 Individual / $100 Business per service, 5d + 5d)",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].payment_rules.milestone_schedule[0].due_after_day",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].payment_rules.milestone_schedule[0].due_after_day",
-        "data/pricing.json#offerings[individual-service-business].schedule.live_training_days",
-        "data/pricing.json#offerings[individual-service-business].schedule.support_phase_days",
-        "data/pricing.json#offerings[individual-service-business].payment_rules.milestone_schedule[4].due_after_day",
-        "data/pricing.json#offerings[individual-service-personal].schedule.live_training_days",
-        "data/pricing.json#offerings[individual-service-personal].schedule.support_phase_days",
-        "data/pricing.json#offerings[individual-service-personal].payment_rules.milestone_schedule[4].due_after_day"
-      ]
-    },
-    {
-      "file": "pricing.html",
-      "page": "Consulting & Training Pricing | Thomas Cherickal",
-      "section": "Purchasing Power Parity & Tier Rate Calculator",
-      "line_number": 1071,
-      "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
-      "old_value": "$100",
-      "new_value": "100",
-      "context": "1 Service Selected (($100 / $75 / $50 / $50 /",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].cohort_capacity.additional_seat_fee_usd",
-        "data/pricing.json#offerings[individual-service-business].tier1_base_price_usd",
-        "data/pricing.json#offerings[individual-service-business].cohort_capacity.additional_seat_fee_usd",
-        "data/pricing.json#offerings[individual-service-personal].tier1_base_price_usd",
-        "data/pricing.json#offerings[individual-service-personal].cohort_capacity.additional_seat_fee_usd"
-      ]
-    },
-    {
-      "file": "pricing.html",
-      "page": "Consulting & Training Pricing | Thomas Cherickal",
-      "section": "Purchasing Power Parity & Tier Rate Calculator",
-      "line_number": 1105,
-      "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
-      "old_value": "$100",
-      "new_value": "100",
-      "context": "Business: 1-10 Included (+$100/extra seat) · Personal: 10 Included Flagship / 1 Included Pick (+$100/extra seat, max 20)",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].cohort_capacity.additional_seat_fee_usd",
-        "data/pricing.json#offerings[individual-service-business].tier1_base_price_usd",
-        "data/pricing.json#offerings[individual-service-business].cohort_capacity.additional_seat_fee_usd",
-        "data/pricing.json#offerings[individual-service-personal].tier1_base_price_usd",
-        "data/pricing.json#offerings[individual-service-personal].cohort_capacity.additional_seat_fee_usd"
-      ]
-    },
-    {
-      "file": "pricing.html",
-      "page": "Consulting & Training Pricing | Thomas Cherickal",
-      "section": "Purchasing Power Parity & Tier Rate Calculator",
-      "line_number": 1112,
-      "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
-      "old_value": "$100",
-      "new_value": "100",
-      "context": "Business base covers up to 10 participants (additional seats are ($100 / $75 / $50 / $50 / $25 /",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].cohort_capacity.additional_seat_fee_usd",
-        "data/pricing.json#offerings[individual-service-business].tier1_base_price_usd",
-        "data/pricing.json#offerings[individual-service-business].cohort_capacity.additional_seat_fee_usd",
-        "data/pricing.json#offerings[individual-service-personal].tier1_base_price_usd",
-        "data/pricing.json#offerings[individual-service-personal].cohort_capacity.additional_seat_fee_usd"
-      ]
-    },
-    {
-      "file": "pricing.html",
-      "page": "Consulting & Training Pricing | Thomas Cherickal",
-      "section": "Purchasing Power Parity & Tier Rate Calculator",
-      "line_number": 1112,
-      "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.included_seats",
-      "old_value": "10 participants",
-      "new_value": "10",
-      "context": "Business base covers up to 10 participants (additional seats are ($100 / $75 / $50 / $50 / $25 /",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].cohort_capacity.included_seats",
-        "data/pricing.json#offerings[individual-service-business].cohort_capacity.included_seats",
-        "data/pricing.json#offerings[individual-service-personal].cohort_capacity.included_seats"
-      ]
-    },
-    {
-      "file": "pricing.html",
-      "page": "Consulting & Training Pricing | Thomas Cherickal",
-      "section": "Purchasing Power Parity & Tier Rate Calculator",
-      "line_number": 1114,
-      "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
-      "old_value": "$100",
-      "new_value": "100",
-      "context": "parity). Individual/Personal is up to 10 participants included (+$100/extra seat, max 20).",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.additional_seat_fee_usd",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].cohort_capacity.additional_seat_fee_usd",
-        "data/pricing.json#offerings[individual-service-business].tier1_base_price_usd",
-        "data/pricing.json#offerings[individual-service-business].cohort_capacity.additional_seat_fee_usd",
-        "data/pricing.json#offerings[individual-service-personal].tier1_base_price_usd",
-        "data/pricing.json#offerings[individual-service-personal].cohort_capacity.additional_seat_fee_usd"
-      ]
-    },
-    {
-      "file": "pricing.html",
-      "page": "Consulting & Training Pricing | Thomas Cherickal",
-      "section": "Purchasing Power Parity & Tier Rate Calculator",
-      "line_number": 1114,
-      "field_key": "pricing:offerings[flagship-business-training].cohort_capacity.included_seats",
-      "old_value": "10 participants",
-      "new_value": "10",
-      "context": "parity). Individual/Personal is up to 10 participants included (+$100/extra seat, max 20).",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].cohort_capacity.included_seats",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].cohort_capacity.included_seats",
-        "data/pricing.json#offerings[individual-service-business].cohort_capacity.included_seats",
-        "data/pricing.json#offerings[individual-service-personal].cohort_capacity.included_seats"
-      ]
-    },
-    {
-      "file": "pricing.html",
-      "page": "Consulting & Training Pricing | Thomas Cherickal",
-      "section": "Purchasing Power Parity & Tier Rate Calculator",
-      "line_number": 1230,
+      "section": "Generative AI Packages & Transparent Parity Pricing",
+      "line_number": 596,
       "field_key": "pricing:offerings[flagship-business-training].tier1_base_price_usd",
       "old_value": "$1,000",
       "new_value": "1000",
@@ -20585,23 +18354,8 @@
     {
       "file": "pricing.html",
       "page": "Consulting & Training Pricing | Thomas Cherickal",
-      "section": "Purchasing Power Parity & Tier Rate Calculator",
-      "line_number": 1245,
-      "field_key": "pricing:offerings[flagship-business-training].tier1_base_price_usd",
-      "old_value": "$1,000",
-      "new_value": "1000",
-      "context": "$1,000 USD",
-      "match_type": "exact",
-      "data_source": "data/pricing.json#offerings[flagship-business-training].tier1_base_price_usd",
-      "also_in_data": [
-        "data/pricing.json#offerings[flagship-personal-training].tier1_base_price_usd"
-      ]
-    },
-    {
-      "file": "pricing.html",
-      "page": "Consulting & Training Pricing | Thomas Cherickal",
-      "section": "Purchasing Power Parity & Tier Rate Calculator",
-      "line_number": 1250,
+      "section": "Generative AI Packages & Transparent Parity Pricing",
+      "line_number": 601,
       "field_key": "pricing:offerings[flagship-business-training].schedule.live_training_days",
       "old_value": "30d",
       "new_value": "30",
@@ -20619,8 +18373,8 @@
     {
       "file": "pricing.html",
       "page": "Consulting & Training Pricing | Thomas Cherickal",
-      "section": "Purchasing Power Parity & Tier Rate Calculator",
-      "line_number": 1282,
+      "section": "Generative AI Packages & Transparent Parity Pricing",
+      "line_number": 633,
       "field_key": "pricing:offerings[flagship-business-training].tier1_base_price_usd",
       "old_value": "$1,000",
       "new_value": "1000",
