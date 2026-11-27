@@ -110,7 +110,7 @@ Structured engagement models for engineering teams, fast-growing tech startups, 
 `Gemini 4 Models` · `Gemini 4 Orchestration` · `Gemini 4 Swarms` · `Gemini Agents` · `Gemini Spark` · `Google Nano Banana` · `Google Flow` · `Google Omni` · `Google DeepMind` · `Google Deep Research`
 
 ### Claude Expertise
-`Claude Agent Teams` · `Claude Skills` · `Claude Artifacts` · `Claude Motion` · `Claude Dashboards` · `Claude Mods` · `Claude Office`
+`Claude Agent Teams` · `Claude Plugins` · `Claude Artifacts` · `Claude Motion` · `Claude Data` · `Claude Mods` · `Claude Office` · `Claude Ship` · `Claude Duet` · `Claude Apps`
 
 ### Open-Source Systems
 `HuggingFace Models` · `HuggingFace Spaces` · `OpenRouter` · `Nvidia NIM Services` · `OpenCode` · `Agentics Foundation`
