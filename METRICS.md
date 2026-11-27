@@ -1,6 +1,6 @@
 # Repository Code & Engineering Metrics
 
-> **Automated Status Report** | Generated on `2026-11-27 12:39:06 UTC` | Branch: `main` | Head Commit: `2e6a5a5`
+> **Automated Status Report** | Generated on `2026-11-27 12:43:39 UTC` | Branch: `main` | Head Commit: `2e6a5a5`
 > This report tracks comprehensive codebase, architectural, structural, and content metrics across `thomascherickal.github.io`.
 > Updated automatically on every build and push.
 
@@ -11,12 +11,12 @@
 | Metric | Count | Details |
 | :--- | :--- | :--- |
 | **Total Tracked Files** | **545** | Fully tracked Git artifacts |
-| **Total Lines of Source Code & Content** | **160,523** | All text, markup, styles & scripts |
-| **Source Code Lines (SLOC)** | **143,896** | Executable / renderable content lines |
+| **Total Lines of Source Code & Content** | **160,513** | All text, markup, styles & scripts |
+| **Source Code Lines (SLOC)** | **143,887** | Executable / renderable content lines |
 | **Comment & Documentation Lines** | **5,259** | In-code and architectural documentation |
-| **Blank / Spacing Lines** | **11,368** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **18.82 MB (19,739,422 bytes)** | HTML, CSS, JS, Python, SVG & Images |
-| **Total Word Count (Prose & Technical)** | **418,073 words** | Educational, curriculum, & marketing prose |
+| **Blank / Spacing Lines** | **11,367** | Code formatting and structural layout |
+| **Total Repository Size (Tracked Assets)** | **18.72 MB (19,630,870 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Word Count (Prose & Technical)** | **415,522 words** | Educational, curriculum, & marketing prose |
 | **Total Git Commits** | **594** | Since repository inception (2023-03-30) |
 | **Latest Commit Date** | **2026-11-27** | Subject: "Error fixed" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
@@ -30,8 +30,8 @@
 | **HTML Documents** | 91 | 97,004 | 7.87 MB (8,252,377 bytes) | Production static web pages, services, frameworks & guides |
 | **CSS Stylesheets** | 16 | 12,250 | 286.36 KB (293,233 bytes) | Design tokens, animations, responsive layout & themes |
 | **JavaScript Scripts** | 33 | 11,579 | 3.70 MB (3,884,078 bytes) | Client-side interactivity, search, filter & components |
-| **Python Tooling** | 40 | 11,026 | 501.06 KB (513,085 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
-| **Markdown Documentation** | 155 | 16,053 | 1.21 MB (1,269,968 bytes) | Project documentation, sync mirrors, guidelines & rules |
+| **Python Tooling** | 40 | 11,009 | 499.81 KB (511,807 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
+| **Markdown Documentation** | 155 | 16,060 | 1.11 MB (1,162,694 bytes) | Project documentation, sync mirrors, guidelines & rules |
 | **JSON Schemas & Data** | 112 | 12,544 | 524.63 KB (537,217 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 44 | 67 | 188.24 KB (192,754 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
 | **Raster Images (WebP, JPG, PNG)** | 37 | 0 | 4.06 MB (4,259,892 bytes) | Optimized feature hero graphics, social cards & assets |
@@ -44,11 +44,11 @@
 | Extension | Tracked Files | Total Lines | Total Size | Percentage of Files |
 | :--- | :--- | :--- | :--- | :--- |
 | `.html` | 91 | 97,004 | 7.87 MB (8,252,377 bytes) | 16.7% |
-| `.md` | 155 | 16,053 | 1.21 MB (1,269,968 bytes) | 28.4% |
+| `.md` | 155 | 16,060 | 1.11 MB (1,162,694 bytes) | 28.4% |
 | `.json` | 112 | 12,544 | 524.63 KB (537,217 bytes) | 20.6% |
 | `.css` | 16 | 12,250 | 286.36 KB (293,233 bytes) | 2.9% |
 | `.js` | 33 | 11,579 | 3.70 MB (3,884,078 bytes) | 6.1% |
-| `.py` | 40 | 11,026 | 501.06 KB (513,085 bytes) | 7.3% |
+| `.py` | 40 | 11,009 | 499.81 KB (511,807 bytes) | 7.3% |
 | `.svg` | 44 | 67 | 188.24 KB (192,754 bytes) | 8.1% |
 | `.webp` | 18 | 0 | 1.66 MB (1,745,378 bytes) | 3.3% |
 | `.png` | 12 | 0 | 1.28 MB (1,339,427 bytes) | 2.2% |
@@ -111,7 +111,7 @@
 | [`python/generate_favicons.py`](python/generate_favicons.py) | Dynamic multi-size favicon generator | Icon Resizer, Asset Pipeline |
 | [`python/generate_og_card.py`](python/generate_og_card.py) | OpenGraph social preview image generator | Pillow Compositor, Brand Styler |
 | [`python/hooks/post_edit_hook.py`](python/hooks/post_edit_hook.py) | IDE lifecycle hook triggering component updates on file modification | Hook Trigger, Event Dispatcher |
-| **Python Function Definitions** | **331 functions** across tooling scripts | Modular execution units |
+| **Python Function Definitions** | **329 functions** across tooling scripts | Modular execution units |
 | **Python Class Definitions** | **11 classes** | Structured state containers |
 
 ---
@@ -132,21 +132,21 @@
 
 ## 8. HTML UI Verification Suite Summary (`tests/test_html_ui.py`)
 
-- **Framework**: `BeautifulSoup4 + html.parser (unittest)`
+- **Framework**: `BeautifulSoup4 + lxml (unittest)`
 - **Pages Scanned**: **85 HTML pages**
-- **Summary**: **107 / 107 PASSED** (`0` failures, `6.52s`, Status: **PASSED**)
-- **Last Verified**: `2026-11-27 12:23:04 UTC`
+- **Summary**: **105 / 105 PASSED** (`0` failures, `6.69s`, Status: **PASSED**)
+- **Last Verified**: `2026-11-27 12:42:38 UTC`
 
 | Test Category | Tests | Passed | Failed | Pass Rate | Status |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **Document Shell, Charset & SEO** | 5 | 5 | 0 | 100.0% | **PASSED** |
 | **Navigation & Footer UI** | 4 | 4 | 0 | 100.0% | **PASSED** |
 | **Accessibility, Buttons & Security** | 5 | 5 | 0 | 100.0% | **PASSED** |
-| **CTA, Branding & Pricing Policy** | 5 | 5 | 0 | 100.0% | **PASSED** |
+| **CTA, Branding & Pricing Policy** | 4 | 4 | 0 | 100.0% | **PASSED** |
 | **Interactive Widgets & Page DOM Contracts** | 12 | 12 | 0 | 100.0% | **PASSED** |
 | **Structured Data, Assets & Hygiene** | 4 | 4 | 0 | 100.0% | **PASSED** |
 | **Production Error Scenarios & Fault Injection** | 15 | 15 | 0 | 100.0% | **PASSED** |
-| **HTML UI Total** | **107** | **107** | **0** | **100.0%** | **PASSED** |
+| **HTML UI Total** | **105** | **105** | **0** | **100.0%** | **PASSED** |
 
 ---
 
