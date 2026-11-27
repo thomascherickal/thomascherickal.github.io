@@ -1,6 +1,6 @@
 # Repository Code & Engineering Metrics
 
-> **Automated Status Report** | Generated on `2026-11-27 12:43:39 UTC` | Branch: `main` | Head Commit: `2e6a5a5`
+> **Automated Status Report** | Generated on `2026-11-27 19:53:57 UTC` | Branch: `main` | Head Commit: `a3c4431`
 > This report tracks comprehensive codebase, architectural, structural, and content metrics across `thomascherickal.github.io`.
 > Updated automatically on every build and push.
 
@@ -10,15 +10,15 @@
 
 | Metric | Count | Details |
 | :--- | :--- | :--- |
-| **Total Tracked Files** | **545** | Fully tracked Git artifacts |
-| **Total Lines of Source Code & Content** | **160,513** | All text, markup, styles & scripts |
-| **Source Code Lines (SLOC)** | **143,887** | Executable / renderable content lines |
-| **Comment & Documentation Lines** | **5,259** | In-code and architectural documentation |
-| **Blank / Spacing Lines** | **11,367** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **18.72 MB (19,630,870 bytes)** | HTML, CSS, JS, Python, SVG & Images |
-| **Total Word Count (Prose & Technical)** | **415,522 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **594** | Since repository inception (2023-03-30) |
-| **Latest Commit Date** | **2026-11-27** | Subject: "Error fixed" |
+| **Total Tracked Files** | **544** | Fully tracked Git artifacts |
+| **Total Lines of Source Code & Content** | **160,362** | All text, markup, styles & scripts |
+| **Source Code Lines (SLOC)** | **143,747** | Executable / renderable content lines |
+| **Comment & Documentation Lines** | **5,253** | In-code and architectural documentation |
+| **Blank / Spacing Lines** | **11,362** | Code formatting and structural layout |
+| **Total Repository Size (Tracked Assets)** | **18.70 MB (19,609,847 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Word Count (Prose & Technical)** | **412,836 words** | Educational, curriculum, & marketing prose |
+| **Total Git Commits** | **596** | Since repository inception (2023-03-30) |
+| **Latest Commit Date** | **2026-11-28** | Subject: "Home Page fix" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
 ---
@@ -27,11 +27,11 @@
 
 | Category | Files | Total Lines | Total Size | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| **HTML Documents** | 91 | 97,004 | 7.87 MB (8,252,377 bytes) | Production static web pages, services, frameworks & guides |
+| **HTML Documents** | 91 | 96,881 | 7.87 MB (8,251,216 bytes) | Production static web pages, services, frameworks & guides |
 | **CSS Stylesheets** | 16 | 12,250 | 286.36 KB (293,233 bytes) | Design tokens, animations, responsive layout & themes |
 | **JavaScript Scripts** | 33 | 11,579 | 3.70 MB (3,884,078 bytes) | Client-side interactivity, search, filter & components |
 | **Python Tooling** | 40 | 11,009 | 499.81 KB (511,807 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
-| **Markdown Documentation** | 155 | 16,060 | 1.11 MB (1,162,694 bytes) | Project documentation, sync mirrors, guidelines & rules |
+| **Markdown Documentation** | 154 | 16,032 | 1.09 MB (1,142,832 bytes) | Project documentation, sync mirrors, guidelines & rules |
 | **JSON Schemas & Data** | 112 | 12,544 | 524.63 KB (537,217 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 44 | 67 | 188.24 KB (192,754 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
 | **Raster Images (WebP, JPG, PNG)** | 37 | 0 | 4.06 MB (4,259,892 bytes) | Optimized feature hero graphics, social cards & assets |
@@ -43,12 +43,12 @@
 
 | Extension | Tracked Files | Total Lines | Total Size | Percentage of Files |
 | :--- | :--- | :--- | :--- | :--- |
-| `.html` | 91 | 97,004 | 7.87 MB (8,252,377 bytes) | 16.7% |
-| `.md` | 155 | 16,060 | 1.11 MB (1,162,694 bytes) | 28.4% |
+| `.html` | 91 | 96,881 | 7.87 MB (8,251,216 bytes) | 16.7% |
+| `.md` | 154 | 16,032 | 1.09 MB (1,142,832 bytes) | 28.3% |
 | `.json` | 112 | 12,544 | 524.63 KB (537,217 bytes) | 20.6% |
 | `.css` | 16 | 12,250 | 286.36 KB (293,233 bytes) | 2.9% |
 | `.js` | 33 | 11,579 | 3.70 MB (3,884,078 bytes) | 6.1% |
-| `.py` | 40 | 11,009 | 499.81 KB (511,807 bytes) | 7.3% |
+| `.py` | 40 | 11,009 | 499.81 KB (511,807 bytes) | 7.4% |
 | `.svg` | 44 | 67 | 188.24 KB (192,754 bytes) | 8.1% |
 | `.webp` | 18 | 0 | 1.66 MB (1,745,378 bytes) | 3.3% |
 | `.png` | 12 | 0 | 1.28 MB (1,339,427 bytes) | 2.2% |
@@ -74,9 +74,9 @@
 | **CSS Design Tokens (`--var`)** | **90** | Standardized color palettes, typography, spacing & radii |
 | **FAQ Question Cards** | **198** | Rich searchable & filterable accordion cards |
 | **Primary Headings (`<h1>`)** | **86** | Strict single-H1 semantic hierarchy per page |
-| **Secondary Section Headings (`<h2>`)** | **864** | Structural topic subdivisions |
-| **Card & Item Headings (`<h3>`)** | **442** | Individual service, question, and feature cards |
-| **Call-to-Action (CTA) Modules** | **100** | Standardized CTAs with Free LinkedIn Consultation rule |
+| **Secondary Section Headings (`<h2>`)** | **862** | Structural topic subdivisions |
+| **Card & Item Headings (`<h3>`)** | **436** | Individual service, question, and feature cards |
+| **Call-to-Action (CTA) Modules** | **98** | Standardized CTAs with Free LinkedIn Consultation rule |
 | **Canonical Links Configured** | **85** | 100% SEO canonical URL coverage across public pages |
 | **Open Graph Meta Tags** | **608** | Social preview cards across Twitter/LinkedIn/Facebook |
 | **Structured Data Blocks (JSON-LD)** | **86** | Schema.org FAQPage, Service, Person, Organization schemas |
@@ -132,10 +132,10 @@
 
 ## 8. HTML UI Verification Suite Summary (`tests/test_html_ui.py`)
 
-- **Framework**: `BeautifulSoup4 + lxml (unittest)`
+- **Framework**: `BeautifulSoup4 + html.parser (unittest)`
 - **Pages Scanned**: **85 HTML pages**
-- **Summary**: **105 / 105 PASSED** (`0` failures, `6.69s`, Status: **PASSED**)
-- **Last Verified**: `2026-11-27 12:42:38 UTC`
+- **Summary**: **104 / 105 PASSED** (`1` failures, `5.79s`, Status: **FAILED**)
+- **Last Verified**: `2026-11-27 19:51:18 UTC`
 
 | Test Category | Tests | Passed | Failed | Pass Rate | Status |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -146,7 +146,7 @@
 | **Interactive Widgets & Page DOM Contracts** | 12 | 12 | 0 | 100.0% | **PASSED** |
 | **Structured Data, Assets & Hygiene** | 4 | 4 | 0 | 100.0% | **PASSED** |
 | **Production Error Scenarios & Fault Injection** | 15 | 15 | 0 | 100.0% | **PASSED** |
-| **HTML UI Total** | **105** | **105** | **0** | **100.0%** | **PASSED** |
+| **HTML UI Total** | **105** | **104** | **1** | **99.0%** | **FAILED** |
 
 ---
 
