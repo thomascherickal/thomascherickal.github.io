@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "author",
+    "email",
+    "domain",
+    "brand",
+    "brandStartYear",
+    "title",
+    "linkedin",
+    "patreon",
+    "github",
+    "topmate",
+    "x"
+  ],
+  "properties": {
+    "author": {
+      "type": "string",
+      "minLength": 1
+    },
+    "email": {
+      "type": "string",
+      "format": "email"
+    },
+    "domain": {
+      "type": "string",
+      "pattern": "^https://"
+    },
+    "brand": {
+      "type": "string",
+      "minLength": 1
+    },
+    "brandStartYear": {
+      "type": "integer",
+      "minimum": 2000
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "linkedin": {
+      "type": "string",
+      "pattern": "^https://"
+    },
+    "patreon": {
+      "type": "string",
+      "pattern": "^https://"
+    },
+    "github": {
+      "type": "string",
+      "pattern": "^https://"
+    },
+    "topmate": {
+      "type": "string",
+      "pattern": "^https://"
+    },
+    "x": {
+      "type": "string",
+      "pattern": "^https://"
+    }
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "currency",
+    "general_payment_rules",
+    "ip_rules",
+    "offerings",
+    "capacity"
+  ],
+  "properties": {
+    "currency": {
+      "type": "string",
+      "const": "USD"
+    },
+    "capacity": {
+      "type": "object",
+      "required": [
+        "flagship_cohorts_per_quarter"
+      ],
+      "properties": {
+        "flagship_cohorts_per_quarter": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "offerings": {
+      "type": "array",
+      "minItems": 4,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "type",
+          "name",
+          "tier1_base_price_usd",
+          "cohort_capacity",
+          "schedule",
+          "payment_rules"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "flagship",
+              "individual"
+            ]
+          },
+          "tier1_base_price_usd": {
+            "type": "number",
+            "minimum": 0
+          },
+          "cohort_capacity": {
+            "type": "object",
+            "required": [
+              "included_seats",
+              "additional_seat_fee_usd",
+              "max_seats"
+            ],
+            "properties": {
+              "included_seats": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "additional_seat_fee_usd": {
+                "type": "number",
+                "minimum": 0
+              },
+              "max_seats": {
+                "type": "integer",
+                "minimum": 1
+              }
+            }
+          },
+          "schedule": {
+            "type": "object",
+            "required": [
+              "total_calendar_duration_days",
+              "live_training_days",
+              "support_phase_days",
+              "support_phase_days_basis",
+              "duration_meaning"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

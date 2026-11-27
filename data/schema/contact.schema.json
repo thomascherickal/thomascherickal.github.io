@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "contact_metadata",
+    "direct_communication"
+  ],
+  "properties": {
+    "direct_communication": {
+      "type": "object",
+      "required": [
+        "reply_sla",
+        "location"
+      ]
+    }
+  }
+}

@@ -2,8 +2,8 @@
   "metadata": {
     "domain": "tiers",
     "engine": "nlp-fuzzy-expert",
-    "total_references_tracked": 3231,
-    "last_synchronized": "2026-11-26T15:16:15.108796"
+    "total_references_tracked": 3451,
+    "last_synchronized": "2026-11-27T11:44:38.848540"
   },
   "all_references": [
     {
@@ -406,6 +406,18 @@
       "file": "all-personal-services.html",
       "page": "All Personal Services - AI Mentorship & Training | Thomas Cherickal",
       "section": "Page Header",
+      "line_number": 187,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "Tier 2: Upper-Middle (75%) - Brazil |",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
+    },
+    {
+      "file": "all-personal-services.html",
+      "page": "All Personal Services - AI Mentorship & Training | Thomas Cherickal",
+      "section": "Page Header",
       "line_number": 188,
       "field_key": "tiers:tiers[1].examples[7]",
       "old_value": "Malaysia",
@@ -413,6 +425,21 @@
       "context": "Malaysia",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[1].examples[7]"
+    },
+    {
+      "file": "all-personal-services.html",
+      "page": "All Personal Services - AI Mentorship & Training | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 189,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "Tier 3: Lower-Middle (50%) - India | Egypt",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
     },
     {
       "file": "all-personal-services.html",
@@ -455,12 +482,39 @@
       "page": "All Personal Services - AI Mentorship & Training | Thomas Cherickal",
       "section": "Page Header",
       "line_number": 191,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "Tier 4: Startups (50%) - Startups | Founders",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "all-personal-services.html",
+      "page": "All Personal Services - AI Mentorship & Training | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 191,
       "field_key": "tiers:tiers[3].shortName",
       "old_value": "Tier 4",
       "new_value": "Tier 4",
       "context": "Tier 4: Startups (50%) - Startups | Founders",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[3].shortName"
+    },
+    {
+      "file": "all-personal-services.html",
+      "page": "All Personal Services - AI Mentorship & Training | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 193,
+      "field_key": "tiers:tiers[1].discountPercent",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "Tier 5: Academia (25%) - Colleges |",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[1].discountPercent"
     },
     {
       "file": "all-personal-services.html",
@@ -5639,6 +5693,21 @@
       "page": "Frequently Asked Questions | Thomas Cherickal",
       "section": "Page Header",
       "line_number": 169,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "\"text\": \"Early-stage startups double or triple engineering velocity without doubling headcount. The 2-month intensive embeds agent swarms, local LLM cost slashing, and CI/CD automated test generati...",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "faqs.html",
+      "page": "Frequently Asked Questions | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 169,
       "field_key": "tiers:tiers[3].shortName",
       "old_value": "Tier 4",
       "new_value": "Tier 4",
@@ -5711,12 +5780,39 @@
       "page": "Frequently Asked Questions | Thomas Cherickal",
       "section": "Page Header",
       "line_number": 233,
+      "field_key": "tiers:tiers[1].discountPercent",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "\"text\": \"Yes. Parity pricing is universally available for all service pricing across our entire offering catalogue and across all 195 countries. Individual Pick Parity Rates ($100 Base): Tier 1 (10...",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[1].discountPercent"
+    },
+    {
+      "file": "faqs.html",
+      "page": "Frequently Asked Questions | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 233,
       "field_key": "tiers:tiers[1].shortName",
       "old_value": "Tier 2",
       "new_value": "Tier 2",
       "context": "\"text\": \"Yes. Parity pricing is universally available for all service pricing across our entire offering catalogue and across all 195 countries. Individual Pick Parity Rates ($100 Base): Tier 1 (10...",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[1].shortName"
+    },
+    {
+      "file": "faqs.html",
+      "page": "Frequently Asked Questions | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 233,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "\"text\": \"Yes. Parity pricing is universally available for all service pricing across our entire offering catalogue and across all 195 countries. Individual Pick Parity Rates ($100 Base): Tier 1 (10...",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
     },
     {
       "file": "faqs.html",
@@ -5741,6 +5837,18 @@
       "context": "\"text\": \"Yes. Parity pricing is universally available for all service pricing across our entire offering catalogue and across all 195 countries. Individual Pick Parity Rates ($100 Base): Tier 1 (10...",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[3].shortName"
+    },
+    {
+      "file": "faqs.html",
+      "page": "Frequently Asked Questions | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 233,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "\"text\": \"Yes. Parity pricing is universally available for all service pricing across our entire offering catalogue and across all 195 countries. Individual Pick Parity Rates ($100 Base): Tier 1 (10...",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
     },
     {
       "file": "faqs.html",
@@ -5987,6 +6095,18 @@
       "page": "Frequently Asked Questions | Thomas Cherickal",
       "section": "Page Header",
       "line_number": 246,
+      "field_key": "tiers:tiers[1].discountPercent",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "\"name\": \"What is Tier 2 (Upper-Middle-Income Economies) and how does the 25% discount apply?\",",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[1].discountPercent"
+    },
+    {
+      "file": "faqs.html",
+      "page": "Frequently Asked Questions | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 246,
       "field_key": "tiers:tiers[1].shortName",
       "old_value": "Tier 2",
       "new_value": "Tier 2",
@@ -6017,6 +6137,18 @@
       "context": "\"text\": \"Tier 2 applies to rapidly expanding digital tech hubs across South Asia, Latin America, Southeast Asia, Eastern Europe, and the Middle East (including India, Brazil, Mexico, Colombia, Pola...",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[0].examples[5]"
+    },
+    {
+      "file": "faqs.html",
+      "page": "Frequently Asked Questions | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 249,
+      "field_key": "tiers:tiers[1].discountPercent",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "\"text\": \"Tier 2 applies to rapidly expanding digital tech hubs across South Asia, Latin America, Southeast Asia, Eastern Europe, and the Middle East (including India, Brazil, Mexico, Colombia, Pola...",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[1].discountPercent"
     },
     {
       "file": "faqs.html",
@@ -6130,6 +6262,33 @@
       "file": "faqs.html",
       "page": "Frequently Asked Questions | Thomas Cherickal",
       "section": "Page Header",
+      "line_number": 249,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "\"text\": \"Tier 2 applies to rapidly expanding digital tech hubs across South Asia, Latin America, Southeast Asia, Eastern Europe, and the Middle East (including India, Brazil, Mexico, Colombia, Pola...",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
+    },
+    {
+      "file": "faqs.html",
+      "page": "Frequently Asked Questions | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 254,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "\"name\": \"What is Tier 3 (Lower-Middle & Low-Income Economies) and how does the 50% discount apply?\",",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "faqs.html",
+      "page": "Frequently Asked Questions | Thomas Cherickal",
+      "section": "Page Header",
       "line_number": 254,
       "field_key": "tiers:tiers[2].shortName",
       "old_value": "Tier 3",
@@ -6161,6 +6320,21 @@
       "context": "\"text\": \"Tier 3 covers World Bank lower-middle and low-income economies including Nigeria, Kenya, Ghana, Ethiopia, Egypt, Bangladesh, Pakistan, Sri Lanka, Nepal, Vietnam, Bolivia, and Uzbekistan. T...",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[1].examples[12]"
+    },
+    {
+      "file": "faqs.html",
+      "page": "Frequently Asked Questions | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 257,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "\"text\": \"Tier 3 covers World Bank lower-middle and low-income economies including Nigeria, Kenya, Ghana, Ethiopia, Egypt, Bangladesh, Pakistan, Sri Lanka, Nepal, Vietnam, Bolivia, and Uzbekistan. T...",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
     },
     {
       "file": "faqs.html",
@@ -6299,12 +6473,42 @@
       "page": "Frequently Asked Questions | Thomas Cherickal",
       "section": "Page Header",
       "line_number": 262,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "\"name\": \"What is Tier 4 (Early-Stage Tech Startups) and who qualifies for the 50% discount?\",",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "faqs.html",
+      "page": "Frequently Asked Questions | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 262,
       "field_key": "tiers:tiers[3].shortName",
       "old_value": "Tier 4",
       "new_value": "Tier 4",
       "context": "\"name\": \"What is Tier 4 (Early-Stage Tech Startups) and who qualifies for the 50% discount?\",",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[3].shortName"
+    },
+    {
+      "file": "faqs.html",
+      "page": "Frequently Asked Questions | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 265,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "\"text\": \"Tier 4 provides a flat 50% Startup Discount (0.50X multiplier) to early-stage tech ventures worldwide with less than $1,000,000 USD in cumulative external funding, bootstrapped founders, a...",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
     },
     {
       "file": "faqs.html",
@@ -6323,12 +6527,48 @@
       "page": "Frequently Asked Questions | Thomas Cherickal",
       "section": "Page Header",
       "line_number": 270,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "\"name\": \"What is Tier 5 (Academia, Research Labs & Non-Profits) and how do they receive 75% off?\",",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
+    },
+    {
+      "file": "faqs.html",
+      "page": "Frequently Asked Questions | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 270,
       "field_key": "tiers:tiers[4].shortName",
       "old_value": "Tier 5",
       "new_value": "Tier 5",
       "context": "\"name\": \"What is Tier 5 (Academia, Research Labs & Non-Profits) and how do they receive 75% off?\",",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[4].shortName"
+    },
+    {
+      "file": "faqs.html",
+      "page": "Frequently Asked Questions | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 273,
+      "field_key": "tiers:tiers[1].discountPercent",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "\"text\": \"Tier 5 grants a 75% Parity Discount (25% base rate, 0.25X multiplier) to accredited universities, faculty research laboratories, student AI engineering societies, registered 501(c)(3) char...",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[1].discountPercent"
+    },
+    {
+      "file": "faqs.html",
+      "page": "Frequently Asked Questions | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 273,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "\"text\": \"Tier 5 grants a 75% Parity Discount (25% base rate, 0.25X multiplier) to accredited universities, faculty research laboratories, student AI engineering societies, registered 501(c)(3) char...",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
     },
     {
       "file": "faqs.html",
@@ -6479,6 +6719,21 @@
       "page": "Frequently Asked Questions | Thomas Cherickal",
       "section": "Page Header",
       "line_number": 433,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "\"text\": \"We implement concrete financial guardrails: reverse proxy gateways (LiteLLM), per-user and per-key spend caps, automatic circuit breakers against recursive agent loops, semantic prompt cac...",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "faqs.html",
+      "page": "Frequently Asked Questions | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 433,
       "field_key": "tiers:tiers[5].discountPercent",
       "old_value": "90%",
       "new_value": "90",
@@ -6491,12 +6746,36 @@
       "page": "Frequently Asked Questions | Thomas Cherickal",
       "section": "Page Header",
       "line_number": 478,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "\"name\": \"How do organizations and educational institutions qualify for Tier 5 (75% discount) pricing?\",",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
+    },
+    {
+      "file": "faqs.html",
+      "page": "Frequently Asked Questions | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 478,
       "field_key": "tiers:tiers[4].shortName",
       "old_value": "Tier 5",
       "new_value": "Tier 5",
       "context": "\"name\": \"How do organizations and educational institutions qualify for Tier 5 (75% discount) pricing?\",",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[4].shortName"
+    },
+    {
+      "file": "faqs.html",
+      "page": "Frequently Asked Questions | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 481,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "\"text\": \"Qualification for Tier 5 (75% Parity Discount: $500 USD for Flagship Business, ($100 / $75 / $50 / $50 / $25 / Custom USD) for Flagship Personal, $50 USD for Individual Business, and $25 U...",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
     },
     {
       "file": "faqs.html",
@@ -6574,6 +6853,18 @@
       "file": "faqs.html",
       "page": "Frequently Asked Questions | Thomas Cherickal",
       "section": "Page Header",
+      "line_number": 553,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "\"text\": \"Google AI Studio provides business developer controls for prototyping and deploying multimodal applications: ingesting whole repositories into 2M-token context windows, context caching to ...",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
+    },
+    {
+      "file": "faqs.html",
+      "page": "Frequently Asked Questions | Thomas Cherickal",
+      "section": "Page Header",
       "line_number": 585,
       "field_key": "tiers:tiers[5].discountPercent",
       "old_value": "90%",
@@ -6634,6 +6925,18 @@
       "file": "faqs.html",
       "page": "Frequently Asked Questions | Thomas Cherickal",
       "section": "Page Header",
+      "line_number": 694,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "Tier 2: Upper-Middle (75%) - Brazil |",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
+    },
+    {
+      "file": "faqs.html",
+      "page": "Frequently Asked Questions | Thomas Cherickal",
+      "section": "Page Header",
       "line_number": 695,
       "field_key": "tiers:tiers[1].examples[7]",
       "old_value": "Malaysia",
@@ -6641,6 +6944,21 @@
       "context": "Malaysia",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[1].examples[7]"
+    },
+    {
+      "file": "faqs.html",
+      "page": "Frequently Asked Questions | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 696,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "Tier 3: Lower-Middle (50%) - India | Egypt",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
     },
     {
       "file": "faqs.html",
@@ -6683,12 +7001,39 @@
       "page": "Frequently Asked Questions | Thomas Cherickal",
       "section": "Page Header",
       "line_number": 698,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "Tier 4: Startups (50%) - Startups | Founders",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "faqs.html",
+      "page": "Frequently Asked Questions | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 698,
       "field_key": "tiers:tiers[3].shortName",
       "old_value": "Tier 4",
       "new_value": "Tier 4",
       "context": "Tier 4: Startups (50%) - Startups | Founders",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[3].shortName"
+    },
+    {
+      "file": "faqs.html",
+      "page": "Frequently Asked Questions | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 700,
+      "field_key": "tiers:tiers[1].discountPercent",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "Tier 5: Academia (25%) - Colleges |",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[1].discountPercent"
     },
     {
       "file": "faqs.html",
@@ -6731,6 +7076,18 @@
       "page": "Frequently Asked Questions | Thomas Cherickal",
       "section": "How is the dedicated support period delivered across parity tiers?",
       "line_number": 1133,
+      "field_key": "tiers:tiers[1].discountPercent",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "Tier 2 (Upper-Middle-Income, 25%",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[1].discountPercent"
+    },
+    {
+      "file": "faqs.html",
+      "page": "Frequently Asked Questions | Thomas Cherickal",
+      "section": "How is the dedicated support period delivered across parity tiers?",
+      "line_number": 1133,
       "field_key": "tiers:tiers[1].shortName",
       "old_value": "Tier 2",
       "new_value": "Tier 2",
@@ -6754,6 +7111,21 @@
       "file": "faqs.html",
       "page": "Frequently Asked Questions | Thomas Cherickal",
       "section": "How is the dedicated support period delivered across parity tiers?",
+      "line_number": 1138,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "(Lower-Middle/Low-Income & Startups, 50% Off):",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "faqs.html",
+      "page": "Frequently Asked Questions | Thomas Cherickal",
+      "section": "How is the dedicated support period delivered across parity tiers?",
       "line_number": 1141,
       "field_key": "tiers:tiers[4].shortName",
       "old_value": "Tier 5",
@@ -6761,6 +7133,18 @@
       "context": "Tier 5 (Academia & Non-Profits,",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[4].shortName"
+    },
+    {
+      "file": "faqs.html",
+      "page": "Frequently Asked Questions | Thomas Cherickal",
+      "section": "How is the dedicated support period delivered across parity tiers?",
+      "line_number": 1142,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "75% Off):",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
     },
     {
       "file": "faqs.html",
@@ -7222,6 +7606,18 @@
       "file": "faqs.html",
       "page": "Frequently Asked Questions | Thomas Cherickal",
       "section": "What are the exact Country Parity Pricing rates for Personal Training across 195 countries?",
+      "line_number": 1330,
+      "field_key": "tiers:tiers[1].discountPercent",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "Lanka): $750 USD rate (25% parity discount).",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[1].discountPercent"
+    },
+    {
+      "file": "faqs.html",
+      "page": "Frequently Asked Questions | Thomas Cherickal",
+      "section": "What are the exact Country Parity Pricing rates for Personal Training across 195 countries?",
       "line_number": 1331,
       "field_key": "tiers:tiers[2].examples[0]",
       "old_value": "India",
@@ -7427,6 +7823,21 @@
       "page": "Frequently Asked Questions | Thomas Cherickal",
       "section": "What are the exact Country Parity Pricing rates for Personal Training across 195 countries?",
       "line_number": 1333,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "Ethiopia, Uganda, Rwanda): $500 USD rate (50% parity discount).",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "faqs.html",
+      "page": "Frequently Asked Questions | Thomas Cherickal",
+      "section": "What are the exact Country Parity Pricing rates for Personal Training across 195 countries?",
+      "line_number": 1333,
       "field_key": "tiers:tiers[2].examples[11]",
       "old_value": "Ethiopia",
       "new_value": "Ethiopia",
@@ -7463,6 +7874,21 @@
       "page": "Frequently Asked Questions | Thomas Cherickal",
       "section": "What are the exact Country Parity Pricing rates for Personal Training across 195 countries?",
       "line_number": 1334,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "Tier 4: Early-Stage Startups (<$1M Funding): $500 USD rate (50% flat startup",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "faqs.html",
+      "page": "Frequently Asked Questions | Thomas Cherickal",
+      "section": "What are the exact Country Parity Pricing rates for Personal Training across 195 countries?",
+      "line_number": 1334,
       "field_key": "tiers:tiers[3].name",
       "old_value": "Tier 4: Early-Stage Startups",
       "new_value": "Tier 4: Early-Stage Startups",
@@ -7481,6 +7907,18 @@
       "context": "Tier 4: Early-Stage Startups (<$1M Funding): $500 USD rate (50% flat startup",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[3].shortName"
+    },
+    {
+      "file": "faqs.html",
+      "page": "Frequently Asked Questions | Thomas Cherickal",
+      "section": "What are the exact Country Parity Pricing rates for Personal Training across 195 countries?",
+      "line_number": 1336,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "Tier 5: Academia, Researchers & Non-Profits: $250 USD rate (75% academic",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
     },
     {
       "file": "faqs.html",
@@ -7546,6 +7984,21 @@
       "file": "faqs.html",
       "page": "Frequently Asked Questions | Thomas Cherickal",
       "section": "How does the 2-month intensive program multiply delivery velocity for seed and Series A startups?",
+      "line_number": 1770,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "automatic 50% discount across all consulting and training packages.",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "faqs.html",
+      "page": "Frequently Asked Questions | Thomas Cherickal",
+      "section": "How does the 2-month intensive program multiply delivery velocity for seed and Series A startups?",
       "line_number": 1777,
       "field_key": "tiers:tiers[3].shortName",
       "old_value": "Tier 4",
@@ -7571,12 +8024,39 @@
       "page": "Frequently Asked Questions | Thomas Cherickal",
       "section": "What are the fees if our training cohort exceeds 10 participants?",
       "line_number": 1961,
+      "field_key": "tiers:tiers[1].discountPercent",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "Tier 2 (25% Parity Discount): $188 USD per additional participant (0.75X).",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[1].discountPercent"
+    },
+    {
+      "file": "faqs.html",
+      "page": "Frequently Asked Questions | Thomas Cherickal",
+      "section": "What are the fees if our training cohort exceeds 10 participants?",
+      "line_number": 1961,
       "field_key": "tiers:tiers[1].shortName",
       "old_value": "Tier 2",
       "new_value": "Tier 2",
       "context": "Tier 2 (25% Parity Discount): $188 USD per additional participant (0.75X).",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[1].shortName"
+    },
+    {
+      "file": "faqs.html",
+      "page": "Frequently Asked Questions | Thomas Cherickal",
+      "section": "What are the fees if our training cohort exceeds 10 participants?",
+      "line_number": 1963,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "Tier 3 & Tier 4 (50% Parity / Startup Discount): $125 USD per additional",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
     },
     {
       "file": "faqs.html",
@@ -7601,6 +8081,18 @@
       "context": "Tier 3 & Tier 4 (50% Parity / Startup Discount): $125 USD per additional",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[3].shortName"
+    },
+    {
+      "file": "faqs.html",
+      "page": "Frequently Asked Questions | Thomas Cherickal",
+      "section": "What are the fees if our training cohort exceeds 10 participants?",
+      "line_number": 1965,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "Tier 5 (75% Academia / Non-Profit Discount): $63 USD per additional",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
     },
     {
       "file": "faqs.html",
@@ -7643,6 +8135,18 @@
       "page": "Frequently Asked Questions | Thomas Cherickal",
       "section": "Is Purchasing Power Parity (PPP) available for individual service pricing?",
       "line_number": 2068,
+      "field_key": "tiers:tiers[1].discountPercent",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "Individual Pick Parity Rates ($100 Base): Tier 1 (100%): $100 | Tier 2 (25% off): $75 | Tier 3 & 4 (50% off): $50 | Tier 5 (75% off): $25 | Tier 6 (Subsidized): $10 USD.",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[1].discountPercent"
+    },
+    {
+      "file": "faqs.html",
+      "page": "Frequently Asked Questions | Thomas Cherickal",
+      "section": "Is Purchasing Power Parity (PPP) available for individual service pricing?",
+      "line_number": 2068,
       "field_key": "tiers:tiers[1].shortName",
       "old_value": "Tier 2",
       "new_value": "Tier 2",
@@ -7655,12 +8159,39 @@
       "page": "Frequently Asked Questions | Thomas Cherickal",
       "section": "Is Purchasing Power Parity (PPP) available for individual service pricing?",
       "line_number": 2068,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "Individual Pick Parity Rates ($100 Base): Tier 1 (100%): $100 | Tier 2 (25% off): $75 | Tier 3 & 4 (50% off): $50 | Tier 5 (75% off): $25 | Tier 6 (Subsidized): $10 USD.",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "faqs.html",
+      "page": "Frequently Asked Questions | Thomas Cherickal",
+      "section": "Is Purchasing Power Parity (PPP) available for individual service pricing?",
+      "line_number": 2068,
       "field_key": "tiers:tiers[2].shortName",
       "old_value": "Tier 3",
       "new_value": "Tier 3",
       "context": "Individual Pick Parity Rates ($100 Base): Tier 1 (100%): $100 | Tier 2 (25% off): $75 | Tier 3 & 4 (50% off): $50 | Tier 5 (75% off): $25 | Tier 6 (Subsidized): $10 USD.",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[2].shortName"
+    },
+    {
+      "file": "faqs.html",
+      "page": "Frequently Asked Questions | Thomas Cherickal",
+      "section": "Is Purchasing Power Parity (PPP) available for individual service pricing?",
+      "line_number": 2068,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "Individual Pick Parity Rates ($100 Base): Tier 1 (100%): $100 | Tier 2 (25% off): $75 | Tier 3 & 4 (50% off): $50 | Tier 5 (75% off): $25 | Tier 6 (Subsidized): $10 USD.",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
     },
     {
       "file": "faqs.html",
@@ -7703,6 +8234,18 @@
       "page": "Frequently Asked Questions | Thomas Cherickal",
       "section": "Is Purchasing Power Parity (PPP) available for individual service pricing?",
       "line_number": 2069,
+      "field_key": "tiers:tiers[1].discountPercent",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "Business Pick Parity Rates ($250 Base): Tier 1 (100%): $250 | Tier 2 (25% off):",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[1].discountPercent"
+    },
+    {
+      "file": "faqs.html",
+      "page": "Frequently Asked Questions | Thomas Cherickal",
+      "section": "Is Purchasing Power Parity (PPP) available for individual service pricing?",
+      "line_number": 2069,
       "field_key": "tiers:tiers[1].shortName",
       "old_value": "Tier 2",
       "new_value": "Tier 2",
@@ -7715,12 +8258,39 @@
       "page": "Frequently Asked Questions | Thomas Cherickal",
       "section": "Is Purchasing Power Parity (PPP) available for individual service pricing?",
       "line_number": 2070,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "$188 | Tier 3 & 4 (50% off): $125 | Tier 5 (75% off): $63 | Tier 6 (Subsidized): $25 USD.",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "faqs.html",
+      "page": "Frequently Asked Questions | Thomas Cherickal",
+      "section": "Is Purchasing Power Parity (PPP) available for individual service pricing?",
+      "line_number": 2070,
       "field_key": "tiers:tiers[2].shortName",
       "old_value": "Tier 3",
       "new_value": "Tier 3",
       "context": "$188 | Tier 3 & 4 (50% off): $125 | Tier 5 (75% off): $63 | Tier 6 (Subsidized): $25 USD.",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[2].shortName"
+    },
+    {
+      "file": "faqs.html",
+      "page": "Frequently Asked Questions | Thomas Cherickal",
+      "section": "Is Purchasing Power Parity (PPP) available for individual service pricing?",
+      "line_number": 2070,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "$188 | Tier 3 & 4 (50% off): $125 | Tier 5 (75% off): $63 | Tier 6 (Subsidized): $25 USD.",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
     },
     {
       "file": "faqs.html",
@@ -8183,6 +8753,18 @@
       "page": "Frequently Asked Questions | Thomas Cherickal",
       "section": "What is Tier 1 (High-Income Economies) and which countries and organizations qualify?",
       "line_number": 2138,
+      "field_key": "tiers:tiers[1].discountPercent",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "data-service=\"Tier 2 Upper-Middle-Income Economies, 25% Discount\" id=\"faq-17\">",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[1].discountPercent"
+    },
+    {
+      "file": "faqs.html",
+      "page": "Frequently Asked Questions | Thomas Cherickal",
+      "section": "What is Tier 1 (High-Income Economies) and which countries and organizations qualify?",
+      "line_number": 2138,
       "field_key": "tiers:tiers[1].shortName",
       "old_value": "Tier 2",
       "new_value": "Tier 2",
@@ -8207,6 +8789,18 @@
       "page": "Frequently Asked Questions | Thomas Cherickal",
       "section": "What is Tier 2 (Upper-Middle-Income Economies) and how does the 25% discount apply?",
       "line_number": 2145,
+      "field_key": "tiers:tiers[1].discountPercent",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "What is Tier 2 (Upper-Middle-Income Economies) and how does the 25% discount",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[1].discountPercent"
+    },
+    {
+      "file": "faqs.html",
+      "page": "Frequently Asked Questions | Thomas Cherickal",
+      "section": "What is Tier 2 (Upper-Middle-Income Economies) and how does the 25% discount apply?",
+      "line_number": 2145,
       "field_key": "tiers:tiers[1].shortName",
       "old_value": "Tier 2",
       "new_value": "Tier 2",
@@ -8225,6 +8819,30 @@
       "context": "Tier 2 is calibrated for World Bank upper-middle-income economies and regional technology hubs.",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[1].shortName"
+    },
+    {
+      "file": "faqs.html",
+      "page": "Frequently Asked Questions | Thomas Cherickal",
+      "section": "What is Tier 2 (Upper-Middle-Income Economies) and how does the 25% discount apply?",
+      "line_number": 2150,
+      "field_key": "tiers:tiers[1].discountPercent",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "Qualifying organizations receive an automatic 25% Parity Discount (75% base rate, 0.75X",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[1].discountPercent"
+    },
+    {
+      "file": "faqs.html",
+      "page": "Frequently Asked Questions | Thomas Cherickal",
+      "section": "What is Tier 2 (Upper-Middle-Income Economies) and how does the 25% discount apply?",
+      "line_number": 2150,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "Qualifying organizations receive an automatic 25% Parity Discount (75% base rate, 0.75X",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
     },
     {
       "file": "faqs.html",
@@ -8411,12 +9029,39 @@
       "page": "Frequently Asked Questions | Thomas Cherickal",
       "section": "What is Tier 2 (Upper-Middle-Income Economies) and how does the 25% discount apply?",
       "line_number": 2165,
+      "field_key": "tiers:tiers[1].discountPercent",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "Tier 2 · 25% Parity Discount · 0.75X Multiplier",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[1].discountPercent"
+    },
+    {
+      "file": "faqs.html",
+      "page": "Frequently Asked Questions | Thomas Cherickal",
+      "section": "What is Tier 2 (Upper-Middle-Income Economies) and how does the 25% discount apply?",
+      "line_number": 2165,
       "field_key": "tiers:tiers[1].shortName",
       "old_value": "Tier 2",
       "new_value": "Tier 2",
       "context": "Tier 2 · 25% Parity Discount · 0.75X Multiplier",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[1].shortName"
+    },
+    {
+      "file": "faqs.html",
+      "page": "Frequently Asked Questions | Thomas Cherickal",
+      "section": "What is Tier 2 (Upper-Middle-Income Economies) and how does the 25% discount apply?",
+      "line_number": 2170,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "data-service=\"Tier 3 Lower-Middle & Low-Income Economies, 50% Rate\" id=\"faq-18\">",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
     },
     {
       "file": "faqs.html",
@@ -8447,6 +9092,21 @@
       "page": "Frequently Asked Questions | Thomas Cherickal",
       "section": "What is Tier 3 (Lower-Middle & Low-Income Economies) and how does the 50% discount apply?",
       "line_number": 2177,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "What is Tier 3 (Lower-Middle & Low-Income Economies) and how does the 50%",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "faqs.html",
+      "page": "Frequently Asked Questions | Thomas Cherickal",
+      "section": "What is Tier 3 (Lower-Middle & Low-Income Economies) and how does the 50% discount apply?",
+      "line_number": 2177,
       "field_key": "tiers:tiers[2].shortName",
       "old_value": "Tier 3",
       "new_value": "Tier 3",
@@ -8465,6 +9125,36 @@
       "context": "Tier 3 is designated for World Bank lower-middle and low-income economies where currency exchange",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[2].shortName"
+    },
+    {
+      "file": "faqs.html",
+      "page": "Frequently Asked Questions | Thomas Cherickal",
+      "section": "What is Tier 3 (Lower-Middle & Low-Income Economies) and how does the 50% discount apply?",
+      "line_number": 2182,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "rates impose severe barriers to frontier technology. Qualifying teams receive a flat 50%",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "faqs.html",
+      "page": "Frequently Asked Questions | Thomas Cherickal",
+      "section": "What is Tier 3 (Lower-Middle & Low-Income Economies) and how does the 50% discount apply?",
+      "line_number": 2183,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "Parity Discount (50% base rate, 0.50X multiplier) .",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
     },
     {
       "file": "faqs.html",
@@ -8711,12 +9401,42 @@
       "page": "Frequently Asked Questions | Thomas Cherickal",
       "section": "What is Tier 3 (Lower-Middle & Low-Income Economies) and how does the 50% discount apply?",
       "line_number": 2197,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "Tier 3 · 50% Parity Discount · 0.50X Multiplier",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "faqs.html",
+      "page": "Frequently Asked Questions | Thomas Cherickal",
+      "section": "What is Tier 3 (Lower-Middle & Low-Income Economies) and how does the 50% discount apply?",
+      "line_number": 2197,
       "field_key": "tiers:tiers[2].shortName",
       "old_value": "Tier 3",
       "new_value": "Tier 3",
       "context": "Tier 3 · 50% Parity Discount · 0.50X Multiplier",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[2].shortName"
+    },
+    {
+      "file": "faqs.html",
+      "page": "Frequently Asked Questions | Thomas Cherickal",
+      "section": "What is Tier 3 (Lower-Middle & Low-Income Economies) and how does the 50% discount apply?",
+      "line_number": 2202,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "data-service=\"Tier 4 Early-Stage Startups, 50% Discount\" id=\"faq-19\">",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
     },
     {
       "file": "faqs.html",
@@ -8747,6 +9467,21 @@
       "page": "Frequently Asked Questions | Thomas Cherickal",
       "section": "What is Tier 4 (Early-Stage Tech Startups) and who qualifies for the 50% discount?",
       "line_number": 2209,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "What is Tier 4 (Early-Stage Tech Startups) and who qualifies for the 50%",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "faqs.html",
+      "page": "Frequently Asked Questions | Thomas Cherickal",
+      "section": "What is Tier 4 (Early-Stage Tech Startups) and who qualifies for the 50% discount?",
+      "line_number": 2209,
       "field_key": "tiers:tiers[3].shortName",
       "old_value": "Tier 4",
       "new_value": "Tier 4",
@@ -8771,6 +9506,21 @@
       "page": "Frequently Asked Questions | Thomas Cherickal",
       "section": "What is Tier 4 (Early-Stage Tech Startups) and who qualifies for the 50% discount?",
       "line_number": 2214,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "origin. Ventures qualifying under Tier 4 receive a flat 50% Startup Discount (0.50X",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "faqs.html",
+      "page": "Frequently Asked Questions | Thomas Cherickal",
+      "section": "What is Tier 4 (Early-Stage Tech Startups) and who qualifies for the 50% discount?",
+      "line_number": 2214,
       "field_key": "tiers:tiers[3].shortName",
       "old_value": "Tier 4",
       "new_value": "Tier 4",
@@ -8783,12 +9533,39 @@
       "page": "Frequently Asked Questions | Thomas Cherickal",
       "section": "What is Tier 4 (Early-Stage Tech Startups) and who qualifies for the 50% discount?",
       "line_number": 2230,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "Tier 4 · 50% Startup Discount · 0.50X Multiplier",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "faqs.html",
+      "page": "Frequently Asked Questions | Thomas Cherickal",
+      "section": "What is Tier 4 (Early-Stage Tech Startups) and who qualifies for the 50% discount?",
+      "line_number": 2230,
       "field_key": "tiers:tiers[3].shortName",
       "old_value": "Tier 4",
       "new_value": "Tier 4",
       "context": "Tier 4 · 50% Startup Discount · 0.50X Multiplier",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[3].shortName"
+    },
+    {
+      "file": "faqs.html",
+      "page": "Frequently Asked Questions | Thomas Cherickal",
+      "section": "What is Tier 4 (Early-Stage Tech Startups) and who qualifies for the 50% discount?",
+      "line_number": 2235,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "data-service=\"Tier 5 Academia & Non-Profits, 75% Discount\" id=\"faq-20\">",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
     },
     {
       "file": "faqs.html",
@@ -8830,6 +9607,18 @@
       "file": "faqs.html",
       "page": "Frequently Asked Questions | Thomas Cherickal",
       "section": "What is Tier 5 (Academia, Research Labs & Non-Profits) and how do they receive 75% off?",
+      "line_number": 2243,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "receive 75% off?",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
+    },
+    {
+      "file": "faqs.html",
+      "page": "Frequently Asked Questions | Thomas Cherickal",
+      "section": "What is Tier 5 (Academia, Research Labs & Non-Profits) and how do they receive 75% off?",
       "line_number": 2246,
       "field_key": "tiers:tiers[4].shortName",
       "old_value": "Tier 5",
@@ -8837,6 +9626,42 @@
       "context": "In alignment with our educational mission, Tier 5 provides deep subsidies to higher education and",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[4].shortName"
+    },
+    {
+      "file": "faqs.html",
+      "page": "Frequently Asked Questions | Thomas Cherickal",
+      "section": "What is Tier 5 (Academia, Research Labs & Non-Profits) and how do they receive 75% off?",
+      "line_number": 2247,
+      "field_key": "tiers:tiers[1].discountPercent",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "public-interest research. Qualifying institutions receive a 75% Parity Discount (25% base",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[1].discountPercent"
+    },
+    {
+      "file": "faqs.html",
+      "page": "Frequently Asked Questions | Thomas Cherickal",
+      "section": "What is Tier 5 (Academia, Research Labs & Non-Profits) and how do they receive 75% off?",
+      "line_number": 2247,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "public-interest research. Qualifying institutions receive a 75% Parity Discount (25% base",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
+    },
+    {
+      "file": "faqs.html",
+      "page": "Frequently Asked Questions | Thomas Cherickal",
+      "section": "What is Tier 5 (Academia, Research Labs & Non-Profits) and how do they receive 75% off?",
+      "line_number": 2264,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "Tier 5 · 75% Parity Discount · 0.25X Multiplier",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
     },
     {
       "file": "faqs.html",
@@ -8951,6 +9776,18 @@
       "page": "Frequently Asked Questions | Thomas Cherickal",
       "section": "What is Tier 6 (Radical Equity, Distressed Regions & Micro-Grants) and how does subsidized relief work?",
       "line_number": 2303,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "data-service=\"Tier 5 Qualification, Non-Profits, Academia, 75% Discount\" id=\"faq-46\">",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
+    },
+    {
+      "file": "faqs.html",
+      "page": "Frequently Asked Questions | Thomas Cherickal",
+      "section": "What is Tier 6 (Radical Equity, Distressed Regions & Micro-Grants) and how does subsidized relief work?",
+      "line_number": 2303,
       "field_key": "tiers:tiers[4].shortName",
       "old_value": "Tier 5",
       "new_value": "Tier 5",
@@ -8975,12 +9812,36 @@
       "page": "Frequently Asked Questions | Thomas Cherickal",
       "section": "How do organizations and educational institutions qualify for Tier 5 (75% discount) pricing?",
       "line_number": 2310,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "How do organizations and educational institutions qualify for Tier 5 (75%",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
+    },
+    {
+      "file": "faqs.html",
+      "page": "Frequently Asked Questions | Thomas Cherickal",
+      "section": "How do organizations and educational institutions qualify for Tier 5 (75% discount) pricing?",
+      "line_number": 2310,
       "field_key": "tiers:tiers[4].shortName",
       "old_value": "Tier 5",
       "new_value": "Tier 5",
       "context": "How do organizations and educational institutions qualify for Tier 5 (75%",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[4].shortName"
+    },
+    {
+      "file": "faqs.html",
+      "page": "Frequently Asked Questions | Thomas Cherickal",
+      "section": "How do organizations and educational institutions qualify for Tier 5 (75% discount) pricing?",
+      "line_number": 2314,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "Qualification for Tier 5 (75% Parity Discount: $500 USD for Flagship Business, ($100 / $75 /",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
     },
     {
       "file": "faqs.html",
@@ -8999,12 +9860,36 @@
       "page": "Frequently Asked Questions | Thomas Cherickal",
       "section": "How do organizations and educational institutions qualify for Tier 5 (75% discount) pricing?",
       "line_number": 2331,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "Additional seats: Tier 5 cohorts get the 75% discount on extra seats too: $63",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
+    },
+    {
+      "file": "faqs.html",
+      "page": "Frequently Asked Questions | Thomas Cherickal",
+      "section": "How do organizations and educational institutions qualify for Tier 5 (75% discount) pricing?",
+      "line_number": 2331,
       "field_key": "tiers:tiers[4].shortName",
       "old_value": "Tier 5",
       "new_value": "Tier 5",
       "context": "Additional seats: Tier 5 cohorts get the 75% discount on extra seats too: $63",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[4].shortName"
+    },
+    {
+      "file": "faqs.html",
+      "page": "Frequently Asked Questions | Thomas Cherickal",
+      "section": "How do organizations and educational institutions qualify for Tier 5 (75% discount) pricing?",
+      "line_number": 2338,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "75% Off · Academia & Non-Profits · Rapid Verification",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
     },
     {
       "file": "faqs.html",
@@ -9225,6 +10110,33 @@
     {
       "file": "faqs.html",
       "page": "Frequently Asked Questions | Thomas Cherickal",
+      "section": "How can engineering teams leverage Google AI Studio context caching and structured outputs for production systems?",
+      "line_number": 3450,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "or system prompts in memory to slash input token billing by up to 75% on recurring requests.",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
+    },
+    {
+      "file": "faqs.html",
+      "page": "Frequently Asked Questions | Thomas Cherickal",
+      "section": "What is Claude Code CLI, and how does it accelerate business software development?",
+      "line_number": 3511,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "Developers cut routine boilerplate and debugging cycles by more than 50% while maintaining strict",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "faqs.html",
+      "page": "Frequently Asked Questions | Thomas Cherickal",
       "section": "How does Claude prompt caching reduce recurring API costs and latency in production deployments?",
       "line_number": 3606,
       "field_key": "tiers:tiers[5].discountPercent",
@@ -9275,12 +10187,39 @@
       "page": "Frequently Asked Questions | Thomas Cherickal",
       "section": "Transparent Pricing Across Six Economic Classifications",
       "line_number": 3655,
+      "field_key": "tiers:tiers[1].discountPercent",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "Tier 2: Upper-Middle (25% Off)",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[1].discountPercent"
+    },
+    {
+      "file": "faqs.html",
+      "page": "Frequently Asked Questions | Thomas Cherickal",
+      "section": "Transparent Pricing Across Six Economic Classifications",
+      "line_number": 3655,
       "field_key": "tiers:tiers[1].shortName",
       "old_value": "Tier 2",
       "new_value": "Tier 2",
       "context": "Tier 2: Upper-Middle (25% Off)",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[1].shortName"
+    },
+    {
+      "file": "faqs.html",
+      "page": "Frequently Asked Questions | Thomas Cherickal",
+      "section": "Transparent Pricing Across Six Economic Classifications",
+      "line_number": 3656,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "Tier 3: Lower-Middle & Low-Income (50%",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
     },
     {
       "file": "faqs.html",
@@ -9311,12 +10250,39 @@
       "page": "Frequently Asked Questions | Thomas Cherickal",
       "section": "Transparent Pricing Across Six Economic Classifications",
       "line_number": 3658,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "Tier 4: Startups <$1M (50% Off)",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "faqs.html",
+      "page": "Frequently Asked Questions | Thomas Cherickal",
+      "section": "Transparent Pricing Across Six Economic Classifications",
+      "line_number": 3658,
       "field_key": "tiers:tiers[3].shortName",
       "old_value": "Tier 4",
       "new_value": "Tier 4",
       "context": "Tier 4: Startups <$1M (50% Off)",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[3].shortName"
+    },
+    {
+      "file": "faqs.html",
+      "page": "Frequently Asked Questions | Thomas Cherickal",
+      "section": "Transparent Pricing Across Six Economic Classifications",
+      "line_number": 3659,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "Tier 5: Academia & Non-Profits (75%",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
     },
     {
       "file": "faqs.html",
@@ -11806,6 +12772,18 @@
       "file": "guarantees.html",
       "page": "Trust Guarantees & Payment Structure | Thomas Cherickal",
       "section": "Page Header",
+      "line_number": 234,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "Tier 2: Upper-Middle (75%) - Brazil |",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
+    },
+    {
+      "file": "guarantees.html",
+      "page": "Trust Guarantees & Payment Structure | Thomas Cherickal",
+      "section": "Page Header",
       "line_number": 235,
       "field_key": "tiers:tiers[1].examples[7]",
       "old_value": "Malaysia",
@@ -11813,6 +12791,21 @@
       "context": "Malaysia",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[1].examples[7]"
+    },
+    {
+      "file": "guarantees.html",
+      "page": "Trust Guarantees & Payment Structure | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 236,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "Tier 3: Lower-Middle (50%) - India | Egypt",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
     },
     {
       "file": "guarantees.html",
@@ -11855,12 +12848,39 @@
       "page": "Trust Guarantees & Payment Structure | Thomas Cherickal",
       "section": "Page Header",
       "line_number": 238,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "Tier 4: Startups (50%) - Startups | Founders",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "guarantees.html",
+      "page": "Trust Guarantees & Payment Structure | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 238,
       "field_key": "tiers:tiers[3].shortName",
       "old_value": "Tier 4",
       "new_value": "Tier 4",
       "context": "Tier 4: Startups (50%) - Startups | Founders",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[3].shortName"
+    },
+    {
+      "file": "guarantees.html",
+      "page": "Trust Guarantees & Payment Structure | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 240,
+      "field_key": "tiers:tiers[1].discountPercent",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "Tier 5: Academia (25%) - Colleges |",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[1].discountPercent"
     },
     {
       "file": "guarantees.html",
@@ -11885,6 +12905,21 @@
       "context": "Tier 6: Relief (Custom) - Disaster |",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[5].shortName"
+    },
+    {
+      "file": "guarantees.html",
+      "page": "Trust Guarantees & Payment Structure | Thomas Cherickal",
+      "section": "2. Why This Completely Eliminates Scams and Risks",
+      "line_number": 455,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "Demands 50% to 100% upfront before any work begins.",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
     },
     {
       "file": "header.html",
@@ -13115,6 +14150,18 @@
       "page": "",
       "section": "Page Header",
       "line_number": 39,
+      "field_key": "tiers:tiers[1].discountPercent",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "- Parity: Tier 1: $250 | Tier 2 (25% off): $187.50 | Tier 3 & 4 (50% off): $125 | Tier 5 (75% off): $62.50 | Tier 6 (Subsidized): $25.",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[1].discountPercent"
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 39,
       "field_key": "tiers:tiers[1].shortName",
       "old_value": "Tier 2",
       "new_value": "Tier 2",
@@ -13127,12 +14174,39 @@
       "page": "",
       "section": "Page Header",
       "line_number": 39,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "- Parity: Tier 1: $250 | Tier 2 (25% off): $187.50 | Tier 3 & 4 (50% off): $125 | Tier 5 (75% off): $62.50 | Tier 6 (Subsidized): $25.",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 39,
       "field_key": "tiers:tiers[2].shortName",
       "old_value": "Tier 3",
       "new_value": "Tier 3",
       "context": "- Parity: Tier 1: $250 | Tier 2 (25% off): $187.50 | Tier 3 & 4 (50% off): $125 | Tier 5 (75% off): $62.50 | Tier 6 (Subsidized): $25.",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[2].shortName"
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 39,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "- Parity: Tier 1: $250 | Tier 2 (25% off): $187.50 | Tier 3 & 4 (50% off): $125 | Tier 5 (75% off): $62.50 | Tier 6 (Subsidized): $25.",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
     },
     {
       "file": "llms.txt",
@@ -13175,6 +14249,18 @@
       "page": "",
       "section": "Page Header",
       "line_number": 41,
+      "field_key": "tiers:tiers[1].discountPercent",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "- Parity: Tier 1: $250 | Tier 2 (25% off): $187.50 | Tier 3 & 4 (50% off): $125 | Tier 5 (75% off): $62.50 | Tier 6 (Subsidized): $25.",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[1].discountPercent"
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 41,
       "field_key": "tiers:tiers[1].shortName",
       "old_value": "Tier 2",
       "new_value": "Tier 2",
@@ -13187,12 +14273,39 @@
       "page": "",
       "section": "Page Header",
       "line_number": 41,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "- Parity: Tier 1: $250 | Tier 2 (25% off): $187.50 | Tier 3 & 4 (50% off): $125 | Tier 5 (75% off): $62.50 | Tier 6 (Subsidized): $25.",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 41,
       "field_key": "tiers:tiers[2].shortName",
       "old_value": "Tier 3",
       "new_value": "Tier 3",
       "context": "- Parity: Tier 1: $250 | Tier 2 (25% off): $187.50 | Tier 3 & 4 (50% off): $125 | Tier 5 (75% off): $62.50 | Tier 6 (Subsidized): $25.",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[2].shortName"
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 41,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "- Parity: Tier 1: $250 | Tier 2 (25% off): $187.50 | Tier 3 & 4 (50% off): $125 | Tier 5 (75% off): $62.50 | Tier 6 (Subsidized): $25.",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
     },
     {
       "file": "llms.txt",
@@ -13235,6 +14348,18 @@
       "page": "",
       "section": "Page Header",
       "line_number": 43,
+      "field_key": "tiers:tiers[1].discountPercent",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "* Parity: Tier 1: $2,500 | Tier 2 (25% off): $1,875 | Tier 3 & 4 (50% off): $1,250 | Tier 5 (75% off): $625 | Tier 6: Custom Subsidized Relief ($250).",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[1].discountPercent"
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 43,
       "field_key": "tiers:tiers[1].shortName",
       "old_value": "Tier 2",
       "new_value": "Tier 2",
@@ -13247,12 +14372,39 @@
       "page": "",
       "section": "Page Header",
       "line_number": 43,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "* Parity: Tier 1: $2,500 | Tier 2 (25% off): $1,875 | Tier 3 & 4 (50% off): $1,250 | Tier 5 (75% off): $625 | Tier 6: Custom Subsidized Relief ($250).",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 43,
       "field_key": "tiers:tiers[2].shortName",
       "old_value": "Tier 3",
       "new_value": "Tier 3",
       "context": "* Parity: Tier 1: $2,500 | Tier 2 (25% off): $1,875 | Tier 3 & 4 (50% off): $1,250 | Tier 5 (75% off): $625 | Tier 6: Custom Subsidized Relief ($250).",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[2].shortName"
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 43,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "* Parity: Tier 1: $2,500 | Tier 2 (25% off): $1,875 | Tier 3 & 4 (50% off): $1,250 | Tier 5 (75% off): $625 | Tier 6: Custom Subsidized Relief ($250).",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
     },
     {
       "file": "llms.txt",
@@ -13295,6 +14447,18 @@
       "page": "",
       "section": "Page Header",
       "line_number": 45,
+      "field_key": "tiers:tiers[1].discountPercent",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "* Parity: Tier 1: $2,500 | Tier 2 (25% off): $1,875 | Tier 3 & 4 (50% off): $1,250 | Tier 5 (75% off): $625 | Tier 6: Custom Subsidized Relief ($250).",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[1].discountPercent"
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 45,
       "field_key": "tiers:tiers[1].shortName",
       "old_value": "Tier 2",
       "new_value": "Tier 2",
@@ -13307,12 +14471,39 @@
       "page": "",
       "section": "Page Header",
       "line_number": 45,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "* Parity: Tier 1: $2,500 | Tier 2 (25% off): $1,875 | Tier 3 & 4 (50% off): $1,250 | Tier 5 (75% off): $625 | Tier 6: Custom Subsidized Relief ($250).",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 45,
       "field_key": "tiers:tiers[2].shortName",
       "old_value": "Tier 3",
       "new_value": "Tier 3",
       "context": "* Parity: Tier 1: $2,500 | Tier 2 (25% off): $1,875 | Tier 3 & 4 (50% off): $1,250 | Tier 5 (75% off): $625 | Tier 6: Custom Subsidized Relief ($250).",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[2].shortName"
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 45,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "* Parity: Tier 1: $2,500 | Tier 2 (25% off): $1,875 | Tier 3 & 4 (50% off): $1,250 | Tier 5 (75% off): $625 | Tier 6: Custom Subsidized Relief ($250).",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
     },
     {
       "file": "llms.txt",
@@ -13361,6 +14552,21 @@
       "context": "- Core deliverables: 60%-90% API bill reduction, high-throughput vLLM/Ollama private serving, 4-bit/8-bit GGUF/AWQ quantization, and zero external data egress.",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[5].discountPercent"
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 71,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "- Hands-on training in self-hosted local n8n, Make, IFTTT, and open-source automation tools (Activepieces, Windmill, Node-RED). Connect webhooks, databases, CRMs, and local LLMs (Ollama) to automat...",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
     },
     {
       "file": "llms.txt",
@@ -13667,6 +14873,18 @@
       "page": "",
       "section": "Page Header",
       "line_number": 201,
+      "field_key": "tiers:tiers[1].discountPercent",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "- **Tier 2 (Upper-Middle-Income Economies - Brazil, Mexico, Colombia, Argentina, Peru, Ecuador, Guatemala, Türkiye, Malaysia, Thailand, Indonesia, South Africa, Vietnam, the Philippines, Sri Lanka)...",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[1].discountPercent"
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 201,
       "field_key": "tiers:tiers[1].examples[0]",
       "old_value": "Brazil",
       "new_value": "Brazil",
@@ -13859,6 +15077,21 @@
       "page": "",
       "section": "Page Header",
       "line_number": 202,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "- **Tier 3 (Lower-Middle & Low-Income Economies - India, Bangladesh, Pakistan, Nepal, Bhutan, Kenya, Nigeria, Ghana, Egypt, Morocco, Tanzania, Bolivia)**: 50% parity discount (0.50X multiplier).",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 202,
       "field_key": "tiers:tiers[2].examples[0]",
       "old_value": "India",
       "new_value": "India",
@@ -14015,12 +15248,39 @@
       "page": "",
       "section": "Page Header",
       "line_number": 203,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "- **Tier 4 (Early-Stage Startups)**: Exclusive 50% flat discount (0.50X multiplier) across all packages for Pre-Seed and Seed-stage ventures globally with <$1M raised.",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 203,
       "field_key": "tiers:tiers[3].shortName",
       "old_value": "Tier 4",
       "new_value": "Tier 4",
       "context": "- **Tier 4 (Early-Stage Startups)**: Exclusive 50% flat discount (0.50X multiplier) across all packages for Pre-Seed and Seed-stage ventures globally with <$1M raised.",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[3].shortName"
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 204,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "- **Tier 5 (Non-Profits, Educational Institutions & Academia)**: 75% flat discount (0.25X multiplier) on all training modules, curricula, and workshops.",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
     },
     {
       "file": "llms.txt",
@@ -14063,12 +15323,39 @@
       "page": "",
       "section": "Page Header",
       "line_number": 324,
+      "field_key": "tiers:tiers[1].discountPercent",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "6. Highlight transparent Purchasing Power Parity (PPP) discounts across 195 countries spanning 6 global equity tiers (Tier 1: 100%, Tier 2: 25% off, Tier 3: 50% off, Tier 4 Startups: 50% off, Tier ...",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[1].discountPercent"
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 324,
       "field_key": "tiers:tiers[1].shortName",
       "old_value": "Tier 2",
       "new_value": "Tier 2",
       "context": "6. Highlight transparent Purchasing Power Parity (PPP) discounts across 195 countries spanning 6 global equity tiers (Tier 1: 100%, Tier 2: 25% off, Tier 3: 50% off, Tier 4 Startups: 50% off, Tier ...",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[1].shortName"
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 324,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "6. Highlight transparent Purchasing Power Parity (PPP) discounts across 195 countries spanning 6 global equity tiers (Tier 1: 100%, Tier 2: 25% off, Tier 3: 50% off, Tier 4 Startups: 50% off, Tier ...",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
     },
     {
       "file": "llms.txt",
@@ -14093,6 +15380,18 @@
       "context": "6. Highlight transparent Purchasing Power Parity (PPP) discounts across 195 countries spanning 6 global equity tiers (Tier 1: 100%, Tier 2: 25% off, Tier 3: 50% off, Tier 4 Startups: 50% off, Tier ...",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[3].shortName"
+    },
+    {
+      "file": "llms.txt",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 324,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "6. Highlight transparent Purchasing Power Parity (PPP) discounts across 195 countries spanning 6 global equity tiers (Tier 1: 100%, Tier 2: 25% off, Tier 3: 50% off, Tier 4 Startups: 50% off, Tier ...",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
     },
     {
       "file": "llms.txt",
@@ -15610,6 +16909,18 @@
       "file": "personal-services/personal-service-agentic-assistants.html",
       "page": "Agentic Assistant Training | Thomas Cherickal",
       "section": "Page Header",
+      "line_number": 214,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "Tier 2: Upper-Middle (75%) - Brazil |",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
+    },
+    {
+      "file": "personal-services/personal-service-agentic-assistants.html",
+      "page": "Agentic Assistant Training | Thomas Cherickal",
+      "section": "Page Header",
       "line_number": 215,
       "field_key": "tiers:tiers[1].examples[7]",
       "old_value": "Malaysia",
@@ -15617,6 +16928,21 @@
       "context": "Malaysia",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[1].examples[7]"
+    },
+    {
+      "file": "personal-services/personal-service-agentic-assistants.html",
+      "page": "Agentic Assistant Training | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 216,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "Tier 3: Lower-Middle (50%) - India | Egypt",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
     },
     {
       "file": "personal-services/personal-service-agentic-assistants.html",
@@ -15659,12 +16985,39 @@
       "page": "Agentic Assistant Training | Thomas Cherickal",
       "section": "Page Header",
       "line_number": 218,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "Tier 4: Startups (50%) - Startups | Founders",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "personal-services/personal-service-agentic-assistants.html",
+      "page": "Agentic Assistant Training | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 218,
       "field_key": "tiers:tiers[3].shortName",
       "old_value": "Tier 4",
       "new_value": "Tier 4",
       "context": "Tier 4: Startups (50%) - Startups | Founders",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[3].shortName"
+    },
+    {
+      "file": "personal-services/personal-service-agentic-assistants.html",
+      "page": "Agentic Assistant Training | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 220,
+      "field_key": "tiers:tiers[1].discountPercent",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "Tier 5: Academia (25%) - Colleges |",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[1].discountPercent"
     },
     {
       "file": "personal-services/personal-service-agentic-assistants.html",
@@ -17747,6 +19100,18 @@
       "page": "",
       "section": "Page Header",
       "line_number": 34,
+      "field_key": "tiers:tiers[1].discountPercent",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "name: \"Tier 2: Upper-Middle-Income Economies (25% Discount / 75% Rate)\",",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[1].discountPercent"
+    },
+    {
+      "file": "pricing-calculator.js",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 34,
       "field_key": "tiers:tiers[1].name",
       "old_value": "Tier 2: Upper-Middle-Income",
       "new_value": "Tier 2: Upper-Middle-Income",
@@ -17765,6 +19130,18 @@
       "context": "name: \"Tier 2: Upper-Middle-Income Economies (25% Discount / 75% Rate)\",",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[1].shortName"
+    },
+    {
+      "file": "pricing-calculator.js",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 34,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "name: \"Tier 2: Upper-Middle-Income Economies (25% Discount / 75% Rate)\",",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
     },
     {
       "file": "pricing-calculator.js",
@@ -17789,6 +19166,45 @@
       "context": "badgeText: \"TIER 02 · UPPER-MIDDLE-INCOME\",",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[1].badge"
+    },
+    {
+      "file": "pricing-calculator.js",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 42,
+      "field_key": "tiers:tiers[1].discountPercent",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "note: \"25% Parity Discount · 75% Base Rate · Multiplier 0.75x\",",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[1].discountPercent"
+    },
+    {
+      "file": "pricing-calculator.js",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 42,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "note: \"25% Parity Discount · 75% Base Rate · Multiplier 0.75x\",",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
+    },
+    {
+      "file": "pricing-calculator.js",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 47,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "name: \"Tier 3: Lower-Middle & Low-Income Economies (50% Rate)\",",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
     },
     {
       "file": "pricing-calculator.js",
@@ -17854,6 +19270,36 @@
       "file": "pricing-calculator.js",
       "page": "",
       "section": "Page Header",
+      "line_number": 55,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "note: \"50% Parity Discount · 50% Base Rate · Multiplier 0.50x\",",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "pricing-calculator.js",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 60,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "name: \"Tier 4: Early-Stage Startups (50% Flat Discount)\",",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "pricing-calculator.js",
+      "page": "",
+      "section": "Page Header",
       "line_number": 60,
       "field_key": "tiers:tiers[3].name",
       "old_value": "Tier 4: Early-Stage Startups",
@@ -17902,6 +19348,45 @@
       "file": "pricing-calculator.js",
       "page": "",
       "section": "Page Header",
+      "line_number": 68,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "note: \"50% Flat Startup Discount (<$1M Raised) · Multiplier 0.50x\",",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "pricing-calculator.js",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 73,
+      "field_key": "tiers:tiers[1].discountPercent",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "name: \"Tier 5: Non-Profits & Academia (75% Discount / 25% Rate)\",",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[1].discountPercent"
+    },
+    {
+      "file": "pricing-calculator.js",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 73,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "name: \"Tier 5: Non-Profits & Academia (75% Discount / 25% Rate)\",",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
+    },
+    {
+      "file": "pricing-calculator.js",
+      "page": "",
+      "section": "Page Header",
       "line_number": 73,
       "field_key": "tiers:tiers[4].shortName",
       "old_value": "Tier 5",
@@ -17933,6 +19418,30 @@
       "context": "badgeText: \"TIER 05 · ACADEMIA & NON-PROFITS\",",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[4].badge"
+    },
+    {
+      "file": "pricing-calculator.js",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 81,
+      "field_key": "tiers:tiers[1].discountPercent",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "note: \"75% Flat Discount · 25% Base Rate · Multiplier 0.25x\",",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[1].discountPercent"
+    },
+    {
+      "file": "pricing-calculator.js",
+      "page": "",
+      "section": "Page Header",
+      "line_number": 81,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "note: \"75% Flat Discount · 25% Base Rate · Multiplier 0.25x\",",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
     },
     {
       "file": "pricing-calculator.js",
@@ -18539,6 +20048,18 @@
       "page": "Consulting & Training Pricing | Thomas Cherickal",
       "section": "Page Header",
       "line_number": 103,
+      "field_key": "tiers:tiers[1].discountPercent",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "\"description\": \"Pick individual services at ($100 / $75 / $50 / $50 / $25 / Custom USD) per service for individuals, covering 5 days of live training plus 5 days of dedicated support (10 days total...",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[1].discountPercent"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 103,
       "field_key": "tiers:tiers[1].shortName",
       "old_value": "Tier 2",
       "new_value": "Tier 2",
@@ -18551,12 +20072,39 @@
       "page": "Consulting & Training Pricing | Thomas Cherickal",
       "section": "Page Header",
       "line_number": 103,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "\"description\": \"Pick individual services at ($100 / $75 / $50 / $50 / $25 / Custom USD) per service for individuals, covering 5 days of live training plus 5 days of dedicated support (10 days total...",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 103,
       "field_key": "tiers:tiers[2].shortName",
       "old_value": "Tier 3",
       "new_value": "Tier 3",
       "context": "\"description\": \"Pick individual services at ($100 / $75 / $50 / $50 / $25 / Custom USD) per service for individuals, covering 5 days of live training plus 5 days of dedicated support (10 days total...",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[2].shortName"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 103,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "\"description\": \"Pick individual services at ($100 / $75 / $50 / $50 / $25 / Custom USD) per service for individuals, covering 5 days of live training plus 5 days of dedicated support (10 days total...",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
     },
     {
       "file": "pricing.html",
@@ -18599,6 +20147,18 @@
       "page": "Consulting & Training Pricing | Thomas Cherickal",
       "section": "Page Header",
       "line_number": 115,
+      "field_key": "tiers:tiers[1].discountPercent",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "\"name\": \"Tier 2 (Developing / 25% Off)\",",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[1].discountPercent"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 115,
       "field_key": "tiers:tiers[1].shortName",
       "old_value": "Tier 2",
       "new_value": "Tier 2",
@@ -18611,12 +20171,39 @@
       "page": "Consulting & Training Pricing | Thomas Cherickal",
       "section": "Page Header",
       "line_number": 121,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "\"name\": \"Tier 3 & 4 (Lower-Middle/Low-Income & Startups / 50% Off)\",",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 121,
       "field_key": "tiers:tiers[2].shortName",
       "old_value": "Tier 3",
       "new_value": "Tier 3",
       "context": "\"name\": \"Tier 3 & 4 (Lower-Middle/Low-Income & Startups / 50% Off)\",",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[2].shortName"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 127,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "\"name\": \"Tier 5 (Academia & Non-Profits / 75% Off)\",",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
     },
     {
       "file": "pricing.html",
@@ -18659,6 +20246,18 @@
       "page": "Consulting & Training Pricing | Thomas Cherickal",
       "section": "Page Header",
       "line_number": 143,
+      "field_key": "tiers:tiers[1].discountPercent",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "\"description\": \"Pick individual services at ($100 / $75 / $50 / $50 / $25 / Custom USD) per service for businesses, covering 5 days of live training plus 5 days of dedicated support (10 days total ...",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[1].discountPercent"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 143,
       "field_key": "tiers:tiers[1].shortName",
       "old_value": "Tier 2",
       "new_value": "Tier 2",
@@ -18671,12 +20270,39 @@
       "page": "Consulting & Training Pricing | Thomas Cherickal",
       "section": "Page Header",
       "line_number": 143,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "\"description\": \"Pick individual services at ($100 / $75 / $50 / $50 / $25 / Custom USD) per service for businesses, covering 5 days of live training plus 5 days of dedicated support (10 days total ...",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 143,
       "field_key": "tiers:tiers[2].shortName",
       "old_value": "Tier 3",
       "new_value": "Tier 3",
       "context": "\"description\": \"Pick individual services at ($100 / $75 / $50 / $50 / $25 / Custom USD) per service for businesses, covering 5 days of live training plus 5 days of dedicated support (10 days total ...",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[2].shortName"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 143,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "\"description\": \"Pick individual services at ($100 / $75 / $50 / $50 / $25 / Custom USD) per service for businesses, covering 5 days of live training plus 5 days of dedicated support (10 days total ...",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
     },
     {
       "file": "pricing.html",
@@ -18719,6 +20345,18 @@
       "page": "Consulting & Training Pricing | Thomas Cherickal",
       "section": "Page Header",
       "line_number": 155,
+      "field_key": "tiers:tiers[1].discountPercent",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "\"name\": \"Tier 2 (Developing / 25% Off)\",",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[1].discountPercent"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 155,
       "field_key": "tiers:tiers[1].shortName",
       "old_value": "Tier 2",
       "new_value": "Tier 2",
@@ -18731,12 +20369,39 @@
       "page": "Consulting & Training Pricing | Thomas Cherickal",
       "section": "Page Header",
       "line_number": 161,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "\"name\": \"Tier 3 & 4 (Lower-Middle/Low-Income & Startups / 50% Off)\",",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 161,
       "field_key": "tiers:tiers[2].shortName",
       "old_value": "Tier 3",
       "new_value": "Tier 3",
       "context": "\"name\": \"Tier 3 & 4 (Lower-Middle/Low-Income & Startups / 50% Off)\",",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[2].shortName"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 167,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "\"name\": \"Tier 5 (Academia & Non-Profits / 75% Off)\",",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
     },
     {
       "file": "pricing.html",
@@ -18779,6 +20444,18 @@
       "page": "Consulting & Training Pricing | Thomas Cherickal",
       "section": "Page Header",
       "line_number": 183,
+      "field_key": "tiers:tiers[1].discountPercent",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "\"description\": \"Comprehensive Business Training at $9,999 USD for 2 months (99 days live training + 30 days dedicated support included at zero charge / $0 USD, Q&A and written guides licensed under...",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[1].discountPercent"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 183,
       "field_key": "tiers:tiers[1].shortName",
       "old_value": "Tier 2",
       "new_value": "Tier 2",
@@ -18791,12 +20468,39 @@
       "page": "Consulting & Training Pricing | Thomas Cherickal",
       "section": "Page Header",
       "line_number": 183,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "\"description\": \"Comprehensive Business Training at $9,999 USD for 2 months (99 days live training + 30 days dedicated support included at zero charge / $0 USD, Q&A and written guides licensed under...",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 183,
       "field_key": "tiers:tiers[2].shortName",
       "old_value": "Tier 3",
       "new_value": "Tier 3",
       "context": "\"description\": \"Comprehensive Business Training at $9,999 USD for 2 months (99 days live training + 30 days dedicated support included at zero charge / $0 USD, Q&A and written guides licensed under...",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[2].shortName"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 183,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "\"description\": \"Comprehensive Business Training at $9,999 USD for 2 months (99 days live training + 30 days dedicated support included at zero charge / $0 USD, Q&A and written guides licensed under...",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
     },
     {
       "file": "pricing.html",
@@ -18839,6 +20543,18 @@
       "page": "Consulting & Training Pricing | Thomas Cherickal",
       "section": "Page Header",
       "line_number": 195,
+      "field_key": "tiers:tiers[1].discountPercent",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "\"name\": \"Tier 2 (Developing / 25% Off)\",",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[1].discountPercent"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 195,
       "field_key": "tiers:tiers[1].shortName",
       "old_value": "Tier 2",
       "new_value": "Tier 2",
@@ -18851,12 +20567,39 @@
       "page": "Consulting & Training Pricing | Thomas Cherickal",
       "section": "Page Header",
       "line_number": 201,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "\"name\": \"Tier 3 & 4 (Lower-Middle/Low-Income & Startups / 50% Off)\",",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 201,
       "field_key": "tiers:tiers[2].shortName",
       "old_value": "Tier 3",
       "new_value": "Tier 3",
       "context": "\"name\": \"Tier 3 & 4 (Lower-Middle/Low-Income & Startups / 50% Off)\",",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[2].shortName"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 207,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "\"name\": \"Tier 5 (Academia & Non-Profits / 75% Off)\",",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
     },
     {
       "file": "pricing.html",
@@ -18899,6 +20642,18 @@
       "page": "Consulting & Training Pricing | Thomas Cherickal",
       "section": "Page Header",
       "line_number": 223,
+      "field_key": "tiers:tiers[1].discountPercent",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "\"description\": \"Comprehensive Personal Training at $9,999 USD for 2 months (99 days live training + 30 days dedicated support included at zero charge / $0 USD, Q&A and written guides licensed under...",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[1].discountPercent"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 223,
       "field_key": "tiers:tiers[1].shortName",
       "old_value": "Tier 2",
       "new_value": "Tier 2",
@@ -18911,12 +20666,39 @@
       "page": "Consulting & Training Pricing | Thomas Cherickal",
       "section": "Page Header",
       "line_number": 223,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "\"description\": \"Comprehensive Personal Training at $9,999 USD for 2 months (99 days live training + 30 days dedicated support included at zero charge / $0 USD, Q&A and written guides licensed under...",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 223,
       "field_key": "tiers:tiers[2].shortName",
       "old_value": "Tier 3",
       "new_value": "Tier 3",
       "context": "\"description\": \"Comprehensive Personal Training at $9,999 USD for 2 months (99 days live training + 30 days dedicated support included at zero charge / $0 USD, Q&A and written guides licensed under...",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[2].shortName"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 223,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "\"description\": \"Comprehensive Personal Training at $9,999 USD for 2 months (99 days live training + 30 days dedicated support included at zero charge / $0 USD, Q&A and written guides licensed under...",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
     },
     {
       "file": "pricing.html",
@@ -18959,6 +20741,18 @@
       "page": "Consulting & Training Pricing | Thomas Cherickal",
       "section": "Page Header",
       "line_number": 235,
+      "field_key": "tiers:tiers[1].discountPercent",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "\"name\": \"Tier 2 (Developing / 25% Off)\",",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[1].discountPercent"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 235,
       "field_key": "tiers:tiers[1].shortName",
       "old_value": "Tier 2",
       "new_value": "Tier 2",
@@ -18971,12 +20765,39 @@
       "page": "Consulting & Training Pricing | Thomas Cherickal",
       "section": "Page Header",
       "line_number": 241,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "\"name\": \"Tier 3 & 4 (Lower-Middle/Low-Income & Startups / 50% Off)\",",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 241,
       "field_key": "tiers:tiers[2].shortName",
       "old_value": "Tier 3",
       "new_value": "Tier 3",
       "context": "\"name\": \"Tier 3 & 4 (Lower-Middle/Low-Income & Startups / 50% Off)\",",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[2].shortName"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 247,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "\"name\": \"Tier 5 (Academia & Non-Profits / 75% Off)\",",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
     },
     {
       "file": "pricing.html",
@@ -19054,6 +20875,18 @@
       "file": "pricing.html",
       "page": "Consulting & Training Pricing | Thomas Cherickal",
       "section": "Page Header",
+      "line_number": 361,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "Tier 2: Upper-Middle (75%) - Brazil |",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Page Header",
       "line_number": 362,
       "field_key": "tiers:tiers[1].examples[7]",
       "old_value": "Malaysia",
@@ -19061,6 +20894,21 @@
       "context": "Malaysia",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[1].examples[7]"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 363,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "Tier 3: Lower-Middle (50%) - India | Egypt",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
     },
     {
       "file": "pricing.html",
@@ -19103,12 +20951,39 @@
       "page": "Consulting & Training Pricing | Thomas Cherickal",
       "section": "Page Header",
       "line_number": 365,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "Tier 4: Startups (50%) - Startups | Founders",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 365,
       "field_key": "tiers:tiers[3].shortName",
       "old_value": "Tier 4",
       "new_value": "Tier 4",
       "context": "Tier 4: Startups (50%) - Startups | Founders",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[3].shortName"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Page Header",
+      "line_number": 367,
+      "field_key": "tiers:tiers[1].discountPercent",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "Tier 5: Academia (25%) - Colleges |",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[1].discountPercent"
     },
     {
       "file": "pricing.html",
@@ -19546,6 +21421,30 @@
       "file": "pricing.html",
       "page": "Consulting & Training Pricing | Thomas Cherickal",
       "section": "Upper-Middle-Income Economies",
+      "line_number": 621,
+      "field_key": "tiers:tiers[1].discountPercent",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "25% Parity Discount",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[1].discountPercent"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Upper-Middle-Income Economies",
+      "line_number": 624,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "75% BASE RATE · BASELINE MULTIPLIER: 0.75X",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Upper-Middle-Income Economies",
       "line_number": 629,
       "field_key": "tiers:tiers[1].examples[0]",
       "old_value": "Brazil",
@@ -19757,6 +21656,36 @@
       "context": "World Bank Lower-Middle & Low-Income Tech Ecosystems",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[2].subtitle"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Lower-Middle & Low-Income Economies",
+      "line_number": 651,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "50% Parity Discount",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Lower-Middle & Low-Income Economies",
+      "line_number": 654,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "50% BASE RATE · BASELINE MULTIPLIER: 0.50X",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
     },
     {
       "file": "pricing.html",
@@ -20038,6 +21967,36 @@
       "file": "pricing.html",
       "page": "Consulting & Training Pricing | Thomas Cherickal",
       "section": "Early-Stage Tech Startups",
+      "line_number": 682,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "50% Startup Discount",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Early-Stage Tech Startups",
+      "line_number": 685,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "FLAT 50% OFF ALL PACKAGES · MULTIPLIER: 0.50X",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Early-Stage Tech Startups",
       "line_number": 700,
       "field_key": "tiers:tiers[3].shortName",
       "old_value": "Tier 4",
@@ -20069,6 +22028,30 @@
       "context": "Higher Education, Research Labs & Registered Non-Profits (including US 501(c)(3))",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[4].subtitle"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Universities, Labs & Non-Profits",
+      "line_number": 714,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "75% Parity Discount",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Universities, Labs & Non-Profits",
+      "line_number": 717,
+      "field_key": "tiers:tiers[1].discountPercent",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "25% BASE RATE · BASELINE MULTIPLIER: 0.25X",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[1].discountPercent"
     },
     {
       "file": "pricing.html",
@@ -20147,6 +22130,18 @@
       "page": "Consulting & Training Pricing | Thomas Cherickal",
       "section": "Personalized Milestone Breakdown & Commercial Terms",
       "line_number": 869,
+      "field_key": "tiers:tiers[1].discountPercent",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "Tier 2: Upper-Middle (Brazil, Malaysia, Mexico - 75% / 25% Off)",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[1].discountPercent"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Personalized Milestone Breakdown & Commercial Terms",
+      "line_number": 869,
       "field_key": "tiers:tiers[1].examples[0]",
       "old_value": "Brazil",
       "new_value": "Brazil",
@@ -20189,6 +22184,33 @@
       "context": "Tier 2: Upper-Middle (Brazil, Malaysia, Mexico - 75% / 25% Off)",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[1].shortName"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Personalized Milestone Breakdown & Commercial Terms",
+      "line_number": 869,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "Tier 2: Upper-Middle (Brazil, Malaysia, Mexico - 75% / 25% Off)",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Personalized Milestone Breakdown & Commercial Terms",
+      "line_number": 870,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "Tier 3: Lower-Middle & Low-Income (India, Egypt - 50% / 50% Off)",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
     },
     {
       "file": "pricing.html",
@@ -20243,6 +22265,21 @@
       "page": "Consulting & Training Pricing | Thomas Cherickal",
       "section": "Personalized Milestone Breakdown & Commercial Terms",
       "line_number": 871,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "Tier 4: Early-Stage Startups & Seed (50% / 50% Off)",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Personalized Milestone Breakdown & Commercial Terms",
+      "line_number": 871,
       "field_key": "tiers:tiers[3].name",
       "old_value": "Tier 4: Early-Stage Startups",
       "new_value": "Tier 4: Early-Stage Startups",
@@ -20261,6 +22298,30 @@
       "context": "Tier 4: Early-Stage Startups & Seed (50% / 50% Off)",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[3].shortName"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Personalized Milestone Breakdown & Commercial Terms",
+      "line_number": 872,
+      "field_key": "tiers:tiers[1].discountPercent",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "Tier 5: Colleges & Non-Profits (25% / 75% Off)",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[1].discountPercent"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Personalized Milestone Breakdown & Commercial Terms",
+      "line_number": 872,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "Tier 5: Colleges & Non-Profits (25% / 75% Off)",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
     },
     {
       "file": "pricing.html",
@@ -20350,6 +22411,30 @@
       "file": "pricing.html",
       "page": "Consulting & Training Pricing | Thomas Cherickal",
       "section": "Purchasing Power Parity & Tier Rate Calculator",
+      "line_number": 1029,
+      "field_key": "tiers:tiers[1].discountPercent",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "75% Rate (25% Off)",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[1].discountPercent"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Purchasing Power Parity & Tier Rate Calculator",
+      "line_number": 1029,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "75% Rate (25% Off)",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Purchasing Power Parity & Tier Rate Calculator",
       "line_number": 1032,
       "field_key": "tiers:tiers[2].shortName",
       "old_value": "Tier 3",
@@ -20357,6 +22442,21 @@
       "context": "Tier 3: Lower-Middle",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[2].shortName"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Purchasing Power Parity & Tier Rate Calculator",
+      "line_number": 1033,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "50% Rate (50% Off)",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
     },
     {
       "file": "pricing.html",
@@ -20374,6 +22474,21 @@
       "file": "pricing.html",
       "page": "Consulting & Training Pricing | Thomas Cherickal",
       "section": "Purchasing Power Parity & Tier Rate Calculator",
+      "line_number": 1037,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "50% Flat Discount",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Purchasing Power Parity & Tier Rate Calculator",
       "line_number": 1040,
       "field_key": "tiers:tiers[4].shortName",
       "old_value": "Tier 5",
@@ -20381,6 +22496,30 @@
       "context": "Tier 5: Academia",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[4].shortName"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Purchasing Power Parity & Tier Rate Calculator",
+      "line_number": 1041,
+      "field_key": "tiers:tiers[1].discountPercent",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "25% Rate (75% Off)",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[1].discountPercent"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Purchasing Power Parity & Tier Rate Calculator",
+      "line_number": 1041,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "25% Rate (75% Off)",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
     },
     {
       "file": "pricing.html",
@@ -20603,12 +22742,48 @@
       "page": "Consulting & Training Pricing | Thomas Cherickal",
       "section": "Purchasing Power Parity & Tier Rate Calculator",
       "line_number": 1146,
+      "field_key": "tiers:tiers[1].discountPercent",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "Brazil (25% Parity Discount · 75% Rate)",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[1].discountPercent"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Purchasing Power Parity & Tier Rate Calculator",
+      "line_number": 1146,
       "field_key": "tiers:tiers[1].examples[0]",
       "old_value": "Brazil",
       "new_value": "Brazil",
       "context": "Brazil (25% Parity Discount · 75% Rate)",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[1].examples[0]"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Purchasing Power Parity & Tier Rate Calculator",
+      "line_number": 1146,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "Brazil (25% Parity Discount · 75% Rate)",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Purchasing Power Parity & Tier Rate Calculator",
+      "line_number": 1147,
+      "field_key": "tiers:tiers[1].discountPercent",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "Mexico (25% Parity Discount · 75% Rate)",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[1].discountPercent"
     },
     {
       "file": "pricing.html",
@@ -20626,6 +22801,30 @@
       "file": "pricing.html",
       "page": "Consulting & Training Pricing | Thomas Cherickal",
       "section": "Purchasing Power Parity & Tier Rate Calculator",
+      "line_number": 1147,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "Mexico (25% Parity Discount · 75% Rate)",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Purchasing Power Parity & Tier Rate Calculator",
+      "line_number": 1148,
+      "field_key": "tiers:tiers[1].discountPercent",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "Colombia (25% Parity Discount · 75% Rate)",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[1].discountPercent"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Purchasing Power Parity & Tier Rate Calculator",
       "line_number": 1148,
       "field_key": "tiers:tiers[1].examples[2]",
       "old_value": "Colombia",
@@ -20633,6 +22832,30 @@
       "context": "Colombia (25% Parity Discount · 75% Rate)",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[1].examples[2]"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Purchasing Power Parity & Tier Rate Calculator",
+      "line_number": 1148,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "Colombia (25% Parity Discount · 75% Rate)",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Purchasing Power Parity & Tier Rate Calculator",
+      "line_number": 1149,
+      "field_key": "tiers:tiers[1].discountPercent",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "Argentina (25% Parity Discount · 75% Rate)",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[1].discountPercent"
     },
     {
       "file": "pricing.html",
@@ -20650,6 +22873,30 @@
       "file": "pricing.html",
       "page": "Consulting & Training Pricing | Thomas Cherickal",
       "section": "Purchasing Power Parity & Tier Rate Calculator",
+      "line_number": 1149,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "Argentina (25% Parity Discount · 75% Rate)",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Purchasing Power Parity & Tier Rate Calculator",
+      "line_number": 1150,
+      "field_key": "tiers:tiers[1].discountPercent",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "Peru (25% Parity Discount · 75% Rate)",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[1].discountPercent"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Purchasing Power Parity & Tier Rate Calculator",
       "line_number": 1150,
       "field_key": "tiers:tiers[1].examples[4]",
       "old_value": "Peru",
@@ -20657,6 +22904,30 @@
       "context": "Peru (25% Parity Discount · 75% Rate)",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[1].examples[4]"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Purchasing Power Parity & Tier Rate Calculator",
+      "line_number": 1150,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "Peru (25% Parity Discount · 75% Rate)",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Purchasing Power Parity & Tier Rate Calculator",
+      "line_number": 1151,
+      "field_key": "tiers:tiers[1].discountPercent",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "Ecuador (25% Parity Discount · 75% Rate)",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[1].discountPercent"
     },
     {
       "file": "pricing.html",
@@ -20674,6 +22945,30 @@
       "file": "pricing.html",
       "page": "Consulting & Training Pricing | Thomas Cherickal",
       "section": "Purchasing Power Parity & Tier Rate Calculator",
+      "line_number": 1151,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "Ecuador (25% Parity Discount · 75% Rate)",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Purchasing Power Parity & Tier Rate Calculator",
+      "line_number": 1152,
+      "field_key": "tiers:tiers[1].discountPercent",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "Guatemala (25% Parity Discount · 75% Rate)",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[1].discountPercent"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Purchasing Power Parity & Tier Rate Calculator",
       "line_number": 1152,
       "field_key": "tiers:tiers[1].examples[6]",
       "old_value": "Guatemala",
@@ -20681,6 +22976,30 @@
       "context": "Guatemala (25% Parity Discount · 75% Rate)",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[1].examples[6]"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Purchasing Power Parity & Tier Rate Calculator",
+      "line_number": 1152,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "Guatemala (25% Parity Discount · 75% Rate)",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Purchasing Power Parity & Tier Rate Calculator",
+      "line_number": 1153,
+      "field_key": "tiers:tiers[1].discountPercent",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "Türkiye (25% Parity Discount · 75% Rate)",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[1].discountPercent"
     },
     {
       "file": "pricing.html",
@@ -20698,6 +23017,30 @@
       "file": "pricing.html",
       "page": "Consulting & Training Pricing | Thomas Cherickal",
       "section": "Purchasing Power Parity & Tier Rate Calculator",
+      "line_number": 1153,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "Türkiye (25% Parity Discount · 75% Rate)",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Purchasing Power Parity & Tier Rate Calculator",
+      "line_number": 1154,
+      "field_key": "tiers:tiers[1].discountPercent",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "Malaysia (25% Parity Discount · 75% Rate)",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[1].discountPercent"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Purchasing Power Parity & Tier Rate Calculator",
       "line_number": 1154,
       "field_key": "tiers:tiers[1].examples[7]",
       "old_value": "Malaysia",
@@ -20705,6 +23048,30 @@
       "context": "Malaysia (25% Parity Discount · 75% Rate)",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[1].examples[7]"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Purchasing Power Parity & Tier Rate Calculator",
+      "line_number": 1154,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "Malaysia (25% Parity Discount · 75% Rate)",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Purchasing Power Parity & Tier Rate Calculator",
+      "line_number": 1155,
+      "field_key": "tiers:tiers[1].discountPercent",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "Thailand (25% Parity Discount · 75% Rate)",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[1].discountPercent"
     },
     {
       "file": "pricing.html",
@@ -20722,6 +23089,30 @@
       "file": "pricing.html",
       "page": "Consulting & Training Pricing | Thomas Cherickal",
       "section": "Purchasing Power Parity & Tier Rate Calculator",
+      "line_number": 1155,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "Thailand (25% Parity Discount · 75% Rate)",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Purchasing Power Parity & Tier Rate Calculator",
+      "line_number": 1156,
+      "field_key": "tiers:tiers[1].discountPercent",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "Indonesia (25% Parity Discount · 75% Rate)",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[1].discountPercent"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Purchasing Power Parity & Tier Rate Calculator",
       "line_number": 1156,
       "field_key": "tiers:tiers[1].examples[9]",
       "old_value": "Indonesia",
@@ -20729,6 +23120,30 @@
       "context": "Indonesia (25% Parity Discount · 75% Rate)",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[1].examples[9]"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Purchasing Power Parity & Tier Rate Calculator",
+      "line_number": 1156,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "Indonesia (25% Parity Discount · 75% Rate)",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Purchasing Power Parity & Tier Rate Calculator",
+      "line_number": 1157,
+      "field_key": "tiers:tiers[1].discountPercent",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "South Africa (25% Parity Discount · 75% Rate)",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[1].discountPercent"
     },
     {
       "file": "pricing.html",
@@ -20746,6 +23161,30 @@
       "file": "pricing.html",
       "page": "Consulting & Training Pricing | Thomas Cherickal",
       "section": "Purchasing Power Parity & Tier Rate Calculator",
+      "line_number": 1157,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "South Africa (25% Parity Discount · 75% Rate)",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Purchasing Power Parity & Tier Rate Calculator",
+      "line_number": 1158,
+      "field_key": "tiers:tiers[1].discountPercent",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "Vietnam (25% Parity Discount · 75% Rate)",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[1].discountPercent"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Purchasing Power Parity & Tier Rate Calculator",
       "line_number": 1158,
       "field_key": "tiers:tiers[1].examples[10]",
       "old_value": "Vietnam",
@@ -20753,6 +23192,30 @@
       "context": "Vietnam (25% Parity Discount · 75% Rate)",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[1].examples[10]"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Purchasing Power Parity & Tier Rate Calculator",
+      "line_number": 1158,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "Vietnam (25% Parity Discount · 75% Rate)",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Purchasing Power Parity & Tier Rate Calculator",
+      "line_number": 1159,
+      "field_key": "tiers:tiers[1].discountPercent",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "Philippines (25% Parity Discount · 75% Rate)",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[1].discountPercent"
     },
     {
       "file": "pricing.html",
@@ -20770,6 +23233,30 @@
       "file": "pricing.html",
       "page": "Consulting & Training Pricing | Thomas Cherickal",
       "section": "Purchasing Power Parity & Tier Rate Calculator",
+      "line_number": 1159,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "Philippines (25% Parity Discount · 75% Rate)",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Purchasing Power Parity & Tier Rate Calculator",
+      "line_number": 1160,
+      "field_key": "tiers:tiers[1].discountPercent",
+      "old_value": "25%",
+      "new_value": "25",
+      "context": "Sri Lanka (25% Parity Discount · 75% Rate)",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[1].discountPercent"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Purchasing Power Parity & Tier Rate Calculator",
       "line_number": 1160,
       "field_key": "tiers:tiers[1].examples[12]",
       "old_value": "Sri Lanka",
@@ -20777,6 +23264,45 @@
       "context": "Sri Lanka (25% Parity Discount · 75% Rate)",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[1].examples[12]"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Purchasing Power Parity & Tier Rate Calculator",
+      "line_number": 1160,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "Sri Lanka (25% Parity Discount · 75% Rate)",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Purchasing Power Parity & Tier Rate Calculator",
+      "line_number": 1161,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "Other Upper-Middle-Income Economy (75% Rate)",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Purchasing Power Parity & Tier Rate Calculator",
+      "line_number": 1164,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "India (50% Parity Discount · 50% Rate)",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
     },
     {
       "file": "pricing.html",
@@ -20795,12 +23321,42 @@
       "page": "Consulting & Training Pricing | Thomas Cherickal",
       "section": "Purchasing Power Parity & Tier Rate Calculator",
       "line_number": 1165,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "Bangladesh (50% Parity Discount · 50% Rate)",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Purchasing Power Parity & Tier Rate Calculator",
+      "line_number": 1165,
       "field_key": "tiers:tiers[2].examples[1]",
       "old_value": "Bangladesh",
       "new_value": "Bangladesh",
       "context": "Bangladesh (50% Parity Discount · 50% Rate)",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[2].examples[1]"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Purchasing Power Parity & Tier Rate Calculator",
+      "line_number": 1166,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "Pakistan (50% Parity Discount · 50% Rate)",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
     },
     {
       "file": "pricing.html",
@@ -20819,12 +23375,42 @@
       "page": "Consulting & Training Pricing | Thomas Cherickal",
       "section": "Purchasing Power Parity & Tier Rate Calculator",
       "line_number": 1167,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "Nepal (50% Parity Discount · 50% Rate)",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Purchasing Power Parity & Tier Rate Calculator",
+      "line_number": 1167,
       "field_key": "tiers:tiers[2].examples[3]",
       "old_value": "Nepal",
       "new_value": "Nepal",
       "context": "Nepal (50% Parity Discount · 50% Rate)",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[2].examples[3]"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Purchasing Power Parity & Tier Rate Calculator",
+      "line_number": 1168,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "Bhutan (50% Parity Discount · 50% Rate)",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
     },
     {
       "file": "pricing.html",
@@ -20843,12 +23429,42 @@
       "page": "Consulting & Training Pricing | Thomas Cherickal",
       "section": "Purchasing Power Parity & Tier Rate Calculator",
       "line_number": 1169,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "Kenya (50% Parity Discount · 50% Rate)",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Purchasing Power Parity & Tier Rate Calculator",
+      "line_number": 1169,
       "field_key": "tiers:tiers[2].examples[5]",
       "old_value": "Kenya",
       "new_value": "Kenya",
       "context": "Kenya (50% Parity Discount · 50% Rate)",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[2].examples[5]"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Purchasing Power Parity & Tier Rate Calculator",
+      "line_number": 1170,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "Nigeria (50% Parity Discount · 50% Rate)",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
     },
     {
       "file": "pricing.html",
@@ -20867,12 +23483,42 @@
       "page": "Consulting & Training Pricing | Thomas Cherickal",
       "section": "Purchasing Power Parity & Tier Rate Calculator",
       "line_number": 1171,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "Ghana (50% Parity Discount · 50% Rate)",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Purchasing Power Parity & Tier Rate Calculator",
+      "line_number": 1171,
       "field_key": "tiers:tiers[2].examples[7]",
       "old_value": "Ghana",
       "new_value": "Ghana",
       "context": "Ghana (50% Parity Discount · 50% Rate)",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[2].examples[7]"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Purchasing Power Parity & Tier Rate Calculator",
+      "line_number": 1172,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "Egypt (50% Parity Discount · 50% Rate)",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
     },
     {
       "file": "pricing.html",
@@ -20891,12 +23537,42 @@
       "page": "Consulting & Training Pricing | Thomas Cherickal",
       "section": "Purchasing Power Parity & Tier Rate Calculator",
       "line_number": 1173,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "Morocco (50% Parity Discount · 50% Rate)",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Purchasing Power Parity & Tier Rate Calculator",
+      "line_number": 1173,
       "field_key": "tiers:tiers[2].examples[9]",
       "old_value": "Morocco",
       "new_value": "Morocco",
       "context": "Morocco (50% Parity Discount · 50% Rate)",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[2].examples[9]"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Purchasing Power Parity & Tier Rate Calculator",
+      "line_number": 1174,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "Tanzania (50% Parity Discount · 50% Rate)",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
     },
     {
       "file": "pricing.html",
@@ -20915,12 +23591,42 @@
       "page": "Consulting & Training Pricing | Thomas Cherickal",
       "section": "Purchasing Power Parity & Tier Rate Calculator",
       "line_number": 1175,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "Bolivia (50% Parity Discount · 50% Rate)",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Purchasing Power Parity & Tier Rate Calculator",
+      "line_number": 1175,
       "field_key": "tiers:tiers[2].examples[14]",
       "old_value": "Bolivia",
       "new_value": "Bolivia",
       "context": "Bolivia (50% Parity Discount · 50% Rate)",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[2].examples[14]"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Purchasing Power Parity & Tier Rate Calculator",
+      "line_number": 1176,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "Cambodia (50% Parity Discount · 50% Rate)",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
     },
     {
       "file": "pricing.html",
@@ -20939,12 +23645,42 @@
       "page": "Consulting & Training Pricing | Thomas Cherickal",
       "section": "Purchasing Power Parity & Tier Rate Calculator",
       "line_number": 1177,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "Laos (50% Parity Discount · 50% Rate)",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Purchasing Power Parity & Tier Rate Calculator",
+      "line_number": 1177,
       "field_key": "tiers:tiers[2].examples[16]",
       "old_value": "Laos",
       "new_value": "Laos",
       "context": "Laos (50% Parity Discount · 50% Rate)",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[2].examples[16]"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Purchasing Power Parity & Tier Rate Calculator",
+      "line_number": 1178,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "Myanmar (50% Parity Discount · 50% Rate)",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
     },
     {
       "file": "pricing.html",
@@ -20963,12 +23699,42 @@
       "page": "Consulting & Training Pricing | Thomas Cherickal",
       "section": "Purchasing Power Parity & Tier Rate Calculator",
       "line_number": 1179,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "Ethiopia (50% Parity Discount · 50% Rate)",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Purchasing Power Parity & Tier Rate Calculator",
+      "line_number": 1179,
       "field_key": "tiers:tiers[2].examples[11]",
       "old_value": "Ethiopia",
       "new_value": "Ethiopia",
       "context": "Ethiopia (50% Parity Discount · 50% Rate)",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[2].examples[11]"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Purchasing Power Parity & Tier Rate Calculator",
+      "line_number": 1180,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "Uganda (50% Parity Discount · 50% Rate)",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
     },
     {
       "file": "pricing.html",
@@ -20987,12 +23753,150 @@
       "page": "Consulting & Training Pricing | Thomas Cherickal",
       "section": "Purchasing Power Parity & Tier Rate Calculator",
       "line_number": 1181,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "Rwanda (50% Parity Discount · 50% Rate)",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Purchasing Power Parity & Tier Rate Calculator",
+      "line_number": 1181,
       "field_key": "tiers:tiers[2].examples[13]",
       "old_value": "Rwanda",
       "new_value": "Rwanda",
       "context": "Rwanda (50% Parity Discount · 50% Rate)",
       "match_type": "exact",
       "data_source": "data/tiers.json#tiers[2].examples[13]"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Purchasing Power Parity & Tier Rate Calculator",
+      "line_number": 1182,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "Other Lower-Middle / Low-Income Economy (50% Rate)",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Purchasing Power Parity & Tier Rate Calculator",
+      "line_number": 1185,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "Pre-Seed Startup (<$500k Raised) - 50% Off",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Purchasing Power Parity & Tier Rate Calculator",
+      "line_number": 1186,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "Seed-Stage Startup (<$1M Raised) - 50% Off",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Purchasing Power Parity & Tier Rate Calculator",
+      "line_number": 1187,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "Bootstrapped Tech Venture - 50% Off",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Purchasing Power Parity & Tier Rate Calculator",
+      "line_number": 1188,
+      "field_key": "tiers:tiers[2].discountPercent",
+      "old_value": "50%",
+      "new_value": "50",
+      "context": "Accelerator Team (YC, Techstars, Antler) - 50% Off",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[2].discountPercent",
+      "also_in_data": [
+        "data/tiers.json#tiers[3].discountPercent"
+      ]
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Purchasing Power Parity & Tier Rate Calculator",
+      "line_number": 1192,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "Accredited University / Faculty Lab - 75% Off",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Purchasing Power Parity & Tier Rate Calculator",
+      "line_number": 1193,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "Student AI Club / Research Collective - 75% Off",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Purchasing Power Parity & Tier Rate Calculator",
+      "line_number": 1194,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "Non-Profit / Charity - 75% Off",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
+    },
+    {
+      "file": "pricing.html",
+      "page": "Consulting & Training Pricing | Thomas Cherickal",
+      "section": "Purchasing Power Parity & Tier Rate Calculator",
+      "line_number": 1195,
+      "field_key": "tiers:tiers[4].discountPercent",
+      "old_value": "75%",
+      "new_value": "75",
+      "context": "Civic Open-Source Foundation / Public NGO - 75% Off",
+      "match_type": "exact",
+      "data_source": "data/tiers.json#tiers[4].discountPercent"
     },
     {
       "file": "pricing.html",
