@@ -1,65 +1,14 @@
-# Generative AI Packages & Transparent Parity Pricing
+# The Six Global Equity & Parity Tiers Explained
 ## Thomas Cherickal - The Digital Futurist
 
-> **// PACKAGES & TRANSPARENT PARITY PRICING**  
+> **// GLOBAL ACCESS GUARANTEE · 6 PARITY TIERS**  
 > **Our engagement rates are calibrated across six distinct economic classifications. Geographical origin,
  academic mandate, or early venture stage should never preclude ambitious engineering teams from deploying
  frontier Generative AI agents and local LLM pipelines.**
 
 ---
 
-// PACKAGES & TRANSPARENT PARITY PRICING
-
-Direct Answer: Tier 6 Relief & UN LDC Parity Pricing calibrates global AI consulting rates under the 195-country World Bank Purchasing Power Parity index: Flagships at $1,000 / $750 / $500 / $500 / $250 / Custom USD (2 calendar months) and Service Picks at $100 / $75 / $50 / $50 / $25 / Custom USD (10 days), both with 10 seats included, $0 upfront, 10 equal 10% milestones, and Apache 2.0 licensing.
-
-### $10 USD Individual / $10 USD Business · 5 Days Training + 5 Days Support
-
-Select exactly the services you need. 5 days of live engineering training followed by 5 days of dedicated
- operational support (10 days total coverage per service). Up to 10 seats for businesses (+$10/extra seat);
- 1 person for individuals. Parity pricing applies to all services.
-
-### $100 USD · 2 Months (30d Training + 30d Guidance & Materials)
-
-Includes up to 10 participants (additional seats at $10 USD per seat). Covers full cross-service engineering
- stacks tailored to your organizational goals. 30 days of live training + 30 days of guidance and detailed
- guides/materials (2 months (Saturdays and Sundays are holidays and are counted within the 2-month duration), 4 hours per day).
-
-### $100 USD · 2 Months (30d Training + 30d Guidance & Materials)
-
-Up to 10 participants included (+$100/extra seat, max 20) (up to 10 participants included (+$100/extra seat, max 20)). 30 days of intensive live instruction followed by
- 30 days of dedicated daily work guidance, Q&A and written guides tailored to your individual career or
- venture (2 months (Saturdays and Sundays are holidays and are counted within the 2-month duration), 4 hours per day).
-
-// COMMERCIAL TRUST ARCHITECTURE
-
-## Risk-Free Payment Structure: $0 Upfront & Ten Milestone Installments
-
-### Strictly $0 Upfront
- Deposit
-
-Zero advance payment or deposit required before commencing technical discovery and training. You never pay
- a single cent before experiencing live technical progress.
-
-### 10% in Ten Milestone
- Installments
-
-Invoiced in ten equal installments (10% each) due strictly after completed milestone blocks of training
- progress. You verify working agents and code before every payment.
-
-### Zero Charge Training Materials
-
-Zero charge for training materials: All training materials will be provided to the client with an Apache 2.0 license for internal use, commercial use, or even resale which requires attribution and keeping the licence and notice files. The Apache 2.0 licence is granted only when the full programme or service is completed, and is not granted if the client walks away at any stage.
-
-### Walkaway Guarantee &
- Apache 2.0
-
-Walk away owing nothing if not satisfied after the first milestone training phase. All high-quality
- training materials, guides, and custom client code are licensed under Apache 2.0 (commercial use, resale,
- and relicensing permitted with attribution).
-
 // GLOBAL ACCESS GUARANTEE · 6 PARITY TIERS
-
-## The Six Global Equity & Parity Tiers Explained
 
 Our engagement rates are calibrated across six distinct economic classifications. Geographical origin,
  academic mandate, or early venture stage should never preclude ambitious engineering teams from deploying
@@ -226,8 +175,8 @@ Continuous iteration on
  architecture
  roadmaps, training syllabi, and deliverables until your team is fully satisfied.
 
-### Equal-Weight
- Milestones
+### 10% in Ten Milestone
+ Installments
 
 Payments handled
  transparently by
@@ -240,6 +189,12 @@ Payments handled
 You retain 100%
  intellectual
  property, guide ownership, sample projects, and training assets upon milestone completion.
+
+// TRAINING MATERIALS & APACHE 2.0 LICENSING
+
+## Zero Charge Training Materials
+
+All high-quality training materials, curriculum guides, architectural blueprints, and custom client code are provided at strictly $0 additional charge upon milestone completion and licensed under the Apache 2.0 license for commercial deployment, internal reuse, and adaptation. Training materials are not provided if the training ends early.
 
 ## Ready to Master Claude Agent Orchestration & Google Gemini AI Ecosystem?
 

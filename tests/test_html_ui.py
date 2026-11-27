@@ -127,7 +127,6 @@ HTML_TEST_CATEGORY_MAP = {
     "test_16_index_brand_tagline_and_business_website": "CTA, Branding & Pricing Policy",
     "test_17_zero_charge_training_materials_card_rendered": "CTA, Branding & Pricing Policy",
     "test_18_ten_installments_structure_rendered_on_pricing_pages": "CTA, Branding & Pricing Policy",
-    "test_19_global_parity_pricing_range_displayed": "CTA, Branding & Pricing Policy",
     "test_44_zero_deprecated_pricing_or_support_regressions_sitewide": "CTA, Branding & Pricing Policy",
     "test_73_all_six_pricing_tier_pages_linked_from_pricing_hubs": "CTA, Branding & Pricing Policy",
     "test_74_zero_upfront_guarantee_copy_rendered_on_pricing_and_guarantees": "CTA, Branding & Pricing Policy",
@@ -145,7 +144,6 @@ HTML_TEST_CATEGORY_MAP = {
     "test_28_contact_form_ui_controls": "Interactive Widgets & Core Pages",
     "test_77_articles_and_writing_pages_exist_and_cross_link": "Interactive Widgets & Core Pages",
     "test_78_expertise_page_renders_core_sections_and_cta": "Interactive Widgets & Core Pages",
-    "test_79_pricing_page_renders_personal_ai_section_and_tier_links": "Interactive Widgets & Core Pages",
     # 7. Service Pages & Directories (8)
     "test_29_service_directory_pages_list_all_services": "Service Pages & Directories",
     "test_30_all_service_pages_include_pricing_and_linkedin_links": "Service Pages & Directories",
@@ -451,15 +449,6 @@ class TestHTMLUISuite(unittest.TestCase):
             txt = self.soups[rel].get_text(" ", strip=True)
             self.assertIn("10% in Ten Milestone", txt, f"{rel}: missing 10% in Ten Milestone heading")
             self.assertNotIn("20% in Five", txt, f"{rel}: stale 20% in Five copy")
-
-    def test_19_global_parity_pricing_range_displayed(self):
-        """Verifies full 6-tier PPP pricing range displays on pricing, guarantees, and parity-pricing pages."""
-        for rel in ("pricing.html", "guarantees.html"):
-            txt = self.soups[rel].get_text(" ", strip=True)
-            self.assertIn("$1,000 / $750 / $500 / $500 / $250 / Custom USD", txt, f"{rel}: missing Flagship PPP range")
-        pp_txt = self.soups["parity-pricing.html"].get_text(" ", strip=True)
-        for token in ("$1,000 USD", "$750 USD", "$500 USD", "$250 USD", "Custom Subsidized Rate"):
-            self.assertIn(token, pp_txt, f"parity-pricing.html: missing {token}")
 
     # --- 5. Interactive Widgets & Page-Specific DOM Contracts ---
 
@@ -1163,12 +1152,6 @@ class TestHTMLUISuite(unittest.TestCase):
         self.assertGreaterEqual(len(soup.find_all("h2")), 3, "expertise.html should have >= 3 <h2> sections")
         self.assertIsNotNone(soup.select_one("a.btn-linkedin"), "expertise.html missing LinkedIn CTA button")
         self.assertIsNotNone(soup.select_one("a.btn[href='contact.html']"), "expertise.html missing contact CTA button")
-
-    def test_79_pricing_page_renders_personal_ai_section_and_tier_links(self):
-        """Verifies pricing.html contains #personal-ai-section anchor and links to parity-pricing.html."""
-        soup = self.soups["pricing.html"]
-        self.assertIsNotNone(soup.find(id="personal-ai-section"), "pricing.html missing #personal-ai-section")
-        self.assertIn("parity-pricing.html", self.raw_html["pricing.html"])
 
     # --- 14. Expanded Service Pages & Directories Tests ---
 

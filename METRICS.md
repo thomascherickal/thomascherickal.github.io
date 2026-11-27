@@ -1,6 +1,6 @@
 # Repository Code & Engineering Metrics
 
-> **Automated Status Report** | Generated on `2026-11-27 09:32:35 UTC` | Branch: `main` | Head Commit: `1fa42b4`
+> **Automated Status Report** | Generated on `2026-11-27 12:39:06 UTC` | Branch: `main` | Head Commit: `2e6a5a5`
 > This report tracks comprehensive codebase, architectural, structural, and content metrics across `thomascherickal.github.io`.
 > Updated automatically on every build and push.
 
@@ -10,15 +10,15 @@
 
 | Metric | Count | Details |
 | :--- | :--- | :--- |
-| **Total Tracked Files** | **544** | Fully tracked Git artifacts |
-| **Total Lines of Source Code & Content** | **161,812** | All text, markup, styles & scripts |
-| **Source Code Lines (SLOC)** | **145,009** | Executable / renderable content lines |
-| **Comment & Documentation Lines** | **5,336** | In-code and architectural documentation |
-| **Blank / Spacing Lines** | **11,467** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **18.80 MB (19,711,921 bytes)** | HTML, CSS, JS, Python, SVG & Images |
-| **Total Word Count (Prose & Technical)** | **419,399 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **592** | Since repository inception (2023-03-30) |
-| **Latest Commit Date** | **2026-11-27** | Subject: "chore(seo): add IndexNow verification key file" |
+| **Total Tracked Files** | **545** | Fully tracked Git artifacts |
+| **Total Lines of Source Code & Content** | **160,523** | All text, markup, styles & scripts |
+| **Source Code Lines (SLOC)** | **143,896** | Executable / renderable content lines |
+| **Comment & Documentation Lines** | **5,259** | In-code and architectural documentation |
+| **Blank / Spacing Lines** | **11,368** | Code formatting and structural layout |
+| **Total Repository Size (Tracked Assets)** | **18.82 MB (19,739,422 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Word Count (Prose & Technical)** | **418,073 words** | Educational, curriculum, & marketing prose |
+| **Total Git Commits** | **594** | Since repository inception (2023-03-30) |
+| **Latest Commit Date** | **2026-11-27** | Subject: "Error fixed" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
 ---
@@ -27,15 +27,15 @@
 
 | Category | Files | Total Lines | Total Size | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| **HTML Documents** | 91 | 98,078 | 7.95 MB (8,337,327 bytes) | Production static web pages, services, frameworks & guides |
+| **HTML Documents** | 91 | 97,004 | 7.87 MB (8,252,377 bytes) | Production static web pages, services, frameworks & guides |
 | **CSS Stylesheets** | 16 | 12,250 | 286.36 KB (293,233 bytes) | Design tokens, animations, responsive layout & themes |
 | **JavaScript Scripts** | 33 | 11,579 | 3.70 MB (3,884,078 bytes) | Client-side interactivity, search, filter & components |
 | **Python Tooling** | 40 | 11,026 | 501.06 KB (513,085 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
-| **Markdown Documentation** | 154 | 16,268 | 1.10 MB (1,157,475 bytes) | Project documentation, sync mirrors, guidelines & rules |
+| **Markdown Documentation** | 155 | 16,053 | 1.21 MB (1,269,968 bytes) | Project documentation, sync mirrors, guidelines & rules |
 | **JSON Schemas & Data** | 112 | 12,544 | 524.63 KB (537,217 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 44 | 67 | 188.24 KB (192,754 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
 | **Raster Images (WebP, JPG, PNG)** | 37 | 0 | 4.06 MB (4,259,892 bytes) | Optimized feature hero graphics, social cards & assets |
-| **Config & Metadata** | 17 | 0 | 524.28 KB (536,860 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
+| **Config & Metadata** | 17 | 0 | 524.24 KB (536,818 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
 
 ---
 
@@ -43,12 +43,12 @@
 
 | Extension | Tracked Files | Total Lines | Total Size | Percentage of Files |
 | :--- | :--- | :--- | :--- | :--- |
-| `.html` | 91 | 98,078 | 7.95 MB (8,337,327 bytes) | 16.7% |
-| `.md` | 154 | 16,268 | 1.10 MB (1,157,475 bytes) | 28.3% |
+| `.html` | 91 | 97,004 | 7.87 MB (8,252,377 bytes) | 16.7% |
+| `.md` | 155 | 16,053 | 1.21 MB (1,269,968 bytes) | 28.4% |
 | `.json` | 112 | 12,544 | 524.63 KB (537,217 bytes) | 20.6% |
 | `.css` | 16 | 12,250 | 286.36 KB (293,233 bytes) | 2.9% |
 | `.js` | 33 | 11,579 | 3.70 MB (3,884,078 bytes) | 6.1% |
-| `.py` | 40 | 11,026 | 501.06 KB (513,085 bytes) | 7.4% |
+| `.py` | 40 | 11,026 | 501.06 KB (513,085 bytes) | 7.3% |
 | `.svg` | 44 | 67 | 188.24 KB (192,754 bytes) | 8.1% |
 | `.webp` | 18 | 0 | 1.66 MB (1,745,378 bytes) | 3.3% |
 | `.png` | 12 | 0 | 1.28 MB (1,339,427 bytes) | 2.2% |
@@ -60,7 +60,7 @@
 | `.docx` | 2 | 0 | 28.83 KB (29,519 bytes) | 0.4% |
 | `.ico` | 1 | 0 | 6.74 KB (6,899 bytes) | 0.2% |
 | `[no extension]` | 6 | 0 | 6.28 KB (6,434 bytes) | 1.1% |
-| `.yml` | 1 | 0 | 1.95 KB (1,993 bytes) | 0.2% |
+| `.yml` | 1 | 0 | 1.91 KB (1,951 bytes) | 0.2% |
 | `.webmanifest` | 1 | 0 | 538 bytes | 0.2% |
 
 ---
@@ -74,8 +74,8 @@
 | **CSS Design Tokens (`--var`)** | **90** | Standardized color palettes, typography, spacing & radii |
 | **FAQ Question Cards** | **198** | Rich searchable & filterable accordion cards |
 | **Primary Headings (`<h1>`)** | **86** | Strict single-H1 semantic hierarchy per page |
-| **Secondary Section Headings (`<h2>`)** | **869** | Structural topic subdivisions |
-| **Card & Item Headings (`<h3>`)** | **483** | Individual service, question, and feature cards |
+| **Secondary Section Headings (`<h2>`)** | **864** | Structural topic subdivisions |
+| **Card & Item Headings (`<h3>`)** | **442** | Individual service, question, and feature cards |
 | **Call-to-Action (CTA) Modules** | **100** | Standardized CTAs with Free LinkedIn Consultation rule |
 | **Canonical Links Configured** | **85** | 100% SEO canonical URL coverage across public pages |
 | **Open Graph Meta Tags** | **608** | Social preview cards across Twitter/LinkedIn/Facebook |
@@ -132,10 +132,10 @@
 
 ## 8. HTML UI Verification Suite Summary (`tests/test_html_ui.py`)
 
-- **Framework**: `BeautifulSoup4 + lxml (unittest)`
+- **Framework**: `BeautifulSoup4 + html.parser (unittest)`
 - **Pages Scanned**: **85 HTML pages**
-- **Summary**: **107 / 107 PASSED** (`0` failures, `7.12s`, Status: **PASSED**)
-- **Last Verified**: `2026-11-27 09:08:57 UTC`
+- **Summary**: **107 / 107 PASSED** (`0` failures, `6.52s`, Status: **PASSED**)
+- **Last Verified**: `2026-11-27 12:23:04 UTC`
 
 | Test Category | Tests | Passed | Failed | Pass Rate | Status |
 | :--- | :--- | :--- | :--- | :--- | :--- |
