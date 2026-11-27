@@ -86,7 +86,7 @@ def run_python_coverage(cov_json_path):
             "-m",
             "coverage",
             "run",
-            "--source=" + os.path.join(REPO_DIR, "nlp-fuzzy-expert") + "," + os.path.join(REPO_DIR, "python"),
+            "--source=" + os.path.join(REPO_DIR, "python"),
             os.path.join(REPO_DIR, "python", "run_tests.py")
         ]
         subprocess.run(run_cmd, cwd=REPO_DIR, env=env, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
@@ -96,7 +96,7 @@ def run_python_coverage(cov_json_path):
         import coverage
         cov = coverage.Coverage(data_file=cov_file)
         cov.load()
-        cov.json_report(outfile=cov_json_path, include=["nlp-fuzzy-expert/*", "python/*"])
+        cov.json_report(outfile=cov_json_path, include=["python/*"])
     except Exception:
         # Fallback to subprocess export
         export_cmd = [
@@ -106,7 +106,7 @@ def run_python_coverage(cov_json_path):
             "json",
             "-o",
             cov_json_path,
-            "--include=nlp-fuzzy-expert/*,python/*"
+            "--include=python/*"
         ]
         subprocess.run(export_cmd, cwd=REPO_DIR, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
@@ -318,7 +318,7 @@ def generate_coverage_report(output_path=OUTPUT_REPORT_PATH):
     js_status = "PASS" if js_overall_pct >= 90.0 else "WARN"
     comb_status = "PASS" if comb_overall_pct >= 88.0 else "WARN"
 
-    lines.append(f"| Python (`nlp-fuzzy-expert/`, `python/`) | {len(py_files)} | {py_total_stmts:,} | {py_total_covered:,} | {py_total_missed:,} | **{py_overall_pct:.2f}%** | {py_status} |")
+    lines.append(f"| Python (`python/`, `python/ssot/`) | {len(py_files)} | {py_total_stmts:,} | {py_total_covered:,} | {py_total_missed:,} | **{py_overall_pct:.2f}%** | {py_status} |")
     lines.append(f"| JavaScript (Root scripts) | {len(js_data)} | {js_total_lines:,} | {js_total_covered:,} | {js_total_missed:,} | **{js_overall_pct:.2f}%** | {js_status} |")
     lines.append(f"| **Repository Combined Total** | **{len(py_files) + len(js_data)}** | **{comb_total:,}** | **{comb_covered:,}** | **{comb_missed:,}** | **{comb_overall_pct:.2f}%** | **{comb_status}** |")
     lines.append("")

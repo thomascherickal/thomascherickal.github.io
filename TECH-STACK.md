@@ -41,9 +41,9 @@ graph TD
 
   subgraph Automation Pipeline [Python 3 Systems Engine]
     Build["build_components.py<br/>(Master Nav/Footer Inliner)"]
-    NLPExpert["nlp-fuzzy-expert/<br/>(Forward Chaining + Fuzzy + NLP)"]
-    Sync["md_html_sync.py<br/>(Bidirectional File Pair Daemon)"]
-    Tests["python/run_tests.py<br/>(Pre-Commit Unit Test Runner)"]
+    SSOT["python/ssot/<br/>(Schema Validation + Marker Renderer)"]
+    Sync["md_html_sync.py<br/>(Bidirectional File Pair Sync)"]
+    Tests["python/run_tests.py<br/>(Pre-Commit Unit & UI Test Runner)"]
   end
 
   subgraph External Consumers [LLMs & Search Engines]
@@ -160,48 +160,54 @@ classDiagram
 
 ## 3. The Python Automation & Synchronization Pipeline
 
-The engine powering this repository is a custom Python 3 automation system housed in [`python/`](file:///home/thomas/GitHub.io/thomascherickal.github.io/python) and [`nlp-fuzzy-expert/`](file:///home/thomas/GitHub.io/thomascherickal.github.io/nlp-fuzzy-expert):
+The engine powering this repository is a custom Python 3 automation system housed in [`python/`](file:///home/thomas/GitHub.io/thomascherickal.github.io/python) and [`python/ssot/`](file:///home/thomas/GitHub.io/thomascherickal.github.io/python/ssot):
 
 ```
+├── data/
+│   ├── *.json                   # Authoritative Single Source of Truth data files
+│   └── schema/*.schema.json     # JSON Schemas validating every data file
 ├── python/
+│   ├── ssot/
+│   │   ├── load.py              # Loads and indexes data/*.json by offering/tier id
+│   │   ├── format.py            # Deterministic phrase formatters for protected facts
+│   │   ├── validate.py          # JSON Schema and cross-file invariant validator
+│   │   ├── render.py            # Replaces <!--ssot:...--> markers & Jinja2 blocks (--check mode)
+│   │   ├── export_site_data.py  # Generates assets/data/site-data.json for client JS
+│   │   └── scan_literals.py     # Audits unprotected literal facts outside SSOT markers
 │   ├── build_components.py      # Master component inliner & orchestration trigger
-│   ├── run_tests.py             # Pre-commit unit test runner (tests/ suite)
+│   ├── run_tests.py             # Python unit test runner (writes failures to failed-tests/)
+│   ├── run_html_tests.py        # HTML UI test runner across all 85+ pages
 │   ├── check_links.py           # High-speed internal link & anchor validator
 │   ├── sync_schemas.py          # Extracts embedded JSON-LD to schema/*.json
 │   ├── md_html_sync.py          # Bidirectional HTML <---> Markdown sync engine
 │   ├── build_md_files.py        # BeautifulSoup AST-to-Markdown document compiler
 │   └── hooks/
-│       └── pre-commit           # Pre-commit hook template
-├── nlp-fuzzy-expert/
-│   ├── expert_system.py         # KnowledgeBase & forward-chaining inference
-│   ├── fuzzy_engine.py          # Levenshtein, Jaccard & token sort/set ratios
-│   ├── nlp_engine.py            # Text normalizer & semantic entity extractor
-│   ├── rules.py                 # 16 domain production rules with salience
-│   ├── synchronizer.py          # Master CLI synchronizer & ASCII table reporter
-│   └── watcher.py               # Non-blocking filesystem polling daemon
-└── tests/                       # 11 unit test modules (36 tests)
+│       ├── pre-commit           # SSOT validation, render, sync, and test enforcement hook
+│       └── pre-push             # Pre-push SSOT check and schema verification hook
+├── failed-tests/                # Centralized directory for all failed-test reports
+└── tests/                       # Python, HTML UI, and modular JS test suites
 ```
 
 ```mermaid
 sequenceDiagram
   autonumber
   actor Dev as Developer / AI Agent
-  participant Watcher as nlp-fuzzy-expert/watcher.py
-  participant Sync as nlp-fuzzy-expert/synchronizer.py
-  participant KB as KnowledgeBase (data/*.json)
-  participant Inference as InferenceEngine (rules.py)
-  participant Targets as 65 HTML/JS Documents
-  participant TestRunner as python/run_tests.py
+  participant Data as data/*.json & schema/
+  participant Validate as python/ssot/validate.py
+  participant Render as python/ssot/render.py
+  participant Export as python/ssot/export_site_data.py
+  participant Targets as HTML Pages, llms.txt & site-data.json
+  participant Tests as Python, JS & HTML UI Tests
 
-  Dev->>KB: Update data/*.json file
-  Watcher->>Sync: File change detected (debounced 150ms)
-  Sync->>KB: Reload atomic propositions (230+ facts)
-  Sync->>Inference: Forward chain 16 production rules by salience
-  Inference->>Targets: Apply diffs & record line changes (e.g. Lines 394-405)
-  Sync->>Targets: Generate references_dictionary.json & *.md reports
-  Sync->>Dev: Print working steps & render ASCII summary table
-  Sync->>TestRunner: Auto-execute tests/ if HTML changed
-  TestRunner-->>Dev: All 36 unit tests pass (100% verified)
+  Dev->>Data: Edit authoritative fact in data/*.json
+  Dev->>Validate: Validate JSON Schemas & cross-file invariants
+  Validate-->>Dev: Exit 0 (or fail loudly on contradiction)
+  Dev->>Render: Render <!--ssot:...--> markers & Jinja2 blocks
+  Render->>Targets: Deterministically update marker contents
+  Dev->>Export: Generate assets/data/site-data.json
+  Export->>Targets: Write generated JS data bundle
+  Dev->>Tests: Run run_tests.py, pricing-tests.js, run_html_tests.py
+  Tests-->>Dev: All suites pass (failures written to failed-tests/ only)
 ```
 
 ---
@@ -211,31 +217,32 @@ sequenceDiagram
 I engineered [`build_components.py`](file:///home/thomas/GitHub.io/thomascherickal.github.io/python/build_components.py) to resolve the static site dilemma: *How do you maintain a single unified header and footer without client-side template engines or runtime iframe latency?*
 
 1. **Extraction**: The script extracts the pure `<nav>` element from [`header.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/header.html) and `<footer>` from [`footer.html`](file:///home/thomas/GitHub.io/thomascherickal.github.io/footer.html).
-2. **Regex Substitution**: It scans all 65 HTML files in the repository root and subdirectories and performs atomic regex replacements between `<!-- START:HEADER -->...<!-- END:HEADER -->` and `<!-- START:FOOTER -->...<!-- END:FOOTER -->`.
-3. **Automated Chaining**: If `header.html` or `footer.html` is modified, it runs immediately across all pages.
+2. **Regex Substitution**: It scans all 85+ HTML files in the repository root and subdirectories and performs atomic regex replacements between `<!-- START:HEADER -->...<!-- END:HEADER -->` and `<!-- START:FOOTER -->...<!-- END:FOOTER -->`.
+3. **Automated Chaining**: After updating components, it runs `python/ssot/render.py`, `python/ssot/export_site_data.py`, `sync_schemas.py`, `md_html_sync.py`, `generate_metrics.py`, and `sync_og_card.py`.
 
 ---
 
-### B. NLP-Fuzzy-Expert Knowledge Synchronization Engine (`nlp-fuzzy-expert/`)
+### B. Deterministic SSOT Build & Synchronization Pipeline (`python/ssot/`)
 
-The repository integrates a forward-chaining expert system combined with fuzzy logic string metrics and natural language processing to ensure zero knowledge drift:
+The repository uses a deterministic build-time rendering pipeline rather than post-hoc regex or fuzzy rewriting:
 
-1. **KnowledgeBase Working Memory**: Automatically ingests 9 JSON data models from `data/` (`pricing.json`, `business-services.json`, `personal-services.json`, `tiers.json`, `claude.json`, `gemini.json`, `publications.json`, `config.json`, `faqs.json`) into 230+ atomic propositions.
-2. **Fuzzy String Metrics**: Employs Levenshtein distance, Token Sort Ratio, Token Set Ratio, and character 3-gram Jaccard similarity across triangular and trapezoidal fuzzy sets.
-3. **NLP Entity Extraction**: Standardizes whitespace and extracts `MONEY`, `DURATION`, and `SEATS` semantic entities.
-4. **Line-Level Diff Engine**: Calculates exact 1-based changed line numbers (e.g. `394-405, 428-449`) using `difflib.SequenceMatcher` opcodes.
-5. **Terminal Summary Table**: Renders an ASCII table upon completion showing target documents, update status, fired rules, changed lines, and synchronized fields.
-6. **Continuous Watcher Daemon**: [`nlp-fuzzy-expert/watcher.py`](file:///home/thomas/GitHub.io/thomascherickal.github.io/nlp-fuzzy-expert/watcher.py) monitors `data/*.json` with 1-second non-blocking polling and 150ms debouncing.
+1. **Authoritative Data & Schemas (`data/*.json`, `data/schema/*.schema.json`)**: Every protected fact (prices, seat counts, durations, percentages, installments, parity tiers, reply SLA, publication titles) is typed once in `data/*.json` and validated against strict JSON Schemas.
+2. **Cross-File Invariant Validation (`python/ssot/validate.py`)**: Enforces `included_seats <= max_seats`, milestone percentages summing to 100%, due days within program length, Tier 6 precedence over Tier 3, publication slug consistency, zero emojis, zero em-dashes, and no LLM version numbers in prose.
+3. **Deterministic Marker & Block Rendering (`python/ssot/render.py`, `format.py`)**: Replaces only the text between `<!--ssot:...-->` and `<!--/ssot-->` markers across HTML pages and `llms.txt`. Running `render.py --check` exits non-zero if any page is out of sync.
+4. **Client-Side Data Export (`python/ssot/export_site_data.py`)**: Generates `assets/data/site-data.json` from `data/*.json` for JavaScript consumers.
+5. **Literal Fact Auditing (`python/ssot/scan_literals.py`)**: Scans HTML, JS, Markdown, and JSON-LD for protected facts typed outside SSOT markers and writes `docs/ssot-inventory.csv`.
 
 ---
 
-### C. Testing Infrastructure & Pre-Commit Verification (`tests/`, `python/run_tests.py` & `pricing-tests.js`)
+### C. Testing Infrastructure, `failed-tests/` & Pre-Commit Verification (`tests/`, `python/run_tests.py` & `pricing-tests.js`)
 
-A comprehensive testing suite validates Python and JavaScript functionality across the codebase:
+A comprehensive testing suite validates Python, JavaScript, and HTML UI behavior across the codebase:
 
-- **Python Unit Test Suite (`tests/`)**: Contains 11 dedicated test modules executing 36 individual tests covering fuzzy engines, NLP extraction, inference rules, pricing updates, catalog names, curriculum synchronization, parity calculations, and cyclic mutations.
-- **JavaScript Test Suite (`pricing-tests.js`)**: Executes 78 unit, functional, DOM controller, and parity tier tests under Node.js with zero external dependencies, validating real-time client-side calculation, currency formatting, and edge case resilience.
-- **Pre-Commit Enforcement**: `.git/hooks/pre-commit` executes `python3 python/run_tests.py` before every commit, automatically blocking commits if any test fails.
+- **Python Unit Test Suite (`tests/`)**: Executes unit tests covering the SSOT pipeline (`test_ssot.py`), pricing and policy invariants (`test_pricing_and_policy_invariants.py`), link checking (`test_check_links.py`), build tooling (`test_python_tools.py`), and coverage/commit reporting.
+- **JavaScript Test Suite (`pricing-tests.js`)**: Executes modular unit, functional, DOM controller, payment schedule, and parity tier calculator tests under Node.js.
+- **HTML UI Test Suite (`python/run_html_tests.py`)**: Executes 101 BeautifulSoup4 + lxml assertions across all 85+ standalone HTML pages.
+- **Failed-Tests Directory (`failed-tests/`)**: Every test runner writes failure reports exclusively to `failed-tests/` (`failed-python-tests.md`, `failed-html-tests.md`, `failed-pricing-tests.md`) and deletes them automatically when passing.
+- **Pre-Commit Enforcement**: `python/hooks/pre-commit` executes `validate.py`, `render.py`, `export_site_data.py`, `render.py --check`, and all three test suites before permitting any commit.
 
 ---
 
@@ -334,25 +341,31 @@ nothing to commit, working tree clean
 To test, build, synchronize, or watch the site locally, execute the following commands from the repository root:
 
 ```bash
-# 1. Run NLP-Fuzzy-Expert repository knowledge synchronization
-python3 nlp-fuzzy-expert/synchronizer.py
+# 1. Validate data/*.json schemas and cross-file invariants
+python3 python/ssot/validate.py
 
-# 2. Start continuous autonomous data watcher daemon (monitors data/*.json)
-python3 nlp-fuzzy-expert/watcher.py
+# 2. Render SSOT markers and export assets/data/site-data.json
+python3 python/ssot/render.py
+python3 python/ssot/export_site_data.py
 
-# 3. Run the complete unit test suite (36 tests)
+# 3. Verify zero unrendered drift (CI / hook check)
+python3 python/ssot/render.py --check
+
+# 4. Run Python, JavaScript, and HTML UI test suites
 python3 python/run_tests.py
+node pricing-tests.js
+python3 python/run_html_tests.py
 
-# 4. Verify all internal links and anchor integrity (5,190+ links)
+# 5. Verify all internal links and anchor integrity
 python3 python/check_links.py
 
-# 5. Inlining navigation header and footer across all pages
+# 6. Inline navigation header and footer across all pages
 python3 python/build_components.py
 
-# 6. Extract and sync embedded JSON-LD schemas to schema/
+# 7. Extract and sync embedded JSON-LD schemas to schema/
 python3 python/sync_schemas.py
 
-# 7. Force bidirectional sync between HTML and Markdown
+# 8. Force bidirectional sync between HTML and Markdown
 python3 python/md_html_sync.py --html-to-md
 
 # 8. Serve locally with any HTTP server

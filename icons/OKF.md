@@ -3,7 +3,7 @@ type: dataset
 title: "Vector SVG Icon & Badge Repository"
 description: "Optimized scalable SVG platform icons, publishing logos, service badges, and branding glyphs."
 tags: [icons, svg, vectors, publishing-platforms, badges]
-timestamp: 2026-11-10T08:43:02Z
+timestamp: 2026-11-27T06:35:11Z
 ---
 
 # Vector SVG Icon & Badge Repository
@@ -54,6 +54,7 @@ None (Leaf directory).
 - [`medium.svg`](medium.svg)
 - [`muckrack.svg`](muckrack.svg)
 - [`patreon.svg`](patreon.svg)
+- [`portfolio.svg`](portfolio.svg)
 - [`profile.svg`](profile.svg)
 - [`quora.svg`](quora.svg)
 - [`reddit.svg`](reddit.svg)
@@ -62,8 +63,7 @@ None (Leaf directory).
 - [`topmate.svg`](topmate.svg)
 - [`tumblr.svg`](tumblr.svg)
 - [`whatsapp.svg`](whatsapp.svg)
-- [`wordpress.svg`](wordpress.svg)
-- ... and 1 additional files.
+- ... and 2 additional files.
 
 ## Context & Cross-References
 

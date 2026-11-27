@@ -6,6 +6,10 @@ if [ -z "$REPO_ROOT" ]; then
     exit 0
 fi
 
+echo "[git pre-push] Validating SSOT data and marker rendering..."
+python3 "$REPO_ROOT/python/ssot/validate.py"
+python3 "$REPO_ROOT/python/ssot/render.py" --check
+
 echo "[git pre-push] Verifying HTML to JSON schema synchronization..."
 python3 "$REPO_ROOT/python/sync_schemas.py"
 

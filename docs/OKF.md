@@ -3,7 +3,7 @@ type: module
 title: "Architecture & Project Documentation"
 description: "Operational playbooks, delivery economics, Purchasing Power Parity registries, and consolidated service summaries."
 tags: [docs, architecture, playbooks, pricing-reference, delivery-economics]
-timestamp: 2026-11-10T08:43:02Z
+timestamp: 2026-11-27T06:35:11Z
 ---
 
 # Architecture & Project Documentation
@@ -25,8 +25,10 @@ None (Leaf directory).
 ## File Inventory
 
 - [`hourly-rates.md`](hourly-rates.md)
+- [`meta-prompt-introductions.md`](meta-prompt-introductions.md)
 - [`parity pricing.md`](parity pricing.md)
 - [`services-summary.md`](services-summary.md)
+- [`ssot-inventory.csv`](ssot-inventory.csv)
 - [`website-fixes.md`](website-fixes.md)
 
 ## Context & Cross-References

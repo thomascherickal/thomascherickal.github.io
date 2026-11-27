@@ -41,8 +41,6 @@ TESTS_DIR = os.path.join(REPO_ROOT, "tests")
 PY_CACHE_FILE = os.path.join(TESTS_DIR, ".test_reports_cache.json")
 JS_CACHE_FILE = os.path.join(TESTS_DIR, ".js_test_reports_cache.json")
 HTML_CACHE_FILE = os.path.join(TESTS_DIR, ".html_ui_test_reports_cache.json")
-MANIFEST_FILE = os.path.join(REPO_ROOT, "nlp-fuzzy-expert", "references_manifest.json")
-REF_DICT_FILE = os.path.join(REPO_ROOT, "nlp-fuzzy-expert", "references_dictionary.json")
 SCHEMA_DIR = os.path.join(REPO_ROOT, "schema")
 MD_SYNC_DIR = os.path.join(REPO_ROOT, "md-html-sync")
 DATA_DIR = os.path.join(REPO_ROOT, "data")
@@ -200,37 +198,15 @@ def load_js_test_data():
 
 
 def load_references_data():
-    """Loads knowledge synchronization and references data from lightweight manifest or master dict."""
-    if os.path.exists(MANIFEST_FILE):
-        try:
-            with open(MANIFEST_FILE, "r", encoding="utf-8") as f:
-                return json.load(f)
-        except Exception:
-            pass
-    if os.path.exists(REF_DICT_FILE):
-        try:
-            with open(REF_DICT_FILE, "r", encoding="utf-8") as f:
-                return json.load(f)
-        except Exception:
-            pass
+    """Returns metadata for the deterministic SSOT build pipeline."""
     return {
         "metadata": {
-            "engine": "nlp-fuzzy-expert",
-            "version": "1.0.0",
-            "architecture": "Expert System (Forward Chaining) + Fuzzy Logic + NLP",
-            "total_references_tracked": 17650
+            "engine": "python/ssot",
+            "version": "2.0.0",
+            "architecture": "Deterministic SSOT Build-Time Marker & Block Renderer",
+            "total_references_tracked": 0
         },
-        "by_domain": {
-            "config": 4380,
-            "pricing": 3506,
-            "publications": 3280,
-            "tiers": 2165,
-            "business_services": 1504,
-            "claude": 1175,
-            "gemini": 1170,
-            "personal_services": 397,
-            "faqs": 73
-        }
+        "by_domain": {}
     }
 
 
@@ -510,39 +486,13 @@ def generate_last_commit_report(output_file=REPORT_FILE):
         lines.append("</details>")
         lines.append("")
 
-    # Section: NLP-Fuzzy-Expert Knowledge Synchronization Report
-    lines.append("## NLP-Fuzzy-Expert Knowledge Synchronization Report")
+    # Section: Deterministic SSOT Build Pipeline Report
+    lines.append("## Deterministic SSOT Build & Synchronization Report")
     lines.append("")
-    lines.append(f"- **Engine**: {ref_data.get('metadata', {}).get('engine', 'nlp-fuzzy-expert')} v{ref_data.get('metadata', {}).get('version', '1.0.0')}")
-    lines.append(f"- **Architecture**: {ref_data.get('metadata', {}).get('architecture', 'Expert System (Forward Chaining) + Fuzzy Logic + NLP')}")
-    lines.append("- **Data Flow Direction**: Strictly Unidirectional (`data/*.json` -> HTML / JS / MD / Code)")
-    lines.append(f"- **Total Tracked Occurrences**: {total_refs:,}")
-    lines.append("")
-    lines.append("### Master Reference Occurrences by Domain")
-    lines.append("")
-    lines.append("| Knowledge Domain | Tracked Occurrences | Primary Data Source | Domain Sync Report |")
-    lines.append("| :--- | :---: | :--- | :--- |")
-
-    by_domain = ref_data.get("by_domain", {})
-    domain_report_map = {
-        "config": "nlp-fuzzy-expert/config.md",
-        "pricing": "nlp-fuzzy-expert/pricing.md",
-        "publications": "nlp-fuzzy-expert/publications.md",
-        "tiers": "nlp-fuzzy-expert/tiers.md",
-        "business_services": "nlp-fuzzy-expert/business-services.md",
-        "claude": "nlp-fuzzy-expert/claude.md",
-        "gemini": "nlp-fuzzy-expert/gemini.md",
-        "personal_services": "nlp-fuzzy-expert/personal-services.md",
-        "faqs": "nlp-fuzzy-expert/faqs.md",
-        "contact": "nlp-fuzzy-expert/contact.md",
-        "guarantees": "nlp-fuzzy-expert/guarantees.md"
-    }
-
-    for dom, count in sorted(by_domain.items(), key=lambda x: x[1], reverse=True):
-        rep_file = domain_report_map.get(dom, f"nlp-fuzzy-expert/{dom.replace('_', '-')}.md")
-        lines.append(f"| `{dom}` | {count:,} | `data/{dom}.json` | [`{rep_file}`]({rep_file}) |")
-
-    lines.append(f"| **Master Dictionary Total** | **{total_refs:,}** | `data/*.json` ({len(by_domain)} domains) | [`references_dictionary.json`](nlp-fuzzy-expert/references_dictionary.json) |")
+    lines.append("- **Engine**: `python/ssot/` (Schema Validation + Deterministic Marker/Block Renderer)")
+    lines.append("- **Architecture**: Build-time SSOT rendering from `data/*.json` via `<!--ssot:...-->` markers and `assets/data/site-data.json`")
+    lines.append("- **Data Flow Direction**: Strictly Unidirectional (`data/*.json` -> HTML / JS / MD / Schema)")
+    lines.append("- **Failed-Test Reports**: Stored exclusively in `failed-tests/` (cleaned automatically on pass)")
     lines.append("")
 
     lines.append("### Core Target Documents Synchronization Status")

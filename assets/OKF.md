@@ -3,7 +3,7 @@ type: dataset
 title: "Global Site Assets & Branding Hub"
 description: "Core site branding assets, logos, favicons, web manifests, OpenGraph social cards, and service-specific visual subdirectories."
 tags: [assets, branding, media, favicons, opengraph]
-timestamp: 2026-11-10T08:43:02Z
+timestamp: 2026-11-27T06:35:11Z
 ---
 
 # Global Site Assets & Branding Hub
@@ -25,6 +25,7 @@ Core site branding assets, logos, favicons, web manifests, OpenGraph social card
 - [`ai-developer-training/`](ai-developer-training/OKF.md): Subdirectory knowledge bundle
 - [`antigravity/`](antigravity/OKF.md): Subdirectory knowledge bundle
 - [`claude-orchestration/`](claude-orchestration/OKF.md): Subdirectory knowledge bundle
+- [`data/`](data/OKF.md): Subdirectory knowledge bundle
 - [`generative-ai-transformation/`](generative-ai-transformation/OKF.md): Subdirectory knowledge bundle
 - [`guarantees/`](guarantees/OKF.md): Subdirectory knowledge bundle
 - [`js/`](js/OKF.md): Subdirectory knowledge bundle
@@ -33,8 +34,8 @@ Core site branding assets, logos, favicons, web manifests, OpenGraph social card
 
 ## File Inventory
 
+- [`Book-Cover.webp`](Book-Cover.webp)
 - [`Professional Profile Square.webp`](Professional Profile Square.webp)
-- [`RECRUITED-Book-Cover.jpeg`](RECRUITED-Book-Cover.jpeg)
 - [`android-chrome-192x192.png`](android-chrome-192x192.png)
 - [`android-chrome-512x512.png`](android-chrome-512x512.png)
 - [`apple-touch-icon.png`](apple-touch-icon.png)
@@ -44,15 +45,10 @@ Core site branding assets, logos, favicons, web manifests, OpenGraph social card
 - [`favicon-96x96.png`](favicon-96x96.png)
 - [`favicon.ico`](favicon.ico)
 - [`favicon.svg`](favicon.svg)
-- [`og-card-book.png`](og-card-book.png)
 - [`og-card.png`](og-card.png)
-- [`recruited-cover-full.webp`](recruited-cover-full.webp)
-- [`recruited-cover.jpg`](recruited-cover.jpg)
-- [`recruited-cover.webp`](recruited-cover.webp)
 - [`site-icon.jpeg`](site-icon.jpeg)
 - [`site-icon.webp`](site-icon.webp)
 - [`thomas-avatar.webp`](thomas-avatar.webp)
-- [`thomas-photo.webp`](thomas-photo.webp)
 
 ## Context & Cross-References
 

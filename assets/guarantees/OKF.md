@@ -3,7 +3,7 @@ type: dataset
 title: "Service Guarantees Visual Assets"
 description: "Trust badges, guarantee seals, and visual confirmation assets supporting the 100% money-back and walkaway guarantees."
 tags: [assets, guarantees, trust-badges, risk-reversal]
-timestamp: 2026-11-10T08:43:02Z
+timestamp: 2026-11-27T06:35:11Z
 ---
 
 # Service Guarantees Visual Assets

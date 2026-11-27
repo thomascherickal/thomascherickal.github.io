@@ -1,12 +1,12 @@
 ---
 type: module
-title: "Personal & Professional Personal AI Services Catalog"
+title: "Personal & Professional 1-on-1 AI Services Catalog"
 description: "Dedicated specification pages for 16 personal AI acceleration services, designed strictly for one person with 4 hours/day of live pair-programming."
-tags: [personal-services, Personal, private-mentoring, career-acceleration]
-timestamp: 2026-11-10T08:43:02Z
+tags: [personal-services, 1-on-1, private-mentoring, career-acceleration]
+timestamp: 2026-11-27T06:35:11Z
 ---
 
-# Personal & Professional Personal AI Services Catalog
+# Personal & Professional 1-on-1 AI Services Catalog
 
 Dedicated specification pages for 16 personal AI acceleration services, designed strictly for one person with 4 hours/day of live pair-programming.
 
@@ -24,19 +24,21 @@ None (Leaf directory).
 ## File Inventory
 
 - [`personal-service-advanced-ai-agents.html`](personal-service-advanced-ai-agents.html)
-- [`personal-service-agentic-ai-systems.html`](personal-service-agentic-ai-systems.html)
-- [`personal-service-ai-7-habits.html`](personal-service-ai-7-habits.html)
-- [`personal-service-ai-agents-orchestration.html`](personal-service-ai-agents-orchestration.html)
-- [`personal-service-ai-budget-cost-limits-training.html`](personal-service-ai-budget-cost-limits-training.html)
+- [`personal-service-agentic-assistants.html`](personal-service-agentic-assistants.html)
+- [`personal-service-ai-assisted-leads-magnet.html`](personal-service-ai-assisted-leads-magnet.html)
+- [`personal-service-ai-budget-cost-control.html`](personal-service-ai-budget-cost-control.html)
 - [`personal-service-ai-developer-training.html`](personal-service-ai-developer-training.html)
-- [`personal-service-ai-schedule-automation.html`](personal-service-ai-schedule-automation.html)
 - [`personal-service-ai-second-brain.html`](personal-service-ai-second-brain.html)
+- [`personal-service-claude-agents-orchestration.html`](personal-service-claude-agents-orchestration.html)
+- [`personal-service-claude-research-training.html`](personal-service-claude-research-training.html)
+- [`personal-service-competitor-research.html`](personal-service-competitor-research.html)
 - [`personal-service-continuous-learning.html`](personal-service-continuous-learning.html)
+- [`personal-service-gemini-research-training.html`](personal-service-gemini-research-training.html)
 - [`personal-service-generative-ai-transformation.html`](personal-service-generative-ai-transformation.html)
-- [`personal-service-goals-self-authoring.html`](personal-service-goals-self-authoring.html)
+- [`personal-service-knowledge-graphs.html`](personal-service-knowledge-graphs.html)
+- [`personal-service-local-ai-for-sensitive-data.html`](personal-service-local-ai-for-sensitive-data.html)
 - [`personal-service-local-llms-cost-slashing.html`](personal-service-local-llms-cost-slashing.html)
 - [`personal-service-workflow-automations.html`](personal-service-workflow-automations.html)
-- [`personal-service-worklife-balance.html`](personal-service-worklife-balance.html)
 
 ## Context & Cross-References
 

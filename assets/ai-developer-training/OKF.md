@@ -3,7 +3,7 @@ type: dataset
 title: "AI Developer Training Visual Assets"
 description: "Terminal screenshots, TDD workflow charts, and visual assets for AI Developer bootcamps."
 tags: [assets, developer-training, tdd, coding-agents]
-timestamp: 2026-11-10T08:43:02Z
+timestamp: 2026-11-27T06:35:11Z
 ---
 
 # AI Developer Training Visual Assets
@@ -22,19 +22,8 @@ None (Leaf directory).
 ## File Inventory
 
 - [`ai-coding-governance.jpg`](ai-coding-governance.jpg)
-- [`ai-cost-tokens.jpg`](ai-cost-tokens.jpg)
 - [`ai-dev-playbooks.jpg`](ai-dev-playbooks.jpg)
-- [`ai-security-risks.jpg`](ai-security-risks.jpg)
 - [`autonomous-agent-loops.jpg`](autonomous-agent-loops.jpg)
-- [`claude-code-platform.jpg`](claude-code-platform.jpg)
-- [`open-weight-models.jpg`](open-weight-models.jpg)
-- [`personal-supercomputing.jpg`](personal-supercomputing.jpg)
-- [`solo-agent-loops.jpg`](solo-agent-loops.jpg)
-- [`solo-budget-tokens.jpg`](solo-budget-tokens.jpg)
-- [`solo-dev-cockpit.jpg`](solo-dev-cockpit.jpg)
-- [`solo-platforms-mcp.jpg`](solo-platforms-mcp.jpg)
-- [`solo-playbooks-walkthrough.jpg`](solo-playbooks-walkthrough.jpg)
-- [`solo-risk-matrix.jpg`](solo-risk-matrix.jpg)
 
 ## Context & Cross-References
 

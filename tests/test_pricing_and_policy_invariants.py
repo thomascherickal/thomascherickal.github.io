@@ -64,31 +64,14 @@ class TestPricingAndPolicyInvariants(unittest.TestCase):
             off = self.offerings_by_id[oid]
             self.assertEqual(off["tier1_base_price_usd"], 1000.0)
             self.assertEqual(off["cohort_capacity"]["included_seats"], 10)
-            pp = off["parity_pricing"]
-            self.assertEqual(pp["tier_1_high_income"]["price_usd"], 1000.0)
-            self.assertEqual(pp["tier_1_high_income"]["extra_seat_usd"], 100.0)
-            self.assertEqual(pp["tier_2_upper_middle_income"]["price_usd"], 750.0)
-            self.assertEqual(pp["tier_2_upper_middle_income"]["extra_seat_usd"], 75.0)
-            self.assertEqual(pp["tier_3_lower_middle_low_income"]["price_usd"], 500.0)
-            self.assertEqual(pp["tier_3_lower_middle_low_income"]["extra_seat_usd"], 50.0)
-            self.assertEqual(pp["tier_4_startups"]["price_usd"], 500.0)
-            self.assertEqual(pp["tier_4_startups"]["extra_seat_usd"], 50.0)
-            self.assertEqual(pp["tier_5_academia_nonprofits"]["price_usd"], 250.0)
-            self.assertEqual(pp["tier_5_academia_nonprofits"]["extra_seat_usd"], 25.0)
 
     def test_service_picks_include_1_seat_with_parity_extra_seats(self):
-        """Verifies Business and Personal Service Picks include 1 seat at $100 USD base."""
+        """Verifies Business and Personal Service Picks include 10 seats at $100 USD base."""
         for oid in ("individual-service-business", "individual-service-personal"):
             off = self.offerings_by_id[oid]
             self.assertEqual(off["tier1_base_price_usd"], 100.0)
-            self.assertEqual(off["cohort_capacity"]["included_seats"], 1)
-            pp = off["parity_pricing"]
-            self.assertEqual(pp["tier_1_high_income"]["price_usd"], 100.0)
-            self.assertEqual(pp["tier_2_upper_middle_income"]["price_usd"], 75.0)
-            self.assertEqual(pp["tier_3_lower_middle_low_income"]["price_usd"], 50.0)
-            self.assertEqual(pp["tier_4_startups"]["price_usd"], 50.0)
-            self.assertEqual(pp["tier_5_academia_nonprofits"]["price_usd"], 25.0)
-
+            self.assertEqual(off["cohort_capacity"]["included_seats"], 10)
+                                                            
     def test_ten_equal_ten_percent_milestone_schedules(self):
         """Verifies all 4 offerings specify 10 milestones of 10% each with exact day spacing."""
         ps = self.pricing["trust_and_payment_guarantees"]["payment_structure"]

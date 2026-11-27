@@ -3,7 +3,7 @@ type: dataset
 title: "Authoritative Data Directory (SSOT)"
 description: "Authoritative Single Source of Truth (SSOT) JSON files modeling pricing, services, publications, FAQs, and platform configurations."
 tags: [data, ssot, read-only, pricing, services, authoritative]
-timestamp: 2026-11-10T08:43:02Z
+timestamp: 2026-11-27T06:35:11Z
 ---
 
 # Authoritative Data Directory (SSOT)
@@ -20,7 +20,7 @@ Authoritative Single Source of Truth (SSOT) JSON files modeling pricing, service
 
 ## Subdirectories
 
-None (Leaf directory).
+- [`schema/`](schema/OKF.md): Subdirectory knowledge bundle
 
 ## File Inventory
 
@@ -34,6 +34,7 @@ None (Leaf directory).
 - [`personal-services.json`](personal-services.json)
 - [`pricing.json`](pricing.json)
 - [`publications.json`](publications.json)
+- [`services.json`](services.json)
 - [`tiers.json`](tiers.json)
 
 ## Context & Cross-References

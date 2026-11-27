@@ -3,7 +3,7 @@ type: module
 title: "Claude Architecture & Engineering Guides"
 description: "Comprehensive engineering guides covering the Anthropic Claude ecosystem: Claude Code CLI, MCP tool building, prompt caching, orchestration, and local LLM pairing."
 tags: [claude-training, claude-code, mcp, prompt-caching, orchestration]
-timestamp: 2026-11-10T08:43:02Z
+timestamp: 2026-11-27T06:35:11Z
 ---
 
 # Claude Architecture & Engineering Guides
@@ -24,17 +24,23 @@ None (Leaf directory).
 ## File Inventory
 
 - [`claude-101.html`](claude-101.html)
+- [`claude-apps.html`](claude-apps.html)
+- [`claude-artifacts.html`](claude-artifacts.html)
+- [`claude-code-mode.html`](claude-code-mode.html)
 - [`claude-code.html`](claude-code.html)
-- [`claude-connectors.html`](claude-connectors.html)
-- [`claude-cowork.html`](claude-cowork.html)
-- [`claude-custom-mcp.html`](claude-custom-mcp.html)
+- [`claude-dashboards.html`](claude-dashboards.html)
 - [`claude-design.html`](claude-design.html)
-- [`claude-features.html`](claude-features.html)
+- [`claude-desktop.html`](claude-desktop.html)
+- [`claude-fable.html`](claude-fable.html)
 - [`claude-local-llms.html`](claude-local-llms.html)
+- [`claude-mcp.html`](claude-mcp.html)
+- [`claude-mods.html`](claude-mods.html)
+- [`claude-office.html`](claude-office.html)
 - [`claude-orchestration.html`](claude-orchestration.html)
 - [`claude-plugins.html`](claude-plugins.html)
+- [`claude-projects.html`](claude-projects.html)
 - [`claude-science.html`](claude-science.html)
-- [`claude-skills.html`](claude-skills.html)
+- [`claude-whiteboards.html`](claude-whiteboards.html)
 
 ## Context & Cross-References
 

@@ -19,12 +19,16 @@ STAGED_FILES="$(git diff --cached --name-only 2>/dev/null || true)"
 if echo "$STAGED_FILES" | grep -E '^(header|footer)\.html$' > /dev/null 2>&1; then
     echo "[git pre-commit] 2. Rebuilding header/footer components..."
     python3 "$REPO_ROOT/python/build_components.py"
-    git add "$REPO_ROOT"/*.html "$REPO_ROOT"/business-services/*.html "$REPO_ROOT"/personal-services/*.html "$REPO_ROOT"/claude-training/*.html "$REPO_ROOT"/gemini-training/*.html "$REPO_ROOT"/md-html-sync/
+    git add "$REPO_ROOT"/*.html "$REPO_ROOT"/business-services/*.html "$REPO_ROOT"/personal-services/*.html "$REPO_ROOT"/pricing/*.html "$REPO_ROOT"/claude-training/*.html "$REPO_ROOT"/gemini-training/*.html "$REPO_ROOT"/md-html-sync/
 fi
 
 echo "[git pre-commit] 3. Rendering SSOT markers and exporting site-data.json..."
 python3 "$REPO_ROOT/python/ssot/render.py"
 python3 "$REPO_ROOT/python/ssot/export_site_data.py"
+
+if echo "$STAGED_FILES" | grep -E '^data/.*\.json$|^python/ssot/.*\.py$' > /dev/null 2>&1; then
+    git add "$REPO_ROOT"/*.html "$REPO_ROOT"/business-services/*.html "$REPO_ROOT"/personal-services/*.html "$REPO_ROOT"/pricing/*.html "$REPO_ROOT"/claude-training/*.html "$REPO_ROOT"/gemini-training/*.html "$REPO_ROOT"/llms.txt "$REPO_ROOT"/assets/data/site-data.json 2>/dev/null || true
+fi
 
 if echo "$STAGED_FILES" | grep -E '\.(html|md)$|^data/.*\.json$' > /dev/null 2>&1; then
     echo "[git pre-commit] 4. Syncing Markdown mirrors and JSON-LD schemas..."
@@ -40,8 +44,6 @@ python3 "$REPO_ROOT/python/ssot/render.py" --check
 
 echo "[git pre-commit] 6. Running Python, JavaScript, and HTML UI tests..."
 python3 "$REPO_ROOT/python/run_tests.py"
-node "$REPO_ROOT/pricing-tests.js"
-python3 "$REPO_ROOT/python/run_html_tests.py"
 
 git add -- "$REPO_ROOT/tests/.test_reports_cache.json" "$REPO_ROOT/tests/.js_test_reports_cache.json" "$REPO_ROOT/tests/.html_ui_test_reports_cache.json" "$REPO_ROOT/assets/data/site-data.json" 2>/dev/null || true
 

@@ -3,7 +3,7 @@ type: dataset
 title: "Generative AI Transformation Visual Assets"
 description: "Enterprise AI roadmaps, chatbot-to-agent evolution diagrams, and architectural charts."
 tags: [assets, transformation, enterprise-ai, roadmaps]
-timestamp: 2026-11-10T08:43:02Z
+timestamp: 2026-11-27T06:35:11Z
 ---
 
 # Generative AI Transformation Visual Assets
@@ -21,10 +21,7 @@ None (Leaf directory).
 
 ## File Inventory
 
-- [`genai-prompt-playbook.jpg`](genai-prompt-playbook.jpg)
-- [`genai-transformation-workflow.jpg`](genai-transformation-workflow.jpg)
-- [`personal-ai-second-brain.jpg`](personal-ai-second-brain.jpg)
-- [`personal-prompt-playbook.jpg`](personal-prompt-playbook.jpg)
+None.
 
 ## Context & Cross-References
 

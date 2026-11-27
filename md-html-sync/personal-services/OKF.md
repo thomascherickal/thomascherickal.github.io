@@ -3,7 +3,7 @@ type: module
 title: "Personal Services Markdown Mirrors"
 description: "Synchronized Markdown mirrors corresponding to the 16 personal 1-on-1 service HTML pages."
 tags: [md-html-sync, personal-services, markdown, mentorship]
-timestamp: 2026-11-10T08:43:02Z
+timestamp: 2026-11-27T06:35:11Z
 ---
 
 # Personal Services Markdown Mirrors
@@ -22,19 +22,21 @@ None (Leaf directory).
 ## File Inventory
 
 - [`personal-service-advanced-ai-agents.md`](personal-service-advanced-ai-agents.md)
-- [`personal-service-agentic-ai-systems.md`](personal-service-agentic-ai-systems.md)
-- [`personal-service-ai-7-habits.md`](personal-service-ai-7-habits.md)
-- [`personal-service-ai-agents-orchestration.md`](personal-service-ai-agents-orchestration.md)
-- [`personal-service-ai-budget-cost-limits-training.md`](personal-service-ai-budget-cost-limits-training.md)
+- [`personal-service-agentic-assistants.md`](personal-service-agentic-assistants.md)
+- [`personal-service-ai-assisted-leads-magnet.md`](personal-service-ai-assisted-leads-magnet.md)
+- [`personal-service-ai-budget-cost-control.md`](personal-service-ai-budget-cost-control.md)
 - [`personal-service-ai-developer-training.md`](personal-service-ai-developer-training.md)
-- [`personal-service-ai-schedule-automation.md`](personal-service-ai-schedule-automation.md)
 - [`personal-service-ai-second-brain.md`](personal-service-ai-second-brain.md)
+- [`personal-service-claude-agents-orchestration.md`](personal-service-claude-agents-orchestration.md)
+- [`personal-service-claude-research-training.md`](personal-service-claude-research-training.md)
+- [`personal-service-competitor-research.md`](personal-service-competitor-research.md)
 - [`personal-service-continuous-learning.md`](personal-service-continuous-learning.md)
+- [`personal-service-gemini-research-training.md`](personal-service-gemini-research-training.md)
 - [`personal-service-generative-ai-transformation.md`](personal-service-generative-ai-transformation.md)
-- [`personal-service-goals-self-authoring.md`](personal-service-goals-self-authoring.md)
+- [`personal-service-knowledge-graphs.md`](personal-service-knowledge-graphs.md)
+- [`personal-service-local-ai-for-sensitive-data.md`](personal-service-local-ai-for-sensitive-data.md)
 - [`personal-service-local-llms-cost-slashing.md`](personal-service-local-llms-cost-slashing.md)
 - [`personal-service-workflow-automations.md`](personal-service-workflow-automations.md)
-- [`personal-service-worklife-balance.md`](personal-service-worklife-balance.md)
 
 ## Context & Cross-References
 

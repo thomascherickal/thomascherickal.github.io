@@ -3,7 +3,7 @@ type: dataset
 title: "Local AI Revolution Visual Assets"
 description: "Hardware topologies, private server charts, VRAM allocation matrices, and benchmark diagrams for Local LLMs."
 tags: [assets, local-llms, vram, benchmarks, private-ai]
-timestamp: 2026-11-10T08:43:02Z
+timestamp: 2026-11-27T06:35:11Z
 ---
 
 # Local AI Revolution Visual Assets
@@ -21,18 +21,7 @@ None (Leaf directory).
 
 ## File Inventory
 
-- [`ai-tco-breakeven-financial-dashboard.jpg`](ai-tco-breakeven-financial-dashboard.jpg)
-- [`enterprise-ai-security-perimeter.jpg`](enterprise-ai-security-perimeter.jpg)
-- [`enterprise-datacenter-gpu-cluster.jpg`](enterprise-datacenter-gpu-cluster.jpg)
-- [`gpu-memory-inference-architecture.jpg`](gpu-memory-inference-architecture.jpg)
-- [`local-ai-airgap-security.jpg`](local-ai-airgap-security.jpg)
-- [`local-ai-apple-silicon-vs-nvidia.jpg`](local-ai-apple-silicon-vs-nvidia.jpg)
-- [`local-ai-cost-breakeven.jpg`](local-ai-cost-breakeven.jpg)
-- [`local-ai-datacenter-hardware.jpg`](local-ai-datacenter-hardware.jpg)
-- [`local-ai-developer-desktop.jpg`](local-ai-developer-desktop.jpg)
-- [`local-ai-gpu-silicon.jpg`](local-ai-gpu-silicon.jpg)
-- [`local-ai-quantization-pipeline.jpg`](local-ai-quantization-pipeline.jpg)
-- [`local-ai-routing-gateway.jpg`](local-ai-routing-gateway.jpg)
+None.
 
 ## Context & Cross-References
 

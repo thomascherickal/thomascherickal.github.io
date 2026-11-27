@@ -319,17 +319,26 @@ DIRECTORY_METADATA = {
             'Preserves syllabi, daily training limits, and pricing details.'
         ]
     },
-    'nlp-fuzzy-expert': {
-        'title': 'NLP Fuzzy Expert Knowledge Synchronization Engine',
+    'python/ssot': {
+        'title': 'Deterministic SSOT Build & Synchronization Pipeline',
         'type': 'module',
-        'description': 'Forward-chaining inference engine, fuzzy matcher, continuous file watcher daemon, and auto-healing subsystem synchronizing data/*.json outward.',
-        'tags': ['nlp-fuzzy-expert', 'inference-engine', 'synchronization', 'fuzzy-matcher', 'watcher'],
+        'description': 'Schema validation, deterministic marker/block rendering, literal auditing, and JS data export from data/*.json.',
+        'tags': ['ssot', 'validation', 'jinja2', 'markers', 'synchronization'],
         'guidelines': [
-            'Core engine: `expert_system.py`, `synchronizer.py`, `watcher.py`, and `auto_healer.py`.',
-            'Run `python3 nlp-fuzzy-expert/synchronizer.py` to synchronize facts from `data/*.json` outward to HTML and JS files.',
-            'Prints working steps 1-6 with 1-based changed line numbers and an ASCII summary table.',
-            'Optimization: Summaries are printed to terminal; any failed checks are recorded in `FAILED-CHECKS.md`. If all pass, it records `Everything passed.`',
-            '`save_json()` strictly blocks writing to any path inside `data/` via `PermissionError`.'
+            'Core pipeline: `load.py`, `format.py`, `validate.py`, `render.py`, `export_site_data.py`, and `scan_literals.py`.',
+            'Run `python3 python/ssot/validate.py` to verify all `data/*.json` schemas and cross-file invariants.',
+            'Run `python3 python/ssot/render.py` to render `<!--ssot:...-->` markers deterministically across HTML and `llms.txt`.',
+            'Use `python3 python/ssot/render.py --check` in hooks and CI to fail loudly on unrendered drift.'
+        ]
+    },
+    'failed-tests': {
+        'title': 'Failed Test Reports Directory',
+        'type': 'reports',
+        'description': 'Centralized directory where Python, JavaScript, and HTML UI test runners store failure reports when tests fail.',
+        'tags': ['failed-tests', 'testing', 'reports'],
+        'guidelines': [
+            'All failed-test reports must be written exclusively inside `failed-tests/`.',
+            'Reports are automatically deleted by each runner when its suite passes 100%.'
         ]
     },
     'personal-services': {

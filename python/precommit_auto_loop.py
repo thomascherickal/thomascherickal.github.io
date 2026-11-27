@@ -29,40 +29,19 @@ DATA_DIR = os.path.join(REPO_DIR, "data")
 TESTS_DIR = os.path.join(REPO_DIR, "tests")
 
 PYTHON_CATEGORY_ORDER = [
-    "Data Sync & Unidirectional SSOT",
-    "NLP-Fuzzy-Expert Engine",
+    "SSOT Build & Validation",
     "Core Documents & Pricing Invariants",
     "Python Tooling & Build Scripts",
-    "Auto-Healer, Reports & Coverage",
+    "Reports & Coverage",
 ]
 
 PYTHON_MODULE_CATEGORIES = {
-    "test_unidirectional_sync": "Data Sync & Unidirectional SSOT",
-    "test_continuous_updates": "Data Sync & Unidirectional SSOT",
-    "test_sync_pricing": "Data Sync & Unidirectional SSOT",
-    "test_sync_tiers": "Data Sync & Unidirectional SSOT",
-    "test_sync_pricing_tiers_and_calculators": "Data Sync & Unidirectional SSOT",
-    "test_sync_business_services": "Data Sync & Unidirectional SSOT",
-    "test_sync_personal_services": "Data Sync & Unidirectional SSOT",
-    "test_sync_claude_and_gemini": "Data Sync & Unidirectional SSOT",
-    "test_sync_guarantees": "Data Sync & Unidirectional SSOT",
-    "test_sync_publications_config_faqs": "Data Sync & Unidirectional SSOT",
-    "test_expert_system": "NLP-Fuzzy-Expert Engine",
-    "test_fuzzy_engine": "NLP-Fuzzy-Expert Engine",
-    "test_nlp_engine": "NLP-Fuzzy-Expert Engine",
-    "test_master_orchestrator": "NLP-Fuzzy-Expert Engine",
-    "test_reference_scanner": "NLP-Fuzzy-Expert Engine",
-    "test_report_generator": "NLP-Fuzzy-Expert Engine",
-    "test_watcher": "NLP-Fuzzy-Expert Engine",
-    "test_core_target_documents": "Core Documents & Pricing Invariants",
+    "test_ssot": "SSOT Build & Validation",
     "test_pricing_and_policy_invariants": "Core Documents & Pricing Invariants",
     "test_check_links": "Core Documents & Pricing Invariants",
     "test_python_tools": "Python Tooling & Build Scripts",
-    "test_code_test_syncer": "Python Tooling & Build Scripts",
-    "test_auto_healer": "Auto-Healer, Reports & Coverage",
-    "test_coverage_report": "Auto-Healer, Reports & Coverage",
-    "test_last_commit_report": "Auto-Healer, Reports & Coverage",
-    "test_rules_and_pre_push_coverage": "Auto-Healer, Reports & Coverage",
+    "test_coverage_report": "Reports & Coverage",
+    "test_last_commit_report": "Reports & Coverage",
 }
 
 

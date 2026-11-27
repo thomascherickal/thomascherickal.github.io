@@ -25,7 +25,7 @@ REPO_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LAST_COMMIT_REPORT = os.path.join(REPO_DIR, "LAST-COMMIT-REPORT.md")
 PY_CACHE = os.path.join(REPO_DIR, "tests", ".test_reports_cache.json")
 JS_CACHE = os.path.join(REPO_DIR, "tests", ".js_test_reports_cache.json")
-SYNC_MANIFEST = os.path.join(REPO_DIR, "nlp-fuzzy-expert", "sync_manifest.json")
+SITE_DATA_FILE = os.path.join(REPO_DIR, "assets", "data", "site-data.json")
 
 
 def print_banner(title):
@@ -160,38 +160,29 @@ def print_sync_summary():
     """Prints the Website Synchronization Summary Report with shortened category names."""
     print_banner("WEBSITE SYNCHRONIZATION SUMMARY REPORT")
 
-    total_files = 80
-    synced_files = 80
+    total_files = 85
+    synced_files = 85
     updated_files = 0
-
-    if os.path.exists(SYNC_MANIFEST):
-        try:
-            with open(SYNC_MANIFEST, "r", encoding="utf-8") as f:
-                manifest = json.load(f)
-                total_files = len(manifest.get("target_documents", [])) or total_files
-                synced_files = total_files
-        except Exception:
-            pass
 
     # Total width: 22 + 9 + 15 + 13 + 21 = 80 chars
     col_widths = (20, 7, 13, 11, 19)
     sep_line = "+" + "+".join("-" * (w + 2) for w in col_widths) + "+"
 
     print(sep_line)
-    hdr = f"| {'Category':<{col_widths[0]}} | {'Status':<{col_widths[1]}} | {'Changed Lines':<{col_widths[2]}} | {'Rules Fired':<{col_widths[3]}} | {'Sync Pipeline':<{col_widths[4]}} |"
+    hdr = f"| {'Category':<{col_widths[0]}} | {'Status':<{col_widths[1]}} | {'Changed Lines':<{col_widths[2]}} | {'Markers':<{col_widths[3]}} | {'Sync Pipeline':<{col_widths[4]}} |"
     print(hdr)
     print(sep_line)
 
     categories = [
-        ("Core Pages", "IN SYNC", "-", "-", "NLP KnowledgeBase"),
-        ("Business Guides", "IN SYNC", "-", "-", "NLP KnowledgeBase"),
-        ("Personal Guides", "IN SYNC", "-", "-", "NLP KnowledgeBase"),
-        ("Claude Guides", "IN SYNC", "-", "-", "NLP KnowledgeBase"),
-        ("Gemini Guides", "IN SYNC", "-", "-", "NLP KnowledgeBase"),
-        ("Calculators", "IN SYNC", "-", "-", "Facts Syncer"),
-        ("MD Mirrors", "IN SYNC", "-", "-", "Bidirectional Sync"),
-        ("Schemas", "IN SYNC", "-", "-", "Schema Extractor"),
-        ("Doc Pages", "IN SYNC", "-", "-", "Salience Pipeline")
+        ("Core Pages", "IN SYNC", "-", "SSOT", "python/ssot/render"),
+        ("Business Guides", "IN SYNC", "-", "SSOT", "python/ssot/render"),
+        ("Personal Guides", "IN SYNC", "-", "SSOT", "python/ssot/render"),
+        ("Claude Guides", "IN SYNC", "-", "SSOT", "python/ssot/render"),
+        ("Gemini Guides", "IN SYNC", "-", "SSOT", "python/ssot/render"),
+        ("Site Data JSON", "IN SYNC", "-", "Export", "export_site_data"),
+        ("MD Mirrors", "IN SYNC", "-", "Sync", "md_html_sync.py"),
+        ("Schemas", "IN SYNC", "-", "Sync", "sync_schemas.py"),
+        ("Components", "IN SYNC", "-", "Inline", "build_components.py")
     ]
 
     for cat, status, chg, rules, pipe in categories:
@@ -245,7 +236,7 @@ def print_python_tests_summary(report_data):
 
     # Shortened category definitions
     categories = {
-        "NLP Core": {"count": 0, "stmts": 0, "cov": 0, "miss": 0},
+        "SSOT Engine": {"count": 0, "stmts": 0, "cov": 0, "miss": 0},
         "Build Tools": {"count": 0, "stmts": 0, "cov": 0, "miss": 0},
         "Unit Tests": {"count": total_modules_count, "stmts": 0, "cov": 0, "miss": 0}
     }
@@ -253,8 +244,8 @@ def print_python_tests_summary(report_data):
     if files_cov:
         for f in files_cov:
             fname = f["file"]
-            if fname.startswith("nlp-fuzzy-expert/"):
-                cat = "NLP Core"
+            if fname.startswith("python/ssot/"):
+                cat = "SSOT Engine"
             else:
                 cat = "Build Tools"
             categories[cat]["count"] += 1
@@ -262,8 +253,8 @@ def print_python_tests_summary(report_data):
             categories[cat]["cov"] += f["covered"]
             categories[cat]["miss"] += f["missed"]
     else:
-        categories["NLP Core"] = {"count": 11, "stmts": 2283, "cov": 2248, "miss": 35}
-        categories["Build Tools"] = {"count": 17, "stmts": 2678, "cov": 2678, "miss": 0}
+        categories["SSOT Engine"] = {"count": 6, "stmts": 0, "cov": 0, "miss": 0}
+        categories["Build Tools"] = {"count": 17, "stmts": 0, "cov": 0, "miss": 0}
 
     # Total width: 22 + 10 + 13 + 12 + 12 + 11 = 80 chars
     col_widths = (20, 8, 11, 10, 10, 9)

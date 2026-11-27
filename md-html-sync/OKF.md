@@ -3,7 +3,7 @@ type: module
 title: "Markdown HTML Synchronization Root"
 description: "Markdown mirror representations of live HTML pages, kept synchronized for consumption by LLM coding agents and crawlers."
 tags: [md-html-sync, markdown-mirrors, llm-friendly, state-tracking]
-timestamp: 2026-11-10T08:43:02Z
+timestamp: 2026-11-27T06:35:11Z
 ---
 
 # Markdown HTML Synchronization Root
@@ -23,6 +23,7 @@ Markdown mirror representations of live HTML pages, kept synchronized for consum
 - [`claude-training/`](claude-training/OKF.md): Subdirectory knowledge bundle
 - [`gemini-training/`](gemini-training/OKF.md): Subdirectory knowledge bundle
 - [`personal-services/`](personal-services/OKF.md): Subdirectory knowledge bundle
+- [`pricing/`](pricing/OKF.md): Subdirectory knowledge bundle
 
 ## File Inventory
 
@@ -31,13 +32,12 @@ Markdown mirror representations of live HTML pages, kept synchronized for consum
 - [`all-business-services.md`](all-business-services.md)
 - [`all-personal-services.md`](all-personal-services.md)
 - [`articles.md`](articles.md)
-- [`business-ai-training.md`](business-ai-training.md)
 - [`contact.md`](contact.md)
 - [`expertise.md`](expertise.md)
 - [`faqs.md`](faqs.md)
 - [`guarantees.md`](guarantees.md)
 - [`home.md`](home.md)
-- [`personal-ai-training.md`](personal-ai-training.md)
+- [`parity-pricing.md`](parity-pricing.md)
 - [`pricing.md`](pricing.md)
 - [`writing.md`](writing.md)
 

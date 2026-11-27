@@ -3,7 +3,7 @@ type: dataset
 title: "Claude Orchestration Visual Assets"
 description: "Architecture blueprints and sequential pipeline diagrams for Claude Agent Orchestration workflows."
 tags: [assets, claude, orchestration, blueprints]
-timestamp: 2026-11-10T08:43:02Z
+timestamp: 2026-11-27T06:35:11Z
 ---
 
 # Claude Orchestration Visual Assets
@@ -21,14 +21,7 @@ None (Leaf directory).
 
 ## File Inventory
 
-- [`claude-orchestration-method1-cli.jpg`](claude-orchestration-method1-cli.jpg)
-- [`claude-orchestration-method2-sdk.jpg`](claude-orchestration-method2-sdk.jpg)
-- [`claude-orchestration-method3-telemetry.jpg`](claude-orchestration-method3-telemetry.jpg)
-- [`claude-orchestration-method4-workflow.jpg`](claude-orchestration-method4-workflow.jpg)
-- [`claude-orchestration-method5-datacenter.jpg`](claude-orchestration-method5-datacenter.jpg)
-- [`claude-orchestration-method6-evaluator.jpg`](claude-orchestration-method6-evaluator.jpg)
-- [`claude-orchestration-method7-workstation.jpg`](claude-orchestration-method7-workstation.jpg)
-- [`claude-orchestration-method8-computeruse.jpg`](claude-orchestration-method8-computeruse.jpg)
+None.
 
 ## Context & Cross-References
 

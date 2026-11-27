@@ -3,7 +3,7 @@ type: module
 title: "Interactive Pricing Calculator Engine Modules"
 description: "Modular JavaScript pricing calculation engines, tier calculators, and unit tests verifying live pricing logic."
 tags: [pricing-calculator, javascript-modules, calculator-engine, parity-calc]
-timestamp: 2026-11-10T08:43:02Z
+timestamp: 2026-11-27T06:35:11Z
 ---
 
 # Interactive Pricing Calculator Engine Modules

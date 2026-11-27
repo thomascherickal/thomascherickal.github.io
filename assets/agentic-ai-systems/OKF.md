@@ -3,7 +3,7 @@ type: dataset
 title: "Agentic AI Systems Visual Assets"
 description: "Visual assets, schemas, and flowcharts illustrating autonomous agentic loops, Nous Research Agentic Assistants, and memory systems."
 tags: [assets, agentic-systems, diagrams, nous-hermes]
-timestamp: 2026-11-10T08:43:02Z
+timestamp: 2026-11-27T06:35:11Z
 ---
 
 # Agentic AI Systems Visual Assets
@@ -21,10 +21,7 @@ None (Leaf directory).
 
 ## File Inventory
 
-- [`enterprise-agent-routing-fabric.jpg`](enterprise-agent-routing-fabric.jpg)
-- [`enterprise-security-governance-finops.jpg`](enterprise-security-governance-finops.jpg)
-- [`grok-bot-enterprise-workspace.jpg`](grok-bot-enterprise-workspace.jpg)
-- [`hermes-agent-local-architecture.jpg`](hermes-agent-local-architecture.jpg)
+None.
 
 ## Context & Cross-References
 

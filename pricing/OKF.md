@@ -3,7 +3,7 @@ type: module
 title: "Purchasing Power Parity (PPP) Regional Tier Pages"
 description: "Dedicated regional specification pages for all 6 Purchasing Power Parity tiers, covering 195 countries based on the World Bank FY2027 framework."
 tags: [pricing, ppp-tiers, global-parity, world-bank-fy2027]
-timestamp: 2026-11-10T08:43:02Z
+timestamp: 2026-11-27T06:35:11Z
 ---
 
 # Purchasing Power Parity (PPP) Regional Tier Pages

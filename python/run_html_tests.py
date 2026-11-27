@@ -163,7 +163,43 @@ def run_html_ui_tests(quiet=False):
         print(f"Status:        {status}")
         print("=" * 80)
 
-    return 0 if result.wasSuccessful() else 1
+    failed_dir = os.path.join(REPO_DIR, "failed-tests")
+    failed_report_path = os.path.join(failed_dir, "failed-html-tests.md")
+    if result.wasSuccessful():
+        if os.path.exists(failed_report_path):
+            try:
+                os.remove(failed_report_path)
+            except OSError:
+                pass
+        return 0
+
+    try:
+        os.makedirs(failed_dir, exist_ok=True)
+        buf = []
+        for test, err in result.failures:
+            buf.append(f"FAIL: {test}\n{err}")
+        for test, err in result.errors:
+            buf.append(f"ERROR: {test}\n{err}")
+        ts = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
+        report_lines = [
+            "# Failed HTML UI Tests Report",
+            "",
+            f"- **Timestamp**: {ts}",
+            f"- **Tests Run**: {total}",
+            f"- **Failed**: {failed}",
+            "",
+            "## Failure Details",
+            "",
+            "```text",
+            "\n".join(buf),
+            "```",
+            "",
+        ]
+        with open(failed_report_path, "w", encoding="utf-8") as rf:
+            rf.write("\n".join(report_lines))
+    except Exception:
+        pass
+    return 1
 
 
 if __name__ == "__main__":

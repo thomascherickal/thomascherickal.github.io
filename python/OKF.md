@@ -3,7 +3,7 @@ type: module
 title: "Repository Python Automation & Tooling Suite"
 description: "Core automation scripts for component inlining, link verification, schema extraction, markdown mirroring, and metrics reporting."
 tags: [python, build-system, automation, tooling, linters]
-timestamp: 2026-11-10T08:43:02Z
+timestamp: 2026-11-27T06:35:11Z
 ---
 
 # Repository Python Automation & Tooling Suite
@@ -21,7 +21,9 @@ Core automation scripts for component inlining, link verification, schema extrac
 
 ## Subdirectories
 
+- [`docs/`](docs/OKF.md): Subdirectory knowledge bundle
 - [`hooks/`](hooks/OKF.md): Subdirectory knowledge bundle
+- [`ssot/`](ssot/OKF.md): Subdirectory knowledge bundle
 
 ## File Inventory
 
@@ -40,9 +42,10 @@ Core automation scripts for component inlining, link verification, schema extrac
 - [`generate_sitemap.py`](generate_sitemap.py)
 - [`generate_test_coverage_report.py`](generate_test_coverage_report.py)
 - [`md_html_sync.py`](md_html_sync.py)
+- [`precommit_auto_loop.py`](precommit_auto_loop.py)
+- [`run_html_tests.py`](run_html_tests.py)
 - [`run_tests.py`](run_tests.py)
 - [`sync_og_card.py`](sync_og_card.py)
-- [`sync_pricing.py`](sync_pricing.py)
 - [`sync_schemas.py`](sync_schemas.py)
 - [`update_readme_commit_summary.py`](update_readme_commit_summary.py)
 

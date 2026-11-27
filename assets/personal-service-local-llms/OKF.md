@@ -3,7 +3,7 @@ type: dataset
 title: "Personal Local LLMs Visual Assets"
 description: "Diagrams and hardware allocation graphs for personal workstation local LLM deployments."
 tags: [assets, personal-services, local-llms, workstation]
-timestamp: 2026-11-10T08:43:02Z
+timestamp: 2026-11-27T06:35:11Z
 ---
 
 # Personal Local LLMs Visual Assets
@@ -21,10 +21,7 @@ None (Leaf directory).
 
 ## File Inventory
 
-- [`airgapped-trust-security-perimeter.jpg`](airgapped-trust-security-perimeter.jpg)
-- [`local-ai-economic-breakeven.jpg`](local-ai-economic-breakeven.jpg)
-- [`silicon-memory-architecture.jpg`](silicon-memory-architecture.jpg)
-- [`solo-workstation-hardware-setup.jpg`](solo-workstation-hardware-setup.jpg)
+None.
 
 ## Context & Cross-References
 

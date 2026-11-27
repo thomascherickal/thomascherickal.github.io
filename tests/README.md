@@ -38,21 +38,17 @@ node tests/js/test_data_integrity.js
 
 ## Python Test Modules Overview
 
-The Python test suite contains 15 dedicated test modules covering 63 individual test cases:
+The Python test suite in `tests/` verifies the deterministic SSOT pipeline, pricing/policy invariants, HTML UI structure across all 85+ pages, link integrity, and Python build/reporting tools. Any failing test suite writes its failure report exclusively to `failed-tests/` and deletes it automatically once passing.
 
 | Module | Focus Area | Key Verifications |
 | :--- | :--- | :--- |
-| `test_fuzzy_engine.py` | Fuzzy Logic Engine | Triangular & trapezoidal membership, Levenshtein distance, Token Sort & Set ratios, Jaccard similarity, linguistic classifications. |
-| `test_nlp_engine.py` | NLP Normalization | HTML normalization, entity extraction (MONEY, DURATION, SEATS), context extraction, domain classification. |
-| `test_expert_system.py` | Expert System Core | KnowledgeBase reloading, atomic proposition storage, rule salience ordering, occurrence tracking. |
-| `test_master_orchestrator.py` | Synchronizer Execution | Target discovery across root and subdirectories, master dictionary aggregation, markdown report generation, single file syncing. |
-| `test_sync_pricing.py` | Pricing Rules | Authoritative facts extraction, pricing-calculator.js parameter updates, HTML card prices. |
-| `test_sync_business_services.py` | Business Services | Business catalog names, 12 business service cards, business flagship curriculum sync. |
-| `test_sync_personal_services.py` | Personal Services | Personal catalog names, 12 personal service cards, personal flagship curriculum sync. |
-| `test_sync_tiers.py` | Parity Tiers | 6-tier multiplier consistency, country parity tables in pricing.html and pricing-calculator.js. |
-| `test_sync_claude_and_gemini.py` | Architecture Guides | Claude and Gemini guide titles, file listings, and cross-references. |
-| `test_sync_publications_config_faqs.py`| Publications & FAQs | Publications directory sync, site configuration branding, FAQ policies. |
-| `test_continuous_updates.py` | Cyclic & Mutation Tests | Mutates JSON data in data/ back and forth across cycles, verifying exact propagation and idempotency. |
+| `test_ssot.py` | Deterministic SSOT Pipeline | `python/ssot/load.py`, `format.py`, `validate.py`, `render.py` idempotency and `--check` verification. |
+| `test_pricing_and_policy_invariants.py` | Pricing & Policy Invariants | Flagship and Service Pick seat caps (10 included, max 20), 10x10% milestones, Zero Charge Training Materials, Apache 2.0 terms. |
+| `test_html_ui.py` | HTML UI & Accessibility Suite | 101 tests across all 85+ standalone HTML pages (SEO meta, single navbar, footer, accessibility, back-to-top button, CTAs, schemas, fault injection). |
+| `test_check_links.py` | Link & Anchor Integrity | Internal file link and fragment target verification across all HTML pages. |
+| `test_python_tools.py` | Build & Sync Tooling | `build_components.py`, `md_html_sync.py`, `sync_schemas.py`, `delete_page.py`, `generate_metrics.py`, `run_tests.py`. |
+| `test_coverage_report.py` | Coverage Reporting | Python and Node.js V8 coverage parsing and `LAST-COMMIT-REPORT.md` appending. |
+| `test_last_commit_report.py` | Commit Reporting | Structured Python, JS, and HTML UI test report generation in `LAST-COMMIT-REPORT.md`. |
 
 ---
 

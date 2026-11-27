@@ -41,7 +41,6 @@ import generate_sitemap
 import md_html_sync
 import run_tests
 import sync_og_card
-import sync_pricing
 import sync_schemas
 
 
@@ -125,7 +124,6 @@ class TestPythonTools(unittest.TestCase):
         with patch.object(build_components, "REPO_DIR", self.temp_dir), \
              patch.object(build_components, "HEADER_SRC", header_f), \
              patch.object(build_components, "FOOTER_SRC", footer_f), \
-             patch("synchronizer.ExpertSynchronizer.sync_all", side_effect=RuntimeError("mock sync err")), \
              patch("sync_schemas.sync_html_to_schemas", side_effect=RuntimeError("mock schema err")), \
              patch("md_html_sync.run_sync", side_effect=RuntimeError("mock md err")), \
              patch("generate_metrics.generate_metrics", side_effect=RuntimeError("mock metrics err")), \
@@ -630,47 +628,8 @@ class TestPythonTools(unittest.TestCase):
     # ==========================================================================
     # 7. sync_pricing.py
     # ==========================================================================
-    def test_sync_pricing_sandbox(self):
-        """Verifies sync_pricing schema and HTML JSON-LD synchronization in a temp directory."""
-        s_dir = os.path.join(self.temp_dir, "schema")
-        os.makedirs(s_dir, exist_ok=True)
 
-        pricing_schema = os.path.join(s_dir, "pricing-schema.json")
-        with open(pricing_schema, "w", encoding="utf-8") as f:
-            json.dump({"@graph": [{"@type": "WebPage"}, {"@type": "OfferCatalog"}]}, f)
 
-        home_schema = os.path.join(s_dir, "home-schema.json")
-        with open(home_schema, "w", encoding="utf-8") as f:
-            json.dump({"@graph": [{"@type": "OfferCatalog", "@id": "#pricing"}]}, f)
-
-        svc_schema = os.path.join(s_dir, "service-generative-ai-transformation.json")
-        with open(svc_schema, "w", encoding="utf-8") as f:
-            json.dump({"@graph": [{"@type": "Service", "offers": {}}]}, f)
-
-        pricing_html = os.path.join(self.temp_dir, "pricing.html")
-        with open(pricing_html, "w", encoding="utf-8") as f:
-            f.write(
-                '<html><head><script type="application/ld+json">'
-                '{"@graph": [{"@type": "WebPage"}, {"@type": "OfferCatalog"}]}'
-                '</script></head></html>'
-            )
-
-        self.assertTrue(sync_pricing.sync_all_pricing(repo_dir=self.temp_dir, schema_dir=s_dir))
-
-        with open(pricing_schema, "r", encoding="utf-8") as f:
-            ps_data = json.load(f)
-        self.assertIn("$1000 USD", ps_data["@graph"][0]["description"])
-
-        with open(svc_schema, "r", encoding="utf-8") as f:
-            ss_data = json.load(f)
-        self.assertEqual(ss_data["@graph"][0]["offers"]["price"], "100.00")
-
-        # Missing file branches
-        empty_dir = os.path.join(self.temp_dir, "empty")
-        os.makedirs(empty_dir, exist_ok=True)
-        self.assertFalse(sync_pricing.sync_pricing_schema_json(schema_dir=empty_dir))
-        self.assertFalse(sync_pricing.sync_home_schema_json(schema_dir=empty_dir))
-        self.assertFalse(sync_pricing.sync_pricing_html_embedded_schema(repo_dir=empty_dir))
 
     # ==========================================================================
     # 8. run_tests.py
@@ -733,7 +692,6 @@ class TestPythonTools(unittest.TestCase):
 
         with patch.object(run_tests, "TESTS_DIR", temp_cache_dir), \
              patch("unittest.TextTestRunner.run", return_value=fake_result_fail), \
-             patch("auto_healer.generate_failed_tests_report"), \
              patch("sys.stdout", new_callable=io.StringIO):
             code_fail = run_tests.run_all_tests()
             self.assertEqual(code_fail, 1)

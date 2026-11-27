@@ -3,7 +3,7 @@ type: module
 title: "Article Footers Module"
 description: "Reusable article footer templates and components in HTML, Markdown, and Word formats for external publication syndication."
 tags: [article-footers, templates, reusable-components, syndication]
-timestamp: 2026-11-10T08:43:02Z
+timestamp: 2026-11-27T06:35:11Z
 ---
 
 # Article Footers Module
@@ -26,6 +26,7 @@ None (Leaf directory).
 - [`article-footer-plain.docx`](article-footer-plain.docx)
 - [`article-footer.md`](article-footer.md)
 - [`article-footer_dark.html`](article-footer_dark.html)
+- [`portfolio.svg`](portfolio.svg)
 
 ## Context & Cross-References
 

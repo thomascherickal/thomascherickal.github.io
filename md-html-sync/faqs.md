@@ -634,7 +634,7 @@ Our Business Training bookings feature a fixed base investment of $1,000 USD cov
  licensed under Apache 2.0).
  There are no hidden licensing royalties or hourly surprise fees.
 
-- 30 Days Live Training Sprint: 60 days over 2 months, Saturday & Sunday holidays, 4 hours per day.
+- 30 Days Live Training Sprint: 30 working days over 8 weeks with 8 - 10 days as holidays and recovery days, 4 hours per day.
 
 - 30 Days of Included Guidance & Materials: 30 business days of post-training
  guidance, detailed guides, and source materials under Apache 2.0.

@@ -3,7 +3,7 @@ type: dataset
 title: "AI Agent Orchestration Visual Assets"
 description: "Visual schematics illustrating orchestrator-worker hierarchies, parallel fan-out swarms, and MCP routing."
 tags: [assets, orchestration, swarms, mcp-routing]
-timestamp: 2026-11-10T08:43:02Z
+timestamp: 2026-11-27T06:35:11Z
 ---
 
 # AI Agent Orchestration Visual Assets
@@ -21,14 +21,7 @@ None (Leaf directory).
 
 ## File Inventory
 
-- [`career-curriculum-roadmap.jpg`](career-curriculum-roadmap.jpg)
-- [`claude-desktop-orchestration.jpg`](claude-desktop-orchestration.jpg)
-- [`enterprise-agent-orchestration.jpg`](enterprise-agent-orchestration.jpg)
-- [`executive-coordinator-workflow.jpg`](executive-coordinator-workflow.jpg)
-- [`master-subagent-architecture.jpg`](master-subagent-architecture.jpg)
-- [`modular-markdown-rules.jpg`](modular-markdown-rules.jpg)
-- [`subsession-campaign-matrix.jpg`](subsession-campaign-matrix.jpg)
-- [`viral-genai-usecases.jpg`](viral-genai-usecases.jpg)
+None.
 
 ## Context & Cross-References
 

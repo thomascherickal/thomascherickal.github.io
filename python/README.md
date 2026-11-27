@@ -74,14 +74,25 @@ python3 python/delete_page.py <path_or_filename>
 
 ## Related Systems
 
-- **`nlp-fuzzy-expert/`**: Forward-chaining expert system with NLP entity recognition and fuzzy string matching. Synchronizes authoritative facts from `data/*.json` to HTML/JS files repository-wide.
+- **`python/ssot/`**: Deterministic Single Source of Truth (SSOT) build and synchronization pipeline. Validates `data/*.json` against `data/schema/*.schema.json` and cross-file invariants, renders `<!--ssot:...-->` markers and Jinja2 blocks deterministically across HTML pages and `llms.txt`, exports `assets/data/site-data.json` for client-side JavaScript, and audits unprotected literal facts.
   ```bash
-  # Single sync pass:
-  python3 nlp-fuzzy-expert/synchronizer.py
+  # Validate data/*.json schemas and cross-file invariants:
+  python3 python/ssot/validate.py
 
-  # Autonomous background watcher:
-  python3 nlp-fuzzy-expert/watcher.py
+  # Render SSOT markers across HTML and llms.txt:
+  python3 python/ssot/render.py
+
+  # Verify zero unrendered drift (CI / hook check):
+  python3 python/ssot/render.py --check
+
+  # Export client-side JS data bundle:
+  python3 python/ssot/export_site_data.py
+
+  # Scan for hardcoded facts outside SSOT markers:
+  python3 python/ssot/scan_literals.py
   ```
 
+- **`failed-tests/`**: Centralized directory storing all failed-test reports from `python/run_tests.py`, `python/run_html_tests.py`, and `pricing-tests.js`. Reports are automatically removed when their respective test suite passes 100%.
+
 - **`.git/hooks/pre-commit`** & **`python/hooks/pre-commit`**:
-  Pre-commit hook that automatically runs `run_tests.py`, `build_components.py`, `sync_schemas.py`, and `md_html_sync.py` before permitting a commit.
+  Pre-commit hook that automatically runs `python/ssot/validate.py`, `python/build_components.py`, `python/ssot/render.py`, `python/ssot/export_site_data.py`, `python/md_html_sync.py`, `python/sync_schemas.py`, `python/ssot/render.py --check`, and Python/JS/HTML tests before permitting a commit.

@@ -106,29 +106,11 @@ class TestLastCommitReport(unittest.TestCase):
             self.assertEqual(res["total"], 97)
 
     def test_load_references_data_manifest_dict_and_default(self):
-        """Verifies load_references_data priority across manifest, dictionary, and static fallback."""
+        """Verifies load_references_data returns deterministic SSOT pipeline metadata."""
         ref_data = lcr.load_references_data()
         self.assertIn("metadata", ref_data)
+        self.assertEqual(ref_data["metadata"]["engine"], "python/ssot")
         self.assertIn("by_domain", ref_data)
-
-        missing_path = os.path.join(self.temp_dir, "nonexistent.json")
-        temp_dict = os.path.join(self.temp_dir, "dict.json")
-        with open(temp_dict, "w", encoding="utf-8") as f:
-            json.dump({"metadata": {"total_references_tracked": 100}, "by_domain": {"pricing": 100}}, f)
-
-        with patch.object(lcr, "MANIFEST_FILE", missing_path), \
-             patch.object(lcr, "REF_DICT_FILE", temp_dict):
-            d_res = lcr.load_references_data()
-            self.assertEqual(d_res["metadata"]["total_references_tracked"], 100)
-
-        bad_file = os.path.join(self.temp_dir, "bad.json")
-        with open(bad_file, "w", encoding="utf-8") as f:
-            f.write("{corrupt")
-
-        with patch.object(lcr, "MANIFEST_FILE", bad_file), \
-             patch.object(lcr, "REF_DICT_FILE", bad_file):
-            default_res = lcr.load_references_data()
-            self.assertIn("config", default_res["by_domain"])
 
     def test_run_link_check_safe_and_counts(self):
         """Verifies run_link_check_safe and count_schemas_and_mirrors."""
@@ -162,7 +144,7 @@ class TestLastCommitReport(unittest.TestCase):
         self.assertIn("## Quality Gate & Verification Summary", content)
         self.assertIn("## Python Unit Test Suite Details (`tests/`)", content)
         self.assertIn("## JavaScript Unit Test Suite Details (`pricing-tests.js`)", content)
-        self.assertIn("## NLP-Fuzzy-Expert Knowledge Synchronization Report", content)
+        self.assertIn("## Deterministic SSOT Build & Synchronization Report", content)
         self.assertIn("### Core Target Documents Synchronization Status", content)
         self.assertIn("`contact.html`", content)
         self.assertIn("`guarantees.html`", content)

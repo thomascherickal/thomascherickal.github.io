@@ -160,11 +160,15 @@ def build():
     print(f"\nBuild complete. Successfully updated {updated_count} HTML files.")
     
     try:
-        sys.path.insert(0, os.path.join(REPO_DIR, "nlp-fuzzy-expert"))
-        from synchronizer import ExpertSynchronizer
-        ExpertSynchronizer().sync_all(auto_heal=False, verify_tests=False)
+        ssot_dir = os.path.join(REPO_DIR, "python", "ssot")
+        if REPO_DIR not in sys.path:
+            sys.path.insert(0, REPO_DIR)
+        from python.ssot import render as ssot_render
+        from python.ssot import export_site_data as ssot_export
+        ssot_render.main()
+        ssot_export.export_site_data()
     except Exception as e:
-        print(f"Warning: NLP-Fuzzy-Expert sync step failed: {e}")
+        print(f"Warning: SSOT render/export step failed: {e}")
 
     try:
         import sync_schemas

@@ -3,7 +3,7 @@ type: module
 title: "JavaScript Unit & Integration Tests"
 description: "Node.js test suites verifying interactive clientside calculators, payment schedules, and edge-case pricing selections."
 tags: [tests, javascript-tests, node, calculator-tests]
-timestamp: 2026-11-10T08:43:02Z
+timestamp: 2026-11-27T06:35:11Z
 ---
 
 # JavaScript Unit & Integration Tests
@@ -35,6 +35,7 @@ None (Leaf directory).
 - [`test_individual_services.js`](test_individual_services.js)
 - [`test_mermaid.js`](test_mermaid.js)
 - [`test_payment_schedule.js`](test_payment_schedule.js)
+- [`test_tier_calculators.js`](test_tier_calculators.js)
 - [`test_zero_selection.js`](test_zero_selection.js)
 
 ## Context & Cross-References

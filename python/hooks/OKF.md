@@ -3,7 +3,7 @@ type: module
 title: "Git Repository Lifecycle Hooks"
 description: "Pre-commit, pre-push, and editor lifecycle hooks enforcing quality gates, test pass rates, and schema synchronization."
 tags: [python, git-hooks, pre-commit, pre-push, quality-gate]
-timestamp: 2026-11-10T08:43:02Z
+timestamp: 2026-11-27T06:35:11Z
 ---
 
 # Git Repository Lifecycle Hooks

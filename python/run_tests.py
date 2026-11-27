@@ -17,6 +17,7 @@ import sys
 import time
 import json
 import hashlib
+import subprocess
 import unittest
 from datetime import datetime, timezone
 
@@ -207,31 +208,49 @@ def run_all_tests():
             print("=" * 80)
             return 1
 
+        failed_dir = os.path.join(REPO_DIR, "failed-tests")
+        failed_report_path = os.path.join(failed_dir, "failed-python-tests.md")
+
         if result.wasSuccessful():
             print("RESULT: ALL TESTS PASSED.")
             print("=" * 80)
-            try:
-                sys.path.insert(0, os.path.join(REPO_DIR, "nlp-fuzzy-expert"))
-                from auto_healer import clean_stale_failure_reports, update_failed_checks_file
-                clean_stale_failure_reports()
-                update_failed_checks_file(True, "", "", 0)
-            except Exception:  # pragma: no cover
-                pass
+            if os.path.exists(failed_report_path):
+                try:
+                    os.remove(failed_report_path)
+                except OSError:  # pragma: no cover
+                    pass
             return 0
         else:
             print("RESULT: TEST SUITE FAILED.")
             print("=" * 80)
             try:
-                sys.path.insert(0, os.path.join(REPO_DIR, "nlp-fuzzy-expert"))
-                from auto_healer import generate_failed_tests_report, update_failed_checks_file
+                os.makedirs(failed_dir, exist_ok=True)
                 buf = []
                 for test, err in result.failures:
                     buf.append(f"FAIL: {test}\n{err}")
                 for test, err in result.errors:
                     buf.append(f"ERROR: {test}\n{err}")
                 total_fails = len(result.failures) + len(result.errors)
-                generate_failed_tests_report("", "\n".join(buf), total_fails)
-                update_failed_checks_file(False, "", "\n".join(buf), total_fails)
+                ts = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
+                report_lines = [
+                    "# Failed Python Unit Tests Report",
+                    "",
+                    f"- **Timestamp**: {ts}",
+                    f"- **Tests Run**: {result.testsRun}",
+                    f"- **Failures**: {len(result.failures)}",
+                    f"- **Errors**: {len(result.errors)}",
+                    f"- **Total Failed**: {total_fails}",
+                    "",
+                    "## Failure Details",
+                    "",
+                    "```text",
+                    "\n".join(buf),
+                    "```",
+                    "",
+                ]
+                with open(failed_report_path, "w", encoding="utf-8") as rf:
+                    rf.write("\n".join(report_lines))
+                print(f"[run_tests] Wrote failure report to: {os.path.relpath(failed_report_path, REPO_DIR)}")
             except Exception as e:  # pragma: no cover
                 print(f"[run_tests] Note: failed report generation notice: {e}")
             return 1
@@ -242,6 +261,45 @@ def run_all_tests():
             except OSError:  # pragma: no cover
                 pass
 
+def run_js_and_html_suites():
+    """Runs the JavaScript pricing test suite and HTML UI verification suite."""
+    js_cmd = ["node", os.path.join(REPO_DIR, "pricing-tests.js")]
+    html_cmd = [sys.executable, os.path.join(REPO_DIR, "python", "run_html_tests.py")]
+
+    print("\n" + "=" * 80)
+    print("           RUNNING JAVASCRIPT UNIT TEST SUITE (pricing-tests.js)")
+    print("=" * 80)
+    js_res = subprocess.run(js_cmd, cwd=REPO_DIR)
+
+    print("\n" + "=" * 80)
+    print("           RUNNING HTML UI TEST SUITE (python/run_html_tests.py)")
+    print("=" * 80)
+    html_res = subprocess.run(html_cmd, cwd=REPO_DIR)
+
+    return js_res.returncode, html_res.returncode
+
+
+def run_full_test_suite():
+    """Executes Python, JavaScript, and HTML UI test suites and returns combined exit code."""
+    py_code = run_all_tests()
+    if "--python-only" in sys.argv:
+        return py_code
+
+    js_code, html_code = run_js_and_html_suites()
+
+    print("\n" + "=" * 80)
+    print("                 COMBINED TEST SUITE EXECUTION SUMMARY")
+    print("=" * 80)
+    print(f"Python Unit Tests (tests/):          {'PASSED' if py_code == 0 else 'FAILED'}")
+    print(f"JavaScript Tests (pricing-tests.js): {'PASSED' if js_code == 0 else 'FAILED'}")
+    print(f"HTML UI Tests (run_html_tests.py):   {'PASSED' if html_code == 0 else 'FAILED'}")
+    overall_ok = (py_code == 0 and js_code == 0 and html_code == 0)
+    print("=" * 80)
+    print(f"OVERALL RESULT: {'ALL SUITES PASSED.' if overall_ok else 'ONE OR MORE SUITES FAILED.'}")
+    print("=" * 80)
+    return 0 if overall_ok else 1
+
+
 if __name__ == "__main__":  # pragma: no cover
-    exit_code = run_all_tests()
+    exit_code = run_full_test_suite()
     sys.exit(exit_code)

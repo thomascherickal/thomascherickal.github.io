@@ -3,7 +3,7 @@ type: module
 title: "Asset JavaScript Libraries"
 description: "Vendored clientside script helpers and interactive UI utilities supporting asset galleries and diagrams."
 tags: [assets, javascript, frontend, libraries]
-timestamp: 2026-11-10T08:43:02Z
+timestamp: 2026-11-27T06:35:11Z
 ---
 
 # Asset JavaScript Libraries

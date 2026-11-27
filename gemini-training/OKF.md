@@ -3,7 +3,7 @@ type: module
 title: "Google Gemini & Gemma Engineering Guides"
 description: "Comprehensive technical reference guides for Google AI Studio, Google Antigravity IDE, Gemini Deep Think extended reasoning, Gemma local models, and multimodal architectures."
 tags: [gemini-training, gemini, gemma, antigravity-ide, deepthink, multimodal]
-timestamp: 2026-11-10T08:43:02Z
+timestamp: 2026-11-27T06:35:11Z
 ---
 
 # Google Gemini & Gemma Engineering Guides
@@ -24,14 +24,20 @@ None (Leaf directory).
 ## File Inventory
 
 - [`google-ai-studio.html`](google-ai-studio.html)
+- [`google-antigravity-chat.html`](google-antigravity-chat.html)
 - [`google-antigravity-ide.html`](google-antigravity-ide.html)
+- [`google-deep-research.html`](google-deep-research.html)
 - [`google-deepmind.html`](google-deepmind.html)
 - [`google-gemini-101.html`](google-gemini-101.html)
 - [`google-gemini-4-argon.html`](google-gemini-4-argon.html)
 - [`google-gemini-4-carbon.html`](google-gemini-4-carbon.html)
+- [`google-gemini-4-helium.html`](google-gemini-4-helium.html)
 - [`google-gemini-4-hydrogen.html`](google-gemini-4-hydrogen.html)
+- [`google-gemini-4-krypton.html`](google-gemini-4-krypton.html)
+- [`google-gemini-4-neon.html`](google-gemini-4-neon.html)
 - [`google-gemini-desktop.html`](google-gemini-desktop.html)
 - [`google-gemini-notebook.html`](google-gemini-notebook.html)
+- [`google-gemini-skills.html`](google-gemini-skills.html)
 - [`google-gemini-spark.html`](google-gemini-spark.html)
 - [`google-gemma-local-models.html`](google-gemma-local-models.html)
 - [`google-multimodality.html`](google-multimodality.html)

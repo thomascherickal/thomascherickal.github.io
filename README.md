@@ -164,7 +164,7 @@ graph TD
 
   subgraph Automation Pipeline
     Build["python3 python/build_components.py"]
-    NLPExpert["python3 nlp-fuzzy-expert/synchronizer.py"]
+    SSOT["python3 python/ssot/validate.py & render.py"]
     Sync["python3 python/md_html_sync.py"]
     Tests["python3 python/run_tests.py"]
   end
@@ -263,71 +263,37 @@ To make elite generative AI engineering universally accessible, I apply mathemat
 
 The integrity of this website is maintained by rigorous automated Python tooling. Below are actual execution logs from the centralized build, synchronization, and verification pipelines:
 
-### 1. NLP-Fuzzy-Expert Knowledge Synchronization
+### 1. Deterministic SSOT Build & Synchronization Pipeline
 ```bash
-$ python3 nlp-fuzzy-expert/synchronizer.py
+$ python3 python/ssot/validate.py && python3 python/ssot/render.py --check && python3 python/ssot/export_site_data.py
 ```
 
 ```text
-================================================================================
-           NLP-FUZZY-EXPERT KNOWLEDGE SYNCHRONIZATION SYSTEM
-================================================================================
-[Step 1/6] Loading authoritative facts from data/*.json into KnowledgeBase...
-  -> Authoritative sources loaded: 9 data domains
-  -> Total atomic propositions registered in KnowledgeBase: 230
-
-[Step 2/6] Registering production rules in salience priority order...
-  -> Active production rules registered: 16
-
-[Step 3/6] Discovering target documents across repository...
-  -> Discovered 65 target documents (.html, .js) for synchronization.
-
-[Step 4/6] Executing forward-chaining inference & computing line diffs...
-  -> All 65 target documents evaluated. Zero changes required (fully in sync).
-
-[Step 5/6] Generating domain references and master dictionary...
-  -> Master Dictionary generated: references_dictionary.json (232 total references)
-
-[Step 6/6] Generating domain markdown synchronization reports...
-  -> Wrote 9 domain reports in nlp-fuzzy-expert/
-
-================================================================================
-                     SYNCHRONIZATION SUMMARY TABLE
-================================================================================
-+----------------------------+---------+---------------+-------------------------+--------------------------+
-| Target File                | Status  | Changed Lines | Rules Fired             | Fields Synced            |
-+----------------------------+---------+---------------+-------------------------+--------------------------+
-| all-business-services.html | IN SYNC | -             | -                       | business_service_01_c... |
-| all-personal-services.html | IN SYNC | -             | -                       | personal_service_01_c... |
-| business-ai-training.html  | IN SYNC | -             | -                       | business_flagship_dur... |
-| faqs.html                  | IN SYNC | -             | -                       | business_included_seats  |
-| index.html                 | IN SYNC | -             | -                       | index_business_flagsh... |
-| personal-ai-training.html  | IN SYNC | -             | -                       | personal_flagship_dur... |
-| pricing-calculator.js      | IN SYNC | -             | -                       | calculator_seat_thres... |
-| pricing.html               | IN SYNC | -             | PricingHeroPackagesRule | business_flagship_day... |
-+----------------------------+---------+---------------+-------------------------+--------------------------+
-Summary: 65 files evaluated | 0 updated | 65 in sync | 232 references tracked
-================================================================================
+SSOT VALIDATION PASSED: All data/*.json schemas and cross-file invariants valid.
+SSOT CHECK PASSED: All markers in sync.
+Generated assets/data/site-data.json
 ```
 
-### 2. Comprehensive Python Unit Test Suite
+All protected commercial facts (prices, seat counts, durations, percentages, installments, parity tiers, reply SLA, and publication titles) are authored exclusively in `data/*.json`, validated by JSON Schemas in `data/schema/*.schema.json` and cross-file invariants in `python/ssot/validate.py`, and rendered deterministically into `<!--ssot:...-->` markers across HTML pages and `llms.txt` by `python/ssot/render.py`. Client-side JavaScript data is exported to `assets/data/site-data.json` via `python/ssot/export_site_data.py`.
+
+### 2. Comprehensive Unit & UI Test Suites (`tests/` & `failed-tests/`)
 ```bash
 $ python3 python/run_tests.py
+$ node pricing-tests.js
+$ python3 python/run_html_tests.py
 ```
 
-| Test Module                         | Target Domain / Responsibility                 | Tests Run | Status | Failures | Errors |
-|:------------------------------------|:-----------------------------------------------|:---------:|:------:|:--------:|:------:|
-| `test_continuous_updates.py`        | Multi-cycle updates & continuous idempotency   | 2         | PASS   | 0        | 0      |
-| `test_expert_system.py`             | KnowledgeBase, InferenceEngine, atomic JSON    | 5         | PASS   | 0        | 0      |
-| `test_fuzzy_engine.py`              | Levenshtein, token set/sort, fuzzy edge cases  | 7         | PASS   | 0        | 0      |
-| `test_master_orchestrator.py`       | Full forward-chaining pass & table reporting   | 4         | PASS   | 0        | 0      |
-| `test_nlp_engine.py`                | Entity NER (money, duration, seats), context   | 6         | PASS   | 0        | 0      |
-| `test_sync_business_services.py`    | Business curriculum & card synchronization     | 3         | PASS   | 0        | 0      |
-| `test_sync_claude_and_gemini.py`    | Claude & Gemini guides facts, Google DeepMind  | 5         | PASS   | 0        | 0      |
-| `test_sync_personal_services.py`    | Personal curriculum & card synchronization     | 3         | PASS   | 0        | 0      |
-| `test_sync_pricing.py`              | Pricing formulas, calculator sync, thresholds  | 5         | PASS   | 0        | 0      |
-| `test_sync_publications_config_faqs.py` | Publications, config & FAQ references      | 2         | PASS   | 0        | 0      |
-| `test_sync_tiers.py`                | 6 Purchasing Power Parity (PPP) tiers          | 3         | PASS   | 0        | 0      |
+| Test Module | Target Domain / Responsibility |
+|:---|:---|
+| `test_ssot.py` | Deterministic SSOT loader, formatters, schema/invariant validator, marker renderer, and `--check` idempotency |
+| `test_pricing_and_policy_invariants.py` | Flagship & Service Pick seat caps, 10x10% milestones, Zero Charge Training Materials, Apache 2.0 terms |
+| `test_html_ui.py` | 101 HTML UI, accessibility, SEO, single-navbar, back-to-top, and fault-injection checks across all 85+ pages |
+| `test_check_links.py` | Deep internal link and anchor verification across all HTML pages |
+| `test_python_tools.py` | Component inliner, Markdown mirror sync, schema sync, metrics, and page deletion tooling |
+| `test_coverage_report.py` | Python & JavaScript V8 coverage report generation |
+| `test_last_commit_report.py` | Unified Python, JavaScript, and HTML UI commit report generation |
+
+Any failing test suite writes its failure report exclusively into `failed-tests/` (`failed-python-tests.md`, `failed-html-tests.md`, or `failed-pricing-tests.md`) and automatically removes it once the suite passes 100%.
 
 ```text
 ================================================================================
@@ -444,7 +410,7 @@ Whether you represent an early-stage startup seeking rapid technical validation,
 
 | Language | Tracked Files | Total Statements / Lines | Covered | Missed | Coverage % | Status |
 |:---|---:|---:|---:|---:|---:|:---|
-| Python (`nlp-fuzzy-expert/`, `python/`) | 0 | 0 | 0 | 0 | **100.00%** | PASS |
+| Python (`python/`, `python/ssot/`) | 0 | 0 | 0 | 0 | **100.00%** | PASS |
 | JavaScript (Root scripts) | 3 | 1,302 | 1,302 | 0 | **100.00%** | PASS |
 | **Repository Combined Total** | **3** | **1,302** | **1,302** | **0** | **100.00%** | **PASS** |
 

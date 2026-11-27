@@ -3,7 +3,7 @@ type: dataset
 title: "Advanced AI Agents Visual Assets"
 description: "Architecture diagrams, state machine flows, and visual schematics for the Advanced AI Agents service curriculum."
 tags: [assets, advanced-agents, diagrams, swarms]
-timestamp: 2026-11-10T08:43:02Z
+timestamp: 2026-11-27T06:35:11Z
 ---
 
 # Advanced AI Agents Visual Assets
@@ -21,12 +21,7 @@ None (Leaf directory).
 
 ## File Inventory
 
-- [`agent-architecture-mesh.jpg`](agent-architecture-mesh.jpg)
-- [`agent-execution-runtime.jpg`](agent-execution-runtime.jpg)
-- [`agent-security-defense.jpg`](agent-security-defense.jpg)
-- [`personal-agent-companion.jpg`](personal-agent-companion.jpg)
-- [`personal-local-swarm.jpg`](personal-local-swarm.jpg)
-- [`personal-memory-graph.jpg`](personal-memory-graph.jpg)
+None.
 
 ## Context & Cross-References
 

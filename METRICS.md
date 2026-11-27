@@ -1,6 +1,6 @@
 # Repository Code & Engineering Metrics
 
-> **Automated Status Report** | Generated on `2026-11-27 06:19:14 UTC` | Branch: `ssot-migration` | Head Commit: `cdc426c`
+> **Automated Status Report** | Generated on `2026-11-27 06:40:25 UTC` | Branch: `ssot-migration` | Head Commit: `525c745`
 > This report tracks comprehensive codebase, architectural, structural, and content metrics across `thomascherickal.github.io`.
 > Updated automatically on every build and push.
 
@@ -10,14 +10,14 @@
 
 | Metric | Count | Details |
 | :--- | :--- | :--- |
-| **Total Tracked Files** | **587** | Fully tracked Git artifacts |
-| **Total Lines of Source Code & Content** | **974,339** | All text, markup, styles & scripts |
-| **Source Code Lines (SLOC)** | **956,509** | Executable / renderable content lines |
-| **Comment & Documentation Lines** | **5,531** | In-code and architectural documentation |
-| **Blank / Spacing Lines** | **12,299** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **57.60 MB (60,398,521 bytes)** | HTML, CSS, JS, Python, SVG & Images |
-| **Total Word Count (Prose & Technical)** | **847,519 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **584** | Since repository inception (2023-03-30) |
+| **Total Tracked Files** | **530** | Fully tracked Git artifacts |
+| **Total Lines of Source Code & Content** | **157,050** | All text, markup, styles & scripts |
+| **Source Code Lines (SLOC)** | **140,815** | Executable / renderable content lines |
+| **Comment & Documentation Lines** | **5,167** | In-code and architectural documentation |
+| **Blank / Spacing Lines** | **11,068** | Code formatting and structural layout |
+| **Total Repository Size (Tracked Assets)** | **18.38 MB (19,273,538 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Word Count (Prose & Technical)** | **387,246 words** | Educational, curriculum, & marketing prose |
+| **Total Git Commits** | **585** | Since repository inception (2023-03-30) |
 | **Latest Commit Date** | **2026-11-27** | Subject: "feat(synchronizer): synchronize repository state (1 test failure warnings - see failed_unit_tests.report.md)" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
@@ -27,15 +27,15 @@
 
 | Category | Files | Total Lines | Total Size | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| **HTML Documents** | 91 | 95,484 | 7.77 MB (8,142,899 bytes) | Production static web pages, services, frameworks & guides |
+| **HTML Documents** | 91 | 96,156 | 7.81 MB (8,184,277 bytes) | Production static web pages, services, frameworks & guides |
 | **CSS Stylesheets** | 16 | 12,250 | 286.36 KB (293,233 bytes) | Design tokens, animations, responsive layout & themes |
-| **JavaScript Scripts** | 33 | 11,590 | 3.70 MB (3,884,405 bytes) | Client-side interactivity, search, filter & components |
-| **Python Tooling** | 65 | 17,675 | 809.60 KB (829,027 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
-| **Markdown Documentation** | 162 | 44,138 | 4.99 MB (5,234,602 bytes) | Project documentation, sync mirrors, guidelines & rules |
-| **JSON Schemas & Data** | 127 | 793,135 | 35.74 MB (37,477,646 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
+| **JavaScript Scripts** | 33 | 11,579 | 3.70 MB (3,884,078 bytes) | Client-side interactivity, search, filter & components |
+| **Python Tooling** | 38 | 10,174 | 454.44 KB (465,342 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
+| **Markdown Documentation** | 145 | 14,977 | 989.69 KB (1,013,446 bytes) | Project documentation, sync mirrors, guidelines & rules |
+| **JSON Schemas & Data** | 112 | 11,847 | 490.12 KB (501,883 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 44 | 67 | 188.24 KB (192,754 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
 | **Raster Images (WebP, JPG, PNG)** | 37 | 0 | 4.06 MB (4,259,892 bytes) | Optimized feature hero graphics, social cards & assets |
-| **Config & Metadata** | 12 | 0 | 82.09 KB (84,063 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
+| **Config & Metadata** | 14 | 0 | 467.42 KB (478,633 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
 
 ---
 
@@ -43,22 +43,23 @@
 
 | Extension | Tracked Files | Total Lines | Total Size | Percentage of Files |
 | :--- | :--- | :--- | :--- | :--- |
-| `.json` | 127 | 793,135 | 35.74 MB (37,477,646 bytes) | 21.6% |
-| `.html` | 91 | 95,484 | 7.77 MB (8,142,899 bytes) | 15.5% |
-| `.md` | 162 | 44,138 | 4.99 MB (5,234,602 bytes) | 27.6% |
-| `.py` | 65 | 17,675 | 809.60 KB (829,027 bytes) | 11.1% |
-| `.css` | 16 | 12,250 | 286.36 KB (293,233 bytes) | 2.7% |
-| `.js` | 33 | 11,590 | 3.70 MB (3,884,405 bytes) | 5.6% |
-| `.svg` | 44 | 67 | 188.24 KB (192,754 bytes) | 7.5% |
-| `.webp` | 18 | 0 | 1.66 MB (1,745,378 bytes) | 3.1% |
-| `.png` | 12 | 0 | 1.28 MB (1,339,427 bytes) | 2.0% |
+| `.html` | 91 | 96,156 | 7.81 MB (8,184,277 bytes) | 17.2% |
+| `.md` | 145 | 14,977 | 989.69 KB (1,013,446 bytes) | 27.4% |
+| `.css` | 16 | 12,250 | 286.36 KB (293,233 bytes) | 3.0% |
+| `.json` | 112 | 11,847 | 490.12 KB (501,883 bytes) | 21.1% |
+| `.js` | 33 | 11,579 | 3.70 MB (3,884,078 bytes) | 6.2% |
+| `.py` | 38 | 10,174 | 454.44 KB (465,342 bytes) | 7.2% |
+| `.svg` | 44 | 67 | 188.24 KB (192,754 bytes) | 8.3% |
+| `.webp` | 18 | 0 | 1.66 MB (1,745,378 bytes) | 3.4% |
+| `.png` | 12 | 0 | 1.28 MB (1,339,427 bytes) | 2.3% |
 | `.jpg` | 5 | 0 | 988.42 KB (1,012,141 bytes) | 0.9% |
+| `.csv` | 2 | 0 | 384.83 KB (394,069 bytes) | 0.4% |
 | `.jpeg` | 1 | 0 | 152.39 KB (156,047 bytes) | 0.2% |
-| `.txt` | 2 | 0 | 35.51 KB (36,358 bytes) | 0.3% |
-| `.docx` | 2 | 0 | 28.83 KB (29,519 bytes) | 0.3% |
+| `.txt` | 2 | 0 | 35.51 KB (36,358 bytes) | 0.4% |
+| `.docx` | 2 | 0 | 28.83 KB (29,519 bytes) | 0.4% |
 | `.xml` | 1 | 0 | 11.92 KB (12,210 bytes) | 0.2% |
 | `.ico` | 1 | 0 | 6.74 KB (6,899 bytes) | 0.2% |
-| `[no extension]` | 6 | 0 | 5.31 KB (5,438 bytes) | 1.0% |
+| `[no extension]` | 6 | 0 | 5.80 KB (5,939 bytes) | 1.1% |
 | `.webmanifest` | 1 | 0 | 538 bytes | 0.2% |
 
 ---
@@ -72,8 +73,8 @@
 | **CSS Design Tokens (`--var`)** | **90** | Standardized color palettes, typography, spacing & radii |
 | **FAQ Question Cards** | **198** | Rich searchable & filterable accordion cards |
 | **Primary Headings (`<h1>`)** | **86** | Strict single-H1 semantic hierarchy per page |
-| **Secondary Section Headings (`<h2>`)** | **830** | Structural topic subdivisions |
-| **Card & Item Headings (`<h3>`)** | **469** | Individual service, question, and feature cards |
+| **Secondary Section Headings (`<h2>`)** | **833** | Structural topic subdivisions |
+| **Card & Item Headings (`<h3>`)** | **483** | Individual service, question, and feature cards |
 | **Call-to-Action (CTA) Modules** | **100** | Standardized CTAs with Free LinkedIn Consultation rule |
 | **Canonical Links Configured** | **85** | 100% SEO canonical URL coverage across public pages |
 | **Open Graph Meta Tags** | **605** | Social preview cards across Twitter/LinkedIn/Facebook |
@@ -96,9 +97,11 @@
 
 | Script File / Module | Purpose | Functions |
 | :--- | :--- | :--- |
-| [`python/build_components.py`](python/build_components.py) | Central component inliner for `header.html` and `footer.html` across all HTML pages, running synchronizer on rebuild | Inliner, Parser, Rebuilder |
-| [`nlp-fuzzy-expert/synchronizer.py`](nlp-fuzzy-expert/synchronizer.py) | Knowledge synchronization engine matching facts from `data/*.json` and updating HTML/JS files with line diffs | Expert System, Fuzzy Logic, NLP Engine |
-| [`nlp-fuzzy-expert/watcher.py`](nlp-fuzzy-expert/watcher.py) | Continuous file watcher daemon monitoring `data/*.json` to trigger real-time updates | File Watcher, Automated Sync |
+| [`python/build_components.py`](python/build_components.py) | Central component inliner for `header.html` and `footer.html` across all HTML pages, running SSOT render/export on rebuild | Inliner, Parser, Rebuilder |
+| [`python/ssot/validate.py`](python/ssot/validate.py) | JSON Schema and cross-file invariant validator for `data/*.json` | Schema Validator, Invariant Checker |
+| [`python/ssot/render.py`](python/ssot/render.py) | Deterministic build-time renderer for `<!--ssot:...-->` markers and Jinja2 blocks (`--check` mode for CI/hooks) | Marker Renderer, Block Renderer |
+| [`python/ssot/export_site_data.py`](python/ssot/export_site_data.py) | Generates `assets/data/site-data.json` for client-side JavaScript from `data/*.json` | JSON Exporter |
+| [`python/ssot/scan_literals.py`](python/ssot/scan_literals.py) | Scans HTML, JS, Markdown, and schemas for unprotected literal facts outside SSOT markers | Literal Auditor |
 | [`python/run_tests.py`](python/run_tests.py) | Comprehensive test discovery and pre-commit test enforcement suite (36+ unit tests) | Test Runner, Verification Suite |
 | [`python/check_links.py`](python/check_links.py) | Deep link and anchor target validation across all HTML files | Link Validator, Anchor Auditor |
 | [`python/sync_schemas.py`](python/sync_schemas.py) | Extracts and synchronizes embedded JSON-LD schemas into `schema/` directory | Schema Extractor, JSON-LD Synchronizer |
@@ -107,8 +110,8 @@
 | [`python/generate_favicons.py`](python/generate_favicons.py) | Dynamic multi-size favicon generator | Icon Resizer, Asset Pipeline |
 | [`python/generate_og_card.py`](python/generate_og_card.py) | OpenGraph social preview image generator | Pillow Compositor, Brand Styler |
 | [`python/hooks/post_edit_hook.py`](python/hooks/post_edit_hook.py) | IDE lifecycle hook triggering component updates on file modification | Hook Trigger, Event Dispatcher |
-| **Python Function Definitions** | **573 functions** across tooling scripts | Modular execution units |
-| **Python Class Definitions** | **42 classes** | Structured state containers |
+| **Python Function Definitions** | **308 functions** across tooling scripts | Modular execution units |
+| **Python Class Definitions** | **11 classes** | Structured state containers |
 
 ---
 
@@ -130,8 +133,8 @@
 
 - **Framework**: `BeautifulSoup4 + lxml (unittest)`
 - **Pages Scanned**: **85 HTML pages**
-- **Summary**: **101 / 101 PASSED** (`0` failures, `6.59s`, Status: **PASSED**)
-- **Last Verified**: `2026-11-27 06:18:42 UTC`
+- **Summary**: **101 / 101 PASSED** (`0` failures, `6.83s`, Status: **PASSED**)
+- **Last Verified**: `2026-11-27 06:36:28 UTC`
 
 | Test Category | Tests | Passed | Failed | Pass Rate | Status |
 | :--- | :--- | :--- | :--- | :--- | :--- |

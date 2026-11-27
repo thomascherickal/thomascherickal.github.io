@@ -3,7 +3,7 @@ type: module
 title: "Enterprise & Business AI Services Catalog"
 description: "Dedicated specification pages for 16 specialized enterprise AI training services, each with complete day-by-day syllabi, deliverables, and architecture blueprints."
 tags: [business-services, enterprise-ai, service-catalog, syllabi]
-timestamp: 2026-11-10T08:43:02Z
+timestamp: 2026-11-27T06:35:11Z
 ---
 
 # Enterprise & Business AI Services Catalog
@@ -24,19 +24,21 @@ None (Leaf directory).
 ## File Inventory
 
 - [`business-service-advanced-ai-agents.html`](business-service-advanced-ai-agents.html)
-- [`business-service-agentic-ai-systems.html`](business-service-agentic-ai-systems.html)
-- [`business-service-ai-agents-orchestration.html`](business-service-ai-agents-orchestration.html)
+- [`business-service-agentic-assistants.html`](business-service-agentic-assistants.html)
 - [`business-service-ai-assisted-leads-magnet.html`](business-service-ai-assisted-leads-magnet.html)
-- [`business-service-ai-based-competitor-research.html`](business-service-ai-based-competitor-research.html)
-- [`business-service-ai-budget-cost-limits-training.html`](business-service-ai-budget-cost-limits-training.html)
+- [`business-service-ai-budget-cost-control.html`](business-service-ai-budget-cost-control.html)
 - [`business-service-ai-developer-training.html`](business-service-ai-developer-training.html)
-- [`business-service-ai-schedule-automation.html`](business-service-ai-schedule-automation.html)
 - [`business-service-ai-second-brain.html`](business-service-ai-second-brain.html)
+- [`business-service-claude-agents-orchestration.html`](business-service-claude-agents-orchestration.html)
+- [`business-service-claude-research-training.html`](business-service-claude-research-training.html)
+- [`business-service-competitor-research.html`](business-service-competitor-research.html)
 - [`business-service-continuous-learning.html`](business-service-continuous-learning.html)
+- [`business-service-gemini-research-training.html`](business-service-gemini-research-training.html)
 - [`business-service-generative-ai-transformation.html`](business-service-generative-ai-transformation.html)
+- [`business-service-knowledge-graphs.html`](business-service-knowledge-graphs.html)
+- [`business-service-local-ai-for-sensitive-data.html`](business-service-local-ai-for-sensitive-data.html)
 - [`business-service-local-llms-cost-slashing.html`](business-service-local-llms-cost-slashing.html)
 - [`business-service-workflow-automations.html`](business-service-workflow-automations.html)
-- [`business-service-worklife-balance.html`](business-service-worklife-balance.html)
 
 ## Context & Cross-References
 
