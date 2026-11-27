@@ -701,8 +701,3 @@ python3 python/ssot/validate.py && python3 python/ssot/render.py --check && pyth
 | 10 | Set up IndexNow GitHub Action + Google Search Console + Bing Webmaster Tools | SEO / GEO | Low | GitHub Actions run + Bing IndexNow dashboard |
 | 11 | Enforce `rel="canonical"` syndication across Dev.to, Medium, Hashnode, HackerNoon + monthly GEO prompt audit | GEO / E-E-A-T | Ongoing | Monthly 15-prompt AI citation tracker |
 | 12 | Add `test_102` through `test_107` SEO/AEO/GEO guards in `tests/test_html_ui.py` | Quality Gate | Low | `python3 python/run_tests.py --summary-only` |
-
-
-External Steps (Only Needed in External Consoles)
-IndexNow activation: Generate a 32-char hex key, place <KEY>.txt in the repo root, and add INDEXNOW_KEY to GitHub repo Settings -> Secrets and variables -> Actions so .github/workflows/indexnow.yml pings Bing/ChatGPT Search on every push to main.
-Search Consoles: After pushing, submit https://thedigitalfuturist.com/sitemap.xml and https://thedigitalfuturist.com/rss.xml in Google Search Console and Bing Webmaster Tools.
