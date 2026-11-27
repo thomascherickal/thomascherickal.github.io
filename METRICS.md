@@ -1,6 +1,6 @@
 # Repository Code & Engineering Metrics
 
-> **Automated Status Report** | Generated on `2026-11-27 09:08:50 UTC` | Branch: `main` | Head Commit: `fe43936`
+> **Automated Status Report** | Generated on `2026-11-27 09:32:35 UTC` | Branch: `main` | Head Commit: `1fa42b4`
 > This report tracks comprehensive codebase, architectural, structural, and content metrics across `thomascherickal.github.io`.
 > Updated automatically on every build and push.
 
@@ -10,15 +10,15 @@
 
 | Metric | Count | Details |
 | :--- | :--- | :--- |
-| **Total Tracked Files** | **543** | Fully tracked Git artifacts |
-| **Total Lines of Source Code & Content** | **161,465** | All text, markup, styles & scripts |
-| **Source Code Lines (SLOC)** | **144,886** | Executable / renderable content lines |
-| **Comment & Documentation Lines** | **5,245** | In-code and architectural documentation |
-| **Blank / Spacing Lines** | **11,334** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **18.77 MB (19,683,570 bytes)** | HTML, CSS, JS, Python, SVG & Images |
-| **Total Word Count (Prose & Technical)** | **415,045 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **591** | Since repository inception (2023-03-30) |
-| **Latest Commit Date** | **2026-11-27** | Subject: "feat(seo-aeo-geo): implement all 3 phases of SEO, AEO, and GEO upgrades" |
+| **Total Tracked Files** | **544** | Fully tracked Git artifacts |
+| **Total Lines of Source Code & Content** | **161,812** | All text, markup, styles & scripts |
+| **Source Code Lines (SLOC)** | **145,009** | Executable / renderable content lines |
+| **Comment & Documentation Lines** | **5,336** | In-code and architectural documentation |
+| **Blank / Spacing Lines** | **11,467** | Code formatting and structural layout |
+| **Total Repository Size (Tracked Assets)** | **18.80 MB (19,711,921 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Word Count (Prose & Technical)** | **419,399 words** | Educational, curriculum, & marketing prose |
+| **Total Git Commits** | **592** | Since repository inception (2023-03-30) |
+| **Latest Commit Date** | **2026-11-27** | Subject: "chore(seo): add IndexNow verification key file" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
 ---
@@ -31,7 +31,7 @@
 | **CSS Stylesheets** | 16 | 12,250 | 286.36 KB (293,233 bytes) | Design tokens, animations, responsive layout & themes |
 | **JavaScript Scripts** | 33 | 11,579 | 3.70 MB (3,884,078 bytes) | Client-side interactivity, search, filter & components |
 | **Python Tooling** | 40 | 11,026 | 501.06 KB (513,085 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
-| **Markdown Documentation** | 153 | 15,921 | 1.08 MB (1,129,124 bytes) | Project documentation, sync mirrors, guidelines & rules |
+| **Markdown Documentation** | 154 | 16,268 | 1.10 MB (1,157,475 bytes) | Project documentation, sync mirrors, guidelines & rules |
 | **JSON Schemas & Data** | 112 | 12,544 | 524.63 KB (537,217 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 44 | 67 | 188.24 KB (192,754 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
 | **Raster Images (WebP, JPG, PNG)** | 37 | 0 | 4.06 MB (4,259,892 bytes) | Optimized feature hero graphics, social cards & assets |
@@ -43,8 +43,8 @@
 
 | Extension | Tracked Files | Total Lines | Total Size | Percentage of Files |
 | :--- | :--- | :--- | :--- | :--- |
-| `.html` | 91 | 98,078 | 7.95 MB (8,337,327 bytes) | 16.8% |
-| `.md` | 153 | 15,921 | 1.08 MB (1,129,124 bytes) | 28.2% |
+| `.html` | 91 | 98,078 | 7.95 MB (8,337,327 bytes) | 16.7% |
+| `.md` | 154 | 16,268 | 1.10 MB (1,157,475 bytes) | 28.3% |
 | `.json` | 112 | 12,544 | 524.63 KB (537,217 bytes) | 20.6% |
 | `.css` | 16 | 12,250 | 286.36 KB (293,233 bytes) | 2.9% |
 | `.js` | 33 | 11,579 | 3.70 MB (3,884,078 bytes) | 6.1% |
@@ -134,8 +134,8 @@
 
 - **Framework**: `BeautifulSoup4 + lxml (unittest)`
 - **Pages Scanned**: **85 HTML pages**
-- **Summary**: **107 / 107 PASSED** (`0` failures, `7.58s`, Status: **PASSED**)
-- **Last Verified**: `2026-11-27 07:54:35 UTC`
+- **Summary**: **107 / 107 PASSED** (`0` failures, `7.12s`, Status: **PASSED**)
+- **Last Verified**: `2026-11-27 09:08:57 UTC`
 
 | Test Category | Tests | Passed | Failed | Pass Rate | Status |
 | :--- | :--- | :--- | :--- | :--- | :--- |
