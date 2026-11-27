@@ -1,6 +1,6 @@
 # Repository Code & Engineering Metrics
 
-> **Automated Status Report** | Generated on `2026-11-27 07:00:07 UTC` | Branch: `ssot-migration` | Head Commit: `85a224e`
+> **Automated Status Report** | Generated on `2026-11-27 07:04:56 UTC` | Branch: `main` | Head Commit: `8d707eb`
 > This report tracks comprehensive codebase, architectural, structural, and content metrics across `thomascherickal.github.io`.
 > Updated automatically on every build and push.
 
@@ -11,14 +11,14 @@
 | Metric | Count | Details |
 | :--- | :--- | :--- |
 | **Total Tracked Files** | **537** | Fully tracked Git artifacts |
-| **Total Lines of Source Code & Content** | **158,184** | All text, markup, styles & scripts |
-| **Source Code Lines (SLOC)** | **141,681** | Executable / renderable content lines |
+| **Total Lines of Source Code & Content** | **158,197** | All text, markup, styles & scripts |
+| **Source Code Lines (SLOC)** | **141,694** | Executable / renderable content lines |
 | **Comment & Documentation Lines** | **5,255** | In-code and architectural documentation |
 | **Blank / Spacing Lines** | **11,248** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **18.50 MB (19,399,716 bytes)** | HTML, CSS, JS, Python, SVG & Images |
-| **Total Word Count (Prose & Technical)** | **401,663 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **587** | Since repository inception (2023-03-30) |
-| **Latest Commit Date** | **2026-11-27** | Subject: "OKF Ontology Support" |
+| **Total Repository Size (Tracked Assets)** | **18.50 MB (19,401,111 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Word Count (Prose & Technical)** | **401,779 words** | Educational, curriculum, & marketing prose |
+| **Total Git Commits** | **588** | Since repository inception (2023-03-30) |
+| **Latest Commit Date** | **2026-11-27** | Subject: "chore: update METRICS.md before merging ssot-migration" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
 ---
@@ -30,8 +30,8 @@
 | **HTML Documents** | 91 | 96,156 | 7.81 MB (8,184,277 bytes) | Production static web pages, services, frameworks & guides |
 | **CSS Stylesheets** | 16 | 12,250 | 286.36 KB (293,233 bytes) | Design tokens, animations, responsive layout & themes |
 | **JavaScript Scripts** | 33 | 11,579 | 3.70 MB (3,884,078 bytes) | Client-side interactivity, search, filter & components |
-| **Python Tooling** | 38 | 10,753 | 489.21 KB (500,949 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
-| **Markdown Documentation** | 153 | 15,532 | 1.05 MB (1,103,823 bytes) | Project documentation, sync mirrors, guidelines & rules |
+| **Python Tooling** | 38 | 10,763 | 489.53 KB (501,283 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
+| **Markdown Documentation** | 153 | 15,535 | 1.05 MB (1,104,884 bytes) | Project documentation, sync mirrors, guidelines & rules |
 | **JSON Schemas & Data** | 112 | 11,847 | 490.12 KB (501,883 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 44 | 67 | 188.24 KB (192,754 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
 | **Raster Images (WebP, JPG, PNG)** | 37 | 0 | 4.06 MB (4,259,892 bytes) | Optimized feature hero graphics, social cards & assets |
@@ -44,11 +44,11 @@
 | Extension | Tracked Files | Total Lines | Total Size | Percentage of Files |
 | :--- | :--- | :--- | :--- | :--- |
 | `.html` | 91 | 96,156 | 7.81 MB (8,184,277 bytes) | 16.9% |
-| `.md` | 153 | 15,532 | 1.05 MB (1,103,823 bytes) | 28.5% |
+| `.md` | 153 | 15,535 | 1.05 MB (1,104,884 bytes) | 28.5% |
 | `.css` | 16 | 12,250 | 286.36 KB (293,233 bytes) | 3.0% |
 | `.json` | 112 | 11,847 | 490.12 KB (501,883 bytes) | 20.9% |
 | `.js` | 33 | 11,579 | 3.70 MB (3,884,078 bytes) | 6.1% |
-| `.py` | 38 | 10,753 | 489.21 KB (500,949 bytes) | 7.1% |
+| `.py` | 38 | 10,763 | 489.53 KB (501,283 bytes) | 7.1% |
 | `.svg` | 44 | 67 | 188.24 KB (192,754 bytes) | 8.2% |
 | `.webp` | 18 | 0 | 1.66 MB (1,745,378 bytes) | 3.4% |
 | `.png` | 12 | 0 | 1.28 MB (1,339,427 bytes) | 2.2% |
@@ -131,10 +131,10 @@
 
 ## 8. HTML UI Verification Suite Summary (`tests/test_html_ui.py`)
 
-- **Framework**: `BeautifulSoup4 + html.parser (unittest)`
+- **Framework**: `BeautifulSoup4 + lxml (unittest)`
 - **Pages Scanned**: **85 HTML pages**
-- **Summary**: **101 / 101 PASSED** (`0` failures, `5.83s`, Status: **PASSED**)
-- **Last Verified**: `2026-11-27 06:58:51 UTC`
+- **Summary**: **101 / 101 PASSED** (`0` failures, `6.9s`, Status: **PASSED**)
+- **Last Verified**: `2026-11-27 07:01:24 UTC`
 
 | Test Category | Tests | Passed | Failed | Pass Rate | Status |
 | :--- | :--- | :--- | :--- | :--- | :--- |

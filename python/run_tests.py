@@ -13,10 +13,12 @@ Strict Repo Compliance:
 """
 
 import os
+import io
 import sys
 import time
 import json
 import hashlib
+import contextlib
 import subprocess
 import unittest
 from datetime import datetime, timezone
@@ -135,9 +137,17 @@ def run_all_tests():
 
         start_time = time.time()
         is_summary_only = ("--summary-only" in sys.argv)
-        stream_target = open(os.devnull, "w") if is_summary_only else None
-        runner = unittest.TextTestRunner(resultclass=RecordingTestResult, verbosity=0 if is_summary_only else 2, stream=stream_target)
-        result = runner.run(suite)
+        if is_summary_only:
+            devnull = open(os.devnull, "w")
+            try:
+                runner = unittest.TextTestRunner(resultclass=RecordingTestResult, verbosity=0, stream=devnull)
+                with contextlib.redirect_stdout(io.StringIO()), contextlib.redirect_stderr(io.StringIO()):
+                    result = runner.run(suite)
+            finally:
+                devnull.close()
+        else:
+            runner = unittest.TextTestRunner(resultclass=RecordingTestResult, verbosity=2)
+            result = runner.run(suite)
         elapsed = time.time() - start_time
 
         # Save comprehensive test report cache for LAST-COMMIT-REPORT.md
