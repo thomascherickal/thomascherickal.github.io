@@ -1,30 +1,42 @@
 ---
 type: dataset
 title: "Advanced AI Agents Visual Assets"
-description: "Architecture diagrams, state machine flows, and visual schematics for the Advanced AI Agents service curriculum."
+description: "Compressed visual schematics and diagrams supporting the Advanced AI Agents business and personal service pages."
 tags: [assets, advanced-agents, diagrams, swarms]
-timestamp: 2026-11-27T06:35:11Z
+timestamp: 2026-11-27T06:56:49Z
 ---
 
 # Advanced AI Agents Visual Assets
 
-Architecture diagrams, state machine flows, and visual schematics for the Advanced AI Agents service curriculum.
+Compressed visual schematics and diagrams supporting the Advanced AI Agents business and personal service pages.
 
-## Directory Role & Agent Guidelines
+## Live Directory Telemetry
 
-- Provides diagrammatic assets for `business-services/business-service-advanced-ai-agents.html` and `personal-services/personal-service-advanced-ai-agents.html`.
-- Illustrates hierarchical multi-agent teams, reflection loops, and sandboxed Docker tool execution.
+- **Path**: `/assets/advanced-ai-agents`
+- **Direct Files**: 0 (Empty directory)
+- **Subdirectories**: 0
+- **Total Size**: 0 B
+- **Primary Workflow**: Keep every image under 400 KB and update image links in `business-services/business-service-advanced-ai-agents.html` and `personal-services/personal-service-advanced-ai-agents.html`.
+
+## Directory Role & Agent Invariants
+
+- Serves hero and architecture visuals for the Advanced AI Agents training tracks.
+- Verify every referenced image exists and has descriptive `alt` text via `python3 python/run_html_tests.py`.
 
 ## Subdirectories
 
-None (Leaf directory).
+Leaf directory (no child directories).
 
-## File Inventory
+## Detailed File Inventory
 
-None.
+No direct files yet (ready for new files matching this directory's workflow).
 
 ## Context & Cross-References
 
-- Parent Directory: [`../OKF.md`](../OKF.md)
-- Architectural Specification: [`GEMINI.md`](/GEMINI.md)
-- Repository Telemetry: [`METRICS.md`](/METRICS.md)
+- Parent Directory: [`assets/OKF.md`](../OKF.md)
+- Root Directory: [`OKF.md`](../../OKF.md)
+- Canonical Specification: [`AGENTS.md`](../../AGENTS.md) (`CLAUDE.md` and `GEMINI.md` symlink to `AGENTS.md`)
+- Repository Telemetry: [`METRICS.md`](../../METRICS.md)
+- Related: [`business-services/`](../../business-services/OKF.md) - Enterprise & Business AI Services Catalog (16 Services)
+- Related: [`personal-services/`](../../personal-services/OKF.md) - Personal AI Training Services Catalog (16 Services)
+- Related: [`assets/`](../../assets/OKF.md) - Global Site Assets, Branding & Generated Data Hub

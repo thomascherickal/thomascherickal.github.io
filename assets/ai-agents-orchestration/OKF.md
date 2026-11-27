@@ -1,30 +1,41 @@
 ---
 type: dataset
 title: "AI Agent Orchestration Visual Assets"
-description: "Visual schematics illustrating orchestrator-worker hierarchies, parallel fan-out swarms, and MCP routing."
-tags: [assets, orchestration, swarms, mcp-routing]
-timestamp: 2026-11-27T06:35:11Z
+description: "Compressed multi-agent topology diagrams and visual assets for orchestration service pages."
+tags: [assets, orchestration, swarms, mcp]
+timestamp: 2026-11-27T06:56:49Z
 ---
 
 # AI Agent Orchestration Visual Assets
 
-Visual schematics illustrating orchestrator-worker hierarchies, parallel fan-out swarms, and MCP routing.
+Compressed multi-agent topology diagrams and visual assets for orchestration service pages.
 
-## Directory Role & Agent Guidelines
+## Live Directory Telemetry
 
-- Supplies diagrams for `business-services/business-service-ai-agents-orchestration.html` and `personal-services/personal-service-ai-agents-orchestration.html`.
-- Depicts human-in-the-loop gates, token budget governance, and multi-agent coordination topologies.
+- **Path**: `/assets/ai-agents-orchestration`
+- **Direct Files**: 0 (Empty directory)
+- **Subdirectories**: 0
+- **Total Size**: 0 B
+- **Primary Workflow**: Keep every image under 400 KB and verify references via `python3 python/run_html_tests.py`.
+
+## Directory Role & Agent Invariants
+
+- Supports `business-service-claude-agents-orchestration.html`, `personal-service-claude-agents-orchestration.html`, and orchestration overviews.
 
 ## Subdirectories
 
-None (Leaf directory).
+Leaf directory (no child directories).
 
-## File Inventory
+## Detailed File Inventory
 
-None.
+No direct files yet (ready for new files matching this directory's workflow).
 
 ## Context & Cross-References
 
-- Parent Directory: [`../OKF.md`](../OKF.md)
-- Architectural Specification: [`GEMINI.md`](/GEMINI.md)
-- Repository Telemetry: [`METRICS.md`](/METRICS.md)
+- Parent Directory: [`assets/OKF.md`](../OKF.md)
+- Root Directory: [`OKF.md`](../../OKF.md)
+- Canonical Specification: [`AGENTS.md`](../../AGENTS.md) (`CLAUDE.md` and `GEMINI.md` symlink to `AGENTS.md`)
+- Repository Telemetry: [`METRICS.md`](../../METRICS.md)
+- Related: [`business-services/`](../../business-services/OKF.md) - Enterprise & Business AI Services Catalog (16 Services)
+- Related: [`personal-services/`](../../personal-services/OKF.md) - Personal AI Training Services Catalog (16 Services)
+- Related: [`assets/`](../../assets/OKF.md) - Global Site Assets, Branding & Generated Data Hub

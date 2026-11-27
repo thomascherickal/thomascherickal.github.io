@@ -1,30 +1,41 @@
 ---
 type: dataset
 title: "Generative AI Transformation Visual Assets"
-description: "Enterprise AI roadmaps, chatbot-to-agent evolution diagrams, and architectural charts."
-tags: [assets, transformation, enterprise-ai, roadmaps]
-timestamp: 2026-11-27T06:35:11Z
+description: "Compressed visuals illustrating enterprise Generative AI transformation architectures and capability progressions."
+tags: [assets, transformation, enterprise-ai]
+timestamp: 2026-11-27T06:56:49Z
 ---
 
 # Generative AI Transformation Visual Assets
 
-Enterprise AI roadmaps, chatbot-to-agent evolution diagrams, and architectural charts.
+Compressed visuals illustrating enterprise Generative AI transformation architectures and capability progressions.
 
-## Directory Role & Agent Guidelines
+## Live Directory Telemetry
 
-- Supplies visual assets for `business-services/business-service-generative-ai-transformation.html` and `personal-services/personal-service-generative-ai-transformation.html`.
-- Visualizes the transition from naive prompting to domain-grounded autonomous agent teams.
+- **Path**: `/assets/generative-ai-transformation`
+- **Direct Files**: 0 (Empty directory)
+- **Subdirectories**: 0
+- **Total Size**: 0 B
+- **Primary Workflow**: Keep every image under 400 KB and verify references in `business-service-generative-ai-transformation.html` and `personal-service-generative-ai-transformation.html`.
+
+## Directory Role & Agent Invariants
+
+- Supports both Business and Personal Generative AI Transformation service pages.
 
 ## Subdirectories
 
-None (Leaf directory).
+Leaf directory (no child directories).
 
-## File Inventory
+## Detailed File Inventory
 
-None.
+No direct files yet (ready for new files matching this directory's workflow).
 
 ## Context & Cross-References
 
-- Parent Directory: [`../OKF.md`](../OKF.md)
-- Architectural Specification: [`GEMINI.md`](/GEMINI.md)
-- Repository Telemetry: [`METRICS.md`](/METRICS.md)
+- Parent Directory: [`assets/OKF.md`](../OKF.md)
+- Root Directory: [`OKF.md`](../../OKF.md)
+- Canonical Specification: [`AGENTS.md`](../../AGENTS.md) (`CLAUDE.md` and `GEMINI.md` symlink to `AGENTS.md`)
+- Repository Telemetry: [`METRICS.md`](../../METRICS.md)
+- Related: [`business-services/`](../../business-services/OKF.md) - Enterprise & Business AI Services Catalog (16 Services)
+- Related: [`personal-services/`](../../personal-services/OKF.md) - Personal AI Training Services Catalog (16 Services)
+- Related: [`assets/`](../../assets/OKF.md) - Global Site Assets, Branding & Generated Data Hub

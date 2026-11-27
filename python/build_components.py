@@ -165,7 +165,7 @@ def build():
             sys.path.insert(0, REPO_DIR)
         from python.ssot import render as ssot_render
         from python.ssot import export_site_data as ssot_export
-        ssot_render.main()
+        ssot_render.main([])
         ssot_export.export_site_data()
     except Exception as e:
         print(f"Warning: SSOT render/export step failed: {e}")

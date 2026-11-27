@@ -1,6 +1,6 @@
 # Repository Code & Engineering Metrics
 
-> **Automated Status Report** | Generated on `2026-11-27 06:40:25 UTC` | Branch: `ssot-migration` | Head Commit: `525c745`
+> **Automated Status Report** | Generated on `2026-11-27 06:57:18 UTC` | Branch: `ssot-migration` | Head Commit: `636565a`
 > This report tracks comprehensive codebase, architectural, structural, and content metrics across `thomascherickal.github.io`.
 > Updated automatically on every build and push.
 
@@ -10,15 +10,15 @@
 
 | Metric | Count | Details |
 | :--- | :--- | :--- |
-| **Total Tracked Files** | **530** | Fully tracked Git artifacts |
-| **Total Lines of Source Code & Content** | **157,050** | All text, markup, styles & scripts |
-| **Source Code Lines (SLOC)** | **140,815** | Executable / renderable content lines |
-| **Comment & Documentation Lines** | **5,167** | In-code and architectural documentation |
-| **Blank / Spacing Lines** | **11,068** | Code formatting and structural layout |
-| **Total Repository Size (Tracked Assets)** | **18.38 MB (19,273,538 bytes)** | HTML, CSS, JS, Python, SVG & Images |
-| **Total Word Count (Prose & Technical)** | **387,246 words** | Educational, curriculum, & marketing prose |
-| **Total Git Commits** | **585** | Since repository inception (2023-03-30) |
-| **Latest Commit Date** | **2026-11-27** | Subject: "feat(synchronizer): synchronize repository state (1 test failure warnings - see failed_unit_tests.report.md)" |
+| **Total Tracked Files** | **532** | Fully tracked Git artifacts |
+| **Total Lines of Source Code & Content** | **157,953** | All text, markup, styles & scripts |
+| **Source Code Lines (SLOC)** | **141,540** | Executable / renderable content lines |
+| **Comment & Documentation Lines** | **5,225** | In-code and architectural documentation |
+| **Blank / Spacing Lines** | **11,188** | Code formatting and structural layout |
+| **Total Repository Size (Tracked Assets)** | **18.49 MB (19,387,856 bytes)** | HTML, CSS, JS, Python, SVG & Images |
+| **Total Word Count (Prose & Technical)** | **400,256 words** | Educational, curriculum, & marketing prose |
+| **Total Git Commits** | **586** | Since repository inception (2023-03-30) |
+| **Latest Commit Date** | **2026-11-27** | Subject: "SSOT Sync system finished" |
 | **Repository Authors & Maintainers** | **2** | Thomas Cherickal |
 
 ---
@@ -30,12 +30,12 @@
 | **HTML Documents** | 91 | 96,156 | 7.81 MB (8,184,277 bytes) | Production static web pages, services, frameworks & guides |
 | **CSS Stylesheets** | 16 | 12,250 | 286.36 KB (293,233 bytes) | Design tokens, animations, responsive layout & themes |
 | **JavaScript Scripts** | 33 | 11,579 | 3.70 MB (3,884,078 bytes) | Client-side interactivity, search, filter & components |
-| **Python Tooling** | 38 | 10,174 | 454.44 KB (465,342 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
-| **Markdown Documentation** | 145 | 14,977 | 989.69 KB (1,013,446 bytes) | Project documentation, sync mirrors, guidelines & rules |
+| **Python Tooling** | 38 | 10,753 | 489.21 KB (500,949 bytes) | Component builders, pricing sync, MD-HTML mirrors & metrics |
+| **Markdown Documentation** | 148 | 15,301 | 1.04 MB (1,091,963 bytes) | Project documentation, sync mirrors, guidelines & rules |
 | **JSON Schemas & Data** | 112 | 11,847 | 490.12 KB (501,883 bytes) | Schema.org JSON-LD definitions, pricing matrices & metadata |
 | **Vector SVG Icons & Graphics** | 44 | 67 | 188.24 KB (192,754 bytes) | Sharp scalable UI icons, brand logos & visual indicators |
 | **Raster Images (WebP, JPG, PNG)** | 37 | 0 | 4.06 MB (4,259,892 bytes) | Optimized feature hero graphics, social cards & assets |
-| **Config & Metadata** | 14 | 0 | 467.42 KB (478,633 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
+| **Config & Metadata** | 13 | 0 | 467.60 KB (478,827 bytes) | Gitignore, robots.txt, sitemaps, manifests & configurations |
 
 ---
 
@@ -43,23 +43,23 @@
 
 | Extension | Tracked Files | Total Lines | Total Size | Percentage of Files |
 | :--- | :--- | :--- | :--- | :--- |
-| `.html` | 91 | 96,156 | 7.81 MB (8,184,277 bytes) | 17.2% |
-| `.md` | 145 | 14,977 | 989.69 KB (1,013,446 bytes) | 27.4% |
+| `.html` | 91 | 96,156 | 7.81 MB (8,184,277 bytes) | 17.1% |
+| `.md` | 148 | 15,301 | 1.04 MB (1,091,963 bytes) | 27.8% |
 | `.css` | 16 | 12,250 | 286.36 KB (293,233 bytes) | 3.0% |
 | `.json` | 112 | 11,847 | 490.12 KB (501,883 bytes) | 21.1% |
 | `.js` | 33 | 11,579 | 3.70 MB (3,884,078 bytes) | 6.2% |
-| `.py` | 38 | 10,174 | 454.44 KB (465,342 bytes) | 7.2% |
+| `.py` | 38 | 10,753 | 489.21 KB (500,949 bytes) | 7.1% |
 | `.svg` | 44 | 67 | 188.24 KB (192,754 bytes) | 8.3% |
 | `.webp` | 18 | 0 | 1.66 MB (1,745,378 bytes) | 3.4% |
 | `.png` | 12 | 0 | 1.28 MB (1,339,427 bytes) | 2.3% |
 | `.jpg` | 5 | 0 | 988.42 KB (1,012,141 bytes) | 0.9% |
-| `.csv` | 2 | 0 | 384.83 KB (394,069 bytes) | 0.4% |
+| `.csv` | 1 | 0 | 384.80 KB (394,031 bytes) | 0.2% |
 | `.jpeg` | 1 | 0 | 152.39 KB (156,047 bytes) | 0.2% |
 | `.txt` | 2 | 0 | 35.51 KB (36,358 bytes) | 0.4% |
 | `.docx` | 2 | 0 | 28.83 KB (29,519 bytes) | 0.4% |
 | `.xml` | 1 | 0 | 11.92 KB (12,210 bytes) | 0.2% |
 | `.ico` | 1 | 0 | 6.74 KB (6,899 bytes) | 0.2% |
-| `[no extension]` | 6 | 0 | 5.80 KB (5,939 bytes) | 1.1% |
+| `[no extension]` | 6 | 0 | 6.03 KB (6,171 bytes) | 1.1% |
 | `.webmanifest` | 1 | 0 | 538 bytes | 0.2% |
 
 ---
@@ -110,7 +110,7 @@
 | [`python/generate_favicons.py`](python/generate_favicons.py) | Dynamic multi-size favicon generator | Icon Resizer, Asset Pipeline |
 | [`python/generate_og_card.py`](python/generate_og_card.py) | OpenGraph social preview image generator | Pillow Compositor, Brand Styler |
 | [`python/hooks/post_edit_hook.py`](python/hooks/post_edit_hook.py) | IDE lifecycle hook triggering component updates on file modification | Hook Trigger, Event Dispatcher |
-| **Python Function Definitions** | **308 functions** across tooling scripts | Modular execution units |
+| **Python Function Definitions** | **315 functions** across tooling scripts | Modular execution units |
 | **Python Class Definitions** | **11 classes** | Structured state containers |
 
 ---
@@ -133,8 +133,8 @@
 
 - **Framework**: `BeautifulSoup4 + lxml (unittest)`
 - **Pages Scanned**: **85 HTML pages**
-- **Summary**: **101 / 101 PASSED** (`0` failures, `6.83s`, Status: **PASSED**)
-- **Last Verified**: `2026-11-27 06:36:28 UTC`
+- **Summary**: **101 / 101 PASSED** (`0` failures, `6.56s`, Status: **PASSED**)
+- **Last Verified**: `2026-11-27 06:45:31 UTC`
 
 | Test Category | Tests | Passed | Failed | Pass Rate | Status |
 | :--- | :--- | :--- | :--- | :--- | :--- |

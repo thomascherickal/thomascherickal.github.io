@@ -42,10 +42,13 @@ fi
 echo "[git pre-commit] 5. Verifying SSOT markers (--check)..."
 python3 "$REPO_ROOT/python/ssot/render.py" --check
 
-echo "[git pre-commit] 6. Running Python, JavaScript, and HTML UI tests..."
-python3 "$REPO_ROOT/python/run_tests.py"
+echo "[git pre-commit] 6. Running Python, JavaScript, and HTML UI tests (category summary)..."
+python3 "$REPO_ROOT/python/run_tests.py" --summary-only
 
-git add -- "$REPO_ROOT/tests/.test_reports_cache.json" "$REPO_ROOT/tests/.js_test_reports_cache.json" "$REPO_ROOT/tests/.html_ui_test_reports_cache.json" "$REPO_ROOT/assets/data/site-data.json" 2>/dev/null || true
+echo "[git pre-commit] 7. Generating LAST-COMMIT-REPORT.md (summary tables + rolled-up test lists)..."
+python3 "$REPO_ROOT/python/generate_last_commit_report.py"
+
+git add -- "$REPO_ROOT/tests/.test_reports_cache.json" "$REPO_ROOT/tests/.js_test_reports_cache.json" "$REPO_ROOT/tests/.html_ui_test_reports_cache.json" "$REPO_ROOT/assets/data/site-data.json" "$REPO_ROOT/LAST-COMMIT-REPORT.md" 2>/dev/null || true
 
 echo "[git pre-commit] Commit approved."
 exit 0

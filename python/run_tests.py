@@ -193,13 +193,58 @@ def run_all_tests():
                 data_tampered = True
 
         print("-" * 80)
-        print("TEST SUITE SUMMARY REPORT")
+        print("PYTHON UNIT TESTS CATEGORY SUMMARY (tests/)")
         print("-" * 80)
-        print(f"Tests Run:   {result.testsRun}")
-        print(f"Failures:    {len(result.failures)}")
-        print(f"Errors:      {len(result.errors)}")
-        print(f"Skipped:     {len(result.skipped)}")
-        print(f"Time Taken:  {elapsed:.2f} seconds")
+        cat_map = {
+            "test_ssot": "SSOT Build & Validation",
+            "test_pricing_and_policy_invariants": "Pricing & Policy Invariants",
+            "test_check_links": "Link & Anchor Integrity",
+            "test_html_ui": "HTML UI Verification",
+            "test_python_tools": "Python Tooling & Build Scripts",
+            "test_coverage_report": "Reports & Coverage",
+            "test_last_commit_report": "Reports & Coverage",
+        }
+        cat_stats = {}
+        for rec in getattr(result, "test_records", []):
+            cat = cat_map.get(rec["module"], "Other Unit Tests")
+            if cat not in cat_stats:
+                cat_stats[cat] = {"total": 0, "passed": 0, "failed": 0}
+            cat_stats[cat]["total"] += 1
+            if rec["status"] == "PASSED":
+                cat_stats[cat]["passed"] += 1
+            elif rec["status"] in ("FAILED", "ERROR"):
+                cat_stats[cat]["failed"] += 1
+        if cat_stats:
+            headers = ("Category", "Tests", "Passed", "Failed", "Status")
+            rows = [
+                (
+                    c,
+                    str(s["total"]),
+                    str(s["passed"]),
+                    str(s["failed"]),
+                    "PASSED" if s["failed"] == 0 else "FAILED",
+                )
+                for c, s in cat_stats.items()
+            ]
+            rows.append((
+                "TOTAL",
+                str(result.testsRun),
+                str(result.testsRun - len(result.failures) - len(result.errors)),
+                str(len(result.failures) + len(result.errors)),
+                "PASSED" if result.wasSuccessful() else "FAILED",
+            ))
+            widths = [max(len(headers[i]), max(len(r[i]) for r in rows)) for i in range(len(headers))]
+            sep = "+" + "+".join("-" * (w + 2) for w in widths) + "+"
+            fmt = lambda r: "| " + " | ".join(r[i].ljust(widths[i]) if i == 0 else r[i].rjust(widths[i]) if i in (1, 2, 3) else r[i].ljust(widths[i]) for i in range(len(headers))) + " |"
+            print(sep)
+            print(fmt(headers))
+            print(sep)
+            for idx, r in enumerate(rows):
+                if idx == len(rows) - 1:
+                    print(sep)
+                print(fmt(r))
+            print(sep)
+        print(f"Tests Run:   {result.testsRun} | Failures: {len(result.failures)} | Errors: {len(result.errors)} | Skipped: {len(result.skipped)} | Time: {elapsed:.2f}s")
         print("=" * 80)
 
         if data_tampered:
@@ -261,10 +306,12 @@ def run_all_tests():
             except OSError:  # pragma: no cover
                 pass
 
-def run_js_and_html_suites():
+def run_js_and_html_suites(summary_only=False):
     """Runs the JavaScript pricing test suite and HTML UI verification suite."""
     js_cmd = ["node", os.path.join(REPO_DIR, "pricing-tests.js")]
     html_cmd = [sys.executable, os.path.join(REPO_DIR, "python", "run_html_tests.py")]
+    if summary_only:
+        html_cmd.append("--summary-only")
 
     print("\n" + "=" * 80)
     print("           RUNNING JAVASCRIPT UNIT TEST SUITE (pricing-tests.js)")
@@ -281,11 +328,12 @@ def run_js_and_html_suites():
 
 def run_full_test_suite():
     """Executes Python, JavaScript, and HTML UI test suites and returns combined exit code."""
+    summary_only = ("--summary-only" in sys.argv)
     py_code = run_all_tests()
     if "--python-only" in sys.argv:
         return py_code
 
-    js_code, html_code = run_js_and_html_suites()
+    js_code, html_code = run_js_and_html_suites(summary_only=summary_only)
 
     print("\n" + "=" * 80)
     print("                 COMBINED TEST SUITE EXECUTION SUMMARY")

@@ -1,30 +1,43 @@
 ---
 type: dataset
 title: "Service Guarantees Visual Assets"
-description: "Trust badges, guarantee seals, and visual confirmation assets supporting the 100% money-back and walkaway guarantees."
-tags: [assets, guarantees, trust-badges, risk-reversal]
-timestamp: 2026-11-27T06:35:11Z
+description: "Compressed trust-model illustrations supporting `guarantees.html` ($0 upfront, 10 equal 10% milestone installments, walkaway guarantee, Apache 2.0 IP ownership)."
+tags: [assets, guarantees, trust-model]
+timestamp: 2026-11-27T06:56:49Z
 ---
 
 # Service Guarantees Visual Assets
 
-Trust badges, guarantee seals, and visual confirmation assets supporting the 100% money-back and walkaway guarantees.
+Compressed trust-model illustrations supporting `guarantees.html` ($0 upfront, 10 equal 10% milestone installments, walkaway guarantee, Apache 2.0 IP ownership).
 
-## Directory Role & Agent Guidelines
+## Live Directory Telemetry
 
-- Used in `guarantees.html` and guarantee callouts across the site.
-- Represents the $0 upfront, 10 equal 10% milestone installments, and walkaway guarantee trust models.
+- **Path**: `/assets/guarantees`
+- **Direct Files**: 1 (1 JPG)
+- **Subdirectories**: 0
+- **Total Size**: 233.5 KB
+- **Primary Workflow**: Keep every image under 400 KB and verify references in `guarantees.html`.
+
+## Directory Role & Agent Invariants
+
+- Supports `guarantees.html` and related trust sections.
 
 ## Subdirectories
 
-None (Leaf directory).
+Leaf directory (no child directories).
 
-## File Inventory
+## Detailed File Inventory
 
-- [`agent-curriculum-playbook.jpg`](agent-curriculum-playbook.jpg)
+| File | Type | Size / Lines | In-Context Details & Cross-References |
+| :--- | :---: | :---: | :--- |
+| [`agent-curriculum-playbook.jpg`](agent-curriculum-playbook.jpg) | JPG | 233.5 KB | 1376x768px, Referenced by: `guarantees.html` |
 
 ## Context & Cross-References
 
-- Parent Directory: [`../OKF.md`](../OKF.md)
-- Architectural Specification: [`GEMINI.md`](/GEMINI.md)
-- Repository Telemetry: [`METRICS.md`](/METRICS.md)
+- Parent Directory: [`assets/OKF.md`](../OKF.md)
+- Root Directory: [`OKF.md`](../../OKF.md)
+- Canonical Specification: [`AGENTS.md`](../../AGENTS.md) (`CLAUDE.md` and `GEMINI.md` symlink to `AGENTS.md`)
+- Repository Telemetry: [`METRICS.md`](../../METRICS.md)
+- Related: [Repository Root](../../OKF.md) - Repository Root & Web Portal Hub
+- Related: [`data/`](../../data/OKF.md) - Authoritative Data Directory (Single Source of Truth)
+- Related: [`assets/`](../../assets/OKF.md) - Global Site Assets, Branding & Generated Data Hub

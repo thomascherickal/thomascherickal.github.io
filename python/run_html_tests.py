@@ -67,19 +67,20 @@ class HTMLUITestResult(unittest.TextTestResult):
         self._record(test, "SKIPPED")
 
 
-def run_html_ui_tests(quiet=False):
+def run_html_ui_tests(quiet=False, summary_only=False):
     start_time = time.time()
     loader = unittest.TestLoader()
     suite = loader.discover(start_dir=TESTS_DIR, pattern="test_html_ui.py")
 
-    stream = open(os.devnull, "w") if quiet else sys.stdout
+    suppress_verbose = quiet or summary_only
+    stream = open(os.devnull, "w") if suppress_verbose else sys.stdout
     runner = unittest.TextTestRunner(
         stream=stream,
-        verbosity=0 if quiet else 2,
+        verbosity=0 if suppress_verbose else 2,
         resultclass=HTMLUITestResult,
     )
     result = runner.run(suite)
-    if quiet:
+    if suppress_verbose:
         stream.close()
 
     elapsed = round(time.time() - start_time, 2)
@@ -203,4 +204,4 @@ def run_html_ui_tests(quiet=False):
 
 
 if __name__ == "__main__":
-    sys.exit(run_html_ui_tests())
+    sys.exit(run_html_ui_tests(summary_only=("--summary-only" in sys.argv)))

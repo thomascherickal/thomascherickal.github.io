@@ -1,30 +1,41 @@
 ---
 type: dataset
 title: "Local AI Revolution Visual Assets"
-description: "Hardware topologies, private server charts, VRAM allocation matrices, and benchmark diagrams for Local LLMs."
-tags: [assets, local-llms, vram, benchmarks, private-ai]
-timestamp: 2026-11-27T06:35:11Z
+description: "Compressed visuals for Local LLM cost-slashing, VRAM sizing, and private on-premise inference guides."
+tags: [assets, local-llms, vram, private-ai]
+timestamp: 2026-11-27T06:56:49Z
 ---
 
 # Local AI Revolution Visual Assets
 
-Hardware topologies, private server charts, VRAM allocation matrices, and benchmark diagrams for Local LLMs.
+Compressed visuals for Local LLM cost-slashing, VRAM sizing, and private on-premise inference guides.
 
-## Directory Role & Agent Guidelines
+## Live Directory Telemetry
 
-- Supplies diagrams for `business-services/business-service-local-llms-cost-slashing.html` and `claude-training/claude-local-llms.html`.
-- Illustrates 60%-90% cloud API bill reduction via Ollama, vLLM, and GGUF/AWQ local model inference.
+- **Path**: `/assets/local-ai-revolution`
+- **Direct Files**: 0 (Empty directory)
+- **Subdirectories**: 0
+- **Total Size**: 0 B
+- **Primary Workflow**: Keep every image under 400 KB and verify references in `business-services/` and `claude-training/claude-local-llms.html`.
+
+## Directory Role & Agent Invariants
+
+- Supports local LLM business services and `claude-training/claude-local-llms.html`.
 
 ## Subdirectories
 
-None (Leaf directory).
+Leaf directory (no child directories).
 
-## File Inventory
+## Detailed File Inventory
 
-None.
+No direct files yet (ready for new files matching this directory's workflow).
 
 ## Context & Cross-References
 
-- Parent Directory: [`../OKF.md`](../OKF.md)
-- Architectural Specification: [`GEMINI.md`](/GEMINI.md)
-- Repository Telemetry: [`METRICS.md`](/METRICS.md)
+- Parent Directory: [`assets/OKF.md`](../OKF.md)
+- Root Directory: [`OKF.md`](../../OKF.md)
+- Canonical Specification: [`AGENTS.md`](../../AGENTS.md) (`CLAUDE.md` and `GEMINI.md` symlink to `AGENTS.md`)
+- Repository Telemetry: [`METRICS.md`](../../METRICS.md)
+- Related: [`business-services/`](../../business-services/OKF.md) - Enterprise & Business AI Services Catalog (16 Services)
+- Related: [`claude-training/`](../../claude-training/OKF.md) - Claude Architecture & Engineering Guides
+- Related: [`assets/`](../../assets/OKF.md) - Global Site Assets, Branding & Generated Data Hub

@@ -86,10 +86,10 @@ def render_file(path: str, data: SSOTData, jinja_env, check_only: bool = False) 
     return True
 
 
-def main():
+def main(argv=None):
     parser = argparse.ArgumentParser(description="Render SSOT markers across HTML and llms.txt")
     parser.add_argument("--check", action="store_true", help="Exit non-zero if any file would change")
-    args = parser.parse_args()
+    args = parser.parse_args(argv)
 
     data = SSOTData()
     os.makedirs(TEMPLATES_DIR, exist_ok=True)

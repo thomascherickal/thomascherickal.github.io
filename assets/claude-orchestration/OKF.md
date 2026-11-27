@@ -1,30 +1,40 @@
 ---
 type: dataset
 title: "Claude Orchestration Visual Assets"
-description: "Architecture blueprints and sequential pipeline diagrams for Claude Agent Orchestration workflows."
+description: "Compressed architecture visuals for Claude agent orchestration guides and service tracks."
 tags: [assets, claude, orchestration, blueprints]
-timestamp: 2026-11-27T06:35:11Z
+timestamp: 2026-11-27T06:56:49Z
 ---
 
 # Claude Orchestration Visual Assets
 
-Architecture blueprints and sequential pipeline diagrams for Claude Agent Orchestration workflows.
+Compressed architecture visuals for Claude agent orchestration guides and service tracks.
 
-## Directory Role & Agent Guidelines
+## Live Directory Telemetry
 
-- Supports `claude-training/claude-orchestration.html`.
-- Illustrates prompt caching economics, dynamic routing, and subagent delegation patterns.
+- **Path**: `/assets/claude-orchestration`
+- **Direct Files**: 0 (Empty directory)
+- **Subdirectories**: 0
+- **Total Size**: 0 B
+- **Primary Workflow**: Keep every image under 400 KB and verify links in `claude-training/claude-orchestration.html`.
+
+## Directory Role & Agent Invariants
+
+- Supports `claude-training/claude-orchestration.html` and related orchestration service pages.
 
 ## Subdirectories
 
-None (Leaf directory).
+Leaf directory (no child directories).
 
-## File Inventory
+## Detailed File Inventory
 
-None.
+No direct files yet (ready for new files matching this directory's workflow).
 
 ## Context & Cross-References
 
-- Parent Directory: [`../OKF.md`](../OKF.md)
-- Architectural Specification: [`GEMINI.md`](/GEMINI.md)
-- Repository Telemetry: [`METRICS.md`](/METRICS.md)
+- Parent Directory: [`assets/OKF.md`](../OKF.md)
+- Root Directory: [`OKF.md`](../../OKF.md)
+- Canonical Specification: [`AGENTS.md`](../../AGENTS.md) (`CLAUDE.md` and `GEMINI.md` symlink to `AGENTS.md`)
+- Repository Telemetry: [`METRICS.md`](../../METRICS.md)
+- Related: [`claude-training/`](../../claude-training/OKF.md) - Claude Architecture & Engineering Guides
+- Related: [`assets/`](../../assets/OKF.md) - Global Site Assets, Branding & Generated Data Hub
