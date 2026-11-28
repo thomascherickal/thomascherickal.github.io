@@ -3,7 +3,7 @@ type: module
 title: "Modular JavaScript Unit & DOM Test Suite"
 description: "Zero-dependency Node.js test harness and 13 modular test suites (200 assertions across 18 sections) verifying pricing calculators, payment schedules, tier calculators, components navigation, and Mermaid link rewriting."
 tags: [tests, javascript-tests, node, calculator-tests]
-timestamp: 2026-11-27T06:56:49Z
+timestamp: 2026-11-28T05:16:04Z
 ---
 
 # Modular JavaScript Unit & DOM Test Suite

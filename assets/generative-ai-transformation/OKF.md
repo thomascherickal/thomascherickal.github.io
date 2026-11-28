@@ -3,7 +3,7 @@ type: dataset
 title: "Generative AI Transformation Visual Assets"
 description: "Compressed visuals illustrating enterprise Generative AI transformation architectures and capability progressions."
 tags: [assets, transformation, enterprise-ai]
-timestamp: 2026-11-27T06:56:49Z
+timestamp: 2026-11-28T05:16:04Z
 ---
 
 # Generative AI Transformation Visual Assets

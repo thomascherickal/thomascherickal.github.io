@@ -3,7 +3,7 @@ type: module
 title: "Global Stylesheets & Design System"
 description: "Shared design-system stylesheets defining color tokens (`--gold`, `--cyan`), uniform button components (`buttons.css`), responsive tables, code windows, and guide typography."
 tags: [css, design-system, tokens, responsive, buttons]
-timestamp: 2026-11-27T06:56:49Z
+timestamp: 2026-11-28T05:16:04Z
 ---
 
 # Global Stylesheets & Design System

@@ -3,7 +3,7 @@ type: module
 title: "Deterministic SSOT Build & Synchronization Pipeline"
 description: "Build-time Single Source of Truth engine replacing post-hoc fuzzy rewriting: loads `data/*.json`, validates JSON Schemas and cross-file invariants, renders `<!--ssot:...-->` markers and Jinja2 blocks deterministically, exports `assets/data/site-data.json`,..."
 tags: [ssot, validation, jinja2, markers, synchronization]
-timestamp: 2026-11-27T06:56:49Z
+timestamp: 2026-11-28T05:16:04Z
 ---
 
 # Deterministic SSOT Build & Synchronization Pipeline
@@ -15,7 +15,7 @@ Build-time Single Source of Truth engine replacing post-hoc fuzzy rewriting: loa
 - **Path**: `/python/ssot`
 - **Direct Files**: 7 (7 Python)
 - **Subdirectories**: 0
-- **Total Size**: 19.9 KB | **Text/Code Lines**: 570
+- **Total Size**: 24.2 KB | **Text/Code Lines**: 685
 - **Primary Workflow**: Run `python3 python/ssot/validate.py && python3 python/ssot/render.py && python3 python/ssot/export_site_data.py && python3 python/ssot/render.py --check`.
 
 ## Directory Role & Agent Invariants
@@ -37,9 +37,9 @@ Leaf directory (no child directories).
 | :--- | :---: | :---: | :--- |
 | [`__init__.py`](__init__.py) | Python | 90 B / 1L | Single Source of Truth (SSOT) build, validation, formatting, and rendering package. |
 | [`export_site_data.py`](export_site_data.py) | Python | 1.0 KB / 37L | export_site_data.py - Generate assets/data/site-data.json from data/*.json for JS.; Functions: `export_site_data` |
-| [`format.py`](format.py) | Python | 2.9 KB / 86L | format.py - Deterministic phrase formatters for SSOT markers.; Functions: `money`, `tier_price_list`, `seats_phrase`, `duration_phrase`, `installment_phrase` (+3) |
+| [`format.py`](format.py) | Python | 5.2 KB / 143L | format.py - Deterministic phrase formatters for SSOT markers.; Functions: `money`, `tier_price_list`, `seats_phrase`, `duration_phrase`, `installment_phrase` (+8) |
 | [`load.py`](load.py) | Python | 2.1 KB / 60L | load.py - Load and index data/*.json for SSOT rendering and formatting.; Classes: `SSOTData` |
-| [`render.py`](render.py) | Python | 3.5 KB / 117L | render.py - Deterministic SSOT marker & block renderer.; Functions: `discover_targets`, `resolve_marker`, `render_file`, `main` |
+| [`render.py`](render.py) | Python | 5.5 KB / 175L | render.py - Deterministic SSOT marker & block renderer.; Functions: `sync_faq_jsonld`, `discover_targets`, `resolve_marker`, `render_file`, `main` |
 | [`scan_literals.py`](scan_literals.py) | Python | 4.1 KB / 107L | scan_literals.py - Inventory hardcoded protected facts outside <!--ssot:...--> markers.; Functions: `collect_target_files`, `scan_file`, `main` |
 | [`validate.py`](validate.py) | Python | 6.2 KB / 162L | validate.py - JSON Schema & Cross-File Invariant Validator for data/*.json.; Functions: `validate_all`, `main` |
 

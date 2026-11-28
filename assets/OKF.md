@@ -3,7 +3,7 @@ type: dataset
 title: "Global Site Assets, Branding & Generated Data Hub"
 description: "Site-wide branding assets (logos, favicons, OG cards, profile portraits), generated client-side JSON (`assets/data/`), self-hosted Mermaid JS (`assets/js/`), and 11 topic-specific visual subfolders."
 tags: [assets, branding, media, favicons, opengraph]
-timestamp: 2026-11-27T06:56:49Z
+timestamp: 2026-11-28T05:16:04Z
 ---
 
 # Global Site Assets, Branding & Generated Data Hub

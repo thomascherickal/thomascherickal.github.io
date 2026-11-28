@@ -3,7 +3,7 @@ type: dataset
 title: "Google Antigravity Visual Assets"
 description: "Compressed visuals and architecture illustrations for Google Antigravity IDE and Chat documentation guides."
 tags: [assets, antigravity, google-ide, agentic-workflows]
-timestamp: 2026-11-27T06:56:49Z
+timestamp: 2026-11-28T05:16:04Z
 ---
 
 # Google Antigravity Visual Assets

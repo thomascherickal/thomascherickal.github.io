@@ -3,7 +3,7 @@ type: dataset
 title: "Authoritative Data Directory (Single Source of Truth)"
 description: "The sole authoritative JSON data store (`data/*.json`) mastering pricing, parity tiers, business/personal services, site config, contact SLA, guarantees, FAQs, publications, and Claude/Gemini guide registries."
 tags: [data, ssot, read-only, pricing, services, authoritative]
-timestamp: 2026-11-27T06:56:49Z
+timestamp: 2026-11-28T05:16:04Z
 ---
 
 # Authoritative Data Directory (Single Source of Truth)
@@ -15,7 +15,7 @@ The sole authoritative JSON data store (`data/*.json`) mastering pricing, parity
 - **Path**: `/data`
 - **Direct Files**: 12 (12 JSON)
 - **Subdirectories**: 1
-- **Total Size**: 94.7 KB | **Text/Code Lines**: 2,246
+- **Total Size**: 95.0 KB | **Text/Code Lines**: 2,246
 - **Primary Workflow**: Edit `data/*.json` directly -> validate with `python3 python/ssot/validate.py` -> propagate with `python3 python/ssot/render.py && python3 python/ssot/export_site_data.py`.
 
 ## Directory Role & Agent Invariants
@@ -39,7 +39,7 @@ The sole authoritative JSON data store (`data/*.json`) mastering pricing, parity
 | [`claude.json`](claude.json) | JSON | 6.0 KB / 134L | Keys: `hub` (2 keys), `guides` (18 items) |
 | [`config.json`](config.json) | JSON | 471 B / 13L | Keys: `author`, `email`, `domain`, `brand`, `brandStartYear`, `title`; (+5 more) |
 | [`contact.json`](contact.json) | JSON | 7.3 KB / 203L | Keys: `contact_metadata` (6 keys), `config_references` (7 keys), `direct_communication` (6 keys), `engagement_standards` (4 items), `intake_workflow_steps` (4 items), `form_configuration` (4 keys) |
-| [`faqs.json`](faqs.json) | JSON | 3.4 KB / 59L | Keys: `faq_metadata` (2 keys), `core_policies` (6 keys) |
+| [`faqs.json`](faqs.json) | JSON | 3.7 KB / 59L | Keys: `faq_metadata` (2 keys), `core_policies` (6 keys) |
 | [`gemini.json`](gemini.json) | JSON | 6.4 KB / 134L | Keys: `hub` (2 keys), `guides` (18 items) |
 | [`guarantees.json`](guarantees.json) | JSON | 4.6 KB / 96L | Keys: `guarantees_metadata` (6 keys), `config_references` (6 keys), `trust_pillars` (6 items), `agency_comparison` (5 items), `apache_license_rights` (4 items) |
 | [`personal-services.json`](personal-services.json) | JSON | 7.1 KB / 172L | Keys: `section` (5 keys), `services` (16 items), `count` |

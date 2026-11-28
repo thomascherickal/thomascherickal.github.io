@@ -3,7 +3,7 @@ type: dataset
 title: "SSOT JSON Schemas (`data/schema/`)"
 description: "JSON Schema (Draft 2020-12 / Draft-07) definitions validating the exact structure, types, and required fields of every authoritative file in `data/*.json`."
 tags: [data, json-schema, ssot, validation]
-timestamp: 2026-11-27T06:56:49Z
+timestamp: 2026-11-28T05:16:04Z
 ---
 
 # SSOT JSON Schemas (`data/schema/`)

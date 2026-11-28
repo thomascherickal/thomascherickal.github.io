@@ -3,7 +3,7 @@ type: module
 title: "Internal Trainer Mastery & Operational Runbooks"
 description: "Private internal trainer documentation, delivery sprint protocols, and full-catalog teaching preparation materials (excluded from public navigation and sitemaps)."
 tags: [internal-use, trainer-guide, playbooks, delivery]
-timestamp: 2026-11-27T06:56:49Z
+timestamp: 2026-11-28T05:16:04Z
 ---
 
 # Internal Trainer Mastery & Operational Runbooks

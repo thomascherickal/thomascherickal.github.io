@@ -3,7 +3,7 @@ type: dataset
 title: "Personal Local LLMs Visual Assets"
 description: "Compressed workstation local-LLM setup diagrams for `personal-services/personal-service-local-llms-cost-slashing.html`."
 tags: [assets, personal-services, local-llms, workstation]
-timestamp: 2026-11-27T06:56:49Z
+timestamp: 2026-11-28T05:16:04Z
 ---
 
 # Personal Local LLMs Visual Assets

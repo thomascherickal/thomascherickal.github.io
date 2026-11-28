@@ -3,7 +3,7 @@ type: dataset
 title: "AI Agent Orchestration Visual Assets"
 description: "Compressed multi-agent topology diagrams and visual assets for orchestration service pages."
 tags: [assets, orchestration, swarms, mcp]
-timestamp: 2026-11-27T06:56:49Z
+timestamp: 2026-11-28T05:16:04Z
 ---
 
 # AI Agent Orchestration Visual Assets

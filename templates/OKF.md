@@ -3,7 +3,7 @@ type: module
 title: "SSOT Jinja2 Block Templates Root"
 description: "Root directory for reusable Jinja2 HTML templates rendered into `<!--ssot:block.<name>-->` markers by `python/ssot/render.py`."
 tags: [templates, jinja2, ssot, blocks]
-timestamp: 2026-11-27T06:56:49Z
+timestamp: 2026-11-28T05:16:04Z
 ---
 
 # SSOT Jinja2 Block Templates Root

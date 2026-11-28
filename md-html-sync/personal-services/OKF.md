@@ -3,7 +3,7 @@ type: module
 title: "Personal Services Markdown Mirrors"
 description: "Synchronized Markdown mirrors for all 16 personal AI training pages in `personal-services/`."
 tags: [md-html-sync, personal-services, markdown]
-timestamp: 2026-11-27T06:56:49Z
+timestamp: 2026-11-28T05:16:04Z
 ---
 
 # Personal Services Markdown Mirrors

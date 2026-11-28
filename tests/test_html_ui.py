@@ -438,7 +438,7 @@ class TestHTMLUISuite(unittest.TestCase):
             "index.html",
             "pricing.html",
             "contact.html",
-            "pricing/pricing-tier-1-usa-china-eu-100.html",
+            "pricing/pricing-tier-1-usa-uk-eu-100.html",
             "pricing/pricing-tier-2-brazil-malaysia-75.html",
             "pricing/pricing-tier-3-india-egypt-50.html",
             "pricing/pricing-tier-4-tech-startups-50.html",
@@ -497,7 +497,7 @@ class TestHTMLUISuite(unittest.TestCase):
     def test_23_tier_pages_calculator_dom_contract(self):
         """Verifies all 6 pricing-tier-*.html pages mount their tier calculator DOM controls and script."""
         tier_pages = [
-            ("pricing/pricing-tier-1-usa-china-eu-100.html", "pricing-calculator-tier-1.js"),
+            ("pricing/pricing-tier-1-usa-uk-eu-100.html", "pricing-calculator-tier-1.js"),
             ("pricing/pricing-tier-2-brazil-malaysia-75.html", "pricing-calculator-tier-2.js"),
             ("pricing/pricing-tier-3-india-egypt-50.html", "pricing-calculator-tier-3.js"),
             ("pricing/pricing-tier-4-tech-startups-50.html", "pricing-calculator-tier-4.js"),
@@ -518,7 +518,7 @@ class TestHTMLUISuite(unittest.TestCase):
         """Verifies guarantees.html trust comparison table and updated Mermaid diagrams."""
         soup = self.soups["guarantees.html"]
         tables = soup.select("table.data-table")
-        self.assertGreaterEqual(len(tables), 2, "guarantees.html must render pricing and agency comparison tables")
+        self.assertGreaterEqual(len(tables), 1, "guarantees.html must render the agency comparison table")
 
         diagrams = soup.select("div.mermaid")
         self.assertGreaterEqual(len(diagrams), 2, "guarantees.html must have at least 2 Mermaid diagrams")

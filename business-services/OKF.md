@@ -3,7 +3,7 @@ type: module
 title: "Enterprise & Business AI Services Catalog (16 Services)"
 description: "Dedicated specification pages for all 16 enterprise AI training services, including architecture blueprints, hands-on curricula, deliverables, and PPP pricing links."
 tags: [business-services, enterprise-ai, service-catalog, syllabi]
-timestamp: 2026-11-27T06:56:49Z
+timestamp: 2026-11-28T05:16:04Z
 ---
 
 # Enterprise & Business AI Services Catalog (16 Services)
@@ -15,7 +15,7 @@ Dedicated specification pages for all 16 enterprise AI training services, includ
 - **Path**: `/business-services`
 - **Direct Files**: 16 (16 HTML)
 - **Subdirectories**: 0
-- **Total Size**: 1.18 MB | **Text/Code Lines**: 12,364
+- **Total Size**: 1.22 MB | **Text/Code Lines**: 12,908
 - **Primary Workflow**: After editing pages here, run `python3 python/ssot/render.py --check`, `python3 python/run_html_tests.py`, and before commit run `python3 python/md_html_sync.py` and `python3 python/sync_schemas.py`.
 
 ## Directory Role & Agent Invariants
@@ -33,22 +33,22 @@ Leaf directory (no child directories).
 
 | File | Type | Size / Lines | In-Context Details & Cross-References |
 | :--- | :---: | :---: | :--- |
-| [`business-service-advanced-ai-agents.html`](business-service-advanced-ai-agents.html) | HTML | 79.8 KB / 799L | Title: "Advanced AI Agents / Thomas Cherickal"; JSON-LD: WebPage, BreadcrumbList, ListItem, Service |
-| [`business-service-agentic-assistants.html`](business-service-agentic-assistants.html) | HTML | 74.6 KB / 771L | Title: "Agentic Assistants Training / Thomas Cherickal"; JSON-LD: WebPage, BreadcrumbList, ListItem, Service |
-| [`business-service-ai-assisted-leads-magnet.html`](business-service-ai-assisted-leads-magnet.html) | HTML | 77.2 KB / 789L | Title: "AI Leads Magnet & Conversion Systems / Thomas Cherickal"; JSON-LD: WebPage, BreadcrumbList, ListItem, Service |
-| [`business-service-ai-budget-cost-control.html`](business-service-ai-budget-cost-control.html) | HTML | 77.0 KB / 788L | Title: "AI Budget & Cost Control / Thomas Cherickal"; JSON-LD: WebPage, BreadcrumbList, ListItem, Service |
-| [`business-service-ai-developer-training.html`](business-service-ai-developer-training.html) | HTML | 77.3 KB / 783L | Title: "AI Developer Training / Thomas Cherickal"; JSON-LD: WebPage, BreadcrumbList, ListItem, Service |
-| [`business-service-ai-second-brain.html`](business-service-ai-second-brain.html) | HTML | 77.6 KB / 788L | Title: "AI Second Brain / Thomas Cherickal"; JSON-LD: WebPage, BreadcrumbList, ListItem, Service |
-| [`business-service-claude-agents-orchestration.html`](business-service-claude-agents-orchestration.html) | HTML | 76.5 KB / 775L | Title: "Claude Agent Orchestration / Thomas Cherickal"; JSON-LD: WebPage, BreadcrumbList, ListItem, Service |
-| [`business-service-claude-research-training.html`](business-service-claude-research-training.html) | HTML | 74.7 KB / 777L | Title: "Claude Research Training / Thomas Cherickal"; JSON-LD: WebPage, BreadcrumbList, ListItem, Service |
-| [`business-service-competitor-research.html`](business-service-competitor-research.html) | HTML | 73.1 KB / 765L | Title: "Competitor Research & Intelligence / Thomas Cherickal"; JSON-LD: WebPage, BreadcrumbList, ListItem, Service |
-| [`business-service-continuous-learning.html`](business-service-continuous-learning.html) | HTML | 75.6 KB / 749L | Title: "Continuous Learning & Synthesis / Thomas Cherickal"; JSON-LD: WebPage, BreadcrumbList, ListItem, Service |
-| [`business-service-gemini-research-training.html`](business-service-gemini-research-training.html) | HTML | 76.8 KB / 784L | Title: "Gemini Research Training / Thomas Cherickal"; JSON-LD: WebPage, BreadcrumbList, ListItem, Service |
-| [`business-service-generative-ai-transformation.html`](business-service-generative-ai-transformation.html) | HTML | 75.1 KB / 757L | Title: "Generative AI Transformation / Thomas Cherickal"; JSON-LD: WebPage, BreadcrumbList, ListItem, Service |
-| [`business-service-knowledge-graphs.html`](business-service-knowledge-graphs.html) | HTML | 72.2 KB / 757L | Title: "Knowledge Graphs / Thomas Cherickal"; JSON-LD: WebPage, BreadcrumbList, ListItem, Service |
-| [`business-service-local-ai-for-sensitive-data.html`](business-service-local-ai-for-sensitive-data.html) | HTML | 76.0 KB / 774L | Title: "Local AI for Sensitive Data / Thomas Cherickal"; JSON-LD: WebPage, BreadcrumbList, ListItem, Service |
-| [`business-service-local-llms-cost-slashing.html`](business-service-local-llms-cost-slashing.html) | HTML | 72.2 KB / 756L | Title: "Local LLMs & Cost Slashing / Thomas Cherickal"; JSON-LD: WebPage, BreadcrumbList, ListItem, Service |
-| [`business-service-workflow-automations.html`](business-service-workflow-automations.html) | HTML | 71.6 KB / 752L | Title: "Workflow Automations / Thomas Cherickal"; JSON-LD: WebPage, BreadcrumbList, ListItem, Service |
+| [`business-service-advanced-ai-agents.html`](business-service-advanced-ai-agents.html) | HTML | 82.5 KB / 833L | Title: "Advanced AI Agents (Business) / Thomas Cherickal"; JSON-LD: WebPage, BreadcrumbList, ListItem, Service |
+| [`business-service-agentic-assistants.html`](business-service-agentic-assistants.html) | HTML | 77.3 KB / 805L | Title: "Agentic Assistants Training (Business) / Thomas Cherickal"; JSON-LD: WebPage, BreadcrumbList, ListItem, Service |
+| [`business-service-ai-assisted-leads-magnet.html`](business-service-ai-assisted-leads-magnet.html) | HTML | 80.0 KB / 823L | Title: "AI Leads Magnet &amp; Conversion Systems (Business) / Thomas Cherickal"; JSON-LD: WebPage, BreadcrumbList, ListItem, Service |
+| [`business-service-ai-budget-cost-control.html`](business-service-ai-budget-cost-control.html) | HTML | 79.7 KB / 822L | Title: "AI Budget &amp; Cost Control (Business) / Thomas Cherickal"; JSON-LD: WebPage, BreadcrumbList, ListItem, Service |
+| [`business-service-ai-developer-training.html`](business-service-ai-developer-training.html) | HTML | 79.9 KB / 817L | Title: "AI Developer Training (Business) / Thomas Cherickal"; JSON-LD: WebPage, BreadcrumbList, ListItem, Service |
+| [`business-service-ai-second-brain.html`](business-service-ai-second-brain.html) | HTML | 80.3 KB / 822L | Title: "AI Second Brain (Business) / Thomas Cherickal"; JSON-LD: WebPage, BreadcrumbList, ListItem, Service |
+| [`business-service-claude-agents-orchestration.html`](business-service-claude-agents-orchestration.html) | HTML | 79.2 KB / 809L | Title: "Claude Agent Orchestration (Business) / Thomas Cherickal"; JSON-LD: WebPage, BreadcrumbList, ListItem, Service |
+| [`business-service-claude-research-training.html`](business-service-claude-research-training.html) | HTML | 77.4 KB / 811L | Title: "Claude Research Training (Business) / Thomas Cherickal"; JSON-LD: WebPage, BreadcrumbList, ListItem, Service |
+| [`business-service-competitor-research.html`](business-service-competitor-research.html) | HTML | 75.9 KB / 799L | Title: "Competitor Research &amp; Intelligence (Business) / Thomas Cherickal"; JSON-LD: WebPage, BreadcrumbList, ListItem, Service |
+| [`business-service-continuous-learning.html`](business-service-continuous-learning.html) | HTML | 78.3 KB / 783L | Title: "Continuous Learning &amp; Synthesis (Business) / Thomas Cherickal"; JSON-LD: WebPage, BreadcrumbList, ListItem, Service |
+| [`business-service-gemini-research-training.html`](business-service-gemini-research-training.html) | HTML | 79.5 KB / 818L | Title: "Gemini Research Training (Business) / Thomas Cherickal"; JSON-LD: WebPage, BreadcrumbList, ListItem, Service |
+| [`business-service-generative-ai-transformation.html`](business-service-generative-ai-transformation.html) | HTML | 77.9 KB / 791L | Title: "Generative AI Transformation (Business) / Thomas Cherickal"; JSON-LD: WebPage, BreadcrumbList, ListItem, Service |
+| [`business-service-knowledge-graphs.html`](business-service-knowledge-graphs.html) | HTML | 74.9 KB / 791L | Title: "Knowledge Graphs (Business) / Thomas Cherickal"; JSON-LD: WebPage, BreadcrumbList, ListItem, Service |
+| [`business-service-local-ai-for-sensitive-data.html`](business-service-local-ai-for-sensitive-data.html) | HTML | 78.7 KB / 808L | Title: "Local AI for Sensitive Data (Business) / Thomas Cherickal"; JSON-LD: WebPage, BreadcrumbList, ListItem, Service |
+| [`business-service-local-llms-cost-slashing.html`](business-service-local-llms-cost-slashing.html) | HTML | 75.0 KB / 790L | Title: "Local LLMs &amp; Cost Slashing (Business) / Thomas Cherickal"; JSON-LD: WebPage, BreadcrumbList, ListItem, Service |
+| [`business-service-workflow-automations.html`](business-service-workflow-automations.html) | HTML | 74.3 KB / 786L | Title: "Workflow Automations (Business) / Thomas Cherickal"; JSON-LD: WebPage, BreadcrumbList, ListItem, Service |
 
 ## Context & Cross-References
 

@@ -55,6 +55,58 @@ def reply_sla_phrase(data: SSOTData) -> str:
     return data.raw["contact"]["direct_communication"]["reply_sla"]
 
 
+def tier_price(data: SSOTData, spec: str) -> str:
+    """Return single-tier price for 'offering_id:tier_num', e.g. '$1,000' or 'Custom'."""
+    offering_id, tier_str = [p.strip() for p in spec.split(":", 1)]
+    off = data.offerings[offering_id]
+    tier = data.tiers[tier_str]
+    if int(tier["tier"]) == 6:
+        return "Custom"
+    return money(float(off["tier1_base_price_usd"]) * float(tier["multiplier"]))
+
+
+def extra_seat_price_list(data: SSOTData, offering_id: str) -> str:
+    """Return '+$100 / +$75 / +$50 / +$50 / +$25 / Custom' for extra seats across tiers."""
+    fee = float(data.offerings[offering_id]["cohort_capacity"]["additional_seat_fee_usd"])
+    parts = []
+    for t in data.tiers_list:
+        if t["tier"] == 6:
+            parts.append("Custom")
+        else:
+            parts.append(f"+{money(fee * float(t['multiplier']))}")
+    return " / ".join(parts)
+
+
+def extra_seat_tier_price(data: SSOTData, spec: str) -> str:
+    """Return single-tier extra-seat fee for 'offering_id:tier_num', e.g. '$75' or 'Custom'."""
+    offering_id, tier_str = [p.strip() for p in spec.split(":", 1)]
+    fee = float(data.offerings[offering_id]["cohort_capacity"]["additional_seat_fee_usd"])
+    tier = data.tiers[tier_str]
+    if int(tier["tier"]) == 6:
+        return "Custom"
+    return money(fee * float(tier["multiplier"]))
+
+
+def installment_amount_list(data: SSOTData, offering_id: str) -> str:
+    """Return per-installment parity list, e.g. '$10 / $7.50 / $5 / $5 / $2.50 / Custom'."""
+    off = data.offerings[offering_id]
+    base = float(off["tier1_base_price_usd"])
+    ms = off["payment_rules"]["milestone_schedule"]
+    pct = (float(ms[0]["percentage"]) / 100.0) if ms else 0.10
+    parts = []
+    for t in data.tiers_list:
+        if t["tier"] == 6:
+            parts.append("Custom")
+        else:
+            parts.append(money(base * pct * float(t["multiplier"])))
+    return " / ".join(parts)
+
+
+def tier_precedence_phrase(data: SSOTData) -> str:
+    """Return canonical tier precedence rule."""
+    return data.raw["tiers"]["precedence_rule"]
+
+
 def quarterly_cap_phrase(data: SSOTData) -> str:
     """Return canonical quarterly flagship cohort cap."""
     cap = data.raw["pricing"]["capacity"]["flagship_cohorts_per_quarter"]
@@ -64,10 +116,15 @@ def quarterly_cap_phrase(data: SSOTData) -> str:
 FORMATTERS = {
     "money": lambda data, arg: money(float(arg)),
     "tier_price_list": tier_price_list,
+    "tier_price": tier_price,
+    "extra_seat_price_list": extra_seat_price_list,
+    "extra_seat_tier_price": extra_seat_tier_price,
+    "installment_amount_list": installment_amount_list,
     "seats_phrase": seats_phrase,
     "duration_phrase": duration_phrase,
     "installment_phrase": installment_phrase,
     "reply_sla_phrase": lambda data: reply_sla_phrase(data),
+    "tier_precedence_phrase": lambda data: tier_precedence_phrase(data),
     "quarterly_cap_phrase": lambda data: quarterly_cap_phrase(data),
 }
 

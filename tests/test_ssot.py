@@ -15,10 +15,15 @@ from python.ssot.load import SSOTData
 from python.ssot.format import (
     money,
     tier_price_list,
+    tier_price,
+    extra_seat_price_list,
+    extra_seat_tier_price,
+    installment_amount_list,
     seats_phrase,
     duration_phrase,
     installment_phrase,
     reply_sla_phrase,
+    tier_precedence_phrase,
     quarterly_cap_phrase,
     call_formatter,
 )
@@ -69,6 +74,32 @@ class TestSSOTSystem(unittest.TestCase):
         )
         self.assertEqual(reply_sla_phrase(self.data), "within one week")
         self.assertEqual(quarterly_cap_phrase(self.data), "2 flagship cohorts per quarter")
+        self.assertIn("Tier 6", tier_precedence_phrase(self.data))
+
+    def test_format_tier_and_extra_seat_and_installment_helpers(self):
+        self.assertEqual(tier_price(self.data, "flagship-business-training:1"), "$1,000")
+        self.assertEqual(tier_price(self.data, "flagship-business-training:2"), "$750")
+        self.assertEqual(tier_price(self.data, "flagship-business-training:3"), "$500")
+        self.assertEqual(tier_price(self.data, "flagship-business-training:5"), "$250")
+        self.assertEqual(tier_price(self.data, "flagship-business-training:6"), "Custom")
+        self.assertEqual(tier_price(self.data, "individual-service-business:1"), "$100")
+        self.assertEqual(tier_price(self.data, "individual-service-business:5"), "$25")
+        self.assertEqual(
+            extra_seat_price_list(self.data, "flagship-business-training"),
+            "+$100 / +$75 / +$50 / +$50 / +$25 / Custom",
+        )
+        self.assertEqual(extra_seat_tier_price(self.data, "flagship-business-training:2"), "$75")
+        self.assertEqual(extra_seat_tier_price(self.data, "flagship-business-training:3"), "$50")
+        self.assertEqual(extra_seat_tier_price(self.data, "flagship-business-training:5"), "$25")
+        self.assertEqual(extra_seat_tier_price(self.data, "flagship-business-training:6"), "Custom")
+        self.assertEqual(
+            installment_amount_list(self.data, "flagship-business-training"),
+            "$100 / $75 / $50 / $50 / $25 / Custom",
+        )
+        self.assertEqual(
+            installment_amount_list(self.data, "individual-service-business"),
+            "$10 / $7.50 / $5 / $5 / $2.50 / Custom",
+        )
 
     def test_call_formatter(self):
         self.assertEqual(call_formatter(self.data, "money(1000)"), "$1,000")
@@ -93,6 +124,28 @@ class TestSSOTSystem(unittest.TestCase):
             self.assertTrue(render_file(html_path, self.data, env, check_only=False))
             self.assertFalse(render_file(html_path, self.data, env, check_only=False))
             self.assertFalse(render_file(html_path, self.data, env, check_only=True))
+
+    def test_faq_jsonld_sync_strips_ssot_comments(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            tpl_dir = os.path.join(tmp, "templates")
+            os.makedirs(tpl_dir)
+            env = Environment(loader=FileSystemLoader(tpl_dir), autoescape=False)
+            faq_path = os.path.join(tmp, "faqs.html")
+            with open(faq_path, "w", encoding="utf-8") as f:
+                f.write(
+                    '<html><head><script type="application/ld+json">\n'
+                    '{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[]}\n'
+                    "</script></head><body>"
+                    '<article class="faq-card"><h3 class="faq-question">Price?</h3>'
+                    '<div class="faq-answer"><p><!--ssot:fmt.tier_price(flagship-business-training:1)-->old<!--/ssot--> USD.</p></div>'
+                    "</article></body></html>"
+                )
+            self.assertTrue(render_file(faq_path, self.data, env, check_only=False))
+            with open(faq_path, encoding="utf-8") as f:
+                rendered = f.read()
+            self.assertIn('"$1,000 USD."', rendered)
+            self.assertNotIn("<!--ssot:", rendered.split("</script>")[0])
+            self.assertFalse(render_file(faq_path, self.data, env, check_only=True))
 
     def test_acceptance_invariants(self):
         for oid, off in self.data.offerings.items():

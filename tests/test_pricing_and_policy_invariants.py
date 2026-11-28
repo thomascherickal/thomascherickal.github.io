@@ -122,7 +122,7 @@ class TestPricingAndPolicyInvariants(unittest.TestCase):
             "contact.html",
             "guarantees.html",
             "faqs.html",
-            "pricing/pricing-tier-1-usa-china-eu-100.html",
+            "pricing/pricing-tier-1-usa-uk-eu-100.html",
             "pricing/pricing-tier-2-brazil-malaysia-75.html",
             "pricing/pricing-tier-3-india-egypt-50.html",
             "pricing/pricing-tier-4-tech-startups-50.html",

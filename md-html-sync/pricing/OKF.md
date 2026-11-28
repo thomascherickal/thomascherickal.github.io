@@ -3,7 +3,7 @@ type: module
 title: "PPP Tier Pages Markdown Mirrors"
 description: "Synchronized Markdown mirrors for the 6 Purchasing Power Parity regional tier HTML pages in `pricing/`."
 tags: [md-html-sync, pricing, ppp-tiers, markdown]
-timestamp: 2026-11-27T06:56:49Z
+timestamp: 2026-11-28T05:16:04Z
 ---
 
 # PPP Tier Pages Markdown Mirrors
@@ -15,7 +15,7 @@ Synchronized Markdown mirrors for the 6 Purchasing Power Parity regional tier HT
 - **Path**: `/md-html-sync/pricing`
 - **Direct Files**: 6 (6 Markdown)
 - **Subdirectories**: 0
-- **Total Size**: 53.3 KB | **Text/Code Lines**: 1,482
+- **Total Size**: 42.0 KB | **Text/Code Lines**: 1,257
 - **Primary Workflow**: Synchronized automatically from `pricing/*.html` via `python3 python/md_html_sync.py`.
 
 ## Directory Role & Agent Invariants
@@ -30,12 +30,12 @@ Leaf directory (no child directories).
 
 | File | Type | Size / Lines | In-Context Details & Cross-References |
 | :--- | :---: | :---: | :--- |
-| [`pricing-tier-1-usa-china-eu-100.md`](pricing-tier-1-usa-china-eu-100.md) | Markdown | 8.9 KB / 247L | Heading: "Generative AI Packages & Transparent Parity Pricing"; 7 H2 section(s), 1,252 words |
-| [`pricing-tier-2-brazil-malaysia-75.md`](pricing-tier-2-brazil-malaysia-75.md) | Markdown | 8.9 KB / 247L | Heading: "Generative AI Packages & Transparent Parity Pricing"; 7 H2 section(s), 1,252 words |
-| [`pricing-tier-3-india-egypt-50.md`](pricing-tier-3-india-egypt-50.md) | Markdown | 8.9 KB / 247L | Heading: "Generative AI Packages & Transparent Parity Pricing"; 7 H2 section(s), 1,252 words |
-| [`pricing-tier-4-tech-startups-50.md`](pricing-tier-4-tech-startups-50.md) | Markdown | 8.9 KB / 247L | Heading: "Generative AI Packages & Transparent Parity Pricing"; 7 H2 section(s), 1,252 words |
-| [`pricing-tier-5-colleges-non-profits-25.md`](pricing-tier-5-colleges-non-profits-25.md) | Markdown | 8.9 KB / 247L | Heading: "Generative AI Packages & Transparent Parity Pricing"; 7 H2 section(s), 1,252 words |
-| [`pricing-tier-6-crisis-affected-10.md`](pricing-tier-6-crisis-affected-10.md) | Markdown | 8.9 KB / 247L | Heading: "Generative AI Packages & Transparent Parity Pricing"; 7 H2 section(s), 1,252 words |
+| [`pricing-tier-1-usa-uk-eu-100.md`](pricing-tier-1-usa-uk-eu-100.md) | Markdown | 6.8 KB / 206L | Heading: "The Six Global Equity & Parity Tiers Explained"; 6 H2 section(s), 917 words |
+| [`pricing-tier-2-brazil-malaysia-75.md`](pricing-tier-2-brazil-malaysia-75.md) | Markdown | 8.0 KB / 235L | Heading: "The Six Global Equity & Parity Tiers Explained"; 7 H2 section(s), 1,093 words |
+| [`pricing-tier-3-india-egypt-50.md`](pricing-tier-3-india-egypt-50.md) | Markdown | 6.8 KB / 204L | Heading: "The Six Global Equity & Parity Tiers Explained"; 6 H2 section(s), 917 words |
+| [`pricing-tier-4-tech-startups-50.md`](pricing-tier-4-tech-startups-50.md) | Markdown | 6.8 KB / 204L | Heading: "The Six Global Equity & Parity Tiers Explained"; 6 H2 section(s), 917 words |
+| [`pricing-tier-5-colleges-non-profits-25.md`](pricing-tier-5-colleges-non-profits-25.md) | Markdown | 6.8 KB / 204L | Heading: "The Six Global Equity & Parity Tiers Explained"; 6 H2 section(s), 917 words |
+| [`pricing-tier-6-crisis-affected-10.md`](pricing-tier-6-crisis-affected-10.md) | Markdown | 6.8 KB / 204L | Heading: "The Six Global Equity & Parity Tiers Explained"; 6 H2 section(s), 917 words |
 
 ## Context & Cross-References
 

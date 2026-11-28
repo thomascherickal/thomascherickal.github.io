@@ -3,7 +3,7 @@ type: module
 title: "Purchasing Power Parity (PPP) Regional Tier Pages"
 description: "Six dedicated regional landing pages implementing the 195-country World Bank FY2027 Purchasing Power Parity pricing model (Tiers 1 through 6)."
 tags: [pricing, ppp-tiers, global-parity, world-bank-fy2027]
-timestamp: 2026-11-27T06:56:49Z
+timestamp: 2026-11-28T05:16:04Z
 ---
 
 # Purchasing Power Parity (PPP) Regional Tier Pages
@@ -15,7 +15,7 @@ Six dedicated regional landing pages implementing the 195-country World Bank FY2
 - **Path**: `/pricing`
 - **Direct Files**: 6 (6 HTML)
 - **Subdirectories**: 0
-- **Total Size**: 950.1 KB | **Text/Code Lines**: 14,030
+- **Total Size**: 886.1 KB | **Text/Code Lines**: 13,188
 - **Primary Workflow**: Keep rates aligned with `data/pricing.json` and `data/tiers.json`; verify tier calculators and DOM contracts via `python3 python/run_tests.py`.
 
 ## Directory Role & Agent Invariants
@@ -33,12 +33,12 @@ Leaf directory (no child directories).
 
 | File | Type | Size / Lines | In-Context Details & Cross-References |
 | :--- | :---: | :---: | :--- |
-| [`pricing-tier-1-usa-china-eu-100.html`](pricing-tier-1-usa-china-eu-100.html) | HTML | 158.4 KB / 2338L | Title: "Tier 1 Pricing (100% Standard Rate - USA, China, EU) / Thomas Cherickal"; JSON-LD: WebPage, BreadcrumbList, ListItem, OfferCatalog |
-| [`pricing-tier-2-brazil-malaysia-75.html`](pricing-tier-2-brazil-malaysia-75.html) | HTML | 158.3 KB / 2338L | Title: "Tier 2 Pricing (75% Rate / 25% Off - Brazil, Malaysia) / Thomas Cherickal"; JSON-LD: WebPage, BreadcrumbList, ListItem, OfferCatalog |
-| [`pricing-tier-3-india-egypt-50.html`](pricing-tier-3-india-egypt-50.html) | HTML | 158.3 KB / 2338L | Title: "Tier 3 Pricing (50% Rate / 50% Off - India, Egypt) / Thomas Cherickal"; JSON-LD: WebPage, BreadcrumbList, ListItem, OfferCatalog |
-| [`pricing-tier-4-tech-startups-50.html`](pricing-tier-4-tech-startups-50.html) | HTML | 158.3 KB / 2338L | Title: "Tier 4 Pricing (50% Flat Startup Discount) / Thomas Cherickal"; JSON-LD: WebPage, BreadcrumbList, ListItem, OfferCatalog |
-| [`pricing-tier-5-colleges-non-profits-25.html`](pricing-tier-5-colleges-non-profits-25.html) | HTML | 158.4 KB / 2340L | Title: "Tier 5 Pricing (25% Rate / 75% Off - Universities, Non-Profits) / Thomas Cherickal"; JSON-LD: WebPage, BreadcrumbList, ListItem, OfferCatalog |
-| [`pricing-tier-6-crisis-affected-10.html`](pricing-tier-6-crisis-affected-10.html) | HTML | 158.3 KB / 2338L | Title: "Tier 6 Pricing (Subsidized Micro-Rates / Up to 90%+ Relief) / Thomas Cherickal"; JSON-LD: WebPage, BreadcrumbList, ListItem, OfferCatalog |
+| [`pricing-tier-1-usa-uk-eu-100.html`](pricing-tier-1-usa-uk-eu-100.html) | HTML | 147.1 KB / 2190L | Title: "Tier 1 AI Pricing (USA, EU, UK) / Thomas Cherickal"; JSON-LD: WebPage, BreadcrumbList, ListItem, OfferCatalog |
+| [`pricing-tier-2-brazil-malaysia-75.html`](pricing-tier-2-brazil-malaysia-75.html) | HTML | 151.2 KB / 2250L | Title: "Tier 2 PPP Pricing (25% Off) / Thomas Cherickal"; JSON-LD: WebPage, BreadcrumbList, ListItem, OfferCatalog |
+| [`pricing-tier-3-india-egypt-50.html`](pricing-tier-3-india-egypt-50.html) | HTML | 146.9 KB / 2187L | Title: "Tier 3 PPP Pricing (India, 50% Off) / Thomas Cherickal"; JSON-LD: WebPage, BreadcrumbList, ListItem, OfferCatalog |
+| [`pricing-tier-4-tech-startups-50.html`](pricing-tier-4-tech-startups-50.html) | HTML | 147.0 KB / 2186L | Title: "Tier 4 Startup AI Pricing (50% Off) / Thomas Cherickal"; JSON-LD: WebPage, BreadcrumbList, ListItem, OfferCatalog |
+| [`pricing-tier-5-colleges-non-profits-25.html`](pricing-tier-5-colleges-non-profits-25.html) | HTML | 147.0 KB / 2188L | Title: "Tier 5 University &amp; Nonprofit (75% Off) / Thomas Cherickal"; JSON-LD: WebPage, BreadcrumbList, ListItem, OfferCatalog |
+| [`pricing-tier-6-crisis-affected-10.html`](pricing-tier-6-crisis-affected-10.html) | HTML | 147.0 KB / 2187L | Title: "Tier 6 Relief &amp; UN LDC Parity Pricing / Thomas Cherickal"; JSON-LD: WebPage, BreadcrumbList, ListItem, OfferCatalog |
 
 ## Context & Cross-References
 

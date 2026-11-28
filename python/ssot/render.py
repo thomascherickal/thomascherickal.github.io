@@ -7,9 +7,11 @@ Supports --check mode for CI and pre-commit hooks.
 """
 
 import argparse
+import json
 import os
 import re
 import sys
+from bs4 import BeautifulSoup, Comment
 from jinja2 import Environment, FileSystemLoader
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -30,6 +32,60 @@ TARGET_DIRS = [
 ]
 
 MARKER_RE = re.compile(r"(<!--ssot:(.+?)-->)(.*?)(<!--/ssot-->)", re.DOTALL)
+JSONLD_SCRIPT_RE = re.compile(
+    r'(<script type="application/ld\+json">)\s*(\{[\s\S]*?"@type"\s*:\s*"FAQPage"[\s\S]*?\})\s*(</script>)'
+)
+
+
+def _clean_node_text(node) -> str:
+    frag = BeautifulSoup(str(node), "html.parser")
+    for c in frag.find_all(string=lambda s: isinstance(s, Comment)):
+        c.extract()
+    text = frag.get_text(" ", strip=True)
+    text = re.sub(r"\s+", " ", text).strip()
+    text = re.sub(r"\s+([.,;:?!)\]])", r"\1", text)
+    text = re.sub(r"([(\[])\s+", r"\1", text)
+    return text
+
+
+def sync_faq_jsonld(html_text: str) -> str:
+    """Derive FAQPage JSON-LD deterministically from rendered .faq-card elements."""
+    if '"FAQPage"' not in html_text or 'class="faq-card' not in html_text:
+        return html_text
+    soup = BeautifulSoup(html_text, "html.parser")
+    cards = soup.select("article.faq-card")
+    if not cards:
+        return html_text
+    entities = []
+    for card in cards:
+        q_el = card.select_one(".faq-question")
+        a_el = card.select_one(".faq-answer")
+        if not q_el or not a_el:
+            continue
+        entities.append(
+            {
+                "@type": "Question",
+                "name": _clean_node_text(q_el),
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": _clean_node_text(a_el),
+                },
+            }
+        )
+    if not entities:
+        return html_text
+    payload = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": entities,
+    }
+    formatted = json.dumps(payload, indent=2, ensure_ascii=False)
+    indented = "\n".join("  " + line for line in formatted.splitlines())
+    return JSONLD_SCRIPT_RE.sub(
+        lambda m: f"{m.group(1)}\n{indented}\n  {m.group(3)}",
+        html_text,
+        count=1,
+    )
 
 
 def discover_targets(repo_root=REPO_ROOT):
@@ -41,9 +97,10 @@ def discover_targets(repo_root=REPO_ROOT):
         for fn in sorted(os.listdir(full)):
             if fn.endswith(".html"):
                 targets.append(os.path.join(full, fn))
-    llms = os.path.join(repo_root, "llms.txt")
-    if os.path.exists(llms):
-        targets.append(llms)
+    for root_doc in ("llms.txt", "README.md"):
+        doc_path = os.path.join(repo_root, root_doc)
+        if os.path.exists(doc_path):
+            targets.append(doc_path)
     return targets
 
 
@@ -64,7 +121,7 @@ def render_file(path: str, data: SSOTData, jinja_env, check_only: bool = False) 
     with open(path, encoding="utf-8") as f:
         raw = f.read()
 
-    if "<!--ssot:" not in raw:
+    if "<!--ssot:" not in raw and '"FAQPage"' not in raw:
         return False
 
     def _replace(match):
@@ -76,7 +133,8 @@ def render_file(path: str, data: SSOTData, jinja_env, check_only: bool = False) 
             raise RuntimeError(f"{path}:{line_no}: failed to render ssot marker '{expr}': {exc}") from exc
         return f"{open_tag}{rendered}{close_tag}"
 
-    updated = MARKER_RE.sub(_replace, raw)
+    updated = MARKER_RE.sub(_replace, raw) if "<!--ssot:" in raw else raw
+    updated = sync_faq_jsonld(updated)
     if updated == raw:
         return False
 

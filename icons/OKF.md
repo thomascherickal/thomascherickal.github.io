@@ -3,7 +3,7 @@ type: dataset
 title: "Vector SVG Icon & Platform Badge Repository"
 description: "Scalable SVG icons for publishing platforms, coding profiles, social channels, and UI badges referenced across the site and syndicated article footers."
 tags: [icons, svg, vectors, publishing-platforms]
-timestamp: 2026-11-27T06:56:49Z
+timestamp: 2026-11-28T05:16:04Z
 ---
 
 # Vector SVG Icon & Platform Badge Repository

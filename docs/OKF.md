@@ -3,7 +3,7 @@ type: module
 title: "Operational Documentation & SSOT Literal Inventory"
 description: "Reference playbooks for delivery economics, 195-country World Bank PPP tiers, service catalog summaries, historical fixes, and the generated `ssot-inventory.csv` literal-fact audit."
 tags: [docs, playbooks, pricing-reference, ssot-inventory]
-timestamp: 2026-11-27T07:16:58Z
+timestamp: 2026-11-28T05:16:04Z
 ---
 
 # Operational Documentation & SSOT Literal Inventory
@@ -13,9 +13,9 @@ Reference playbooks for delivery economics, 195-country World Bank PPP tiers, se
 ## Live Directory Telemetry
 
 - **Path**: `/docs`
-- **Direct Files**: 7 (6 Markdown, 1 CSV)
+- **Direct Files**: 6 (5 Markdown, 1 CSV)
 - **Subdirectories**: 0
-- **Total Size**: 513.1 KB | **Text/Code Lines**: 6,184
+- **Total Size**: 525.1 KB | **Text/Code Lines**: 5,781
 - **Primary Workflow**: Refresh `docs/ssot-inventory.csv` via `python3 python/ssot/scan_literals.py`. Keep all prose free of emojis, em-dashes, and LLM version numbers.
 
 ## Directory Role & Agent Invariants
@@ -34,9 +34,8 @@ Leaf directory (no child directories).
 | [`hourly-rates.md`](hourly-rates.md) | Markdown | 7.9 KB / 118L | Heading: "Hourly Rates & Delivery Economics Analysis"; 5 H2 section(s), 1,330 words |
 | [`meta-prompt-introductions.md`](meta-prompt-introductions.md) | Markdown | 26.5 KB / 224L | Heading: "50-Word Meta-Prompt Introductions (All 68 Pages)"; 4 H2 section(s), 3,297 words |
 | [`parity pricing.md`](parity pricing.md) | Markdown | 18.9 KB / 228L | Heading: "Purchasing Power Parity (PPP) Country Tiers & Custom Pricing Index"; 0 H2 section(s), 3,049 words |
-| [`seo-aeo-geo-improvement-report.md`](seo-aeo-geo-improvement-report.md) | Markdown | 46.8 KB / 703L | Heading: "SEO, AEO & GEO Improvement Report for `thedigitalfuturist.com`"; 5 H2 section(s), 5,661 words |
 | [`services-summary.md`](services-summary.md) | Markdown | 16.5 KB / 179L | Heading: "Services Summary"; 3 H2 section(s), 1,780 words |
-| [`ssot-inventory.csv`](ssot-inventory.csv) | CSV | 384.8 KB / 4580L | 4,579 data rows; Columns: `file, line, literal, suggested_data_key` |
+| [`ssot-inventory.csv`](ssot-inventory.csv) | CSV | 443.6 KB / 4880L | 4,879 data rows; Columns: `file, line, literal, suggested_data_key` |
 | [`website-fixes.md`](website-fixes.md) | Markdown | 11.8 KB / 152L | Heading: "Website Comprehensive Audit & Fix Progress Report"; 1 H2 section(s), 1,785 words |
 
 ## Context & Cross-References

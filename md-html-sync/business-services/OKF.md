@@ -3,7 +3,7 @@ type: module
 title: "Business Services Markdown Mirrors"
 description: "Synchronized Markdown mirrors for all 16 enterprise HTML pages in `business-services/`."
 tags: [md-html-sync, business-services, markdown]
-timestamp: 2026-11-27T06:56:49Z
+timestamp: 2026-11-28T05:16:04Z
 ---
 
 # Business Services Markdown Mirrors

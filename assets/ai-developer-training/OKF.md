@@ -3,7 +3,7 @@ type: dataset
 title: "AI Developer Training Visual Assets"
 description: "Compressed workflow diagrams and illustrations for AI Developer Training business and personal service pages."
 tags: [assets, developer-training, tdd, coding-agents]
-timestamp: 2026-11-27T06:56:49Z
+timestamp: 2026-11-28T05:16:04Z
 ---
 
 # AI Developer Training Visual Assets

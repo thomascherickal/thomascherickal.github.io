@@ -3,7 +3,7 @@ type: module
 title: "SSOT Reusable Block Templates (`*.html.j2`)"
 description: "Jinja2 partial templates (`<block_name>.html.j2`) rendered by `python/ssot/render.py` when evaluating `<!--ssot:block.<block_name>-->` markers."
 tags: [templates, blocks, jinja2, ssot]
-timestamp: 2026-11-27T06:56:49Z
+timestamp: 2026-11-28T05:16:04Z
 ---
 
 # SSOT Reusable Block Templates (`*.html.j2`)

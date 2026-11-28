@@ -3,7 +3,7 @@ type: module
 title: "Self-Hosted Vendor JavaScript Libraries"
 description: "Vendored self-hosted Mermaid JS runtime (`mermaid.min.js`) loaded by root `mermaid.js` to render technical architecture diagrams offline without external CDN failures."
 tags: [assets, javascript, mermaid, vendored]
-timestamp: 2026-11-27T06:56:49Z
+timestamp: 2026-11-28T05:16:04Z
 ---
 
 # Self-Hosted Vendor JavaScript Libraries

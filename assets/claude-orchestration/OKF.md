@@ -3,7 +3,7 @@ type: dataset
 title: "Claude Orchestration Visual Assets"
 description: "Compressed architecture visuals for Claude agent orchestration guides and service tracks."
 tags: [assets, claude, orchestration, blueprints]
-timestamp: 2026-11-27T06:56:49Z
+timestamp: 2026-11-28T05:16:04Z
 ---
 
 # Claude Orchestration Visual Assets

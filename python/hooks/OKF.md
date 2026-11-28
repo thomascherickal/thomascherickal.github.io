@@ -3,7 +3,7 @@ type: module
 title: "Git & Editor Lifecycle Hooks"
 description: "Pre-commit, pre-push, and IDE post-edit hooks enforcing SSOT validation, marker rendering, schema/Markdown sync, category-summary test gates, and `LAST-COMMIT-REPORT.md` generation."
 tags: [python, git-hooks, pre-commit, pre-push, quality-gate]
-timestamp: 2026-11-27T06:56:49Z
+timestamp: 2026-11-28T05:16:04Z
 ---
 
 # Git & Editor Lifecycle Hooks
@@ -15,7 +15,7 @@ Pre-commit, pre-push, and IDE post-edit hooks enforcing SSOT validation, marker 
 - **Path**: `/python/hooks`
 - **Direct Files**: 3 (2 Shell Hook, 1 Python)
 - **Subdirectories**: 0
-- **Total Size**: 5.4 KB | **Text/Code Lines**: 128
+- **Total Size**: 5.6 KB | **Text/Code Lines**: 133
 - **Primary Workflow**: Keep `.git/hooks/pre-commit` and `.git/hooks/pre-push` synchronized with `python/hooks/` templates. Never bypass hooks with `--no-verify`.
 
 ## Directory Role & Agent Invariants
@@ -33,7 +33,7 @@ Leaf directory (no child directories).
 | File | Type | Size / Lines | In-Context Details & Cross-References |
 | :--- | :---: | :---: | :--- |
 | [`post_edit_hook.py`](post_edit_hook.py) | Python | 1.7 KB / 43L | post_edit_hook.py - Lifecycle hook triggered after file edits.; Functions: `main` |
-| [`pre-commit`](pre-commit) | Shell Hook | 2.6 KB / 54L | Pre-commit hook (SSOT Build Pipeline):; Invokes: `python/ssot/validate.py`, `python/build_components.py`, `python/ssot/render.py`, `python/ssot/export_site_data.py`, `python/md_html_sync.py` |
+| [`pre-commit`](pre-commit) | Shell Hook | 2.8 KB / 59L | Pre-commit hook (SSOT Build Pipeline):; Invokes: `python/ssot/validate.py`, `python/build_components.py`, `python/ssot/render.py`, `python/ssot/export_site_data.py`, `python/md_html_sync.py` |
 | [`pre-push`](pre-push) | Shell Hook | 1.2 KB / 31L | Pre-push hook: Sync HTML JSON schemas and output pre-push summary reports to terminal; Invokes: `python/ssot/validate.py`, `python/ssot/render.py`, `python/sync_schemas.py`, `python/generate_pre_push_summary.py` |
 
 ## Context & Cross-References

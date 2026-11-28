@@ -3,7 +3,7 @@ type: dataset
 title: "Agentic AI Systems Visual Assets"
 description: "Compressed architecture visuals supporting Agentic Assistants and persistent-memory agentic systems service pages."
 tags: [assets, agentic-systems, diagrams]
-timestamp: 2026-11-27T06:56:49Z
+timestamp: 2026-11-28T05:16:04Z
 ---
 
 # Agentic AI Systems Visual Assets

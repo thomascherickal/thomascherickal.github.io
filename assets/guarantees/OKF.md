@@ -3,7 +3,7 @@ type: dataset
 title: "Service Guarantees Visual Assets"
 description: "Compressed trust-model illustrations supporting `guarantees.html` ($0 upfront, 10 equal 10% milestone installments, walkaway guarantee, Apache 2.0 IP ownership)."
 tags: [assets, guarantees, trust-model]
-timestamp: 2026-11-27T06:56:49Z
+timestamp: 2026-11-28T05:16:04Z
 ---
 
 # Service Guarantees Visual Assets

@@ -3,7 +3,7 @@ type: dataset
 title: "Generated Client-Side Site Data Bundle"
 description: "Auto-generated JSON data exported from `data/*.json` by `python/ssot/export_site_data.py` for browser-side JavaScript consumption."
 tags: [assets, data, ssot, generated, javascript]
-timestamp: 2026-11-27T06:56:49Z
+timestamp: 2026-11-28T05:16:04Z
 ---
 
 # Generated Client-Side Site Data Bundle

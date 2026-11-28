@@ -87,7 +87,7 @@ function run(harness, PricingCalculator) {
   // Verify all 7 pricing pages contain calculator markup with services-checkbox-grid and All 16 button
   const pricingPages = [
     "pricing.html",
-    "pricing/pricing-tier-1-usa-china-eu-100.html",
+    "pricing/pricing-tier-1-usa-uk-eu-100.html",
     "pricing/pricing-tier-2-brazil-malaysia-75.html",
     "pricing/pricing-tier-3-india-egypt-50.html",
     "pricing/pricing-tier-4-tech-startups-50.html",

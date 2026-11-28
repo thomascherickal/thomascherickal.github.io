@@ -3,7 +3,7 @@ type: module
 title: "Article Footers Module"
 description: "Reusable syndication footer templates (dark HTML, Markdown, and Word `.docx`) appended to external articles on Dev.to, Medium, Hashnode, Substack, and HackerNoon."
 tags: [article-footers, templates, reusable-components, syndication]
-timestamp: 2026-11-27T06:56:49Z
+timestamp: 2026-11-28T05:16:04Z
 ---
 
 # Article Footers Module

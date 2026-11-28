@@ -3,7 +3,7 @@ type: module
 title: "Tier-Specific Interactive Pricing Calculator Modules"
 description: "Modular JavaScript calculator implementations (`pricing-calculator-tier-1.js` through `pricing-calculator-tier-6.js`) powering the 6 PPP tier landing pages."
 tags: [pricing-calculator, javascript-modules, parity-calc]
-timestamp: 2026-11-27T06:56:49Z
+timestamp: 2026-11-28T05:16:04Z
 ---
 
 # Tier-Specific Interactive Pricing Calculator Modules
@@ -32,7 +32,7 @@ Leaf directory (no child directories).
 | File | Type | Size / Lines | In-Context Details & Cross-References |
 | :--- | :---: | :---: | :--- |
 | [`pricing-calculator-tier-1-tests.js`](pricing-calculator-tier-1-tests.js) | JavaScript | 4.2 KB / 132L | pricing-calculator-tier-1-tests.js; Functions: `test` |
-| [`pricing-calculator-tier-1.js`](pricing-calculator-tier-1.js) | JavaScript | 16.3 KB / 391L | pricing-calculator-tier-1.js; Functions: `calculatePricing`, `initDOMController`, `setClientMode`, `updateAll`; Used by: `pricing/pricing-tier-1-usa-china-eu-100.html` |
+| [`pricing-calculator-tier-1.js`](pricing-calculator-tier-1.js) | JavaScript | 16.3 KB / 391L | pricing-calculator-tier-1.js; Functions: `calculatePricing`, `initDOMController`, `setClientMode`, `updateAll`; Used by: `pricing/pricing-tier-1-usa-uk-eu-100.html` |
 | [`pricing-calculator-tier-2-tests.js`](pricing-calculator-tier-2-tests.js) | JavaScript | 4.2 KB / 132L | pricing-calculator-tier-2-tests.js; Functions: `test` |
 | [`pricing-calculator-tier-2.js`](pricing-calculator-tier-2.js) | JavaScript | 16.4 KB / 391L | pricing-calculator-tier-2.js; Functions: `calculatePricing`, `initDOMController`, `setClientMode`, `updateAll`; Used by: `pricing/pricing-tier-2-brazil-malaysia-75.html` |
 | [`pricing-calculator-tier-3-tests.js`](pricing-calculator-tier-3-tests.js) | JavaScript | 4.2 KB / 132L | pricing-calculator-tier-3-tests.js; Functions: `test` |

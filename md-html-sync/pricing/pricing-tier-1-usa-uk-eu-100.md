@@ -175,8 +175,7 @@ Continuous iteration on
  architecture
  roadmaps, training syllabi, and deliverables until your team is fully satisfied.
 
-### 10% in Ten Milestone
- Installments
+### 10% in Ten Milestone Installments
 
 Payments handled
  transparently by
@@ -192,9 +191,12 @@ You retain 100%
 
 // TRAINING MATERIALS & APACHE 2.0 LICENSING
 
-## Zero Charge Training Materials
+## Zero Charge
+ Training Materials
 
-All high-quality training materials, curriculum guides, architectural blueprints, and custom client code are provided at strictly $0 additional charge upon milestone completion and licensed under the Apache 2.0 license for commercial deployment, internal reuse, and adaptation. Training materials are not provided if the training ends early.
+All high-quality training materials, curriculum guides, architectural blueprints, and custom client code are
+ provided at strictly $0 additional charge upon milestone completion and licensed under the Apache 2.0 license for commercial deployment, internal reuse,
+ and adaptation. Training materials are not provided if the training ends early.
 
 ## Ready to Master Claude Agent Orchestration & Google Gemini AI Ecosystem?
 

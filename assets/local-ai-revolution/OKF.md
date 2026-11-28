@@ -3,7 +3,7 @@ type: dataset
 title: "Local AI Revolution Visual Assets"
 description: "Compressed visuals for Local LLM cost-slashing, VRAM sizing, and private on-premise inference guides."
 tags: [assets, local-llms, vram, private-ai]
-timestamp: 2026-11-27T06:56:49Z
+timestamp: 2026-11-28T05:16:04Z
 ---
 
 # Local AI Revolution Visual Assets
